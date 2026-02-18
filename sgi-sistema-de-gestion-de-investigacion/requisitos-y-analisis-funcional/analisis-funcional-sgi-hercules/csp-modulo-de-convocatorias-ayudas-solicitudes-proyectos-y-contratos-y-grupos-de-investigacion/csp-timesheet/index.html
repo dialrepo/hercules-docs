@@ -805,11 +805,11 @@
 <div id="breadcrumb-section">
 
 1.  [Hércules](index.html)
-2.  [Hércules](597853529.html)
-3.  [SGI. Sistema de gestión de investigación](597852519.html)
-4.  [Requisitos y análisis funcional](597852497.html)
-5.  [Análisis Funcional SGI - Hércules](597853748.html)
-6.  [CSP - Módulo de convocatorias, ayudas, solicitudes, proyectos y contratos y grupos de investigación](597853832.html)
+2.  [Hércules](/)
+3.  [SGI. Sistema de gestión de investigación](//sgi-sistema-de-gestion-de-investigacion)
+4.  [Requisitos y análisis funcional](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional)
+5.  [Análisis Funcional SGI - Hércules](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules)
+6.  [CSP - Módulo de convocatorias, ayudas, solicitudes, proyectos y contratos y grupos de investigación](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion)
 
 </div>
 
@@ -887,13 +887,13 @@ El estado inicial de un timesheet será el estado "propuesta". Mientras el times
 
 Una vez que el timesheet figure en estado "abierto", estará visible para los investigadores a través del acceso que éstos tendrán habilitado al SGI. En este estado, el investigador podrá modificar la dedicación diaria a cada uno de los proyectos/paquetes de trabajo que figuren en el timesheet. Será el investigador quien deba poner el timesheet en estado "Validado IM" (investigador miembro). Una vez que haya indicado este estado no podrá modificar el timesheet. 
 
-El paso a estado "Validado IM"  supondrá la creación de un aviso que será gestionado por el módulo global del SGI [AVI - Módulo de Avisos / Alertas](597853815.html). Este aviso será recepcionado por el ACT- CSP-001-Investigador que actúe como IP del proyecto o por los ACT-CSP-003-Gestor de la unidad de gestión correspondiente, en caso que no esté activado el estado "validado IP".
+El paso a estado "Validado IM"  supondrá la creación de un aviso que será gestionado por el módulo global del SGI [AVI - Módulo de Avisos / Alertas](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/com-modulo-de-comunicados). Este aviso será recepcionado por el ACT- CSP-001-Investigador que actúe como IP del proyecto o por los ACT-CSP-003-Gestor de la unidad de gestión correspondiente, en caso que no esté activado el estado "validado IP".
 
 Del estado "validado IM" el timesheet podrá pasar a estado "validado IP", si así lo establece la configuración del SGI. En este caso la validación debe de ser realizada por cada ACT-CSP-001-Investigador responsable (rol principal) de cada proyecto incluido en el timesheet, de forma que, hasta que no se alcance el estado "Validado IP" para cada uno de los proyectos, el timesheet no  podrá pasar al siguiente estado. El IP solamente podrá realizar el cambio de estado del timesheet (en este caso afectando únicamente al proyecto que le corresponda), no podrá modificar las  horas del timesheet de otro miembro del equipo. Cualquier corrección que desee precisar sobre las horas aportadas por el miembro en el timesheet deberá ser recogido a través del campo comentario que estará disponible en la pantalla de validación del timesheet. La modificación deberá ser introducida por el miembro volviendo a desencadenar el flujo de validación con IP. En caso de requerir esta corrección el estado indicado por ACT-CSP-001-Investigador responsable (rol principal) será "Subsanación"
 
-El paso a estado "Validado IP" supondrá la generación de un aviso en el módulo [AVI - Módulo de Avisos / Alertas](597853815.html). Este aviso será remitido al miembro al que pertenece el timesheet validado.
+El paso a estado "Validado IP" supondrá la generación de un aviso en el módulo [AVI - Módulo de Avisos / Alertas](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/com-modulo-de-comunicados). Este aviso será remitido al miembro al que pertenece el timesheet validado.
 
-Cuando el timesheet alcance el estado "validado IP" para todos los proyectos que incluya, se creará un nuevo aviso en [AVI - Módulo de Avisos / Alertas](597853815.html) para ser recibido por los ACT-CSP-003-Gestor de la unidad de gestión correspondiente.
+Cuando el timesheet alcance el estado "validado IP" para todos los proyectos que incluya, se creará un nuevo aviso en [AVI - Módulo de Avisos / Alertas](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/com-modulo-de-comunicados) para ser recibido por los ACT-CSP-003-Gestor de la unidad de gestión correspondiente.
 
 En caso que por configuración se establezca no hacer uso del estado "validado IP", el timesheet podrá pasar desde "validado IM" a "validado unidad". Los ACT-CSP-003-Gestor de la unidad de gestión correspondiente serán los responsables de poner cada timesheet en estado "Validado unidad" o "Subsanación", aportando en este caso el comentario correspondiente, dirigido hacia  ACT-CSP-001-Investigador a quien corresponde el timesheet.
 

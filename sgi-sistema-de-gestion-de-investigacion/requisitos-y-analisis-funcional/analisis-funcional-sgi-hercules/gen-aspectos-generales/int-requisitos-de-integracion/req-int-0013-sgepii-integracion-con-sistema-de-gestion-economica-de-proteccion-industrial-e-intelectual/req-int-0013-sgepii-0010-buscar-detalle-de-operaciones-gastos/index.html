@@ -805,13 +805,13 @@
 <div id="breadcrumb-section">
 
 1.  [Hércules](index.html)
-2.  [Hércules](597853529.html)
-3.  [SGI. Sistema de gestión de investigación](597852519.html)
-4.  [Requisitos y análisis funcional](597852497.html)
-5.  [Análisis Funcional SGI - Hércules](597853748.html)
-6.  [GEN - Aspectos generales](GEN---Aspectos-generales_597853747.html)
-7.  [INT - Requisitos de integración](597853257.html)
-8.  [REQ-INT-0013-SGEPII - Integración con Sistema de Gestión Económica de Protección Industrial e Intelectual](597852548.html)
+2.  [Hércules](/)
+3.  [SGI. Sistema de gestión de investigación](//sgi-sistema-de-gestion-de-investigacion)
+4.  [Requisitos y análisis funcional](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional)
+5.  [Análisis Funcional SGI - Hércules](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules)
+6.  [GEN - Aspectos generales](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales)
+7.  [INT - Requisitos de integración](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion)
+8.  [REQ-INT-0013-SGEPII - Integración con Sistema de Gestión Económica de Protección Industrial e Intelectual](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0013-sgepii-integracion-con-sistema-de-gestion-economica-de-proteccion-industrial-e-intelectual)
 
 </div>
 
@@ -933,13 +933,13 @@ Parámetros de salida:
 
 ## Diseño técnico
 
-En el siguiente enlace se muestra el diseño del modelo lógico y el diseño de la API del Sistema de Gestión Económica para la Protección Industrial e Intelectual: [SGI - ESB - SGEPII](SGI---ESB---SGEPII_597852927.html).
+En el siguiente enlace se muestra el diseño del modelo lógico y el diseño de la API del Sistema de Gestión Económica para la Protección Industrial e Intelectual: [SGI - ESB - SGEPII](//sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sgepii).
 
 Los servicios del API que cubren este requisito son:
 
-- [SGI - ESB - SGEPII - Buscar columnas gastos](SGI---ESB---SGEPII---Buscar-columnas-gastos_597853061.html)
+- [SGI - ESB - SGEPII - Buscar columnas gastos](//sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sgepii/sgi-esb-sgepii-buscar-columnas-gastos)
   - Se llamará en primer lugar para obtener las columnas de gastos que se han de presentar por pantalla.
-- [SGI - ESB - SGEPII - Buscar gastos](SGI---ESB---SGEPII---Buscar-gastos_597853062.html)
+- [SGI - ESB - SGEPII - Buscar gastos](//sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sgepii/sgi-esb-sgepii-buscar-gastos)
   - Se llamará a continuación para obtener los valores correspondientes a cada una de las columnas devueltas por el servicio anterior.
 
 A continuación se detallan los dos casos de cómo sería el flujo de llamadas para la búsqueda de gastos por tipo de operación :
@@ -951,10 +951,10 @@ A continuación se detallan los dos casos de cómo sería el flujo de llamadas p
 <div class="confluence-information-macro-body">
 
 - Buscar **todos los Gastos** que están asociados a una invención :  
-  - al servicio de **/gastos** [SGI - ESB - SGEPII - Buscar gastos](SGI---ESB---SGEPII---Buscar-gastos_597853062.html) se le debe pasar por parámetro:
+  - al servicio de **/gastos** [SGI - ESB - SGEPII - Buscar gastos](//sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sgepii/sgi-esb-sgepii-buscar-gastos) se le debe pasar por parámetro:
     - tipoOperacion = GAS (Ejecución económica - Gastos)
 - Buscar **los Gastos "deducibles" de los ingresos** generados por las invenciones, esto es, de entre todos los gastos que están asociados a una invención, los que pueden intervenir en los repartos:  
-  - al servicio de **/gastos** [SGI - ESB - SGEPII - Buscar gastos](SGI---ESB---SGEPII---Buscar-gastos_597853062.html) se le debe pasar por parámetro:
+  - al servicio de **/gastos** [SGI - ESB - SGEPII - Buscar gastos](//sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sgepii/sgi-esb-sgepii-buscar-gastos) se le debe pasar por parámetro:
     - tipoOperacion = REP (Ejecución económica - Repartos - Gastos a deducir)
 
 </div>

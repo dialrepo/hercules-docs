@@ -805,9 +805,9 @@
 <div id="breadcrumb-section">
 
 1.  [Hércules](index.html)
-2.  [Hércules](597853529.html)
-3.  [RPA](RPA_598147226.html)
-4.  [Módulo de tecnologías cognitivas](598147216.html)
+2.  [Hércules](/)
+3.  [RPA](//rpa)
+4.  [Módulo de tecnologías cognitivas](//rpa/modulo-de-tecnologias-cognitivas)
 
 </div>
 
@@ -827,9 +827,9 @@ Created by <span class="author"> Juan Tardón Martínez</span>, last updated by 
 
 El módulo cognitivo poseerá una librería capaz de extraer tablas de archivos PDFs, siendo capaz de detectar cambios de formatos en dicha tabla en los que respecta a la orientación (texto en vertical), es decir, la librería es capaz de extraer cualquier tabla en cualquier orientación, esto incluye detección de cambios de formato en los documentos de concesiones, ya que si las tablas cambiaran de orientación está funcionalidad seguiría detectándolas.
 
-Esta librería servirá de apoyo para la extracción de tablas [Proceso 3 : Automatización de procesos de gestiones documentales parametrizables](598147205.html), en la extracción de concesiones, ya que su extracción significará la búsqueda de información y automatización de procesos.  También se apoya en el módulo de [Reconocimiento de caracteres (OCR)](598147197.html), para aquellas tablas que se extraigan de imágenes y se necesite reconocer el texto de las celdas.
+Esta librería servirá de apoyo para la extracción de tablas [Proceso 3 : Automatización de procesos de gestiones documentales parametrizables](//rpa/modulo-de-automatizacion-y-gestion/analisis-y-procesos/proceso-3-automatizacion-de-procesos-de-gestiones-documentales-parametrizables), en la extracción de concesiones, ya que su extracción significará la búsqueda de información y automatización de procesos.  También se apoya en el módulo de [Reconocimiento de caracteres (OCR)](//rpa/modulo-de-tecnologias-cognitivas/reconocimiento-de-caracteres-ocr), para aquellas tablas que se extraigan de imágenes y se necesite reconocer el texto de las celdas.
 
-Para implementar este módulo trabajamos con Camelot (biblioteca de Python software libre GPL V3). Camelot es capaz de trabajar con tablas rotadas de diferentes formatos y, modificando ciertos parámetros internos de la propia librería es capaz de darnos resultados muy satisfactorios. Para la realización de este componente del módulo de tecnologías cognitivas se ha hecho uso de diferentes parametrizaciones de Camelot para posteriormente aplicando algoritmos propios, obtener la mejor aproximación a la tabla que contiene el documento de entrada. Esta librería tendrá como resultado, si se le pide, la salida de la tabla en formato Excel o CSV. También se ha implementado devolver la tabla resultante como un dataframe de Pandas, de esta forma otros procesos pueden extraer información que sea necesaria para la realización del [Módulo de Automatización y Gestión](598147224.html). Desde nuestro módulo de extracción de tablas podremos llamar a las funciones de estas librerías añadiendo los parámetros necesarios para que nos devuelva el resultado .
+Para implementar este módulo trabajamos con Camelot (biblioteca de Python software libre GPL V3). Camelot es capaz de trabajar con tablas rotadas de diferentes formatos y, modificando ciertos parámetros internos de la propia librería es capaz de darnos resultados muy satisfactorios. Para la realización de este componente del módulo de tecnologías cognitivas se ha hecho uso de diferentes parametrizaciones de Camelot para posteriormente aplicando algoritmos propios, obtener la mejor aproximación a la tabla que contiene el documento de entrada. Esta librería tendrá como resultado, si se le pide, la salida de la tabla en formato Excel o CSV. También se ha implementado devolver la tabla resultante como un dataframe de Pandas, de esta forma otros procesos pueden extraer información que sea necesaria para la realización del [Módulo de Automatización y Gestión](//rpa/modulo-de-automatizacion-y-gestion). Desde nuestro módulo de extracción de tablas podremos llamar a las funciones de estas librerías añadiendo los parámetros necesarios para que nos devuelva el resultado .
 
 A continuación mostramos un ejemplo de uso de esta funcionalidad de la librería, donde partimos de una tabla que se encuentra en un documento PDF que recoge concesiones de convocatorias.
 
@@ -904,11 +904,11 @@ Una vez tenemos la tabla como un dataframe, podemos exportarla con ayuda de la l
 
 <div class="greybox" align="left">
 
-<span class="image placeholder" original-image-src="images/icons/bullet_blue.gif" original-image-title="" height="8" width="8"></span> [image2022-1-18_13-23-25.png](attachments/598147214/598147786.png) (image/png)  
-<span class="image placeholder" original-image-src="images/icons/bullet_blue.gif" original-image-title="" height="8" width="8"></span> [image2022-3-1_12-31-48.png](attachments/598147214/598148332.png) (image/png)  
-<span class="image placeholder" original-image-src="images/icons/bullet_blue.gif" original-image-title="" height="8" width="8"></span> [image2022-3-1_12-32-15.png](attachments/598147214/598148331.png) (image/png)  
-<span class="image placeholder" original-image-src="images/icons/bullet_blue.gif" original-image-title="" height="8" width="8"></span> [image2022-3-1_12-44-38.png](attachments/598147214/598148338.png) (image/png)  
-<span class="image placeholder" original-image-src="images/icons/bullet_blue.gif" original-image-title="" height="8" width="8"></span> [RESOLUCIÓN DE CONCESIÓN-PROYECTOS UMU.xlsx](attachments/598147214/598148339.xlsx) (application/vnd.openxmlformats-officedocument.spreadsheetml.sheet)  
+<span class="image placeholder" original-image-src="images/icons/bullet_blue.gif" original-image-title="" height="8" width="8"></span> [image2022-1-18_13-23-25.png](/attachments/598147214/598147786.png) (image/png)  
+<span class="image placeholder" original-image-src="images/icons/bullet_blue.gif" original-image-title="" height="8" width="8"></span> [image2022-3-1_12-31-48.png](/attachments/598147214/598148332.png) (image/png)  
+<span class="image placeholder" original-image-src="images/icons/bullet_blue.gif" original-image-title="" height="8" width="8"></span> [image2022-3-1_12-32-15.png](/attachments/598147214/598148331.png) (image/png)  
+<span class="image placeholder" original-image-src="images/icons/bullet_blue.gif" original-image-title="" height="8" width="8"></span> [image2022-3-1_12-44-38.png](/attachments/598147214/598148338.png) (image/png)  
+<span class="image placeholder" original-image-src="images/icons/bullet_blue.gif" original-image-title="" height="8" width="8"></span> [RESOLUCIÓN DE CONCESIÓN-PROYECTOS UMU.xlsx](/attachments/598147214/598148339.xlsx) (application/vnd.openxmlformats-officedocument.spreadsheetml.sheet)  
 
 </div>
 

@@ -805,12 +805,12 @@
 <div id="breadcrumb-section">
 
 1.  [Hércules](index.html)
-2.  [Hércules](597853529.html)
-3.  [SGI. Sistema de gestión de investigación](597852519.html)
-4.  [Requisitos y análisis funcional](597852497.html)
-5.  [Análisis Funcional SGI - Hércules](597853748.html)
-6.  [GEN - Aspectos generales](GEN---Aspectos-generales_597853747.html)
-7.  [SHA - Buscadores y listados comunes](SHA---Buscadores-y-listados-comunes_597853842.html)
+2.  [Hércules](/)
+3.  [SGI. Sistema de gestión de investigación](//sgi-sistema-de-gestion-de-investigacion)
+4.  [Requisitos y análisis funcional](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional)
+5.  [Análisis Funcional SGI - Hércules](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules)
+6.  [GEN - Aspectos generales](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales)
+7.  [SHA - Buscadores y listados comunes](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/sha-buscadores-y-listados-comunes)
 
 </div>
 
@@ -939,7 +939,7 @@ Se <span class="inline-comment-marker" ref="099683e4-cb7b-4efe-a3eb-1b542e427d69
 <th class="confluenceTd"><p>Se mostrará el árbol de áreas de conocimiento.</p>
 <p>En un primer momento, cuando no haya ningún área de conocimiento previamente asociada a la entidad desde la que se llama a este formulario, se mostrarán únicamente las áreas de conocimiento de primer nivel (ramas de conocimiento). Según se vaya abriendo el árbol, se mostrará el nivel descendiente de la rama desplegada y así sucesivamente.</p>
 <p>Si ya existen áreas de conocimiento asociadas a la entidad, se mostrarán igualmente solo las áreas de conocimiento de primer nivel (ramas de conocimiento) y también según se vaya abriendo el árbol, se mostrará el nivel descendiente de la rama desplegada y así sucesivamente, si bien en este caso en el árbol se mostrarán las áreas de conocimiento previamente asociadas a la entidad a modo informativo en modo solo lectura. Sobre ese árbol, se podrán seleccionar nuevas áreas, pero no deseleccionar las que se presentan marcadas de antemano. Esta operativa para deshacer la relación entre la entidad y un área de conocimiento se ha de llevar a cabo con la opción de eliminar (icono "papelera") en la pantalla donde se presente el listado de áreas de conocimiento actualmente asociadas con la entidad (Ver <a href="#IUGEN0110Seleccióndeáreasdeconocimiento-ejemplo">Ejemplo de formulario de listado de áreas de conocimiento asociadas a una entidad</a>).</p>
-<p>El listado de áreas de conocimiento tanto de primer nivel (raíces, que jerárquicamente no tienen padre) como del resto de niveles será recuperado a través de llamadas sucesivas a <a href="597853656.html">REQ-INT-0030-SGO-0010 - Listar áreas de conocimiento</a><span class="confluence-link"> indicando según el caso la ausencia de nivel padre (para las raíces) o el identificador concreto del nivel padre (para los elementos que no son raíz).<br />
+<p>El listado de áreas de conocimiento tanto de primer nivel (raíces, que jerárquicamente no tienen padre) como del resto de niveles será recuperado a través de llamadas sucesivas a <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0030-sgo-integracion-con-sistema-de-gestion-de-la-estructura-organica/req-int-0030-sgo-0010-listar-areas-de-conocimiento">REQ-INT-0030-SGO-0010 - Listar áreas de conocimiento</a><span class="confluence-link"> indicando según el caso la ausencia de nivel padre (para las raíces) o el identificador concreto del nivel padre (para los elementos que no son raíz).<br />
 </span></p>
 <p>Se puede seleccionar uno o varias áreas de conocimiento en función de lo que en cada gestión desde donde se llame se determine.</p></th>
 </tr>
@@ -1027,7 +1027,7 @@ Se incluyen menús, cabeceras y botones "Guardar" y "Cancelar" para mostrar el c
 <th class="confluenceTd">Niveles</th>
 <th class="confluenceTd"><p>Texto</p></th>
 <th class="confluenceTd"><p>Concatenación de los nombres de las áreas de conocimiento que ocupan niveles superiores al área de conocimiento con la que se vincula la entidad.</p>
-<p>La cadena de texto a mostrar se compondrá a la hora de hacer la presentación por pantalla, obteniendo para ello la información necesaria a través de sucesivas peticiones del detalle de cada área de conocimiento a partir de <a href="597852862.html">REQ-INT-0030-SGO-0011 - Consultar área de conocimiento</a><span class="confluence-link">. La concatenación de nombres habría de hacerse utilizando algún tipo de separador (ej: "-") y  sería de los nombres de los niveles jerárquicamente superiores al del área seleccionada, ordenados desde la raíz hasta el inmediatamente superior a ese área de conocimiento, esto es, sin incluir el nombre del área seleccionada.<br />
+<p>La cadena de texto a mostrar se compondrá a la hora de hacer la presentación por pantalla, obteniendo para ello la información necesaria a través de sucesivas peticiones del detalle de cada área de conocimiento a partir de <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0030-sgo-integracion-con-sistema-de-gestion-de-la-estructura-organica/req-int-0030-sgo-0011-consultar-area-de-conocimiento">REQ-INT-0030-SGO-0011 - Consultar área de conocimiento</a><span class="confluence-link">. La concatenación de nombres habría de hacerse utilizando algún tipo de separador (ej: "-") y  sería de los nombres de los niveles jerárquicamente superiores al del área seleccionada, ordenados desde la raíz hasta el inmediatamente superior a ese área de conocimiento, esto es, sin incluir el nombre del área seleccionada.<br />
 </span></p>
 <p>Si la cadena de texto a mostrar es muy larga se cortará con "...". Se acompañará de un componente tipo "tooltip" que mostrará la cadena completa al pasar sobre el texto. </p>
 <p>Nota: en el caso del escenario en el que se acaban de seleccionar una o varias áreas de conocimiento en el popup, puede que para estas áreas de conocimiento esta información ya esté disponible en la respuesta devuelta tras la selección y no sea necesario realizar nuevas llamadas para presentarla en pantalla.</p></th>
@@ -1036,7 +1036,7 @@ Se incluyen menús, cabeceras y botones "Guardar" y "Cancelar" para mostrar el c
 <th class="confluenceTd">Nivel seleccionado</th>
 <th class="confluenceTd"><p>Texto</p></th>
 <th class="confluenceTd"><p><span style="color:var(--ds-text,#172b4d);">Nombre del área de conocimiento seleccionado. Es el nombre del área con el que se relaciona directamente la entidad que corresponda. </span></p>
-<p><span style="color:var(--ds-text,#172b4d);">El nombre a mostrar se obtendrá a partir de </span><a href="597852862.html">REQ-INT-0030-SGO-0011 - Consultar área de conocimiento</a><span class="confluence-link">.</span></p>
+<p><span style="color:var(--ds-text,#172b4d);">El nombre a mostrar se obtendrá a partir de </span><a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0030-sgo-integracion-con-sistema-de-gestion-de-la-estructura-organica/req-int-0030-sgo-0011-consultar-area-de-conocimiento">REQ-INT-0030-SGO-0011 - Consultar área de conocimiento</a><span class="confluence-link">.</span></p>
 <p><span class="confluence-link">Nota: en el caso del escenario en el que se acaban de seleccionar una o varias áreas de conocimiento en el popup, puede que para estas áreas de conocimiento esta información ya esté disponible en la respuesta devuelta tras la selección y no sea necesario realizar nuevas llamadas para presentarla en pantalla.</span></p></th>
 </tr>
 <tr class="even">
@@ -1160,18 +1160,18 @@ Se incluyen menús, cabeceras y botones "Guardar" y "Cancelar" para mostrar el c
 
 <div class="greybox" align="left">
 
-<span class="image placeholder" original-image-src="images/icons/bullet_blue.gif" original-image-title="" height="8" width="8"></span> [2001solicitudinvestigadorcreardatosproyectocodigosunescoaadir.png](attachments/597853253/597884824.png) (image/png)  
-<span class="image placeholder" original-image-src="images/icons/bullet_blue.gif" original-image-title="" height="8" width="8"></span> [2001solicitudinvestigadorcreardatosproyectocodigosunesco.png](attachments/597853253/597884822.png) (image/png)  
-<span class="image placeholder" original-image-src="images/icons/bullet_blue.gif" original-image-title="" height="8" width="8"></span> [2002solicitudinvestigadorcrearequipoproyectolistarmenu.png](attachments/597853253/597884821.png) (image/png)  
-<span class="image placeholder" original-image-src="images/icons/bullet_blue.gif" original-image-title="" height="8" width="8"></span> [2001solicitudinvestigadorcreardatosproyectoareaconocimientoaadir.png](attachments/597853253/597884825.png) (image/png)  
-<span class="image placeholder" original-image-src="images/icons/bullet_blue.gif" original-image-title="" height="8" width="8"></span> [620205crearproyectogestordatosgeneralesareasconocimientoadd.png](attachments/597853253/597884841.png) (image/png)  
-<span class="image placeholder" original-image-src="images/icons/bullet_blue.gif" original-image-title="" height="8" width="8"></span> [620205crearproyectogestordatosgeneralesareasconocimientoadd.png](attachments/597853253/597884823.png) (image/png)  
-<span class="image placeholder" original-image-src="images/icons/bullet_blue.gif" original-image-title="" height="8" width="8"></span> [01reas_de_conocimientoselectorpopup.png](attachments/597853253/597884619.png) (image/png)  
-<span class="image placeholder" original-image-src="images/icons/bullet_blue.gif" original-image-title="" height="8" width="8"></span> [01reas_de_conocimientolistadoasociadas.png](attachments/597853253/597884633.png) (image/png)  
-<span class="image placeholder" original-image-src="images/icons/bullet_blue.gif" original-image-title="" height="8" width="8"></span> [01reas_de_conocimientolistadoasociadaspopupniveles.png](attachments/597853253/597884634.png) (image/png)  
-<span class="image placeholder" original-image-src="images/icons/bullet_blue.gif" original-image-title="" height="8" width="8"></span> [01reas_de_conocimientoselectorpopupcondatosdet.png](attachments/597853253/597884620.png) (image/png)  
-<span class="image placeholder" original-image-src="images/icons/bullet_blue.gif" original-image-title="" height="8" width="8"></span> [01reas_de_conocimientoselectorpopup.png](attachments/597853253/597884635.png) (image/png)  
-<span class="image placeholder" original-image-src="images/icons/bullet_blue.gif" original-image-title="" height="8" width="8"></span> [01reas_de_conocimientoselectorpopupcondatos.png](attachments/597853253/597884621.png) (image/png)  
+<span class="image placeholder" original-image-src="images/icons/bullet_blue.gif" original-image-title="" height="8" width="8"></span> [2001solicitudinvestigadorcreardatosproyectocodigosunescoaadir.png](/attachments/597853253/597884824.png) (image/png)  
+<span class="image placeholder" original-image-src="images/icons/bullet_blue.gif" original-image-title="" height="8" width="8"></span> [2001solicitudinvestigadorcreardatosproyectocodigosunesco.png](/attachments/597853253/597884822.png) (image/png)  
+<span class="image placeholder" original-image-src="images/icons/bullet_blue.gif" original-image-title="" height="8" width="8"></span> [2002solicitudinvestigadorcrearequipoproyectolistarmenu.png](/attachments/597853253/597884821.png) (image/png)  
+<span class="image placeholder" original-image-src="images/icons/bullet_blue.gif" original-image-title="" height="8" width="8"></span> [2001solicitudinvestigadorcreardatosproyectoareaconocimientoaadir.png](/attachments/597853253/597884825.png) (image/png)  
+<span class="image placeholder" original-image-src="images/icons/bullet_blue.gif" original-image-title="" height="8" width="8"></span> [620205crearproyectogestordatosgeneralesareasconocimientoadd.png](/attachments/597853253/597884841.png) (image/png)  
+<span class="image placeholder" original-image-src="images/icons/bullet_blue.gif" original-image-title="" height="8" width="8"></span> [620205crearproyectogestordatosgeneralesareasconocimientoadd.png](/attachments/597853253/597884823.png) (image/png)  
+<span class="image placeholder" original-image-src="images/icons/bullet_blue.gif" original-image-title="" height="8" width="8"></span> [01reas_de_conocimientoselectorpopup.png](/attachments/597853253/597884619.png) (image/png)  
+<span class="image placeholder" original-image-src="images/icons/bullet_blue.gif" original-image-title="" height="8" width="8"></span> [01reas_de_conocimientolistadoasociadas.png](/attachments/597853253/597884633.png) (image/png)  
+<span class="image placeholder" original-image-src="images/icons/bullet_blue.gif" original-image-title="" height="8" width="8"></span> [01reas_de_conocimientolistadoasociadaspopupniveles.png](/attachments/597853253/597884634.png) (image/png)  
+<span class="image placeholder" original-image-src="images/icons/bullet_blue.gif" original-image-title="" height="8" width="8"></span> [01reas_de_conocimientoselectorpopupcondatosdet.png](/attachments/597853253/597884620.png) (image/png)  
+<span class="image placeholder" original-image-src="images/icons/bullet_blue.gif" original-image-title="" height="8" width="8"></span> [01reas_de_conocimientoselectorpopup.png](/attachments/597853253/597884635.png) (image/png)  
+<span class="image placeholder" original-image-src="images/icons/bullet_blue.gif" original-image-title="" height="8" width="8"></span> [01reas_de_conocimientoselectorpopupcondatos.png](/attachments/597853253/597884621.png) (image/png)  
 
 </div>
 

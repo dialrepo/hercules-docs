@@ -805,14 +805,14 @@
 <div id="breadcrumb-section">
 
 1.  [Hércules](index.html)
-2.  [Hércules](597853529.html)
-3.  [SGI. Sistema de gestión de investigación](597852519.html)
-4.  [Requisitos y análisis funcional](597852497.html)
-5.  [Análisis Funcional SGI - Hércules](597853748.html)
-6.  [CSP - Módulo de convocatorias, ayudas, solicitudes, proyectos y contratos y grupos de investigación](597853832.html)
-7.  [CSP - Interfaz de usuario](CSP---Interfaz-de-usuario_597853755.html)
-8.  [IU-CSP-0950 - Grupos de investigación](597852596.html)
-9.  [IU-CSP-0952- Crear grupo de investigación](597852368.html)
+2.  [Hércules](/)
+3.  [SGI. Sistema de gestión de investigación](//sgi-sistema-de-gestion-de-investigacion)
+4.  [Requisitos y análisis funcional](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional)
+5.  [Análisis Funcional SGI - Hércules](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules)
+6.  [CSP - Módulo de convocatorias, ayudas, solicitudes, proyectos y contratos y grupos de investigación](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion)
+7.  [CSP - Interfaz de usuario](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-interfaz-de-usuario)
+8.  [IU-CSP-0950 - Grupos de investigación](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-interfaz-de-usuario/iu-csp-0950-grupos-de-investigacion)
+9.  [IU-CSP-0952- Crear grupo de investigación](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-interfaz-de-usuario/iu-csp-0950-grupos-de-investigacion/iu-csp-0952-crear-grupo-de-investigacion)
 
 </div>
 
@@ -936,14 +936,14 @@ Formulario de creación de un grupo de investigación, apartado de Datos general
 <th class="confluenceTd"><p>Texto</p>
 <p>Consulta</p></th>
 <th class="confluenceTd"><p>Será un campo de información para el usuario únicamente visible en la creación del nuevo grupo.</p>
-<p>Se muestra el campo "nombre" del departamento al que esta adscrito la persona seleccionada en el campo "Investigador/a principal". El departamento se recuperará por medio de <a href="597852471.html">REQ-INT-0020-SGP-0033 - Consultar datos de vinculación de persona</a> de la persona seleccionada en el campo "Investigador/a principal".</p>
+<p>Se muestra el campo "nombre" del departamento al que esta adscrito la persona seleccionada en el campo "Investigador/a principal". El departamento se recuperará por medio de <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0020-sgp-integracion-con-sistema-de-gestion-de-personas/req-int-0020-sgp-0033-consultar-datos-de-vinculacion-de-persona">REQ-INT-0020-SGP-0033 - Consultar datos de vinculación de persona</a> de la persona seleccionada en el campo "Investigador/a principal".</p>
 <p>Modo consulta.</p></th>
 </tr>
 <tr class="odd">
 <th class="confluenceTd">Código</th>
 <th class="confluenceTd"><p>Texto corto</p>
 <p>Obligatorio</p></th>
-<th class="confluenceTd"><p>Se genera de forma automática al seleccionar el "Investigador/a principal" , a partir del código del departamento al que esta adscrito el investigador/a principal y un secuencial por departamento. El código del departamento se recuperará por medio de <a href="597852471.html">REQ-INT-0020-SGP-0033 - Consultar datos de vinculación de persona</a> de la persona seleccionada en el campo "Investigador/a principal".</p>
+<th class="confluenceTd"><p>Se genera de forma automática al seleccionar el "Investigador/a principal" , a partir del código del departamento al que esta adscrito el investigador/a principal y un secuencial por departamento. El código del departamento se recuperará por medio de <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0020-sgp-integracion-con-sistema-de-gestion-de-personas/req-int-0020-sgp-0033-consultar-datos-de-vinculacion-de-persona">REQ-INT-0020-SGP-0033 - Consultar datos de vinculación de persona</a> de la persona seleccionada en el campo "Investigador/a principal".</p>
 <p>Para saber el secuencial que le corresponde, se buscará en la tabla "grupo" todos los grupos que tengan en el campo "departamentoOrigenRef" el código del departamento del "Investigador/a principal" se contabilizarán y se sumará uno. En caso de que exista ya ese código se cogerá el sucesivo y así hasta encontrar uno que no exista.</p>
 <p>Este código será único por grupo de investigación. Campo "código" de la tabla "grupo".</p>
 <p>Será un campo obligatorio y podrá ser modificado por el ACT-CSP-004-Administrador y/o ACT-CSP-003-Gestor.</p></th>
@@ -974,7 +974,7 @@ Formulario de creación de un grupo de investigación, apartado de Datos general
 <th class="confluenceTd" style="width: 13.3232%"><p>Componente a medida</p>
 <p>Opcional</p></th>
 <th class="confluenceTd" style="width: 76.3058%"><p>Lista de palabras clave asociadas al grupo.</p>
-<p>El comportamiento del componente será el descrito de manera general en <a href="597852390.html">IU-GEN-0200 - Gestión de palabras clave</a>.</p></th>
+<p>El comportamiento del componente será el descrito de manera general en <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/plcl-palabras-clave/gen-palabras-clave-interfaz-de-usuario/iu-gen-0200-gestion-de-palabras-clave">IU-GEN-0200 - Gestión de palabras clave</a>.</p></th>
 </tr>
 <tr class="even">
 <th class="confluenceTd">Tipo grupo</th>
@@ -1132,9 +1132,9 @@ Formulario de creación de un grupo de investigación, apartado de Datos general
 
 <div class="greybox" align="left">
 
-<span class="image placeholder" original-image-src="images/icons/bullet_blue.gif" original-image-title="" height="8" width="8"></span> [nuevogrupo.png](attachments/597852367/597876583.png) (image/png)  
-<span class="image placeholder" original-image-src="images/icons/bullet_blue.gif" original-image-title="" height="8" width="8"></span> [nuevogrupo.png](attachments/597852367/597876622.png) (image/png)  
-<span class="image placeholder" original-image-src="images/icons/bullet_blue.gif" original-image-title="" height="8" width="8"></span> [nuevogrupo.png](attachments/597852367/597876568.png) (image/png)  
+<span class="image placeholder" original-image-src="images/icons/bullet_blue.gif" original-image-title="" height="8" width="8"></span> [nuevogrupo.png](/attachments/597852367/597876583.png) (image/png)  
+<span class="image placeholder" original-image-src="images/icons/bullet_blue.gif" original-image-title="" height="8" width="8"></span> [nuevogrupo.png](/attachments/597852367/597876622.png) (image/png)  
+<span class="image placeholder" original-image-src="images/icons/bullet_blue.gif" original-image-title="" height="8" width="8"></span> [nuevogrupo.png](/attachments/597852367/597876568.png) (image/png)  
 
 </div>
 

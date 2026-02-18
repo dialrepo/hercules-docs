@@ -805,14 +805,14 @@
 <div id="breadcrumb-section">
 
 1.  [Hércules](index.html)
-2.  [Hércules](597853529.html)
-3.  [SGI. Sistema de gestión de investigación](597852519.html)
-4.  [Requisitos y análisis funcional](597852497.html)
-5.  [Análisis Funcional SGI - Hércules](597853748.html)
-6.  [CSP - Módulo de convocatorias, ayudas, solicitudes, proyectos y contratos y grupos de investigación](597853832.html)
-7.  [CSP - Interfaz de usuario](CSP---Interfaz-de-usuario_597853755.html)
-8.  [IU-CSP-0300 - Gestión de solicitudes](597853730.html)
-9.  [IU-CSP-0305 - Modificar solicitud - Tipo proyecto](IU-CSP-0305---Modificar-solicitud---Tipo-proyecto_597853661.html)
+2.  [Hércules](/)
+3.  [SGI. Sistema de gestión de investigación](//sgi-sistema-de-gestion-de-investigacion)
+4.  [Requisitos y análisis funcional](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional)
+5.  [Análisis Funcional SGI - Hércules](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules)
+6.  [CSP - Módulo de convocatorias, ayudas, solicitudes, proyectos y contratos y grupos de investigación](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion)
+7.  [CSP - Interfaz de usuario](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-interfaz-de-usuario)
+8.  [IU-CSP-0300 - Gestión de solicitudes](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-interfaz-de-usuario/iu-csp-0300-gestion-de-solicitudes)
+9.  [IU-CSP-0305 - Modificar solicitud - Tipo proyecto](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-interfaz-de-usuario/iu-csp-0300-gestion-de-solicitudes/iu-csp-0305-modificar-solicitud-tipo-proyecto)
 
 </div>
 
@@ -928,11 +928,11 @@ Formulario para añadir los miembros del equipo en una solicitud de tipo "proyec
 <th class="confluenceTd">Icono de alerta con tooltip</th>
 <th class="confluenceTd"><p>Las comprobaciones para mostrar o no el icono de advertencia solamente se realizarán si la solicitud está vinculada a una convocatoria registrada en el SGI (campo "convocatoria" de la tabla "solicitud" está informado). Para cada miembro del equipo (tabla "solicitud proyecto equipo") se realizarán la siguientes comprobaciones respecto a los datos de la convocatoria (requisitos IP y requisitos equipo).</p>
 <ul>
-<li>Si el miembro tiene un rol principal (el campo "rol proyecto" de la tabla "solicitud proyecto equipo" está configurado con el campo "principal" a "true"), se realizarán las comprobaciones contra los requisitos establecidos en la tabla "requisito IP". Se aplicarán las comprobaciones especificadas en <a href="597853101.html">CU-CSP-1100-003 - Comprobación requisitos IP de convocatoria</a> sobre el "persona ref" del miembro:
+<li>Si el miembro tiene un rol principal (el campo "rol proyecto" de la tabla "solicitud proyecto equipo" está configurado con el campo "principal" a "true"), se realizarán las comprobaciones contra los requisitos establecidos en la tabla "requisito IP". Se aplicarán las comprobaciones especificadas en <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-casos-de-uso/cu-csp-1100-gestion-de-solicitudes/cu-csp-1100-003-comprobacion-requisitos-ip">CU-CSP-1100-003 - Comprobación requisitos IP de convocatoria</a> sobre el "persona ref" del miembro:
 <ul>
 <li><span style="color:var(--ds-text,#172b4d);">Si cualquiera de las comprobaciones anteriores no se cumple se mostrará el icono de advertencia con el tooltip "No se cumplen los requisitos establecidos por la convocatoria."</span></li>
 </ul></li>
-<li><span style="color:var(--ds-text,#172b4d);">Si el miembro tiene un rol que no sea principal (el campo "rol proyecto" de la tabla "solicitud proyecto equipo" está configurado con el campo "principal" a "false"), se realizarán las comprobaciones contra los requisitos establecidos en la tabla "requisito equipo". Se aplicarán las comprobaciones especificadas en <a href="597853097.html">CU-CSP-1100-004 - Comprobación Requisitos equipo</a> sobre el "persona ref" del miembro:</span>
+<li><span style="color:var(--ds-text,#172b4d);">Si el miembro tiene un rol que no sea principal (el campo "rol proyecto" de la tabla "solicitud proyecto equipo" está configurado con el campo "principal" a "false"), se realizarán las comprobaciones contra los requisitos establecidos en la tabla "requisito equipo". Se aplicarán las comprobaciones especificadas en <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-casos-de-uso/cu-csp-1100-gestion-de-solicitudes/cu-csp-1100-004-comprobacion-requisitos-equipo">CU-CSP-1100-004 - Comprobación Requisitos equipo</a> sobre el "persona ref" del miembro:</span>
 <ul>
 <li><span style="color:var(--ds-text,#172b4d);">Si cualquiera de las comprobaciones anteriores no se cumple se mostrará el icono de advertencia con el tooltip "No se cumplen los requisitos establecidos por la convocatoria"</span></li>
 </ul></li>
@@ -941,17 +941,17 @@ Formulario para añadir los miembros del equipo en una solicitud de tipo "proyec
 <tr class="even">
 <th class="confluenceTd">Nº Identificación Personal</th>
 <th class="confluenceTd">Texto corto</th>
-<th class="confluenceTd">Número de identificación personal del miembro del equipo de proyecto, recuperado por medio de <a href="REQ-INT-0020-SGP-0030---Consultar-datos-generales-de-persona_597853243.html">REQ-INT-0020-SGP-0030 - Consultar datos generales de persona</a></th>
+<th class="confluenceTd">Número de identificación personal del miembro del equipo de proyecto, recuperado por medio de <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0020-sgp-integracion-con-sistema-de-gestion-de-personas/req-int-0020-sgp-0030-consultar-datos-generales-de-persona">REQ-INT-0020-SGP-0030 - Consultar datos generales de persona</a></th>
 </tr>
 <tr class="odd">
 <th class="confluenceTd">Nombre</th>
 <th class="confluenceTd">Texto corto</th>
-<th class="confluenceTd">Nombre del miembro del equipo de proyecto, recuperado por medio de <a href="REQ-INT-0020-SGP-0030---Consultar-datos-generales-de-persona_597853243.html">REQ-INT-0020-SGP-0030 - Consultar datos generales de persona</a></th>
+<th class="confluenceTd">Nombre del miembro del equipo de proyecto, recuperado por medio de <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0020-sgp-integracion-con-sistema-de-gestion-de-personas/req-int-0020-sgp-0030-consultar-datos-generales-de-persona">REQ-INT-0020-SGP-0030 - Consultar datos generales de persona</a></th>
 </tr>
 <tr class="even">
 <th class="confluenceTd">Apellidos</th>
 <th class="confluenceTd">Texto corto</th>
-<th class="confluenceTd">Apellidos del miembro del equipo de proyecto, recuperado por medio de <a href="REQ-INT-0020-SGP-0030---Consultar-datos-generales-de-persona_597853243.html">REQ-INT-0020-SGP-0030 - Consultar datos generales de persona</a></th>
+<th class="confluenceTd">Apellidos del miembro del equipo de proyecto, recuperado por medio de <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0020-sgp-integracion-con-sistema-de-gestion-de-personas/req-int-0020-sgp-0030-consultar-datos-generales-de-persona">REQ-INT-0020-SGP-0030 - Consultar datos generales de persona</a></th>
 </tr>
 <tr class="odd">
 <th class="confluenceTd">Rol en el equipo</th>
@@ -993,7 +993,7 @@ Formulario para añadir los miembros del equipo en una solicitud de tipo "proyec
 <td class="confluenceTd">Modificar</td>
 <td class="confluenceTd">Muestra la pantalla de modificación del miembro seleccionado del listado <span>de miembros del equipo de proyecto<br />
 </span></td>
-<td class="confluenceTd"><p>Se resuelve con la pantalla <a href="597853739.html">IU-CSP-0302-004 - Añadir-modificar miembro de equipo</a>.</p>
+<td class="confluenceTd"><p>Se resuelve con la pantalla <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-interfaz-de-usuario/iu-csp-0300-gestion-de-solicitudes/iu-csp-0305-modificar-solicitud-tipo-proyecto/iu-csp-0302-004-anadir-modificar-miembro-de-equipo">IU-CSP-0302-004 - Añadir-modificar miembro de equipo</a>.</p>
 <p><br />
 </p></td>
 <td class="confluenceTd"><p>CSP-SOL-E</p>
@@ -1021,7 +1021,7 @@ Formulario para añadir los miembros del equipo en una solicitud de tipo "proyec
 <tr class="even">
 <td class="confluenceTd">Añadir miembro</td>
 <td class="confluenceTd"><p>Añade un miembro al equipo</p></td>
-<td class="confluenceTd"><p><span>Muestra la pantalla <a href="597853739.html">IU-CSP-0302-004 - Añadir-modificar miembro de equipo</a></span>.</p>
+<td class="confluenceTd"><p><span>Muestra la pantalla <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-interfaz-de-usuario/iu-csp-0300-gestion-de-solicitudes/iu-csp-0305-modificar-solicitud-tipo-proyecto/iu-csp-0302-004-anadir-modificar-miembro-de-equipo">IU-CSP-0302-004 - Añadir-modificar miembro de equipo</a></span>.</p>
 <p><br />
 </p></td>
 <td class="confluenceTd"><p>CSP-SOL-E</p>
@@ -1058,8 +1058,8 @@ Formulario para añadir los miembros del equipo en una solicitud de tipo "proyec
 <td class="confluenceTd">Guardar</td>
 <td class="confluenceTd"><p>Crea la solicitud con la información introducida en el formulario.</p>
 <p>Al guardar una solicitud se guardar la información de todos los apartados de definición de la solicitud.</p></td>
-<td class="confluenceTd"><p>Aplicar las comprobaciones generales especificadas en <a href="CU-CSP-1100-001-Modificar-solicitud---Guardar_597852358.html">CU-CSP-1100-001 Modificar solicitud - Guardar</a></p>
-<p>Aplicar las validaciones para mostrar los mensajes de advertencia  a partir de las comprobaciones a realizar sobre los apartados requisitos IP y requisitos equipo descritos en <a href="CU-CSP-1100-001-Modificar-solicitud---Guardar_597852358.html">CU-CSP-1100-001 Modificar solicitud - Guardar</a> (pestaña Equipo).</p></td>
+<td class="confluenceTd"><p>Aplicar las comprobaciones generales especificadas en <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-casos-de-uso/cu-csp-1100-gestion-de-solicitudes/cu-csp-1100-001-modificar-solicitud-guardar">CU-CSP-1100-001 Modificar solicitud - Guardar</a></p>
+<p>Aplicar las validaciones para mostrar los mensajes de advertencia  a partir de las comprobaciones a realizar sobre los apartados requisitos IP y requisitos equipo descritos en <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-casos-de-uso/cu-csp-1100-gestion-de-solicitudes/cu-csp-1100-001-modificar-solicitud-guardar">CU-CSP-1100-001 Modificar solicitud - Guardar</a> (pestaña Equipo).</p></td>
 <td class="confluenceTd"><p>CSP-SOL-E</p>
 <p>CSP-SOL-E_UO</p>
 <p><br />
@@ -1134,18 +1134,18 @@ Se aplican las mismas restricciones para todos los elementos del árbol de naveg
 
 <div class="greybox" align="left">
 
-<span class="image placeholder" original-image-src="images/icons/bullet_blue.gif" original-image-title="" height="8" width="8"></span> [2002solicitudinvestigadorcrearequipoproyectolistarmenu.png](attachments/597853740/597866908.png) (image/png)  
-<span class="image placeholder" original-image-src="images/icons/bullet_blue.gif" original-image-title="" height="8" width="8"></span> [2002solicitudinvestigadorcrearequipoproyectolistarmenu.png](attachments/597853740/597866234.png) (image/png)  
-<span class="image placeholder" original-image-src="images/icons/bullet_blue.gif" original-image-title="" height="8" width="8"></span> [2002solicitudinvestigadorcrearequipoproyectolistarmenu.png](attachments/597853740/598835281.png) (image/png)  
-<span class="image placeholder" original-image-src="images/icons/bullet_blue.gif" original-image-title="" height="8" width="8"></span> [2002solicitudinvestigadorcrearequipoproyectolistarmenu.png](attachments/597853740/597878665.png) (image/png)  
-<span class="image placeholder" original-image-src="images/icons/bullet_blue.gif" original-image-title="" height="8" width="8"></span> [2002solicitudinvestigadorcrearequipoproyectolistarmenu.png](attachments/597853740/597866838.png) (image/png)  
-<span class="image placeholder" original-image-src="images/icons/bullet_blue.gif" original-image-title="" height="8" width="8"></span> [24_Solicitud_EquipoProyecto_Listar.png](attachments/597853740/597884639.png) (image/png)  
-<span class="image placeholder" original-image-src="images/icons/bullet_blue.gif" original-image-title="" height="8" width="8"></span> [24_Solicitud_EquipoProyecto_Listar.png](attachments/597853740/597862049.png) (image/png)  
-<span class="image placeholder" original-image-src="images/icons/bullet_blue.gif" original-image-title="" height="8" width="8"></span> [24solicitudequipoproyectolistar.png](attachments/597853740/597862458.png) (image/png)  
-<span class="image placeholder" original-image-src="images/icons/bullet_blue.gif" original-image-title="" height="8" width="8"></span> [24solicitudequipoproyectolistar.png](attachments/597853740/597862456.png) (image/png)  
-<span class="image placeholder" original-image-src="images/icons/bullet_blue.gif" original-image-title="" height="8" width="8"></span> [24_Solicitud_EquipoProyecto_Listar.png](attachments/597853740/597874247.png) (image/png)  
-<span class="image placeholder" original-image-src="images/icons/bullet_blue.gif" original-image-title="" height="8" width="8"></span> [24_Solicitud_EquipoProyecto_Listar.png](attachments/597853740/597874246.png) (image/png)  
-<span class="image placeholder" original-image-src="images/icons/bullet_blue.gif" original-image-title="" height="8" width="8"></span> [24_Solicitud_EquipoProyecto_Listar.png](attachments/597853740/597884507.png) (image/png)  
+<span class="image placeholder" original-image-src="images/icons/bullet_blue.gif" original-image-title="" height="8" width="8"></span> [2002solicitudinvestigadorcrearequipoproyectolistarmenu.png](/attachments/597853740/597866908.png) (image/png)  
+<span class="image placeholder" original-image-src="images/icons/bullet_blue.gif" original-image-title="" height="8" width="8"></span> [2002solicitudinvestigadorcrearequipoproyectolistarmenu.png](/attachments/597853740/597866234.png) (image/png)  
+<span class="image placeholder" original-image-src="images/icons/bullet_blue.gif" original-image-title="" height="8" width="8"></span> [2002solicitudinvestigadorcrearequipoproyectolistarmenu.png](/attachments/597853740/598835281.png) (image/png)  
+<span class="image placeholder" original-image-src="images/icons/bullet_blue.gif" original-image-title="" height="8" width="8"></span> [2002solicitudinvestigadorcrearequipoproyectolistarmenu.png](/attachments/597853740/597878665.png) (image/png)  
+<span class="image placeholder" original-image-src="images/icons/bullet_blue.gif" original-image-title="" height="8" width="8"></span> [2002solicitudinvestigadorcrearequipoproyectolistarmenu.png](/attachments/597853740/597866838.png) (image/png)  
+<span class="image placeholder" original-image-src="images/icons/bullet_blue.gif" original-image-title="" height="8" width="8"></span> [24_Solicitud_EquipoProyecto_Listar.png](/attachments/597853740/597884639.png) (image/png)  
+<span class="image placeholder" original-image-src="images/icons/bullet_blue.gif" original-image-title="" height="8" width="8"></span> [24_Solicitud_EquipoProyecto_Listar.png](/attachments/597853740/597862049.png) (image/png)  
+<span class="image placeholder" original-image-src="images/icons/bullet_blue.gif" original-image-title="" height="8" width="8"></span> [24solicitudequipoproyectolistar.png](/attachments/597853740/597862458.png) (image/png)  
+<span class="image placeholder" original-image-src="images/icons/bullet_blue.gif" original-image-title="" height="8" width="8"></span> [24solicitudequipoproyectolistar.png](/attachments/597853740/597862456.png) (image/png)  
+<span class="image placeholder" original-image-src="images/icons/bullet_blue.gif" original-image-title="" height="8" width="8"></span> [24_Solicitud_EquipoProyecto_Listar.png](/attachments/597853740/597874247.png) (image/png)  
+<span class="image placeholder" original-image-src="images/icons/bullet_blue.gif" original-image-title="" height="8" width="8"></span> [24_Solicitud_EquipoProyecto_Listar.png](/attachments/597853740/597874246.png) (image/png)  
+<span class="image placeholder" original-image-src="images/icons/bullet_blue.gif" original-image-title="" height="8" width="8"></span> [24_Solicitud_EquipoProyecto_Listar.png](/attachments/597853740/597884507.png) (image/png)  
 
 </div>
 

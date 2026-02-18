@@ -805,13 +805,13 @@
 <div id="breadcrumb-section">
 
 1.  [Hércules](index.html)
-2.  [Hércules](597853529.html)
-3.  [SGI. Sistema de gestión de investigación](597852519.html)
-4.  [Requisitos y análisis funcional](597852497.html)
-5.  [Análisis Funcional SGI - Hércules](597853748.html)
-6.  [GEN - Aspectos generales](GEN---Aspectos-generales_597853747.html)
-7.  [INT - Requisitos de integración](597853257.html)
-8.  [REQ-INT-0015-SGEMP - Integración con Sistema de gestión de empresas](597853171.html)
+2.  [Hércules](/)
+3.  [SGI. Sistema de gestión de investigación](//sgi-sistema-de-gestion-de-investigacion)
+4.  [Requisitos y análisis funcional](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional)
+5.  [Análisis Funcional SGI - Hércules](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules)
+6.  [GEN - Aspectos generales](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales)
+7.  [INT - Requisitos de integración](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion)
+8.  [REQ-INT-0015-SGEMP - Integración con Sistema de gestión de empresas](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0015-sgemp-integracion-con-sistema-de-gestion-de-empresas)
 
 </div>
 
@@ -923,15 +923,15 @@ Created by <span class="author"> Usuario desconocido (alicia.alvarez)</span>, la
 
 ## <span style="color:var(--ds-text,#172b4d);">Diseño técnico</span>
 
-<span style="color:var(--ds-text,#172b4d);">En el siguiente enlace se muestra el diseño del modelo lógico y el diseño de la API del Sistema de Gestión de Empresas y, en concreto, de la relativa a servicios Formly: [SGI - ESB - SGEMP - Servicios Formly](SGI---ESB---SGEMP---Servicios-Formly_597853017.html).</span>
+<span style="color:var(--ds-text,#172b4d);">En el siguiente enlace se muestra el diseño del modelo lógico y el diseño de la API del Sistema de Gestión de Empresas y, en concreto, de la relativa a servicios Formly: [SGI - ESB - SGEMP - Servicios Formly](//sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sgemp/sgi-esb-sgemp-servicios-formly).</span>
 
 Los servicios concretos del API que cubren este requisito son:
 
-- [SGI - ESB - SGEMP - Empresas - Consultar campos modificación](597853359.html)  
+- [SGI - ESB - SGEMP - Empresas - Consultar campos modificación](//sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sgemp/sgi-esb-sgemp-servicios-formly/sgi-esb-sgemp-empresas-consultar-campos-modificacion)  
   - Se ha de llamar en primer lugar para poder obtener los campos del formulario de modificación para permitir después la modificación de los mismos desde el formulario.
-- [SGI - ESB - SGEMP - Empresas - Consultar detalle](SGI---ESB---SGEMP---Empresas---Consultar-detalle_597853025.html)
+- [SGI - ESB - SGEMP - Empresas - Consultar detalle](//sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sgemp/sgi-esb-sgemp-servicios-formly/sgi-esb-sgemp-empresas-consultar-detalle)
   - Se llamará una vez se tienen los campos de la modificación para obtener el valor actual de cada uno y pintarlo por pantalla.
-- [SGI - ESB - SGEMP - Empresas - Modificar](SGI---ESB---SGEMP---Empresas---Modificar_597853024.html)  
+- [SGI - ESB - SGEMP - Empresas - Modificar](//sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sgemp/sgi-esb-sgemp-servicios-formly/sgi-esb-sgemp-empresas-modificar)  
   - Se llamará una vez el usuario completa los datos del formulario de modificación.
 
 <span style="color:var(--ds-text,#172b4d);">Para cada implantación en particular se implementará un API específico o a medida, pero tendiendo a que sea igual o compatible en la medida de lo posible al propio del SGI, para así poder agilizar las integraciones.</span>
@@ -939,7 +939,7 @@ Los servicios concretos del API que cubren este requisito son:
 <span style="color:var(--ds-text,#172b4d);">El dinamismo o adaptación de los formularios dinámicos de solicitud de modificación para las empresas se logrará mediante una definición del interface de comunicación entre el ESB del SGI y las APIs universitarias donde se intercambien mensajes en formato JSON, manteniendo así la firma de los servicios constante aunque el contenido del mensaje pudiese variar.  
 </span>
 
-<span style="color:var(--ds-text,#172b4d);">En el siguiente enlace se muestra el diseño del modelo lógico y el diseño de la API del Sistema de Gestión de Empresas para la implantación específica en la Universidad de Murcia: [Sistema de Gestión de Empresas (UM - SGI - ESB - SGEMP)](597853493.html).  
+<span style="color:var(--ds-text,#172b4d);">En el siguiente enlace se muestra el diseño del modelo lógico y el diseño de la API del Sistema de Gestión de Empresas para la implantación específica en la Universidad de Murcia: [Sistema de Gestión de Empresas (UM - SGI - ESB - SGEMP)](//sgi-sistema-de-gestion-de-investigacion/guia-de-implantacion-checklist/um-universidad-de-murcia/sistema-de-gestion-de-investigacion-apis-integracion/sistema-de-gestion-de-empresas-um-sgi-esb-sgemp).  
 </span>
 
 

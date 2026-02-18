@@ -805,14 +805,14 @@
 <div id="breadcrumb-section">
 
 1.  [Hércules](index.html)
-2.  [Hércules](597853529.html)
-3.  [SGI. Sistema de gestión de investigación](597852519.html)
-4.  [Requisitos y análisis funcional](597852497.html)
-5.  [Análisis Funcional SGI - Hércules](597853748.html)
-6.  [CSP - Módulo de convocatorias, ayudas, solicitudes, proyectos y contratos y grupos de investigación](597853832.html)
-7.  [CSP - Interfaz de usuario](CSP---Interfaz-de-usuario_597853755.html)
-8.  [IU-CSP-0300 - Gestión de solicitudes](597853730.html)
-9.  [IU-CSP-0301 - Crear Solicitud](IU-CSP-0301---Crear-Solicitud_597853729.html)
+2.  [Hércules](/)
+3.  [SGI. Sistema de gestión de investigación](//sgi-sistema-de-gestion-de-investigacion)
+4.  [Requisitos y análisis funcional](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional)
+5.  [Análisis Funcional SGI - Hércules](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules)
+6.  [CSP - Módulo de convocatorias, ayudas, solicitudes, proyectos y contratos y grupos de investigación](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion)
+7.  [CSP - Interfaz de usuario](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-interfaz-de-usuario)
+8.  [IU-CSP-0300 - Gestión de solicitudes](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-interfaz-de-usuario/iu-csp-0300-gestion-de-solicitudes)
+9.  [IU-CSP-0301 - Crear Solicitud](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-interfaz-de-usuario/iu-csp-0300-gestion-de-solicitudes/iu-csp-0301-crear-solicitud)
 
 </div>
 
@@ -1073,7 +1073,7 @@ Formulario de creación de solicitud de RRHH, (incluye los apartados de Datos ge
 <td class="confluenceTd">Entidad convocante</td>
 <td class="confluenceTd"><p>Texto</p>
 <p>Opcional</p></td>
-<td class="confluenceTd">Nombre de la entidad convocante recuperado a través de la referencia a la entidad almacenada en la tabla de relación "Convocatoria entidad convocante", por medio del requisito de integración <a href="REQ-INT-0015-SGEMP-0030---Consultar-datos-generales-de-empresa_597852534.html">REQ-INT-0015-SGEMP-0030 - Consultar datos generales de empresa</a>.</td>
+<td class="confluenceTd">Nombre de la entidad convocante recuperado a través de la referencia a la entidad almacenada en la tabla de relación "Convocatoria entidad convocante", por medio del requisito de integración <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0015-sgemp-integracion-con-sistema-de-gestion-de-empresas/req-int-0015-sgemp-0030-consultar-datos-generales-de-empresa">REQ-INT-0015-SGEMP-0030 - Consultar datos generales de empresa</a>.</td>
 </tr>
 <tr class="even">
 <td class="confluenceTd">Plan de la convocatoria</td>
@@ -1129,7 +1129,7 @@ Formulario de creación de solicitud de RRHH, (incluye los apartados de Datos ge
 <td class="confluenceTd">Seleccionar modalidad</td>
 <td class="confluenceTd"><br />
 </td>
-<td class="confluenceTd">Muestra la pantalla <a href="597853736.html">IU-CSP-0302-001 - Añadir modalidad</a></td>
+<td class="confluenceTd">Muestra la pantalla <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-interfaz-de-usuario/iu-csp-0300-gestion-de-solicitudes/iu-csp-0302-001-anadir-modificar-modalidad">IU-CSP-0302-001 - Añadir modalidad</a></td>
 <td class="confluenceTd"><p>Sin permiso</p></td>
 </tr>
 </tbody>
@@ -1171,7 +1171,7 @@ Formulario de creación de solicitud de RRHH, (incluye los apartados de Datos ge
 <li>Se guardará el solicitante externo con los campos de la pantalla de "Solicitante" (tabla "Solicitante externo")</li>
 <li>No se realizan comprobaciones de "Requisito IP"</li>
 <li>Se generará el UUID y se creará un registro en la tabla "solicitud externa". El campo "id" del registro de la tabla "solicitud externa" tomará el valor de este UUID generado. El registro de la tabla "solicitud externa" se asociará al registro creado previamente en la tabla "solicitud".</li>
-<li>Se envía un comunicado al usuario externo (al email introducido en el campo de email del formulario) para indicar que se ha creado la solicitud. En este comunicado se remitirá el UUID generado. Será un comunicado de envío inmediato (<a href="https://confluence.um.es/confluence/pages/viewpage.action?pageId=131860109" style="letter-spacing: 0.0px;" rel="nofollow">CU-COM-0010 - Generar comunicado de envío inmediato</a><span style="letter-spacing: 0.0px;">). Ver definición del comunicado en el apartado</span> <strong><strong></strong> Solicitudes - Alta de solicitud RRHH cuando el solicitante es un usuario externo</strong><span style="letter-spacing: 0.0px;"> de </span><a href="597852420.html">CSP - Comunicados - Comunicados no personalizables por el usuario (automáticos)</a><span style="letter-spacing: 0.0px;">. </span></li>
+<li>Se envía un comunicado al usuario externo (al email introducido en el campo de email del formulario) para indicar que se ha creado la solicitud. En este comunicado se remitirá el UUID generado. Será un comunicado de envío inmediato (<a href="https://confluence.um.es/confluence/pages/viewpage.action?pageId=131860109" style="letter-spacing: 0.0px;" rel="nofollow">CU-COM-0010 - Generar comunicado de envío inmediato</a><span style="letter-spacing: 0.0px;">). Ver definición del comunicado en el apartado</span> <strong><strong></strong> Solicitudes - Alta de solicitud RRHH cuando el solicitante es un usuario externo</strong><span style="letter-spacing: 0.0px;"> de </span><a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-comunicados/csp-comunicados-comunicados-no-personalizables-por-el-usuario-automaticos">CSP - Comunicados - Comunicados no personalizables por el usuario (automáticos)</a><span style="letter-spacing: 0.0px;">. </span></li>
 <li>Tras guardar la solicitud, se mostrará la pantalla de modificación de la solicitud de RRHH para usuario externo</li>
 </ul></td>
 <td class="confluenceTd"><p>Sin permiso</p></td>
@@ -1200,9 +1200,9 @@ Formulario de creación de solicitud de RRHH, (incluye los apartados de Datos ge
 
 <div class="greybox" align="left">
 
-<span class="image placeholder" original-image-src="images/icons/bullet_blue.gif" original-image-title="" height="8" width="8"></span> [58nuevasolicitudrrhhusuarioexterno.png](attachments/597853525/597880090.png) (image/png)  
-<span class="image placeholder" original-image-src="images/icons/bullet_blue.gif" original-image-title="" height="8" width="8"></span> [58nuevasolicitudrrhhusuarioexterno.png](attachments/597853525/597880085.png) (image/png)  
-<span class="image placeholder" original-image-src="images/icons/bullet_blue.gif" original-image-title="" height="8" width="8"></span> [58nuevasolicitudrrhhusuarioexterno.png](attachments/597853525/597880088.png) (image/png)  
+<span class="image placeholder" original-image-src="images/icons/bullet_blue.gif" original-image-title="" height="8" width="8"></span> [58nuevasolicitudrrhhusuarioexterno.png](/attachments/597853525/597880090.png) (image/png)  
+<span class="image placeholder" original-image-src="images/icons/bullet_blue.gif" original-image-title="" height="8" width="8"></span> [58nuevasolicitudrrhhusuarioexterno.png](/attachments/597853525/597880085.png) (image/png)  
+<span class="image placeholder" original-image-src="images/icons/bullet_blue.gif" original-image-title="" height="8" width="8"></span> [58nuevasolicitudrrhhusuarioexterno.png](/attachments/597853525/597880088.png) (image/png)  
 
 </div>
 

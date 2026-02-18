@@ -805,13 +805,13 @@
 <div id="breadcrumb-section">
 
 1.  [Hércules](index.html)
-2.  [Hércules](597853529.html)
-3.  [SGI. Sistema de gestión de investigación](597852519.html)
-4.  [Requisitos y análisis funcional](597852497.html)
-5.  [Análisis Funcional SGI - Hércules](597853748.html)
-6.  [GEN - Aspectos generales](GEN---Aspectos-generales_597853747.html)
-7.  [INT - Requisitos de integración](597853257.html)
-8.  [REQ-INT-0020-SGP - Integración con Sistema de gestión de personas](597852797.html)
+2.  [Hércules](/)
+3.  [SGI. Sistema de gestión de investigación](//sgi-sistema-de-gestion-de-investigacion)
+4.  [Requisitos y análisis funcional](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional)
+5.  [Análisis Funcional SGI - Hércules](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules)
+6.  [GEN - Aspectos generales](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales)
+7.  [INT - Requisitos de integración](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion)
+8.  [REQ-INT-0020-SGP - Integración con Sistema de gestión de personas](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0020-sgp-integracion-con-sistema-de-gestion-de-personas)
 
 </div>
 
@@ -926,7 +926,7 @@ Parámetros de entrada:
   - Nombre + Apellidos
   - Email
 
-El SGI proveerá el interface gráfico para recoger los parámetros de búsqueda [IU-GEN-0100-0060 - Búsqueda de persona](597852545.html). El parámetro "tipo de colectivo" o "listado de colectivos" irá implícito de acuerdo al caso de uso que provoque la invocación del buscador. Se podrá buscar por un tipo de colectivo (ejemplo pantalla de nuevo evaluador de ética) , que luego internamente el ESB transformará a un listado de colectivos o directamente que el SGI ya envíe el listado de colectivos (ejemplo pantalla de nuevo miembro de equipo al proyecto).
+El SGI proveerá el interface gráfico para recoger los parámetros de búsqueda [IU-GEN-0100-0060 - Búsqueda de persona](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/sha-buscadores-y-listados-comunes/iu-gen-0060-busqueda-de-personas). El parámetro "tipo de colectivo" o "listado de colectivos" irá implícito de acuerdo al caso de uso que provoque la invocación del buscador. Se podrá buscar por un tipo de colectivo (ejemplo pantalla de nuevo evaluador de ética) , que luego internamente el ESB transformará a un listado de colectivos o directamente que el SGI ya envíe el listado de colectivos (ejemplo pantalla de nuevo miembro de equipo al proyecto).
 
 Salida: el resultado serán todas las personas  que cumplan con los criterios establecidos. La información a devolver para cada persona es:
 
@@ -942,20 +942,20 @@ Salida: el resultado serán todas las personas  que cumplan con los criterios e
 - Lista de direcciones de email
 - Indicador (sí/no) de la vigencia de la persona (en el momento actual)
 
-El SGI mostrará los resultados devueltos en un listado sobre el que se podrá seleccionar el registro concreto que vaya a ser utilizado en el caso de uso que invoca al buscador.  Ver [IU-GEN-0100-0060 - Búsqueda de persona](597852545.html).
+El SGI mostrará los resultados devueltos en un listado sobre el que se podrá seleccionar el registro concreto que vaya a ser utilizado en el caso de uso que invoca al buscador.  Ver [IU-GEN-0100-0060 - Búsqueda de persona](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/sha-buscadores-y-listados-comunes/iu-gen-0060-busqueda-de-personas).
 
-El SGI facilitará el interface para recoger la solicitud de alta de una persona en el sistema externo, a través de [IU-GEN-0061- Solicitar alta de persona](IU-GEN-0061--Solicitar-alta-de-persona_597852549.html) que hará uso del servicio de integración [REQ-INT-0020-SGP-0050 - Solicitar alta de persona](REQ-INT-0020-SGP-0050---Solicitar-alta-de-persona_597853250.html)
+El SGI facilitará el interface para recoger la solicitud de alta de una persona en el sistema externo, a través de [IU-GEN-0061- Solicitar alta de persona](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/sha-buscadores-y-listados-comunes/iu-gen-0061-solicitar-alta-de-persona) que hará uso del servicio de integración [REQ-INT-0020-SGP-0050 - Solicitar alta de persona](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0020-sgp-integracion-con-sistema-de-gestion-de-personas/req-int-0020-sgp-0050-solicitar-alta-de-persona)
 
 ## Diseño técnico
 
-En el siguiente enlace se muestra el diseño del modelo lógico y el diseño de la API del Sistema de Gestión de Personas y, en concreto, de los Servicios Básicos: [SGI - ESB - SGP - Servicios Básicos](597853002.html).
+En el siguiente enlace se muestra el diseño del modelo lógico y el diseño de la API del Sistema de Gestión de Personas y, en concreto, de los Servicios Básicos: [SGI - ESB - SGP - Servicios Básicos](//sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sgp/sgi-esb-sgp-servicios-basicos).
 
 Los servicios concretos del API que cubren este requisito son: 
 
-- [SGI - ESB - SGP - Personas - Buscar (Búsqueda rápida)](597853043.html)
-  - A utilizar desde los componentes autocomplete comunes que existen en las pantallas desde las que es necesario buscar personas (descrito en [IU-GEN-0100-0060 - Búsqueda de persona](597852545.html)).
-- [SGI - ESB - SGP - Personas - Buscar](SGI---ESB---SGP---Personas---Buscar_597853044.html)
-  - Será utilizado por la pantalla buscador común de personas(descrito en [IU-GEN-0100-0060 - Búsqueda de persona](597852545.html)).
+- [SGI - ESB - SGP - Personas - Buscar (Búsqueda rápida)](//sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sgp/sgi-esb-sgp-servicios-basicos/sgi-esb-sgp-personas-buscar-busqueda-rapida)
+  - A utilizar desde los componentes autocomplete comunes que existen en las pantallas desde las que es necesario buscar personas (descrito en [IU-GEN-0100-0060 - Búsqueda de persona](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/sha-buscadores-y-listados-comunes/iu-gen-0060-busqueda-de-personas)).
+- [SGI - ESB - SGP - Personas - Buscar](//sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sgp/sgi-esb-sgp-servicios-basicos/sgi-esb-sgp-personas-buscar)
+  - Será utilizado por la pantalla buscador común de personas(descrito en [IU-GEN-0100-0060 - Búsqueda de persona](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/sha-buscadores-y-listados-comunes/iu-gen-0060-busqueda-de-personas)).
 
 
 

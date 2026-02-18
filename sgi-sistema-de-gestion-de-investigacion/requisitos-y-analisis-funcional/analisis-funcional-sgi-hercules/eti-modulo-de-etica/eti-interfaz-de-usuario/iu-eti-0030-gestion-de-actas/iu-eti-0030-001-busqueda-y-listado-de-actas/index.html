@@ -805,13 +805,13 @@
 <div id="breadcrumb-section">
 
 1.  [Hércules](index.html)
-2.  [Hércules](597853529.html)
-3.  [SGI. Sistema de gestión de investigación](597852519.html)
-4.  [Requisitos y análisis funcional](597852497.html)
-5.  [Análisis Funcional SGI - Hércules](597853748.html)
-6.  [ETI - Módulo de ética](597853840.html)
-7.  [ETI - Interfaz de Usuario](ETI---Interfaz-de-Usuario_597853673.html)
-8.  [IU-ETI-0030- Gestión de Actas](597853796.html)
+2.  [Hércules](/)
+3.  [SGI. Sistema de gestión de investigación](//sgi-sistema-de-gestion-de-investigacion)
+4.  [Requisitos y análisis funcional](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional)
+5.  [Análisis Funcional SGI - Hércules](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules)
+6.  [ETI - Módulo de ética](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica)
+7.  [ETI - Interfaz de Usuario](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario)
+8.  [IU-ETI-0030- Gestión de Actas](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario/iu-eti-0030-gestion-de-actas)
 
 </div>
 
@@ -1019,7 +1019,7 @@ Podrán acceder al listado de actas:
 <td class="confluenceTd">Buscar</td>
 <td class="confluenceTd"><p>Aplica los filtros introducidos sobre la lista de actas mostrando las que cumplen las condiciones.</p>
 <p>Los investigadores/técnicos sólo se les mostrarán las actas en las que son evaluadores activos del comité (fecha de baja es null o fecha de baja es mayor a la actual)</p></td>
-<td class="confluenceTd"><a href="CU-ETI-0030-001---Buscar-Actas_597853795.html">CU-ETI-0030-001 - Buscar Actas</a></td>
+<td class="confluenceTd"><a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-casos-de-uso/cu-eti-0030-gestion-de-actas/cu-eti-0030-001-buscar-actas">CU-ETI-0030-001 - Buscar Actas</a></td>
 <td class="confluenceTd"><p>ETI-ACT-V</p>
 <p>ETI-ACT-E</p>
 <p>ETI-ACT-DES</p>
@@ -1069,7 +1069,7 @@ Podrán acceder al listado de actas:
 <td class="confluenceTd">Ver informe acta</td>
 <td class="confluenceTd"><p>Si el estado del acta es "En elaboración"</p>
 <ul>
-<li>Se genera de forma automática a partir de una plantilla el informe de acta a partir de los datos almacenados del acta. <a href="REP-ETI--0070-Informe-acta_597853342.html">REP-ETI- 0070-Informe acta</a></li>
+<li>Se genera de forma automática a partir de una plantilla el informe de acta a partir de los datos almacenados del acta. <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0150-sgrep-integracion-con-sistema-de-generacion-de-reportes/eti-informes-predifinidos/rep-eti-0070-informe-acta">REP-ETI- 0070-Informe acta</a></li>
 </ul>
 <p>Si el estado del acta es "Finalizada"</p>
 <ul>
@@ -1091,7 +1091,7 @@ Podrán acceder al listado de actas:
 <li>Se pasa a estado "Finalizada" el acta, por lo que ya no se podrá modificar los datos del acta ni realizar ningún cambio en ninguna de las evaluaciones de memorias asociadas a la convocatoria (las que no son de revisión mínima).</li>
 <li>El finalizar el acta implica cambiar el estado según el dictamen de la evaluación a todas las memorias implicadas (aquellas que no son de revisión mínima).</li>
 <li>Si es una evaluación de retrospectiva se pasará el campo estadoRetrospectiva a "Fin evaluación".</li>
-<li>Cuando un acta se pasa a finalizada se tiene que notificar a los investigadores de que ya tienen disponible el informe favorable o de evaluación<span style="color:var(--ds-text,#172b4d);">, por lo que al realizar esta acción, </span><span style="color:var(--ds-text,#172b4d);">habrá que tener en cuenta los comunicados que se deben generar según se describe en el apartado <a href="ETI---Comunicados_597853535.html">ETI - Comunicados</a>. (Se notificarán solamente las evaluaciones que no son de revisión mínima).<br />
+<li>Cuando un acta se pasa a finalizada se tiene que notificar a los investigadores de que ya tienen disponible el informe favorable o de evaluación<span style="color:var(--ds-text,#172b4d);">, por lo que al realizar esta acción, </span><span style="color:var(--ds-text,#172b4d);">habrá que tener en cuenta los comunicados que se deben generar según se describe en el apartado <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-comunicados">ETI - Comunicados</a>. (Se notificarán solamente las evaluaciones que no son de revisión mínima).<br />
 </span></li>
 <li>Generar el documento del acta llamando al servicio de reporting.</li>
 <li>Guardar el documento generado en el SGDOC.</li>
@@ -1099,7 +1099,7 @@ Podrán acceder al listado de actas:
 <li>Guardar en la tabla "Acta" el identificador del documento devuelto por el SGDOC (en el campo "documentoRef")</li>
 <li>En el caso que la variable de CNF "blockchain_enable" este a true:
 <ul>
-<li>Se llamará al servicio para sellar el  documento en blockchain pasando como parámetro el hash del documento. <a href="597853230.html">REQ-INT-0160-BK-0002 - Crear transacción</a></li>
+<li>Se llamará al servicio para sellar el  documento en blockchain pasando como parámetro el hash del documento. <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0160-blockchain/req-int-0160-bk-0002-crear-transaccion">REQ-INT-0160-BK-0002 - Crear transacción</a></li>
 <li>Guardar el id de la transacción devuelta en la tabla "Acta" (en el campo "transaccionRef").</li>
 </ul></li>
 </ul>
@@ -1120,7 +1120,7 @@ Podrán acceder al listado de actas:
 <p>Esta acción consistirá en:</p>
 <ul>
 <li>Obtener  los metadatos almacenado en el SGDOC del acta. (llamar al servicio GET /documentos)</li>
-<li>Llamar al servicio del blockchain que devuelve la cadena (el hash) que enviamos en su momento pasando como parámetro el id de la transacción almacenada en nuestra tabla acta (campo "transaccionRef"). <a href="597853227.html">REQ-INT-0160-BK-0001 - Consultar transacción</a></li>
+<li>Llamar al servicio del blockchain que devuelve la cadena (el hash) que enviamos en su momento pasando como parámetro el id de la transacción almacenada en nuestra tabla acta (campo "transaccionRef"). <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0160-blockchain/req-int-0160-bk-0001-consultar-transaccion">REQ-INT-0160-BK-0001 - Consultar transacción</a></li>
 <li>Comprobar que el hash del documento es igual a la cadena devuelta por el servicio.</li>
 <li>En caso afirmativo mostrar el mensaje "El acta no se ha alterado, es un documento correcto" , en otro caso mostrar el mensaje "El acta se ha alterado, no es documento correcto."</li>
 </ul>
@@ -1134,7 +1134,7 @@ Podrán acceder al listado de actas:
 <tr class="odd">
 <td class="confluenceTd">Exportar</td>
 <td class="confluenceTd">Genera el informe asociado al listado de actas.</td>
-<td class="confluenceTd">Muestra la pantalla <a href="597852302.html">IU-ETI-0030-006 - Exportación listado de actas</a></td>
+<td class="confluenceTd">Muestra la pantalla <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario/iu-eti-0030-gestion-de-actas/iu-eti-0030-006-exportacion-listado-de-actas">IU-ETI-0030-006 - Exportación listado de actas</a></td>
 <td class="confluenceTd"><p>ETI-ACT-V</p>
 <p>ETI-ACT-E</p>
 <p><span>ETI-ACT-INV-ER</span></p>
@@ -1149,7 +1149,7 @@ Podrán acceder al listado de actas:
 
 Al realizar la acción de "Finalizar" un acta, y solo para <span style="color:var(--ds-text,#172b4d);">las evaluaciones que NO son de revisión mínima</span>, se creará la entrada correspondiente en el módulo de comunicados para avisar a los investigadores de que ya tienen disponible el informe favorable o de evaluación.
 
-La descripción detallada para la generación de este tipo de comunicado se encuentra en el apartado **Acta de evaluación finalizada (evaluaciones que no son de revisión mínima)** dentro de [ETI - Comunicados](ETI---Comunicados_597853535.html) y el flujo general de operativa de este tipo de comunicados en [CU-COM-0010 - Generar comunicado de envío inmediato](597852427.html).
+La descripción detallada para la generación de este tipo de comunicado se encuentra en el apartado **Acta de evaluación finalizada (evaluaciones que no son de revisión mínima)** dentro de [ETI - Comunicados](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-comunicados) y el flujo general de operativa de este tipo de comunicados en [CU-COM-0010 - Generar comunicado de envío inmediato](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/com-modulo-de-comunicados/com-casos-de-uso/cu-com-0010-generar-comunicado-de-envio-inmediato).
 
 ## Permisos de acceso a la pantalla
 
@@ -1205,12 +1205,12 @@ La descripción detallada para la generación de este tipo de comunicado se encu
 
 <div class="greybox" align="left">
 
-<span class="image placeholder" original-image-src="images/icons/bullet_blue.gif" original-image-title="" height="8" width="8"></span> [listadoevaluacionesgestor.png](attachments/597853793/597869106.png) (image/png)  
-<span class="image placeholder" original-image-src="images/icons/bullet_blue.gif" original-image-title="" height="8" width="8"></span> [listadoconvocatorias.png](attachments/597853793/597869107.png) (image/png)  
-<span class="image placeholder" original-image-src="images/icons/bullet_blue.gif" original-image-title="" height="8" width="8"></span> [listadoactas.png](attachments/597853793/597868754.png) (image/png)  
-<span class="image placeholder" original-image-src="images/icons/bullet_blue.gif" original-image-title="" height="8" width="8"></span> [listadoactas.png](attachments/597853793/597865634.png) (image/png)  
-<span class="image placeholder" original-image-src="images/icons/bullet_blue.gif" original-image-title="" height="8" width="8"></span> [listadoactas.png](attachments/597853793/597876687.png) (image/png)  
-<span class="image placeholder" original-image-src="images/icons/bullet_blue.gif" original-image-title="" height="8" width="8"></span> [listadoactas.png](attachments/597853793/597869108.png) (image/png)  
+<span class="image placeholder" original-image-src="images/icons/bullet_blue.gif" original-image-title="" height="8" width="8"></span> [listadoevaluacionesgestor.png](/attachments/597853793/597869106.png) (image/png)  
+<span class="image placeholder" original-image-src="images/icons/bullet_blue.gif" original-image-title="" height="8" width="8"></span> [listadoconvocatorias.png](/attachments/597853793/597869107.png) (image/png)  
+<span class="image placeholder" original-image-src="images/icons/bullet_blue.gif" original-image-title="" height="8" width="8"></span> [listadoactas.png](/attachments/597853793/597868754.png) (image/png)  
+<span class="image placeholder" original-image-src="images/icons/bullet_blue.gif" original-image-title="" height="8" width="8"></span> [listadoactas.png](/attachments/597853793/597865634.png) (image/png)  
+<span class="image placeholder" original-image-src="images/icons/bullet_blue.gif" original-image-title="" height="8" width="8"></span> [listadoactas.png](/attachments/597853793/597876687.png) (image/png)  
+<span class="image placeholder" original-image-src="images/icons/bullet_blue.gif" original-image-title="" height="8" width="8"></span> [listadoactas.png](/attachments/597853793/597869108.png) (image/png)  
 
 </div>
 
