@@ -805,13 +805,13 @@
 <div id="breadcrumb-section">
 
 1.  [Hércules](index.html)
-2.  [Hércules](/)
-3.  [SGI. Sistema de gestión de investigación](//sgi-sistema-de-gestion-de-investigacion)
-4.  [Requisitos y análisis funcional](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional)
-5.  [Análisis Funcional SGI - Hércules](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules)
-6.  [GEN - Aspectos generales](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales)
-7.  [INT - Requisitos de integración](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion)
-8.  [REQ-INT-0015-SGEMP - Integración con Sistema de gestión de empresas](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0015-sgemp-integracion-con-sistema-de-gestion-de-empresas)
+2.  [Hércules](597853529.html)
+3.  [SGI. Sistema de gestión de investigación](597852519.html)
+4.  [Requisitos y análisis funcional](597852497.html)
+5.  [Análisis Funcional SGI - Hércules](597853748.html)
+6.  [GEN - Aspectos generales](GEN---Aspectos-generales_597853747.html)
+7.  [INT - Requisitos de integración](597853257.html)
+8.  [REQ-INT-0015-SGEMP - Integración con Sistema de gestión de empresas](597853171.html)
 
 </div>
 
@@ -913,7 +913,7 @@ Created by <span class="author"> Usuario desconocido (covadonga.garcia)</span>, 
 
 ## <span style="color:var(--ds-text,#172b4d);">Descripción integración</span>
 
-<span style="color:var(--ds-text,#172b4d);">El SGI no dispondrá de un formulario propio para recoger los datos de creación de una empresa sino uno específico por implantación/universidad tal y como se describe en [IU-GEN-0081 - Solicitar alta de empresa](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/sha-buscadores-y-listados-comunes/iu-gen-0081-solicitar-alta-de-empresa).</span>
+<span style="color:var(--ds-text,#172b4d);">El SGI no dispondrá de un formulario propio para recoger los datos de creación de una empresa sino uno específico por implantación/universidad tal y como se describe en [IU-GEN-0081 - Solicitar alta de empresa](IU-GEN-0081---Solicitar-alta-de-empresa_597852554.html).</span>
 
 <span style="color:var(--ds-text,#172b4d);">Los parámetros de entrada y salida a la hora de integrarse con los sistemas universitarios para el alta de empresas serán definidos en cada implantación/universidad en particular, puesto que dependen de las necesidades y restricciones tanto de sus usuarios finales como de sus sistemas de gestión de la información de empresas.</span>
 
@@ -923,13 +923,13 @@ Created by <span class="author"> Usuario desconocido (covadonga.garcia)</span>, 
 
 ## <span style="color:var(--ds-text,#172b4d);">Diseño técnico</span>
 
-En el siguiente enlace se muestra el diseño del modelo lógico y el diseño de la API del Sistema de Gestión de Empresas y, en concreto, de la relativa a servicios Formly: [SGI - ESB - SGEMP - Servicios Formly](//sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sgemp/sgi-esb-sgemp-servicios-formly).
+En el siguiente enlace se muestra el diseño del modelo lógico y el diseño de la API del Sistema de Gestión de Empresas y, en concreto, de la relativa a servicios Formly: [SGI - ESB - SGEMP - Servicios Formly](SGI---ESB---SGEMP---Servicios-Formly_597853017.html).
 
 Los servicios concretos del API que cubren este requisito son:
 
-- [SGI - ESB - SGEMP - Empresas - Consultar campos alta](//sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sgemp/sgi-esb-sgemp-servicios-formly/sgi-esb-sgemp-empresas-consultar-campos-alta)  
+- [SGI - ESB - SGEMP - Empresas - Consultar campos alta](SGI---ESB---SGEMP---Empresas---Consultar-campos-alta_597853018.html)  
   - Se ha de llamar en primer lugar para poder pintar por pantalla el formulario de introducción de datos de alta.
-- [SGI - ESB - SGEMP - Empresas - Dar de alta](//sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sgemp/sgi-esb-sgemp-servicios-formly/sgi-esb-sgemp-empresas-dar-de-alta)  
+- [SGI - ESB - SGEMP - Empresas - Dar de alta](SGI---ESB---SGEMP---Empresas---Dar-de-alta_597853019.html)  
   - Se llamará una vez el usuario completa los datos del formulario de alta.
 
 
@@ -939,7 +939,7 @@ Los servicios concretos del API que cubren este requisito son:
 <span style="color:var(--ds-text,#172b4d);">El dinamismo o adaptación de los formularios dinámicos de solicitud de alta para las empresas se logrará mediante una definición del interface de comunicación entre el ESB del SGI y las APIs universitarias donde se intercambien mensajes en formato JSON, manteniendo así la firma de los servicios constante aunque el contenido del mensaje pudiese variar.  
 </span>
 
-<span style="color:var(--ds-text,#172b4d);">En el siguiente enlace se muestra el diseño del modelo lógico y el diseño de la API del Sistema de Gestión de Empresas para la implantación específica en la Universidad de Murcia: [IU-GEN-0081-UM - Formulario Solicitar alta de empresa](//sgi-sistema-de-gestion-de-investigacion/guia-de-implantacion-checklist/um-universidad-de-murcia/um-formularios-especificos/um-formularios-de-gestion-de-empresas-sgemp/iu-gen-0081-um-formulario-solicitar-alta-de-empresa).  
+<span style="color:var(--ds-text,#172b4d);">En el siguiente enlace se muestra el diseño del modelo lógico y el diseño de la API del Sistema de Gestión de Empresas para la implantación específica en la Universidad de Murcia: [IU-GEN-0081-UM - Formulario Solicitar alta de empresa](IU-GEN-0081-UM---Formulario-Solicitar-alta-de-empresa_597852800.html).  
 </span>
 
 </div>
@@ -956,7 +956,7 @@ Los servicios concretos del API que cubren este requisito son:
 
 ## <span style="color:var(--ds-text,#172b4d);">Interfaces de usuario relacionados</span>
 
-<img src="plugins/servlet/confluence/placeholder/unknown-macro" class="wysiwyg-unknown-macro" />
+<span class="image placeholder wysiwyg-unknown-macro" original-image-src="plugins/servlet/confluence/placeholder/unknown-macro" original-image-title=""></span>
 
 </div>
 
@@ -968,7 +968,7 @@ Los servicios concretos del API que cubren este requisito son:
 
 ## <span style="color:var(--ds-text,#172b4d);">Informes relacionados</span>
 
-<img src="plugins/servlet/confluence/placeholder/unknown-macro" class="wysiwyg-unknown-macro" />
+<span class="image placeholder wysiwyg-unknown-macro" original-image-src="plugins/servlet/confluence/placeholder/unknown-macro" original-image-title=""></span>
 
 </div>
 
@@ -980,7 +980,7 @@ Los servicios concretos del API que cubren este requisito son:
 
 ## <span style="color:var(--ds-text,#172b4d);">Casos de uso relacionados</span>
 
-<span style="color:var(--ds-text,#172b4d);"><img src="plugins/servlet/confluence/placeholder/unknown-macro" class="wysiwyg-unknown-macro" /></span>
+<span style="color:var(--ds-text,#172b4d);"><span class="image placeholder wysiwyg-unknown-macro" original-image-src="plugins/servlet/confluence/placeholder/unknown-macro" original-image-title=""></span></span>
 
 </div>
 

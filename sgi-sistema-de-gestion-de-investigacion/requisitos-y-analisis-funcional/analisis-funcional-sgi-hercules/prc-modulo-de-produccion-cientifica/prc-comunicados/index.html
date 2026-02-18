@@ -805,11 +805,11 @@
 <div id="breadcrumb-section">
 
 1.  [Hércules](index.html)
-2.  [Hércules](/)
-3.  [SGI. Sistema de gestión de investigación](//sgi-sistema-de-gestion-de-investigacion)
-4.  [Requisitos y análisis funcional](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional)
-5.  [Análisis Funcional SGI - Hércules](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules)
-6.  [PRC - Módulo de producción científica](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/prc-modulo-de-produccion-cientifica)
+2.  [Hércules](597853529.html)
+3.  [SGI. Sistema de gestión de investigación](597852519.html)
+4.  [Requisitos y análisis funcional](597852497.html)
+5.  [Análisis Funcional SGI - Hércules](597853748.html)
+6.  [PRC - Módulo de producción científica](597852527.html)
 
 </div>
 
@@ -829,13 +829,13 @@ Created by <span class="author"> Usuario desconocido (lorena.alvarez)</span>, la
 
 ## Cuestiones generales
 
-La descripción general de la operativa de Comunicados del SGI se incluye aquí: [COM - Módulo de Comunicados](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/com-modulo-de-comunicados).
+La descripción general de la operativa de Comunicados del SGI se incluye aquí: [COM - Módulo de Comunicados](597853815.html).
 
 En este apartado se describen los comunicados específicos generadas por el módulo de Ética.
 
 Los elementos del Asunto y Contenido email escritos en negrita y con sintaxis "especial" (p.ej. **NOMBRE_EPIGRAFE**) se corresponden con parámetros o valores variables dentro de dichos textos.
 
-En la siguiente página del diseño se define a qué campos de BBDD o valores corresponde cada una de las variables [COM - Variables en textos y traducciones al modelo físico](//sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-com/com-variables-en-textos-y-traducciones-al-modelo-fisico) así como el cómo se comprueban a más a bajo nivel algunas de las condiciones de generación de los mismos (qué campos concretos comprobar) o cómo se puede hacer la resolución de destinatarios (IPs, responsables económicos, ...).
+En la siguiente página del diseño se define a qué campos de BBDD o valores corresponde cada una de las variables [COM - Variables en textos y traducciones al modelo físico](597852410.html) así como el cómo se comprueban a más a bajo nivel algunas de las condiciones de generación de los mismos (qué campos concretos comprobar) o cómo se puede hacer la resolución de destinatarios (IPs, responsables económicos, ...).
 
 ## Comunicados no personalizables por el usuario (automáticos)
 
@@ -867,7 +867,7 @@ En la siguiente página del diseño se define a qué campos de BBDD o valores co
 <td class="confluenceTd"><p>Momento en que se recibe la notificación del alta.</p>
 <p>Momento en que se recibe la notificación de la modificación.</p></td>
 <td class="confluenceTd"><p>No dispone de IU que lo origine, sino que se generará al recibirse el alta/modificación de items a través del API:</p>
-<p><a href="//sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-prc/prc-servicios-api#PRCServiciosAPI-Creaci%C3%B3ndeitemdeProducci%C3%B3ncient%C3%ADfica">PRC - Servicios API#Creaci%C3%B3ndeitemdeProducci%C3%B3ncient%C3%ADfica</a></p></td>
+<p><a href="PRC---Servicios-API_597853215.html#PRCServiciosAPI-Creaci%C3%B3ndeitemdeProducci%C3%B3ncient%C3%ADfica">PRC - Servicios API#Creaci%C3%B3ndeitemdeProducci%C3%B3ncient%C3%ADfica</a></p></td>
 <td class="confluenceTd">Nuevo item de tipo "<strong>NOMBRE_EPIGRAFE</strong>" disponible para su validación.</td>
 <td class="confluenceTd"><p><span style="color: red;"><span style="color:var(--ds-text,#172b4d);">Estimado/a investigador/a,</span></span></p>
 <p><span style="color: red;"><span style="color:var(--ds-text,#172b4d);">le informamos que dispone de un nuevo item de tipo "<strong>NOMBRE_EPIGRAFE</strong>" con título/nombre <strong>TITULO_ITEM</strong> y <strong>FECHA_ITEM</strong>  que precisa de su validación para poder realizar la baremación sobre él.</span></span></p></td>
@@ -884,7 +884,7 @@ En la siguiente página del diseño se define a qué campos de BBDD o valores co
 |                                |                                                                                                                                        |                                           |                                                                       |                                                                     |                                                                                                                               |
 |--------------------------------|----------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------|-----------------------------------------------------------------------|---------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|
 | Destinatarios                  | Generado por                                                                                                                           | Fecha de envío                            | Pantalla que lo origina                                               | <span style="color:var(--ds-text,#172b4d);">**Asunto email**</span> | <span style="color:var(--ds-text,#172b4d);">**Contenido email**</span>                                                        |
-| Destinatarios preconfigurados. | El gestor lanzará el proceso de baremación de una convocatoria y el proceso en sí generará el comunicado cuando termine de ejecutarse. | Cuando finalice el proceso de baremación. | [IU-PRC-0202-001 Búsqueda y listado de convocatorias](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/prc-modulo-de-produccion-cientifica/prc-interfaz-de-usuario/iu-prc-0202-convocatorias/iu-prc-0202-001-busqueda-y-listado-de-convocatorias) | Finalizado proceso de baremación del año **ANIO**                   | El proceso de baremación del **ANIO** ha finalizado con éxito. Puede ir a la opción de menú "Informes" para ver su resultado. |
+| Destinatarios preconfigurados. | El gestor lanzará el proceso de baremación de una convocatoria y el proceso en sí generará el comunicado cuando termine de ejecutarse. | Cuando finalice el proceso de baremación. | [IU-PRC-0202-001 Búsqueda y listado de convocatorias](597852525.html) | Finalizado proceso de baremación del año **ANIO**                   | El proceso de baremación del **ANIO** ha finalizado con éxito. Puede ir a la opción de menú "Informes" para ver su resultado. |
 
 </div>
 
@@ -895,7 +895,7 @@ En la siguiente página del diseño se define a qué campos de BBDD o valores co
 |                                |                                                                                                                                       |                                           |                                                                       |                                                                     |                                                                                                          |
 |--------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------|-----------------------------------------------------------------------|---------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|
 | Destinatarios                  | Generado por                                                                                                                          | Fecha de envío                            | Pantalla que lo origina                                               | <span style="color:var(--ds-text,#172b4d);">**Asunto email**</span> | <span style="color:var(--ds-text,#172b4d);">**Contenido email**</span>                                   |
-| Destinatarios preconfigurados. | El gestor lanzará el proceso de baremación de una convocatoria y el proceso en sí generará el comunicado cuando se produzca un error. | Cuando se error el proceso de baremación. | [IU-PRC-0202-001 Búsqueda y listado de convocatorias](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/prc-modulo-de-produccion-cientifica/prc-interfaz-de-usuario/iu-prc-0202-convocatorias/iu-prc-0202-001-busqueda-y-listado-de-convocatorias) | Error en el proceso de baremación del año **ANIO**                  | Se ha producido un error en el proceso de baremación del **ANIO**. El error producido es **TEXTO_ERROR** |
+| Destinatarios preconfigurados. | El gestor lanzará el proceso de baremación de una convocatoria y el proceso en sí generará el comunicado cuando se produzca un error. | Cuando se error el proceso de baremación. | [IU-PRC-0202-001 Búsqueda y listado de convocatorias](597852525.html) | Error en el proceso de baremación del año **ANIO**                  | Se ha producido un error en el proceso de baremación del **ANIO**. El error producido es **TEXTO_ERROR** |
 
 </div>
 
