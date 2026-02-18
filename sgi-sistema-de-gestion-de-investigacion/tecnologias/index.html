@@ -796,7 +796,246 @@
 
   <h1>Tecnologias</h1>
 
+<div id="page">
 
+<div id="main" class="aui-page-panel">
+
+<div id="main-header">
+
+<div id="breadcrumb-section">
+
+1.  [Hércules](index.html)
+2.  [Hércules](/)
+3.  [SGI. Sistema de gestión de investigación](//sgi-sistema-de-gestion-de-investigacion)
+
+</div>
+
+# <span id="title-text"> Hércules : Tecnologías </span>
+
+</div>
+
+<div id="content" class="view">
+
+<div class="page-metadata">
+
+Created by <span class="author"> Reyes Hernández-Mora Martínez</span>, last updated on may 26, 2023
+
+</div>
+
+<div id="main-content" class="wiki-content group">
+
+## **Librerías**
+
+Para poder acceder a la información es necesario tener conocimientos básicos de programación.
+
+Se parte de <a href="https://confluence.um.es/confluence/pages/viewpage.action?pageId=662438145" rel="nofollow">https://confluence.um.es/confluence/pages/viewpage.action?pageId=662438145</a> que es una referencia a la tecnologías del SGI Hércules y  del conocimiento de los proyectos de Spring Boot para back y de Angular para el front en el sentido de que ambos utilizan gestores de paquetes/dependencias que en un archivo te identifica todas las librerías que usa.
+
+A continuación se proporcionan dos ejemplos de como se obtiene la información, uno de back y otro de front:
+
+1.- En eGithub está  el pom de csp <a href="https://urldefense.com/v3/__https:/github.com/HerculesCRUE/SGI/blob/main/sgi-csp-service/pom.xml__;!!D9dNQwwGXtA!Q8c7VzfC1K7ncTDJQIIdODRWYVD3WGWHHCO1bGZVxks6OqfK0zhXCr9gIUkqkT0W6jItRWZMkqwtbZ2bqsalDQg$" class="external-link" rel="nofollow">https://github.com/HerculesCRUE/SGI/blob/main/sgi-csp-service/pom.xml</a>
+
+y en las  dependencias están los artefactos que usa este servicio: commons-lang3, hibernate-jpamodelgen, hibernate-validator, …
+
+2.- En los proyectos de angular las dependencias estan en el archivo package.json <a href="https://urldefense.com/v3/__https:/github.com/HerculesCRUE/SGI/blob/main/sgi-framework-angular/package.json__;!!D9dNQwwGXtA!Q8c7VzfC1K7ncTDJQIIdODRWYVD3WGWHHCO1bGZVxks6OqfK0zhXCr9gIUkqkT0W6jItRWZMkqwtbZ2brZTCjDo$" class="external-link" rel="nofollow">https://github.com/HerculesCRUE/SGI/blob/main/sgi-framework-angular/package.json</a>
+
+Por ejemplo:
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable" style="margin-left: 40.0px;">
+<tbody>
+<tr class="odd">
+<td class="confluenceTd"><p>    "@angular/animations":~11.1.1",</p></td>
+<td class="confluenceTd"><p><br />
+</p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd"><p>    "@angular/common": "~11.1.1",</p></td>
+</tr>
+<tr class="odd">
+<td colspan="2" class="confluenceTd"><p>    "@angular/compiler": "~11.1.1",</p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd"><p>    "@angular/core": "~11.1.1",</p></td>
+</tr>
+<tr class="odd">
+<td colspan="2" class="confluenceTd"><p>    "@angular/forms": "~11.1.1",</p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd"><p>    "@angular/platform-browser": "~11.1.1",</p></td>
+</tr>
+<tr class="odd">
+<td colspan="2" class="confluenceTd"><p>    "@angular/platform-browser-dynamic": "~11.1.1",</p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd"><p>    "@angular/router": "~11.1.1",</p></td>
+</tr>
+<tr class="odd">
+<td colspan="2" class="confluenceTd"><p>    "keycloak-js": "^11.0.0",</p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd"><p>    "rxjs": "^6.5.5",</p></td>
+</tr>
+<tr class="odd">
+<td colspan="2" class="confluenceTd"><p>    "tslib": "^2.0.0",</p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd"><p>    "zone.js": "~0.10.2"</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+## Conceptos principales
+
+La filosofía del sistema está basada en tres conceptos principales:
+
+- Principio de DATO ÚNICO: orientado a evitar duplicidad de esfuerzos, de fuentes de datos y mantener
+
+una mejor localización de la información.
+
+- Principio de MODULARIDAD: el sistema se presenta como soporte para un conjunto de funcionalidades
+
+de diferente complejidad, con múltiples fases que pueden funcionar de forma autónoma.
+
+- Principio de EVOLUCIÓN CONTINUA: en un entorno cambiante.
+
+Nos basamos en los siguientes fundamentos:
+
+-  Los desarrollos llevados a cabo en este proyecto emplearán el patrón Modelo Vista Controlador (MVC)
+
+que separa los datos de una aplicación, la interfaz de usuario y la lógica de negocio en tres capas o
+
+componentes distintos
+
+Modelo: Esta es la representación específica de la información con la cual el sistema opera. Con
+
+el fin de independizarse del sistema de gestión de bases de datos (SGBD) subyacente y facilitar
+
+la implantación del sistema se utilizará un ORM (Object-Relational Mapping) como Hibernate.
+
+De esta manera, se permite de forma transparente el uso de diferentes bases de datos (Oracle,
+
+PostgreSQL, SQLServer, …) como unidad de persistencia.
+
+Vista: Esta presenta el modelo en un formato adecuado para interactuar, usualmente la interfaz
+
+de usuario. Para la vista web se propone usar Angular (comúnmente llamado "Angular 2+" o
+
+"Angular 2"), es un framework para aplicaciones web desarrollado en TypeScript, de código
+
+abierto, mantenido por Google, que se utiliza para crear y mantener aplicaciones web de una
+
+sola página. Se libera así de carga al servidor ya que este solo se encarga de procesar peticiones
+
+JSON desde y hacia el explorador. El diseño del sistema se realizará de forma responsiva
+
+pudiendo verse de forma correcta en diferentes dispositivos y resoluciones, fijadas al inicio.
+
+o Controlador: Este responde a eventos, usualmente acciones del usuario, e invoca peticiones al
+
+modelo y, probablemente, a la vista.
+
+Arquitectura basada en microservicios, la cual permite distribuir software de calidad con mayor rapidez,
+
+reaccionando de una manera más rápida a cambios de negocio, saturación de ciertos servicios y
+
+minimizando posibles problemas.
+
+- La distribución del sistema se podrá realizar de dos maneras dependiendo de las necesidades y
+
+características de cada implantación (en ambos casos se dota al sistema de características escalables
+
+que le permiten soportar entornos en alta disponibilidad y altamente clusterizables):
+
+o Como aplicación J2EE que se despliegue en un clúster de servidores de aplicaciones.
+
+o Distribuida en contenedores utilizando tecnologías como Docker (para su ejecución) y
+
+Kubernetes (para el control y carga del sistema).
+
+- Diseño basado en los principios de alta capacidad, alta disponibilidad y alto rendimiento, evitando tareas
+
+que requieran corte de servicio, permitiendo incorporación en caliente nuevos registros y procedimientos
+
+Facilidad de cambio, logrando la transparencia de la tecnología y, en la medida de lo posible, hacer uso
+
+de estándares industriales para interfaces clave.
+
+- Uso de estándares abiertos, evitando formatos y protocolos privativos.
+
+<!-- -->
+
+- Utilización de componentes y productos de terceros publicados bajo licencias Open Source y gratuitas.
+
+En general la arquitectura de la aplicación propuesta a alto nivel seria la siguiente:
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/662438145/662438156.png" class="confluence-embedded-image confluence-thumbnail" draggable="false" data-image-src="attachments/662438145/662438156.png" data-unresolved-comment-count="0" data-linked-resource-id="662438156" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="Captura de Pantalla 2023-02-09 a las 10.52.19.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="662438145" data-linked-resource-container-version="4" tabindex="0" height="250" /></span>
+
+
+
+- Gateway – Puerta de entrada al sistema que se encarga de manejar el tráfico web del sistema, servir el
+
+contenido estático de la aplicación Angular.
+
+- Registry – Aplicación que se encarga de registrar la información de las aplicaciones (microservicios)
+
+existentes en el despliegue.
+
+- Servidor de autenticación y autorización - UAA - se encarga de autenticar y autorizar a los usuarios en el
+
+sistema siguiendo un protocolo OAuth2.
+
+- Microservicios – Son aplicaciones autocontenidas construidas con Spring Boot y dockerizadas que se
+
+encargan de manejar las peticiones de los clientes. Envían peticiones JSON y son manejados para
+
+lanzarse en paralelo para soportar carga extra.
+
+- Con el fin de monitorizar, auditar y gestionar el sistema se utiliza el stack tecnológico ELK (ElastichSearch,
+
+Logstash y Kibana).
+
+</div>
+
+<div class="pageSection group">
+
+<div class="pageSectionHeader">
+
+## Attachments:
+
+</div>
+
+<div class="greybox" align="left">
+
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [Captura de Pantalla 2023-02-09 a las 10.52.19.png](/attachments/662438145/662438156.png) (image/png)  
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div id="footer" role="contentinfo">
+
+<div class="section footer-body">
+
+Document generated by Confluence on oct 27, 2025 09:23
+
+<div id="footer-logo">
+
+[Atlassian](https://www.atlassian.com/)
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 
 

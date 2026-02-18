@@ -796,7 +796,307 @@
 
   <h1>Index</h1>
 
+<div id="page">
 
+<div id="main" class="aui-page-panel">
+
+<div id="main-header">
+
+<div id="breadcrumb-section">
+
+1.  [Hércules](index.html)
+2.  [Hércules](/)
+3.  [RPA](//rpa)
+4.  [Módulo de Automatización y Gestión](//rpa/modulo-de-automatizacion-y-gestion)
+5.  [Análisis y Procesos](//rpa/modulo-de-automatizacion-y-gestion/analisis-y-procesos)
+
+</div>
+
+# <span id="title-text"> Hércules : Proceso 1 : Segmentación y generación automática de boletines informativos </span>
+
+</div>
+
+<div id="content" class="view">
+
+<div class="page-metadata">
+
+Created by <span class="author"> Juan Tardón Martínez</span>, last updated by <span class="editor"> Usuario genérico para HERCULES</span> on nov 23, 2022
+
+</div>
+
+<div id="main-content" class="wiki-content group">
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/598147204/598147882.png" class="confluence-embedded-image" draggable="false" data-image-src="attachments/598147204/598147882.png" data-unresolved-comment-count="0" data-linked-resource-id="598147882" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image2022-8-3_13-39-51.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="598147204" data-linked-resource-container-version="24" tabindex="0" width="900" /></span>
+
+## Descripción general del proceso.
+
+Este proceso se podrá planificar automáticamente, de forma semanal o periódica, para obtener información relacionada con los elementos incluídos en el boletín de transferencia de Universidad de Murcia, siendo posible su adaptación a otros boletines.
+
+El robot que ejecuta este proceso, realizará una búsqueda utilizando un rango de fechas, dependiendo si el proceso se debe ejecutar de forma semanal o periódica y obtendrá la información relacionada con estas secciones introducida en el Hércules-SGI, Hércules-EDMA, Notas de Prensa de la UM y UCC. Si la ejecución anterior del proceso ha fallado, se ajustará el rango de fechas. Para ello, se comprobará si la fecha inicial de la última ejecución es menor que la del rango actual, si lo es, se escogerá la fecha de la última ejecución como fecha inicial y para la fecha de fin se escogerá la fecha más reciente.
+
+Si ha obtenido información de forma correcta procederá a generar un resumen donde se especifique la información obtenida y se enviará por correo electrónico a los responsables de la creación del Boletín de Transferencia de la OTRI. Si no se ha obtenido información o el proceso ha terminado con errores se notificará al usuario.
+
+La información recolectada por el proceso consultando EDMA es la siguiente:
+
+- <u>Oferta tecnológica</u>:  
+  - Título.
+  - Descripción.
+  - Investigadores: nombre y apellidos de cada investigador.
+  - Fecha de publicación.
+
+<!-- -->
+
+- <u>Artículos científicos: </u>  
+  - <span style="color:var(--ds-text,#172b4d);">Título.</span>
+  - <span style="color:var(--ds-text,#172b4d);">Autor/es, por cada autor se obtendrá su nombre, apellidos y su  código ORCID, si está disponible en el sistema.  
+    </span>
+  - <span style="color:var(--ds-text,#172b4d);">Revista.</span>
+  - <span style="color:var(--ds-text,#172b4d);">Fecha de publicación.</span>
+  - <span style="color:var(--ds-text,#172b4d);">Área científica: podrá ser una lista de áreas.</span>
+
+La información recolectada por el proceso consultando SGI es la siguiente:
+
+- <u>Propiedad industrial:</u>
+  - Dentro de este apartado se obtendrán los siguientes elementos:
+    - Patente
+    - Modelo de utilidad
+    - Diseño industrial
+    - Marca
+    - Secreto industrial
+
+  <!-- -->
+
+  - De cada uno de estos elementos se obtendrá la siguiente información:
+    - Código interno y nº de solicitud / prioridad: se enviará de la primera solicitud el código interno, la fecha de inicio de prioridad y la fecha final de prioridad.
+    - Título: título.
+    - Inventores / autores: en una invención existirán participantes tanto a nivel personal, que el SGI denominará "autores" de la invención o "miembros del equipo inventor", como a nivel de organizaciones o entidades/empresas, que se denominarán "titulares" de la invención. Todos los miembros del equipo inventor (autores) llevan asociado su porcentaje de participación (autoría). Los miembros del equipo inventor participan vinculados a una organización. En función del porcentaje de autoría de sus miembros, cada organización o "titular" tiene, a su vez, un porcentaje de titularidad. El porcentaje de titularidad se obtendría a partir del sumatorio de los porcentajes de participación de cada uno de los miembros del equipo inventor pertenecientes a la entidad/empresa/organización colaboradora.  Se obtendrá la información relacionada con los autores del formulario "Equipo inventor".<span style="color:var(--ds-text,#172b4d);">  
+      </span>
+- <u>Propiedad intelectual</u>: se consultarán los elementos "Software" y "Know-how". De ellos se obtendrá la misma información que en el apartado anterior: Código interno y prioridad, título, inventores/autores.
+
+<!-- -->
+
+- <u>Convocatoria</u>: convocatorias relacionadas con proyectos colaborativos que gestiona la OTRI como otras convocatorias gestionadas por investigación, incluso OPERUM. La información que obtendrá es la siguiente: 
+  - Nombre: título.
+  - Organismo convocante: entidad convocante.
+  - Período de presentación de solicitudes.
+
+<!-- -->
+
+- <u>Proyecto</u>: nuevos proyectos que se den de alta, tanto regionales, nacionales como europeos.
+
+<!-- -->
+
+- - Título.
+
+  - Convocatoria en la que ha obtenido financiación: en el SGI se registran los siguientes campos relacionados con esta información: campo "convocatoria" que es el título de la convocatoria de la que procede el proyecto y el campo "convocatoria externa" que es un campo que se utiliza para introducir de manera libre una identificación de la convocatoria externa con la que se relaciona el proyecto, en caso de que la convocatoria no se haya registrado en el SGI. 
+
+  - Organismo convocante: entidad convocante, puede ser una lista de organismos.
+
+  - Investigadores participantes: se obtendrá de la sección "Equipo" del SGI. Dicha sección incluye la información de los miembros que forman parte del proyecto. Por cada miembro se enviará su nombre y apellidos.
+
+  - Período de ejecución: 
+
+    <div class="table-wrap">
+
+    |                  |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+    |------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+    | Campo SGI        | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+    | Fecha de inicio  | Fecha de inicio del proyecto.                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+    | Fecha fin        | Fecha de fin del proyecto.                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+    | Fecha definitiva | Es un campo opcional. Podrá ser introducido manualmente para dejar registrada la fecha de fin definitiva en el caso de situaciones como rescisiones o renuncias al proyecto, o bien podrá ser informada automáticamente por el sistema al registrar una prórroga sobre el proyecto. Si está informada prevalecerá sobre la fecha de fin y será la considerada como fecha de finalización del proyecto, independientemente de que sea mayor o menor que la fecha de fin inicial. |
+
+    </div>
+
+  - Importe: **  
+    **
+
+    <div class="table-wrap">
+
+    |                         |                                                                                                                                                                                                                               |
+    |-------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+    | Campo SGI               | Descripción                                                                                                                                                                                                                   |
+    | Importe concedido       | Suma total del importe concedido. En el caso de proyectos colaborativos reflejará exclusivamente el importe concedido con el que contará la Universidad para el desarrollo de su parte del proyecto.                          |
+    | Total importe concedido | Suma total del importe concedido (Universidad más socios). Si se introduce un desglose de gastos este campo será calculado teniendo en cuenta todos los datos, si se introduce de forma manual se obtendrá dicha información. |
+
+    </div>
+
+- <u>Contratos</u>:   
+  - Título: título del contrato.
+  - Investigadores participantes: mismos datos que se obtienen para los proyectos.
+  - <span style="letter-spacing: 0.0px;">Periodo de ejecución: mismos datos que se obtienen para los proyectos.</span>
+  - Importe: mismos datos que se obtienen para los proyectos.
+
+<!-- -->
+
+- <u>Tesis:</u>  
+  - <span style="color:var(--ds-text,#172b4d);">Título: título de la tesis doctoral.  
+    </span>
+  - <span style="color:var(--ds-text,#172b4d);">Fecha: fecha de la defensa.  
+    </span>
+  - <span style="color:var(--ds-text,#172b4d);">Director: se obtendrá el nombre y apellidos de los/las co-directores/as que han intervenido.  
+    </span>
+  - <span style="color:var(--ds-text,#172b4d);">Área científica.  
+    </span>
+  - <span style="color:var(--ds-text,#172b4d);">Resumen.  
+    </span>
+
+<!-- -->
+
+- <span style="color:var(--ds-text,#172b4d);"><u>Noticias:</u> noticias relacionadas con la investigación. </span><span style="color:var(--ds-text,#172b4d);">Se obtendrán de las siguientes páginas webs:</span>
+
+<!-- -->
+
+- - <span style="color:var(--ds-text,#172b4d);"><a href="https://www.um.es/web/sala-prensa/notas-de-prensa" class="external-link" rel="nofollow">https://www.um.es/web/sala-prensa/notas-de-prensa</a></span>
+  - <span style="color:var(--ds-text,#172b4d);"><a href="https://www.um.es/web/ucc/" class="external-link" rel="nofollow">https://www.um.es/web/ucc/</a></span>
+
+Los datos que se obtendrán son los siguientes:
+
+- - <span style="color:var(--ds-text,#172b4d);">Título.</span>
+  - <span style="color:var(--ds-text,#172b4d);">Fecha de creación.</span>
+  - <span style="color:var(--ds-text,#172b4d);">Responsable de la redacción.</span>
+
+Toda la información recolectada irá acompañada de un enlace para su consulta en la fuente de origen.
+
+## Formato correo electrónico
+
+El correo electrónico que se enviará tras finalizar el proceso mostrará por cada elemento solicitado el conjunto de elementos que se ha obtenido y una lista con la información solicitada. Un ejemplo del formato de este correo sería el siguiente:
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="header">
+<th class="confluenceTh" style="text-align: center;">Contenido</th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd" style="text-align: center;"><p><span style="color:var(--ds-text,#172b4d);">Estimado/a Sr./Sra.:</span><br />
+<span style="color:var(--ds-text,#172b4d);">Se ha obtenido información que puede ser de su interés.</span></p>
+<p><span style="color:var(--ds-text,#172b4d);"><strong>OFERTA TECNOLÓGICA: Se han obtenido 4 elementos.</strong><br />
+<strong>OFERTA TECNOLÓGICA 1:</strong><br />
+Título: Test<br />
+Descripción: Test<br />
+Investigadores:<br />
+- Autor1 apellido1 apellido2</span><span style="color:var(--ds-text,#172b4d);">Fecha: 22/07/2022<br />
+Url:<span> otc-1 (enlace)</span></span></p>
+<p><strong>TESIS: No se ha obtenido ningún elemento.</strong><br />
+<br />
+<strong>ARTÍCULOS CIENTÍFICOS: Se han obtenido 46 artículos científicos.</strong><br />
+<strong>ARTÍCULO CIENTÍFICO 1:</strong><br />
+<span style="color:var(--ds-text,#172b4d);">Nombre: testXghj</span><br />
+<span style="color:var(--ds-text,#172b4d);">Nombre revista: ejemplo1</span><br />
+<span style="color:var(--ds-text,#172b4d);">Autores:</span><br />
+<span style="color:var(--ds-text,#172b4d);">- Autor1 Martinez ORCID: 0000-0002-XXXX-XXXX</span><br />
+<span style="color:var(--ds-text,#172b4d);">Fecha: 31/07/2022</span><br />
+<span style="color:var(--ds-text,#172b4d);">Url:<span> articulo-1 (enlace)</span></span><span style="color:var(--ds-text,#172b4d);"><span>...</span></span><span style="color:var(--ds-text,#172b4d);"><span><strong>NOTICIAS: Se han obtenido 40 noticias.</strong><br />
+<strong>NOTICIA 1:</strong><br />
+Título: Un estudio de la UMU relaciona la alteración de la microbiota intestinal y la severidad de la enfermedad de Párkinson<br />
+Autor: DELFINA<br />
+Fecha: 21/07/2022<br />
+Url: noticia1 (enlace)</span></span><span style="color:var(--ds-text,#172b4d);"><span>...</span></span><span style="color:var(--ds-text,#172b4d);"><span><strong>CONVOCATORIAS: Se han obtenido 5 convocatorias.</strong><br />
+<strong>CONVOCATORIA 1:</strong><br />
+Título: testing<br />
+Fecha publicación: 06/05/2022<br />
+Fecha provisional: 06/05/2022<br />
+Fecha concesión: 17/05/2022<br />
+Url: elemento-41/datos-generales</span></span><span style="color:var(--ds-text,#172b4d);"><span>...<br />
+<br />
+<strong>PROYECTOS: Se han obtenido 3 proyectos.</strong><br />
+<strong>PROYECTO 1:</strong><br />
+Titulo: Prueba Lleida<br />
+Fecha inicio: 03/03/2022<br />
+Fecha fin: 31/03/2022<br />
+Entidades convocantes: Prueba, S.L.<br />
+Importe total presupuesto: 1000.0€<br />
+Importe total concedido: 12554.0€<br />
+Url: elemento-140017/ficha-general</span></span><span style="color:var(--ds-text,#172b4d);"><span>...<br />
+<br />
+<strong>CONTRATOS: Se ha obtenido 1 contrato.</strong><br />
+<strong>CONTRATO 1:</strong><br />
+Titulo: Contrato de regalías<br />
+Fecha inicio: 30/06/2022<br />
+Fecha fin: 31/07/2022<br />
+Url: elemento-140021/ficha-general<br />
+<br />
+<strong>PROPIEDAD INDUSTRIAL: Se han obtenido 5 invenciones.</strong><br />
+<strong>PROPIEDAD INDUSTRIAL 1:</strong><br />
+Tipo: Patente.<br />
+Título: Invención para pruebas OTRI<br />
+Descripción: Invención para pruebas OTRI<br />
+Inventores: ...<br />
+SOLICITUDES:<br />
+SOLICITUD 1:<br />
+Título: Invención para pruebas OTRI<br />
+Número solicitud: 23232<br />
+Fecha prioridad: 31/01/2022<br />
+Fecha fin prioridad: 31/01/2023<br />
+SOLICITUD 2:<br />
+Título: Invención para pruebas OTRI<br />
+Número solicitud: retert<br />
+Fecha prioridad: 01/06/2022<br />
+Fecha publicación: 08/06/2022<br />
+Url: elemento-21/datos-generales</span></span><span style="color:var(--ds-text,#172b4d);"><span>...<br />
+<br />
+<strong>PROPIEDAD INTELECTUAL: No se han obtenido invenciones.</strong> </span></span></p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+Se resaltará en negrita los titulares de cada sección y los elementos, por ejemplo, "**NOTICIAS: Se han obtenido 2 noticias.**" y "**NOTICIA 1:**".
+
+Enlaces a GitHub:
+
+- Proceso general encargado de llamar a los subprocesos:  <a href="https://github.com/hercules-rpa/orquestador/tree/main/model/process/ProcessGenerateTransferReport.py" class="external-link" rel="nofollow">https://github.com/hercules-rpa/orquestador/tree/main/model/process/ProcessGenerateTransferReport.py</a>
+- Entidades dependientes del proceso:  <a href="https://github.com/hercules-rpa/orquestador/tree/main/model/process/Process1/Entities" class="external-link" rel="nofollow">https://github.com/hercules-rpa/orquestador/tree/main/model/process/Process1/Entities</a>
+- Subprocesos que se ejecutan para obtener la información:  <a href="https://github.com/hercules-rpa/orquestador/tree/main/model/process/Process1/Subprocess" class="external-link" rel="nofollow">https://github.com/hercules-rpa/orquestador/tree/main/model/process/Process1/Subprocess</a>
+
+
+
+</div>
+
+<div class="pageSection group">
+
+<div class="pageSectionHeader">
+
+## Attachments:
+
+</div>
+
+<div class="greybox" align="left">
+
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [Proceso1. Boletín transparencia (2022-01-17_16-24-52).png](/attachments/598147204/598147820.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [Proceso1. Boletín transparencia (2022-01-27_11-45-26).png](/attachments/598147204/598147821.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [Proceso1. Boletín transparencia (2022-02-14_13-01-11).png](/attachments/598147204/598148287.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [Proceso1. Boletín transparencia (2022-03-22_15-28-38).png](/attachments/598147204/598148427.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [image2022-7-29_9-35-45.png](/attachments/598147204/598148962.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [image2022-8-3_13-39-51.png](/attachments/598147204/598147882.png) (image/png)  
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div id="footer" role="contentinfo">
+
+<div class="section footer-body">
+
+Document generated by Confluence on oct 27, 2025 09:29
+
+<div id="footer-logo">
+
+[Atlassian](https://www.atlassian.com/)
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 
 

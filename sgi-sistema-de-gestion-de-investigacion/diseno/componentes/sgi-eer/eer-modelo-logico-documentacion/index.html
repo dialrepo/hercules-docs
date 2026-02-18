@@ -796,7 +796,843 @@
 
   <h1>Eer modelo logico documentacion</h1>
 
+<div id="page">
 
+<div id="main" class="aui-page-panel">
+
+<div id="main-header">
+
+<div id="breadcrumb-section">
+
+1.  [Hércules](index.html)
+2.  [Hércules](/)
+3.  [SGI. Sistema de gestión de investigación](//sgi-sistema-de-gestion-de-investigacion)
+4.  [Diseño](//sgi-sistema-de-gestion-de-investigacion/diseno)
+5.  [Componentes](//sgi-sistema-de-gestion-de-investigacion/diseno/componentes)
+6.  [SGI - EER](//sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-eer)
+
+</div>
+
+# <span id="title-text"> Hércules : EER - Modelo lógico - Documentación </span>
+
+</div>
+
+<div id="content" class="view">
+
+<div class="page-metadata">
+
+Created by <span class="author"> Usuario desconocido (alicia.alvarez)</span>, last updated on oct 28, 2022
+
+</div>
+
+<div id="main-content" class="wiki-content group">
+
+<div class="toc-macro rbtoc1761551615072">
+
+- [Entidades del modelo Empresas de Explotación de Resultados](#EERModelológicoDocumentación-EntidadesdelmodeloEmpresasdeExplotacióndeResultados)
+  - [Empresa](#EERModelológicoDocumentación-Empresa)
+  - [EmpresaAdministracionSociedad](#EERModelológicoDocumentación-EmpresaAdministracionSociedad)
+  - [EmpresaComposicionSociedad](#EERModelológicoDocumentación-EmpresaComposicionSociedad)
+  - [EmpresaDocumento](#EERModelológicoDocumentación-EmpresaDocumento)
+  - [EmpresaEquipoEmprendedor](#EERModelológicoDocumentación-EmpresaEquipoEmprendedor)
+  - [TipoDocumento](#EERModelológicoDocumentación-TipoDocumento)
+- [Enumerados](#EERModelológicoDocumentación-Enumerados)
+  - [EstadoEmpresa](#EERModelológicoDocumentación-EstadoEmpresa)
+  - [TipoAdministracion](#EERModelológicoDocumentación-TipoAdministracion)
+  - [TipoAportacion](#EERModelológicoDocumentación-TipoAportacion)
+  - [TipoEmpresa](#EERModelológicoDocumentación-TipoEmpresa)
+
+</div>
+
+## Entidades del modelo Empresas de Explotación de Resultados
+
+### Empresa
+
+Representa a cada una de las empresas de explotación de resultados vinculadas a la Universidad que se considera que es interesante gestionar en el SGI.
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<thead>
+<tr class="header">
+<th class="confluenceTd"><p><strong>ATTRIBUTES</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td class="confluenceTd"><p>id : Long</p>
+<p>Clave primaria. Secuencia. Identificador único del registro dentro de la tabla "Empresa". Obligatorio.</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>tipoEmpresa : String</p>
+<p>Tipo de la empresa de explotación de resultados. Posibles valores:</p>
+<p> - EBT (Empresa de base tecnológica).</p>
+<p> - EINCNT (Empresa intensiva en conocimiento no tecnológico).</p>
+<p>Obligatorio.</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p>solicitanteRef : String</p>
+<p>Referencia al solicitante que consta en la solicitud de creación de la empresa de explotación de resultados en los sistemas de la Universidad. Es una clave ajena al modelo SGP que se encuentra en otro esquema de BBDD. Opcional.</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>estado : String</p>
+<p>Estado de la empresa. Tomará uno de los valores:</p>
+<p> - En tramitación</p>
+<p> - No aprobada</p>
+<p> - Activa</p>
+<p> - Sin actividad</p>
+<p> - Disuelta</p>
+<p>Obligatorio.</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p>nombreRazonSocial : String </p>
+<p>Nombre / Razón social de la empresa de explotación de resultados.</p>
+<p>Estará informado únicamente si el campo entidadRef no tiene valor, en otro caso, no se deberá estar informado o, aunque lo estuviese anteriormente, su valor no se utilizará, ya que se manejará el nombre de la entidad que provenga de los sistemas de la Universidad.</p>
+<p>Obligatorio mientras no esté informado el campo empresaRef, Opcional en otro caso.</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>entidadRef : String</p>
+<p>Referencia a la entidad que representa a la empresa de explotación de resultados en los sistemas de la Universidad. Es una FK al modelo del SGEMP. Opcional.</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p>objetoSocial : String</p>
+<p>Objeto social de la empresa de explotación de resultados. Obligatorio.</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>conocimientoTecnologia : String</p>
+<p>Descripción del conocimiento o tecnología de la empresa de explotación de resultados. Si se trata de una EBT, representará la tecnología. Si se trata de una EINCNT, el conocimiento. Obligatorio.</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p>fechaAprobacionCG : Date</p>
+<p>Fecha de aprobación en Consejo de Gobierno de la constitución o incorporación de la Universidad a la empresa de explotación de resultados. Opcional.</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>fechaCese: Date</p>
+<p>Fecha de cese de la empresa de explotación de resultados. Opcional.</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p>fechaConstitucion: Date</p>
+<p>Fecha de constitución de la empresa de explotación de resultados. Opcional.</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>fechaDesvinculacion : Date</p>
+<p>Fecha de desvinculación de la Universidad de la empresa de explotación de resultados. Opcional.</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p>fechaIncorporacion: Date</p>
+<p>Fecha de incorporación de la Universidad a la empresa de explotación de resultados. Opcional.</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>fechaSolicitud : Date</p>
+<p>Fecha de la solicitud de creación de la empresa de explotación de resultados o de la petición de la Universidad de incorporarse a ella. OIbligatorio.</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p>Notario: String</p>
+<p>Datos del notario que intervino en la constitución o a la incorporación de la Universidad a la empresa de explotación de resultados. Opcional.</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>numeroProtocolo : String</p>
+<p>Número de la notaría asociado a la constitución o a la incorporación de la Universidad a la empresa de explotación de resultados. Opcional.</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p>observaciones: String</p>
+<p>Observaciones que se quieran aportar a la empresa de explotación de resultados. Opcional.</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>activo: Boolean = True</p>
+<p>Indicador de si el registro está activo o no en el SGI. Obligatorio. Por defecto tendrá valor True. Obligatorio.</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<thead>
+<tr class="header">
+<th colspan="2" class="confluenceTd"><p><strong>ASSOCIATIONS</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd"><p>Association (<span>direction:</span> Unspecified) </p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>Source: Public (Class) Empresa</p>
+<p><span>Cardinality:  </span>[0..1]</p></td>
+<td class="confluenceTd"><p>Target: Public (Class) Empresa</p>
+<p><span>Cardinality:  </span>[0..1]</p></td>
+</tr>
+<tr class="odd">
+<td colspan="2" class="confluenceTd"><p> Association (<span>direction:</span> Unspecified) </p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>Source: Public (Class) Empresa</p>
+<p><span>Cardinality:  </span>[0..*]</p></td>
+<td class="confluenceTd"><p>Target: Public (Enumeration) EstadoEmpresa</p>
+<p><span>Cardinality:  </span>[1]</p></td>
+</tr>
+<tr class="odd">
+<td colspan="2" class="confluenceTd"><p>Association (<span>direction:</span> Unspecified) </p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>Source: Public (Class) Empresa</p>
+<p><span>Cardinality:  </span>[0..*]</p></td>
+<td class="confluenceTd"><p>Target: Public (Class) Persona</p>
+<p><span>Cardinality:  </span>[0..1]</p></td>
+</tr>
+<tr class="odd">
+<td colspan="2" class="confluenceTd"><p>Association (<span>direction:</span> Unspecified) </p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>Source: Public (Class) Empresa</p>
+<p><span>Cardinality:  </span>[0..*]</p></td>
+<td class="confluenceTd"><p>Target: Public (Enumeration) TipoEmpresa</p>
+<p><span>Cardinality:  </span>[1]</p></td>
+</tr>
+<tr class="odd">
+<td colspan="2" class="confluenceTd"><p>Association (<span>direction:</span> Unspecified) </p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>Source: Public (Class) Empresa</p>
+<p><span>Cardinality:  </span>[1]</p></td>
+<td class="confluenceTd"><p>Target: Public (Class) EmpresaAdministracionSociedad</p>
+<p><span>Cardinality:  </span>[0..*]</p></td>
+</tr>
+<tr class="odd">
+<td colspan="2" class="confluenceTd"><p>Association (<span>direction:</span> Unspecified) </p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>Source: Public (Class) EmpresaDocumento</p>
+<p><span>Cardinality:  </span>[0..*]</p></td>
+<td class="confluenceTd"><p>Target: Public (Class) Empresa</p>
+<p><span>Cardinality:  </span>[1]</p></td>
+</tr>
+<tr class="odd">
+<td colspan="2" class="confluenceTd"><p>Association (<span>direction:</span> Unspecified) </p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>Source: Public (Class) EmpresaEquipoEmprendedor</p>
+<p><span>Cardinality:  </span>[0..*]</p></td>
+<td class="confluenceTd"><p>Target: Public (Class) Empresa</p>
+<p><span>Cardinality:  </span>[1]</p></td>
+</tr>
+<tr class="odd">
+<td colspan="2" class="confluenceTd"><p>Association (<span>direction:</span> Unspecified) </p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>Source: Public (Class) EmpresaComposicionSociedad</p>
+<p><span>Cardinality:  </span>[0..*]</p></td>
+<td class="confluenceTd"><p>Target: Public (Class) Empresa</p>
+<p><span>Cardinality:  </span>[1]</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+### EmpresaAdministracionSociedad
+
+Representa a cada uno de los miembros de los equipos de administración de las distintas empresas de explotación de resultados.
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<thead>
+<tr class="header">
+<th class="confluenceTd"><p><strong>ATTRIBUTES</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td class="confluenceTd"><p>id : Long </p>
+<p>Clave primaria. Secuencia. Identificador único del registro dentro de la tabla "EmpresaAdministracionSociedad".</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>empresaId : Long</p>
+<p>Identificador de la empresa a la que pertenece el miembro del equipo de administración de la sociedad. Es una FK sobre la tabla "Empresa". Obligatorio.</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p>miembroEquipoAdministracionRef : String</p>
+<p>Referencia a la persona miembro del equipo de administración de la sociedad. Es una FK al modelo del SGP. Obligatorio.</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>tipoAdministracion : String</p>
+<p>Tipo de administración del miembro del equipo de administración de la sociedad. Los miembros que componen la administración de la sociedad podrán ejercer uno de los tipos de administración del enumerado TipoAdministracion. Obligatorio.</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p>fechaInicio : Date</p>
+<p>Fecha desde que el miembro forma parte del equipo de administración con tipo indicado en tipoAdministracion. Obligatorio.</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>fechaFin : Date</p>
+<p>Fecha hasta la que la persona desempeña su labor como miembro del equipo de administración de la sociedad del tipo indicado en tipoAdministracion.</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<thead>
+<tr class="header">
+<th colspan="2" class="confluenceTd"><p><strong>ASSOCIATIONS</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd"><p>Association (<span>direction:</span> Unspecified) </p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>Source: Public (Class) EmpresaAdministracionSociedad</p>
+<p><span>Cardinality:  </span>[0..*]</p></td>
+<td class="confluenceTd"><p>Target: Public (Enumeration) TipoAdministracion</p>
+<p><span>Cardinality:  </span>[1]</p></td>
+</tr>
+<tr class="odd">
+<td colspan="2" class="confluenceTd"><p>Association (<span>direction:</span> Unspecified) </p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>Source: Public (Class) EmpresaAdministracionSociedad</p>
+<p><span>Cardinality:  </span>[0..*]</p></td>
+<td class="confluenceTd"><p>Target: Public (Class) Persona</p>
+<p><span>Cardinality:  </span>[1]</p></td>
+</tr>
+<tr class="odd">
+<td colspan="2" class="confluenceTd"><p>Association (<span>direction:</span> Unspecified) </p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>Source: Public (Class) Empresa</p>
+<p><span>Cardinality:  </span>[1]</p></td>
+<td class="confluenceTd"><p>Target: Public (Class) EmpresaAdministracionSociedad</p>
+<p><span>Cardinality:  </span>[0..*]</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+### EmpresaComposicionSociedad
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<thead>
+<tr class="header">
+<th class="confluenceTd"><p><strong>ATTRIBUTES</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td class="confluenceTd"><p>id : Long</p>
+<p>Clave primaria. Secuencia. Identificador único del registro dentro de la tabla "EmpresaComposicionSociedad".</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>empresaId : Long</p>
+<p>Identificador de la empresa al que pertenece el miembro de la composición de la sociedad. Clave ajena a "Empresa". Obligatorio.</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p>miembroSociedadEmpresaRef : String</p>
+<p>Referencia a la entidad miembro de la sociedad. Es una FK al modelo del SGEMP. Estará informado cuando el miembro de la sociedad sea una entidad. Opcional.</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>miembroSociedadPersonaRef : String</p>
+<p>Referencia a la persona miembro de la sociedad. Es una FK al modelo del SGP. Estará informado cuando el mimbro de la sociedad sea una persona. Opcional.</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p>fechaInicio : Date</p>
+<p>Fecha desde que es socio la entidad/persona. Obligatorio.</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>fechaFin : Date </p>
+<p>Fecha hasta la que es socio la entidad/persona. Opcional.</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p>participacion : Decimal</p>
+<p>Porcentaje de participación del socio en la sociedad. Numérico decimal menor o igual que 100. Obligatorio.</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>tipoAportacion : String</p>
+<p>Tipo de aportación a la sociedad. Los miembros que componen la sociedad podrán aportar uno de los tipos de aportación del enumerado TipoAportacion. Obligatorio.</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p>capitalSocial : Decimal</p>
+<p>Importe del capital social aportado por el socio. Numérico decimal. Opcional.</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<thead>
+<tr class="header">
+<th colspan="2" class="confluenceTd"><p><strong>ASSOCIATIONS</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd"><p>Association (<span>direction:</span> Unspecified) </p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>Source: Public (Class) EmpresaComposicionSociedad</p>
+<p><span>Cardinality:  </span>[0..*]</p></td>
+<td class="confluenceTd"><p>Target: Public (Class) Persona</p>
+<p><span>Cardinality:  </span>[1]</p></td>
+</tr>
+<tr class="odd">
+<td colspan="2" class="confluenceTd"><p>Association (<span>direction:</span> Unspecified) </p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>Source: Public (Class) EmpresaComposicionSociedad</p>
+<p><span>Cardinality:  </span>[0..*]</p></td>
+<td class="confluenceTd"><p>Target: Public (Class) Empresa</p>
+<p><span>Cardinality:  </span>[1]</p></td>
+</tr>
+<tr class="odd">
+<td colspan="2" class="confluenceTd"><p>Association (<span>direction:</span> Unspecified) </p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>Source: Public (Class) EmpresaComposicionSociedad</p>
+<p><span>Cardinality:  </span>[0..*]</p></td>
+<td class="confluenceTd"><p>Target: Public (Enumeration) TipoAportacion</p>
+<p><span>Cardinality:  </span>[1]</p></td>
+</tr>
+<tr class="odd">
+<td colspan="2" class="confluenceTd"><p>Association (<span>direction:</span> Unspecified) </p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>Source: Public (Class) EmpresaComposicionSociedad</p>
+<p><span>Cardinality:  </span>[0..*]</p></td>
+<td class="confluenceTd"><p>Target: Public (Class) Empresa</p>
+<p><span>Cardinality:  </span>[1]</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+### EmpresaDocumento
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<thead>
+<tr class="header">
+<th class="confluenceTd"><p><strong>ATTRIBUTES</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td class="confluenceTd"><p>id : Long </p>
+<p>Identificador único del registro. Secuencia. Clave primaria.</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>empresaId : Long </p>
+<p>Identificador de la empresa a la que pertenece el documento. Es una FK sobre la tabla "Empresa". Obligatorio.</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p>nombre : String </p>
+<p>Nombre del documento a nivel de usuario. No es ningún atributo del archivo físico.</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>documentoRef : String </p>
+<p>Referencia identificativa del documento en el repositorio de documentos global del SGI.</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p>tipoDocumentoId : Long </p>
+<p>Clasificación del documento según su tipología. Es una FK a la tabla "TipoDocumento". Obligatorio.</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>comentarios : String </p>
+<p>Comentario de texto libre asociado al documento.</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<thead>
+<tr class="header">
+<th colspan="2" class="confluenceTd"><p><strong>ASSOCIATIONS</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd"><p>Association (<span>direction:</span> Unspecified) </p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>Source: Public (Class) EmpresaDocumento</p>
+<p><span>Cardinality:  </span>[0..*]</p></td>
+<td class="confluenceTd"><p>Target: Public (Class) Empresa</p>
+<p><span>Cardinality:  </span>[1]</p></td>
+</tr>
+<tr class="odd">
+<td colspan="2" class="confluenceTd"><p>Association (<span>direction:</span> Unspecified) </p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>Source: Public (Class) EmpresaDocumento</p>
+<p><span>Cardinality:  </span>[0..*]</p></td>
+<td class="confluenceTd"><p>Target: Public (Class) TipoDocumento</p>
+<p><span>Cardinality:  </span>[0..1]</p></td>
+</tr>
+<tr class="odd">
+<td colspan="2" class="confluenceTd"><p>Association (<span>direction:</span> Unspecified) </p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>Source: Public (Class) EmpresaDocumento</p>
+<p><span>Cardinality:  </span>[0..1]</p></td>
+<td class="confluenceTd"><p>Target: Public (Class) Documento</p>
+<p><span>Cardinality:  </span>[1]</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+### EmpresaEquipoEmprendedor
+
+Representa a cada uno de los miembros de los equipos emprendedores de las distintas empresas de explotación de resultados.
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<thead>
+<tr class="header">
+<th class="confluenceTd"><p><strong>ATTRIBUTES</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td class="confluenceTd"><p>id : Long</p>
+<p>Clave primaria. Secuencia. Identificador único del registro dentro de la tabla "EmpresaEquipoEmprendedor".</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>empresaId : Long </p>
+<p>Identificador de la empresa al que pertenece el miembro del equipo emprendedor. Clave ajena a "Empresa". Obligatorio.</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p>miembroEquipoRef : String </p>
+<p>Referencia a la persona miembro del equipo emprendedor. Es una FK al modelo del SGP. Obligatorio.</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<thead>
+<tr class="header">
+<th colspan="2" class="confluenceTd"><p><strong>ASSOCIATIONS</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd"><p>Association (<span>direction:</span> Unspecified) </p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>Source: Public (Class) EmpresaEquipoEmprendedor</p>
+<p><span>Cardinality:  </span>[0..*]</p></td>
+<td class="confluenceTd"><p>Target: Public (Class) Empresa</p>
+<p><span>Cardinality:  </span>[1]</p></td>
+</tr>
+<tr class="odd">
+<td colspan="2" class="confluenceTd"><p>Association (<span>direction:</span> Unspecified) </p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>Source: Public (Class) EmpresaEquipoEmprendedor</p>
+<p><span>Cardinality:  </span>[0..*]</p></td>
+<td class="confluenceTd"><p>Target: Public (Class) Persona</p>
+<p><span>Cardinality:  </span>[1]</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+### TipoDocumento
+
+Contiene los tipos de documento disponibles para categorización de los documentos adjuntos en empresas de explotación de resultados.
+
+El tipo de documento permitirá clasificar los documentos de acuerdo con la naturaleza de la información que contienen. Ejemplos de tipos de documento podrían ser: documentos de procedimiento, documentos corporativos, estatutos sociales, ...
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<thead>
+<tr class="header">
+<th class="confluenceTd"><p><strong>ATTRIBUTES</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td class="confluenceTd"><p>id : Long</p>
+<p>Identificador único de la tabla. Secuencia. Clave primaria.</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>nombre : String </p>
+<p>Nombre del tipo de documento. Obligatorio.</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p>descripcion : String</p>
+<p>Descripción del tipo de documento. Obligatorio.</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>padreId : Long </p>
+<p>Identificador del tipo padre (en caso de que sea un subtipo). FK a TipoDocumento (a sí misma). Opcional.</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p>activo : Booelan    = True</p>
+<p>Flag con el que se da cobertura al borrado lógico de los registros de esta tabla. Un tipo de documento con al flag "activo" a "false" no estará disponible para su vinculación a los documentos de la empresa de explotación de resultados.</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<thead>
+<tr class="header">
+<th colspan="2" class="confluenceTd"><p><strong>ASSOCIATIONS</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd"><p>Association (<span>direction:</span> Unspecified) </p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>Source: Public (Class) TipoDocumento</p>
+<p><span>Cardinality:  </span>[1]</p></td>
+<td class="confluenceTd"><p>Target: Public (Class) TipoDocumento</p>
+<p><span>Cardinality:  </span>[0..*]</p></td>
+</tr>
+<tr class="odd">
+<td colspan="2" class="confluenceTd"><p>Association (<span>direction:</span> Unspecified) </p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>Source: Public (Class) TipoDocumento</p>
+<p><span>Cardinality:  </span>[1]</p></td>
+<td class="confluenceTd"><p>Target: Public (Class) TipoDocumento</p>
+<p><span>Cardinality:  </span>[0..*]</p></td>
+</tr>
+<tr class="odd">
+<td colspan="2" class="confluenceTd"><p>Association (<span>direction:</span> Unspecified) </p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>Source: Public (Class) EmpresaDocumento</p>
+<p><span>Cardinality:  </span>[0..*]</p></td>
+<td class="confluenceTd"><p>Target: Public (Class) TipoDocumento</p>
+<p><span>Cardinality:  </span>[0..1]</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+## Enumerados
+
+### EstadoEmpresa
+
+Enumerado que contiene los posibles estados de las empresas de explotación de resultados. Valores:
+
+- En tramitación
+- No aprobada
+- Activa
+- Sin actividad
+- Disuelta
+
+<div class="table-wrap">
+
+| **ATTRIBUTES**         |
+|------------------------|
+| En tramitación : Long  |
+| No aprobada : Long     |
+| Activa : Long          |
+| Sin actividad : Long   |
+| Disuelta : Long        |
+
+</div>
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<thead>
+<tr class="header">
+<th colspan="2" class="confluenceTd"><p><strong>ASSOCIATIONS</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd"><p>Association (<span>direction:</span> Unspecified) </p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>Source:  (Class) Empresa</p>
+<p><span>Cardinality:  </span>[0..*]</p></td>
+<td class="confluenceTd"><p>Target:  (Enumeration) EstadoEmpresa</p>
+<p><span>Cardinality:  </span>[1]</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+### TipoAdministracion
+
+Enumerado que contiene los posibles tipos de administración de la sociedad que representa la empresa de explotación de resultados. Valores:
+
+- Administrador único (1 persona)
+- Administrador solidario (2 personas o más)
+- Administrador mancomunado (2 personas o más)
+- Consejo de administración (3 personas o más)
+
+<div class="table-wrap">
+
+| **ATTRIBUTES**                    |
+|-----------------------------------|
+| Administrador único : Long        |
+| Administrador solidario : Long    |
+| Administrador mancomunado : Long  |
+| Consejo de administración : Long  |
+
+</div>
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<thead>
+<tr class="header">
+<th colspan="2" class="confluenceTd"><p><strong>ASSOCIATIONS</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd"><p>Association (<span>direction:</span> Unspecified) </p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>Source:  (Class) EmpresaAdministracionSociedad</p>
+<p><span>Cardinality:  </span>[0..*]</p></td>
+<td class="confluenceTd"><p>Target:  (Enumeration) TipoAdministracion</p>
+<p><span>Cardinality:  </span>[1]</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+### TipoAportacion
+
+Enumerado que contiene los posibles tipos de aportación a la composición de la sociedad que representa la empresa de explotación de resultado por parte de los miembros de la misma. Valores:
+
+- Dineraria
+- No dineraria
+
+<div class="table-wrap">
+
+| **ATTRIBUTES**      |
+|---------------------|
+| Dineraria : Long    |
+| No dineraria : Long |
+
+</div>
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<thead>
+<tr class="header">
+<th colspan="2" class="confluenceTd"><p><strong>ASSOCIATIONS</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd"><p>Association (<span>direction:</span> Unspecified)</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>Source:  (Class) EmpresaComposicionSociedad</p>
+<p><span>Cardinality:  </span>[0..*]</p></td>
+<td class="confluenceTd"><p>Target:  (Enumeration) TipoAportacion</p>
+<p><span>Cardinality:  </span>[1]</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+### TipoEmpresa
+
+Enumerado que contiene los posibles tipos de empresa de explotación de resultados. Valores:
+
+- EBT (Empresa de base tecnológica).
+- EINCNT (Empresa intensiva en conocimiento no tecnológico).
+
+<div class="table-wrap">
+
+| **ATTRIBUTES** |
+|----------------|
+| EBT : Long     |
+| EINCNT : Long  |
+
+</div>
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<thead>
+<tr class="header">
+<th colspan="2" class="confluenceTd"><p><strong>ASSOCIATIONS</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd"><p>Association (<span>direction:</span> Unspecified) </p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>Source:  (Class) Empresa</p>
+<p><span>Cardinality:  </span>[0..*]</p></td>
+<td class="confluenceTd"><p>Target:  (Enumeration) TipoEmpresa</p>
+<p><span>Cardinality:  </span>[1]</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div id="footer" role="contentinfo">
+
+<div class="section footer-body">
+
+Document generated by Confluence on oct 27, 2025 08:53
+
+<div id="footer-logo">
+
+[Atlassian](https://www.atlassian.com/)
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 
 

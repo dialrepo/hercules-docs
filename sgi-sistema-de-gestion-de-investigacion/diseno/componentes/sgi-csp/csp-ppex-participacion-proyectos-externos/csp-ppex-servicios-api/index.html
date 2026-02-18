@@ -796,7 +796,315 @@
 
   <h1>Csp ppex servicios api</h1>
 
+<div id="page">
 
+<div id="main" class="aui-page-panel">
+
+<div id="main-header">
+
+<div id="breadcrumb-section">
+
+1.  [Hércules](index.html)
+2.  [Hércules](/)
+3.  [SGI. Sistema de gestión de investigación](//sgi-sistema-de-gestion-de-investigacion)
+4.  [Diseño](//sgi-sistema-de-gestion-de-investigacion/diseno)
+5.  [Componentes](//sgi-sistema-de-gestion-de-investigacion/diseno/componentes)
+6.  [SGI - CSP](//sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-csp)
+7.  [CSP-PPEX: Participación proyectos externos](//sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-csp/csp-ppex-participacion-proyectos-externos)
+
+</div>
+
+# <span id="title-text"> Hércules : CSP-PPEX: Servicios API </span>
+
+</div>
+
+<div id="content" class="view">
+
+<div class="page-metadata">
+
+Created by <span class="author"> Usuario desconocido (covadonga.garcia)</span>, last updated on may 09, 2022
+
+</div>
+
+<div id="main-content" class="wiki-content group">
+
+<div class="toc-macro rbtoc1761551554403">
+
+- [Autorización](#CSPPPEX:ServiciosAPI-Autorización)
+- [NotificacionProyectoExternoCVN](#CSPPPEX:ServiciosAPI-NotificacionProyectoExternoCVN)
+
+</div>
+
+## Autorización
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable" style="width: 100.0%;">
+<colgroup>
+<col style="width: 6%" />
+<col style="width: 25%" />
+<col style="width: 12%" />
+<col style="width: 14%" />
+<col style="width: 11%" />
+<col style="width: 29%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th class="confluenceTh"><p>Método</p></th>
+<th class="confluenceTh"><p>URL</p></th>
+<th class="confluenceTh"><p>Parámetros</p></th>
+<th class="confluenceTh"><p>Respuesta</p></th>
+<th class="confluenceTh">Permisos</th>
+<th class="confluenceTh"><p>Descripción</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td class="confluenceTd">POST</td>
+<td class="confluenceTd">/autorizaciones</td>
+<td class="confluenceTd">AutorizacionInput</td>
+<td class="confluenceTd">AutorizacionOutput</td>
+<td class="confluenceTd">CSP-AUT-INV-C</td>
+<td class="confluenceTd">Crea Autorización</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">PUT</td>
+<td class="confluenceTd">/autorizaciones/{id}</td>
+<td class="confluenceTd">AutorizacionInput</td>
+<td class="confluenceTd">AutorizacionOutput</td>
+<td class="confluenceTd">CSP-AUT-INV-ER, CSP-AUT-E</td>
+<td class="confluenceTd">Actualiza Autorización</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">GET</td>
+<td class="confluenceTd">/autorizaciones/{id}</td>
+<td class="confluenceTd">id: identificador de la Autorización</td>
+<td class="confluenceTd">AutorizacionOutput</td>
+<td class="confluenceTd">CSP-AUT-INV-ER, CSP-AUT-E, CSP-AUT-V</td>
+<td class="confluenceTd">Datos de la autorización</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">PATCH</td>
+<td class="confluenceTd">/autorizaciones/{id}/cambiar-estado</td>
+<td class="confluenceTd"><p>id: identificador de la Autorización</p>
+<p>EstadoAutorizacion: el estado al que se desea cambiar</p></td>
+<td class="confluenceTd">AutorizacionOutput</td>
+<td class="confluenceTd">CSP-AUT-INV-ER, CSP-AUT-E</td>
+<td class="confluenceTd">Devuelve AutorizacionOutput con el EstadoAutorizacion Actualizado</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">PATCH</td>
+<td class="confluenceTd">/autorizaciones/{id}/presentar</td>
+<td class="confluenceTd">AutorizacionOutput: Autorización a presentar</td>
+<td class="confluenceTd">AutorizacionOutput</td>
+<td class="confluenceTd">CSP-AUT-INV-C, CSP-AUT-INV-ER</td>
+<td class="confluenceTd">Devuelve AutorizacionOutput con el EstadoAutorizacion "Presentada"</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">HEAD</td>
+<td class="confluenceTd">/autorizaciones/{id}/presentable</td>
+<td class="confluenceTd">id: identificador de la Autorización</td>
+<td class="confluenceTd">AutorizacionOutput</td>
+<td class="confluenceTd">CSP-AUT-INV-C, CSP-AUT-INV-ER, CSP-AUT-E, CSP-AUT-V</td>
+<td class="confluenceTd">Comprueba si la Autorización es "presentable"</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">GET</td>
+<td class="confluenceTd">/autorizaciones</td>
+<td class="confluenceTd"><p>q+s</p>
+<p><br />
+</p></td>
+<td class="confluenceTd">Page&lt;AutorizacionOutput&gt;</td>
+<td class="confluenceTd">CSP-AUT-E, CSP-AUT-V</td>
+<td class="confluenceTd">Devuelve todas las Autorizaciones activas</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">DELETE</td>
+<td class="confluenceTd">/autorizaciones/{id)</td>
+<td class="confluenceTd">id: identificador de la Autorización</td>
+<td class="confluenceTd">void</td>
+<td class="confluenceTd">CSP-AUT-B, CSP-AUT-INV-BR</td>
+<td class="confluenceTd">Elimina la autorización correspondiente al id pasado por parámetro</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">GET</td>
+<td class="confluenceTd">/autorizaciones/investigador</td>
+<td class="confluenceTd">q+s</td>
+<td class="confluenceTd">Page&lt;AutorizacionOutput&gt;</td>
+<td class="confluenceTd">CSP-AUT-INV-C, CSP-AUT-INV-ER</td>
+<td class="confluenceTd">Devuelve una lista paginada y filtrada de  las Autorizaciones que puede visualizar un investigador</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">HEAD</td>
+<td class="confluenceTd">/autorizaciones/{id}/vinculacionesnotificacionesproyectosexternos</td>
+<td class="confluenceTd">id: identificador de la Autorización</td>
+<td class="confluenceTd">void</td>
+<td class="confluenceTd">CSP-AUT-E, CSP-AUT-INV-C, CSP-AUT-INV-ER, CSP-AUT-V</td>
+<td class="confluenceTd">Comprueba si existen datos vinculados a Autorizacion de   NotificacionProyectoExternoCVN</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">GET</td>
+<td class="confluenceTd">/autorizaciones/{id}/estados</td>
+<td class="confluenceTd">id: identificador de la Autorización</td>
+<td class="confluenceTd">Page&lt;EstadoAutorizacion&gt;&gt;</td>
+<td class="confluenceTd">CSP-AUT-E , CSP-AUT-INV-C , CSP-AUT-INV-ER , CSP-AUT-V</td>
+<td class="confluenceTd">Devuelve una lista paginada y filtrada de  los EstadoAutorizacion de la Autorización</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">GET</td>
+<td class="confluenceTd">/autorizaciones/{id}/certificados</td>
+<td class="confluenceTd">Id: identificador de la Autorización</td>
+<td class="confluenceTd">Page&lt;CertificadoAutorizacion&gt;</td>
+<td class="confluenceTd">CSP-AUT-E , CSP-AUT-INV-C , CSP-AUT-INV-ER , CSP-AUT-V</td>
+<td class="confluenceTd">Devuelve una lista paginada y filtrada de  los CertificadoAutorizacion de la Autorización</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">GET</td>
+<td class="confluenceTd">/autorizaciones/{id}/hascertificadoautorizacionvisible</td>
+<td class="confluenceTd">Id: identificador de la Autorización</td>
+<td class="confluenceTd">Void</td>
+<td class="confluenceTd">CSP-AUT-E , CSP-AUT-INV-C , CSP-AUT-INV-ER , CSP-AUT-V</td>
+<td class="confluenceTd">Comprueba si la Autorización tiene asociado algún CertificadoAutorizacion con el campo visible a 'true'.</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">GET</td>
+<td class="confluenceTd">/autorizaciones/{id}/certificadoautorizacionvisible</td>
+<td class="confluenceTd">Id: identificador de la Autorización</td>
+<td class="confluenceTd">CertificadoAutorizacionOutput</td>
+<td class="confluenceTd">CSP-AUT-INV-ER</td>
+<td class="confluenceTd">Devuelve el certificado autorizacion Visible de la autorizacion</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">GET</td>
+<td class="confluenceTd">/autorizaciones/{id}/notificacionproyecto</td>
+<td class="confluenceTd">Id: identificador de la Autorización</td>
+<td class="confluenceTd">NotificacionProyectoExternoCVNOutput</td>
+<td class="confluenceTd">CSP-AUT-E , CSP-AUT-INV-C , CSP-AUT-INV-ER , CSP-AUT-V</td>
+<td class="confluenceTd">Devuelve una  NotificacionProyectoExternoCVN asociada a la autorizacion facilitada.</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">GET</td>
+<td class="confluenceTd">/autorizaciones/{id}/convocatoria</td>
+<td class="confluenceTd">Id: identificador de la Autorización</td>
+<td class="confluenceTd">ConvocatoriaTituloOutput</td>
+<td class="confluenceTd">CSP-AUT-INV-ER</td>
+<td class="confluenceTd">Devuelve la  Convocatoria asociada a la  Autorizacion}con el id indicado si el usuario que realiza la petición es el solicitante de la Autorizacion</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">GET</td>
+<td class="confluenceTd">/autorizaciones/modificadas-ids</td>
+<td class="confluenceTd"><p>q+s</p>
+<p>La query estará formada por:</p>
+<ul>
+<li>fechaModificacion</li>
+</ul></td>
+<td class="confluenceTd">Lista[Long]</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><p>Listado de Identificadores de Autorizaciones cuyo estado actual sea "autorizada" y la fecha de dicho estado  sea igual o superior a la fecha recibida como parámetro de entrada.</p>
+<p>Ejemplo:</p>
+<ul>
+<li>fechaModificacion=ge=<span>"2021-08-18T22:00:00Z"</span></li>
+</ul></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+## NotificacionProyectoExternoCVN
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable">
+<colgroup>
+<col style="width: 7%" />
+<col style="width: 18%" />
+<col style="width: 14%" />
+<col style="width: 17%" />
+<col style="width: 42%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th class="confluenceTh"><p>Método</p></th>
+<th class="confluenceTh"><p>URL</p></th>
+<th class="confluenceTh"><p>Parámetros</p></th>
+<th class="confluenceTh"><p>Respuesta</p></th>
+<th class="confluenceTh"><p>Descripción</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td class="confluenceTd">POST</td>
+<td class="confluenceTd">/notificacionesproyectosexternoscvn</td>
+<td class="confluenceTd">NotificacionProyecto</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><p>Recibe como parámetro los campos necesarios para crear un registro en el SGI de un proyecto notificado desde el CVN</p>
+<p>Se creará un registro en la tabla NotificacionProyectoExternoCVN con los siguientes valores:</p>
+<ul>
+<li>proyectoCVNId: campo "proyectoCVNId" de la entidad pasada como parámetro "NotificacionProyecto". Dato obligatorio</li>
+<li>solicitanteRef: campo "solicitanteRef" de la entidad pasada como parámetro "NotificacionProyecto". Dato obligatorio</li>
+<li>autorizacionId: campo "autorizacionId" de la entidad pasada como parámetro "NotificacionProyecto"</li>
+<li>titulo: campo "titulo" de la entidad pasada como parámetro "NotificacionProyecto". Dato obligatorio</li>
+<li>codExterno: campo "codExterno" de la entidad pasada como parámetro "NotificacionProyecto"</li>
+<li>fechaInicio: campo "fechaInicio" de la entidad pasada como parámetro "NotificacionProyecto". Dato obligatorio</li>
+<li>fechaFin: campo "fechaFin" de la entidad pasada como parámetro "NotificacionProyecto". Dato obligatorio</li>
+<li>ambitoGeografico: campo "ambitoGeografico" de la entidad pasada como parámetro "NotificacionProyecto"</li>
+<li>gradoContribucion: campo "gradoContribucion" de la entidad pasada como parámetro "NotificacionProyecto"</li>
+<li>responsableRef: campo "responsableRef" de la entidad pasada como parámetro "NotificacionProyecto"</li>
+<li>datosResponsable: se cogerá el campo "datosResponsable" de la entidad pasada como parámetro "NotificacionProyecto" si "responsableRef" es null</li>
+<li>entidadParticipacionRef: campo "entidadParticipacionRef" de la entidad pasada como parámetro "NotificacionProyecto"</li>
+<li>datosEntidadParticipacion: se cogerá el campo "datosEntidadParticipacion" de la entidad pasada como parámetro "NotificacionProyecto" si "entidadParticipacionRef" es null</li>
+<li>nombrePrograma: campo "nombrePrograma" de la entidad pasada como parámetro "NotificacionProyecto"</li>
+<li>importeTotal: campo "importeTotal" de la entidad pasada como parámetro "NotificacionProyecto"</li>
+<li>porcentajeSubvencion: campo "porcentajeSubvencion" de la entidad pasada como parámetro "NotificacionProyecto"</li>
+<li>documentoRef: campo "documentRef" de la entidad pasada como parámetro "NotificacionProyecto"</li>
+<li>urlDocumentoAcreditacion: campo "urlDocumentoAcreditacion" de la entidad pasada como parámetro "NotificacionProyecto"</li>
+</ul>
+<p><u>Los campos obligatorios son: proyectoCVNId, solicitanteRef, titulo, fechaInicio y fechaFin</u></p>
+<p>Por cada registro de la lista "entidadesFinanciadoras" de la entidad pasada como paŕametro "NotificacionProyecto" crear un registro en la tabla "NotificacionCVNEntidadFinanciadora" con los campos:</p>
+<ul>
+<li>entidadFinanciadoraRef: campo "entidadFinanciadoraRef" de la entidad pasada como parámetro "EntidadFinanciadora" dentro de la lista de "entidadesFinanciadoras"</li>
+<li>datosEntidadFinanciadora: se cogerá el campo "datosEntidadFinanciadora" de la entidad pasada como parámetro "EntidadFinanciadora" dentro de la lista de "entidadesFinanciadoras" si el campo "entidadFinanciadoraRef" es null</li>
+</ul>
+<p><br />
+</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+
+
+</div>
+
+</div>
+
+</div>
+
+<div id="footer" role="contentinfo">
+
+<div class="section footer-body">
+
+Document generated by Confluence on oct 27, 2025 08:52
+
+<div id="footer-logo">
+
+[Atlassian](https://www.atlassian.com/)
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 
 

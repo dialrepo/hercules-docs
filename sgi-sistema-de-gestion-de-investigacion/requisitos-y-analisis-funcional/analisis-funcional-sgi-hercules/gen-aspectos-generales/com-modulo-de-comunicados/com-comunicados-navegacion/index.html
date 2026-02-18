@@ -796,7 +796,879 @@
 
   <h1>Com comunicados navegacion</h1>
 
+<div id="page">
 
+<div id="main" class="aui-page-panel">
+
+<div id="main-header">
+
+<div id="breadcrumb-section">
+
+1.  [Hércules](index.html)
+2.  [Hércules](/)
+3.  [SGI. Sistema de gestión de investigación](//sgi-sistema-de-gestion-de-investigacion)
+4.  [Requisitos y análisis funcional](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional)
+5.  [Análisis Funcional SGI - Hércules](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules)
+6.  [GEN - Aspectos generales](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales)
+7.  [COM - Módulo de Comunicados](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/com-modulo-de-comunicados)
+
+</div>
+
+# <span id="title-text"> Hércules : COM - Comunicados - Navegación </span>
+
+</div>
+
+<div id="content" class="view">
+
+<div class="page-metadata">
+
+Created by <span class="author"> Usuario desconocido (alicia.alvarez)</span>, last updated on mar 01, 2022
+
+</div>
+
+<div id="main-content" class="wiki-content group">
+
+<div class="toc-macro rbtoc1761550745185">
+
+- [Planteamiento funcional general](#COMComunicadosNavegación-Planteamientofuncionalgeneral)
+- [Configuración de comunicados](#COMComunicadosNavegación-Configuracióndecomunicados)
+- [Generación de comunicados](#COMComunicadosNavegación-Generacióndecomunicados)
+  - [Comunicados generados por acción del usuario - Creación/Modificación de un Hito que genera un comunicado o aviso](#COMComunicadosNavegación-Comunicadosgeneradosporaccióndelusuario-Creación/ModificacióndeunHitoquegenerauncomunicadooaviso)
+    - [Paso 1: Ir a opción de menú "Hitos" de una convocatoria](#COMComunicadosNavegación-Paso1:Iraopcióndemenú%22Hitos%22deunaconvocatoria)
+    - [Paso 2: Pulsar botón "Añadir hito"](#COMComunicadosNavegación-Paso2:Pulsarbotón%22Añadirhito%22)
+    - [Paso 3: Indicar que se quiere generar un aviso para el hito](#COMComunicadosNavegación-Paso3:Indicarquesequieregenerarunavisoparaelhito)
+    - [Paso 4: Modificar los datos por defecto del aviso](#COMComunicadosNavegación-Paso4:Modificarlosdatospordefectodelaviso)
+    - [Paso 5: añadir destinatarios adicionales a los predefinidos](#COMComunicadosNavegación-Paso5:añadirdestinatariosadicionalesalospredefinidos)
+    - [Paso 6: eliminar destinatarios](#COMComunicadosNavegación-Paso6:eliminardestinatarios)
+    - [Paso 7: guardar los cambios realizados](#COMComunicadosNavegación-Paso7:guardarloscambiosrealizados)
+    - [Paso 8: modificar el aviso/comunicado a generar por el hito](#COMComunicadosNavegación-Paso8:modificarelaviso/comunicadoagenerarporelhito)
+    - [](#COMComunicadosNavegación-)
+    - [Paso 9: recepción del email de aviso por parte de los destinatarios](#COMComunicadosNavegación-Paso9:recepcióndelemaildeavisoporpartedelosdestinatarios)
+  - [Comunicados generados por acción del usuario - Creación/Modificación de una Fase que genera un comunicado o aviso](#COMComunicadosNavegación-Comunicadosgeneradosporaccióndelusuario-Creación/ModificacióndeunaFasequegenerauncomunicadooaviso)
+    - [Paso 1: Ir a opción de menú "Fases" de una convocatoria](#COMComunicadosNavegación-Paso1:Iraopcióndemenú%22Fases%22deunaconvocatoria)
+    - [Paso 2: Pulsar botón "Añadir fase"](#COMComunicadosNavegación-Paso2:Pulsarbotón%22Añadirfase%22)
+    - [Paso 3: Indicar que se quiere generar un aviso para la fase](#COMComunicadosNavegación-Paso3:Indicarquesequieregenerarunavisoparalafase)
+    - [Paso 4: Modificar los datos por defecto del aviso](#COMComunicadosNavegación-Paso4:Modificarlosdatospordefectodelaviso.1)
+    - [Paso 5: añadir destinatarios adicionales](#COMComunicadosNavegación-Paso5:añadirdestinatariosadicionales)
+    - [Paso 6: eliminar destinatarios](#COMComunicadosNavegación-Paso6:eliminardestinatarios.1)
+    - [Paso 7: guardar los cambios realizados](#COMComunicadosNavegación-Paso7:guardarloscambiosrealizados.1)
+    - [Paso 8: modificar el aviso/comunicado a generar por la fase](#COMComunicadosNavegación-Paso8:modificarelaviso/comunicadoagenerarporlafase)
+    - [Paso 9: recepción del email de aviso por parte de los destinatarios](#COMComunicadosNavegación-Paso9:recepcióndelemaildeavisoporpartedelosdestinatarios.1)
+  - [Generación de comunicados automáticos](#COMComunicadosNavegación-Generacióndecomunicadosautomáticos)
+    - [Ejemplo 1: Email de aviso de cercanía de período de pago a socio](#COMComunicadosNavegación-Ejemplo1:Emaildeavisodecercaníadeperíododepagoasocio)
+    - [Ejemplo 2: Avisos de período de presentación de justificación de socio de un proyecto](#COMComunicadosNavegación-Ejemplo2:Avisosdeperíododepresentacióndejustificacióndesociodeunproyecto)
+      - [Email de aviso de inicio de período de presentación de la justificación de un socio de un proyecto](#COMComunicadosNavegación-Emaildeavisodeiniciodeperíododepresentacióndelajustificacióndeunsociodeunproyecto)
+      - [Email de aviso de cercanía del fin de período de presentación de la justificación de un socio de un proyecto](#COMComunicadosNavegación-Emaildeavisodecercaníadelfindeperíododepresentacióndelajustificacióndeunsociodeunproyecto)
+    - [Ejemplo 3: Avisos de período de presentación de documentación del seguimiento científico de un proyecto](#COMComunicadosNavegación-Ejemplo3:Avisosdeperíododepresentacióndedocumentacióndelseguimientocientíficodeunproyecto)
+      - [Email de aviso de cercanía de inicio de período de presentación de la documentación de seguimiento científoco de un proyecto](#COMComunicadosNavegación-Emaildeavisodecercaníadeiniciodeperíododepresentacióndeladocumentacióndeseguimientocientífocodeunproyecto)
+      - [Email de aviso de cercanía de fin de período de presentación de la documentación de seguimiento científoco de un proyecto](#COMComunicadosNavegación-Emaildeavisodecercaníadefindeperíododepresentacióndeladocumentacióndeseguimientocientífocodeunproyecto)
+- [Detalle de configuración de comunicados](#COMComunicadosNavegación-detalleconfigcomDetalledeconfiguracióndecomunicados)
+- [Detalle de condiciones de generación y textos por tipo de aviso](#COMComunicadosNavegación-Detalledecondicionesdegeneraciónytextosportipodeaviso)
+  - [Módulo CSP](#COMComunicadosNavegación-MóduloCSP)
+  - [Módulo Ética](#COMComunicadosNavegación-MóduloÉtica)
+  - [Módulo Invenciones](#COMComunicadosNavegación-MóduloInvenciones)
+
+</div>
+
+<img src="plugins/servlet/confluence/placeholder/unknown-macro" class="wysiwyg-unknown-macro" />
+
+<div class="confluence-information-macro confluence-information-macro-information" role="region" aria-label="Info">
+
+Importante
+
+<span class="aui-icon aui-icon-small aui-iconfont-info-filled confluence-information-macro-icon" role="presentation"></span>
+
+<div class="confluence-information-macro-body">
+
+El planteamiento aquí descrito tuvo como objetivo la validación del mismo por parte de UM, siendo a continuación trasladado al Análisis particular de los comunicados de cada módulo y de los módulos que intervienen en la planificación, generación y envío de comunicados la información más detallada y/o los cambios surgidos con motivo del diseño o la implementación. Es por ello que <u>es posible que alguna de la información aquí detallada no corresponda al 100% con la solución finalmente implementada</u>, que sí está en cambio alineada con el resto de documentación de análisis.
+
+Puede ser de interés en todo caso para ver el flujo funcional resumido para entender a alto nivel el funcionamiento de los comunicados en el SGI.
+
+</div>
+
+</div>
+
+### Planteamiento funcional general
+
+- Se enviarán únicamente comunicados por email, no habrá notificación de los mismos ni gestión de mensajería interna en el SGI.
+- Habrá únicamente 2 Tipos de comunicados:
+  1.  **Comunicados generados por acción del usuario**  
+      1.  El usuario marcará si quiere enviarlos o no para el caso de Hitos y Fases y se enviarán siempre que se cumplan las condiciones definidas funcionalmente en el resto de casos.
+      2.  Habrá **destinatarios predefinidos por configuración de la implantación** y, opcionalmente, **si el comunicado dispone de interfaz de usuario**, por ejemplo, en el caso de Hitos y Fases, el usuario podrá añadir **destinatarios adicionales**. En otros casos, irán a los destinatarios identificados funcionalmente y no se podrán eliminar ni añadir otros destinatarios desde la aplicación.
+      3.  El usuario, **en algunos comunicados concretos**, como Hitos y Fases, podrá indicar el **asunto** y la **fecha y hora en la que se quiere enviar el comunicado** además de modificar **parte del contenido del email**, aquella que no sea crítica para identificar la información esencial del comunicado (fechas, la entidad concreta que requiere que se comunique algo, etc ... no se podrían modificar). En otros casos se definirá un asunto y contenido para el email fijo y la fecha para el envío del aviso será casi inmediatamente (hay que tener en cuenta un pequeño retardo hasta que pase el proceso que enviará el email), esto es, al momento de producirse el evento, y no se podrán modificar por pantalla ninguno de estos datos (Ej.: enviar notificación sobre evaluación de revisión mínima por parte del gestor de ética).
+      4.  Aplican a:
+          1.  **CSP**:  
+              1.  **Convocatorias**:
+                  1.  **Hitos** - [IU-CSP-0201-008 - Crear convocatoria - Hitos](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-interfaz-de-usuario/iu-csp-0200-gestion-de-convocatorias/iu-csp-0201-crear-convocatoria/iu-csp-0201-008-crear-convocatoria-hitos), [IU-CSP-202-009 - Añadir hito a convocatoria](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-interfaz-de-usuario/iu-csp-0200-gestion-de-convocatorias/iu-csp-202-009-anadir-hito-a-convocatoria)
+                  2.  **Fases** - [IU-CSP-0201-005 - Crear convocatoria - Fases,](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-interfaz-de-usuario/iu-csp-0200-gestion-de-convocatorias/iu-csp-0201-crear-convocatoria/iu-csp-0201-005-crear-convocatoria-fases) [IU-CSP-202-006 - Añadir fase](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-interfaz-de-usuario/iu-csp-0200-gestion-de-convocatorias/iu-csp-202-006-anadir-fase-a-convocatoria),  <a href="https://confluence.um.es/confluence/display/HERCULES/IU-CSP-0204-005+-+Modificar+convocatoria+-+Fases" rel="nofollow">IU-CSP-0204-005 - Modificar convocatoria - Fases</a>
+              2.  **Solicitudes:**
+                  1.  **Hitos** - <a href="https://confluence.um.es/confluence/pages/viewpage.action?pageId=90999976" rel="nofollow">IU-CSP-0304-005 - Modificar Solicitud - Modificar Hitos - Unidades de gestión</a> 
+              3.  **Proyectos:**
+                  1.  **Hitos** - [IU-CSP-0402-010 - Añadir-modificar hito](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-interfaz-de-usuario/iu-csp-0400-gestion-de-proyectos/iu-csp-0402-010-anadir-modificar-hito-a-proyecto)
+                  2.  **Fases** - [IU-CSP-0402-009 - Añadir-modificar fase](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-interfaz-de-usuario/iu-csp-0400-gestion-de-proyectos/iu-csp-0402-009-anadir-modificar-fase-a-proyecto)
+          2.  **Invenciones:**
+              1.  **Solicitudes de protección** - [IU-PII-0021-001 - Añadir-modificar procedimiento](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/pii-modulo-de-propiedad-industrial-e-intelectual/pii-interfaz-de-usuario/iu-pii-0020-gestion-de-solicitudes-de-proteccion-de-invencion/iu-pii-0021-gestion-de-solicitudes-de-invencion-popups-auxiliares/iu-pii-0021-001-anadir-modificar-procedimiento)
+          3.  Para **Ética** se está pendiente de confirmar la necesidad de este tipo de comunicados, hay uno posible identificado - Detallado en [ETI - Comunicados](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-comunicados).
+  2.   **Automáticos**
+      1.  Se generarán emails de aviso automáticamente, sin intervención previa del usuario, a unos **destinatarios, algunos** **de los cuales** **podrán ser configurados en la implantación** de antemano y **otros que serán prefijados funcionalmente.** El **envío** de estos comunicados **se realizará siempre** en unas **fechas fijadas** de antemano **funcionalmente o en la implantación**, según el caso (al inicio, cuando falten X días para el inicio o el fin, el día que finaliza, ...).
+      2.  Aplican a:
+          1.  **CSP**:
+              1.  **Solicitudes:**
+                  1.  **Alta de solicitud de** **ética** - <a href="https://confluence.um.es/confluence/display/HERCULES/CU-CSP-1100+-002-+Modificar+solicitud+-+Cambio+de+estado" rel="nofollow" title="CU-CSP-1100 -002- Modificar                 solicitud - Cambio de estado">CU-CSP-1100 -002- Modificar solicitud - Cambio de estado</a>
+                  2.  <span style="color:var(--ds-text,#172b4d);">**Cambio de estado de solicitud** - </span><a href="https://confluence.um.es/confluence/display/HERCULES/CU-CSP-1100+-002-+Modificar+solicitud+-+Cambio+de+estado" rel="nofollow" title="CU-CSP-1100 -002- Modificar                 solicitud - Cambio de estado">CU-CSP-1100 -002- Modificar solicitud - Cambio de estado</a>
+
+1.  1.  1.  1.  1.  **Proyectos**:  
+                    1.  **Periodos de pago socios** - [IU-CSP-0402-007 - Añadir-modificar periodo pago a socio](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-interfaz-de-usuario/iu-csp-0400-gestion-de-proyectos/iu-csp-0402-007-anadir-modificar-periodo-pago-a-socio)
+                    2.  **Periodos de justificación socios** - [IU-CSP-0406-011-004-001 - Modificar proyecto - Socio - Periodo de justificación - Datos generales](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-interfaz-de-usuario/iu-csp-0400-gestion-de-proyectos/iu-csp-0406-modificar-proyecto/iu-csp-0406-011-modificar-proyecto-socios/iu-csp-0406-011-004-modificar-proyecto-socio-periodos-de-justificacion/iu-csp-0406-011-004-001-modificar-proyecto-socio-periodo-de-justificacion-datos-generales)
+                    3.  **Calendario de justificación** - [IU-CSP-0406-029 - Modificar proyecto - Configuración económica - Calendario justificación](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-interfaz-de-usuario/iu-csp-0400-gestion-de-proyectos/iu-csp-0406-modificar-proyecto/iu-csp-0406-020-modificar-proyecto-configuracion-economica/iu-csp-0406-029-modificar-proyecto-configuracion-economica-calendario-justificacion)
+                    4.  **Seguimiento científico** - <a href="https://confluence.um.es/confluence/pages/viewpage.action?pageId=91008401" rel="nofollow">https://confluence.um.es/confluence/pages/viewpage.action?pageId=91008401</a>
+                    5.  **Calendario de facturación** - **Notificar IP** -  [IU-CSP-0406-028 - Modificar proyecto - Configuración económica - Calendario facturación](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-interfaz-de-usuario/iu-csp-0400-gestion-de-proyectos/iu-csp-0406-modificar-proyecto/iu-csp-0406-020-modificar-proyecto-configuracion-economica/iu-csp-0406-028-modificar-proyecto-configuracion-economica-calendario-facturacion)
+                    6.  **Calendario de facturación** - **Validar IP** -  [IU-CSP-0406-028 - Modificar proyecto - Configuración económica - Calendario facturación](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-interfaz-de-usuario/iu-csp-0400-gestion-de-proyectos/iu-csp-0406-modificar-proyecto/iu-csp-0406-020-modificar-proyecto-configuracion-economica/iu-csp-0406-028-modificar-proyecto-configuracion-economica-calendario-facturacion)
+                    7.  **Proyectos externos:  
+                        **
+                        1.  **Modificar autorización participación proyecto externo - Perfil investigador - Presentar** - [IU-CSP-0451-006 - Modificar autorización participación proyecto externo - Perfil investigador](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-interfaz-de-usuario/iu-csp-0450-participacion-proyectos-externos/iu-csp-0451-autorizaciones-de-participacion-proyectos-externos/iu-csp-0451-006-modificar-autorizacion-participacion-proyecto-externo-perfil-investigador)
+
+                        2.  **Cambiar estado autorización participación proyecto externo - Unidad gestión** - [IU-CSP-0451-009 - Cambiar estado autorización participación proyecto externo - Unidad gestión](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-interfaz-de-usuario/iu-csp-0450-participacion-proyectos-externos/iu-csp-0451-autorizaciones-de-participacion-proyectos-externos/iu-csp-0451-009-cambiar-estado-autorizacion-participacion-proyecto-externo-unidad-gestion)
+
+                        3.  **Añadir-modificar certificado autorización participación proyecto externo** - [IU-CSP-0451-016 - Añadir-modificar certificado autorización participación proyecto externo](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-interfaz-de-usuario/iu-csp-0450-participacion-proyectos-externos/iu-csp-0451-autorizaciones-de-participacion-proyectos-externos/iu-csp-0451-016-anadir-modificar-certificado-autorizacion-participacion-proyecto-externo)
+
+                        4.  **Recepción de notificaciones CVN de proyecto externo** -  [IU-CSP-0452-001 - Búsqueda y listado de notificaciones CVN de proyecto externo](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-interfaz-de-usuario/iu-csp-0450-participacion-proyectos-externos/iu-csp-0452-notificaciones-cvn-de-proyectos-externos/iu-csp-0452-001-busqueda-y-listado-de-notificaciones-cvn-de-proyecto-externo)
+
+            2.  **Ética: ** Todos los comunicados salvo 1 - Detallado en [ETI - Comunicados](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-comunicados)
+
+            3.  **Invenciones:**
+                1.  **Alta y modificación de solicitudes de protección -** [IU-PII-0020-0010-001 Crear solicitud de protección - Datos generales](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/pii-modulo-de-propiedad-industrial-e-intelectual/pii-interfaz-de-usuario/iu-pii-0020-gestion-de-solicitudes-de-proteccion-de-invencion/iu-pii-0020-0010-crear-solicitud-de-proteccion/iu-pii-0020-0010-001-crear-solicitud-de-proteccion-datos-generales) y [IU-PII-0020-0030-001 Ver detalle-modificar solicitud de protección - Datos generales](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/pii-modulo-de-propiedad-industrial-e-intelectual/pii-interfaz-de-usuario/iu-pii-0020-gestion-de-solicitudes-de-proteccion-de-invencion/iu-pii-0020-0030-ver-detalle-modificar-solicitud-de-proteccion/iu-pii-0020-0030-001-ver-detalle-modificar-solicitud-de-proteccion-datos-generales)
+                    1.  **Prioridad y presentación de fases nacionales regionales** - [CU-PII-0010-002 - Solicitudes de protección - Avisos](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/pii-modulo-de-propiedad-industrial-e-intelectual/pii-casos-de-uso/cu-pii-0010-gestion-de-invenciones/sin-implementar-cu-pii-0010-002-solicitudes-de-proteccion-avisos)
+                    2.  **Procedimientos de solicitudes** - [IU-PII-0020-0030-002 Ver detalle-modificar solicitud de protección - Procedimientos](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/pii-modulo-de-propiedad-industrial-e-intelectual/pii-interfaz-de-usuario/iu-pii-0020-gestion-de-solicitudes-de-proteccion-de-invencion/iu-pii-0020-0030-ver-detalle-modificar-solicitud-de-proteccion/iu-pii-0020-0030-002-ver-detalle-modificar-solicitud-de-proteccion-procedimientos)**  
+                        **
+
+<img src="plugins/servlet/confluence/placeholder/unknown-macro" class="wysiwyg-unknown-macro" />
+
+### Configuración de comunicados
+
+Algunos de los tipos de comunicado que se pueden enviar desde cada módulo tendrán opción de ser configurados en el momento de la implantación del SGI en la Universidad y de ser modificados a posteriori accediendo a dicha configuración en el lugar donde se encuentre almacenada. En ningún caso se desarrollarán pantallas ni opciones de configuración dentro del SGI.
+
+Para los tipos de comunicado que tengan opción a ser configurables se podrán definir:
+
+- Los datos necesarios para el cálculo de la fecha de envío, si es que no es inmediata.
+- El asunto y contenido por defecto para cada tipo de comunicado.
+- La lista de emails genéricos de destino por defecto para cada tipo de comunicado y por unidad de gestión.
+
+Al final de este documento en el apartado [Detalle de configuración de comunicados](#COMComunicadosNavegación-detalleconfigcom) se describe a más bajo nivel, pero manteniendo un contexto de modelo lógico de la información, cómo se realizaría por parte de un equipo técnico esta configuración para los diferentes tipos de comunicado.
+
+<img src="plugins/servlet/confluence/placeholder/unknown-macro" class="wysiwyg-unknown-macro" />
+
+### Generación de comunicados
+
+Se presentan a continuación casos de ejemplo de envío de comunicados que vienen a representar las dos opciones de comunicados soportadas en el SGI: semiautomáticos y automáticos. El funcionamiento sería extensible al resto de gestiones y entidades.
+
+#### Comunicados generados por acción del usuario - Creación/Modificación de un Hito que genera un comunicado o aviso
+
+Se presentará el caso de ejemplo de hitos de una Convocatoria a través de una serie de pasos a realizar para poder configurar un aviso a enviar a consecuencia de un hito concreto.
+
+##### Paso 1: Ir a opción de menú "Hitos" de una convocatoria
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852453/598835259.png" class="confluence-embedded-image confluence-content-image-border" draggable="false" data-image-src="attachments/597852453/598835259.png" data-unresolved-comment-count="0" data-linked-resource-id="598835259" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="PROP00 - CONV-HITOS-LISTA.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852453" data-linked-resource-container-version="101" tabindex="0" width="900" /></span>
+
+##### Paso 2:  Pulsar botón "Añadir hito"
+
+Se mostrará la ventana emergente que permite añadir un nuevo hito a la convocatoria.
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852453/598835258.png" class="confluence-embedded-image confluence-content-image-border" draggable="false" data-image-src="attachments/597852453/598835258.png" data-unresolved-comment-count="0" data-linked-resource-id="598835258" data-linked-resource-version="2" data-linked-resource-type="attachment" data-linked-resource-default-alias="PROP00-CONV-HITO.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852453" data-linked-resource-container-version="101" tabindex="0" width="900" /></span>
+
+Para indicar si el hito ha de generar un aviso, se deberá marcar el check "Generar aviso", que estará desactivado si la fecha es anterior a la de hoy. Si se deja desmarcado, no se generará ningún aviso para ese hito de esa convocatoria.
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852453/597866876.png" class="confluence-embedded-image confluence-content-image-border" draggable="false" data-image-src="attachments/597852453/597866876.png" data-unresolved-comment-count="0" data-linked-resource-id="597866876" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="PROP00 - Comunicado_ejemplo_hito_convocatoria_check_onoff.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852453" data-linked-resource-container-version="101" tabindex="0" width="1200" /></span>
+
+##### Paso 3: Indicar que se quiere generar un aviso para el hito
+
+Al marcar el check "Generar aviso", se mostrarán los datos por defecto del aviso o comunicado a enviar. En el momento de crear el hito se cargarán los destinatarios por defecto, en caso de haberse configurado.
+
+<span style="color:var(--ds-text,#172b4d);"><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852453/597866931.png" class="confluence-embedded-image confluence-content-image-border" draggable="false" data-image-src="attachments/597852453/597866931.png" data-unresolved-comment-count="0" data-linked-resource-id="597866931" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image2021-11-26_10-1-57.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852453" data-linked-resource-container-version="101" tabindex="0" width="700" /></span>  
+</span>
+
+##### Paso 4: Modificar los datos por defecto del aviso
+
+Los datos por defecto mostrados serán los descritos a continuación. Para cada uno se indica si se puede modificar y qué parte de los datos es modificable:
+
+- **Fecha y hora de envío del email de aviso**: por defecto, la fecha del hito. La hora del envío será por defecto las 00:00, pero podrá ser modificada por el usuario.
+- **Asunto del email de aviso**: se mostrará un asunto por defecto "**Convocatoria XXX -  Tipo hito YYY**" adaptado a la convocatoria y tipo de hito que corresponda, pero podrá ser modificado por el usuario.
+- **Contenido del email de aviso**: se mostrará un texto por defecto adaptado a la convocatoria y tipo de hito que corresponda, que sirve para identificar el aviso sin equívoco, al que se concatenerán a continuación las Observaciones:
+  - "Se comunica que con fecha XXX se alcanzará el tipo hito YYY de la convocatoria XXX. "
+  - "En el hito se han indicado las siguientes observaciones: \<Contenido del campo observaciones\>."
+- **Destinatarios del email de aviso.** El comportamiento de esta sección será el siguiente:**  
+  **
+  - Si se quiere enviar el aviso a los IPs de las solicitudes relacionadas con la convocatoria se debe marcar el check "Añadir IPs solicitud". Este check se podrá marcar, pero los destinatarios no aparecerán cargados en la lista de Destinatarios, ya que se resolverán por parte del SGI quiénes son en la fecha concreta de envío del aviso.
+  - Si se quiere enviar el aviso a los IPs de los proyectos relacionados con las solicitudes de la convocatoria se debe marcar el check "Añadir IPs proyecto". Este check se podrá marcar, pero los destinatarios no aparecerán cargados en la lista de Destinatarios, ya que se resolverán por parte del SGI quiénes son en la fecha concreta de envío del aviso.
+  - El conjunto de destinatarios configurados por defecto, se cargará para cada hito en el momento de darlo de alta en función de la unidad de gestión que corresponda.
+  - E<span style="color:var(--ds-text,#172b4d);">l usuario podrá también añadir o eliminar destinatarios de esta sección. Los destinatarios a añadir podrán ser tanto personas, disponibles a través del propio componente "Destinatarios", que dispondrá de función de autocompletar, como del buscador de personas de la Universidad, u otros emails de destino añadidos manualmente.</span>
+
+<span style="color:var(--ds-text,#172b4d);">También se podrán eliminar destinatarios, incluso de los predefinidos, para que no les llegue el aviso. Únicamente en el caso de los IPs de las solicitudes y los IPs de los proyectos relacionados se añadirán o eliminarán todos como destinatarios, marcando o desmarcando respectivamente los checks correspondientes aunque, como se comenta anteriormente, al no ser visibles en la lista de Destinatarios, para el usuario esto será transparente.  
+</span>
+
+<span style="color:var(--ds-text,#172b4d);">Se muestra a continuación el Zoom sobre la sección de Destinatarios en un posible estado inicial para el ejemplo de un hito de una convocatoria:</span>
+
+<span style="color:var(--ds-text,#172b4d);"><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852453/597866865.png" class="confluence-embedded-image confluence-content-image-border" draggable="false" data-image-src="attachments/597852453/597866865.png" data-unresolved-comment-count="0" data-linked-resource-id="597866865" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="Comunicados - Zoom - Destinatarios en gestiones_Autocomplete_Zoom_EstadoInicial.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852453" data-linked-resource-container-version="101" tabindex="0" width="900" height="309" /></span></span>
+
+##### Paso 5: añadir destinatarios adicionales a los predefinidos
+
+Si se quiere que el aviso llegue, además de a los destinatarios por defecto, a un nuevo destinatario, se debe añadir este nuevo destinatario al conjunto de destinatarios.
+
+En este caso, se plantean dos opciones:
+
+1.  Que el destinatario adicional se encuentre en los sistemas de gestión de personas de la Universidad. En este caso, hay 2 formas posibles de añadir destinatarios al comunicado:  
+    1.  Utilizando la función de autocompletar
+    2.  Utilizando el texto introducido + el botón buscar para abrir el buscador de personas con el resultado de la búsqueda por dicho texto ya cargada
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852453/597866866.png" class="confluence-embedded-image confluence-content-image-border" draggable="false" data-image-src="attachments/597852453/597866866.png" data-unresolved-comment-count="0" data-linked-resource-id="597866866" data-linked-resource-version="2" data-linked-resource-type="attachment" data-linked-resource-default-alias="Comunicados - Zoom - Destinatarios en gestiones_Autocomplete_1-3.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852453" data-linked-resource-container-version="101" tabindex="0" width="900" /></span>
+
+2\. Que el destinatario adicional NO se encuentre en los sistemas de gestión de personas de la Universidad, bien porque no exista ninguna relación registrada con él en dichos sistemas bien porque el destinatario a añadir sea una lista de distribución o un email genérico y no propio de o asociado a una persona en concreto.
+
+En el ejemplo a continuación vemos que ya existe un destinatario por defecto predefinido y vamos a ver cómo se añadiría uno nuevo.
+
+En primer lugar, vamos a añadir un destinatario que está ya en los sistemas de la Universidad. Esta sería la secuencia de acciones a realizar:
+
+1.  Tecleamos parte de un dato (nombre, apellidos o email) por el que filtrar la persona a añadir en el componente "Destinatarios" en la zona donde aparece el texto "Añadir destinatario ...", por ejemplo, "jim":
+2.  Si se encuentra la persona entre las sugerencias del autocompletar, para completar la operación de añadir el destinatario, se debe seleccionar una persona y a continuación pulsar "click" con el ratón o bien pulsar la tecla "enter", con lo que la persona se añadirá a la lista de destinatarios.
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852453/597866869.png" class="confluence-embedded-image confluence-content-image-border" draggable="false" data-image-src="attachments/597852453/597866869.png" data-unresolved-comment-count="0" data-linked-resource-id="597866869" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="Comunicados - Zoom - Destinatarios en gestiones_Autocomplete_2-3 .png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852453" data-linked-resource-container-version="101" tabindex="0" width="600" /></span>
+
+      3. Si en los 10 primeros resultados propuestos por el autocompletar no aparece la persona buscada, se deberán introducir más caracteres para refinar la búsqueda o bien se podrá pulsar sobre el botón "Buscar", que abrirá el buscador de personas lanzando por defecto la búsqueda con el texto que el usuario haya introducido en el cajetín de "Destinatario".
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852453/597866872.png" class="confluence-embedded-image confluence-content-image-border" draggable="false" data-image-src="attachments/597852453/597866872.png" data-unresolved-comment-count="0" data-linked-resource-id="597866872" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="Comunicados - Zoom - Destinatarios en gestiones_Autocomplete_NoResultados.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852453" data-linked-resource-container-version="101" tabindex="0" width="862" height="250" /></span>
+
+La pantalla completa quedaría de la siguiente forma:
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852453/597866859.png" class="confluence-embedded-image confluence-content-image-border" draggable="false" data-image-src="attachments/597852453/597866859.png" data-unresolved-comment-count="0" data-linked-resource-id="597866859" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="Comunicado - Convocatoria - Hito - BuscadorPersonas.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852453" data-linked-resource-container-version="101" tabindex="0" width="900" /></span>
+
+4\. Se deberá pulsar a continuación el botón "Seleccionar" de la fila de la persona una vez la localicemos en el la lista de resultados o bien restringir más la búsqueda introduciendo más caracteres en el filtro hasta que se encuentre. Se debe seleccionar una persona que disponga de un email principal, ya que en otro caso, el comunicado no se podría generar.
+
+5.  Una vez se haya seleccionado el destinatario del aviso por la vía que haya sido posible, se debe pulsar el botón "Añadir destinatario" para que aparezca en la lista de Destinatarios. Vemos a continuación cómo quedaría el resultado del proceso.
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852453/597866846.png" class="confluence-embedded-image confluence-content-image-border" draggable="false" data-image-src="attachments/597852453/597866846.png" data-unresolved-comment-count="0" data-linked-resource-id="597866846" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="Comunicados - Zoom - Destinatarios en gestiones_Autocomplete_3-3_Resultado.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852453" data-linked-resource-container-version="101" tabindex="0" width="800" height="177" /></span>
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852453/597866855.png" class="confluence-embedded-image confluence-content-image-border" draggable="false" data-image-src="attachments/597852453/597866855.png" data-unresolved-comment-count="0" data-linked-resource-id="597866855" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="Comunicados - Zoom - Destinatarios en gestiones_Autocomplete_SeleccionadoBuscar.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852453" data-linked-resource-container-version="101" tabindex="0" width="805" height="177" /></span>
+
+En el caso de que un destinatario de este tipo no disponga de email principal, no se podrá seleccionar ni desde el buscador ni desde el componente autocompletar, presentándose al usuario como "Nombre Apellidos ()" en este último caso, reflejando así el que no tiene un email al que poder enviar los comunicados.
+
+<img src="plugins/servlet/confluence/placeholder/unknown-macro" class="wysiwyg-unknown-macro" />
+
+A continuación, vamos a añadir un destinatario que o bien no está relacionado en forma alguna con la Universidad, y por tanto no se encuentra registrado en sus sistemas, o bien que es una lista de correo o similar. En este caso, esta sería la secuencia de acciones a realizar:
+
+1.  Tecleamos el email completo en el componente "Destinatarios" en la zona donde aparece el texto "Añadir destinatario ...", por ejemplo, "<a href="mailto:jimancas.lopez@educastur.org" class="external-link" rel="nofollow">jimancas.lopez@educastur.org</a>":
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852453/597866847.png" class="confluence-embedded-image confluence-content-image-border" draggable="false" data-image-src="attachments/597852453/597866847.png" data-unresolved-comment-count="0" data-linked-resource-id="597866847" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="Comunicados - Zoom - Destinatarios en gestiones_DestinatarioManual.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852453" data-linked-resource-container-version="101" tabindex="0" width="923" height="219" /></span>
+
+       2. Para completar la operación y que quede añadido a la lista de destinatarios, se debe pulsar la tecla "enter":
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852453/597866848.png" class="confluence-embedded-image confluence-content-image-border" draggable="false" data-image-src="attachments/597852453/597866848.png" data-unresolved-comment-count="0" data-linked-resource-id="597866848" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="Comunicados - Zoom - Destinatarios en gestiones_DestinatarioManual_Final.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852453" data-linked-resource-container-version="101" tabindex="0" width="848" height="177" /></span>
+
+
+
+Para este tipo de destinatarios, si se introduce un email cuyo formato es inválido, éste no se añadirá a la lista.
+
+Para ambos tipos de destinatario, si se trata de añadir un email que ya existía previamente en la lista, no se volverá a añadir.
+
+
+
+<img src="plugins/servlet/confluence/placeholder/unknown-macro" class="wysiwyg-unknown-macro" />
+
+##### Paso 6: eliminar destinatarios
+
+Se pueden borrar destinatarios pulsando sobre el icono en forma de aspa (X) correspondiente a cada destinatario. De esta forma, dichos destinatarios no recibirán el aviso.
+
+##### Paso 7: guardar los cambios realizados
+
+Una vez completada la información del hito de la convocatoria e incluida la información del aviso a generar, se deben guardar los cambios. Para ello:
+
+1.  Pulsar el botón "Añadir" de la ventana emergente "Hito". El nuevo hito aparecerá en la lista de hitos de la convocatoria.
+2.  Pulsar el botón "Guardar" de la pantalla de gestión de Convocatoria. Los cambios realizados en el hito y en el aviso se almacenarán y el aviso se generará con la información indicada en la fecha y hora indicada y con destino los destinatarios indicados.
+
+##### Paso 8: modificar el aviso/comunicado a generar por el hito
+
+Una vez guardado el hito, si se quisiera modificar la información del aviso a generar sería posible realizarlo <u>siempre y cuando la fecha y hora indicada para enviar el aviso no se hayan sobrepasado aún</u>. Para ello, se debe ir a la opción de menú "Hitos" de la Convocatoria y pulsar sobre el icono editar del hito que se quiera modificar, con lo que se mostrará la misma ventana emergente que en el caso del alta y se podrán modificar los datos por parte del usuario. Si la fecha actual es superior a la programada para el aviso, no se podrá cambiar la información del aviso. En otro caso, será modificable con las mismas condiciones que en el caso de la creación descrito en puntos anteriores.
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852453/598835233.png" class="confluence-embedded-image confluence-content-image-border" draggable="false" data-image-src="attachments/597852453/598835233.png" data-unresolved-comment-count="0" data-linked-resource-id="598835233" data-linked-resource-version="2" data-linked-resource-type="attachment" data-linked-resource-default-alias="PROP00 - CONV-HITOS-LISTA_DespAñadir.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852453" data-linked-resource-container-version="101" tabindex="0" width="900" /></span>
+
+Caso de datos de aviso modificables:
+
+##### <span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852453/597866851.png" class="confluence-embedded-image confluence-content-image-border" draggable="false" data-image-src="attachments/597852453/597866851.png" data-unresolved-comment-count="0" data-linked-resource-id="597866851" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="Comunicado - Convocatoria - Hito - Estado final_Popup.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852453" data-linked-resource-container-version="101" tabindex="0" width="600" /></span>
+
+Caso de datos de aviso NO modificables:
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852453/597866850.png" class="confluence-embedded-image confluence-content-image-border" draggable="false" data-image-src="attachments/597852453/597866850.png" data-unresolved-comment-count="0" data-linked-resource-id="597866850" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="Comunicado - Convocatoria - Hito - Estado final_Popup_SoloLectura.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852453" data-linked-resource-container-version="101" tabindex="0" width="600" /></span>
+
+Pulsando sobre el botón "Guardar" de la ventana emergente de modificación del Hito y a continuación el botón "Guardar" de la Convocatoria, los cambios se almacenarían.
+
+##### Paso 9: recepción del email de aviso por parte de los destinatarios
+
+Cuando se alcance la fecha y hora programada para el envío del aviso, los destinatarios del mismo recibirán un email similar al siguiente:
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852453/598835231.png" class="confluence-embedded-image confluence-content-image-border" draggable="false" data-image-src="attachments/597852453/598835231.png" data-unresolved-comment-count="0" data-linked-resource-id="598835231" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="HITO - Email_Aviso_Hito_Fase_Convocatoria.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852453" data-linked-resource-container-version="101" tabindex="0" width="900" /></span>
+
+<img src="plugins/servlet/confluence/placeholder/unknown-macro" class="wysiwyg-unknown-macro" />
+
+#### Comunicados generados por acción del usuario - Creación/Modificación de una Fase que genera un comunicado o aviso
+
+Se presentará el caso de ejemplo de fases de una Convocatoria a través de una serie de pasos a realizar para poder configurar un aviso a enviar relacionado con una fase concreta. Los pasos son muy similares a los descritos para el caso de los hitos, por lo que en este caso se describirá en detalle en las pantallas únicamente aquello que difiere entre Hitos y Fases en cuanto a la generación del comunicado.
+
+##### Paso 1: Ir a opción de menú "Fases" de una convocatoria
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852453/598835214.png" class="confluence-embedded-image confluence-content-image-border" draggable="false" data-image-src="attachments/597852453/598835214.png" data-unresolved-comment-count="0" data-linked-resource-id="598835214" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="FASES-CONV-LISTADO.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852453" data-linked-resource-container-version="101" tabindex="0" width="900" /></span>
+
+##### Paso 2:  Pulsar botón "Añadir fase"
+
+Se mostrará la ventana emergente que permite añadir una nueva fase a la convocatoria. La diferencia con los Hitos es que en el caso de las fases hay un rango de fechas (inicio-fin) en lugar de una única fecha.
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852453/598835208.png" class="confluence-embedded-image confluence-content-image-border" draggable="false" data-image-src="attachments/597852453/598835208.png" data-unresolved-comment-count="0" data-linked-resource-id="598835208" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="FASES-CONV-LISTADO_AñadirPopup_SinAviso.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852453" data-linked-resource-container-version="101" tabindex="0" width="900" /></span>
+
+Para indicar si la fase ha de generar un aviso, se deberá marcar el check "Generar aviso", que estará desactivado si la fecha de fin de la fase es anterior a la de hoy. Si se deja desmarcado, no se generará ningún aviso para esa fase de esa convocatoria.
+
+##### Paso 3: Indicar que se quiere generar un aviso para la fase
+
+Al marcar el check "Generar aviso", se mostrarán los datos por defecto del aviso o comunicado a enviar. En el caso de los comunicados de fases existirá la posibilidad de generar dos avisos.
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852453/597868696.png" class="confluence-embedded-image confluence-content-image-border" draggable="false" data-image-src="attachments/597852453/597868696.png" data-unresolved-comment-count="0" data-linked-resource-id="597868696" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="Comunicado - Convocatoria - Fase.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852453" data-linked-resource-container-version="101" tabindex="0" width="600" /></span>
+
+Para poder generar un segundo aviso, se debe marcar el check "Generar segundo aviso", con lo que aparecerá un campo de fecha, "Fecha y hora de segundo envío", para informar cuándo se quiere hacer ese segundo aviso por email. Esta fecha tendrá que ser mayor que la del primer aviso.
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852453/597884924.png" class="confluence-embedded-image confluence-content-image-border" draggable="false" data-image-src="attachments/597852453/597884924.png" data-unresolved-comment-count="0" data-linked-resource-id="597884924" data-linked-resource-version="2" data-linked-resource-type="attachment" data-linked-resource-default-alias="FASES - Comunicados_ejemplo_convocatoria_fase_SegundoAviso.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852453" data-linked-resource-container-version="101" tabindex="0" width="600" /></span>
+
+##### Paso 4: Modificar los datos por defecto del aviso
+
+Los datos por defecto mostrados serán los siguientes. Para cada uno se indica si se puede modificar y qué parte:
+
+- **Primer aviso.** Es el que se activa marcando el check "Generar aviso" y además hace que se muestre el check "Generar segundo aviso", que estará desmarcado por defecto.
+  - **Fecha y hora de envío del email <u>del primer aviso</u>**: por defecto, la fecha de inicio de la fase. La hora del envío será por defecto las 00:00, pero podrá ser modificada por el usuario.
+  - **Asunto del email de aviso**: se mostrará un asunto por defecto "**Convocatoria XXX -  Tipo fase YYY**" adaptado a la convocatoria y tipo de fase que corresponda, pero podrá ser modificado por el usuario.
+  - **Contenido del email de aviso**: se mostrará un texto por defecto compuesto por una parte "No modificable" adaptado a la convocatoria y tipo de fase que corresponda, que sirve para identificar el aviso sin equívoco, y una parte que el usuario podrá modificar:
+    - "Se comunica que con fecha XXX da comienzo la fase YYY de la convocatoria XXX. " - Parte del contenido NO modificable, se enviará siempre.
+    - "En esta fase se han incluido las siguientes observaciones: \<Contenido del campo observaciones\>." - Parte modificable o incluso se puede borrar si el usuario lo considera.
+- **Segundo aviso.** Es el que se activa marcando el check "Generar segundo aviso" y además hace que se muestre el campo "Fecha y hora de segundo envío" para que el usuario introduzca manualmente cuándo quiere que se envíe ese segundo aviso.  
+  - En el caso del email del segundo aviso, se antepondrá automáticamente el texto "Segundo Aviso - " al asunto, siendo por ejemplo, en este caso, "Segundo Aviso - Convocatoria XXX - Tipo fase YYY".
+- **Destinatarios del email de aviso.** <span style="color:var(--ds-text,#172b4d);">Aplicarán los mismos destinatarios al primer aviso que al segundo.</span> Habrá 3 tipos de destinatarios:**  
+  **
+  - Si se quiere enviar el aviso a los IPs de las solicitudes relacionadas con la convocatoria se debe marcar el check "Añadir IPs solicitud".
+  - Si se quiere enviar el aviso a los IPs de los proyectos relacionados con las solicitudes de la convocatoria se debe marcar el check "Añadir IPs proyecto".
+  - Se cargará además el conjunto de destinatarios configurados por defecto. E<span style="color:var(--ds-text,#172b4d);">l usuario podrá añadir o eliminar destinatarios de esta sección. Los destinatarios a añadir podrán ser personas disponibles a través del buscador de personas de la Universidad (opción marcada por defecto) u otros emails de destino añadidos manualmente.</span>
+
+<span style="color:var(--ds-text,#172b4d);">También se podrá añadir destinatarios adicionales o eliminar algún destinatario, incluso de los predefinidos, para que no les llegue el aviso. Únicamente en el caso de los IPs de las solicitudes y los IPs de los proyectos relacionados se añadirán o se eliminarán todos como destinatarios marcando o desmarcando respectivamente los checks correspondientes.  
+</span>
+
+##### Paso 5: añadir destinatarios adicionales
+
+Este paso se realiza exactamente igual que en el caso de los hitos, por lo que se puede revisar su operativa en el ejemplo anterior.
+
+##### Paso 6: eliminar destinatarios
+
+Este paso se realiza exactamente igual que en el caso de los hitos, por lo que se puede revisar su operativa en el ejemplo anterior.
+
+##### Paso 7: guardar los cambios realizados
+
+Este paso se realiza exactamente igual que en el caso de los hitos, por lo que se puede revisar su operativa en el ejemplo anterior.
+
+##### Paso 8: modificar el aviso/comunicado a generar por la fase
+
+Una vez guardada la fase, si se quisiera modificar la información del aviso a generar sería posible realizarlo siempre y cuando dicha fecha y hora indicada para el envío del aviso no se hayan sobrepasado aún. Para ello, se debe ir a la opción de menú "Fases" de la Convocatoria y pulsar sobre el icono editar del hito que se quiera modificar, con lo que se mostrará la misma ventana emergente que en el caso del alta y se podrán modificar los datos por parte del usuario. Si la fecha actual es superior a la programada para el aviso, no se podrá cambiar la información del aviso. En otro caso, será modificable con las mismas condiciones que en el caso de la creación descrito en puntos anteriores.
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852453/597884923.png" class="confluence-embedded-image confluence-content-image-border" draggable="false" data-image-src="attachments/597852453/597884923.png" data-unresolved-comment-count="0" data-linked-resource-id="597884923" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="FASES-CONV-LISTADO-DESPAÑADIR.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852453" data-linked-resource-container-version="101" tabindex="0" width="800" /></span>
+
+Pulsando sobre el botón "Guardar" de la ventana emergente de modificación de la fase y a continuación el botón "Guardar" de la pantalla de convocatoria, los cambios se almacenarían.
+
+##### Paso 9: recepción del email de aviso por parte de los destinatarios
+
+Cuando se alcance la fecha y hora programada para el envío del primer aviso, los destinatarios del mismo recibirán un email similar al siguiente:
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852453/598835201.png" class="confluence-embedded-image confluence-content-image-border" draggable="false" data-image-src="attachments/597852453/598835201.png" data-unresolved-comment-count="0" data-linked-resource-id="598835201" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="FASES - Email_Aviso_Fase_Convocatoria.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852453" data-linked-resource-container-version="101" tabindex="0" width="800" /></span>
+
+Y en el caso del segundo aviso, se recibiría un email similar al siguiente:
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852453/598835202.png" class="confluence-embedded-image confluence-content-image-border" draggable="false" data-image-src="attachments/597852453/598835202.png" data-unresolved-comment-count="0" data-linked-resource-id="598835202" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="FASES - Email_Aviso_Fase_Convocatoria_SegundoAviso.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852453" data-linked-resource-container-version="101" tabindex="0" width="800" /></span>
+
+<img src="plugins/servlet/confluence/placeholder/unknown-macro" class="wysiwyg-unknown-macro" />
+
+#### Generación de comunicados automáticos
+
+En el caso de los comunicados automáticos, no existe una gestión de la información de los mismos visible por pantalla, sino que se utilizarán destinatarios, fechas y textos preconfigurados para su envío, que serán los que se definan funcionalmente por la Universidad o bien los preconfigurados, según el caso.
+
+Se presentan a continuación varios casos de ejemplo de email de aviso. Al igual que en el caso de los comunicados generados por acción del usuario, para el resto de comunicados automáticos no presentados aquí el proceso sería similares a los del ejemplo.
+
+##### Ejemplo 1: Email de aviso de cercanía de período de pago a socio
+
+Ejemplo de comunicado automático que se envía 1 vez, unos días antes del final del período de pago y si no se ha registrado en el SGI indicador de haberlo realizado.
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852453/597884925.png" class="confluence-embedded-image confluence-content-image-border" draggable="false" data-image-src="attachments/597852453/597884925.png" data-unresolved-comment-count="0" data-linked-resource-id="597884925" data-linked-resource-version="2" data-linked-resource-type="attachment" data-linked-resource-default-alias="PERPAG - Email_Aviso_Periodo_Pago_Socio_Proyecto.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852453" data-linked-resource-container-version="101" tabindex="0" width="800" /></span>
+
+##### Ejemplo 2: Avisos de período de presentación de justificación de socio de un proyecto
+
+Ejemplo de comunicado automático que se envía 2 veces, una unos días antes del inicio y otra unos días antes del final del período de presentación de la justificación de un socio.
+
+###### Email de aviso de inicio de período de presentación de la justificación de un socio de un proyecto
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852453/597866831.png" class="confluence-embedded-image confluence-content-image-border" draggable="false" data-image-src="attachments/597852453/597866831.png" data-unresolved-comment-count="0" data-linked-resource-id="597866831" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="PERJUS2 - Email_Aviso_Periodo_Justificacion_Socio_Proyecto_Inicio.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852453" data-linked-resource-container-version="101" tabindex="0" width="800" /></span>
+
+###### Email de aviso de cercanía del fin de período de presentación de la justificación de un socio de un proyecto
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852453/597866830.png" class="confluence-embedded-image confluence-content-image-border" draggable="false" data-image-src="attachments/597852453/597866830.png" data-unresolved-comment-count="0" data-linked-resource-id="597866830" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="PERJUS3 - Email_Aviso_Periodo_Justificacion_Socio_Proyecto_CercanoFin.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852453" data-linked-resource-container-version="101" tabindex="0" width="800" /></span>
+
+##### Ejemplo 3: Avisos de período de presentación de documentación del seguimiento científico de un proyecto
+
+Ejemplo de comunicado automático que se envía 2 veces, una unos días antes del inicio y otra unos días antes del final del período de presentación de la documentación de seguimiento científico de un proyecto.
+
+###### Email de aviso de cercanía de inicio de período de presentación de la documentación de seguimiento científoco de un proyecto
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852453/597866833.png" class="confluence-embedded-image confluence-content-image-border" draggable="false" data-image-src="attachments/597852453/597866833.png" data-unresolved-comment-count="0" data-linked-resource-id="597866833" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="PERSEGCIEN - Email_Aviso_Periodo_Seguimiento_Cientifico_Inicio.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852453" data-linked-resource-container-version="101" tabindex="0" width="800" /></span>
+
+###### Email de aviso de cercanía de fin de período de presentación de la documentación de seguimiento científoco de un proyecto
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852453/597866832.png" class="confluence-embedded-image confluence-content-image-border" draggable="false" data-image-src="attachments/597852453/597866832.png" data-unresolved-comment-count="0" data-linked-resource-id="597866832" data-linked-resource-version="2" data-linked-resource-type="attachment" data-linked-resource-default-alias="PERSEGCIEN - Email_Aviso_Periodo_Seguimiento_Cientifico_Fin.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852453" data-linked-resource-container-version="101" tabindex="0" width="800" /></span>
+
+### <span id="COMComunicadosNavegación-detalleconfigcom" class="confluence-anchor-link"></span>Detalle de configuración de comunicados
+
+Se dispondrá de un catálogo con los diferentes **tipos de comunicado** que el SGI podrá enviar en forma de avisos por email y que estarán **preconfigurados en el SGI** con una vista a alto nivel de los datos similar a la siguiente:
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable" style="width: 77.407%;">
+<colgroup>
+<col style="width: 34%" />
+<col style="width: 27%" />
+<col style="width: 12%" />
+<col style="width: 13%" />
+<col style="width: 12%" />
+</colgroup>
+<tbody>
+<tr class="header">
+<th class="confluenceTh">Tipo de comunicado</th>
+<th class="confluenceTh">Tipo destinatarios</th>
+<th class="confluenceTh">Periodicidad</th>
+<th class="confluenceTh">Tipo preaviso</th>
+<th class="confluenceTh">Días preaviso</th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd">Comunicado para los hitos de las convocatorias</td>
+<td class="confluenceTd">PRECONFIGURADOS, MANUALES Y AUTOMÁTICOS</td>
+<td class="confluenceTd">PROGRAMADA</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">Comunicado para los hitos de las solicitudes</td>
+<td class="confluenceTd">PRECONFIGURADOS, MANUALES Y AUTOMÁTICOS</td>
+<td class="confluenceTd">PROGRAMADA</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">Comunicado para los hitos de los proyectos</td>
+<td class="confluenceTd">PRECONFIGURADOS, MANUALES Y AUTOMÁTICOS</td>
+<td class="confluenceTd">PROGRAMADA</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">Comunicado para las fases de las convocatorias</td>
+<td class="confluenceTd">PRECONFIGURADOS, MANUALES Y AUTOMÁTICOS</td>
+<td class="confluenceTd">PROGRAMADA</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">Comunicado para las fases de los proyectos</td>
+<td class="confluenceTd">PRECONFIGURADOS, MANUALES Y AUTOMÁTICOS</td>
+<td class="confluenceTd">PROGRAMADA</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">Comunicado de alta de solicitud de evaluación de ética desde CSP</td>
+<td class="confluenceTd">AUTOMÁTICOS</td>
+<td class="confluenceTd">INMEDIATA</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">Comunicado de cambio de estado de solicitud de estado A a estado B (1 comunicado por cambio de estado con condiciones/destinatarios/asunto/contenido distinto).</td>
+<td class="confluenceTd"><span style="color:var(--ds-text-accent-teal-bolder,#164555);">AUTOMÁTICOS</span></td>
+<td class="confluenceTd">INMEDIATA</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">Comunicado de fin de período de pago a socios de proyectos</td>
+<td class="confluenceTd">PRECONFIGURADOS</td>
+<td class="confluenceTd">PROGRAMADA</td>
+<td class="confluenceTd">DIAS HÁBILES</td>
+<td class="confluenceTd">7</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">Comunicado de inicio de período de presentación de justificación de socios de proyectos</td>
+<td class="confluenceTd">PRECONFIGURADOS</td>
+<td class="confluenceTd">PROGRAMADA</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">Comunicado de fin de período de presentación de justificación de socios de proyectos</td>
+<td class="confluenceTd">PRECONFIGURADOS</td>
+<td class="confluenceTd">PROGRAMADA</td>
+<td class="confluenceTd">DIAS HÁBILES</td>
+<td class="confluenceTd">3</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">Comunicado de inicio de períodos de presentación de justificación del calendario de justificación.</td>
+<td class="confluenceTd">PRECONFIGURADOS</td>
+<td class="confluenceTd">MENSUAL</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">Comunicado de inicio de períodos de presentación de justificación del seguimiento científico - UG.</td>
+<td class="confluenceTd">PRECONFIGURADOS</td>
+<td class="confluenceTd">MENSUAL</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">Comunicado de inicio de período de presentación de justificación del seguimiento científico - IPs.</td>
+<td class="confluenceTd">PRECONFIGURADOS Y AUTOMÁTICOS</td>
+<td class="confluenceTd">PROGRAMADA</td>
+<td class="confluenceTd">DIAS HÁBILES</td>
+<td class="confluenceTd">3</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">Comunicado de fin de período de presentación de justificación del seguimiento científico - IPs.</td>
+<td class="confluenceTd">PRECONFIGURADOS Y AUTOMÁTICOS</td>
+<td class="confluenceTd">PROGRAMADA</td>
+<td class="confluenceTd">DIAS NATURALES</td>
+<td class="confluenceTd">3</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">Comunicado de notificación al IP una factura del calendario de facturación</td>
+<td class="confluenceTd">AUTOMÁTICOS</td>
+<td class="confluenceTd">INMEDIATA</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">Comunicado de notificación a la UG de que el IP de un proyecto a validado una factura del calendario de facturación</td>
+<td class="confluenceTd">PRECONFIGURADOS Y AUTOMÁTICOS</td>
+<td class="confluenceTd">INMEDIATA</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">Comunicado de presentación de una solicitud de autorización de participación en un proyecto externo</td>
+<td class="confluenceTd">PRECONFIGURADOS</td>
+<td class="confluenceTd">INMEDIATA</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">Comunicado de cambio de estado de una solicitud de autorización de participación en un proyecto externo</td>
+<td class="confluenceTd">AUTOMÁTICOS</td>
+<td class="confluenceTd">INMEDIATA</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">Comunicado de publicación de documento del certificado de autorización de participación en proyecto externo</td>
+<td class="confluenceTd">AUTOMÁTICOS</td>
+<td class="confluenceTd">INMEDIATA</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">Comunicado de la creación en el SGI de una notificación de CVN <span style="color:var(--ds-text,#172b4d);">de  proyecto externo</span></td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">PRECONFIGURADOS</span></td>
+<td class="confluenceTd">INMEDIATA</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+Valores posibles de "Tipo destinatarios":
+
+- PRECONFIGURADOS: tiene únicamente los destinatarios que se preconfiguren.
+- AUTOMÁTICOS: los destinatarios son los identificados funcionalmente y no se pueden configurar.
+- MANUALES: tiene opción de añadir o eliminar destinatarios por pantalla.
+
+Valores posibles de "Periodicidad":
+
+- INMEDIATA: se envía en el momento que ocurre el evento que lo genera, normalmente, la acción del usuario. Puede no ser totalmente inmediata para contemplar un tiempo de retardo de los procesos de envío del email.
+- PROGRAMADA:  se envía en la fecha programada restando los días de preaviso configurados
+- MENSUAL: enviar una vez al mes recopilando todo lo que incluya el ciclo de 1 mes (contando como 1 mes meses completos: enero, febrero, ... NO calculando e días) hasta el siguiente aviso.
+
+Valores posibles de "Tipo preaviso":
+
+- DIAS_HABILES: días hábiles contemplaría que los fines de semana no se contabilizan, no cubriría excluir festivos ni locales ni nacionales.
+- DIAS_NATURALES: días naturales no contemplaría ninguna excepción a la hora de contabilizar.
+- MENSUAL: enviar una vez al mes recopilando todo lo que incluya el ciclo de 1 mes (contando como 1 mes meses completos: enero, febrero, ... NO calculando e días) hasta el siguiente aviso.
+
+Se describen a continuación las características de cada tipo de comunicado de los listado anteriormente y cómo se deberían configurar en caso de que disponga de esta posibilidad.
+
+Partiendo de ese catálogo, para cada tipo de comunicado y unidad de gestión se posible configurar unos emails de destino por defecto que se incluirán como destinatarios de los emails de aviso que se generen. A modo de ejemplo, una vista a alto nivel de los datos similar a la siguiente:
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable" style="width: 43.2166%;">
+<colgroup>
+<col style="width: 43%" />
+<col style="width: 23%" />
+<col style="width: 32%" />
+</colgroup>
+<tbody>
+<tr class="header">
+<th class="confluenceTh">Tipo de comunicado</th>
+<th class="confluenceTh">Unidad gestión</th>
+<th class="confluenceTh">Destinatarios</th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd"><span style="color:var(--ds-text-accent-teal-bolder,#164555);">Comunicado para los hitos de las convocatorias</span></td>
+<td class="confluenceTd">UGI</td>
+<td class="confluenceTd"><a href="mailto:ugicon@um.es" class="external-link" rel="nofollow">ugicon@um.es</a></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><span style="color:var(--ds-text-accent-teal-bolder,#164555);">Comunicado para los hitos de las convocatorias</span></td>
+<td class="confluenceTd">OTRI</td>
+<td class="confluenceTd"><a href="mailto:otricon@um.es" class="external-link" rel="nofollow">otricon@um.es</a>, <a href="mailto:otriges@um.es" class="external-link" rel="nofollow">otriges@um.es</a></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><span style="color:var(--ds-text-accent-teal-bolder,#164555);">Comunicado para los hitos de las convocatorias</span></td>
+<td class="confluenceTd">OPE</td>
+<td class="confluenceTd"><a href="mailto:opecon@um.es" class="external-link" rel="nofollow">opecon@um.es</a></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">...</td>
+<td class="confluenceTd">...</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+y en esa misma línea se irían configurando los demás tipos de comunicado.
+
+### Detalle de condiciones de generación y textos por tipo de aviso
+
+#### Módulo CSP
+
+Ver [CSP - Comunicados](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-comunicados)
+
+#### Módulo Ética
+
+Ver [ETI - Comunicados](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-comunicados)
+
+#### Módulo Invenciones
+
+Ver <a href="/confluence/pages/createpage.action?spaceKey=HERCULES&amp;title=PII+-+Comunicados&amp;linkCreation=true&amp;fromPageId=597852453" class="createlink">PII - Comunicados</a>
+
+</div>
+
+<div class="pageSection group">
+
+<div class="pageSectionHeader">
+
+## Attachments:
+
+</div>
+
+<div class="greybox" align="left">
+
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [PROP00 - Acceso Proyecto.png](/attachments/597852453/598835269.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [PROP00 - Acceso Proyecto - Añadir hito.png](/attachments/597852453/598835270.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [PROP00 - Comunicado_ejemplo_hito_convocatoria\_ fechas antes y después.png](/attachments/597852453/597876833.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [PROP00 - Acceso Proyecto - Añadir hito.png](/attachments/597852453/597876832.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [PROP00 - Acceso Proyecto.png](/attachments/597852453/597876834.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [PROP00 - CONV-HITOS-LISTA.png](/attachments/597852453/598835259.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [PROP00-CONV-HITO.png](/attachments/597852453/597866875.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [PROP02 - Comunicado_ejemplo_hito_convocatoria (1).png](/attachments/597852453/598835257.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [PROP02 - Comunicado_ejemplo_hito_convocatoria (1)\_DestiUni01.png](/attachments/597852453/598835256.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [PROP02 - Comunicado_ejemplo_hito_convocatoria_personaVarias.png](/attachments/597852453/598835255.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [PROP02 - Comunicado_ejemplo_hito_convocatoria_PerNoEmail.png](/attachments/597852453/598835246.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [PROP02 - Comunicado_ejemplo_hito_convocatoria_PerMasEmail02.png](/attachments/597852453/598835245.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [PROP02 - Comunicado_ejemplo_hito_convocatoria_PerMasEmails03.png](/attachments/597852453/598835225.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [PROP02 - Comunicado_ejemplo_hito_convocatoria_SeleccionadaPersona.png](/attachments/597852453/598835226.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [PROP02 - Comunicado_ejemplo_hito_convocatoria_PerMasEmails03.png](/attachments/597852453/598835244.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [PROP02 - Comunicado_ejemplo_hito_convocatoria_ResultadoAniadirPersUni.png](/attachments/597852453/598835224.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [PROP02 - Comunicado_ejemplo_hito_convocatoria_AñaDesExterno01.png](/attachments/597852453/598835223.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [PROP02 - Comunicado_ejemplo_hito_convocatoria_externoVariosResultados.png](/attachments/597852453/598835222.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [PROP02 - Comunicado_ejemplo_hito_convocatoria \_AñadirDesExterno02.png](/attachments/597852453/598835221.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [PROP02 - Comunicado_ejemplo_hito_convocatoria_DestExtSeleccionado.png](/attachments/597852453/598835219.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [PROP02 - Comunicado_ejemplo_hito_convocatoria_DesExtSeleccionadoInfo.png](/attachments/597852453/598835217.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [PROP02 - Comunicado_ejemplo_hito_convocatoria_DestExtAñadido.png](/attachments/597852453/598835237.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [PROP00 - CONV-HITOS-LISTA_ModificarAviso.png](/attachments/597852453/598835234.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [PROP00 - CONV-HITOS-LISTA_DespAñadir.png](/attachments/597852453/598835232.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [PROP00 - CONV-HITOS-LISTA_DespAñadir.png](/attachments/597852453/598835233.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [HITO - Email_Aviso_Hito_Fase_Convocatoria.png](/attachments/597852453/598835231.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [FASES-CONV-LISTADO.png](/attachments/597852453/598835214.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [FASES-CONV-LISTADO_AñadirPopup.png](/attachments/597852453/598835209.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [FASES-CONV-LISTADO_AñadirPopup.png](/attachments/597852453/598835212.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [FASES-CONV-LISTADO_AñadirPopup_SinAviso.png](/attachments/597852453/598835208.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [FASES - Comunicados_ejemplo_convocatoria_fase_PopupAñadir.png](/attachments/597852453/598835204.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [FASES - Comunicados_ejemplo_convocatoria_fase_SegundoAviso.png](/attachments/597852453/597868697.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [FASES-CONV-LISTADO-DESPAÑADIR.png](/attachments/597852453/597884923.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [FASES - Email_Aviso_Fase_Convocatoria.png](/attachments/597852453/598835201.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [FASES - Email_Aviso_Fase_Convocatoria_SegundoAviso.png](/attachments/597852453/598835202.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [PERJUS1 - Email_Aviso_Periodo_Justificacion_Socio_Proyecto_Inicio.png](/attachments/597852453/597884927.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [PERJUS3 - Email_Aviso_Periodo_Justificacion_Socio_Proyecto_Fin.png](/attachments/597852453/597884926.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [PERPAG - Email_Aviso_Periodo_Pago_Socio_Proyecto.png](/attachments/597852453/597866836.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [menu_configuracin_comunicados.png](/attachments/597852453/597871904.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [menu_configuracin_comunicados_2.png](/attachments/597852453/597871905.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [configuracin_comunicados_convocatorias_hitos.png](/attachments/597852453/597871839.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [Configuración comunicados - Convocatorias - Hitos 0.png](/attachments/597852453/597871907.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [configuracin_comunicados_convocatorias_fases.png](/attachments/597852453/597871840.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [configuracin_comunicados_solicitudes_hitos.png](/attachments/597852453/597871834.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [configuracin_comunicados_solicitudes_alta_solicitud_tica.png](/attachments/597852453/597871833.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [configuracin_comunicados_solicitudes_cambio_de_estado.png](/attachments/597852453/597871832.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [configuracin_comunicados_proyectos_calendario_de_facturacin_validar_ip.png](/attachments/597852453/597871835.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [configuracin_comunicados_proyectos_calendario_de_facturacin_notificar_ip.png](/attachments/597852453/597871837.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [configuracin_comunicados_seguimiento_cientfico.png](/attachments/597852453/597871825.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [configuracin_comunicados_proyectos_perodos_de_justificacin_socios.png](/attachments/597852453/597871829.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [configuracin_comunicados_proyectos_calendario_de_justificacin.png](/attachments/597852453/597871827.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [configuracin_comunicados_proyectos_fases.png](/attachments/597852453/597871830.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [configuracin_comunicados_configuracindestuniopc2_3_1_1.png](/attachments/597852453/597871889.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [configuracin_comunicados_proyectos_hitos.png](/attachments/597852453/597871831.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [comunicados_zoom_otrodestinatario_2.png](/attachments/597852453/597871812.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [comunicados_zoom_destinatariouniversidad_4.png](/attachments/597852453/597871811.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [comunicados_zoom_destinatariouniversidad_3.png](/attachments/597852453/597871847.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [comunicados_zoom_otrodestinatario_1.png](/attachments/597852453/597871813.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [comunicados_zoom_destinatariouniversidad_1.png](/attachments/597852453/597871846.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [comunicados_zoom_destinatarios.png](/attachments/597852453/597871888.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [comunicados_zoom_destinatariouniversidad_2.png](/attachments/597852453/597871848.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [Configuración comunicados - Convocatorias - Zoom - Info - ConDestinatarios.png](/attachments/597852453/597871855.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [Configuración comunicados - Proyectos - Zoom - Info - SinDestinatarios.png](/attachments/597852453/597871852.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [comunicados_zoom_destinatariouniversidad_1.png](/attachments/597852453/597871815.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [comunicados_zoom_destinatariouniversidad_3.png](/attachments/597852453/597871806.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [comunicados_zoom_destinatariouniversidad_2.png](/attachments/597852453/597871807.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [comunicados_configuracin_zoom_destinatariouniversidad_1.png](/attachments/597852453/597871844.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [comunicados_configuracin_zoom_destinatariouniversidad_3.png](/attachments/597852453/597871851.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [comunicados_configuracin_zoom_destinatariouniversidad_2.png](/attachments/597852453/597871850.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [comunicados_configuracin_zoom_destinatariouniversidad_4.png](/attachments/597852453/597871849.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [Comunicados - Configuración - Zoom - DestinatarioUniversidad - 4 - Error.png](/attachments/597852453/597871845.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [Comunicados - Configuración - Zoom - DestinatarioUniversidad - 4.png](/attachments/597852453/597871841.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [comunicados_configuracin_zoom_otrodestinatario_2.png](/attachments/597852453/597871842.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [comunicados_configuracin_zoom_otrodestinatario_1.png](/attachments/597852453/597871843.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [configuracin_comunicados_convocatorias_hitos_0_opcin_1.png](/attachments/597852453/597871838.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [configuracin_comunicados_convocatorias_hitos.png](/attachments/597852453/597871906.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [configuracin_comunicados_convocatorias_fases.png](/attachments/597852453/597871908.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [configuracin_comunicados_solicitudes_cambio_de_estado.png](/attachments/597852453/597871898.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [configuracin_comunicados_solicitudes_hitos.png](/attachments/597852453/597871896.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [configuracin_comunicados_solicitudes_alta_solicitud_tica.png](/attachments/597852453/597871897.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [configuracin_comunicados_proyectos_calendario_de_facturacin_notificar_ip.png](/attachments/597852453/597871819.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [configuracin_comunicados_proyectos_calendario_de_facturacin_validar_ip.png](/attachments/597852453/597871824.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [configuracin_comunicados_seguimiento_cientfico.png](/attachments/597852453/597871823.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [configuracin_comunicados_proyectos_calendario_de_justificacin.png](/attachments/597852453/597871822.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [configuracin_comunicados_proyectos_perodos_de_justificacin_socios.png](/attachments/597852453/597871903.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [configuracin_comunicados_proyectos_perodos_de_pago_socios.png](/attachments/597852453/597871828.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [configuracin_comunicados_proyectos_hitos.png](/attachments/597852453/597871891.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [configuracin_comunicados_proyectos_fases.png](/attachments/597852453/597871890.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [Configuración comunicados - Proyectos - Períodos de Justificación Socios.png](/attachments/597852453/597871821.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [configuracin_comunicados_proyectos_calendario_de_justificacin.png](/attachments/597852453/597871902.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [configuracin_comunicados_seguimiento_cientfico.png](/attachments/597852453/597871901.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [configuracin_comunicados_proyectos_calendario_de_facturacin_validar_ip.png](/attachments/597852453/597871899.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [configuracin_comunicados_proyectos_calendario_de_facturacin_notificar_ip.png](/attachments/597852453/597871900.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [Configuración comunicados - Convocatorias - Hitos.png](/attachments/597852453/597871818.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [comunicado_convocatoria_hito.png](/attachments/597852453/597871816.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [Configuración comunicados - Proyectos - Zoom - Info - ConDestinatarios.png](/attachments/597852453/597871814.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [comunicados_zoom_destinatariouniversidad_1.png](/attachments/597852453/597871887.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [comunicados_zoom_destinatariouniversidad_3.png](/attachments/597852453/597871810.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [comunicados_zoom_destinatariouniversidad_2.png](/attachments/597852453/597871886.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [Comunicados - Zoom - DestinatarioUniversidad - 2.png](/attachments/597852453/597871808.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [Comunicados - Zoom - DestinatarioUniversidad - 4 - Error.png](/attachments/597852453/597871809.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [comunicados_zoom_destinatariouniversidad_3.png](/attachments/597852453/597871895.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [comunicados_zoom_destinatariouniversidad_4.png](/attachments/597852453/597871894.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [comunicados_zoom_otrodestinatario_2.png](/attachments/597852453/597871892.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [comunicados_zoom_otrodestinatario_1.png](/attachments/597852453/597871893.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [Comunicado - Convocatoria - Hito - Estado final - Popup.png](/attachments/597852453/597871804.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [Comunicado - Convocatoria - Hito - Estado final - Popup.png](/attachments/597852453/597871803.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [Comunicado - General - Fase.png](/attachments/597852453/597871805.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [image2021-11-26_10-1-57.png](/attachments/597852453/597866931.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [PROP00-CONV-HITO.png](/attachments/597852453/598835258.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [PROP00 - Comunicado_ejemplo_hito_convocatoria_check_onoff.png](/attachments/597852453/597866876.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [Comunicados - Zoom - Destinatarios en gestiones_Autocomplete_Zoom_EstadoInicial.png](/attachments/597852453/597866865.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [Comunicados - Zoom - Destinatarios en gestiones_Autocomplete_1-3.png](/attachments/597852453/597866870.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [Comunicados - Zoom - Destinatarios en gestiones_Autocomplete_2-3 .png](/attachments/597852453/597866869.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [Comunicados - Zoom - Destinatarios en gestiones_Autocomplete_1-3.png](/attachments/597852453/597866866.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [Comunicados - Zoom - Destinatarios en gestiones_Autocomplete_NoResultados.png](/attachments/597852453/597866872.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [Comunicado - Convocatoria - Hito - BuscadorPersonas.png](/attachments/597852453/597866859.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [Comunicados - Zoom - Destinatarios en gestiones_Autocomplete_SeleccionadoBuscar.png](/attachments/597852453/597866855.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [Comunicados - Zoom - Destinatarios en gestiones_Autocomplete_3-3_Resultado.png](/attachments/597852453/597866846.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [Comunicados - Zoom - Destinatarios en gestiones_DestinatarioManual.png](/attachments/597852453/597866847.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [Comunicados - Zoom - Destinatarios en gestiones_DestinatarioManual_Final.png](/attachments/597852453/597866848.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [Comunicado - Convocatoria - Hito - Estado final_Popup_SoloLectura.png](/attachments/597852453/597866850.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [Comunicado - Convocatoria - Hito - Estado final_Popup.png](/attachments/597852453/597866851.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [PERPAG - Email_Aviso_Periodo_Pago_Socio_Proyecto.png](/attachments/597852453/597884925.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [PERJUS3 - Email_Aviso_Periodo_Justificacion_Socio_Proyecto_CercanoFin.png](/attachments/597852453/597866830.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [PERJUS2 - Email_Aviso_Periodo_Justificacion_Socio_Proyecto_Inicio.png](/attachments/597852453/597866831.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [PERSEGCIEN - Email_Aviso_Periodo_Seguimiento_Cientifico_Inicio.png](/attachments/597852453/597866833.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [PERSEGCIEN - Email_Aviso_Periodo_Seguimiento_Cientifico_Fin.png](/attachments/597852453/597866834.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [PERSEGCIEN - Email_Aviso_Periodo_Seguimiento_Cientifico_Fin.png](/attachments/597852453/597866832.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [Comunicado - Convocatoria - Fase.png](/attachments/597852453/597868696.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [FASES - Comunicados_ejemplo_convocatoria_fase_SegundoAviso.png](/attachments/597852453/597884924.png) (image/png)  
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div id="footer" role="contentinfo">
+
+<div class="section footer-body">
+
+Document generated by Confluence on oct 27, 2025 08:39
+
+<div id="footer-logo">
+
+[Atlassian](https://www.atlassian.com/)
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 
 

@@ -796,7 +796,736 @@
 
   <h1>Csp gin navegacion</h1>
 
+<div id="page">
 
+<div id="main" class="aui-page-panel">
+
+<div id="main-header">
+
+<div id="breadcrumb-section">
+
+1.  [Hércules](index.html)
+2.  [Hércules](/)
+3.  [SGI. Sistema de gestión de investigación](//sgi-sistema-de-gestion-de-investigacion)
+4.  [Requisitos y análisis funcional](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional)
+5.  [Análisis Funcional SGI - Hércules](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules)
+6.  [CSP - Módulo de convocatorias, ayudas, solicitudes, proyectos y contratos y grupos de investigación](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion)
+7.  [CSP - Grupos de investigación](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-grupos-de-investigacion)
+
+</div>
+
+# <span id="title-text"> Hércules : CSP - GIN - Navegación </span>
+
+</div>
+
+<div id="content" class="view">
+
+<div class="page-metadata">
+
+Created by <span class="author"> Usuario desconocido (lorena.alvarez)</span>, last updated on feb 08, 2022
+
+</div>
+
+<div id="main-content" class="wiki-content group">
+
+<div class="toc-macro rbtoc1761550780878">
+
+- [Perfil Investigador](#CSPGINNavegación-PerfilInvestigador)
+  - [Solicitud de constitución de grupo](#CSPGINNavegación-Solicituddeconstitucióndegrupo)
+  - [](#CSPGINNavegación-)
+  - [Solicitud de modificación de grupo](#CSPGINNavegación-Solicituddemodificacióndegrupo)
+  - [](#CSPGINNavegación-.1)
+  - [Consulta datos grupo](#CSPGINNavegación-Consultadatosgrupo)
+    - [Consulta Grupo - Datos generales](#CSPGINNavegación-ConsultaGrupo-Datosgenerales)
+    - [Consulta Grupo - Equipo investigación](#CSPGINNavegación-ConsultaGrupo-Equipoinvestigación)
+    - [Consulta Grupo - Responsable económico](#CSPGINNavegación-ConsultaGrupo-Responsableeconómico)
+    - [Consulta Grupo - Líneas investigación](#CSPGINNavegación-ConsultaGrupo-Líneasinvestigación)
+      - [Consulta Línea investigación - Datos generales](#CSPGINNavegación-ConsultaLíneainvestigación-Datosgenerales)
+      - [Consulta Línea investigación - Investigadores](#CSPGINNavegación-ConsultaLíneainvestigación-Investigadores)
+      - [Consulta Línea investigación - Clasificaciones](#CSPGINNavegación-ConsultaLíneainvestigación-Clasificaciones)
+      - [Consulta Línea investigación - Equipos Instrumentales](#CSPGINNavegación-ConsultaLíneainvestigación-EquiposInstrumentales)
+    - [Consulta Grupo - Equipos instrumentales](#CSPGINNavegación-ConsultaGrupo-Equiposinstrumentales)
+    - [Consulta Grupo - Enlaces](#CSPGINNavegación-ConsultaGrupo-Enlaces)
+    - [Consulta Grupo - Personas autorizadas](#CSPGINNavegación-ConsultaGrupo-Personasautorizadas)
+- [Perfil Gestor](#CSPGINNavegación-PerfilGestor)
+  - [Grupos Investigación](#CSPGINNavegación-GruposInvestigación)
+    - [Búsqueda simple](#CSPGINNavegación-Búsquedasimple)
+    - [Búsqueda ampliada](#CSPGINNavegación-Búsquedaampliada)
+    - [Añadir Nuevo grupo investigación](#CSPGINNavegación-AñadirNuevogrupoinvestigación)
+    - [Edición grupo investigación](#CSPGINNavegación-Edicióngrupoinvestigación)
+      - [Datos Generales](#CSPGINNavegación-DatosGenerales)
+      - [Equipo Investigación](#CSPGINNavegación-EquipoInvestigación)
+        - [Añadir miembro al equipo](#CSPGINNavegación-Añadirmiembroalequipo)
+      - [Responsable económico](#CSPGINNavegación-Responsableeconómico)
+        - [Añadir Responsable económico](#CSPGINNavegación-AñadirResponsableeconómico)
+      - [Líneas Investigación](#CSPGINNavegación-LíneasInvestigación)
+        - [Añadir línea investigación al grupo](#CSPGINNavegación-Añadirlíneainvestigaciónalgrupo)
+          - [Datos generales](#CSPGINNavegación-Datosgenerales)
+          - [Miembros adscritos](#CSPGINNavegación-Miembrosadscritos)
+          - [Añadir miembro adscrito a la línea de investigación](#CSPGINNavegación-Añadirmiembroadscritoalalíneadeinvestigación)
+          - [Clasificaciones](#CSPGINNavegación-Clasificaciones)
+          - [Equipos Instrumentales](#CSPGINNavegación-EquiposInstrumentales)
+          - [Añadir equipo instrumental a la línea de investigación](#CSPGINNavegación-Añadirequipoinstrumentalalalíneadeinvestigación)
+      - [Equipos Instrumentales](#CSPGINNavegación-EquiposInstrumentales.1)
+        - [Añadir equipo instrumental al Grupo](#CSPGINNavegación-AñadirequipoinstrumentalalGrupo)
+      - [Enlaces](#CSPGINNavegación-Enlaces)
+        - [Añadir enlace](#CSPGINNavegación-Añadirenlace)
+      - [Personas autorizadas](#CSPGINNavegación-Personasautorizadas)
+        - [Añadir persona autorizada](#CSPGINNavegación-Añadirpersonaautorizada)
+  - [Ejecución Económica](#CSPGINNavegación-EjecuciónEconómica)
+    - [Ejecución presupuestaria – Estado actual](#CSPGINNavegación-Ejecuciónpresupuestaria–Estadoactual)
+    - [Ejecución presupuestaria – Gastos](#CSPGINNavegación-Ejecuciónpresupuestaria–Gastos)
+    - [Ejecución presupuestaria – Ingresos](#CSPGINNavegación-Ejecuciónpresupuestaria–Ingresos)
+    - [Detalle operaciones – Gastos](#CSPGINNavegación-Detalleoperaciones–Gastos)
+    - [Detalle operaciones – Ingresos](#CSPGINNavegación-Detalleoperaciones–Ingresos)
+    - [Detalle operaciones – Modificaciones](#CSPGINNavegación-Detalleoperaciones–Modificaciones)
+    - [Facturas y justificantes – Facturas y gastos](#CSPGINNavegación-Facturasyjustificantes–Facturasygastos)
+    - [Facturas y justificantes – Viajes y dietas](#CSPGINNavegación-Facturasyjustificantes–Viajesydietas)
+    - [Facturas y justificantes – Personal contratado](#CSPGINNavegación-Facturasyjustificantes–Personalcontratado)
+  - [Líneas investigación](#CSPGINNavegación-Líneasinvestigación)
+
+</div>
+
+<img src="plugins/servlet/confluence/placeholder/unknown-macro" class="wysiwyg-unknown-macro" />
+
+# Perfil Investigador
+
+Un usuario con perfil investigador/a puede realizar las siguientes funcionalidades en relación con Grupos de investigación:
+
+- Solicitar la constitución de un grupo de investigación
+- Solicitar la modificación de un grupo de investigación
+- Consultar el grupo o grupos de investigación a los que pertenece
+
+## Solicitud de constitución de grupo
+
+Ir a la opción de menú "Convocatorias" para ver el listado de convocatorias que están habilitadas para su solicitud/tramitación a través del SGI.
+
+Deberá de existir una convocatoria para la constitución y modificación de grupos. (Habrá sigo creada por el gestor previamente).
+
+En la columna "Acciones" de cada convocatoria se muestra el botón de "Ver" para ver el detalle de la convocatoria y el botón de "Tramitar" para crear la solicitud (siempre y cuando la convocatoria este en plazo de presentación de solicitudes).
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852272/597868344.png" class="confluence-embedded-image confluence-content-image-border" draggable="false" data-image-src="attachments/597852272/597868344.png" data-unresolved-comment-count="0" data-linked-resource-id="597868344" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="Captura de pantalla de 2021-12-15 14-05-30.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852272" data-linked-resource-container-version="59" tabindex="0" width="700" height="220" /></span>
+
+Si se pulsa el botón de "Tramitar" se abrirá la siguiente pantalla con los "Datos generales" a introducir para crear la solicitud de la convocatoria de constitución de grupos.
+
+El único dato obligatorio es el "Título", donde se tendrá que introducir el nombre del grupo de investigación.
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852272/597868357.png" class="confluence-embedded-image confluence-content-image-border" draggable="false" data-image-src="attachments/597852272/597868357.png" data-unresolved-comment-count="0" data-linked-resource-id="597868357" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="Captura de pantalla de 2021-12-15 13-15-42.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852272" data-linked-resource-container-version="59" tabindex="0" width="700" height="265" /></span>
+
+
+
+Una vez introducido el "Título" se pulsa el botón de "GUARDAR SOLICITUD" que crea la solicitud en estado "Borrador" en el SGI. Una vez creada la solicitud te redirige a la edición de la solicitud.
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852272/597868358.png" class="confluence-embedded-image confluence-content-image-border" draggable="false" data-image-src="attachments/597852272/597868358.png" data-unresolved-comment-count="0" data-linked-resource-id="597868358" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="Captura de pantalla de 2021-12-15 13-16-04.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852272" data-linked-resource-container-version="59" tabindex="0" width="700" height="423" /></span>
+
+Desde la edición de la solicitud se deberá ir a la pestaña de "Documentos" para introducir el documento con la información del grupo.<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852272/597868348.png" class="confluence-embedded-image confluence-thumbnail" draggable="false" data-image-src="attachments/597852272/597868348.png" data-unresolved-comment-count="0" data-linked-resource-id="597868348" data-linked-resource-version="2" data-linked-resource-type="attachment" data-linked-resource-default-alias="Captura de pantalla de 2021-12-15 13-16-27.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852272" data-linked-resource-container-version="59" tabindex="0" height="1" /></span><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852272/597868348.png" class="confluence-embedded-image confluence-thumbnail" draggable="false" data-image-src="attachments/597852272/597868348.png" data-unresolved-comment-count="0" data-linked-resource-id="597868348" data-linked-resource-version="2" data-linked-resource-type="attachment" data-linked-resource-default-alias="Captura de pantalla de 2021-12-15 13-16-27.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852272" data-linked-resource-container-version="59" tabindex="0" height="1" /></span>
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852272/597868350.png" class="confluence-embedded-image confluence-content-image-border" draggable="false" data-image-src="attachments/597852272/597868350.png" data-unresolved-comment-count="0" data-linked-resource-id="597868350" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="Captura de pantalla de 2021-12-15 13-16-30.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852272" data-linked-resource-container-version="59" tabindex="0" width="700" /></span>
+
+Para introducir un documento se debe pulsar el botón "Añadir Documento" que abrirá en la parte derecha de la pantalla los datos a introducir para añadir un nuevo documento.
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852272/597868352.png" class="confluence-embedded-image confluence-content-image-border" draggable="false" data-image-src="attachments/597852272/597868352.png" data-unresolved-comment-count="0" data-linked-resource-id="597868352" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="Captura de pantalla de 2021-12-15 13-17-39.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852272" data-linked-resource-container-version="59" tabindex="0" width="700" height="407" /></span>
+
+Los datos para dar de alta un nuevo documento son:
+
+- Nombre: nombre del documento que se le quiera dar. Es un dato obligatorio.
+- Documento: se debe seleccionar el documento con el formulario de constitución de grupo de la Universidad. Es un dato obligatorio.
+- Tipo de documento: seleccionable con los tipos de documento asociados a la fase de presentación de solicitudes configurados en la convocatoria. Es un dato opcional.
+- Comentarios: Dato opcional
+
+Una vez introducidos los campos se pulsará el botón "Aceptar" para que el documento se introduzca en el árbol de documentos de la izquierda.
+
+
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852272/597868353.png" class="confluence-embedded-image confluence-content-image-border" draggable="false" data-image-src="attachments/597852272/597868353.png" data-unresolved-comment-count="0" data-linked-resource-id="597868353" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="Captura de pantalla de 2021-12-15 13-18-17.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852272" data-linked-resource-container-version="59" tabindex="0" width="700" /></span>
+
+Para almacenar el documento se deberá pulsar el botón "GUARDAR SOLICITUD"
+
+
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852272/597868354.png" class="confluence-embedded-image confluence-content-image-border" draggable="false" data-image-src="attachments/597852272/597868354.png" data-unresolved-comment-count="0" data-linked-resource-id="597868354" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="Captura de pantalla de 2021-12-15 13-18-26.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852272" data-linked-resource-container-version="59" tabindex="0" width="700" /></span>
+
+Una vez guardado el documento y sino hay cambios pendientes de guardar de la solicitud, el botón de "CAMBIAR ESTADO"  se habilita para que el usuario haga el cambio de estado de "Borrador" a "Solicitada" y así quede presentada  a los gestores.
+
+Al pulsar el botón de "CAMBIAR ESTADO" se le muestra una pantalla emergente para seleccionar el estado al que se quiere pasar la solicitud y un campo comentarios.
+
+## <span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852272/597868355.png" class="confluence-embedded-image confluence-content-image-border" draggable="false" data-image-src="attachments/597852272/597868355.png" data-unresolved-comment-count="0" data-linked-resource-id="597868355" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="Captura de pantalla de 2021-12-15 13-18-52.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852272" data-linked-resource-container-version="59" tabindex="0" width="200" /></span>
+
+Se debe de seleccionar el estado "Solicitada" y pulsar el botón "Aceptar". En ese momento se cierra la ventana emergente y te lleva la pantalla de búsqueda de solicitudes del usuario mostrando un mensaje de que la solicitud ha cambiado de estado correctamente. En el buscador de solicitudes se puede ver que la solicitud ya tiene el estado "Solicitada". En este instante el gestor recibe un comunicado para indicarle que se ha enviado un nueva solicitud de constitución de grupo. A partir de este instante la solicitud se comportará como cualquier otra solicitud de convocatorias.
+
+El usuario podrá consultar el estado de la solicitud desde su opción de menú "Solicitudes"
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852272/597868345.png" class="confluence-embedded-image confluence-content-image-border" draggable="false" data-image-src="attachments/597852272/597868345.png" data-unresolved-comment-count="0" data-linked-resource-id="597868345" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="Captura de pantalla de 2021-12-15 14-05-40.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852272" data-linked-resource-container-version="59" tabindex="0" width="700" height="228" /></span>
+
+## Solicitud de modificación de grupo
+
+Ir a la opción de menú "Convocatorias" para ver el listado de convocatorias que están habilitadas para su solicitud/tramitación a través del SGI.
+
+Deberá de existir una convocatoria para la constitución y modificación de grupos. (Habrá sigo creada por el gestor previamente).
+
+En la columna "Acciones" de cada convocatoria se muestra el botón de "Ver" para ver el detalle de la convocatoria y el botón de "Tramitar" para crear la solicitud (siempre y cuando la convocatoria este en plazo de presentación de solicitudes).
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852272/597868344.png" class="confluence-embedded-image confluence-content-image-border" draggable="false" data-image-src="attachments/597852272/597868344.png" data-unresolved-comment-count="0" data-linked-resource-id="597868344" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="Captura de pantalla de 2021-12-15 14-05-30.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852272" data-linked-resource-container-version="59" tabindex="0" width="700" height="220" /></span>
+
+Si se pulsa el botón de "Tramitar" se abrirá la siguiente pantalla con los "Datos generales" a introducir para crear la solicitud de la convocatoria de modificación de grupos.
+
+El único dato obligatorio es el "Título", donde se tendrá que introducir un nombre que represente la modificación que se quiere realizar en el grupo.
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852272/597868339.png" class="confluence-embedded-image confluence-content-image-border" draggable="false" data-image-src="attachments/597852272/597868339.png" data-unresolved-comment-count="0" data-linked-resource-id="597868339" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="Captura de pantalla de 2021-12-15 14-10-00.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852272" data-linked-resource-container-version="59" tabindex="0" width="700" /></span>
+
+Una ves introducido el "Título" se pulsa el botón de "GUARDAR SOLICITUD" que crea la solicitud en estado "Borrador" en el SGI. Una vez creada la solicitud te redirige a la edición de la solicitud.
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852272/597868340.png" class="confluence-embedded-image confluence-content-image-border" draggable="false" data-image-src="attachments/597852272/597868340.png" data-unresolved-comment-count="0" data-linked-resource-id="597868340" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="Captura de pantalla de 2021-12-15 14-10-15.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852272" data-linked-resource-container-version="59" tabindex="0" width="700" /></span>
+
+Desde la edición de la solicitud se deberá ir a la pestaña de "Documentos" para introducir el documento de modificación del grupo.
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852272/597868350.png" class="confluence-embedded-image confluence-content-image-border" draggable="false" data-image-src="attachments/597852272/597868350.png" data-unresolved-comment-count="0" data-linked-resource-id="597868350" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="Captura de pantalla de 2021-12-15 13-16-30.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852272" data-linked-resource-container-version="59" tabindex="0" width="700" /></span>
+
+Para introducir un documento se debe pulsar el botón "Añadir Documento" que abrirá en la parte derecha de la pantalla los datos a introducir para añadir un nuevo documento.
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852272/597868341.png" class="confluence-embedded-image confluence-content-image-border" draggable="false" data-image-src="attachments/597852272/597868341.png" data-unresolved-comment-count="0" data-linked-resource-id="597868341" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="Captura de pantalla de 2021-12-15 14-14-12.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852272" data-linked-resource-container-version="59" tabindex="0" width="700" /></span>
+
+Los datos para dar de alta un nuevo documento son:
+
+- Nombre: nombre del documento que se le quiera dar. Es un dato obligatorio.
+- Documento: se debe seleccionar el documento con el formulario de modificación de grupo de la Universidad. Es un dato obligatorio.
+- Tipo de documento: seleccionable con los tipos de documento asociados a la fase de presentación de solicitudes configurados en la convocatoria. Es un dato opcional.
+- Comentarios: Dato opcional
+
+Una vez introducidos los campos se pulsará el botón "Aceptar" para que el documento se introduzca en el árbol de documentos de la izquierda.
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852272/597868342.png" class="confluence-embedded-image confluence-content-image-border" draggable="false" data-image-src="attachments/597852272/597868342.png" data-unresolved-comment-count="0" data-linked-resource-id="597868342" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="Captura de pantalla de 2021-12-15 14-14-21.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852272" data-linked-resource-container-version="59" tabindex="0" width="700" /></span>
+
+Para almacenar el documento se deberá pulsar el botón "GUARDAR SOLICITUD"
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852272/597868343.png" class="confluence-embedded-image confluence-content-image-border" draggable="false" data-image-src="attachments/597852272/597868343.png" data-unresolved-comment-count="0" data-linked-resource-id="597868343" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="Captura de pantalla de 2021-12-15 14-15-24.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852272" data-linked-resource-container-version="59" tabindex="0" width="700" /></span>
+
+
+
+Una vez guardado el documento, y si no hay cambios pendientes de guardar, se habilitará el botón de "CAMBIAR ESTADO". A través de este botón se podrán realizar el cambio de estado de "Borrador" a "Solicitada". Con esto la solicitud será visible para la unidad de gestión.
+
+Al pulsar el botón de "CAMBIAR ESTADO" se le muestra una pantalla emergente para seleccionar el estado al que se quiere pasar la solicitud y un campo comentarios.
+
+## <span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852272/597868355.png" class="confluence-embedded-image confluence-content-image-border" draggable="false" data-image-src="attachments/597852272/597868355.png" data-unresolved-comment-count="0" data-linked-resource-id="597868355" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="Captura de pantalla de 2021-12-15 13-18-52.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852272" data-linked-resource-container-version="59" tabindex="0" width="200" /></span>
+
+
+
+Se debe de seleccionar el estado "Solicitada" y pulsar el botón "Aceptar". En ese momento se cierra la ventana emergente y se muestra la pantalla de búsqueda de solicitudes del usuario mostrando un mensaje informativo. En el buscador de solicitudes se puede ver que la solicitud ya tiene el estado "Solicitada". En este instante la unidad de gestión recibe un comunicado para indicarle que se ha enviado un nueva solicitud de constitución de grupo. A partir de este instante la solicitud se comportará como cualquier otra solicitud de convocatorias.
+
+El/la solicitante podrá consultar el estado de la solicitud desde su opción de menú "Solicitudes"
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852272/597868338.png" class="confluence-embedded-image confluence-content-image-border" draggable="false" data-image-src="attachments/597852272/597868338.png" data-unresolved-comment-count="0" data-linked-resource-id="597868338" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="Captura de pantalla de 2021-12-15 14-17-22.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852272" data-linked-resource-container-version="59" tabindex="0" width="700" /></span>
+
+## Consulta datos grupo
+
+Ir a la opción de menú "Grupos" para ver el listado de grupos de investigación a los que pertenece el investigador o ha pertenecido.
+
+La única acción disponible es la consulta de los datos del grupo de investigación a los que pertenece el investigador.
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852272/597876787.png" class="confluence-embedded-image" draggable="false" data-image-src="attachments/597852272/597876787.png" data-unresolved-comment-count="0" data-linked-resource-id="597876787" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="busquedagruposinv.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852272" data-linked-resource-container-version="59" tabindex="0" width="700" /></span>
+
+Al consultar un grupo de investigación (icono del ojo) se abre la pantalla de "Datos Generales" del grupo. Aparte de la pantalla de "Datos Generales" se tienen acceso a las siguientes pantallas:
+
+- Datos Generales
+
+- Equipo Investigación
+
+- Responsable económico
+
+- Líneas Investigación
+
+- Equipos Instrumentales
+
+- Enlaces
+
+- Personas autorizadas
+
+### Consulta Grupo - Datos generales
+
+Contiene la información general del grupo de investigación.
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852272/597884715.png" class="confluence-embedded-image confluence-content-image-border" draggable="false" data-image-src="attachments/597852272/597884715.png" data-unresolved-comment-count="0" data-linked-resource-id="597884715" data-linked-resource-version="3" data-linked-resource-type="attachment" data-linked-resource-default-alias="edicingrupoinv.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852272" data-linked-resource-container-version="59" tabindex="0" width="700" height="497" /></span>
+
+### Consulta Grupo - Equipo investigación
+
+Contiene a los miembros del grupo de investigación junto con su participación en el grupo.
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852272/597884711.png" class="confluence-embedded-image confluence-content-image-border" draggable="false" data-image-src="attachments/597852272/597884711.png" data-unresolved-comment-count="0" data-linked-resource-id="597884711" data-linked-resource-version="3" data-linked-resource-type="attachment" data-linked-resource-default-alias="edicingrupoequipoinv.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852272" data-linked-resource-container-version="59" tabindex="0" width="700" /></span>
+
+### Consulta Grupo - Responsable económico
+
+Contiene la persona con el rol de responsable económico del grupo. Sólo puede existir un único responsable económico en el mismo instante. Se mostrará siempre todo el histórico de responsables económicos del grupo.
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852272/597873949.png" class="confluence-embedded-image confluence-content-image-border" draggable="false" data-image-src="attachments/597852272/597873949.png" data-unresolved-comment-count="0" data-linked-resource-id="597873949" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="edicingruporesponsableeconomicoinv.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852272" data-linked-resource-container-version="59" tabindex="0" width="700" /></span>
+
+### Consulta Grupo - Líneas investigación
+
+Contiene las líneas definidas para el grupo de investigación.
+
+Para definir una línea de investigación a parte de los datos generales del nombre, fecha de inicio y fin de la línea contiene información:
+
+- sobre los miembros del grupos que están adscritos a la líneas
+- cada línea puede tener sus propias clasificaciones de códigos UNESCO, códigos CNAE
+- cada línea se le puede asociar uno o varios equipos instrumentales definidos en el grupo
+
+Para ver el detalle de la información de cada línea se puede pulsar la acción de "Ver detalle" (icono del ojo)
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852272/597884710.png" class="confluence-embedded-image confluence-content-image-border" draggable="false" data-image-src="attachments/597852272/597884710.png" data-unresolved-comment-count="0" data-linked-resource-id="597884710" data-linked-resource-version="2" data-linked-resource-type="attachment" data-linked-resource-default-alias="edicingrupolineasinv.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852272" data-linked-resource-container-version="59" tabindex="0" width="700" /></span>
+
+#### Consulta Línea investigación - Datos generales
+
+Información general de la línea de investigación
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852272/597884707.png" class="confluence-embedded-image confluence-content-image-border" draggable="false" data-image-src="attachments/597852272/597884707.png" data-unresolved-comment-count="0" data-linked-resource-id="597884707" data-linked-resource-version="2" data-linked-resource-type="attachment" data-linked-resource-default-alias="edicionlineadatosgeneralesinv.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852272" data-linked-resource-container-version="59" tabindex="0" width="700" /></span>
+
+#### Consulta Línea investigación - Investigadores
+
+Miembros del grupos que están adscritos a la línea
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852272/597884706.png" class="confluence-embedded-image confluence-content-image-border" draggable="false" data-image-src="attachments/597852272/597884706.png" data-unresolved-comment-count="0" data-linked-resource-id="597884706" data-linked-resource-version="2" data-linked-resource-type="attachment" data-linked-resource-default-alias="edicionlineainvestigadoresinv.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852272" data-linked-resource-container-version="59" tabindex="0" width="700" /></span>
+
+#### Consulta Línea investigación - Clasificaciones
+
+Clasificaciones de códigos UNESCO, códigos CNAE que definen la línea.
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852272/597884714.png" class="confluence-embedded-image confluence-content-image-border" draggable="false" data-image-src="attachments/597852272/597884714.png" data-unresolved-comment-count="0" data-linked-resource-id="597884714" data-linked-resource-version="3" data-linked-resource-type="attachment" data-linked-resource-default-alias="edicionlineaclasificacionesinv.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852272" data-linked-resource-container-version="59" tabindex="0" width="700" /></span>
+
+#### Consulta Línea investigación - Equipos Instrumentales
+
+Equipos instrumentales del grupos que estarán reservados para la línea.
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852272/597884713.png" class="confluence-embedded-image confluence-content-image-border" draggable="false" data-image-src="attachments/597852272/597884713.png" data-unresolved-comment-count="0" data-linked-resource-id="597884713" data-linked-resource-version="4" data-linked-resource-type="attachment" data-linked-resource-default-alias="edicionnuevalineaequiposinv.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852272" data-linked-resource-container-version="59" tabindex="0" width="700" /></span>
+
+### Consulta Grupo - Equipos instrumentales
+
+Contiene los equipos instrumentales que va a utilizar el grupo de investigación.
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852272/597884709.png" class="confluence-embedded-image confluence-content-image-border" draggable="false" data-image-src="attachments/597852272/597884709.png" data-unresolved-comment-count="0" data-linked-resource-id="597884709" data-linked-resource-version="2" data-linked-resource-type="attachment" data-linked-resource-default-alias="edicingrupoequiposinstrumentalesinv.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852272" data-linked-resource-container-version="59" tabindex="0" width="700" /></span>
+
+### Consulta Grupo - Enlaces
+
+Contiene enlaces a páginas web de interés para el grupo de investigación.
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852272/597884708.png" class="confluence-embedded-image confluence-content-image-border" draggable="false" data-image-src="attachments/597852272/597884708.png" data-unresolved-comment-count="0" data-linked-resource-id="597884708" data-linked-resource-version="2" data-linked-resource-type="attachment" data-linked-resource-default-alias="edicingrupoenlacesinv.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852272" data-linked-resource-container-version="59" tabindex="0" width="700" /></span>
+
+### Consulta Grupo - Personas autorizadas
+
+Contiene la persona autorizada a validar o rechazar items de producción científica y la persona autorizada a realizar la solicitud de modificación de grupo. Sólo puede existir una única persona autorizada en el mismo instante. Se mostrará siempre todo el histórico de personas autorizadas del grupo.
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852272/597876771.png" class="confluence-embedded-image confluence-content-image-border" draggable="false" data-image-src="attachments/597852272/597876771.png" data-unresolved-comment-count="0" data-linked-resource-id="597876771" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="edicingrupopersonaautorizadainv.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852272" data-linked-resource-container-version="59" tabindex="0" width="700" /></span>
+
+# Perfil Gestor
+
+## Grupos Investigación
+
+### Búsqueda simple
+
+Pulsar la Opción de menú "Grupos Investigación" en el módulo de CSP - Da acceso a la pantalla de gestión de "Grupos Investigación".
+
+Desde donde se puede:
+
+- Añadir nuevo grupo de investigación
+
+- Editar un grupo de investigación
+
+- Eliminar un grupo de investigación
+
+- Reactivar un grupo de investigación (se pueden reactivar aquellos grupos que han sido eliminados previamente)
+
+- Ir a la búsqueda ampliada
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852272/597877045.png" class="confluence-embedded-image" draggable="false" data-image-src="attachments/597852272/597877045.png" data-unresolved-comment-count="0" data-linked-resource-id="597877045" data-linked-resource-version="4" data-linked-resource-type="attachment" data-linked-resource-default-alias="busquedasimplegrupos.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852272" data-linked-resource-container-version="59" tabindex="0" width="700" /></span>
+
+### Búsqueda ampliada
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852272/597877044.png" class="confluence-embedded-image" draggable="false" data-image-src="attachments/597852272/597877044.png" data-unresolved-comment-count="0" data-linked-resource-id="597877044" data-linked-resource-version="4" data-linked-resource-type="attachment" data-linked-resource-default-alias="busquedacomplejagrupos.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852272" data-linked-resource-container-version="59" tabindex="0" width="700" /></span>
+
+### Añadir Nuevo grupo investigación
+
+Pulsar la Opción de "Añadir Grupos Investigación" - Da acceso a la pantalla de "Nuevo Grupo Investigación"
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852272/597877040.png" class="confluence-embedded-image" draggable="false" data-image-src="attachments/597852272/597877040.png" data-unresolved-comment-count="0" data-linked-resource-id="597877040" data-linked-resource-version="6" data-linked-resource-type="attachment" data-linked-resource-default-alias="nuevogrupo.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852272" data-linked-resource-container-version="59" tabindex="0" width="700" /></span>
+
+Al seleccionar el "investigador/a principal" se precarga el nombre del departamento (campo sólo visible en la creación del grupo con el nombre del departamento adscrito a la persona seleccionada en el campo investigador/a princial) y el campo "Código" con el código del departamento adscrito al Investigador/a principal y un secuencial por departamento.
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852272/597877039.png" class="confluence-embedded-image" draggable="false" data-image-src="attachments/597852272/597877039.png" data-unresolved-comment-count="0" data-linked-resource-id="597877039" data-linked-resource-version="6" data-linked-resource-type="attachment" data-linked-resource-default-alias="nuevogrupo2.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852272" data-linked-resource-container-version="59" tabindex="0" width="700" /></span>
+
+Una vez informados los campos de la pantalla "Datos generales" se pulsa el botón "Guardar" para crear el nuevo grupo de investigación. Al guardar te redirige a la edición del grupo recién creado.
+
+### Edición grupo investigación
+
+Al editar un grupo de investigación se abre la pantalla de "Datos Generales" del grupo. Aparte de la pantalla de "Datos Generales" se tienen las siguientes pantallas:
+
+- Datos Generales
+
+- Equipo Investigación
+
+- Responsable económico
+
+- Líneas Investigación
+
+- Equipos Instrumentales
+
+- Enlaces
+
+- Personas autorizadas
+
+#### Datos Generales
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852272/597876865.png" class="confluence-embedded-image" draggable="false" data-image-src="attachments/597852272/597876865.png" data-unresolved-comment-count="0" data-linked-resource-id="597876865" data-linked-resource-version="6" data-linked-resource-type="attachment" data-linked-resource-default-alias="edicingrupo.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852272" data-linked-resource-container-version="59" tabindex="0" width="700" /></span>
+
+#### Equipo Investigación
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852272/597876841.png" class="confluence-embedded-image" draggable="false" data-image-src="attachments/597852272/597876841.png" data-unresolved-comment-count="0" data-linked-resource-id="597876841" data-linked-resource-version="2" data-linked-resource-type="attachment" data-linked-resource-default-alias="edicingrupoequipo.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852272" data-linked-resource-container-version="59" tabindex="0" width="700" /></span>
+
+##### Añadir miembro al equipo
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852272/597876924.png" class="confluence-embedded-image" draggable="false" data-image-src="attachments/597852272/597876924.png" data-unresolved-comment-count="0" data-linked-resource-id="597876924" data-linked-resource-version="4" data-linked-resource-type="attachment" data-linked-resource-default-alias="aadirmiembroequipo.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852272" data-linked-resource-container-version="59" tabindex="0" width="700" /></span>
+
+#### Responsable económico
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852272/597858764.png" class="confluence-embedded-image" draggable="false" data-image-src="attachments/597852272/597858764.png" data-unresolved-comment-count="0" data-linked-resource-id="597858764" data-linked-resource-version="2" data-linked-resource-type="attachment" data-linked-resource-default-alias="edicingruporesponsableeconomico.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852272" data-linked-resource-container-version="59" tabindex="0" width="700" /></span>
+
+##### Añadir Responsable económico
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852272/597858770.png" class="confluence-embedded-image" draggable="false" data-image-src="attachments/597852272/597858770.png" data-unresolved-comment-count="0" data-linked-resource-id="597858770" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="aadirresponsableeconomico.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852272" data-linked-resource-container-version="59" tabindex="0" width="700" /></span>
+
+#### Líneas Investigación
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852272/597876838.png" class="confluence-embedded-image" draggable="false" data-image-src="attachments/597852272/597876838.png" data-unresolved-comment-count="0" data-linked-resource-id="597876838" data-linked-resource-version="2" data-linked-resource-type="attachment" data-linked-resource-default-alias="edicingrupolineas.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852272" data-linked-resource-container-version="59" tabindex="0" width="700" /></span>
+
+##### Añadir línea investigación al grupo
+
+Una línea de investigación esta formada por las pantallas de: Datos Generales, Investigadores, Clasificaciones, Área Conocimiento y Equipos Instrumentales
+
+###### Datos generales
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852272/597876922.png" class="confluence-embedded-image" draggable="false" data-image-src="attachments/597852272/597876922.png" data-unresolved-comment-count="0" data-linked-resource-id="597876922" data-linked-resource-version="2" data-linked-resource-type="attachment" data-linked-resource-default-alias="nuevalineadatosgenerales.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852272" data-linked-resource-container-version="59" tabindex="0" width="700" /></span>
+
+###### Miembros adscritos
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852272/597876928.png" class="confluence-embedded-image" draggable="false" data-image-src="attachments/597852272/597876928.png" data-unresolved-comment-count="0" data-linked-resource-id="597876928" data-linked-resource-version="2" data-linked-resource-type="attachment" data-linked-resource-default-alias="nuevalineainvestigadores.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852272" data-linked-resource-container-version="59" tabindex="0" width="700" /></span>
+
+
+
+###### Añadir miembro adscrito a la línea de investigación
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852272/597880496.png" class="confluence-embedded-image" draggable="false" data-image-src="attachments/597852272/597880496.png" data-unresolved-comment-count="0" data-linked-resource-id="597880496" data-linked-resource-version="4" data-linked-resource-type="attachment" data-linked-resource-default-alias="aadirinvestigadorlinea.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852272" data-linked-resource-container-version="59" tabindex="0" width="700" /></span>
+
+###### Clasificaciones
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852272/597876926.png" class="confluence-embedded-image" draggable="false" data-image-src="attachments/597852272/597876926.png" data-unresolved-comment-count="0" data-linked-resource-id="597876926" data-linked-resource-version="2" data-linked-resource-type="attachment" data-linked-resource-default-alias="nuevalineaclasificaciones.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852272" data-linked-resource-container-version="59" tabindex="0" width="700" /></span>
+
+###### Equipos Instrumentales
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852272/597876915.png" class="confluence-embedded-image" draggable="false" data-image-src="attachments/597852272/597876915.png" data-unresolved-comment-count="0" data-linked-resource-id="597876915" data-linked-resource-version="5" data-linked-resource-type="attachment" data-linked-resource-default-alias="nuevalineaequipos.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852272" data-linked-resource-container-version="59" tabindex="0" width="700" /></span>
+
+###### Añadir equipo instrumental a la línea de investigación
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852272/597876919.png" class="confluence-embedded-image" draggable="false" data-image-src="attachments/597852272/597876919.png" data-unresolved-comment-count="0" data-linked-resource-id="597876919" data-linked-resource-version="4" data-linked-resource-type="attachment" data-linked-resource-default-alias="aadirequipoinstrumentallinea.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852272" data-linked-resource-container-version="59" tabindex="0" width="700" /></span>
+
+#### Equipos Instrumentales
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852272/597876835.png" class="confluence-embedded-image" draggable="false" data-image-src="attachments/597852272/597876835.png" data-unresolved-comment-count="0" data-linked-resource-id="597876835" data-linked-resource-version="2" data-linked-resource-type="attachment" data-linked-resource-default-alias="edicingrupoequiposinstrumentales.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852272" data-linked-resource-container-version="59" tabindex="0" width="700" /></span>
+
+##### Añadir equipo instrumental al Grupo
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852272/597876908.png" class="confluence-embedded-image" draggable="false" data-image-src="attachments/597852272/597876908.png" data-unresolved-comment-count="0" data-linked-resource-id="597876908" data-linked-resource-version="3" data-linked-resource-type="attachment" data-linked-resource-default-alias="aadirequipoinstrumental2.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852272" data-linked-resource-container-version="59" tabindex="0" width="700" /></span>
+
+
+
+#### Enlaces
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852272/597876844.png" class="confluence-embedded-image" draggable="false" data-image-src="attachments/597852272/597876844.png" data-unresolved-comment-count="0" data-linked-resource-id="597876844" data-linked-resource-version="6" data-linked-resource-type="attachment" data-linked-resource-default-alias="edicingrupoenlaces.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852272" data-linked-resource-container-version="59" tabindex="0" width="700" /></span>
+
+##### Añadir enlace
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852272/597876584.png" class="confluence-embedded-image" draggable="false" data-image-src="attachments/597852272/597876584.png" data-unresolved-comment-count="0" data-linked-resource-id="597876584" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="aadirenlace.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852272" data-linked-resource-container-version="59" tabindex="0" width="700" /></span>
+
+#### Personas autorizadas
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852272/597858783.png" class="confluence-embedded-image" draggable="false" data-image-src="attachments/597852272/597858783.png" data-unresolved-comment-count="0" data-linked-resource-id="597858783" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="edicingrupopersonasautorizadas.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852272" data-linked-resource-container-version="59" tabindex="0" width="700" /></span>
+
+##### Añadir persona autorizada
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852272/597858784.png" class="confluence-embedded-image" draggable="false" data-image-src="attachments/597852272/597858784.png" data-unresolved-comment-count="0" data-linked-resource-id="597858784" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="aadirpersonaautorizada.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852272" data-linked-resource-container-version="59" tabindex="0" width="700" /></span>
+
+## Ejecución Económica
+
+Se abre la pantalla del buscador de los proyectos económicos asociados a grupos de investigación y a proyectos de investigación. Únicamente se muestran los grupos que tienen relacionado un proyecto SGE o los proyectos del SGI que tienen relacionado un proyecto SGE. Es una funcionalidad común tanto a grupos como a proyectos. Desde esta pantalla se accede para el caso de grupos a:
+
+- Consulta Ejecución presupuestaria
+
+- Consulta Detalle de operaciones
+
+- Consulta Facturas y Justificantes
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852272/597876700.png" class="confluence-embedded-image" draggable="false" data-image-src="attachments/597852272/597876700.png" data-unresolved-comment-count="0" data-linked-resource-id="597876700" data-linked-resource-version="4" data-linked-resource-type="attachment" data-linked-resource-default-alias="70_00_Ejecucion_Economica_BusquedaListadoIDsSGE.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852272" data-linked-resource-container-version="59" tabindex="0" width="1000" /></span>
+
+### Ejecución presupuestaria – Estado actual
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852272/597876827.png" class="confluence-embedded-image" draggable="false" data-image-src="attachments/597852272/597876827.png" data-unresolved-comment-count="0" data-linked-resource-id="597876827" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="71_02_EjecucionEc_Balance_Estado_actual.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852272" data-linked-resource-container-version="59" tabindex="0" width="1000" /></span>
+
+
+
+### Ejecución presupuestaria – Gastos
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852272/597876826.png" class="confluence-embedded-image" draggable="false" data-image-src="attachments/597852272/597876826.png" data-unresolved-comment-count="0" data-linked-resource-id="597876826" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="71_03_EjecucionEc_Balance_Gastos.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852272" data-linked-resource-container-version="59" tabindex="0" width="1000" /></span>
+
+### Ejecución presupuestaria – Ingresos
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852272/597876825.png" class="confluence-embedded-image" draggable="false" data-image-src="attachments/597852272/597876825.png" data-unresolved-comment-count="0" data-linked-resource-id="597876825" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="71_04_EjecucionEc_Balance_Ingresos.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852272" data-linked-resource-container-version="59" tabindex="0" width="1000" /></span>
+
+### Detalle operaciones – Gastos
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852272/597876824.png" class="confluence-embedded-image" draggable="false" data-image-src="attachments/597852272/597876824.png" data-unresolved-comment-count="0" data-linked-resource-id="597876824" data-linked-resource-version="2" data-linked-resource-type="attachment" data-linked-resource-default-alias="71_05_EjecucionEc_Detalle_Gastos.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852272" data-linked-resource-container-version="59" tabindex="0" width="1000" /></span>
+
+
+
+### Detalle operaciones – Ingresos
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852272/597876823.png" class="confluence-embedded-image" draggable="false" data-image-src="attachments/597852272/597876823.png" data-unresolved-comment-count="0" data-linked-resource-id="597876823" data-linked-resource-version="2" data-linked-resource-type="attachment" data-linked-resource-default-alias="71_06_EjecucionEc_Detalle_Ingresos.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852272" data-linked-resource-container-version="59" tabindex="0" width="1000" /></span>
+
+
+
+### Detalle operaciones – Modificaciones
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852272/597876822.png" class="confluence-embedded-image" draggable="false" data-image-src="attachments/597852272/597876822.png" data-unresolved-comment-count="0" data-linked-resource-id="597876822" data-linked-resource-version="2" data-linked-resource-type="attachment" data-linked-resource-default-alias="71_07_EjecucionEc_Detalle_Modificaciones.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852272" data-linked-resource-container-version="59" tabindex="0" width="1000" /></span>
+
+
+
+### Facturas y justificantes – Facturas y gastos
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852272/597876821.png" class="confluence-embedded-image" draggable="false" data-image-src="attachments/597852272/597876821.png" data-unresolved-comment-count="0" data-linked-resource-id="597876821" data-linked-resource-version="3" data-linked-resource-type="attachment" data-linked-resource-default-alias="71_08_EjecucionEc_GastosJustif_Gastos.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852272" data-linked-resource-container-version="59" tabindex="0" width="1000" /></span>
+
+### Facturas y justificantes – Viajes y dietas
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852272/597876820.png" class="confluence-embedded-image" draggable="false" data-image-src="attachments/597852272/597876820.png" data-unresolved-comment-count="0" data-linked-resource-id="597876820" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="71_09_EjecucionEc_GastosJustif_Viajes.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852272" data-linked-resource-container-version="59" tabindex="0" width="1000" /></span>
+
+
+
+### Facturas y justificantes – Personal contratado
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852272/597876819.png" class="confluence-embedded-image" draggable="false" data-image-src="attachments/597852272/597876819.png" data-unresolved-comment-count="0" data-linked-resource-id="597876819" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="71_10_EjecucionEc_GastosJustif_Gastos_Nominas.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852272" data-linked-resource-container-version="59" tabindex="0" width="1000" /></span>
+
+
+
+## Líneas investigación
+
+Se abre la pantalla de la gestión de líneas de investigación (comunes a todos los grupos de investigación). Desde esta pantalla se accede:
+
+- Añadir nueva línea de investigación
+
+- Modificar línea de investigación
+
+- Eliminar línea de investigación
+
+- Reactivar línea de investigación
+
+
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852272/597876890.png" class="confluence-embedded-image" draggable="false" data-image-src="attachments/597852272/597876890.png" data-unresolved-comment-count="0" data-linked-resource-id="597876890" data-linked-resource-version="4" data-linked-resource-type="attachment" data-linked-resource-default-alias="lineasinvestigacion.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852272" data-linked-resource-container-version="59" tabindex="0" width="700" /></span>
+
+
+
+</div>
+
+<div class="pageSection group">
+
+<div class="pageSectionHeader">
+
+## Attachments:
+
+</div>
+
+<div class="greybox" align="left">
+
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [busquedasimplegrupos.png](/attachments/597852272/597858742.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [busquedacomplejagrupos.png](/attachments/597852272/597877043.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [busquedacomplejagrupos.png](/attachments/597852272/597858747.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [nuevogrupo.png](/attachments/597852272/597877042.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [nuevogrupo2.png](/attachments/597852272/597877041.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [nuevogrupo.png](/attachments/597852272/597876870.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [nuevogrupo2.png](/attachments/597852272/597876873.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [nuevogrupo.png](/attachments/597852272/597858748.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [nuevogrupo2.png](/attachments/597852272/597858745.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [edicingrupo.png](/attachments/597852272/597876856.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [edicingrupo.png](/attachments/597852272/597876849.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [edicingrupo.png](/attachments/597852272/597858746.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [edicingrupolineas.png](/attachments/597852272/597858772.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [edicingrupoequiposinstrumentales.png](/attachments/597852272/597858763.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [edicingrupoenlaces.png](/attachments/597852272/597876912.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [edicingrupoequipo.png](/attachments/597852272/597858766.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [aadirmiembroequipo.png](/attachments/597852272/597880500.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [nuevalineadatosgenerales.png](/attachments/597852272/597858769.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [nuevalineainvestigadores.png](/attachments/597852272/597858755.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [nuevalineaclasificaciones.png](/attachments/597852272/597858752.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [nuevalineaareasconocimiento.png](/attachments/597852272/597876917.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [nuevalineaequipos.png](/attachments/597852272/597858753.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [aadirequipoinstrumentallinea.png](/attachments/597852272/597858761.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [aadirequipoinstrumental.png](/attachments/597852272/597876910.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [aadirequipoinstrumental2.png](/attachments/597852272/597858758.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [edicingrupoenlaces.png](/attachments/597852272/597858759.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [ejecucineconmica.png](/attachments/597852272/597876907.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [ejecucineconmica.png](/attachments/597852272/597876905.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [ejecucionpresupuestariaactual.png](/attachments/597852272/597858782.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [ejecucionpresupuestariagastos.png](/attachments/597852272/597858787.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [ejecucionpresupuestariaingresos.png](/attachments/597852272/597858788.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [detalleoperacionesgastos.png](/attachments/597852272/597858785.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [detalleoperacionesingresos.png](/attachments/597852272/597858786.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [detalleoperacionesmodificaciones.png](/attachments/597852272/597858780.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [lineasinvestigacion.png](/attachments/597852272/597876892.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [lineasinvestigacion.png](/attachments/597852272/597876886.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [lineasinvestigacion.png](/attachments/597852272/597873955.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [aadirmiembroequipo.png](/attachments/597852272/597858768.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [aadirinvestigadorlinea.png](/attachments/597852272/597858757.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [Captura de pantalla de 2021-12-15 12-50-31.png](/attachments/597852272/597868359.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [Captura de pantalla de 2021-12-15 13-13-03.png](/attachments/597852272/597868356.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [Captura de pantalla de 2021-12-15 13-15-42.png](/attachments/597852272/597868357.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [Captura de pantalla de 2021-12-15 13-16-04.png](/attachments/597852272/597868358.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [Captura de pantalla de 2021-12-15 13-16-27.png](/attachments/597852272/597868349.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [Captura de pantalla de 2021-12-15 13-16-27.png](/attachments/597852272/597868348.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [Captura de pantalla de 2021-12-15 13-16-30.png](/attachments/597852272/597868350.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [Captura de pantalla de 2021-12-15 13-17-13.png](/attachments/597852272/597868351.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [Captura de pantalla de 2021-12-15 13-17-39.png](/attachments/597852272/597868352.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [Captura de pantalla de 2021-12-15 13-18-17.png](/attachments/597852272/597868353.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [Captura de pantalla de 2021-12-15 13-18-26.png](/attachments/597852272/597868354.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [Captura de pantalla de 2021-12-15 13-18-52.png](/attachments/597852272/597868355.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [Captura de pantalla de 2021-12-15 13-19-01.png](/attachments/597852272/597868346.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [Captura de pantalla de 2021-12-15 13-19-05.png](/attachments/597852272/597868347.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [Captura de pantalla de 2021-12-15 14-05-30.png](/attachments/597852272/597868344.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [Captura de pantalla de 2021-12-15 14-05-40.png](/attachments/597852272/597868345.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [Captura de pantalla de 2021-12-15 14-10-00.png](/attachments/597852272/597868339.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [Captura de pantalla de 2021-12-15 14-10-15.png](/attachments/597852272/597868340.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [Captura de pantalla de 2021-12-15 14-14-12.png](/attachments/597852272/597868341.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [Captura de pantalla de 2021-12-15 14-14-21.png](/attachments/597852272/597868342.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [Captura de pantalla de 2021-12-15 14-15-24.png](/attachments/597852272/597868343.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [Captura de pantalla de 2021-12-15 14-17-22.png](/attachments/597852272/597868338.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [busquedagruposinvestigador.png](/attachments/597852272/597868337.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [edicingrupoinv.png](/attachments/597852272/597876786.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [edicingrupoequipoinv.png](/attachments/597852272/597876785.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [edicingrupolineasinv.png](/attachments/597852272/597876782.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [edicingrupoequiposinstrumentalesinv.png](/attachments/597852272/597876775.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [edicingrupoenlacesinv.png](/attachments/597852272/597876773.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [edicionlineadatosgeneralesinv.png](/attachments/597852272/597876781.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [edicionlineainvestigadoresinv.png](/attachments/597852272/597876780.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [edicionlineaclasificacionesinv.png](/attachments/597852272/597876778.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [edicionnuevalineaequiposinv.png](/attachments/597852272/597884712.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [edicionnuevalineaequiposinv.png](/attachments/597852272/597876777.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [busquedasimplegrupos.png](/attachments/597852272/597858842.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [busquedacomplejagrupos.png](/attachments/597852272/597858841.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [nuevogrupo.png](/attachments/597852272/597876591.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [nuevogrupo2.png](/attachments/597852272/597876590.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [edicingrupo.png](/attachments/597852272/597876589.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [edicingrupoequipo.png](/attachments/597852272/597876841.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [aadirmiembroequipo.png](/attachments/597852272/597876555.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [edicingruporesponsableeconomico.png](/attachments/597852272/597858765.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [edicingruporesponsableeconomico.png](/attachments/597852272/597858764.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [aadirresponsableeconomico.png](/attachments/597852272/597858770.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [edicingrupolineas.png](/attachments/597852272/597876838.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [nuevalineadatosgenerales.png](/attachments/597852272/597876922.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [nuevalineainvestigadores.png](/attachments/597852272/597876928.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [aadirinvestigadorlinea.png](/attachments/597852272/597876741.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [nuevalineaclasificaciones.png](/attachments/597852272/597876926.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [nuevalineaequipos.png](/attachments/597852272/597876551.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [aadirequipoinstrumentallinea.png](/attachments/597852272/597876587.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [edicingrupoequiposinstrumentales.png](/attachments/597852272/597876835.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [aadirequipoinstrumental2.png](/attachments/597852272/597876764.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [edicingrupoenlaces.png](/attachments/597852272/597858773.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [edicingrupoenlaces.png](/attachments/597852272/597876585.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [edicingrupopersonasautorizadas.png](/attachments/597852272/597858783.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [aadirpersonaautorizada.png](/attachments/597852272/597858784.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [ejecucionpresupuestariaactual.png](/attachments/597852272/597876900.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [ejecucionpresupuestariagastos.png](/attachments/597852272/597876898.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [ejecucionpresupuestariaingresos.png](/attachments/597852272/597876903.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [detalleoperacionesgastos.png](/attachments/597852272/597876894.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [detalleoperacionesingresos.png](/attachments/597852272/597876896.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [detalleoperacionesmodificaciones.png](/attachments/597852272/597876891.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [facturasjustificantesfascturasgastos.png](/attachments/597852272/597858781.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [facturasjustificantesviajesdietas.png](/attachments/597852272/597858777.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [facturasjustificantespersonalcontratado.png](/attachments/597852272/597858778.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [busquedasimplegrupos.png](/attachments/597852272/597858840.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [busquedasimplegrupos.png](/attachments/597852272/597877045.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [busquedacomplejagrupos.png](/attachments/597852272/597877044.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [aadirmiembroequipo.png](/attachments/597852272/597876924.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [nuevalineaequipos.png](/attachments/597852272/597876550.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [nuevalineaequipos.png](/attachments/597852272/597876588.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [nuevogrupo.png](/attachments/597852272/597876620.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [nuevogrupo2.png](/attachments/597852272/597876618.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [edicingrupo.png](/attachments/597852272/597876623.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [nuevalineaequipos.png](/attachments/597852272/597876915.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [aadirequipoinstrumentallinea.png](/attachments/597852272/597876586.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [aadirequipoinstrumentallinea.png](/attachments/597852272/597876919.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [edicingrupoenlaces.png](/attachments/597852272/597876763.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [aadirenlace.png](/attachments/597852272/597876584.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [edicingrupo.png](/attachments/597852272/597876865.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [nuevogrupo.png](/attachments/597852272/597877040.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [nuevogrupo2.png](/attachments/597852272/597877039.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [70_00_Ejecucion_Economica_BusquedaListadoIDsSGE.png](/attachments/597852272/597876699.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [70_00_Ejecucion_Economica_BusquedaListadoIDsSGE.png](/attachments/597852272/597876743.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [70_00_Ejecucion_Economica_BusquedaListadoIDsSGE.png](/attachments/597852272/597876733.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [aadirinvestigadorlinea.png](/attachments/597852272/597876735.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [aadirinvestigadorlinea.png](/attachments/597852272/597880496.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [70_00_Ejecucion_Economica_BusquedaListadoIDsSGE.png](/attachments/597852272/597876700.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [aadirequipoinstrumental2.png](/attachments/597852272/597876908.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [edicingrupoenlaces.png](/attachments/597852272/597876844.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [71_02_EjecucionEc_Balance_Estado_actual.png](/attachments/597852272/597876827.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [71_03_EjecucionEc_Balance_Gastos.png](/attachments/597852272/597876826.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [71_04_EjecucionEc_Balance_Ingresos.png](/attachments/597852272/597876825.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [71_05_EjecucionEc_Detalle_Gastos.png](/attachments/597852272/597876814.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [71_06_EjecucionEc_Detalle_Ingresos.png](/attachments/597852272/597876812.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [71_07_EjecucionEc_Detalle_Modificaciones.png](/attachments/597852272/597876811.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [71_08_EjecucionEc_GastosJustif_Gastos.png](/attachments/597852272/597876816.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [71_09_EjecucionEc_GastosJustif_Viajes.png](/attachments/597852272/597876820.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [71_10_EjecucionEc_GastosJustif_Gastos_Nominas.png](/attachments/597852272/597876819.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [71_08_EjecucionEc_GastosJustif_Gastos.png](/attachments/597852272/597876815.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [71_08_EjecucionEc_GastosJustif_Gastos.png](/attachments/597852272/597876821.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [71_05_EjecucionEc_Detalle_Gastos.png](/attachments/597852272/597876824.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [71_06_EjecucionEc_Detalle_Ingresos.png](/attachments/597852272/597876823.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [71_07_EjecucionEc_Detalle_Modificaciones.png](/attachments/597852272/597876822.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [busquedagruposinv.png](/attachments/597852272/597876787.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [edicingrupoinv.png](/attachments/597852272/597876784.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [edicingrupoequipoinv.png](/attachments/597852272/597876783.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [edicingrupoinv.png](/attachments/597852272/597884715.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [edicingrupoequipoinv.png](/attachments/597852272/597884711.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [edicingrupolineasinv.png](/attachments/597852272/597884710.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [edicionlineadatosgeneralesinv.png](/attachments/597852272/597884707.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [edicionlineainvestigadoresinv.png](/attachments/597852272/597884706.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [edicionlineaclasificacionesinv.png](/attachments/597852272/597876776.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [edicionnuevalineaequiposinv.png](/attachments/597852272/597876774.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [edicionlineaclasificacionesinv.png](/attachments/597852272/597884714.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [edicingrupoequiposinstrumentalesinv.png](/attachments/597852272/597884709.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [edicionnuevalineaequiposinv.png](/attachments/597852272/597884713.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [edicingrupoenlacesinv.png](/attachments/597852272/597884708.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [edicingrupopersonaautorizadainv.png](/attachments/597852272/597876771.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [edicingruporesponsableeconomicoinv.png](/attachments/597852272/597873949.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [lineasinvestigacion.png](/attachments/597852272/597876890.png) (image/png)  
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div id="footer" role="contentinfo">
+
+<div class="section footer-body">
+
+Document generated by Confluence on oct 27, 2025 08:39
+
+<div id="footer-logo">
+
+[Atlassian](https://www.atlassian.com/)
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 
 

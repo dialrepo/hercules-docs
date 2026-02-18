@@ -796,7 +796,305 @@
 
   <h1>Index</h1>
 
+<div id="page">
 
+<div id="main" class="aui-page-panel">
+
+<div id="main-header">
+
+<div id="breadcrumb-section">
+
+1.  [Hércules](index.html)
+2.  [Hércules](/)
+3.  [SGI. Sistema de gestión de investigación](//sgi-sistema-de-gestion-de-investigacion)
+4.  [Diseño](//sgi-sistema-de-gestion-de-investigacion/diseno)
+5.  [Componentes](//sgi-sistema-de-gestion-de-investigacion/diseno/componentes)
+6.  [SGI - ESB](//sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb)
+7.  [SGI - ESB - SGP](//sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sgp)
+
+</div>
+
+# <span id="title-text"> Hércules : SGI - ESB - SGP - Servicios Básicos </span>
+
+</div>
+
+<div id="content" class="view">
+
+<div class="page-metadata">
+
+Created by <span class="author"> Usuario desconocido (alicia.alvarez)</span>, last updated on jun 22, 2022
+
+</div>
+
+<div id="main-content" class="wiki-content group">
+
+#### Métodos imprescindibles para el funcionamiento del SGI
+
+------------------------------------------------------------------------
+
+<div class="table-wrap">
+
+<table class="aui metadata-summary-macro null" style="width:100%;" data-cql="label = &quot;sgp&quot; and space = currentSpace() and ancestor = currentContent()" data-details-space-key="HERCULES" data-details-content-id="597853002" data-headings="Método, URL, Parámetros, Respuesta, Descripción" data-first-column-heading="Servicio" data-count-comments="false" data-count-likes="false" data-total-pages="1" data-page-size="1000" data-sort-by="null" data-reverse-sort="false" data-blueprint-present="false">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th class="sorter-text">Servicio</th>
+<th>Método</th>
+<th>URL</th>
+<th>Parámetros</th>
+<th>Respuesta</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td class="title" data-content-id="597853031"><a href="/confluence/spaces/HERCULES/pages/597853031/SGI+-+ESB+-+SGP+-+Sexenios+-+Buscar">SGI - ESB - SGP - Sexenios - Buscar</a></td>
+<td>GET</td>
+<td>/sexenios</td>
+<td><p>fecha</p></td>
+<td>Lista[<a href="https://confluence.um.es/confluence/display/HERCULES/SGI+-+ESB+-+SGP#SGIESBSGP-Sexenio" rel="nofollow">Sexenio</a>]</td>
+<td><p>Devuelve una lista de identificadores de persona con el número de sexenios en la fecha pasada por parámetro.</p>
+<p>En caso de que la fecha se envíe vacía se enviará el número de sexenios en el momento actual</p>
+<p>Se tendrá que mirar para la fecha pasada por parámetro el número de sexenios de cada PDI de la Universidad.</p>
+<p>Si no tiene sexenios no se enviarán</p>
+<p>Ejemplo:</p>
+<ul>
+<li>fecha="2021-12-31T23:00:00Z"</li>
+</ul></td>
+</tr>
+<tr class="even">
+<td class="title" data-content-id="597853030"><a href="/confluence/spaces/HERCULES/pages/597853030/SGI+-+ESB+-+SGP+-+Personas+-+Consultar+detalle+de+fotograf%C3%ADa">SGI - ESB - SGP - Personas - Consultar detalle de fotografía</a></td>
+<td>GET</td>
+<td>/personas/{id}/fotografia</td>
+<td><p><br />
+</p></td>
+<td><a href="https://confluence.um.es/confluence/display/HERCULES/SGI+-+ESB+-+SGP#SGIESBSGP-Fotografia" rel="nofollow">Fotografia</a></td>
+<td><p>Devuelve el detalle de la fotografía digital de la persona (independientemente de que la persona esté activa o no)</p></td>
+</tr>
+<tr class="odd">
+<td class="title" data-content-id="597853043"><a href="/confluence/spaces/HERCULES/pages/597853043/SGI+-+ESB+-+SGP+-+Personas+-+Buscar+B%C3%BAsqueda+r%C3%A1pida">SGI - ESB - SGP - Personas - Buscar (Búsqueda rápida)</a></td>
+<td>GET</td>
+<td>/personasFast</td>
+<td><ul>
+<li>busqueda (cadena a buscar en nombre / apellidos / email / nombre + apellidos).</li>
+<li>colectivoId (uno o varios colectivos sobre los que realizar la búsqueda).</li>
+</ul></td>
+<td>Lista[<a href="https://confluence.um.es/confluence/display/HERCULES/SGI+-+ESB+-+SGP#SGIESBSGP-Persona" rel="nofollow">Persona</a>]</td>
+<td><p>Listado de Persona.</p>
+<p><em>Ejemplo</em>:</p>
+<p>[mailto:busqueda=skarmeta@<a href="http://um.es" class="external-link" rel="nofollow">um.es</a>&amp;colectivoId=]busqueda=skarmeta@<a href="http://um.es" class="external-link" rel="nofollow">um.es</a>&amp;colectivoId=(1,2,3,4)</p>
+<p>busqueda=jorge carrillo&amp;colectivoId=(2)</p>
+<p><strong>NOTA</strong>:</p>
+<p>La búsqueda no es sensible a mayúsculas ni minúsculas. Los parámetros no deben ir entrecomillados.</p>
+<p>Si no se indica el parámetro colectivoId, se buscará en todos los colectivos.</p>
+<p>Se devuelven como máximo 11 registros, al devolver más de 10 registros el buscador indicará que existen más registros y se puede refinar la búsqueda.</p></td>
+</tr>
+<tr class="even">
+<td class="title" data-content-id="597853044"><a href="/confluence/spaces/HERCULES/pages/597853044/SGI+-+ESB+-+SGP+-+Personas+-+Buscar">SGI - ESB - SGP - Personas - Buscar</a></td>
+<td>GET</td>
+<td>/personas</td>
+<td><p><span style="color:var(--ds-text,#172b4d);">q+s (query + sort)</span></p>
+<p><span style="color:var(--ds-text,#172b4d);">La query estará formada por:</span></p>
+<ul>
+<li><span style="color:var(--ds-text,#172b4d);">id</span></li>
+<li><span style="color:var(--ds-text,#172b4d);">tipoColectivo</span></li>
+<li>colectivoId</li>
+<li><span style="color:var(--ds-text,#172b4d);">nombre</span></li>
+<li><span style="color:var(--ds-text,#172b4d);">apellidos</span></li>
+<li><span style="color:var(--ds-text,#172b4d);">email</span></li>
+<li>nombreApellidos</li>
+</ul></td>
+<td>Lista[<a href="https://confluence.um.es/confluence/display/HERCULES/SGI+-+ESB+-+SGP#SGIESBSGP-Persona" rel="nofollow">Persona</a>]</td>
+<td><p><span style="color:var(--ds-text,#172b4d);">Listado de Persona.</span></p>
+<p><span style="color:var(--ds-text,#172b4d);"><em>Ejemplo</em>:</span></p>
+<p><span style="color:var(--ds-text,#172b4d);">colectivoId=in=(refPAS,refPDI);(nombre=like=jim,apellidos=like=jim,email=like=jim,nombreApellidos=like=jim)</span></p>
+<p><span style="color:var(--ds-text,#172b4d);">colectivoId=in=(refPAS,refPDI);(nombre=like=nombre.apellido@<a href="http://um.es" class="external-link" rel="nofollow">um.es</a>,apellidos=like=nombre.apellido@<a href="http://um.es" class="external-link" rel="nofollow">um.es</a>,email=like=nombre.apellido@<a href="http://um.es" class="external-link" rel="nofollow">um.es</a>,nombreApellidos=like=nombre.apellido@<a href="http://um.es" class="external-link" rel="nofollow">um.es</a>)</span></p>
+<p><span style="color:var(--ds-text,#172b4d);">Nota: tipoColetivo y colectivoId son mutuamente excluyentes. En el caso se recibir un tipoColectivo se traducirá a los colectivos que lo formen.</span></p></td>
+</tr>
+<tr class="odd">
+<td class="title" data-content-id="597853045"><a href="/confluence/spaces/HERCULES/pages/597853045/SGI+-+ESB+-+SGP+-+Personas+-+Consultar+detalle+Datos+generales">SGI - ESB - SGP - Personas - Consultar detalle (Datos generales)</a></td>
+<td>GET</td>
+<td>/personas/{id}</td>
+<td><p><br />
+</p></td>
+<td><a href="https://confluence.um.es/confluence/display/HERCULES/SGI+-+ESB+-+SGP#SGIESBSGP-Persona" rel="nofollow">Persona</a></td>
+<td><p>Detalle de los datos generales de una persona (este la persona activo o no).</p></td>
+</tr>
+<tr class="even">
+<td class="title" data-content-id="597853046"><a href="/confluence/spaces/HERCULES/pages/597853046/SGI+-+ESB+-+SGP+-+Personas+-+Consultar+datos+personales">SGI - ESB - SGP - Personas - Consultar datos personales</a></td>
+<td>GET</td>
+<td>/datos-personales/persona/{id}</td>
+<td><p><br />
+</p></td>
+<td><a href="https://confluence.um.es/confluence/display/HERCULES/SGI+-+ESB+-+SGP#SGIESBSGP-DatosPersonales" rel="nofollow">DatosPersonales</a></td>
+<td><p>Detalle de los datos personales de una persona independientemente de que este activa o no la persona (datos de dirección, nacimiento, etc).</p></td>
+</tr>
+<tr class="odd">
+<td class="title" data-content-id="597853047"><a href="/confluence/spaces/HERCULES/pages/597853047/SGI+-+ESB+-+SGP+-+Personas+-+Consultar+datos+contacto">SGI - ESB - SGP - Personas - Consultar datos contacto</a></td>
+<td>GET</td>
+<td>/datos-contacto/persona/{id}</td>
+<td><p><br />
+</p></td>
+<td><a href="https://confluence.um.es/confluence/display/HERCULES/SGI+-+ESB+-+SGP#SGIESBSGP-DatosContacto" rel="nofollow">DatosContacto</a></td>
+<td><p>Contiene la lista de emails, incluido si cada uno es principal o no, y/o de teléfonos de una persona (independientemente de que este activa o no la persona).</p></td>
+</tr>
+<tr class="even">
+<td class="title" data-content-id="597853055"><a href="/confluence/spaces/HERCULES/pages/597853055/SGI+-+ESB+-+SGP+-+Personas+-+Consultar+vinculaciones">SGI - ESB - SGP - Personas - Consultar vinculaciones</a></td>
+<td>GET</td>
+<td>/vinculaciones/persona/{id}</td>
+<td><p><br />
+</p></td>
+<td><a href="https://confluence.um.es/confluence/display/HERCULES/SGI+-+ESB+-+SGP#SGIESBSGP-Vinculacion" rel="nofollow">Vinculacion</a></td>
+<td><p>Detalle de los datos de vinculación vigentes de una persona (independientemente de que esté activa o no la persona).</p>
+<p>Ver <a href="https://confluence.um.es/confluence/pages/viewpage.action?pageId=108604653" rel="nofollow">UM - SGI - ESB - SGP - Adaptaciones integración</a> para su implementación en el SGI.</p></td>
+</tr>
+<tr class="odd">
+<td class="title" data-content-id="597853056"><a href="/confluence/spaces/HERCULES/pages/597853056/SGI+-+ESB+-+SGP+-+Personas+-+Consultar+datos+de+vinculacion-categor%C3%ADa">SGI - ESB - SGP - Personas - Consultar datos de vinculacion-categoría</a></td>
+<td>GET</td>
+<td>/vinculaciones/persona/{id}/vinculaciones-categorias-profesionales</td>
+<td><p>q+s (query + sort)</p>
+<p>La query estará formada por:</p>
+<ul>
+<li>fechaObtencion</li>
+<li>fechaFin</li>
+</ul></td>
+<td><a href="https://confluence.um.es/confluence/display/HERCULES/SGI+-+ESB+-+SGP#SGIESBSGP-VinculacionCategoriaProfesional" rel="nofollow">VinculacionCategoriaProfesional</a></td>
+<td><p>Si no se especifica ningún filtrado, deberá recuperar la categoría profesional a la que está asociada la persona y que sea vigente.</p>
+<p>Para recuperar la vinculación activa a una <strong>FECHA</strong> determinada se generaría una consulta RSQL del tipo:</p>
+<pre class="ui-box cf ayd ei fx sm aye ayf fd apk ayg" title=""><code>q=fechaObtencion&lt;=FECHA;fechaFin&gt;=FECHA,fechaFin=na=</code></pre>
+<p>Devolver la<span> </span><strong>vinculación</strong><span> </span>asociada a la persona con identificador<span> </span><strong>{id}</strong><span> </span>donde el objeto que viene en la <span> </span><strong>vinculacionCategoriaProfesional</strong> de esa vinculación debe cumplir que su atributo<span> </span><strong>fechaObtencion</strong> sea menor o igual que una<span> </span><strong>FECHA</strong><span> </span>dada y su atributo<span> </span><strong>fechaFin</strong><span> sea</span> mayor o igual que una<span> </span><strong>FECHA</strong><span> </span>dada o no debe tener valor.</p>
+<p>Ver <a href="https://confluence.um.es/confluence/spaces/HERCULES/pages/753926202/UM+-+SGI+-+ESB+-+SGP+-+Adaptaciones+integraci%C3%B3n">UM - SGI - ESB - SGP - Adaptaciones integración</a> para su implementación en el SGI.</p></td>
+</tr>
+<tr class="even">
+<td class="title" data-content-id="597853057"><a href="/confluence/spaces/HERCULES/pages/597853057/SGI+-+ESB+-+SGP+-+Personas+-+Consultar+datos+acad%C3%A9micos">SGI - ESB - SGP - Personas - Consultar datos académicos</a></td>
+<td>GET</td>
+<td>/datos-academicos/persona/{id}</td>
+<td><p>q+s (query + sort)</p>
+<p>La query estará formada por:</p>
+<ul>
+<li>fechaObtencion</li>
+<li>fechaFin</li>
+</ul></td>
+<td><a href="https://confluence.um.es/confluence/display/HERCULES/SGI+-+ESB+-+SGP#SGIESBSGP-DatosAcademicos" rel="nofollow">DatosAcademicos</a></td>
+<td><p>Contiene el nivel académico de la persona (independientemente de que este activa o no la persona)</p></td>
+</tr>
+<tr class="odd">
+<td class="title" data-content-id="597853054"><a href="/confluence/spaces/HERCULES/pages/597853054/SGI+-+ESB+-+SGP+-+Colectivos+-+Listar">SGI - ESB - SGP - Colectivos - Listar</a></td>
+<td>GET</td>
+<td>/colectivos</td>
+<td><p><br />
+</p></td>
+<td>Lista[<a href="https://confluence.um.es/confluence/display/HERCULES/SGI+-+ESB+-+SGP#SGIESBSGP-Colectivo" rel="nofollow">Colectivo</a>]</td>
+<td><p>Listado de colectivos ordenados alfabéticamente de forma ascendente.</p></td>
+</tr>
+<tr class="even">
+<td class="title" data-content-id="597853033"><a href="/confluence/spaces/HERCULES/pages/597853033/SGI+-+ESB+-+SGP+-+Tipos+de+documento+-+Listar">SGI - ESB - SGP - Tipos de documento - Listar</a></td>
+<td>GET</td>
+<td>/tipos-documento</td>
+<td><p><br />
+</p></td>
+<td>Lista[<a href="https://confluence.um.es/confluence/display/HERCULES/SGI+-+ESB+-+SGP#SGIESBSGP-TipoDocumento" rel="nofollow">TipoDocumento</a>]</td>
+<td><p>Listado de tipos de documento de identificación personal ordenados alfabéticamente de forma ascendente.</p></td>
+</tr>
+<tr class="odd">
+<td class="title" data-content-id="597853034"><a href="/confluence/spaces/HERCULES/pages/597853034/SGI+-+ESB+-+SGP+-+Sexos+-+Listar">SGI - ESB - SGP - Sexos - Listar</a></td>
+<td>GET</td>
+<td>/sexos</td>
+<td><p><br />
+</p></td>
+<td>Lista[<a href="https://confluence.um.es/confluence/display/HERCULES/SGI+-+ESB+-+SGP#SGIESBSGP-Sexo" rel="nofollow">Sexo</a>]</td>
+<td><p>Listado de sexos ordenados alfabéticamente de forma ascendente.</p></td>
+</tr>
+<tr class="even">
+<td class="title" data-content-id="597853035"><a href="/confluence/spaces/HERCULES/pages/597853035/SGI+-+ESB+-+SGP+-+Categor%C3%ADas+profesionales+-+Listar">SGI - ESB - SGP - Categorías profesionales - Listar</a></td>
+<td>GET</td>
+<td>/categorias-profesionales</td>
+<td><p><br />
+</p></td>
+<td>Lista[<a href="https://confluence.um.es/confluence/display/HERCULES/SGI+-+ESB+-+SGP#SGIESBSGP-CategoriaProfesional" rel="nofollow">CategoriaProfesional</a>]</td>
+<td><p>Listado de categorías profesionales ordenadas alfabéticamente de forma ascendente.</p></td>
+</tr>
+<tr class="odd">
+<td class="title" data-content-id="597853036"><a href="/confluence/spaces/HERCULES/pages/597853036/SGI+-+ESB+-+SGP+-+Personas+-+Consultar+detalle+de+categor%C3%ADa+profesional">SGI - ESB - SGP - Personas - Consultar detalle de categoría profesional</a></td>
+<td>GET</td>
+<td>/categorias-profesionales/{id}</td>
+<td><p><br />
+</p></td>
+<td><span title=""><a href="https://confluence.um.es/confluence/display/HERCULES/SGI+-+ESB+-+SGP#SGIESBSGP-CategoriaProfesional" rel="nofollow">CategoriaProfesional</a></span></td>
+<td><p>Detalle de la categoría profesional cuyo identificador se indica por parámetro.</p></td>
+</tr>
+<tr class="even">
+<td class="title" data-content-id="597853028"><a href="/confluence/spaces/HERCULES/pages/597853028/SGI+-+ESB+-+SGP+-+Niveles+acad%C3%A9micos+-+Listar">SGI - ESB - SGP - Niveles académicos - Listar</a></td>
+<td>GET</td>
+<td>/niveles-academicos</td>
+<td><p><br />
+</p></td>
+<td>Lista[<a href="https://confluence.um.es/confluence/display/HERCULES/SGI+-+ESB+-+SGP#SGIESBSGP-NivelAcademico" rel="nofollow">NivelAcademico</a>]</td>
+<td><p>Listado de niveles académicos ordenados alfabéticamente de forma ascendente.</p></td>
+</tr>
+<tr class="odd">
+<td class="title" data-content-id="597853029"><a href="/confluence/spaces/HERCULES/pages/597853029/SGI+-+ESB+-+SGP+-+Niveles+acad%C3%A9micos+-+Consultar+detalle">SGI - ESB - SGP - Niveles académicos - Consultar detalle</a></td>
+<td>GET</td>
+<td>/niveles-academicos/{id}</td>
+<td><p><br />
+</p></td>
+<td><span title=""><a href="https://confluence.um.es/confluence/display/HERCULES/SGI+-+ESB+-+SGP#SGIESBSGP-NivelAcademico" rel="nofollow">NivelAcademico</a></span></td>
+<td><p>Detalle del nivel académico cuyo identificador se indica por parámetro.</p></td>
+</tr>
+<tr class="even">
+<td class="title" data-content-id="597853032"><a href="/confluence/spaces/HERCULES/pages/597853032/SGI+-+ESB+-+SGP+-+Direcci%C3%B3n+de+tesis+-+Buscar">SGI - ESB - SGP - Dirección de tesis - Buscar</a></td>
+<td>GET</td>
+<td>/direccion-tesis</td>
+<td><p>anioDefensa</p></td>
+<td>Lista[<a href="https://confluence.um.es/confluence/display/HERCULES/SGI+-+ESB+-+SGP#SGIESBSGP-NivelAcademico" rel="nofollow">DireccionTesis</a>]</td>
+<td><p>Devuelve la lista de Direcciones de tesis (incluida la personaRef indicando la persona que es el director de la tesis) cuya fecha de defensa sea en el año que se le pasa por parámetro</p>
+<p>Es obligatorio pasar como parámetro del año de la fecha de defensa por el que se quiere filtrar.</p>
+<p>Ejemplo:</p>
+<ul>
+<li>anioDefensa=<span>2019</span></li>
+</ul></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+
+
+
+
+</div>
+
+</div>
+
+</div>
+
+<div id="footer" role="contentinfo">
+
+<div class="section footer-body">
+
+Document generated by Confluence on oct 27, 2025 08:52
+
+<div id="footer-logo">
+
+[Atlassian](https://www.atlassian.com/)
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 
 

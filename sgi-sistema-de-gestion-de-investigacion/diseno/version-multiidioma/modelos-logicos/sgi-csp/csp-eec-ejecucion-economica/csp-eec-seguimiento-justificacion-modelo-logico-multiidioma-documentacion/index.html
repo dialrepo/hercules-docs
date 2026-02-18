@@ -796,7 +796,1294 @@
 
   <h1>Csp eec seguimiento justificacion modelo logico multiidioma documentacion</h1>
 
+<div id="page">
 
+<div id="main" class="aui-page-panel">
+
+<div id="main-header">
+
+<div id="breadcrumb-section">
+
+1.  [Hércules](index.html)
+2.  [Hércules](/)
+3.  [SGI. Sistema de gestión de investigación](//sgi-sistema-de-gestion-de-investigacion)
+4.  [Diseño](//sgi-sistema-de-gestion-de-investigacion/diseno)
+5.  [Versión multiidioma](//sgi-sistema-de-gestion-de-investigacion/diseno/version-multiidioma)
+6.  [Modelos lógicos](//sgi-sistema-de-gestion-de-investigacion/diseno/version-multiidioma/modelos-logicos)
+7.  [SGI-CSP](//sgi-sistema-de-gestion-de-investigacion/diseno/version-multiidioma/modelos-logicos/sgi-csp)
+8.  [CSP-EEC Ejecución económica](//sgi-sistema-de-gestion-de-investigacion/diseno/version-multiidioma/modelos-logicos/sgi-csp/csp-eec-ejecucion-economica)
+
+</div>
+
+# <span id="title-text"> Hércules : CSP-EEC-Seguimiento justificación - Modelo lógico multiidioma - Documentación </span>
+
+</div>
+
+<div id="content" class="view">
+
+<div class="page-metadata">
+
+Created by <span class="author"> Usuario genérico para HERCULES</span>, last updated on abr 11, 2025
+
+</div>
+
+<div id="main-content" class="wiki-content group">
+
+<div class="toc-macro rbtoc1761551679693">
+
+- [Entidad Alegación de un requerimiento: “AlegacionRequerimiento"](#CSPEECSeguimientojustificaciónModelológicomultiidiomaDocumentación-EntidadAlegacióndeunrequerimiento:“AlegacionRequerimiento%22)
+- [Entidad Observaciones de la alegación de un requerimiento: “AlegacionRequerimientoObservaciones”](#CSPEECSeguimientojustificaciónModelológicomultiidiomaDocumentación-EntidadObservacionesdelaalegacióndeunrequerimiento:“AlegacionRequerimientoObservaciones”)
+- [Entidad Cofinanciación de un gasto justificado: “CofinanciacionGastoJustificacion”](#CSPEECSeguimientojustificaciónModelológicomultiidiomaDocumentación-EntidadCofinanciacióndeungastojustificado:“CofinanciacionGastoJustificacion”)
+- [Entidad Documentación de un requerimiento: “DocumentoRequerimiento”](#CSPEECSeguimientojustificaciónModelológicomultiidiomaDocumentación-EntidadDocumentacióndeunrequerimiento:“DocumentoRequerimiento”)
+- [Entidad Gasto incluido en una justificación: “GastoJustificacion”](#CSPEECSeguimientojustificaciónModelológicomultiidiomaDocumentación-EntidadGastoincluidoenunajustificación:“GastoJustificacion”)
+- [Entidad Gasto incluido en un requerimiento de justificación: “GastoRequerimientoJustificacion”](#CSPEECSeguimientojustificaciónModelológicomultiidiomaDocumentación-EntidadGastoincluidoenunrequerimientodejustificación:“GastoRequerimientoJustificacion”)
+- [Entidad Alegación de un gasto incluido en un requerimiento: “GastoRequerimientoJustificacionAlegacion”](#CSPEECSeguimientojustificaciónModelológicomultiidiomaDocumentación-EntidadAlegacióndeungastoincluidoenunrequerimiento:“GastoRequerimientoJustificacionAlegacion”)
+- [Entidad Incidencia de un gasto incluido en un requerimiento: “GastoRequerimientoJustificacionIncidencia”](#CSPEECSeguimientojustificaciónModelológicomultiidiomaDocumentación-EntidadIncidenciadeungastoincluidoenunrequerimiento:“GastoRequerimientoJustificacionIncidencia”)
+- [Entidad Incidencia de documentación incluida en un requerimiento: “IncidenciaDocumentacionRequerimiento”](#CSPEECSeguimientojustificaciónModelológicomultiidiomaDocumentación-EntidadIncidenciadedocumentaciónincluidaenunrequerimiento:“IncidenciaDocumentacionRequerimiento”)
+- [Entidad Alegación presentada sobre una incidencia de documentación: “IncidenciaDocumentacionRequerimientoAlegacion”](#CSPEECSeguimientojustificaciónModelológicomultiidiomaDocumentación-EntidadAlegaciónpresentadasobreunaincidenciadedocumentación:“IncidenciaDocumentacionRequerimientoAlegacion”)
+- [Entidad Descripción de una incidencia de documentación: “IncidenciaDocumentacionRequerimientoIncidencia”](#CSPEECSeguimientojustificaciónModelológicomultiidiomaDocumentación-EntidadDescripcióndeunaincidenciadedocumentación:“IncidenciaDocumentacionRequerimientoIncidencia”)
+- [Entidad Nombre de documento de una incidencia de documentación: “IncidenciaDocumentacionRequermientoNombreDocumento”](#CSPEECSeguimientojustificaciónModelológicomultiidiomaDocumentación-EntidadNombrededocumentodeunaincidenciadedocumentación:“IncidenciaDocumentacionRequermientoNombreDocumento”)
+- [Entidad Seguimiento de un periodo de justificación: “ProyectoPeriodoJustificacionSeguimiento”](#CSPEECSeguimientojustificaciónModelológicomultiidiomaDocumentación-EntidadSeguimientodeunperiododejustificación:“ProyectoPeriodoJustificacionSeguimiento”)
+- [Entidad Seguimiento de la justificación de un proyecto: “ProyectoSeguimientoJustificacion”](#CSPEECSeguimientojustificaciónModelológicomultiidiomaDocumentación-EntidadSeguimientodelajustificacióndeunproyecto:“ProyectoSeguimientoJustificacion”)
+- [Entidad requerimiento sobre una justificación: “RequerimientoJustificacion”](#CSPEECSeguimientojustificaciónModelológicomultiidiomaDocumentación-Entidadrequerimientosobreunajustificación:“RequerimientoJustificacion”)
+- [Entidad Observaciones de un requerimiento: “RequerimientoJustificacionObservaciones”](#CSPEECSeguimientojustificaciónModelológicomultiidiomaDocumentación-EntidadObservacionesdeunrequerimiento:“RequerimientoJustificacionObservaciones”)
+- [Entidad Tipo de requerimiento: “TipoRequerimiento”](#CSPEECSeguimientojustificaciónModelológicomultiidiomaDocumentación-EntidadTipoderequerimiento:“TipoRequerimiento”)
+- [Entidad Nombre de un tipo de requerimiento: “TipoRequerimientoNombre”](#CSPEECSeguimientojustificaciónModelológicomultiidiomaDocumentación-EntidadNombredeuntipoderequerimiento:“TipoRequerimientoNombre”)
+
+</div>
+
+## Entidad Alegación de un requerimiento: “AlegacionRequerimiento"
+
+Información relativa a la alegación presentada sobre un requerimiento recibido.
+
+<div class="table-wrap">
+
+|                                                                   |
+|:------------------------------------------------------------------|
+| **ATTRIBUTES**                                                    |
+|  id : Long  Private                                               |
+| requerimientoJustificacion : RequerimientoJustificacion  Private  |
+| fechaAlegacion : Timestamp  Private                               |
+| importeAlegadoCD : BigDecimal  Private                            |
+| importeAlegadoCI : BigDecimal  Private                            |
+| importeReintegrado : BigDecimal  Private                          |
+| importeReintegradoCD : BigDecimal  Private                        |
+|  importeReintegradoCI : BigDecimal  Private                       |
+| interesesReintegrados : BigDecimal  Private                       |
+| fechaReintegro : Timestamp  Private                               |
+| justificanteReintegro : String  Private                           |
+| importeAlegado : int  Private                                     |
+
+</div>
+
+
+
+<div class="table-wrap">
+
+<table class="confluenceTable" style="">
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p><strong>ASSOCIATIONS</strong></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p> Association (direction: Unspecified) </p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) AlegacionRequerimiento</p>
+<p>Cardinality:  [1]</p>
+<p><br />
+</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) AlegacionRequerimientoObservaciones</p>
+<p>Cardinality:  [0..*]</p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Association (direction: Unspecified) </p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) RequerimientoJustificacion</p>
+<p>Cardinality:  [1]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) AlegacionRequerimiento</p>
+<p>Cardinality:  [0..1]</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+## Entidad Observaciones de la alegación de un requerimiento: “AlegacionRequerimientoObservaciones”
+
+Entidad para almacenar, en todos los idiomas soportados por la aplicación, las observaciones recogidas en la alegación de un requerimiento. El campo observaciones de la alegación de un requerimiento es un campo de texto opcional, no es obligatorio que se introduzca en ningún idioma.
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<tbody>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p><strong>ATTRIBUTES</strong></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p> alegacionRequerimiento : AlegacionRequerimiento  Private</p>
+<p> Alegación sobre un requerimiento a la que pertenecen las observaciones. Es una FK a la tabla "AlegacionRequerimiento" </p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>lang : String  Private</p>
+<p> Identificador del idioma en el que están expresadas las observaciones de la alegación. Cada idioma se representa por un código de 2 caracteres:</p>
+<ul>
+<li><p>es</p></li>
+<li><p>en</p></li>
+<li><p>eu </p></li>
+</ul></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p> value_ : String  Private</p>
+<p> Valor de las observaciones incluidas en la alegación de un requerimiento. Es un campo de texto opcional. El valor estará exporesado en el idioma indicado por el campo "lang".</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p><strong>ASSOCIATIONS</strong></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Association (direction: Unspecified) </p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) AlegacionRequerimiento</p>
+<p>Cardinality:  [1]</p>
+<p><br />
+</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) AlegacionRequerimientoObservaciones</p>
+<p>Cardinality:  [0..*]</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+## Entidad Cofinanciación de un gasto justificado: “CofinanciacionGastoJustificacion”
+
+Información de cofinanciación del gasto. Es una información no soportada por los SGE. El importe total de un gasto puede justificarse parcialmente al organismo de una convocatoria asumiendo otra parte del gasto como cofinanciación. La cofinanciación podría ser aportada por otra convocatoria y/o entidad.
+
+Funcionalidad actualmente no implementada en el SGI.
+
+<div class="table-wrap">
+
+|                                    |
+|:-----------------------------------|
+| **ATTRIBUTES**                     |
+|  id : Long  Private                |
+| convocatoriaRef : String  Private  |
+| proyectoRef : String  Private      |
+| entidadRef : String  Private       |
+| importe : BigDecimal  Private      |
+
+</div>
+
+
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p><strong>ASSOCIATIONS</strong></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p> Association (direction: Unspecified) </p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) GastoJustificacion</p>
+<p>Cardinality:  [1]</p>
+<p><br />
+</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) CofinanciacionGastoJustificacion</p>
+<p>Cardinality:  [0..*]</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+## Entidad Documentación de un requerimiento: “DocumentoRequerimiento”
+
+Documentación asociada a un requerimiento. Funcionalidad no implementada actualmente.
+
+<div class="table-wrap">
+
+|                                     |
+|:------------------------------------|
+| **ATTRIBUTES**                      |
+|  id : Long  Private                 |
+| nombreDocumento : String  Private   |
+| documentoRef : String  Private      |
+| tipoDocumentoRef : String  Private  |
+
+</div>
+
+
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p><strong>ASSOCIATIONS</strong></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p> Association (direction: Unspecified) </p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) DocumentoRequerimiento</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) Documento</p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p> Association (direction: Unspecified) </p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) RequerimientoJustificacion</p>
+<p>Cardinality:  [1]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) DocumentoRequerimiento</p>
+<p>Cardinality:  [0..*]</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+
+
+## Entidad Gasto incluido en una justificación: “GastoJustificacion”
+
+Gastos justificados dentro de un periodo de justificación. Funcionalidad no implementada actualmente en el SGI
+
+<div class="table-wrap">
+
+|                             |
+|:----------------------------|
+| **ATTRIBUTES**              |
+|  id : Long  Private         |
+| gastoRef : String  Private  |
+
+</div>
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p><strong>ASSOCIATIONS</strong></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Association (direction: Unspecified) </p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) GastoJustificacion</p>
+<p>Cardinality:  [1]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) CofinanciacionGastoJustificacion</p>
+<p>Cardinality:  [0..*]</p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Association (direction: Unspecified) </p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) ProyectoPeriodoJustificacion</p>
+<p>Cardinality:  [1]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) GastoJustificacion</p>
+<p>Cardinality:  [0..*] </p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+## Entidad Gasto incluido en un requerimiento de justificación: “GastoRequerimientoJustificacion”
+
+Información asociada a un gasto incluido en un requerimiento. En el SGI se aporta información relativa a la incidencia recibida en el requerimiento sobre el gasto, así como a la alegación que se presenta. Además se desglosan los importes aceptados y/o rechazados en la justificación, así como los alegados en la respuesta al requerimiento recibido.
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<tbody>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p><strong>ATTRIBUTES</strong></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>id : Long  Private</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>gastoRef : String  Private</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>requerimientoJustificacion : RequerimientoJustificacion  Private </p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>importeAceptado : BigDecimal  Private </p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p> importeRechazado : BigDecimal  Private </p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>importeAlegado : BigDecimal  Private </p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>aceptado : Boolean  Private </p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>justificacionRef : String  Private </p>
+<p>Campo necesario para consultar al SGE un gastoRef de forma única, puesto que en el SGE un mismo gastoRef podría estar en dos justificaciones ref diferentes.</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p><strong>ASSOCIATIONS</strong></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Association (direction: Unspecified)  </p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) GastoRequerimientoJustificacion</p>
+<p>Cardinality:  [1]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) GastoRequerimientoJustificacionIncidencia</p>
+<p>Cardinality:  [0..*]</p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Association (direction: Unspecified) </p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) GastoRequerimientoJustificacion</p>
+<p>Cardinality:  [1]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) GastoRequerimientoJustificacionAlegacion</p>
+<p>Cardinality:  [0..*]</p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Association (direction: Unspecified)</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) RequerimientoJustificacion</p>
+<p>Cardinality:  [1..*]</p>
+<p><br />
+</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) GastoRequerimientoJustificacion</p>
+<p>Cardinality:  [0..*]</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+## Entidad Alegación de un gasto incluido en un requerimiento: “GastoRequerimientoJustificacionAlegacion”
+
+Entidad para almacenar, en todos los idiomas soportados por la aplicación, la descripción de la alegación enviada en la respuesta de un requerimiento sobre un gasto. Es un campo de texto opcional, no siendo obligatorio que sea introducido en ninguno de los idiomas.
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<tbody>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p><strong>ATTRIBUTES</strong></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>gastoRequerimientoJustificacion : GastoRequerimientoJustificacion  Private</p>
+<p>Identificador del gasto incluido en el requerimiento de justificación al que está asociada la descripción de la alegación. Es una FK a la tabla "GastoRequerimientoJustificacion".</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>lang : String  Private</p>
+<p>Identificador del idioma en el que está expresada la descripción de la alegación presentada al requerimiento sobre un gasto. Cada idioma se representa por un código de 2 caracteres:</p>
+<ul>
+<li><p>es</p></li>
+<li><p>en</p></li>
+<li><p>eu </p></li>
+</ul></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>value_ : String  Private</p>
+<p>Descripción de la alegación. Está expresada en el idioma indicado por el campo "lang". </p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p><strong>ASSOCIATIONS</strong></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Association (direction: Unspecified) </p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) GastoRequerimientoJustificacion</p>
+<p>Cardinality:  [1]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) GastoRequerimientoJustificacionAlegacion</p>
+<p>Cardinality:  [0..*]</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+
+
+## Entidad Incidencia de un gasto incluido en un requerimiento: “GastoRequerimientoJustificacionIncidencia”
+
+Entidad para almacenar, en todos los idiomas soportados por la aplicación, la descripción de la incidencia remitida sobre un gasto dentro de un requerimiento de justificación. Es un campo de texto opcional, no siendo obligatorio que sea introducido en ninguno de los idiomas.
+
+
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<tbody>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p><strong>ATTRIBUTES</strong></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>gastoRequerimientoJustificacion : GastoRequerimientoJustificacion  Private</p>
+<p>Identificador del gasto incluido en el requerimiento de justificación al que está asociada la descripción de la incidencia. Es una FK a la tabla "GastoRequerimientoJustificacion".</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p> lang : String  Private</p>
+<p>Identificador del idioma en el que está expresada la descripción de la incidencia sobre el gasto. Cada idioma se representa por un código de 2 caracteres:</p>
+<ul>
+<li><p>es</p></li>
+<li><p>en</p></li>
+<li><p>eu</p></li>
+</ul></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>value_ : String  PrivateDescripción de la incidencia. Está expresada en el idioma indicado por el campo "lang".</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p><strong>ASSOCIATIONS</strong></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Association (direction: Unspecified) </p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) GastoRequerimientoJustificacion</p>
+<p>Cardinality:  [1]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) GastoRequerimientoJustificacionIncidencia</p>
+<p>Cardinality:  [0..*]</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+
+
+## Entidad Incidencia de documentación incluida en un requerimiento: “IncidenciaDocumentacionRequerimiento”
+
+Incidencia incluida en um requerimiento de justificación que hace referencia a un documento aportado en la justificación.
+
+El SGI no da cobertura a registrar los documentos aportados en la justificación, puesto que actualmente no se cubre la justificación en el SGI (se parte del requisito de UMU que supone que la justificación se realiza en el SGE). Se permitirá indicar el nombre del documento al que hace referencia la incidencia, la descripción de la incidencia, y la alegación posteriormente presentada en la alegación del requerimiento.
+
+
+
+<div class="table-wrap">
+
+|                                                                   |
+|:------------------------------------------------------------------|
+| **ATTRIBUTES**                                                    |
+| id : Long  Private                                                |
+| requerimientoJustificacion : RequerimientoJustificacion  Private  |
+| nombreDocumento : String  Private                                 |
+
+</div>
+
+
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p><strong>ASSOCIATIONS</strong></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Association (direction: Unspecified) </p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) IncidenciaDocumentacionRequerimiento</p>
+<p>Cardinality:  [1]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) IncidenciaDocumentacionRequerimientoAlegacion</p>
+<p>Cardinality:  [0..*]</p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p> Association (direction: Unspecified)</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) IncidenciaDocumentacionRequerimiento</p>
+<p>Cardinality:  [1]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) IncidenciaDocumentacionRequerimientoIncidencia</p>
+<p>Cardinality:  [0..*]</p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p> Association (direction: Unspecified) </p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) IncidenciaDocumentacionRequerimiento</p>
+<p>Cardinality:  [1]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) IncidenciaDocumentacionRequermientoNombreDocumento</p>
+<p>Cardinality:  [1..*]</p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p> Association (direction: Unspecified) </p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) RequerimientoJustificacion</p>
+<p>Cardinality:  [1]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) IncidenciaDocumentacionRequerimiento</p>
+<p>Cardinality:  [0..*]</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+
+
+
+
+## Entidad Alegación presentada sobre una incidencia de documentación: “IncidenciaDocumentacionRequerimientoAlegacion”
+
+Entidad para almacenar, en todos los idiomas soportados por la aplicación, la descripción asociada a la alegación aportada sobre una incidencia relativa a un documento entregado en la justificación. La incidencia sobre el documento se recibe a través de un requerimiento sobre la justificación y la alegación se realiza sobre el requerimiento.
+
+
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<tbody>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p><strong>ATTRIBUTES</strong></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>incidenciaDocumentacionRequerimiento : IncidenciaDocumentacionRequerimiento  Private</p>
+<p>Incidencia sobre la documentación con la que se corresponde la alegación. Es una FK a la tabla "IncidenciaDocumentacionRequerimiento"</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>lang : String  Private</p>
+<p>Identificador del idioma en el que está expresada la alegación con la que se responde a la incidencia de documentación. Cada idioma se representa por un código de 2 caracteres:</p>
+<ul>
+<li><p>es</p></li>
+<li><p>es</p></li>
+<li><p>eu </p></li>
+</ul></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p> value_ : String  Private</p>
+<p>Descripción de la alegación con la que se responde a la incidencia de documentación. Está expresada en el idioma indicado por el campo "lang". </p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p><strong>ASSOCIATIONS</strong></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p> Association (direction: Unspecified) </p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) IncidenciaDocumentacionRequerimiento</p>
+<p>Cardinality:  [1]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) IncidenciaDocumentacionRequerimientoAlegacion</p>
+<p>Cardinality:  [0..*]</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+
+
+
+
+## Entidad Descripción de una incidencia de documentación: “IncidenciaDocumentacionRequerimientoIncidencia”
+
+Entidad para almacenar, en todos los idiomas soportados por la aplicación, la descripción asociada a una incidencia recibida relativa a un documento entregado en la justificación. La incidencia sobre el documento se recibe a través de un requerimiento sobre la justificación
+
+
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<tbody>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p><strong>ATTRIBUTES</strong></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p> incidenciaDocumentacionRequerimiento : IncidenciaDocumentacionRequerimiento  Private</p>
+<p>Incidencia sobre la documentación con la que se corresponde la descripción. Es una FK a la tabla "IncidenciaDocumentacionRequerimiento" </p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>lang : String  Private</p>
+<p>Identificador del idioma en el que está expresada la incidencia de documentación recibida en el requerimiento. Cada idioma se representa por un código de 2 caracteres:</p>
+<ul>
+<li><p>es</p></li>
+<li><p>en</p></li>
+<li><p>eu  </p></li>
+</ul></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>value_ : String  Private</p>
+<p>Descripción de la incidencia recibida sobre la documentación. Está expresada en el idioma indicado por el campo "lang". </p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p><strong>ASSOCIATIONS</strong></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Association (direction: Unspecified)</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) IncidenciaDocumentacionRequerimiento</p>
+<p>Cardinality:  [1]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) IncidenciaDocumentacionRequerimientoIncidencia</p>
+<p>Cardinality:  [0..*]</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+## Entidad Nombre de documento de una incidencia de documentación: “IncidenciaDocumentacionRequermientoNombreDocumento”
+
+Entidad para almacenar, en todos los idiomas soportados por la aplicación, el nombre del documento sobre el que se recibe una incidencia en un requerimiento. El nombre del documento es obligatorio, ha de introducirse al menos en un idioma
+
+
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<tbody>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p><strong>ATTRIBUTES</strong></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p> incidenciaDocumentacionRequerimiento : IncidenciaDocumentacionRequerimiento  Private</p>
+<p>Incidencia sobre la documentación a la que hace referencia el nombre del documento. Es una FK a la tabla "IncidenciaDocumentacionRequerimiento"</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p> lang : String  Private</p>
+<p>Identificador del idioma en el que está expresado el nombre del documento sobre el que se recibe incidencia. Cada idioma se representa por un código de 2 caracteres:</p>
+<ul>
+<li><p>es</p></li>
+<li><p>en</p></li>
+<li><p>eu </p></li>
+</ul></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p> value_ : String  Private</p>
+<p>Valor del nombre del documento al que hace referencia la incidencia reportada en el requerimiento. Está expresado en el idioma indicado por el campo "lang". </p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p><strong>ASSOCIATIONS</strong></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p> Association (direction: Unspecified) </p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) IncidenciaDocumentacionRequerimiento</p>
+<p>Cardinality:  [1]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) IncidenciaDocumentacionRequermientoNombreDocumento</p>
+<p>Cardinality:  [1..*]</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+
+
+## Entidad Seguimiento de un periodo de justificación: “ProyectoPeriodoJustificacionSeguimiento”
+
+Información relativa al seguimiento de un periodo de justificación.
+
+<div class="table-wrap">
+
+|                                                                       |
+|:----------------------------------------------------------------------|
+| **ATTRIBUTES**                                                        |
+| id : Long  Private                                                    |
+| proyectoPeriodoJustificacion : ProyectoPeriodoJustificacion  Private  |
+| importeJustificado : BigDecimal  Private                              |
+| importeJustificadoCD : BigDecimal  Private                            |
+| importeJustificadoCI : BigDecimal  Private                            |
+| importeAceptado : BigDecimal  Private                                 |
+| importeAceptadoCD : BigDecimal  Private                               |
+| importeAceptadoCI : BigDecimal  Private                               |
+| importeRechazado : BigDecimal  Private                                |
+| importeRechazadoCD : BigDecimal  Private                              |
+| importeRechazadoCI : BigDecimal  Private                              |
+| importeAlegado : BigDecimal  Private                                  |
+| importeAlegadoCD : BigDecimal  Private                                |
+| importeAlegadoCI : BigDecimal  Private                                |
+| importeReintegrar : BigDecimal  Private                               |
+| importeReintegrarCD : BigDecimal  Private                             |
+| importeReintegrarCI : BigDecimal  Private                             |
+| importeReintegrado : BigDecimal  Private                              |
+| importeReintegradoCD : BigDecimal  Private                            |
+| importeReintegradoCI : BigDecimal  Private                            |
+| interesesReintegrados : BigDecimal  Private                           |
+| interesesReintegrar : BigDecimal  Private                             |
+| fechaReintegro : TimeStamp  Private                                   |
+| justificanteReintegro : String  Private                               |
+| proyectoAnualidad : ProyectoAnualidad  Private                        |
+| importeNoEjecutado : BigDecimal  Private                              |
+| importeNoEjecutadoCD : BigDecimal  Private                            |
+| importeNoEjecutadoCI : BigDecimal  Private                            |
+
+</div>
+
+
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p><strong>ASSOCIATIONS</strong></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Association (direction: Unspecified)</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) ProyectoPeriodoJustificacionSeguimiento</p>
+<p>Cardinality:  [0..1</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) ProyectoAnualidad</p>
+<p>Cardinality:  [1]</p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Association (direction: Unspecified) </p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) ProyectoPeriodoJustificacion</p>
+<p>Cardinality:  [1]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) ProyectoPeriodoJustificacionSeguimiento</p>
+<p>Cardinality:  [0..1]</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+
+
+## Entidad Seguimiento de la justificación de un proyecto: “ProyectoSeguimientoJustificacion”
+
+Estado actual de la justificación de un proyecto. Como el planteamiento implementado en el SGI parte de que la justificación se realiza en el SGE (definición del requisito de UMU), la relación se establece con "ProyectoProyectoSGE", en lugar de establecerse con "proyecto"
+
+<div class="table-wrap">
+
+|                                                     |
+|:----------------------------------------------------|
+| **ATTRIBUTES**                                      |
+| id : Long  Private                                  |
+| proyectoProyectoSGE : ProyectoProyectoSGE  Private  |
+| importeJustificado : BigDecimal  Private            |
+| importeJustificadoCD : BigDecimal  Private          |
+| importeJustificadoCI : BigDecimal  Private          |
+| importeAceptado : BigDecimal  Private               |
+| importeAceptadoCD : BigDecimal  Private             |
+| importeAceptadoCI : BigDecimal  Private             |
+| importeRechazado : BigDecimal  Private              |
+| importeRechazadoCD : BigDecimal  Private            |
+| importeRechazadoCI : BigDecimal  Private            |
+| importeAlegado : BigDecimal  Private                |
+| importeAlegadoCD : BigDecimal  Private              |
+| importeAlegadoCostesCI : BigDecimal  Private        |
+| importeReintegrar : BigDecimal  Private             |
+| importeReintegrarCD : BigDecimal  Private           |
+| importeReintegrarCI : BigDecimal  Private           |
+| importeReintegrado : BigDecimal  Private            |
+| importeReintegradoCD : BigDecimal  Private          |
+| importeReintegradoCI : BigDecimal  Private          |
+| interesesReintegrados : BigDecimal  Private         |
+| interesesReintegrar : BigDecimal  Private           |
+| fechaReintegro : Timestamp  Private                 |
+| justificanteReintegro : String  Private             |
+| importeNoEjecutado : BigDecimal  Private            |
+| importeNoEjecutadoCD : BigDecimal  Private          |
+| importeNoEjecutadoCI : BigDecimal  Private          |
+
+</div>
+
+
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p><strong>ASSOCIATIONS</strong></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Association (direction: Unspecified) </p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) ProyectoProyectoSGE</p>
+<p>Cardinality:  [1]</p>
+<p><br />
+</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) ProyectoSeguimientoJustificacion</p>
+<p>Cardinality:  [1]</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+
+
+## Entidad requerimiento sobre una justificación: “RequerimientoJustificacion”
+
+Requerimientos remitidos por el organismo al que va dirigido la justificación económica de un proyecto. Un requerimiento puede estar asociado a un periodo de justificación concreto o puede ser general.
+
+La implementación realizada parte de los requisitos de UMU, organización en la que se dispone de una herramienta para realizar la justificación económica desde el SGE. De acuerdo a esto, un requerimiento está vinculado a la relación "ProyectoProyectoSGE", y no directamente a la tabal "Proyecto".
+
+La posible relación del requerimiento con un periodo de justificación se establece a través del campo "identificador de justificación" de la tabla "proyecto periodo justificacion". Este identificador hace referencia al SGE. Es el identificador en el SGE con el que corresponde el periodo de justificación.
+
+
+
+<div class="table-wrap">
+
+|                                                                       |
+|:----------------------------------------------------------------------|
+| **ATTRIBUTES**                                                        |
+| id : Long  Private                                                    |
+| proyectoPeriodoJustificacion : ProyectoPeriodoJustificacion  Private  |
+| proyectoProyectoSGE : ProyectoProyectoSGE  Private                    |
+| requerimientoPrevio : RequerimientoJustificacion  Private             |
+| fechaNotificacion : Timstamp  Private                                 |
+| fechaFinAlegacion : Timestamp  Private                                |
+| importeAceptadoCD : BigDecimal  Private                               |
+| importeAceptadoCI : BigDecimal  Private                               |
+| importeRechazadoCD : BigDecimal  Private                              |
+| importeRechazadoCI : BigDecimal  Private                              |
+| importeReintegrar : BigDecimal  Private                               |
+| importeReintegrarCD : BigDecimal  Private                             |
+| importeReintegrarCI : BigDecimal  Private                             |
+| interesesReintegrar : BigDecimal  Private                             |
+| importeAceptado : BigDecimal  Private                                 |
+| importeRechazado : BigDecimal  Private                                |
+| numRequerimiento : Integer  Private                                   |
+| subvencionJustificada : BigDecimal  Private                           |
+| defectoSubvencion : BigDecimal  Private                               |
+| anticipoJustificado : BigDecimal  Private                             |
+| defectoAnticipo : BigDecimal  Private                                 |
+| recursoEstimado : Boolean  Private                                    |
+| tipoRequerimiento : TipoRequerimiento  Private                        |
+
+</div>
+
+
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p><strong>ASSOCIATIONS</strong></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p> Association (direction: Unspecified) </p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) RequerimientoJustificacion</p>
+<p>Cardinality:  [1]</p>
+<p><br />
+</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) RequerimientoJustificacionObservaciones</p>
+<p>Cardinality:  [0..*]</p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Association (direction: Unspecified) </p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) RequerimientoJustificacion</p>
+<p>Cardinality:  [1]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) AlegacionRequerimiento</p>
+<p>Cardinality:  [0..1]</p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Association (direction: Unspecified)  </p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) RequerimientoJustificacion</p>
+<p>Cardinality:  [1]</p>
+<p><br />
+</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) IncidenciaDocumentacionRequerimiento</p>
+<p>Cardinality:  [0..*]</p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Association (direction: Unspecified) </p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) RequerimientoJustificacion</p>
+<p>Cardinality:  [0..*]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) TipoRequerimiento</p>
+<p>Cardinality:  [1]</p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Association (direction: Unspecified) </p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) RequerimientoJustificacion</p>
+<p>Cardinality:  [1..*]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) GastoRequerimientoJustificacion</p>
+<p>Cardinality:  [0..*]</p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Association (direction: Unspecified) </p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) RequerimientoJustificacion</p>
+<p>Cardinality:  [1]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) DocumentoRequerimiento</p>
+<p>Cardinality:  [0..*]</p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Association (direction: Unspecified) </p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) RequerimientoJustificacion</p>
+<p>Cardinality:  [1]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) RequerimientoJustificacion</p>
+<p>Cardinality:  [0..1]</p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Association (direction: Unspecified) </p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) ProyectoPeriodoJustificacion</p>
+<p>Cardinality:  [0..1]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) RequerimientoJustificacion</p>
+<p>Cardinality:  [0..*]</p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Association (direction: Unspecified) </p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) RequerimientoJustificacion</p>
+<p>Cardinality:  [1]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) RequerimientoJustificacion</p>
+<p>Cardinality:  [0..1]</p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p> Association (direction: Unspecified) </p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) ProyectoProyectoSGE</p>
+<p>Cardinality:  [1]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) RequerimientoJustificacion</p>
+<p>Cardinality:  [0..*]</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+
+
+## Entidad Observaciones de un requerimiento: “RequerimientoJustificacionObservaciones”
+
+Entidad para almacenar, en todos los idiomas soportados por la aplicación, el campo observaciones de un requerimiento recibido para una justificación. El campo observaciones es un campo de texto y es opcional, no es obligatorio que se introduzca en ninguno de los idiomas
+
+
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<tbody>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p><strong>ATTRIBUTES</strong></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p> requerimientoJustificacion : RequerimientoJustificacion  Private</p>
+<p>Requerimiento de justificación al que pertenecen las observaciones. Es una FK a la tabla RequerimientoJustificacion.</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>lang : String  Private</p>
+<p> Identificador del idioma en el que está expresadas las observaciones del requerimiento. Cada idioma se representa por un código de 2 caracteres:</p>
+<ul>
+<li><p>es</p></li>
+<li><p>en</p></li>
+<li><p>eu </p></li>
+</ul></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p> value_ : String  Private</p>
+<p>Valor del campo observaciones de un requerimiento de justificación. Es un texto expresado en el idioma indicado por el campo "lang" </p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p><strong>ASSOCIATIONS</strong></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Association (direction: Unspecified) </p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) RequerimientoJustificacion</p>
+<p>Cardinality:  [1]</p>
+<p><br />
+</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) RequerimientoJustificacionObservaciones</p>
+<p>Cardinality:  [0..*]</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+## Entidad Tipo de requerimiento: “TipoRequerimiento”
+
+Entidad para almacenar los tipos de requerimiento de justificación disponibles en el SGI. Es una tabla que actualmente no dispone de gestión a través de la aplicación. Su mantenimiento debe realizarse directamente sobre BD.
+
+
+
+<div class="table-wrap">
+
+|                            |
+|:---------------------------|
+| **ATTRIBUTES**             |
+| id : String  Private       |
+| activo : Booelan  Private  |
+
+</div>
+
+
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p><strong>ASSOCIATIONS</strong></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Association (direction: Unspecified) </p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) TipoRequerimiento</p>
+<p>Cardinality:  [1]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) TipoRequerimientoNombre</p>
+<p>Cardinality:  [1..*]</p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p> Association (direction: Unspecified) </p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) RequerimientoJustificacion</p>
+<p>Cardinality:  [0..*]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) TipoRequerimiento</p>
+<p>Cardinality:  [1]</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+## Entidad Nombre de un tipo de requerimiento: “TipoRequerimientoNombre”
+
+Entidad para almacenar, en todos los idiomas soportados por la aplicación, el nombre de los tipos de requerimientos de justificación disponibles. El nombre de un tipo de requerimiento es obligatorio.
+
+
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<tbody>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p><strong>ATTRIBUTES</strong></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>tipoRequerimiento : TipoRequerimiento  Private</p>
+<p>Tipo de requerimiento al que está asociado el nombre. Es una FK a la tabla "TipoRequerimiento". </p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>lang : String  Private</p>
+<p>Identificador del idioma en el que está expresado el nombre del tipo de requerimiento. Cada idioma se representa por un código de 2 caracteres:</p>
+<ul>
+<li><p>es</p></li>
+<li><p>en</p></li>
+<li><p>eu</p></li>
+</ul></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>value_ : String  Private</p>
+<p>Nombre del tipo de requerimiento. Está expresado en el idioma indicado por el campo "lang". </p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p><strong>ASSOCIATIONS</strong></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p> Association (direction: Unspecified) </p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) TipoRequerimiento</p>
+<p>Cardinality:  [1]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) TipoRequerimientoNombre</p>
+<p>Cardinality:  [1..*]</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+</div>
+
+</div>
+
+<div id="footer" role="contentinfo">
+
+<div class="section footer-body">
+
+Document generated by Confluence on oct 27, 2025 08:54
+
+<div id="footer-logo">
+
+[Atlassian](https://www.atlassian.com/)
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 
 

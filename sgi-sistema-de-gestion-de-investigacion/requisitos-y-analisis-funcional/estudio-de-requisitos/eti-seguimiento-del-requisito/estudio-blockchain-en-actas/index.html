@@ -796,7 +796,149 @@
 
   <h1>Estudio blockchain en actas</h1>
 
+<div id="page">
 
+<div id="main" class="aui-page-panel">
+
+<div id="main-header">
+
+<div id="breadcrumb-section">
+
+1.  [Hércules](index.html)
+2.  [Hércules](/)
+3.  [SGI. Sistema de gestión de investigación](//sgi-sistema-de-gestion-de-investigacion)
+4.  [Requisitos y análisis funcional](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional)
+5.  [Estudio de requisitos](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/estudio-de-requisitos)
+6.  [ETI - Seguimiento del requisito](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/estudio-de-requisitos/eti-seguimiento-del-requisito)
+
+</div>
+
+# <span id="title-text"> Hércules : Estudio Blockchain en Actas </span>
+
+</div>
+
+<div id="content" class="view">
+
+<div class="page-metadata">
+
+Created by <span class="author"> Usuario desconocido (lorena.alvarez)</span>, last updated on jun 22, 2022
+
+</div>
+
+<div id="main-content" class="wiki-content group">
+
+<div class="toc-macro rbtoc1761550707736">
+
+- [Introducción](#EstudioBlockchainenActas-Introducción)
+- [Actas](#EstudioBlockchainenActas-Actas)
+  - [Finalizar acta](#EstudioBlockchainenActas-Finalizaracta)
+  - [Confirmar registro blockchain](#EstudioBlockchainenActas-Confirmarregistroblockchain)
+  - [Documento acta](#EstudioBlockchainenActas-Documentoacta)
+- [Cambios en la base de datos](#EstudioBlockchainenActas-Cambiosenlabasededatos)
+- [Variables de configuración](#EstudioBlockchainenActas-Variablesdeconfiguración)
+
+</div>
+
+# Introducción
+
+Se quiere añadir en el SGI una integración con el blockchain de la Universidad. El caso de uso a implementar es el de las actas de la comisión de ética.
+
+Al finalizar un acta se creará el documento del acta y se guardará en el SGDOC.
+
+El SGI se lo enviará a un servicio web habilitado en un servidor. Este servicio devolverá el identificador de la transacción que el SGI deberá de almacenar.
+
+Para las actas finalizadas se mostrará un nuevo icono para confirmar el blockchain y se llamará al servicio habilitado para ello del blockchain (o los servicios)
+
+Se usará una variable de configuración del módulo CONF en el SGI para indicar si se va a hacer la integración con el blockchain o no.
+
+# Actas
+
+## Finalizar acta
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852414/597876581.png" class="confluence-embedded-image confluence-content-image-border" draggable="false" data-image-src="attachments/597852414/597876581.png" data-unresolved-comment-count="0" data-linked-resource-id="597876581" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="ListadoActas.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852414" data-linked-resource-container-version="14" tabindex="0" width="850" height="275" /></span>
+
+Actualmente el documento del acta se genera online, es decir, no se guarda en ningún momento el documento, siempre se genera en el momento que el usuario pincha sobre el icono del pdf.
+
+Añadir a la acción "**Finalizar acta**" (icono del candado) la siguiente funcionalidad:
+
+- Generar el documento del acta llamando al servicio de reporting.
+- Guardar el documento generado en el SGDOC.
+- Llamar al servicio **POST /documentos** con el documento del acta generado. El SGDOC generará el hash del documento y lo guardará como un metadato. Devuelve el identificador del documento.  NUEVA FUNCIONALIDAD A AÑADIR EN EL SGDOC, QUE AL ALMACENAR UN DOCUMENTO CALCULE SU HASH Y LO GUARDE COMO UN METADATO.
+- Guardar en la tabla "Acta" el identificador del documento devuelto por el SGDOC (campo "documentoRef")
+- En el caso que la variable de CONF "blockchain_enable" este a true:
+  - Se llamará al servicio para sellar el  documento en blockchain pasando como parámetro el hash del documento.
+  - Guardar el id de la transacción devuelta en la tabla "Acta" (campo "transaccionRef").
+
+## Confirmar registro blockchain
+
+Sólo accesible para el rol ACT-ETI-001-Gestor (con el permiso ETI-ACT-FIN que es el mismo que para Finalizar acta)
+
+En el caso que la variable de configuración  CNF "blockchain_enable" este a true  y si el acta esta en estado "Finalizada" se añadirá un nuevo icono en el listado de resultados del buscador de actas que represente a la acción "Confirmar registro".
+
+Esta acción consistirá en:
+
+- Obtener  los metadatos almacenado en el SGDOC del acta (llamar al servicio GET /documentos)
+- Llamar al servicio del blockchain que devuelve la cadena (el hash) que enviamos en su momento pasando como parámetro el id de la transacción almacenada en nuestra tabla acta (campo "transaccionRef").
+- Comprobar que el hash del documento es igual a la cadena devuelta por el servicio.
+- En caso afirmativo mostrar el mensaje "El acta no se ha alterado, es un documento correcto" , en otro caso mostrar el mensaje "El acta se ha alterado, no es documento correcto."
+
+## Documento acta
+
+Si el acta esta en estado "En elaboración" al pinchar sobre el icono de descarga del fichero (icono del pdf) se seguirá generando de forma automática a partir de la plantilla el informe de acta (en ese momento). Si el alta esta en estado "Finalizada" se descargará el documento almacenado en el SGDOC (a partir del identificador "documentoRef" almacenado en la tabla "Acta").
+
+# Cambios en la base de datos
+
+Crear en la tabla "Acta" los campos:
+
+- documentoRef
+- transaccionRef
+
+# Variables de configuración
+
+Crear en el módulo de CNF (configuración) una nueva variable que indique si se va a realizar la integración con el blockchain o no. Dicha variable se llamará "blockchain_enable" que por defecto estará a false.
+
+
+
+</div>
+
+<div class="pageSection group">
+
+<div class="pageSectionHeader">
+
+## Attachments:
+
+</div>
+
+<div class="greybox" align="left">
+
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [ListadoActas.png](/attachments/597852414/597876581.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [api.txt](/attachments/597852414/597876582.txt) (text/plain)  
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div id="footer" role="contentinfo">
+
+<div class="section footer-body">
+
+Document generated by Confluence on oct 27, 2025 08:38
+
+<div id="footer-logo">
+
+[Atlassian](https://www.atlassian.com/)
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 
 

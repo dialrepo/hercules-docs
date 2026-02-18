@@ -796,7 +796,429 @@
 
   <h1>Autorizaciones y notificaciones de proyectos externos</h1>
 
+<div id="page">
 
+<div id="main" class="aui-page-panel">
+
+<div id="main-header">
+
+<div id="breadcrumb-section">
+
+1.  [Hércules](index.html)
+2.  [Hércules](/)
+3.  [APIs de Integración](//apis-de-integracion)
+4.  [SGI: Servicios propios que expone](//apis-de-integracion/sgi-servicios-propios-que-expone)
+
+</div>
+
+# <span id="title-text"> Hércules : Autorizaciones y notificaciones de proyectos externos </span>
+
+</div>
+
+<div id="content" class="view">
+
+<div class="page-metadata">
+
+Created by <span class="author"> Usuario genérico para HERCULES</span>, last updated on mar 28, 2022
+
+</div>
+
+<div id="main-content" class="wiki-content group">
+
+------------------------------------------------------------------------
+
+<div class="toc-macro rbtoc1761553421631">
+
+- [Sistema de Gestión Investigación](#Autorizacionesynotificacionesdeproyectosexternos-SistemadeGestiónInvestigación)
+  - [Entidades](#Autorizacionesynotificacionesdeproyectosexternos-Entidades)
+  - [Modelo lógico](#Autorizacionesynotificacionesdeproyectosexternos-Modelológico)
+  - [API](#Autorizacionesynotificacionesdeproyectosexternos-API)
+    - [Definición de los objetos](#Autorizacionesynotificacionesdeproyectosexternos-Definicióndelosobjetos)
+      - [Autorizacion](#Autorizacionesynotificacionesdeproyectosexternos-Autorizacion)
+      - [NotificacionProyecto](#Autorizacionesynotificacionesdeproyectosexternos-NotificacionProyecto)
+      - [EntidadFinanciadora](#Autorizacionesynotificacionesdeproyectosexternos-EntidadFinanciadora)
+    - [Servicios](#Autorizacionesynotificacionesdeproyectosexternos-Servicios)
+
+</div>
+
+------------------------------------------------------------------------
+
+# Sistema de Gestión Investigación
+
+## Entidades
+
+<div class="table-wrap">
+
+|                      |                                                                                                                  |
+|----------------------|------------------------------------------------------------------------------------------------------------------|
+| Entidad              | Descripción                                                                                                      |
+| Autorizacion         | Contiene los datos de la solicitud de autorización para participar en un proyecto externo                        |
+| NotificacionProyecto | Contiene los datos del proyecto/contrato creado por un investigador es su CVN                                    |
+| EntidadFinanciadora  | Contiene los datos de las entidadades financiadoras de un proyecto/contrato creado por un investigador es su CVN |
+
+</div>
+
+## Modelo lógico
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="https://confluence.treelogic.com/download/attachments/121671681/CSP%20ParticipacionProyectosExternos%20Logical%20Model%281%29.bmp?version=1&amp;modificationDate=1637675450984&amp;api=v2" class="confluence-embedded-image confluence-external-resource" draggable="false" data-image-src="https://confluence.treelogic.com/download/attachments/121671681/CSP%20ParticipacionProyectosExternos%20Logical%20Model%281%29.bmp?version=1&amp;modificationDate=1637675450984&amp;api=v2" width="850" /></span>
+
+## API
+
+Características generales que todas las API REST deben de cumplir:
+
+- <a href="https://confluence.treelogic.com/display/HERCULES/Consultas+filtradas+y+paginadas" class="external-link" rel="nofollow">Consultas filtradas y paginadas</a>
+- <a href="https://confluence.treelogic.com/display/HERCULES/Formatos+de+datos+API" class="external-link" rel="nofollow">Formatos de datos API</a>
+
+### Definición de los objetos
+
+#### Autorizacion
+
+<div class="table-wrap">
+
+|                  |        |                                                                                                                                                                                                                   |
+|------------------|--------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Nombre           | Tipo   | Descripción                                                                                                                                                                                                       |
+| id               | Long   | Identificador de la solicitud de autorización                                                                                                                                                                     |
+| solicitanteRef   | String | Investigador a quien se le ha concedido la autorización. Se remitirá la referencia de investigador en el Sistema de gestión de personas.                                                                          |
+| titulo           | String | Título del proyecto.                                                                                                                                                                                              |
+| entidadRef       | String | Referencia dentro del Sistema de gestión de empresas que identifica a la entidad en la que se desarrollará el proyecto, recogida en la solicitud de autorización.                                                 |
+| responsableRef   | String | Referencia dentro del Sistema de gestión de personas (en función de como haya sido introducido el dato en la solicitud de autorización) de la persona que se ha indicado que actuará como IP del proyecto externo |
+| datosResponsable | String | Nombre y apellidos de la persona que se ha indicado que actuará como IP del proyecto externo. Se informará este campo en los casos en los que el IP no este registrado en el Sistema de gestión de personas.      |
+
+</div>
+
+
+
+
+
+<div class="code panel pdl" style="border-width: 1px;">
+
+<div class="codeHeader panelHeader pdl hide-border-bottom" style="border-bottom-width: 1px;">
+
+**Autorizacion**<span class="collapse-source expand-control" style="display:none;"><span class="expand-control-icon icon"> </span><span class="expand-control-text">Ampliar origen</span></span><span class="collapse-spinner-wrapper"></span>
+
+</div>
+
+<div class="codeContent panelContent pdl hide-toolbar">
+
+
+<pre><code class="language-syntaxhighlighter-pre">{
+    &quot;id&quot;: 1,     
+    &quot;solicitanteRef&quot;: &quot;11111111&quot;,
+    &quot;titulo&quot;: &quot;Proyecto 1 CGF/OPE-1&quot;, 
+    &quot;entidadRef&quot;: &quot;G0021150&quot;,
+    &quot;responsableRef&quot;: &quot;1245635&quot;,
+    &quot;datosResponsable&quot;: &quot;
+ }
+</code></pre>
+
+
+</div>
+
+</div>
+
+#### NotificacionProyecto
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="header">
+<th class="confluenceTh"><p>Nombre</p></th>
+<th class="confluenceTh">Tipo</th>
+<th class="confluenceTh">Descripción</th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd">proyectoCVNId</td>
+<td class="confluenceTd">String</td>
+<td class="confluenceTd">Identificador único o referencia del proyecto/contrato registrado en el CVN. Dato obligatorio.</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">solicitanteRef</td>
+<td class="confluenceTd">String</td>
+<td class="confluenceTd">Referencia de la persona dentro del sistema de gestión de personas corporativo a la que pertenece el ítem proyecto/contrato registrado en CVN. Dato obligatorio.</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">autorizacionId</td>
+<td class="confluenceTd">Long</td>
+<td class="confluenceTd"><span>Identificador de la solicitud de autorización previamente remitido por el SGI</span></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">titulo</td>
+<td class="confluenceTd">String</td>
+<td class="confluenceTd"><p>Campo título del ítem proyecto/contrato registrado en CVN. Dato obligatorio.</p>
+<p><span>La correspondencia con la norma FECYT de CVN es: s</span>e corresponderá con el campo 050.020.010.010 - Nombre del proyecto, en el caso de que el proyecto se registre en el epígrafe 050.020.010.000 - Proyectos de I+D+i financiados en convocatorias competitivas de Administraciones o entidades públicas y privadas, o con el campo 050.020.020.010 - Nombre del proyecto, en el caso de que el proyecto se registre en el epígrafe 050.020.020.000 - Contratos, convenios o proyectos de I+D+i no competitivos con Administraciones o entidades públicas o privadas.</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">codExterno</td>
+<td class="confluenceTd">String</td>
+<td class="confluenceTd"><p>Referencia que se le ha dado el proyecto en la entidad convocante/financiadora recogida en CVN.</p>
+<p><span>La correspondencia con la norma FECYT de CVN es: s</span>e corresponderá con el campo 050.020.010.260 - Código de proyecto según la entidad financiadora, en el caso de que el proyecto se registre en el epígrafe 050.020.010.000 - Proyectos de I+D+i financiados en convocatorias competitivas de Administraciones o entidades públicas y privadas, o con el campo 050.020.020.110 - Código de proyecto según la entidad financiadora, en el caso de que el proyecto se registre en el epígrafe 050.020.020.000 - Contratos, convenios o proyectos de I+D+i no competitivos con Administraciones o entidades públicas o privadas.</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">fechaInicio</td>
+<td class="confluenceTd">String</td>
+<td class="confluenceTd"><p>Fecha de inicio del proyecto/contrato recogido en CVN. Dato obligatorio.</p>
+<p><span>La correspondencia con la norma FECYT de CVN es: s</span>e corresponderá con el campo 050.020.010.270 - Fecha de inicio del proyecto, en el caso de que el proyecto se registre en el epígrafe 050.020.010.000 - Proyectos de I+D+i financiados en convocatorias competitivas de Administraciones o entidades públicas y privadas, o con el campo 050.020.020.180 - Fecha de inicio del proyecto, en el caso de que el proyecto se registre en el epígrafe 050.020.020.000 - Contratos, convenios o proyectos de I+D+i no competitivos con Administraciones o entidades públicas o privadas.</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">fechaFin</td>
+<td class="confluenceTd">String</td>
+<td class="confluenceTd"><p>Fecha de fin del proyecto/contrato recogido en CVN. Dato obligatorio.</p>
+<p><span>La correspondencia con la norma FECYT de CVN es: s</span>e corresponderá con el campo 050.020.010.410 - Fecha de finalización, en el caso de que el proyecto se registre en el epígrafe 050.020.010.000 - Proyectos de I+D+i financiados en convocatorias competitivas de Administraciones o entidades públicas y privadas. En el caso de que el proyecto se registre bajo el epígrafe 050.020.020.000 - Contratos, convenios o proyectos de I+D+i no competitivos con Administraciones o entidades públicas o privadas, este campo no estará disponible, al no estar contemplado en la norma CVN.</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">ambitoGeografico</td>
+<td class="confluenceTd">String</td>
+<td class="confluenceTd"><p>Ámbito geográfico del proyecto/contrato recogido en CVN.</p>
+<p><span>La correspondencia con la norma FECYT de CVN es: s</span>e corresponde con el campo 050.020.010.040 - Ámbito del proyecto (o 050.020.010.050 Ámbito del proyecto, otros si el valor es OTHERS) en el caso de que el proyecto se registre en el epígrafe 050.020.010.000 - Proyectos de I+D+i financiados en convocatorias competitivas de Administraciones o entidades públicas y privadas, o con el campo 050.020.020.040 Ámbito del proyecto (050.020.020.050 Ámbito del proyecto, otros) , en el caso de que el proyecto se registre en el epígrafe 050.020.020.000 - Contratos, convenios o proyectos de I+D+i no competitivos con Administraciones o entidades públicas o privadas.</p>
+<p>Se enviará el texto, no el código. Es decir:</p>
+<ul>
+<li>Autonómica</li>
+<li>Nacional</li>
+<li>Unión Europea</li>
+<li>Internacional no UE</li>
+<li>(texto del campo "Ámbito del proyecto, otros")</li>
+</ul></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">gradoContribucion</td>
+<td class="confluenceTd">String</td>
+<td class="confluenceTd"><p>Grado de contribución del proyecto/contrato recogido en CVN.</p>
+<p><span>La correspondencia con la norma FECYT de CVN es: s</span>e corresponde con el campo 050.020.010.170 - Grado de contribución en el caso de que el proyecto se registre en el epígrafe 050.020.010.000 - Proyectos de I+D+i financiados en convocatorias competitivas de Administraciones o entidades públicas y privadas, o con el campo 050.020.020.280 Grado de contribución , en el caso de que el proyecto se registre en el epígrafe 050.020.020.000 - Contratos, convenios o proyectos de I+D+i no competitivos con Administraciones o entidades públicas o privadas.</p>
+<p>Se enviará el texto, no el código. Es decir:</p>
+<ul>
+<li>Coordinador/a científico/a</li>
+<li>Coordinador del proyecto total, red o consorcio</li>
+<li>Coordinador/a gerente</li>
+<li>Investigador/a</li>
+<li>Técnico/a</li>
+<li>Titulado/a universitario/a en formación</li>
+<li>(texto del campo "Calidad en que ha participado, otros")</li>
+</ul></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">responsableRef</td>
+<td class="confluenceTd">String</td>
+<td class="confluenceTd"><p><span>Referencia de la persona dentro del Sistema de gestión de personas corporativo asociado al dato recogido sobre el campo IP de CVN. </span></p>
+<p><span>La correspondencia con la norma FECYT de CVN es: se corresponderá con el campo 050.020.010.140 Nombre del/de la investigador/a principal (IP, Co-IP,...), en el caso de que el proyecto se registre en el epígrafe 050.020.010.000 - Proyectos de I+D+i financiados en convocatorias competitivas de Administraciones o entidades públicas y privadas, o con el campo 050.020.020.250 Nombre del/de la investigador/a principal (IP, Co-IP,...), en el caso de que el proyecto se registre en el epígrafe 050.020.020.000 - Contratos, convenios o proyectos de I+D+i no competitivos con Administraciones o entidades públicas o privadas.</span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">datosResponsable</td>
+<td class="confluenceTd">String</td>
+<td class="confluenceTd"><p><span>Nombre de la persona que ocupa el cargo de IP del proyecto, recogida en CVN. <u>En caso de que el IP del proyecto no este dado de alta en el Sistema de gestión de personas.</u><br />
+</span></p>
+<p><span>La correspondencia con la norma FECYT de CVN es: se corresponderá con el campo 050.020.010.140 Nombre del/de la investigador/a principal (IP, Co-IP,...), en el caso de que el proyecto se registre en el epígrafe 050.020.010.000 - Proyectos de I+D+i financiados en convocatorias competitivas de Administraciones o entidades públicas y privadas, o con el campo 050.020.020.250 Nombre del/de la investigador/a principal (IP, Co-IP,...), en el caso de que el proyecto se registre en el epígrafe 050.020.020.000 - Contratos, convenios o proyectos de I+D+i no competitivos con Administraciones o entidades públicas o privadas.</span></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">entidadParticipacionRef</td>
+<td class="confluenceTd">String</td>
+<td class="confluenceTd"><p><span>Referencia de la entidad dentro del Sistema de gestión de empresas corporativo asociado al dato recogido sobre el campo Entidad donde se desarrolla del CVN.</span></p>
+<p><span>La correspondencia con la norma FECYT será: campo  050.020.010.100 Entidad donde se desarrolla, en el caso de que el proyecto se registre en el epígrafe 050.020.010.000 - Proyectos de I+D+i financiados en convocatorias competitivas de Administraciones o entidades públicas y privadas, o con el campo 050.020.020.370 Entidad donde se desarrolla, en el caso de que el proyecto se registre en el epígrafe 050.020.020.000 - Contratos, convenios o proyectos de I+D+i no competitivos con Administraciones o entidades públicas o privadas.</span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">datosEntidadParticipacion</td>
+<td class="confluenceTd">String</td>
+<td class="confluenceTd"><p><span>Nombre de la entidad recogido sobre el campo Entidad donde se desarrolla del CVN. <u>En caso de que la entidad no este dada de alta en el Sistema de gestión de empresas.</u></span></p>
+<p><span>La correspondencia con la norma FECYT será: campo  050.020.010.100 Entidad donde se desarrolla, en el caso de que el proyecto se registre en el epígrafe 050.020.010.000 - Proyectos de I+D+i financiados en convocatorias competitivas de Administraciones o entidades públicas y privadas, o con el campo 050.020.020.370 Entidad donde se desarrolla, en el caso de que el proyecto se registre en el epígrafe 050.020.020.000 - Contratos, convenios o proyectos de I+D+i no competitivos con Administraciones o entidades públicas o privadas.</span></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">nombrePrograma</td>
+<td class="confluenceTd">String</td>
+<td class="confluenceTd"><p><span>Nombre del programa de financiación recogido en el CVN. </span></p>
+<p><span>Se corresponde con el campo 050.020.010.250 Nombre del programa de financiación, en el caso de que el proyecto se registre en el epígrafe 050.020.010.000 - Proyectos de I+D+i financiados en convocatorias competitivas de Administraciones o entidades públicas y privadas, o con el campo 050.020.020.170 Nombre del programa asociado al proyecto, en el caso de que el proyecto se registre en el epígrafe 050.020.020.000 - Contratos, convenios o proyectos de I+D+i no competitivos con Administraciones o entidades públicas o privadas.</span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">importeTotal</td>
+<td class="confluenceTd">Numérico</td>
+<td class="confluenceTd"><p><span>Importe total del proyecto/programa recogido en el CVN. </span></p>
+<p>Se corresponde con el campo 050.020.010.290 Financiación del proyecto, cuantía total, en el caso de que el proyecto se registre en el epígrafe 050.020.010.000 - Proyectos de I+D+i financiados en convocatorias competitivas de Administraciones o entidades públicas y privadas, o con el campo 050.020.020.200 Financiación del proyecto, cuantía total, en el caso de que el proyecto se registre en el epígrafe 050.020.020.000 - Contratos, convenios o proyectos de I+D+i no competitivos con Administraciones o entidades públicas o privadas.</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">porcentajeSubvencion</td>
+<td class="confluenceTd">Numérico</td>
+<td class="confluenceTd"><p>Porcentaje subvencionado recogido en el CVN.</p>
+<p>Se corresponde con el campo 050.020.010.310 Financiación del proyecto, porcentaje en subvención, en el caso de que el proyecto se registre en el epígrafe 050.020.010.000 - Proyectos de I+D+i financiados en convocatorias competitivas de Administraciones o entidades públicas y privadas, o con el campo 050.020.020.220 Financiación del proyecto, porcentaje en subvención, en el caso de que el proyecto se registre en el epígrafe 050.020.020.000 - Contratos, convenios o proyectos de I+D+i no competitivos con Administraciones o entidades públicas o privadas.</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">documentoRef</td>
+<td class="confluenceTd">String</td>
+<td class="confluenceTd">Identificador del documento acreditativo de la concesión del proyecto</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">urlAcreditativa</td>
+<td class="confluenceTd">String</td>
+<td class="confluenceTd">URL acreditativa en repositorios ajenos a la Universidad</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">entidadesFinanciadoras</td>
+<td class="confluenceTd">Lista[EntidadFinanciadora]</td>
+<td class="confluenceTd">Listado de entidades financiadoras del CVN.</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+#### EntidadFinanciadora
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="header">
+<th class="confluenceTh"><p>Nombre</p></th>
+<th class="confluenceTh">Tipo</th>
+<th class="confluenceTh">Descripción</th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd">entidadFinanciadoraRef</td>
+<td class="confluenceTd">String</td>
+<td class="confluenceTd"><p><span>Referencia de la entidad dentro del Sistema de gestión de empresas corporativo asociado al dato recogido sobre el campo Entidades financiadoras del CVN. </span></p>
+<p><span>Se corresponde con el campo 050.020.010.190 Entidad/es financiadora/s, en el caso de que el proyecto se registre en el epígrafe 050.020.010.000 - Proyectos de I+D+i financiados en convocatorias competitivas de Administraciones o entidades públicas y privadas, o con el campo 050.020.020.120 Nombre/s entidad/es financiadora/s, en el caso de que el proyecto se registre en el epígrafe 050.020.020.000 - Contratos, convenios o proyectos de I+D+i no competitivos con Administraciones o entidades públicas o privadas.</span></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">datosEntidadFinanciadora</td>
+<td class="confluenceTd">String</td>
+<td class="confluenceTd"><p><span>Nombre de la entidad recogido sobre el campo Entidades financiadoras del CVN. <u>En caso de que la entidad no este dada de alta en el Sistema de gestión de empresas.</u></span></p>
+<p><span>Se corresponde con el campo 050.020.010.190 Entidad/es financiadora/s, en el caso de que el proyecto se registre en el epígrafe 050.020.010.000 - Proyectos de I+D+i financiados en convocatorias competitivas de Administraciones o entidades públicas y privadas, o con el campo 050.020.020.120 Nombre/s entidad/es financiadora/s, en el caso de que el proyecto se registre en el epígrafe 050.020.020.000 - Contratos, convenios o proyectos de I+D+i no competitivos con Administraciones o entidades públicas o privadas.</span></p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="code panel pdl" style="border-width: 1px;">
+
+<div class="codeHeader panelHeader pdl hide-border-bottom" style="border-bottom-width: 1px;">
+
+**NotificacionProyecto**<span class="collapse-source expand-control" style="display:none;"><span class="expand-control-icon icon"> </span><span class="expand-control-text">Ampliar origen</span></span><span class="collapse-spinner-wrapper"></span>
+
+</div>
+
+<div class="codeContent panelContent pdl hide-toolbar">
+
+
+<pre><code class="language-syntaxhighlighter-pre">{  
+    &quot;proyectoCVNId&quot;: &quot;1&quot;,
+    &quot;solicitanteRef&quot;: &quot;11111111&quot;,
+    &quot;autorizacionId&quot;: 1,     
+    &quot;titulo&quot;: &quot;Proyecto 1 CGF/OPE-1&quot;,
+    &quot;codExterno&quot;: &quot;122-566&quot;,
+    &quot;fechaInicio&quot;: &quot;2021-01-31T23:00:00Z&quot;,
+    &quot;fechaFin&quot;: &quot;2022-12-31T22:59:59Z&quot;,
+    &quot;ambitoGeografico&quot;: &quot;Nacional&quot;,
+    &quot;gradoContribucion&quot;: &quot;Investigador/a&quot;,
+    &quot;responsableRef&quot;: &quot;1245635&quot;,
+    &quot;datosResponsable&quot;: &quot;&quot;,
+    &quot;entidadParticipacionRef&quot;: &quot;&quot;,
+    &quot;datosEntidadParticipacion&quot;: &quot;Nombre de la entidad de participación&quot;,  
+    &quot;nombrePrograma&quot;: &quot;Programa de prueba&quot;,
+    &quot;importeTotal&quot;: 15000.50,
+    &quot;porcentajeSubvencion&quot;: 100.00,
+    &quot;documentoRef&quot;: &quot;12-sd5616565-1516sdf-sdf&quot;,
+    &quot;urlAcreditativa&quot;: &quot;&quot;,     
+    &quot;entidadesFinanciadoras&quot;: [
+       {
+        &quot;entidadFinanciadoraRef&quot;: &quot;G0021150&quot;,
+        &quot;datosEntidadFinanciadora&quot;:&quot;&quot;
+     },
+     {
+       &quot;entidadFinanciadoraRef&quot;: &quot;&quot;,
+        &quot;datosEntidadFinanciadora&quot;:&quot;Nombre entidad financiadora&quot;
+     }        
+ ]
+}
+</code></pre>
+
+
+</div>
+
+</div>
+
+### Servicios
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable" style="width: 99.8801%;">
+<colgroup>
+<col style="width: 7%" />
+<col style="width: 16%" />
+<col style="width: 13%" />
+<col style="width: 15%" />
+<col style="width: 39%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th class="confluenceTh"><p>Método</p></th>
+<th class="confluenceTh"><p>URL</p></th>
+<th class="confluenceTh"><p>Parámetros</p></th>
+<th class="confluenceTh"><p>Respuesta</p></th>
+<th class="confluenceTh"><p>Descripción</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td class="confluenceTd">GET</td>
+<td class="confluenceTd">/autorizaciones/modificadas-ids</td>
+<td class="confluenceTd"><p>q+s</p>
+<p>La query estará formada por:</p>
+<ul>
+<li>fechaModificacion</li>
+</ul></td>
+<td class="confluenceTd">Lista[Long]</td>
+<td class="confluenceTd"><p>Listado de Identificadores de Autorizaciones cuyo estado actual sea "autorizada" y la fecha de dicho estado  sea igual o superior a la fecha recibida como parámetro de entrada.</p>
+<p>Ejemplo:</p>
+<ul>
+<li>fechaModificacion=ge=<span>"2021-08-18T22:00:00Z"</span></li>
+</ul></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">GET</td>
+<td class="confluenceTd">/autorizaciones/{id}</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Autorizacion</td>
+<td class="confluenceTd">Datos de la autorización</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">POST</td>
+<td class="confluenceTd">/notificaciones-proyectos</td>
+<td class="confluenceTd">NotificacionProyecto</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Recibe como parámetro los campos necesarios para crear un registro en el SGI de un proyecto notificado desde el CVN</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div id="footer" role="contentinfo">
+
+<div class="section footer-body">
+
+Document generated by Confluence on oct 27, 2025 09:23
+
+<div id="footer-logo">
+
+[Atlassian](https://www.atlassian.com/)
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 
 

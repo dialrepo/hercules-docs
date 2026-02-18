@@ -796,7 +796,305 @@
 
   <h1>Iu gen 0201 busqueda por palabras clave</h1>
 
+<div id="page">
 
+<div id="main" class="aui-page-panel">
+
+<div id="main-header">
+
+<div id="breadcrumb-section">
+
+1.  [Hércules](index.html)
+2.  [Hércules](/)
+3.  [SGI. Sistema de gestión de investigación](//sgi-sistema-de-gestion-de-investigacion)
+4.  [Requisitos y análisis funcional](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional)
+5.  [Análisis Funcional SGI - Hércules](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules)
+6.  [GEN - Aspectos generales](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales)
+7.  [PLCL - Palabras Clave](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/plcl-palabras-clave)
+8.  [GEN - Palabras Clave - Interfaz de Usuario](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/plcl-palabras-clave/gen-palabras-clave-interfaz-de-usuario)
+
+</div>
+
+# <span id="title-text"> Hércules : IU-GEN-0201 - Búsqueda por palabras clave </span>
+
+</div>
+
+<div id="content" class="view">
+
+<div class="page-metadata">
+
+Created by <span class="author"> Usuario desconocido (alicia.alvarez)</span>, last updated on jun 24, 2022
+
+</div>
+
+<div id="main-content" class="wiki-content group">
+
+<div class="contentLayout2">
+
+<div class="columnLayout single" layout="single">
+
+<div class="cell normal" data-type="normal">
+
+<div class="innerCell">
+
+<div class="plugin-tabmeta-details">
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable" style="width: 75.1988%;">
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 84%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<th class="confluenceTh">Cod. IU</th>
+<td class="confluenceTd">IU-GEN-0201 Búsqueda por palabras clave</td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Ver. objetivo</th>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh">Ver. IU</th>
+<td class="confluenceTd">1.0.0</td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Estado</th>
+<td class="confluenceTd"><div class="content-wrapper">
+<div class="content-wrapper">
+<span class="status-macro aui-lozenge aui-lozenge-complete conf-macro output-inline">PENDIENTE_</span>
+</div>
+</div></td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh">Fec. Aprobación</th>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Épica, historia</th>
+<td class="confluenceTd"><div class="content-wrapper">
+<p><br />
+</p>
+</div></td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh">Actores</th>
+<td class="confluenceTd">ACT-CSP-001-Investigador, ACT-CSP-003-Gestor, ACT-CSP-004-Administrador, ACT-CSP-005-Visor, ACT-PII-001-Gestor</td>
+</tr>
+<tr class="even">
+<th class="confluenceTh"><p>Frecuencia</p></th>
+<td class="confluenceTd">Baja</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+# Búsqueda por Palabras Clave
+
+Para realizar la búsqueda por palabras clave, se integrará en los buscadores de las entidades que dispongan de esta funcionalidad un campo adicional de texto para poder filtrar por una o varias palabras clave. Para cada entidad se identificará en qué posición en pantalla ha de aparecer. Este campo tendrá un comportamiento especial tal y como se describe a continuación.
+
+A modo de ejemplo, se presentan dos flujos en la pantalla de **búsqueda ampliada de proyectos** del módulo CSP, pero la filosofía sería la misma para el resto de entidades que dispongan de esta funcionalidad.
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable" style="width:100%;">
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 12%" />
+<col style="width: 74%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<th colspan="3" class="confluenceTd"><div class="content-wrapper">
+<p><strong><em>Ejemplo 1: hay resultados en la búsqueda</em></strong></p>
+<p>A la hora de buscar un proyecto por una nueva palabra clave, por ejemplo, "vespa", al comenzar a escribir los primeros caracteres se sugerirán palabras ya existentes en el diccionario general del SGI para, si se quiere, poder seleccionar una.</p>
+<p><strong><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852590/598835248.png" class="confluence-embedded-image confluence-content-image-border" draggable="false" data-image-src="attachments/597852590/598835248.png" data-unresolved-comment-count="0" data-linked-resource-id="598835248" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="palabrasClave_buscadorProyectos_conResultados.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852590" data-linked-resource-container-version="11" tabindex="0" width="800" /></span></strong></p>
+<div class="content-wrapper">
+Si se decide seleccionar una palabra del diccionario, la elegimos del desplegable y pulsamos la tecla "enter" y se añadiría la palabra clave a la lista de palabras clave por las que filtrar los proyectos. La palabra clave "vespa" aparece en la lista de palabras por las que filtrar los proyectos.
+</div>
+<div class="content-wrapper">
+<p>Podemos además combinar filtros. Además se puede filtrar por una palabra que, como en el ejemplo a continuación, no existe en el diccionario y por tanto, se introduce completa manualmente, como es "avispa asiática".</p>
+<p>Una vez escrita la segunda palabra a usar como filtro, "avispa asiática", se debe pulsar la tecla "enter" y se añadiría la palabra clave a la lista de palabras clave por las que filtrar los proyectos.</p>
+<p><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852590/598835250.png" class="confluence-embedded-image confluence-content-image-border" draggable="false" data-image-src="attachments/597852590/598835250.png" data-unresolved-comment-count="0" data-linked-resource-id="598835250" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="palabrasClave_buscadorProyectos_conResultados (3) (1) (1).png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852590" data-linked-resource-container-version="11" tabindex="0" width="800" /></span></p>
+<p>La nueva palabra clave aparece en la lista de palabras por las que filtrar los proyectos.</p>
+<p><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852590/598835249.png" class="confluence-embedded-image confluence-content-image-border" draggable="false" data-image-src="attachments/597852590/598835249.png" data-unresolved-comment-count="0" data-linked-resource-id="598835249" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="palabrasClave_buscadorProyectos_conResultados (3) (1).png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852590" data-linked-resource-container-version="11" tabindex="0" width="800" /></span></p>
+<p>Pulsamos el botón Buscar y se lanza la búsqueda de proyectos asociados a las palabras clave introducidas. La búsqueda que se realizará será la de que el proyecto esté asociado con la palabra clave "vespa" O con la palabra "avispa asiática".</p>
+<p>HAY UN RESULTADO POR "vespa", el proyecto con acrónimo REF003, que saldrá en el resultado aunque no tenga asociada la palabra "avispa asiática". Con la palabra clave "avispa asiática", no hay ningún proyecto.</p>
+<p>Se presenta el resultado de la búsqueda.</p>
+<p><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852590/598835251.png" class="confluence-embedded-image confluence-content-image-border" draggable="false" data-image-src="attachments/597852590/598835251.png" data-unresolved-comment-count="0" data-linked-resource-id="598835251" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="palabrasclavebuscadorproyectosconresultados_2.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852590" data-linked-resource-container-version="11" tabindex="0" width="800" /></span></p>
+<p><strong><em>Ejemplo 2: eliminar palabra clave del filtro y resultado donde no hay coincidencias en la búsqueda</em></strong></p>
+<p>Se puede también eliminar una o varias de las palabras clave por las que filtrar pulsando sobre el aspa situada al lado de cada una.</p>
+<p>Si por ejemplo, teniendo dos palabras clave en el filtro, "vespa" y "avispa asiática" eliminamos la palabra "vespa" del filtro y volvemos a buscar de nuevo, el resultado sería que no hay proyectos que cumplan el criterio de búsqueda.</p>
+<p><em><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852590/598835254.png" class="confluence-embedded-image confluence-content-image-border" draggable="false" data-image-src="attachments/597852590/598835254.png" data-unresolved-comment-count="0" data-linked-resource-id="598835254" data-linked-resource-version="2" data-linked-resource-type="attachment" data-linked-resource-default-alias="detalle palabraclave.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852590" data-linked-resource-container-version="11" tabindex="0" width="600" /></span></em></p>
+<p>Una vez pulsado el botón Buscar, vemos que no hay ningún proyecto asociado a la palabra clave "avispa asiática".</p>
+<p><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852590/598835261.png" class="confluence-embedded-image confluence-content-image-border" draggable="false" data-image-src="attachments/597852590/598835261.png" data-unresolved-comment-count="0" data-linked-resource-id="598835261" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="palabrasClave_buscadorProyectos_sinResultados.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852590" data-linked-resource-container-version="11" tabindex="0" width="800" /></span></p>
+</div>
+</div></th>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Nombre</th>
+<th class="confluenceTh">Tipo</th>
+<th class="confluenceTh"><p>Características / Notas</p></th>
+</tr>
+<tr class="odd">
+<th colspan="3" class="highlight-blue confluenceTd" data-highlight-colour="blue">Campos de búsqueda del registro de la entidad principal (en el ejemplo, proyectos)</th>
+</tr>
+<tr class="even">
+<th colspan="3" class="highlight-blue confluenceTd" data-highlight-colour="blue">Campo de búsqueda por palabras clave</th>
+</tr>
+<tr class="odd">
+<th class="confluenceTd">Palabras clave</th>
+<th class="confluenceTd"><p>Componente a medida</p></th>
+<th class="confluenceTd"><p>Lista de palabras clave por las que buscar los registros.</p>
+<p>Al comenzar a escribir en la caja de texto los primeros caracteres, se sugerirán palabras ya existentes en el diccionario común de palabras clave del SGI, que se obtendrá a través del requisito de integración <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0030-sgo-integracion-con-sistema-de-gestion-de-la-estructura-organica/req-int-0030-sgo-0091-buscar-palabras-clave">REQ-INT-0030-SGO-0091 - Buscar palabras clave</a>, para poder seleccionar una por la que buscar los registros.</p>
+<p>Si la palabra por la que se quiere buscar no existe en dicho diccionario, se podrá introducir manualmente en el componente.</p>
+<p>Tanto en un caso como en otro, la acción de incluir la palabra clave seleccionada o introducida manualmente como criterio de búsqueda deberá completarse pulsando a continuación la tecla "enter".</p>
+<p>La funcionalidad de este componente seguirá la definida en <a href="https://material.angular.io/components/chips/overview#chips-input" class="external-link" rel="nofollow">https://material.angular.io/components/chips/overview#chips-input</a>.</p></th>
+</tr>
+<tr class="even">
+<th class="confluenceTd">Eliminar</th>
+<th class="confluenceTd">Icono de acción</th>
+<th class="confluenceTd">Acción "Eliminar" de la palabra clave de la lista de palabras clave por las que filtrar los registros.</th>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable" style="width:81%;">
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 50%" />
+<col style="width: 16%" />
+</colgroup>
+<tbody>
+<tr class="header">
+<th class="confluenceTh">Acciones</th>
+<th class="confluenceTh">Descripción</th>
+<th class="confluenceTh"> Enlace CU.</th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd">Eliminar (palabra clave por la que filtrar)</td>
+<td class="confluenceTd"><p><span>Se elimina la palabra clave de la lista de palabras clave por las que buscar los registros.</span></p></td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">Pulsar "enter" tras seleccionar o escribir palabra clave</td>
+<td class="confluenceTd"><p>Se añade la nueva palabra clave indicada en la caja de texto "Palabras clave" a la lista de palabras clave por las que filtrar los registros.</p></td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+## Interfaces y casos de uso relacionados
+
+</div>
+
+</div>
+
+</div>
+
+<div class="columnLayout two-equal" layout="two-equal">
+
+<div class="cell normal" data-type="normal">
+
+<div class="innerCell">
+
+<img src="plugins/servlet/confluence/placeholder/unknown-macro" class="wysiwyg-unknown-macro" />
+
+</div>
+
+</div>
+
+<div class="cell normal" data-type="normal">
+
+<div class="innerCell">
+
+<img src="plugins/servlet/confluence/placeholder/unknown-macro" class="wysiwyg-unknown-macro" />
+
+</div>
+
+</div>
+
+</div>
+
+<div class="columnLayout single" layout="single">
+
+<div class="cell normal" data-type="normal">
+
+<div class="innerCell">
+
+## Permisos de acceso a la pantalla
+
+Los permisos que aplican en estas pantallas y por tanto a este campo adicional serán las ya definidas en cada funcionalidad o IU concreto donde aplique.
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="pageSection group">
+
+<div class="pageSectionHeader">
+
+## Attachments:
+
+</div>
+
+<div class="greybox" align="left">
+
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [palabrasclavegestin1_2_1_1_1.png](/attachments/597852590/598835252.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [detalle palabraclave.png](/attachments/597852590/598835260.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [palabrasclavegestin1_2.png](/attachments/597852590/598835253.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [palabrasClave_buscadorProyectos_conResultados.png](/attachments/597852590/598835248.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [palabrasClave_buscadorProyectos_conResultados (3) (1) (1).png](/attachments/597852590/598835250.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [palabrasClave_buscadorProyectos_conResultados (3) (1).png](/attachments/597852590/598835249.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [palabrasclavebuscadorproyectosconresultados_2.png](/attachments/597852590/598835251.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [palabrasClave_buscadorProyectos_sinResultados.png](/attachments/597852590/598835261.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [detalle palabraclave.png](/attachments/597852590/598835254.png) (image/png)  
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div id="footer" role="contentinfo">
+
+<div class="section footer-body">
+
+Document generated by Confluence on oct 27, 2025 08:39
+
+<div id="footer-logo">
+
+[Atlassian](https://www.atlassian.com/)
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 
 

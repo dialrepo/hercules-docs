@@ -796,7 +796,377 @@
 
   <h1>Bases de datos</h1>
 
+<div id="page">
 
+<div id="main" class="aui-page-panel">
+
+<div id="main-header">
+
+<div id="breadcrumb-section">
+
+1.  [Hércules](index.html)
+2.  [Hércules](/)
+3.  [SGI. Sistema de gestión de investigación](//sgi-sistema-de-gestion-de-investigacion)
+4.  [Diseño](//sgi-sistema-de-gestion-de-investigacion/diseno)
+
+</div>
+
+# <span id="title-text"> Hércules : Bases de datos </span>
+
+</div>
+
+<div id="content" class="view">
+
+<div class="page-metadata">
+
+Created by <span class="author"> Usuario genérico para HERCULES</span>, last updated by <span class="editor"> Reyes Hernández-Mora Martínez</span> on dic 01, 2023
+
+</div>
+
+<div id="main-content" class="wiki-content group">
+
+Antes de describir las diferentes bases de datos del SGI es importante ponerse en contexto dentro de la arquitectura de la aplicación, para ello, se incluye como referencia el siguiente diagrama, que representa tanto un modelo de despliegue como de comunicaciones a alto nivel entre cada una de las piezas que componen el SGI, así como las comunicaciones con otros sistemas externos.
+
+## **Arquitectura del SGI**
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/676986997/676986998.png" class="confluence-embedded-image" draggable="false" data-image-src="attachments/676986997/676986998.png" data-unresolved-comment-count="0" data-linked-resource-id="676986998" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="SGI Deployment Model.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="676986997" data-linked-resource-container-version="118" tabindex="0" height="400" /></span>
+
+
+ 
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable" style="width: 95.9519%;">
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 14%" />
+<col style="width: 32%" />
+<col style="width: 8%" />
+<col style="width: 31%" />
+</colgroup>
+<tbody>
+<tr class="header">
+<th colspan="2" class="confluenceTh">Elemento</th>
+<th class="confluenceTh">Descripción</th>
+<th class="confluenceTh">Nº Elementos</th>
+<th class="confluenceTh">Lista</th>
+</tr>
+&#10;<tr class="odd">
+<th rowspan="3" class="confluenceTh">Elementos que acceden al SGI</th>
+<th class="highlight-#ffebe6 confluenceTh" data-highlight-colour="#ffebe6">Dispositivo Sistema</th>
+<td class="confluenceTd">Representa a cada uno de los sistemas que pueden comunicarse con el SGI iniciando un circuito de petición-respuesta HTTP a los servicios concretos expuestos en el SGI a través de su Bus de integración (ESB).</td>
+<td class="confluenceTd">3</td>
+<td class="confluenceTd"><p>ED MA, RPA, Goliat (UM)</p></td>
+</tr>
+<tr class="even">
+<th class="highlight-#ffebe6 confluenceTh" data-highlight-colour="#ffebe6">Dispositivo Usuario</th>
+<td class="confluenceTd">Representa a cada uno de los sistemas que pueden comunicarse con la aplicación Web de Gestión del SGI iniciando un circuito de petición-respuesta HTTP.</td>
+<td class="confluenceTd">1</td>
+<td class="confluenceTd">Dispositivo del usuario de la aplicación SGI , dispositivo del usuario de Goliat</td>
+</tr>
+<tr class="odd">
+<th class="highlight-#ffebe6 confluenceTh" data-highlight-colour="#ffebe6">Conector BBDD</th>
+<td class="confluenceTd">Representa una pieza que aglutina el acceso directo a la BBDD del SGI por parte de terceros (Universidad).</td>
+<td class="confluenceTd">2</td>
+<td class="confluenceTd">Conector BBDD (acceso a esquemas csp y pii)</td>
+</tr>
+<tr class="even">
+<th rowspan="6" class="highlight-#fffae6 confluenceTh" data-highlight-colour="#fffae6">KUBERNETES</th>
+<th class="highlight-#ffebe6 confluenceTh" data-highlight-colour="#ffebe6">Gateway</th>
+<td class="confluenceTd">Representa la pieza, que proporciona el propio Kubernetes, que se encarga de recibir las peticiones de los Dispositivos Usuario y Sistema y de redirigirlas en función del patrón que sigan al ESB, peticiones tipo <strong>/api/</strong>, o a la Web, resto de peticiones <strong>/*</strong>.</td>
+<td class="confluenceTd">1</td>
+<td class="confluenceTd">Gateway</td>
+</tr>
+<tr class="odd">
+<th class="highlight-#ffebe6 confluenceTh" data-highlight-colour="#ffebe6">WEB</th>
+<td class="confluenceTd">Representa el módulo de la aplicación de gestión del SGI, que hará de orquestador de todas las peticiones que vayan dirigidas a él, llamando a los diferentes módulos según la necesidad de cada funcionalidad concreta.</td>
+<td class="confluenceTd">1</td>
+<td class="confluenceTd">WEB</td>
+</tr>
+<tr class="even">
+<th class="highlight-#b3f5ff confluenceTh" data-highlight-colour="#b3f5ff">ESB</th>
+<td class="confluenceTd"><p>Representa el Bus de integración del SGI, que abstrae tanto al SGI como los Elementos que acceden al SGI del origen de la información que se intercambia a través de él. Será esta pieza la que haga de pasarela, con o sin alguna adaptación según la necesidad, entre el SGI o los Dispositivos Sistema y Usuario y los servicios tanto internos al SGI como implementados por parte de terceros (Universidad).</p></td>
+<td class="confluenceTd">1</td>
+<td class="confluenceTd"><p>Habrá un único ESB que contendrá los siguientes Componentes:</p>
+<ul>
+<li>Los que requieren implementación por parte de terceros (Universidad): SGE, SGP, SGEMP, SGEPII.</li>
+<li>Los que pueden tener o no implementación por parte de terceros (Universidad): SGO, SGDOC.</li>
+<li>Los que dan acceso a servicios internos al SGI: SGICSP, SGIPII, SGIPRC, SGIUSR</li>
+</ul></td>
+</tr>
+<tr class="odd">
+<th class="highlight-#f4f5f7 confluenceTh" data-highlight-colour="#f4f5f7">ESB - Implementación SGI</th>
+<td class="confluenceTd">Representa a los servicios del ESB que tienen implementación propia por parte del SGI de forma que se pueda utilizar si no se implementan por parte de terceros (Universidad).</td>
+<td class="confluenceTd">2</td>
+<td class="confluenceTd">SGISGO, SGISGDOC</td>
+</tr>
+<tr class="even">
+<th class="highlight-#f4f5f7 confluenceTh" data-highlight-colour="#f4f5f7">Módulos comunes</th>
+<td class="confluenceTd">Representa a cada uno de los módulos de uso común por parte del resto de módulos o componentes de la aplicación.</td>
+<td class="confluenceTd">7</td>
+<td class="confluenceTd">USR, CNF, REL, REP, TP, COM, KEYCLOAK</td>
+</tr>
+<tr class="odd">
+<th class="highlight-#f4f5f7 confluenceTh" data-highlight-colour="#f4f5f7">Módulos funcionales</th>
+<td class="confluenceTd">Representa a cada uno de los módulos o componentes con funcionalidad concreta de gestión por parte de los usuarios o sistemas de terceros del SGI.</td>
+<td class="confluenceTd">4</td>
+<td class="confluenceTd">CSP, ETI, PII, PRC</td>
+</tr>
+<tr class="even">
+<th rowspan="2" class="highlight-#eae6ff confluenceTh" data-highlight-colour="#eae6ff">Persistencia</th>
+<th class="highlight-#ffbdad confluenceTh" data-highlight-colour="#ffbdad">BBDD</th>
+<td class="confluenceTd">Representa a cada uno de los esquemas de base de datos del SGI. Existirá un esquema por módulo.</td>
+<td class="confluenceTd">13</td>
+<td class="confluenceTd">csp, eti, pii, prc, ...</td>
+</tr>
+<tr class="odd">
+<th class="highlight-#eae6ff confluenceTh" data-highlight-colour="#eae6ff">Almacenamiento archivos</th>
+<td class="confluenceTd">Representa el componente encargado de persistir los documentos del SGI a disco.</td>
+<td class="confluenceTd">1</td>
+<td class="confluenceTd">Almacenamiento archivos</td>
+</tr>
+<tr class="even">
+<th rowspan="4" class="confluenceTh">Sistemas Universidad</th>
+<th class="highlight-#e3fcef confluenceTh" data-highlight-colour="#e3fcef">Servicios de integración</th>
+<td class="confluenceTd">Representa a los servicios que pueden o deben, según el caso, ser implementados por terceros (Universidad) para la implantación del SGI en sus sistemas.</td>
+<td class="confluenceTd">5</td>
+<td class="confluenceTd">SGE (UNI), SGP (UNI), SGEMP (UNI), SGEPII (UNI), SGO (UNI) (Opcional)</td>
+</tr>
+<tr class="odd">
+<th class="highlight-#ffebe6 confluenceTh" data-highlight-colour="#ffebe6">Goliat (UM)</th>
+<td class="confluenceTd">Representa al sistema Goliat existente en la implementación propia del SGI de la Universidad de Murcia y que implementará las funcionalidades de Timesheet y de la que complementa al SGI en cuanto a la vista de los datos proyectos por parte del investigador.</td>
+<td class="confluenceTd">2</td>
+<td class="confluenceTd">Timesheet, Vista investigador</td>
+</tr>
+<tr class="even">
+<th class="highlight-#deebff confluenceTh" data-highlight-colour="#deebff">Servidor email</th>
+<td class="confluenceTd">Representa la pieza que se encargará del envío de emails de Comunicados desde el sistema de terceros (Universidad) en el que se implante.</td>
+<td class="confluenceTd">1</td>
+<td class="confluenceTd">Servidor email</td>
+</tr>
+<tr class="odd">
+<th class="highlight-#deebff confluenceTh" data-highlight-colour="#deebff">CAS</th>
+<td class="confluenceTd">Representa la pieza encargada de autenticar a los usuarios en el sistema de terceros (Universidad).</td>
+<td class="confluenceTd">1</td>
+<td class="confluenceTd">CAS</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+### Componentes / Servicios a desplegar
+
+Los siguientes servicios  han de estar desplegados para el correcto funcionamiento del SGI:
+
+<img src="plugins/servlet/confluence/placeholder/unknown-macro" class="wysiwyg-unknown-macro" />
+
+### Esquemas de base de datos
+
+#### ESB - Implementación SGI
+
+Nº de esquemas: 2
+
+<div class="table-wrap">
+
+|            |                                                                                      |         |                                                                                                                       |
+|------------|--------------------------------------------------------------------------------------|---------|-----------------------------------------------------------------------------------------------------------------------|
+| Componente | Descripción                                                                          | Esquema | Documentación                                                                                                         |
+| SGISGDOC   | Módulo del sistema de gestión de la documentación cross al resto de módulos del SGI. | sgdoc   | <a href="https://confluence.um.es/confluence/display/HERCULES/SGI+-+ESB+-+SGDOC" rel="nofollow">SGI - ESB - SGDOC</a> |
+| SGISGO     | Módulo del sistema de gestión de la organización cross al resto de módulos del SGI.  | sgo     | <a href="https://confluence.um.es/confluence/display/HERCULES/SGI+-+ESB+-+SGO" rel="nofollow">SGI - ESB - SGO</a>     |
+
+</div>
+
+#### Módulos funcionales
+
+Nº de esquemas: 4
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="header">
+<th class="confluenceTh">Componente</th>
+<th class="confluenceTh">Descripción</th>
+<th class="confluenceTh">Esquema</th>
+<th class="confluenceTh">Documentación</th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd">CSP</td>
+<td class="confluenceTd"><span>Módulo de convocatorias, ayudas, solicitudes, proyectos y contratos. Incluye además los grupos de investigación.<br />
+</span></td>
+<td class="confluenceTd">csp</td>
+<td class="confluenceTd"><p>Convocatorias:</p>
+<ul>
+<li><a href="https://confluence.um.es/confluence/pages/viewpage.action?pageId=597852500" rel="nofollow">CSP-CON - Modelo lógico - Diagrama</a></li>
+<li><a href="https://confluence.um.es/confluence/pages/viewpage.action?pageId=597852699" rel="nofollow">CSP-CON - Modelo lógico - Documentación</a></li>
+</ul>
+<p>Solicitudes:</p>
+<ul>
+<li><a href="https://confluence.um.es/confluence/pages/viewpage.action?pageId=597853635" rel="nofollow">CSP-SOL - Modelo lógico - Diagrama</a></li>
+<li><a href="https://confluence.um.es/confluence/pages/viewpage.action?pageId=597852694" rel="nofollow">CSP-SOL - Módelo lógico - Documentación</a></li>
+</ul>
+<p>Proyectos:</p>
+<ul>
+<li><a href="https://confluence.um.es/confluence/pages/viewpage.action?pageId=597853327" rel="nofollow">CSP-PRO - Modelo lógico - Diagrama</a></li>
+<li><a href="https://confluence.um.es/confluence/pages/viewpage.action?pageId=597852754" rel="nofollow">CSP-PRO - Modelo lógico - Documentación</a></li>
+</ul>
+<p>Proyectos externos:</p>
+<ul>
+<li><a href="https://confluence.um.es/confluence/pages/viewpage.action?pageId=597853659" rel="nofollow">CSP-PPEX - Modelo lógico - Diagrama</a></li>
+<li><a href="https://confluence.um.es/confluence/pages/viewpage.action?pageId=597852745" rel="nofollow">CSP-PPEX - Modelo lógico - Documentación</a></li>
+</ul>
+<p>Grupos de investigación:</p>
+<ul>
+<li><a href="https://confluence.um.es/confluence/pages/viewpage.action?pageId=597852812" rel="nofollow">CSP-GIN - Diseño lógico - Diagrama</a></li>
+<li><a href="https://confluence.um.es/confluence/pages/viewpage.action?pageId=597852701" rel="nofollow">CSP-GIN - Modelo lógico - Documentación</a></li>
+</ul></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><span>ETI</span></td>
+<td class="confluenceTd">Módulo de Ética.</td>
+<td class="confluenceTd">eti</td>
+<td class="confluenceTd"><a href="https://confluence.um.es/confluence/pages/viewpage.action?pageId=597852355" rel="nofollow">ETI - Modelo lógico</a></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">PII</td>
+<td class="confluenceTd">Módulo de Propiedad industrial e intelectual.</td>
+<td class="confluenceTd">pii</td>
+<td class="confluenceTd"><a href="https://confluence.um.es/confluence/pages/viewpage.action?pageId=597852351" rel="nofollow">PII - Modelo lógico</a></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><span style="color:var(--ds-text-accent-gray,#44546f);">PRC</span></td>
+<td class="confluenceTd"><span style="color:var(--ds-text-accent-gray,#44546f);">Módulo de producción científica.</span></td>
+<td class="confluenceTd">prc</td>
+<td class="confluenceTd"><a href="https://confluence.um.es/confluence/pages/viewpage.action?pageId=597853216" rel="nofollow">PRC - Diseño lógico</a></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+#### Módulos cross
+
+Nº de esquemas: 7
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable" style="width: 67.6696%;">
+<colgroup>
+<col style="width: 8%" />
+<col style="width: 59%" />
+<col style="width: 7%" />
+<col style="width: 25%" />
+</colgroup>
+<tbody>
+<tr class="header">
+<th class="confluenceTh">Componente</th>
+<th class="confluenceTh">Descripción</th>
+<th class="confluenceTh">Esquema</th>
+<th class="confluenceTh">Documentación</th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd">CNF</td>
+<td class="confluenceTd"><span>Módulo de configuración cross al resto de módulos del SGI.<br />
+</span></td>
+<td class="confluenceTd">cnf</td>
+<td class="confluenceTd"><a href="https://confluence.um.es/confluence/pages/viewpage.action?pageId=597852251" rel="nofollow">CNF - Modelo lógico</a></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">COM</td>
+<td class="confluenceTd"><span>Módulo de comunicados cross al resto de módulos del SGI.<br />
+</span></td>
+<td class="confluenceTd">com</td>
+<td class="confluenceTd"><a href="https://confluence.um.es/confluence/pages/viewpage.action?pageId=597852855" rel="nofollow">COM - Modelo lógico</a></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">KEYCLOAK</td>
+<td class="confluenceTd"><span>Módulo de control de acceso al SGI.<br />
+</span></td>
+<td class="confluenceTd">keycloak</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">REL</td>
+<td class="confluenceTd"><span>Módulo de relaciones cross al resto de módulos del SGI.</span></td>
+<td class="confluenceTd">rel</td>
+<td class="confluenceTd"><a href="https://confluence.um.es/confluence/pages/viewpage.action?pageId=597852752" rel="nofollow">SGI-REL - Modelo lógico</a></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">REP</td>
+<td class="confluenceTd">Módulo de reporting <span>cross al resto de módulos del SGI.</span></td>
+<td class="confluenceTd">rep</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">USR</td>
+<td class="confluenceTd">Módulo para la autenticación de usuarios</td>
+<td class="confluenceTd">usr</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">TP</td>
+<td class="confluenceTd">Módulo del sistema de gestión de tareas programadas <span>cross al resto de módulos del SGI.</span></td>
+<td class="confluenceTd">tp</td>
+<td class="confluenceTd"><a href="https://confluence.um.es/confluence/pages/viewpage.action?pageId=597852469" rel="nofollow">TP - Modelo lógico</a></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+## **TECNOLOGÍA**
+
+<span style="color:var(--ds-text,#172b4d);">Los servicios del SGI se apoyan en Liquibase para la creación y mantenimiento del modelo de datos. Liquibase es un framework que permite tanto la definición del modelo de datos como la carga inicial de datos. Para ello utiliza su propia sintaxis (escrita en formato XML). A partir de esta sintaxis, este framework es capaz de hacer la traducción a sentencias propias del motor de base de datos que exista en la instalación, tanto para la creación inicial como para aplicar los cambios incrementales (de acuerdo al estado de la BD sobre la que se despliega la versión correspondiente).</span>
+
+<span style="color:var(--ds-text,#172b4d);">Por tanto, la definición y creación del modelo inicial, así como los incrementales propios de cada versión, se encuentran dentro del código de cada servicio. Cada vez que un servicio arranca, y conecta a la BBDD, se comprueba que cambios (changeset) se han aplicado, ejecutando aquellos que sean necesarios para que el modelo de datos esté actualizado de acuerdo a lo que espera la versión de la aplicación. De este modo, en las actualizaciones de la aplicación cada servicio aplica el incremental o incrementales correspondientes. En una instalación nueva (cuando no existen tablas porque es una nueva BBDD) se aplican todos los cambios necesarios para crear las tablas y objectos que necesita la aplicación para funcionar.</span>
+
+<span style="color:var(--ds-text,#172b4d);">En el siguiente enlace se puede ver un fichero de definición de Liquibase del servicio de CSP: </span><span style="color: blue;"><u><a href="https://urldefense.com/v3/__https://github.com/HerculesCRUE/SGI/blob/main/sgi-csp-service/src/main/resources/db/changelog/changes/0.1.0/0000000000000-initial-database.xml__;!!D9dNQwwGXtA!T99OejjEbLl9N78jYY9ZwU_wGFoPrHi73q3H3k1RWsafINRWEjC8DAp1Bjug7Lv9DJsbaEp6aj6R2_MDBATMwo2k$" class="external-link" rel="nofollow">https://github.com/HerculesCRUE/SGI/blob/main/sgi-csp-service/src/main/resources/db/changelog/changes/0.1.0/0000000000000-initial-database.xml</a></u></span>
+
+<span style="color:var(--ds-text,#172b4d);">Si lo ves necesario, para mayor detalle, puedes hacer referencia a la documentación oficial de Liquibase </span><span style="color: blue;"><u><a href="https://urldefense.com/v3/__https://docs.liquibase.com/home.html__;!!D9dNQwwGXtA!T99OejjEbLl9N78jYY9ZwU_wGFoPrHi73q3H3k1RWsafINRWEjC8DAp1Bjug7Lv9DJsbaEp6aj6R2_MDBD16gtXY$" class="external-link" rel="nofollow">https://docs.liquibase.com/home.html</a></u></span>
+
+</div>
+
+<div class="pageSection group">
+
+<div class="pageSectionHeader">
+
+## Attachments:
+
+</div>
+
+<div class="greybox" align="left">
+
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [SGI Deployment Model.png](/attachments/676986997/676986998.png) (image/png)  
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div id="footer" role="contentinfo">
+
+<div class="section footer-body">
+
+Document generated by Confluence on oct 27, 2025 08:53
+
+<div id="footer-logo">
+
+[Atlassian](https://www.atlassian.com/)
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 
 

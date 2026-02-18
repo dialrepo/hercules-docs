@@ -796,7 +796,1828 @@
 
   <h1>Csp grupo modelo logico multiidioma documentacion</h1>
 
+<div id="page">
 
+<div id="main" class="aui-page-panel">
+
+<div id="main-header">
+
+<div id="breadcrumb-section">
+
+1.  [Hércules](index.html)
+2.  [Hércules](/)
+3.  [SGI. Sistema de gestión de investigación](//sgi-sistema-de-gestion-de-investigacion)
+4.  [Diseño](//sgi-sistema-de-gestion-de-investigacion/diseno)
+5.  [Versión multiidioma](//sgi-sistema-de-gestion-de-investigacion/diseno/version-multiidioma)
+6.  [Modelos lógicos](//sgi-sistema-de-gestion-de-investigacion/diseno/version-multiidioma/modelos-logicos)
+7.  [SGI-CSP](//sgi-sistema-de-gestion-de-investigacion/diseno/version-multiidioma/modelos-logicos/sgi-csp)
+8.  [CSP-Grupo de investigación](//sgi-sistema-de-gestion-de-investigacion/diseno/version-multiidioma/modelos-logicos/sgi-csp/csp-grupo-de-investigacion)
+
+</div>
+
+# <span id="title-text"> Hércules : CSP-Grupo - Modelo lógico multiidioma - Documentación </span>
+
+</div>
+
+<div id="content" class="view">
+
+<div class="page-metadata">
+
+Created by <span class="author"> Usuario genérico para HERCULES</span>, last updated on mar 27, 2025
+
+</div>
+
+<div id="main-content" class="wiki-content group">
+
+<div class="toc-macro rbtoc1761551677770">
+
+- [Entidades del modelo CSP Grupo Investigación](#CSPGrupoModelológicomultiidiomaDocumentación-EntidadesdelmodeloCSPGrupoInvestigación)
+  - - [Entidad grupo: "grupo"](#CSPGrupoModelológicomultiidiomaDocumentación-Entidadgrupo:%22grupo%22)
+    - [Entidad Nombre de un grupo: "GrupoNombre"](#CSPGrupoModelológicomultiidiomaDocumentación-EntidadNombredeungrupo:%22GrupoNombre%22)
+    - [Entidad Resumen de un grupo: "GrupoResumen"](#CSPGrupoModelológicomultiidiomaDocumentación-EntidadResumendeungrupo:%22GrupoResumen%22)
+    - [Entidad enlaces de un grupo: "GrupoEnlace"](#CSPGrupoModelológicomultiidiomaDocumentación-Entidadenlacesdeungrupo:%22GrupoEnlace%22)
+    - [Entidad equipo del grupo "GrupoEquipo"](#CSPGrupoModelológicomultiidiomaDocumentación-Entidadequipodelgrupo%22GrupoEquipo%22)
+    - [Entidad equipo instrumental del grupo: "GrupoEquipoInstrumental"](#CSPGrupoModelológicomultiidiomaDocumentación-Entidadequipoinstrumentaldelgrupo:%22GrupoEquipoInstrumental%22)
+    - [Entidad Nombre de un equipo instrumental: "GrupoEquipoInstrumentalNombre"](#CSPGrupoModelológicomultiidiomaDocumentación-EntidadNombredeunequipoinstrumental:%22GrupoEquipoInstrumentalNombre%22)
+    - [Entidad Descripción de un equipo instrumental: "GrupoEquipoInstrumentalDescripcion"](#CSPGrupoModelológicomultiidiomaDocumentación-EntidadDescripcióndeunequipoinstrumental:%22GrupoEquipoInstrumentalDescripcion%22)
+    - [Entidad histórico grupo especial: "GrupoEspecialInvestigacion"](#CSPGrupoModelológicomultiidiomaDocumentación-Entidadhistóricogrupoespecial:%22GrupoEspecialInvestigacion%22)
+    - [Entidad clasificación de las líneas de investigación del grupo: "GrupoLineaClasificacion"](#CSPGrupoModelológicomultiidiomaDocumentación-Entidadclasificacióndelaslíneasdeinvestigacióndelgrupo:%22GrupoLineaClasificacion%22)
+    - [Entidad línea de investigación del equipo instrumental del grupo: "GrupoLineaEquipoInstrumental"](#CSPGrupoModelológicomultiidiomaDocumentación-Entidadlíneadeinvestigacióndelequipoinstrumentaldelgrupo:%22GrupoLineaEquipoInstrumental%22)
+    - [Entidad línea de investigación del grupo: "GrupoLineaInvestigacion"](#CSPGrupoModelológicomultiidiomaDocumentación-Entidadlíneadeinvestigacióndelgrupo:%22GrupoLineaInvestigacion%22)
+    - [Entidad línea de investigación de los miembros del grupo: "GrupoLineaInvestigador"](#CSPGrupoModelológicomultiidiomaDocumentación-Entidadlíneadeinvestigacióndelosmiembrosdelgrupo:%22GrupoLineaInvestigador%22)
+    - [Entidad palabras clave del grupo: "GrupoPalabraClave"](#CSPGrupoModelológicomultiidiomaDocumentación-Entidadpalabrasclavedelgrupo:%22GrupoPalabraClave%22)
+    - [Entidad persona autorizada del grupo: "GrupoPersonaAutorizada"](#CSPGrupoModelológicomultiidiomaDocumentación-Entidadpersonaautorizadadelgrupo:%22GrupoPersonaAutorizada%22)
+    - [Entidad responsable económico del grupo: "GrupoResponsableEconomico"](#CSPGrupoModelológicomultiidiomaDocumentación-Entidadresponsableeconómicodelgrupo:%22GrupoResponsableEconomico%22)
+    - [Entidad histórico de tipos del grupo: "GrupoTipo"](#CSPGrupoModelológicomultiidiomaDocumentación-Entidadhistóricodetiposdelgrupo:%22GrupoTipo%22)
+    - [Entidad línea de investigación: "LineaInvestigacion"](#CSPGrupoModelológicomultiidiomaDocumentación-Entidadlíneadeinvestigación:%22LineaInvestigacion%22)
+    - [Entidad Nombre de una línea de investigación: "LineaInvestigacionNombre"](#CSPGrupoModelológicomultiidiomaDocumentación-EntidadNombredeunalíneadeinvestigación:%22LineaInvestigacionNombre%22)
+
+  - [Enumerados del modelo CSP Grupo](#CSPGrupoModelológicomultiidiomaDocumentación-EnumeradosdelmodeloCSPGrupo)
+    - [Enumerado tipo de dedicación: "Dedicacion"](#CSPGrupoModelológicomultiidiomaDocumentación-Enumeradotipodededicación:%22Dedicacion%22)
+    - [Enumerado tipo de grupo: "TipoGrupo"](#CSPGrupoModelológicomultiidiomaDocumentación-Enumeradotipodegrupo:%22TipoGrupo%22)
+
+</div>
+
+# Entidades del modelo CSP Grupo Investigación
+
+### Entidad grupo: "grupo"
+
+Entidad principal del modelo lógico de Grupos de investigación. Representa a agrupaciones estables de personal investigador que coopera en una o varias líneas de investigación. Forman equipos de trabajo específicos para realizar proyectos de investigación que pueden durar varios años.
+
+<div class="table-wrap">
+
+<table class="confluenceTable" style="">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td class="highlight-grey confluenceTd" style="text-align: left; vertical-align: top;" data-highlight-colour="grey"><p><strong><span>ATTRIBUTES</span></strong></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><div class="content-wrapper">
+<p><span>id : Long Private</span></p>
+<p>Clave primaria. Secuencia. Identificador único del registro dentro de la tabla "grupo".</p>
+</div></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><div class="content-wrapper">
+<p><span>fechaInicio : Timestamp Private</span></p>
+<p>Fecha de inicio del grupo de investigación. Es un campo obligatorio.</p>
+</div></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><div class="content-wrapper">
+<p><span>fechaFin : Timestamp Private</span></p>
+<p>Fecha de fin del grupo de investigación.</p>
+</div></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><div class="content-wrapper">
+<p><span>proyectoSGERef : String Private</span></p>
+<p>Código con el que se va a identificar el grupo de investigación en el SGE (Sistema de gestión económico).</p>
+</div></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><div class="content-wrapper">
+<p><span>solicitud : Solicitud Private</span></p>
+<p>Identificador de la Solicitud concedida de la que se contituyó el grupo de investigación. Solo estará informado en caso que la solicitud esté registrada en el SGI. Es una FK a la tabla "solicitud".</p>
+</div></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><div class="content-wrapper">
+<p><span>codigo : String Private</span></p>
+<p>Es un código identificativo del grupo de investigación. Debe de ser un campo único y obligatorio.</p>
+</div></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><div class="content-wrapper">
+<p><span>tipo : GrupoTipo Private</span></p>
+<p>Indica el grado de madurez actual del grupo de investigación. Es una FK a la tabla "grupo tipo"</p>
+</div></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><div class="content-wrapper">
+<p><span>especialInvestigacion : GrupoEspecialInvestigacion Private</span></p>
+<p>Indica si el grupo de investigación en el moment o actual es un "grupo especial de investigación". Es una FK a la tabla "grupo especial investigación"</p>
+</div></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><div class="content-wrapper">
+<p><span>departamentoOrigenRef : String Private</span></p>
+<p>Identificador del departamento al que esta adscrito el investigador principal del grupo de investigación en el momento de la solicitud de constitución del grupo o creación del grupo.</p>
+</div></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><div class="content-wrapper">
+<p><span>activo : Boolean Private</span></p>
+<p>Campo interno al SGI con el que se da cobertura al borrado lógico. El valor "true" será indicativo de que el registro (grupo) está activo mientras que un valor "false" será indicativo de que el registro (grupo) ha sido eliminado a nivel de usuario. Es un campo obligatorio.</p>
+</div></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+<div class="table-wrap">
+
+<table class="confluenceTable" style="">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p><strong>ASSOCIATIONS</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Association (<span>direction:</span><span> </span>Unspecified) </p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) Grupo</p>
+<p><span>Cardinality:  </span>[1]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) GrupoEquipo</p>
+<p><span>Cardinality:  </span>[1..*]</p></td>
+</tr>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Association (<span>direction:</span><span> </span>Unspecified) </p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) Grupo</p>
+<p><span>Cardinality:  </span>[1]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) GrupoPalabraClave</p>
+<p><span>Cardinality:  </span>[0..*]</p></td>
+</tr>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Association (<span>direction:</span><span> </span>Unspecified) </p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) Grupo</p>
+<p><span>Cardinality:  </span>[1]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) GrupoEquipoInstrumental</p>
+<p><span>Cardinality:  </span>[0..*]</p></td>
+</tr>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Association (<span>direction:</span><span> </span>Unspecified) </p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) Grupo</p>
+<p><span>Cardinality:  </span>[1]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) GrupoEnlace</p>
+<p><span>Cardinality:  </span>[0..*]</p></td>
+</tr>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Association (<span>direction:</span><span> </span>Unspecified) </p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) Grupo</p>
+<p><span>Cardinality:  </span>[1]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) GrupoTipo</p>
+<p><span>Cardinality:  </span>[0..*]</p></td>
+</tr>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Association (<span>direction:</span><span> </span>Unspecified) </p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) Grupo</p>
+<p><span>Cardinality:  </span>[1..]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) GrupoResponsableEconomico</p>
+<p><span>Cardinality:  </span>[0..*]</p></td>
+</tr>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Association (<span>direction:</span><span> </span>Unspecified) </p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) Grupo</p>
+<p><span>Cardinality:  </span>[1]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) GrupoEspecialInvestigacion</p>
+<p><span>Cardinality:  </span>[0..*]</p></td>
+</tr>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Association (<span>direction:</span><span> </span>Unspecified) </p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) Grupo</p>
+<p><span>Cardinality:  </span>[1..]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) GrupoPersonaAutorizada</p>
+<p><span>Cardinality:  </span>[0..*]</p></td>
+</tr>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Association (<span>direction:</span><span> </span>Unspecified) </p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) GrupoLineaInvestigacion</p>
+<p><span>Cardinality:  </span>[1]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) Grupo</p>
+<p><span>Cardinality:  </span>[0..*]</p></td>
+</tr>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Association (<span>direction:</span><span> </span>Unspecified) </p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) GrupoNombre</p>
+<p><span>Cardinality:  </span>[1..*]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) Grupo</p>
+<p><span>Cardinality:  </span>[1]</p></td>
+</tr>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Association (<span>direction:</span><span> </span>Unspecified) </p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) GrupoResumen</p>
+<p><span>Cardinality:  </span>[0..*]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) Grupo</p>
+<p><span>Cardinality:  </span>[1]</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+### Entidad Nombre de un grupo: "GrupoNombre"
+
+Entidad para almacenar, en todos los idiomas soportados por la aplicación, el nombre de un grupo de investigación. El nombre de un grupo es un campo de texto y es de introducción obligatoria. Está disponible en la pantalla de Datos generales de un grupo.
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th class="confluenceTd" style="text-align: left; vertical-align: top;"><p><strong>ATTRIBUTES</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>grupo : Grupo  Private</p>
+<p>Grupo de investigación al que pertenece el nombre. Es una FK a la tabla "Grupo"</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>lang : String  Private</p>
+<p>Idioma en el que está almacenado el valor del campo nombre del grupo. Cada idioma se representa por un código de 2 caracteres:</p>
+<ul>
+<li>es</li>
+<li>en</li>
+<li>eu</li>
+</ul></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>value_ : String  Private</p>
+<p>Valor del campo nombre del grupo de investigación. Está expresado en el idioma indicado por el campo "lang".</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p><strong>ASSOCIATIONS</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Association (<span>direction:</span><span> </span>Unspecified) </p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) GrupoNombre</p>
+<p><span>Cardinality:  </span>[1..*]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) Grupo</p>
+<p><span>Cardinality:  </span>[1]</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+### Entidad Resumen de un grupo: "GrupoResumen"
+
+Entidad para almacenar, en todos los idiomas soportados por la aplicación, el campo resumen de un grupo de investigación. El resumen es un campo de texto para recoger el sumario o presentación de un grupo. Es un campo opcional. Está disponible en la pantalla de Datos generales del grupo.
+
+
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th class="confluenceTd" style="text-align: left; vertical-align: top;"><p><strong>ATTRIBUTES</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>grupo : Grupo  Private</p>
+<p>Grupo de investigación al que pertenece el resumen. Es una FK a la tabla "Grupo"</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>lang : String  Private</p>
+<p>Idioma en el que está almacenado el valor del campo resumen del grupo. El idioma se representa por un código de 2 caracteres:</p>
+<ul>
+<li>es</li>
+<li>en</li>
+<li>eu</li>
+</ul></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>value_ : String  Private</p>
+<p>Valor del campo resumen del grupo de investigación. Está expresado en el idioma indicado por el campo "lang".</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p><strong>ASSOCIATIONS</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Association (<span>direction:</span><span> </span>Unspecified) </p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) GrupoResumen</p>
+<p><span>Cardinality:  </span>[0..*]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) Grupo</p>
+<p><span>Cardinality:  </span>[1]</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+### Entidad enlaces de un grupo: "GrupoEnlace"
+
+Enlaces (en formato URL) que se considere útil y/o necesario recoger en los datos del grupo.
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<tbody>
+<tr class="odd">
+<td class="highlight-grey confluenceTd" style="text-align: left; vertical-align: top;" data-highlight-colour="grey"><p><strong><span>ATTRIBUTES</span></strong></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><div class="content-wrapper">
+<p>i<span>d : Long Private</span></p>
+<p>Identificador único del registro. Secuencia. Clave primaria.</p>
+</div></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><div class="content-wrapper">
+<p><span>grupo : Grupo Private</span></p>
+<p><span>Identificador del grupo al que pertenece el enlace. Es una FK a la tabla "grupo". Es un campo obligatorio.</span></p>
+</div></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><div class="content-wrapper">
+<p><span>enlace : String Private</span></p>
+<p>Url de la página web con la información de interés. Es un campo obligatorio.</p>
+</div></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<tbody>
+<tr class="odd">
+<td colspan="2" class="highlight-grey confluenceTd" style="text-align: left; vertical-align: top;" data-highlight-colour="grey"><p><strong><span>ASSOCIATIONS</span></strong></p></td>
+</tr>
+</tbody>
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><div class="content-wrapper">
+<p><span>Association (</span><span>direction:</span><span> Unspecified)</span></p>
+</div></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p><span>Source: Public (Class) Grupo</span></p>
+<p><span>Cardinality: </span><span>[1]</span></p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p><span>Target: Public (Class) GrupoEnlace</span></p>
+<p><span>Cardinality: </span><span>[0..*]</span></p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+
+
+### Entidad equipo del grupo "GrupoEquipo"
+
+Entidad que contiene los miembros del Grupo, tanto actuales como todo su histórico.
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<tbody>
+<tr class="odd">
+<td class="highlight-grey confluenceTd" style="text-align: left; vertical-align: top;" data-highlight-colour="grey"><p><strong><span>ATTRIBUTES</span></strong></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><div class="content-wrapper">
+<p><span>id : Long Private</span></p>
+<p><span>Clave primaria. Identificador de la tabla.</span></p>
+</div></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><div class="content-wrapper">
+<p><span>grupo : Grupo Private</span></p>
+<p>Identificador del Grupo al que pertenece la persona referenciada. Es una FK a la tabla "grupo". Es un campo obligatorio.  Es una FK a la tabla "grupo". Es un campo obligatorio.</p>
+</div></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><div class="content-wrapper">
+<p><span>personaRef : String Private</span></p>
+<p><span>Identificador o Referencia de la persona miembro del equipo de grupo. Es el identificador de la persona en el sistema de personas de la Universidad. Es un campo obligatorio.</span></p>
+</div></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><div class="content-wrapper">
+<p><span>fechaInicio : Timestamp Private</span></p>
+<p>Fecha de inicio de la participación del miembro del equipo con el rol seleccionado. Es un campo obligatorio.</p>
+</div></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><div class="content-wrapper">
+<p><span>fechaFin : Timestamp Private</span></p>
+<p>Fecha de fin de la participación del miembro del equipo con el rol seleccionado.</p>
+</div></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><div class="content-wrapper">
+<p><span>rol : RolProyecto Private</span></p>
+<p>Identificador del rol con el que participa el miembro en el Grupo de investigación. Es un FK a la tabla "rol proyecto". Es un campo obligatorio.</p>
+</div></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><div class="content-wrapper">
+<p><span>dedicacion : Dedicacion Private</span></p>
+<p>Tipo de dedicación del miembro en el grupo. Toma el valor del enumerado "dedicación". </p>
+</div></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><div class="content-wrapper">
+<p><span>participacion : BigDecimal Private</span></p>
+<p>Porcentaje de dedicación del miembro en el equipo (de forma relativa a su participación en grupos de investigación, sin considerar su participación en otras actividades de investigación, docencia, etc.).<br />
+Si el campo "dedicación" toma el valor "COMPLETA", la dedicación tomará el valor 100%.  Si el campo "dedicación" toma el valor "PARCIAL", la dedicación tomará el valor inferior al 100%. </p>
+</div></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<tbody>
+<tr class="odd">
+<td colspan="2" class="highlight-grey confluenceTd" style="text-align: left; vertical-align: top;" data-highlight-colour="grey"><p><strong><span>ASSOCIATIONS</span></strong></p></td>
+</tr>
+</tbody>
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><div class="content-wrapper">
+<p><span>Association (</span><span>direction:</span><span> Unspecified)</span></p>
+</div></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p><span>Source: Public (Class) GrupoEquipo</span></p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p><span>Target: Public (Enumeration) Dedicacion</span></p></td>
+</tr>
+</tbody>
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><div class="content-wrapper">
+<p><span>Association (</span><span>direction:</span><span> Unspecified)</span></p>
+</div></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p><span>Source: Public (Class) Grupo</span></p>
+<p><span>Cardinality: </span><span>[1]</span></p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p><span>Target: Public (Class) GrupoEquipo</span></p>
+<p><span>Cardinality: </span><span>[1..*]</span></p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+### Entidad equipo instrumental del grupo: "GrupoEquipoInstrumental"
+
+Equipos instrumentales de los que dispone el grupo de investigación.
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<tbody>
+<tr class="odd">
+<td class="highlight-grey confluenceTd" style="text-align: left; vertical-align: top;" data-highlight-colour="grey"><p><strong><span>ATTRIBUTES</span></strong></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><div class="content-wrapper">
+<p><span>id : Long Private</span></p>
+<p>Identificador único del registro. Secuencia. Clave primaria.</p>
+</div></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><div class="content-wrapper">
+<p><span>grupo : Grupo Private</span></p>
+<p><span>Identificador del grupo al que pertenece el equipo instrumental Es una FK a la tabla "grupo". Es un campo obligatorio.</span></p>
+</div></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><div class="content-wrapper">
+<p><span>numRegistro : String Private</span></p>
+<p><span>Identificador del equipo instrumental en la Universidad, en caso que se desee informar de dicho campo.</span></p>
+</div></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p><strong>ASSOCIATIONS</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Association (<span>direction:</span><span> </span>Unspecified) </p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) GrupoEquipoInstrumental</p>
+<p><span>Cardinality:  </span>[1]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) GrupoEquipoInstrumentalDescripcion</p>
+<p><span>Cardinality:  </span>[0..*]</p></td>
+</tr>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Association (<span>direction:</span><span> </span>Unspecified) </p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) GrupoEquipoInstrumental</p>
+<p><span>Cardinality:  </span>[1]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) GrupoEquipoInstrumentalNombre</p>
+<p><span>Cardinality:  </span>[1..*]</p></td>
+</tr>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Association (<span>direction:</span><span> </span>Unspecified) </p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) GrupoLineaEquipoInstrumental</p>
+<p><span>Cardinality:  </span>[0..*]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) GrupoEquipoInstrumental</p>
+<p><span>Cardinality:  </span>[1]</p></td>
+</tr>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Association (<span>direction:</span><span> </span>Unspecified) </p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) Grupo</p>
+<p><span>Cardinality:  </span>[1]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) GrupoEquipoInstrumental</p>
+<p><span>Cardinality:  </span>[0..*]</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+
+
+### Entidad Nombre de un equipo instrumental: "GrupoEquipoInstrumentalNombre"
+
+<span style="color: black;">Entidad para almacenar, en todos los idiomas soportados por la aplicación, el nombre de un equipo instrumental perteneciente a un grupo de investigación. El nombre del equipo es un campo de texto y es de introducción obligatoria. Ha de introducirse en al menos uno de los idiomas habilitados. Está disponible en e apartado Equipos instrumentales de Grupo de investigación.</span>
+
+
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th class="confluenceTd" style="text-align: left; vertical-align: top;"><p><strong>ATTRIBUTES</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>grupoEquipoInstrumental : GrupoEquipoInstrumental  Private</p>
+<p>Equipo instrumental al que pertenece el nombre. Es una FK a la tabla "GrupoEquipoInstrumental"</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>lang : String  Private</p>
+<p>Idioma en el que está almacenado el nombre del equipo instrumental. Cada idioma se representa por un código de 2 caracteres:</p>
+<ul>
+<li>es</li>
+<li>en</li>
+<li>eu</li>
+</ul></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>value_ : String  Private</p>
+<p>Valor que toma el campo "nombre" de un equipo instrumental de un grupo de investigación. Está expresado en el idioma recogido en el campo "lang".</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p><strong>ASSOCIATIONS</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Association (<span>direction:</span><span> </span>Unspecified) </p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) GrupoEquipoInstrumental</p>
+<p><span>Cardinality:  </span>[1]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) GrupoEquipoInstrumentalNombre</p>
+<p><span>Cardinality:  </span>[1..*]</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+### Entidad Descripción de un equipo instrumental: "GrupoEquipoInstrumentalDescripcion"
+
+<span style="color: black;">Entidad para almacenar, en todos los idiomas soportados por la aplicación, la descripción de un equipo instrumental perteneciente a un grupo de investigación. La descripción del equipo es un campo de texto y es opcional. No es obligatorio introducirla en ninguno de los idiomas habilitados. Está disponible en e apartado Equipos instrumentales de Grupo de investigación.</span>
+
+
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th class="confluenceTd" style="text-align: left; vertical-align: top;"><p><strong>ATTRIBUTES</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>grupoEquipoInstrumental : GrupoEquipoInstrumental  Private</p>
+<p>Equipo instrumental al que pertenece la descripción. Es una FK a la tabla "GrupoEquipoInstrumental"</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>lang : String  Private</p>
+<p>Idioma en el que está almacenada la descripción del equipo instrumental. Cada idioma se representa por un código de 2 caracteres:</p>
+<ul>
+<li>es</li>
+<li>en</li>
+<li>eu</li>
+</ul></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>value_ : String  Private</p>
+<p>Valor que toma el campo "descripción" de un equipo instrumental de un grupo de investigación. Está expresado en el idioma recogido en el campo "lang".</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p><strong>ASSOCIATIONS</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Association (<span>direction:</span><span> </span>Unspecified) </p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) GrupoEquipoInstrumental</p>
+<p><span>Cardinality:  </span>[1]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) GrupoEquipoInstrumentalDescripcion</p>
+<p><span>Cardinality:  </span>[0..*]</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+### Entidad histórico grupo especial: "GrupoEspecialInvestigacion"
+
+Un Grupo podrá pasar o dejar de tener la consideración de "Grupo especial" en diferentes ocasiones a lo largo de su trayectoria. En esta tabla se almacena tanto el dato actual como el histórico.  Por defecto, un grupo se crea con la configuración de Grupo especial = No.
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<tbody>
+<tr class="odd">
+<td class="highlight-grey confluenceTd" style="text-align: left; vertical-align: top;" data-highlight-colour="grey"><p><strong><span>ATTRIBUTES</span></strong></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><div class="content-wrapper">
+<p><span>id : Long Private</span></p>
+<p>Identificador único del registro. Secuencia. Clave primaria.</p>
+</div></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><div class="content-wrapper">
+<p><span>especialInvestigacion : Boolean Private</span></p>
+<p>Indica si el grupo es un "Grupo especial de investigación". Podrá tomar los valores true o false. En un campo obligatorio.</p>
+</div></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><div class="content-wrapper">
+<p><span>fechaInicio : Timestamp Private</span></p>
+<p>Fecha de fin en la que empieza a aplicarse el valor indicado en el campo "especial investigación" al que se refiere el registro. Es un campo obligatorio.</p>
+</div></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><div class="content-wrapper">
+<p><span>fechaFin : Timestamp Private</span></p>
+<p>Fecha de fin en la que deja de aplicarse el valor indicado en el campo "especial investigación" al que se refiere el registro.</p>
+</div></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><div class="content-wrapper">
+<p><span>grupoId : Long Private</span></p>
+<p><span>Grupo al que pertenece el registro. Es una FK a la tabla "grupo". Es un campo obligatorio.</span></p>
+</div></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<tbody>
+<tr class="odd">
+<td colspan="2" class="highlight-grey confluenceTd" style="text-align: left; vertical-align: top;" data-highlight-colour="grey"><p><strong><span>ASSOCIATIONS</span></strong></p></td>
+</tr>
+</tbody>
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><div class="content-wrapper">
+<p><span>Association (</span><span>direction:</span><span> Unspecified)</span></p>
+</div></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p><span>Source: Public (Class) Grupo</span></p>
+<p><span>Cardinality: </span><span>[1]</span></p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p><span>Target: Public (Class) GrupoEspecialInvestigacion</span></p>
+<p><span>Cardinality: </span><span>[0..*]</span></p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+### Entidad clasificación de las líneas de investigación del grupo: "GrupoLineaClasificacion"
+
+Tabla que recoge todas las clasificaciones de una línea de investigación de un grupo. El SGI dispone de una estructura genérica "clasificación" , en
+
+forma de árbol, que permite, en tiempo de implantación, configurar los listados bajo los que resulte de interés clasificar la línea de investigación. No se establecen límites al respecto. En cada implantación se definirán las clasificaciones a utilizar. Esta estructura clasificación reside en el ESB, de forma que cada uno de los listados asociados a cada clasificación podrá ser alimentado desde un sistema de gestión corporativo (de forma genérica en el SGI se hace referencia a este posible sistema como SGO, sistema de gestión de la organización), a través del servicio de integración correspondiente, o bien ser configurados en tiempo de implantación.
+
+Algunas clasificaciones tipo serían:
+
+- Clasificación de códigos UNESCO.
+- Clasificación de códigos NABS.
+- Clasificación de códigos CNAE
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<tbody>
+<tr class="odd">
+<td class="highlight-grey confluenceTd" style="text-align: left; vertical-align: top;" data-highlight-colour="grey"><p><strong><span>ATTRIBUTES</span></strong></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><div class="content-wrapper">
+<p><span>id : Long Private</span></p>
+<p>Identificador único del registro. Secuencia. Clave primaria.</p>
+</div></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><div class="content-wrapper">
+<p><span>grupoLinea : GrupoLineaInvestigacion Private</span></p>
+<p>Línea de investigación al que pertenece el registro. Es una FK a la tabla "grupo línea investigación". Es un campo obligatorio.</p>
+</div></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><div class="content-wrapper">
+<p><span>codClasificacionRef : String Private</span></p>
+<p>Elemento dentro de una clasificación con el que se vincula la línea de investigación. La referencia es el identificador del elemento dentro de la tabla "clasificación" incluida en modelo lógico del SGO (sistema de gestión de la organización). Es un campo obligatorio.</p>
+</div></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<tbody>
+<tr class="odd">
+<td colspan="2" class="highlight-grey confluenceTd" style="text-align: left; vertical-align: top;" data-highlight-colour="grey"><p><strong><span>ASSOCIATIONS</span></strong></p></td>
+</tr>
+</tbody>
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><div class="content-wrapper">
+<p><span>Association (</span><span>direction:</span><span> Unspecified)</span></p>
+</div></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p><span>Source: Public (Class) GrupoLineaClasificacion</span></p>
+<p><span>Cardinality: </span><span>[0..*]</span></p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p><span>Target: Public (Class) GrupoLineaInvestigacion</span></p>
+<p><span>Cardinality: </span><span>[1]</span></p></td>
+</tr>
+</tbody>
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><div class="content-wrapper">
+<p><span>Association (</span><span>direction:</span><span> Unspecified)</span></p>
+</div></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p><span>Source: Public (Class) GrupoLineaClasificacion</span></p>
+<p><span>Cardinality: </span><span>[0..*]</span></p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p><span>Target: Public (Class) Clasificacion</span></p>
+<p><span>Cardinality: </span><span>[1]</span></p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+### Entidad línea de investigación del equipo instrumental del grupo: "GrupoLineaEquipoInstrumental"
+
+Relaciona un equipo instrumental definido en un grupo con la línea de investigación (perteneciente también al mismo grupo) que va a hacer uso del equipo.
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<tbody>
+<tr class="odd">
+<td class="highlight-grey confluenceTd" style="text-align: left; vertical-align: top;" data-highlight-colour="grey"><p><strong><span>ATTRIBUTES</span></strong></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><div class="content-wrapper">
+<p><span>id : Long Private</span></p>
+<p>Identificador único del registro. Secuencia. Clave primaria.</p>
+</div></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><div class="content-wrapper">
+<p><span>grupoLinea : GrupoLineaInvestigacion Private</span></p>
+<p>Identificador de la línea de investigación del grupo. Es una FK a la tabla "grupo línea investigación". Es un campo obligatorio.</p>
+</div></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><div class="content-wrapper">
+<p><span>equipoInstrumental : GrupoEquipoInstrumental Private</span></p>
+<p><span>Identificador del equipo instrumental del grupo. Es una FK a la tabla "grupo equipo instrumental". Es un campo obligatorio.</span></p>
+</div></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<tbody>
+<tr class="odd">
+<td colspan="2" class="highlight-grey confluenceTd" style="text-align: left; vertical-align: top;" data-highlight-colour="grey"><p><strong><span>ASSOCIATIONS</span></strong></p></td>
+</tr>
+</tbody>
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><div class="content-wrapper">
+<p><span>Association (</span><span>direction:</span><span> Unspecified)</span></p>
+</div></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p><span>Source: Public (Class) GrupoLineaEquipoInstrumental</span></p>
+<p><span>Cardinality: </span><span>[0..*]</span></p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p><span>Target: Public (Class) GrupoEquipoInstrumental</span></p>
+<p><span>Cardinality: </span><span>[1]</span></p></td>
+</tr>
+</tbody>
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><div class="content-wrapper">
+<p><span>Association (</span><span>direction:</span><span> Unspecified)</span></p>
+</div></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p><span>Source: Public (Class) GrupoLineaInvestigacion</span></p>
+<p><span>Cardinality: </span><span>[1]</span></p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p><span>Target: Public (Class) GrupoLineaEquipoInstrumental</span></p>
+<p><span>Cardinality: </span><span>[0..*]</span></p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+### Entidad línea de investigación del grupo: "GrupoLineaInvestigacion"
+
+Líneas de investigación en las que trabaja un grupo de investigación.
+
+Una línea de investigación quedará constituida por:
+
+- Nombre: nombre o descripción de la línea de investigación
+- Fecha de inicio y fecha de fin de duración de la línea en el grupo
+- Miembros adscritos. Investigadores/as que forman parte del grupo de investigación se pueden adscribir a una o varias líneas de investigación del grupo.
+- Clasificaciones. Una línea de investigación podrá clasificarse por medio de los códigos UNESCO, códigos CNAE, etc..
+- Equipos instrumentales adscritos. Una línea de investigación podrá hacer uso de uno o varios equipos instrumentales definidos en el grupo.
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<tbody>
+<tr class="odd">
+<td class="highlight-grey confluenceTd" style="text-align: left; vertical-align: top;" data-highlight-colour="grey"><p><strong><span>ATTRIBUTES</span></strong></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><div class="content-wrapper">
+<p><span>id : Long Private</span></p>
+<p>Identificador único del registro. Secuencia. Clave primaria.</p>
+</div></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><div class="content-wrapper">
+<p><span>grupo : Grupo Private</span></p>
+<p>Identificador del grupo al que pertenece la línea de investigación. Es una FK a la tabla "grupo". Es un campo obligatorio.</p>
+</div></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><div class="content-wrapper">
+<p><span>lineaInvestigacion : LineaInvestigacion Private</span></p>
+<p>Identificador de la línea de investigación. Es una FK a la tabla "línea investigación". Es un campo obligatorio.</p>
+</div></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><div class="content-wrapper">
+<p><span>fechaInicio : Timestamp Private</span></p>
+<p>Fecha de inicio de actuación de la línea de investigación en el grupo. Es un campo obligatorio.</p>
+</div></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><div class="content-wrapper">
+<p><span>fechaFin : Timestamp Private</span></p>
+<p>Fecha de fin de de actuación de la línea de investigación en el grupo</p>
+</div></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<tbody>
+<tr class="odd">
+<td colspan="2" class="highlight-grey confluenceTd" style="text-align: left; vertical-align: top;" data-highlight-colour="grey"><p><strong><span>ASSOCIATIONS</span></strong></p></td>
+</tr>
+</tbody>
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><div class="content-wrapper">
+<p><span>Association (</span><span>direction:</span><span> Unspecified)</span></p>
+</div></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p><span>Source: Public (Class) GrupoLineaInvestigacion</span></p>
+<p><span>Cardinality: </span><span>[1..]</span></p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p><span>Target: Public (Class) GrupoLineaInvestigador</span></p>
+<p><span>Cardinality: </span><span>[0..*]</span></p></td>
+</tr>
+</tbody>
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><div class="content-wrapper">
+<p><span>Association (</span><span>direction:</span><span> Unspecified)</span></p>
+</div></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p><span>Source: Public (Class) GrupoLineaInvestigacion</span></p>
+<p><span>Cardinality: </span><span>[1]</span></p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p><span>Target: Public (Class) GrupoLineaEquipoInstrumental</span></p>
+<p><span>Cardinality: </span><span>[0..*]</span></p></td>
+</tr>
+</tbody>
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><div class="content-wrapper">
+<p><span>Association (</span><span>direction:</span><span> Unspecified)</span></p>
+</div></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p><span>Source: Public (Class) GrupoLineaInvestigacion</span></p>
+<p><span>Cardinality: </span><span>[1]</span></p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p><span>Target: Public (Class) Grupo</span></p>
+<p><span>Cardinality: </span><span>[0..*]</span></p></td>
+</tr>
+</tbody>
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><div class="content-wrapper">
+<p><span>Association (</span><span>direction:</span><span> Unspecified)</span></p>
+</div></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p><span>Source: Public (Class) GrupoLineaClasificacion</span></p>
+<p><span>Cardinality: </span><span>[0..*]</span></p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p><span>Target: Public (Class) GrupoLineaInvestigacion</span></p>
+<p><span>Cardinality: </span><span>[1]</span></p></td>
+</tr>
+</tbody>
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><div class="content-wrapper">
+<p><span>Association (</span><span>direction:</span><span> Unspecified)</span></p>
+</div></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p><span>Source: Public (Class) LineaInvestigacion</span></p>
+<p><span>Cardinality: </span><span>[1]</span></p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p><span>Target: Public (Class) GrupoLineaInvestigacion</span></p>
+<p><span>Cardinality: </span><span>[0..*]</span></p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+### Entidad línea de investigación de los miembros del grupo: "GrupoLineaInvestigador"
+
+Listado de miembros del equipo de grupo vinculados a la línea de investigación.
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<tbody>
+<tr class="odd">
+<td class="highlight-grey confluenceTd" style="text-align: left; vertical-align: top;" data-highlight-colour="grey"><p><strong><span>ATTRIBUTES</span></strong></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><div class="content-wrapper">
+<p><span>id : Long Private</span></p>
+<p>Identificador único del registro. Secuencia. Clave primaria.</p>
+</div></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><div class="content-wrapper">
+<p><span>grupoLinea : GrupoLineaInvestigacion Private</span></p>
+<p>Línea de investigación al que pertenece el registro. Es una FK a la tabla "grupo línea investigación". Es un campo obligatorio.</p>
+</div></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><div class="content-wrapper">
+<p><span>personaRef : String Private</span></p>
+<p>Referencia de la persona que forma parte del equipo del grupo y esta adscrita a la línea de investigación. Es el identificador de la persona en el sistema de gestión de personas corporativo. Es un campo obligatorio.</p>
+</div></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><div class="content-wrapper">
+<p><span>fechaInicio : Timestamp Private</span></p>
+<p>Fecha de inicio del miembro del equipo adscrito a la línea de investigación. Es un campo obligatorio.</p>
+</div></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><div class="content-wrapper">
+<p><span>fechaFin : Timestamp Private</span></p>
+<p>Fecha de fin del miembro del equipo adscrito a la línea de investigación.</p>
+</div></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<tbody>
+<tr class="odd">
+<td colspan="2" class="highlight-grey confluenceTd" style="text-align: left; vertical-align: top;" data-highlight-colour="grey"><p><strong><span>ASSOCIATIONS</span></strong></p></td>
+</tr>
+</tbody>
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><div class="content-wrapper">
+<p><span>Association (</span><span>direction:</span><span> Unspecified)</span></p>
+</div></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p><span>Source: Public (Class) GrupoLineaInvestigacion</span></p>
+<p><span>Cardinality: </span><span>[1..]</span></p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p><span>Target: Public (Class) GrupoLineaInvestigador</span></p>
+<p><span>Cardinality: </span><span>[0..*]</span></p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+### Entidad palabras clave del grupo: "GrupoPalabraClave"
+
+Palabras clave asociadas al grupo. El catálogo de palabras clave común al SGI se implementa en la tabla "palabra clave" del ESB (modelo SGO).
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<tbody>
+<tr class="odd">
+<td class="highlight-grey confluenceTd" style="text-align: left; vertical-align: top;" data-highlight-colour="grey"><p><strong><span>ATTRIBUTES</span></strong></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><div class="content-wrapper">
+<p><span>id : Long Private</span></p>
+<p>Identificador único del registro. Secuencia. Clave primaria.</p>
+</div></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><div class="content-wrapper">
+<p><span>palabraClave : String Private</span></p>
+<p><span>Palabra clave asociada al grupo. Es una FK a la tabla "palabra clave" del modelo ESB-SGO. Es un campo obligatorio.</span></p>
+</div></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><div class="content-wrapper">
+<p><span>grupo : Grupo Private</span></p>
+<p><span>Grupo al que pertenece la palabra clave. Es una FK a la tabla "grupo". Es un campo obligatorio.</span></p>
+</div></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<tbody>
+<tr class="odd">
+<td colspan="2" class="highlight-grey confluenceTd" style="text-align: left; vertical-align: top;" data-highlight-colour="grey"><p><strong><span>ASSOCIATIONS</span></strong></p></td>
+</tr>
+</tbody>
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><div class="content-wrapper">
+<p><span>Association (</span><span>direction:</span><span> Unspecified)</span></p>
+</div></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p><span>Source: Public (Class) GrupoPalabraClave</span></p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p><span>Target: Public (Class) PalabraClave</span></p></td>
+</tr>
+</tbody>
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><div class="content-wrapper">
+<p><span>Association (</span><span>direction:</span><span> Unspecified)</span></p>
+</div></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p><span>Source: Public (Class) Grupo</span></p>
+<p><span>Cardinality: </span><span>[1]</span></p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p><span>Target: Public (Class) GrupoPalabraClave</span></p>
+<p><span>Cardinality: </span><span>[0..*]</span></p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+### Entidad persona autorizada del grupo: "GrupoPersonaAutorizada"
+
+Persona delegada a la tarea de validar/rechazar items de producción científica y a la tarea de solicitud de modificación del grupo. La tabla almacena la persona autorizada ctual del grupo e histórico de las mismas. Cada grupo solo puede una persona autorizada en un momento determinado.
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<tbody>
+<tr class="odd">
+<td class="highlight-grey confluenceTd" style="text-align: left; vertical-align: top;" data-highlight-colour="grey"><p><strong><span>ATTRIBUTES</span></strong></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><div class="content-wrapper">
+<p><span>id : Long Private</span></p>
+<p>Identificador único del registro. Secuencia. Clave primaria.</p>
+</div></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><div class="content-wrapper">
+<p><span>grupo : Grupo Private</span></p>
+<p><span>Identificador del grupo al que pertenece el registro persona autorizada. Es una FK a la tabla "grupo". Es un campo obligatorio.</span></p>
+</div></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><div class="content-wrapper">
+<p><span>fechaInicio : Timestamp Private</span></p>
+<p>Fecha en la que comienza la participación en el grupo como persona autorizada. Es un campo obligatorio.</p>
+</div></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><div class="content-wrapper">
+<p><span>fechaFin : Timestamp Private</span></p>
+<p>Fecha en la que finaliza la participación en el grupo como persona autorizada.</p>
+</div></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><div class="content-wrapper">
+<p><span>personaRef : iString Private</span></p>
+<p>Referencia de la persona que actúa como persona autorizada del grupo. Es el identificador de la persona en el sistema de gestión de personas corporativo. Es un campo obligatorio.</p>
+</div></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<tbody>
+<tr class="odd">
+<td colspan="2" class="highlight-grey confluenceTd" style="text-align: left; vertical-align: top;" data-highlight-colour="grey"><p><strong><span>ASSOCIATIONS</span></strong></p></td>
+</tr>
+</tbody>
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><div class="content-wrapper">
+<p><span>Association (</span><span>direction:</span><span> Unspecified)</span></p>
+</div></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p><span>Source: Public (Class) Grupo</span></p>
+<p><span>Cardinality: </span><span>[1..]</span></p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p><span>Target: Public (Class) GrupoPersonaAutorizada</span></p>
+<p><span>Cardinality: </span><span>[0..*]</span></p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+### Entidad responsable económico del grupo: "GrupoResponsableEconomico"
+
+Responsable económico actual del grupo e histórico de los mismos. Cada grupo solo puede un responsable económico en un momento determinado.
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<tbody>
+<tr class="odd">
+<td class="highlight-grey confluenceTd" style="text-align: left; vertical-align: top;" data-highlight-colour="grey"><p><strong><span>ATTRIBUTES</span></strong></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><div class="content-wrapper">
+<p><span>id : Long Private</span></p>
+<p>Identificador único del registro. Secuencia. Clave primaria.</p>
+</div></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><div class="content-wrapper">
+<p><span>grupo : Grupo Private</span></p>
+<p>Identificador del grupo al que pertenece el registro responsable económico. Es una FK a la tabla "grupo". Es un campo obligatorio.</p>
+</div></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><div class="content-wrapper">
+<p><span>fechaInicio : Timestamp Private</span></p>
+<p>Fecha en la que comienza la participación en el grupo como responsable económico. Es un campo obligatorio.</p>
+</div></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><div class="content-wrapper">
+<p><span>fechaFin : Timestamp Private</span></p>
+<p>Fecha en la que finaliza la participación en el grupo como responsable económico.</p>
+</div></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><div class="content-wrapper">
+<p><span>personaRef : String Private</span></p>
+<p>Referencia de la persona que actúa como responsable económico del grupo. Es el identificador de la persona en el sistema de gestión de personas corporativo. Es un campo obligatorio.</p>
+</div></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<tbody>
+<tr class="odd">
+<td colspan="2" class="highlight-grey confluenceTd" style="text-align: left; vertical-align: top;" data-highlight-colour="grey"><p><strong><span>ASSOCIATIONS</span></strong></p></td>
+</tr>
+</tbody>
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><div class="content-wrapper">
+<p><span>Association (</span><span>direction:</span><span> Unspecified)</span></p>
+</div></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p><span>Source: Public (Class) Grupo</span></p>
+<p><span>Cardinality: </span><span>[1..]</span></p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p><span>Target: Public (Class) GrupoResponsableEconomico</span></p>
+<p><span>Cardinality: </span><span>[0..*]</span></p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+### Entidad histórico de tipos del grupo: "GrupoTipo"
+
+Histórico de los diferentes valores del campo "tipo grupo" durante toda la duración del grupo de investigación.
+
+Indica el grado de madurez del grupo de investigación.
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<tbody>
+<tr class="odd">
+<td class="highlight-grey confluenceTd" style="text-align: left; vertical-align: top;" data-highlight-colour="grey"><p><strong><span>ATTRIBUTES</span></strong></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><div class="content-wrapper">
+<p><span>id : Long Private</span></p>
+<p>Identificador único del registro. Secuencia. Clave primaria.</p>
+</div></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><div class="content-wrapper">
+<p><span>tipoGrupo : TipoGrupo Private</span></p>
+<p>Indica el grado de madurez del grupo de investigación. Toma el valor del enumerado "tipo grupo". Es un campo obligatorio.</p>
+</div></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><div class="content-wrapper">
+<p><span>fechaInicio : Timestamp Private</span></p>
+<p>Fecha de inicio en la que empieza a aplicarse el valor indicado en el campo "tipo grupo" al que se refiere el registro. Es un campo obligatorio.</p>
+</div></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><div class="content-wrapper">
+<p><span>fechaFin : Timestamp Private</span></p>
+<p><span>Fecha de fin en la que deja de aplicarse el valor indicado en el campo "tipo grupo" al que se refiere el registro.</span></p>
+</div></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><div class="content-wrapper">
+<p><span>grupoId : Long Private</span></p>
+<p><span>Grupo al que pertenece el registro. Es una FK a la tabla "grupo". Es un campo obligatorio.</span></p>
+</div></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<tbody>
+<tr class="odd">
+<td colspan="2" class="highlight-grey confluenceTd" style="text-align: left; vertical-align: top;" data-highlight-colour="grey"><p><strong><span>ASSOCIATIONS</span></strong></p></td>
+</tr>
+</tbody>
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><div class="content-wrapper">
+<p><span>Association (</span><span>direction:</span><span> Unspecified)</span></p>
+</div></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p><span>Source: Public (Class) GrupoTipo</span></p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p><span>Target: Public (Enumeration) TipoGrupo</span></p></td>
+</tr>
+</tbody>
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><div class="content-wrapper">
+<p><span>Association (</span><span>direction:</span><span> Unspecified)</span></p>
+</div></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p><span>Source: Public (Class) Grupo</span></p>
+<p><span>Cardinality: </span><span>[1]</span></p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p><span>Target: Public (Class) GrupoTipo</span></p>
+<p><span>Cardinality: </span><span>[0..*]</span></p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+### Entidad línea de investigación: "LineaInvestigacion"
+
+Entidad para almacenar las líneas de investigación. Es una entidad de datos maestros del SGI. Las líneas de investigación se vinculan a los Grupos de investigación. Una línea de investigación puede estar vinculada a uno o varios grupos de investigación. La configuración de las líneas de investigación se realiza desde el menú CSP - Configuración  y están disponibles en el apartado Líneas de Investigación dentro de  Grupos Investigación.
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<tbody>
+<tr class="odd">
+<td class="highlight-grey confluenceTd" style="text-align: left; vertical-align: top;" data-highlight-colour="grey"><p><strong><span>ATTRIBUTES</span></strong></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><div class="content-wrapper">
+<p><span>id : Long Private</span></p>
+<p>Identificador único del registro. Secuencia. Clave primaria.</p>
+</div></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><div class="content-wrapper">
+<p><span>activo : Boolean Private</span></p>
+<p>Campo interno al SGI con el que se da cobertura al borrado lógico. El valor "true" será indicativo de que el registro (línea de investigación) está activa mientras que un valor "false" será indicativo de que el registro (línea de investigación) ha sido eliminada a nivel de usuario. Es un campo obligatorio.</p>
+</div></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<tbody>
+<tr class="odd">
+<td colspan="2" class="highlight-grey confluenceTd" style="text-align: left; vertical-align: top;" data-highlight-colour="grey"><p><strong><span>ASSOCIATIONS</span></strong></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><div class="content-wrapper">
+<p><span>Association (</span><span>direction:</span><span> Unspecified)</span></p>
+</div></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p><span>Source: Public (Class) LineaInvestigacion</span></p>
+<p><span>Cardinality: </span><span>[1]</span></p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p><span>Target: Public (Class) GrupoLineaInvestigacion</span></p>
+<p><span>Cardinality: </span><span>[0..*]</span></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><div class="content-wrapper">
+<p><span>Association (</span><span>direction:</span><span> Unspecified)</span></p>
+</div></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p><span>Source: Public (Class) LineaInvestigacionNombre<br />
+</span></p>
+<p><span>Cardinality: </span><span>[1..*]</span></p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p><span>Target: Public (Class) LineaInvestigacion<br />
+</span></p>
+<p><span>Cardinality: </span><span>[1]</span></p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+### Entidad Nombre de una línea de investigación: "LineaInvestigacionNombre" 
+
+Entidad para almacenar el nombre o título de la línea de investigación en cada uno de los idiomas soportados por la aplicación. El campo nombre de una línea de investigación es un campo obligatorio. Ha de introducirse al menos en un idioma.
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p><strong><span>ATTRIBUTES</span></strong></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><div class="content-wrapper">
+<p><span>lineaInvestigacion : LineaInvestigacion Private</span></p>
+<p>Identificador de la línea de investigación a la que pertenece el nombre. Es una FK a la tabla "línea investigación".</p>
+</div></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><div class="content-wrapper">
+<p><span>lang : String Private</span></p>
+<p>Idioma en el que está almacenado el nombre de la línea de investigación. Cada idioma se representa por un código de 2 caracteres:</p>
+<ul>
+<li>es</li>
+<li>en</li>
+<li>eu</li>
+</ul>
+</div></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><div class="content-wrapper">
+<p> <span>value_ : String Private</span></p>
+<p>Nombre o descripción de la línea de investigación en el idioma indicado por el campo "lang". Es un campo de texto libre con un máximo de 1000 caracteres. Es un campo obligatorio de la línea de investigación en al menos uno de los idiomas.</p>
+</div></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p><strong><span>ASSOCIATIONS</span></strong></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><div class="content-wrapper">
+<p><span>Association (</span><span>direction:</span><span> Unspecified)</span></p>
+</div></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p><span>Source: Public (Class) LineaInvestigacionNombre<br />
+</span></p>
+<p><span>Cardinality: </span><span>[1..*]</span></p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p><span>Target: Public (Class) LineaInvestigacion<br />
+</span></p>
+<p><span>Cardinality: </span><span>[1]</span></p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+## Enumerados del modelo CSP Grupo
+
+### Enumerado tipo de dedicación: "Dedicacion"
+
+Tiempo de dedicación del miembro en el grupo.
+
+Enumerado con los siguientes valores:
+
+- COMPLETA
+- PARCIAL
+
+<div class="table-wrap">
+
+<table class="relative-table confluenceTable" style="width: 153.953px;">
+<tbody>
+<tr class="odd">
+<td class="highlight-grey confluenceTd" style="text-align: left; vertical-align: top;" data-highlight-colour="grey"><p><strong><span>ATTRIBUTES</span></strong></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><div class="content-wrapper">
+<p><span>COMPLETA : Public</span></p>
+</div></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><div class="content-wrapper">
+<p>PARCIAL<span> </span><span>: Public</span></p>
+</div></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<tbody>
+<tr class="odd">
+<td colspan="2" class="highlight-grey confluenceTd" style="text-align: left; vertical-align: top;" data-highlight-colour="grey"><p><strong><span>ASSOCIATIONS</span></strong></p></td>
+</tr>
+</tbody>
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><div class="content-wrapper">
+<p><span>Association (</span><span>direction:</span><span> Unspecified)</span></p>
+</div></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p><span>Source: Public (Class) GrupoEquipo</span></p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p><span>Target: Public (Enumeration) Dedicacion</span></p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+### Enumerado tipo de grupo: "TipoGrupo"
+
+Grado de madurez del grupo de investigación.
+
+Enumerado con los siguientes valores:
+
+- EMERGENTE
+
+- CONSOLIDADO
+
+- PRECOMPETITIVO
+
+- ALTO_RENDIMIENTO
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<tbody>
+<tr class="odd">
+<td class="highlight-grey confluenceTd" style="text-align: left; vertical-align: top;" data-highlight-colour="grey"><p><strong><span>ATTRIBUTES</span></strong></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><div class="content-wrapper">
+<p>EMERGENTE<span> : Public</span></p>
+</div></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><div class="content-wrapper">
+<p>CONSOLIDADO<span> : Public</span></p>
+</div></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><div class="content-wrapper">
+<p>PRECOMPETITIVO<span> : Public</span></p>
+</div></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><div class="content-wrapper">
+<p>ALTO_RENDIMIENTO<span> : Public</span></p>
+</div></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<tbody>
+<tr class="odd">
+<td colspan="2" class="highlight-grey confluenceTd" style="text-align: left; vertical-align: top;" data-highlight-colour="grey"><p><strong><span>ASSOCIATIONS</span></strong></p></td>
+</tr>
+</tbody>
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><div class="content-wrapper">
+<p><span>Association (</span><span>direction:</span><span> Unspecified)</span></p>
+</div></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p><span>Source: Public (Class) GrupoTipo</span></p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p><span>Target: Public (Enumeration) TipoGrupo</span></p>
+<p><br />
+</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+<div id="footer" role="contentinfo">
+
+<div class="section footer-body">
+
+Document generated by Confluence on oct 27, 2025 08:54
+
+<div id="footer-logo">
+
+[Atlassian](https://www.atlassian.com/)
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 
 

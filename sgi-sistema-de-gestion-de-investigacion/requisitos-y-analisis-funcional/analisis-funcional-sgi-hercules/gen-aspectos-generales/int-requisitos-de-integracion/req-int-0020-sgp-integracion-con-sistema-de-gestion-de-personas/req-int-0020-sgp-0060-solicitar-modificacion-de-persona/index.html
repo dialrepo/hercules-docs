@@ -796,7 +796,221 @@
 
   <h1>Req int 0020 sgp 0060 solicitar modificacion de persona</h1>
 
+<div id="page">
 
+<div id="main" class="aui-page-panel">
+
+<div id="main-header">
+
+<div id="breadcrumb-section">
+
+1.  [Hércules](index.html)
+2.  [Hércules](/)
+3.  [SGI. Sistema de gestión de investigación](//sgi-sistema-de-gestion-de-investigacion)
+4.  [Requisitos y análisis funcional](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional)
+5.  [Análisis Funcional SGI - Hércules](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules)
+6.  [GEN - Aspectos generales](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales)
+7.  [INT - Requisitos de integración](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion)
+8.  [REQ-INT-0020-SGP - Integración con Sistema de gestión de personas](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0020-sgp-integracion-con-sistema-de-gestion-de-personas)
+
+</div>
+
+# <span id="title-text"> Hércules : REQ-INT-0020-SGP-0060 - Solicitar modificación de persona </span>
+
+</div>
+
+<div id="content" class="view">
+
+<div class="page-metadata">
+
+Created by <span class="author"> Usuario desconocido (alicia.alvarez)</span>, last updated on jun 22, 2022
+
+</div>
+
+<div id="main-content" class="wiki-content group">
+
+<div class="contentLayout2">
+
+<div class="columnLayout single" layout="single">
+
+<div class="cell normal" data-type="normal">
+
+<div class="innerCell">
+
+<div class="plugin-tabmeta-details">
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="odd">
+<th class="confluenceTh">Cod. REQ</th>
+<td class="confluenceTd"><p><strong>REQ-INT-0020-SGP-0060 - Solicitar modificación de persona<br />
+</strong></p></td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Ver. Objetivo</th>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh">Ver. REQ</th>
+<td class="confluenceTd">1.0.0</td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Estado</th>
+<td class="confluenceTd"><div class="content-wrapper">
+ <span class="status-macro aui-lozenge aui-lozenge-current conf-macro output-inline">IN PROGRESS</span> 
+</div></td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh">Fec. Aprobación</th>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Épica, historia</th>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh">Frecuencia</th>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Características</th>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh"><span>M. Consumidor</span></th>
+<td class="confluenceTd">CSP, PRC, INV, GIN, PII, ETI</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+## <span style="color:var(--ds-text,#172b4d);">Definición y objetivos</span>
+
+<span style="color:var(--ds-text,#172b4d);">El ESB proporcionará el interface de integración para que desde el SGI se solicite a los sistemas de gestión de personas universitarios la modificación de aquellas personas vinculadas con la Universidad de las que el SGI tiene visibilidad. A través del formulario correspondiente el SGI recogerá los campos necesarios y/o de interés para la modificación de la persona en el sistema de gestión de personas universitario. </span>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="columnLayout single" layout="single">
+
+<div class="cell normal" data-type="normal">
+
+<div class="innerCell">
+
+## <span style="color:var(--ds-text,#172b4d);">Descripción integración</span>
+
+<span style="color:var(--ds-text,#172b4d);">El SGI no dispondrá de un formulario propio para recoger los datos de modificación de una persona sino uno específico por implantación/universidad tal y como se describe en <a href="/confluence/pages/createpage.action?spaceKey=HERCULES&amp;title=IU-GEN-0062+-+Ver+detalle+-+Solicitar+modificaci%C3%B3n+de+persona&amp;linkCreation=true&amp;fromPageId=597853090" class="createlink">IU-GEN-0062 - Ver detalle - Solicitar modificación de persona</a>.</span>
+
+<span style="color:var(--ds-text,#172b4d);">Los parámetros de entrada y salida a la hora de integrarse con los sistemas universitarios para la modificación de personas serán definidos en cada implantación/universidad en particular, puesto que dependen de las necesidades y restricciones tanto de sus usuarios finales como de sus sistemas de gestión de la información de personas.</span>
+
+<span style="color:var(--ds-text,#172b4d);">Los parámetros de entrada de la integración vendrán determinados por el contenido del formulario de modificación específico para una implantación, más las información adicional no visible por pantalla que se pudiese necesitar enviar.</span>
+
+<span style="color:var(--ds-text,#172b4d);">Como salida se tratará de tender a tener una respuesta más estandarizada o común, como un mensaje con el resultado de la operación, por ejemplo, en caso de que se haya podido modificar la persona, que se devuelva un mensaje "Persona modificada correctamente" (o similar) y en caso de fallo en la modificación "No se ha podido modificar la Persona en este momento" (o similar).  
+</span>
+
+## <span style="color:var(--ds-text,#172b4d);">Diseño técnico</span>
+
+En el siguiente enlace se muestra el diseño del modelo lógico y el diseño de la API del Sistema de Gestión de Personas y, en concreto, de la relativa a servicios Formly: [SGI - ESB - SGP - Servicios Formly](//sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sgp/sgi-esb-sgp-servicios-formly).
+
+Los servicios concretos del API que cubren este requisito son:
+
+- [SGI - ESB - SGP - Personas - Consultar campos modificación](//sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sgp/sgi-esb-sgp-servicios-formly/sgi-esb-sgp-personas-consultar-campos-modificacion)  
+  - Se ha de llamar en primer lugar para poder obtener los campos del detalle para permitir después la modificación de los mismos desde el formulario.
+- [SGI - ESB - SGP - Personas - Consultar detalle](//sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sgp/sgi-esb-sgp-servicios-formly/sgi-esb-sgp-personas-consultar-detalle)  
+  - Se llamará una vez se tienen los campos de la modificación para obtener el valor actual de cada uno y pintarlo por pantalla.
+- [SGI - ESB - SGP - Personas - Modificar](//sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sgp/sgi-esb-sgp-servicios-formly/sgi-esb-sgp-personas-modificar)  
+  - Se llamará una vez el usuario completa los datos del formulario de modificación.
+
+<span style="color:var(--ds-text,#172b4d);">Para cada implantación en particular se implementará un API específico o a medida, pero tendiendo a que sea igual o compatible en la medida de lo posible al propio del SGI, para así poder agilizar las integraciones.</span>
+
+<span style="color:var(--ds-text,#172b4d);">El dinamismo o adaptación de los formularios dinámicos de solicitud de modificación para las personas se logrará mediante una definición del interface de comunicación entre el ESB del SGI y las APIs universitarias donde se intercambien mensajes en formato JSON, manteniendo así la firma de los servicios constante aunque el contenido del mensaje pudiese variar.</span>
+
+<span style="color:var(--ds-text,#172b4d);">En el siguiente enlace se muestra el diseño del modelo lógico y el diseño de la API del Sistema de Gestión de Personas para la implantación específica en la Universidad de Murcia: [Sistema de gestión de Personas (RRHH) (UM - SGI - ESB - SGP)](//sgi-sistema-de-gestion-de-investigacion/guia-de-implantacion-checklist/um-universidad-de-murcia/sistema-de-gestion-de-investigacion-apis-integracion/sistema-de-gestion-de-personas-rrhh-um-sgi-esb-sgp).</span>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="columnLayout three-equal" layout="three-equal">
+
+<div class="cell normal" data-type="normal">
+
+<div class="innerCell">
+
+## <span style="color:var(--ds-text,#172b4d);">Interfaces de usuario relacionados</span>
+
+<img src="plugins/servlet/confluence/placeholder/unknown-macro" class="wysiwyg-unknown-macro" />
+
+</div>
+
+</div>
+
+<div class="cell normal" data-type="normal">
+
+<div class="innerCell">
+
+## <span style="color:var(--ds-text,#172b4d);">Informes relacionados</span>
+
+<img src="plugins/servlet/confluence/placeholder/unknown-macro" class="wysiwyg-unknown-macro" />
+
+</div>
+
+</div>
+
+<div class="cell normal" data-type="normal">
+
+<div class="innerCell">
+
+## <span style="color:var(--ds-text,#172b4d);">Casos de uso relacionados</span>
+
+<span style="color:var(--ds-text,#172b4d);"><img src="plugins/servlet/confluence/placeholder/unknown-macro" class="wysiwyg-unknown-macro" /></span>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div id="footer" role="contentinfo">
+
+<div class="section footer-body">
+
+Document generated by Confluence on oct 27, 2025 08:38
+
+<div id="footer-logo">
+
+[Atlassian](https://www.atlassian.com/)
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 
 

@@ -796,7 +796,397 @@
 
   <h1>Iu gen 0140 busqueda de grupos de investigacion</h1>
 
+<div id="page">
 
+<div id="main" class="aui-page-panel">
+
+<div id="main-header">
+
+<div id="breadcrumb-section">
+
+1.  [Hércules](index.html)
+2.  [Hércules](/)
+3.  [SGI. Sistema de gestión de investigación](//sgi-sistema-de-gestion-de-investigacion)
+4.  [Requisitos y análisis funcional](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional)
+5.  [Análisis Funcional SGI - Hércules](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules)
+6.  [GEN - Aspectos generales](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales)
+7.  [SHA - Buscadores y listados comunes](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/sha-buscadores-y-listados-comunes)
+
+</div>
+
+# <span id="title-text"> Hércules : IU-GEN-0140 - Búsqueda de grupos de investigación </span>
+
+</div>
+
+<div id="content" class="view">
+
+<div class="page-metadata">
+
+Created by <span class="author"> Usuario desconocido (lorena.alvarez)</span>, last updated on feb 04, 2022
+
+</div>
+
+<div id="main-content" class="wiki-content group">
+
+<div class="contentLayout2">
+
+<div class="columnLayout single" layout="single">
+
+<div class="cell normal" data-type="normal">
+
+<div class="innerCell">
+
+<div class="plugin-tabmeta-details">
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable" style="width: 75.1988%;">
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 84%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<th class="confluenceTh">Cod. IU</th>
+<td class="confluenceTd">IU-GEN-0140 - Búsqueda de grupos de investigación</td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Ver. objetivo</th>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh">Ver. IU</th>
+<td class="confluenceTd">1.0.0</td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Estado</th>
+<td class="confluenceTd"><div class="content-wrapper">
+<div class="content-wrapper">
+<span class="status-macro aui-lozenge aui-lozenge-complete conf-macro output-inline">LIBERADO_</span>
+</div>
+</div></td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh">Fec. Aprobación</th>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Épica, historia</th>
+<td class="confluenceTd"><div class="content-wrapper">
+<p><br />
+</p>
+</div></td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh">Actores</th>
+<td class="confluenceTd">ACT-PRC-003-Gestor, ACT-PRC-001-Investigador</td>
+</tr>
+<tr class="even">
+<th class="confluenceTh"><p>Frecuencia</p></th>
+<td class="confluenceTd">Media</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+# Formulario de Búsqueda de grupos de investigación
+
+Pantalla emergente que muestra un formulario que, mediante unos filtros de búsqueda, muestra un listado de los grupos de investigación registrados en el sistema que cumplen las condiciones que se presentan. 
+
+Será el buscador de grupos de investigación común a todo el SGI que utilizarán el resto de módulos de la aplicación.
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable">
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 12%" />
+<col style="width: 73%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<th colspan="3" class="confluenceTd"><div class="content-wrapper">
+<p><em><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852601/597876677.png" class="confluence-embedded-image" draggable="false" data-image-src="attachments/597852601/597876677.png" data-unresolved-comment-count="0" data-linked-resource-id="597876677" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="busquedagenericagrupos.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852601" data-linked-resource-container-version="7" tabindex="0" width="750" /></span><br />
+</em></p>
+</div></th>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Nombre</th>
+<th class="confluenceTh">Tipo</th>
+<th class="confluenceTh"><p>Características / Notas</p></th>
+</tr>
+<tr class="odd">
+<th colspan="3" class="highlight-blue confluenceTd" data-highlight-colour="blue">Formulario de búsqueda de grupos de investigación. La búsqueda llevará implícito el filtro que limite los grupos de investigación a los activos (campo "activo" a "true").</th>
+</tr>
+<tr class="even">
+<th class="confluenceTd">Nombre</th>
+<th class="confluenceTd"><div class="content-wrapper">
+<p>Texto largo</p>
+<p>Opcional</p>
+</div></th>
+<th class="confluenceTd">Campo para introducir la cadena de texto por la que se aplicará la búsqueda sobre el campo "nombre" de la tabla "grupo investigación"</th>
+</tr>
+<tr class="odd">
+<th class="confluenceTd">Código</th>
+<th class="confluenceTd"><p>Texto corto</p>
+<p>Opcional</p></th>
+<th class="confluenceTd"><p>Código alfanumérico generado automáticamente por el SGI al crear el grupo (aunque puede ser modificado por el ACT-CSP-003-Gestor, ACT-CSP-004-Administrador.</p>
+<p>Filtro a aplicar sobre el campo "código" de la tabla "grupo investigación"</p></th>
+</tr>
+<tr class="even">
+<th class="confluenceTd">Código identificación SGE</th>
+<th class="confluenceTd"><p>Texto corto</p>
+<p>Opcional</p></th>
+<th class="confluenceTd"><p><span style="color:var(--ds-text,#172b4d);">Código de identificación del proyecto económico del SGE con el que se vincula el grupo de investigación SGI. Podrá ser alfanumérico.</span></p>
+<p>Filtro a aplicar sobre el campo "<span style="color:var(--ds-text,#172b4d);">identificador SGE" de la tabla "grupo investigación".</span></p></th>
+</tr>
+<tr class="odd">
+<th class="confluenceTd">Fecha inicio desde</th>
+<th class="confluenceTd"><p>Fecha</p>
+<p>Opcional</p></th>
+<th class="confluenceTd"><p>Permitirá indicar el intervalo de fechas entre las que se debe encontrar la fecha de inicio del grupo (campo "fecha inicio" de la tabla "<span style="color:var(--ds-text,#172b4d);">grupo investigación</span>").</p>
+<p>Se comprobará que la "fecha inicio" de la tabla "<span style="color:var(--ds-text,#172b4d);">grupo investigación</span>" sea mayor o igual a esta fecha.</p></th>
+</tr>
+<tr class="even">
+<th class="confluenceTd">Fecha inicio hasta</th>
+<th class="confluenceTd"><p>Fecha</p>
+<p>Opcional</p></th>
+<th class="confluenceTd"><p>Permitirá indicar el intervalo de fechas entre las que se debe encontrar la fecha de inicio del grupo (campo "fecha inicio" de la tabla "<span style="color:var(--ds-text,#172b4d);">grupo investigación</span>").</p>
+<p>Se comprobará que la "fecha inicio" de la tabla "<span style="color:var(--ds-text,#172b4d);">grupo investigación</span>" sea menor o igual a esta fecha.</p></th>
+</tr>
+<tr class="odd">
+<th class="confluenceTd">Miembro de equipo</th>
+<th class="confluenceTd"><p>Buscador</p>
+<p>Opcional</p></th>
+<th class="confluenceTd"><p><span>A través del botón Buscar se dará acceso al buscador de personas común al SGI, <a href="https://confluence.um.es/confluence/pages/viewpage.action?pageId=95489453" rel="nofollow">IU-GEN-0100-0060 - Búsqueda de persona</a></span>. Las condiciones de invocación a este buscador se recogen en  la tabla de acciones.</p>
+<p><span>La persona seleccionada se utilizará para aplicar como filtro de búsqueda sobre el campo "personaRef" de la tabla "grupo equipo".</span></p></th>
+</tr>
+<tr class="even">
+<th colspan="3" class="highlight-blue confluenceTd" data-highlight-colour="blue">Listado de resultados (grupos de investigación) - Al entrar en la pantalla, aparecerá ya el listado de todos los grupos de investigación registrados cargado por defecto (campo "activo" a true)</th>
+</tr>
+<tr class="odd">
+<th class="confluenceTd">Nombre</th>
+<th class="confluenceTd"><p>Texto largo</p></th>
+<th class="confluenceTd"><p>Nombre del grupo de investigación.</p>
+<p>Se corresponde con el campo "nombre" de la tabla "grupo investigación".</p></th>
+</tr>
+<tr class="even">
+<th class="confluenceTd">Investigador/a principal</th>
+<th class="confluenceTd"><p>Texto</p></th>
+<th class="confluenceTd">Se recuperarán el Nombre y apellidos por medio de <a href="https://confluence.um.es/confluence/display/HERCULES/REQ-INT-0020-SGP-0030+-+Consultar+datos+generales+de+persona" rel="nofollow">REQ-INT-0020-SGP-0030 - Consultar datos generales de persona</a> del investigador/a principal, es decir, de todos los miembros del grupo de investigación (tabla "grupo equipo") aquel que actualmente tiene el "rol" con el flag "principal" a true y con el campo "orden" igual a "primario". En caso de existir mas de una persona, se mostrará el que tenga el mayor porcentaje de dedicación al grupo (campo "participación" de la tabla "grupo equipo"). Y en caso de coincidir se mostrará el primero recuperado.</th>
+</tr>
+<tr class="odd">
+<th class="confluenceTd"><span>Código</span></th>
+<th class="confluenceTd">Texto corto</th>
+<th class="confluenceTd"><p>Código del grupo de investigación</p>
+<p>Se corresponde con el campo "código" de la tabla "grupo investigación".</p></th>
+</tr>
+<tr class="even">
+<th class="confluenceTd">Fecha inicio</th>
+<th class="confluenceTd">Fecha</th>
+<th class="confluenceTd">Fecha de inicio del grupo de investigación. Campo "fecha inicio"  de la tabla "grupo investigación".</th>
+</tr>
+<tr class="odd">
+<th class="confluenceTd">Fecha fin</th>
+<th class="confluenceTd">Fecha</th>
+<th class="confluenceTd">Fecha de finalización del grupo de investigación. Campo "fecha fin"  de la tabla "grupo investigación".</th>
+</tr>
+<tr class="even">
+<th class="confluenceTd">Tipo grupo</th>
+<th class="confluenceTd">Texto corto</th>
+<th class="confluenceTd">Nombre del Tipo de grupo actual, extraído del enumerado "Tipo grupo" de la tabla "Grupo tipo", a partir del campo "tipo" de la tabla "grupo investigación"</th>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="table-wrap">
+
+<table class="wrapped relative-table confluenceTable" style="width: 99.9187%;">
+<colgroup>
+<col style="width: 7%" />
+<col style="width: 41%" />
+<col style="width: 28%" />
+<col style="width: 22%" />
+</colgroup>
+<tbody>
+<tr class="header">
+<th class="confluenceTh">Acciones</th>
+<th class="confluenceTh">Descripción</th>
+<th class="confluenceTh"> Enlace CU.</th>
+<th class="confluenceTh">Permisos</th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd">Buscar miembro</td>
+<td class="confluenceTd">Pantalla genérica de búsqueda de personas.</td>
+<td class="confluenceTd"><p>Muestra la pantalla<span> <a href="https://confluence.um.es/confluence/pages/viewpage.action?pageId=95489453" rel="nofollow">IU-GEN-0060 - Búsqueda de personas</a></span><span> que hará uso del requisito de integración<a href="https://confluence.um.es/confluence/display/HERCULES/REQ-INT-0020-SGP-0020+-+Buscar+persona+en+un+listado+de+colectivos" rel="nofollow">REQ-INT-0020-SGP-0020 - Buscar persona en un listado de colectivos</a>.  </span></p>
+<p><span>Se le deberán pasar a este buscador el listado de colectivos (campo "colectivo ref")  recuperados de la tabla "rol proyecto colectivo" que estén asociados a cualquier rol  activo (campo "activo" a "true") de la tabla "rol proyecto".</span></p></td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">Buscar</td>
+<td class="confluenceTd"><span>Aplica los filtros introducidos sobre la lista de Grupos de investigación mostrando los que cumplen las condiciones.</span></td>
+<td class="confluenceTd">Aplica la búsqueda sobre la tabla "grupo investigación" teniendo en cuenta los filtros introducidos en el formulario y conllevando el filtro implícito sobre el campo "activo" de forma que solo se consideren los grupos con el campo "activo" a "true".</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">Limpiar</td>
+<td class="confluenceTd"><p><span>Elimina los datos introducidos en el formulario de búsqueda de Grupos de investigación.</span></p></td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">Seleccionar</td>
+<td class="confluenceTd"><span>Asigna la referencia del Grupo de investigación a la entidad desde la que se ha solicitado su asignación.<br />
+</span></td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+## Botones generales a la pantalla
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable" style="width: 70.7412%;">
+<colgroup>
+<col style="width: 6%" />
+<col style="width: 66%" />
+<col style="width: 10%" />
+<col style="width: 16%" />
+</colgroup>
+<tbody>
+<tr class="header">
+<th class="confluenceTh">Acciones</th>
+<th class="confluenceTh">Descripción</th>
+<th class="confluenceTh"> Enlace CU.</th>
+<th class="confluenceTh">Permisos</th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd">Cancelar</td>
+<td class="confluenceTd"><p>No se realiza ninguna acción, se cierra el formulario sin devolver ningún dato al formulario de invocación.</p></td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+## Interfaces y casos de uso relacionados
+
+</div>
+
+</div>
+
+</div>
+
+<div class="columnLayout two-equal" layout="two-equal">
+
+<div class="cell normal" data-type="normal">
+
+<div class="innerCell">
+
+<img src="plugins/servlet/confluence/placeholder/unknown-macro" class="wysiwyg-unknown-macro" />
+
+</div>
+
+</div>
+
+<div class="cell normal" data-type="normal">
+
+<div class="innerCell">
+
+<img src="plugins/servlet/confluence/placeholder/unknown-macro" class="wysiwyg-unknown-macro" />
+
+</div>
+
+</div>
+
+</div>
+
+<div class="columnLayout single" layout="single">
+
+<div class="cell normal" data-type="normal">
+
+<div class="innerCell">
+
+## Permisos
+
+<div class="table-wrap">
+
+|                                                 |
+|-------------------------------------------------|
+| Permiso acceso a la pantalla                    |
+| Los que correspondan en cada gestión específica |
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="pageSection group">
+
+<div class="pageSectionHeader">
+
+## Attachments:
+
+</div>
+
+<div class="greybox" align="left">
+
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [01_BuscadorPopupComunInvenciones.png](/attachments/597852601/597865402.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [busquedagenericagrupos.png](/attachments/597852601/597876677.png) (image/png)  
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div id="footer" role="contentinfo">
+
+<div class="section footer-body">
+
+Document generated by Confluence on oct 27, 2025 08:39
+
+<div id="footer-logo">
+
+[Atlassian](https://www.atlassian.com/)
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 
 

@@ -796,7 +796,2844 @@
 
   <h1>Csp sol modelo logico documentacion</h1>
 
+<div id="page">
 
+<div id="main" class="aui-page-panel">
+
+<div id="main-header">
+
+<div id="breadcrumb-section">
+
+1.  [Hércules](index.html)
+2.  [Hércules](/)
+3.  [SGI. Sistema de gestión de investigación](//sgi-sistema-de-gestion-de-investigacion)
+4.  [Diseño](//sgi-sistema-de-gestion-de-investigacion/diseno)
+5.  [Componentes](//sgi-sistema-de-gestion-de-investigacion/diseno/componentes)
+6.  [SGI - CSP](//sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-csp)
+7.  [CSP-SOL: Solicitudes](//sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-csp/csp-sol-solicitudes)
+
+</div>
+
+# <span id="title-text"> Hércules : CSP-SOL - Módelo lógico - Documentación </span>
+
+</div>
+
+<div id="content" class="view">
+
+<div class="page-metadata">
+
+Created by <span class="author"> Usuario desconocido (covadonga.garcia)</span>, last updated on oct 06, 2022
+
+</div>
+
+<div id="main-content" class="wiki-content group">
+
+<div class="toc-macro rbtoc1761551547022">
+
+- [Entidades del modelo de solicitud genérica](#CSPSOLMódelológicoDocumentación-Entidadesdelmodelodesolicitudgenérica)
+  - [Entidad Solicitud](#CSPSOLMódelológicoDocumentación-EntidadSolicitud)
+  - [Entidad Histórico de estados de una solicitud: "EstadoSolicitud"](#CSPSOLMódelológicoDocumentación-EntidadHistóricodeestadosdeunasolicitud:%22EstadoSolicitud%22)
+  - [Entidad Documentos de una solicitud: "SolicitudDocumento"](#CSPSOLMódelológicoDocumentación-EntidadDocumentosdeunasolicitud:%22SolicitudDocumento%22)
+  - [Entidad Hitos de una solicitud: "SolicitudHito"](#CSPSOLMódelológicoDocumentación-EntidadHitosdeunasolicitud:%22SolicitudHito%22)
+  - [Entidad Avisos para un hito de solicitud: "SolicitudHitoAviso"](#CSPSOLMódelológicoDocumentación-EntidadAvisosparaunhitodesolicitud:%22SolicitudHitoAviso%22)
+  - [Entidad Modalidad de una solicitud: "SolicitudModalidad"](#CSPSOLMódelológicoDocumentación-EntidadModalidaddeunasolicitud:%22SolicitudModalidad%22)
+  - [Entidad Palabras clave de una solicitud: "SolicitudPalabraClave"](#CSPSOLMódelológicoDocumentación-EntidadPalabrasclavedeunasolicitud:%22SolicitudPalabraClave%22)
+- [Enumerados del modelo de solicitud genérica](#CSPSOLMódelológicoDocumentación-Enumeradosdelmodelodesolicitudgenérica)
+  - [Enumerado Listado de estados de solicitud: "TipoEstadoSolicitud"](#CSPSOLMódelológicoDocumentación-EnumeradoListadodeestadosdesolicitud:%22TipoEstadoSolicitud%22)
+- [Entidades del modelo Solicitudes de tipo proyecto](#CSPSOLMódelológicoDocumentación-EntidadesdelmodeloSolicitudesdetipoproyecto)
+  - [Entidad Solicitud de tipo proyecto: "solicitudProyecto"](#CSPSOLMódelológicoDocumentación-EntidadSolicituddetipoproyecto:%22solicitudProyecto%22)
+  - [Entidad Roles de miembro de equipo: "RolProyecto"](#CSPSOLMódelológicoDocumentación-EntidadRolesdemiembrodeequipo:%22RolProyecto%22)
+  - [Entidad Colectivos para un rol de equipo: "RolProyectoColectivo"](#CSPSOLMódelológicoDocumentación-EntidadColectivosparaunroldeequipo:%22RolProyectoColectivo%22)
+  - [Entidad Roles de socio de proyecto: "RolSocio"](#CSPSOLMódelológicoDocumentación-EntidadRolesdesociodeproyecto:%22RolSocio%22)
+  - [Entidad Áreas de conocimiento de una solicitud de proyecto: "SolicitudProyectoArea"](#CSPSOLMódelológicoDocumentación-EntidadÁreasdeconocimientodeunasolicituddeproyecto:%22SolicitudProyectoArea%22)
+  - [Entidad Clasificaciones de una solicitud de proyecto: "SolicitudProyectoClasificacion"](#CSPSOLMódelológicoDocumentación-EntidadClasificacionesdeunasolicituddeproyecto:%22SolicitudProyectoClasificacion%22)
+  - [Entidad Entidades financiadoras de una solicitud de proyecto: "SolicitudProyectoEntidad"](#CSPSOLMódelológicoDocumentación-EntidadEntidadesfinanciadorasdeunasolicituddeproyecto:%22SolicitudProyectoEntidad%22)
+  - [Entidad Entidad financiadoras de una ajenas a la convocatoria de una solicitud de proyecto: "SolicitudProyectoEntidadFinanciadoraAjena"](#CSPSOLMódelológicoDocumentación-EntidadEntidadfinanciadorasdeunaajenasalaconvocatoriadeunasolicituddeproyecto:%22SolicitudProyectoEntidadFinanciadoraAjena%22)
+  - [Entidad Miembros de equipo de una solicitud de proyecto: "SolicitudProyectoEquipo"](#CSPSOLMódelológicoDocumentación-EntidadMiembrosdeequipodeunasolicituddeproyecto:%22SolicitudProyectoEquipo%22)
+  - [Entidad Miembros de equipo de un socio para una solicitud de proyecto: "SolicitudProyectoEquipoSocio"](#CSPSOLMódelológicoDocumentación-EntidadMiembrosdeequipodeunsocioparaunasolicituddeproyecto:%22SolicitudProyectoEquipoSocio%22)
+  - [Entidad Periodos de justificación de un socio para una solicitud de proyecto: "SolicitudProyectoPeriodoJustificacion"](#CSPSOLMódelológicoDocumentación-EntidadPeriodosdejustificacióndeunsocioparaunasolicituddeproyecto:%22SolicitudProyectoPeriodoJustificacion%22)
+  - [Entidad Periodos de pago de un socio para una solicitud de proyecto: "SolicitudProyectoPeriodoPago"](#CSPSOLMódelológicoDocumentación-EntidadPeriodosdepagodeunsocioparaunasolicituddeproyecto:%22SolicitudProyectoPeriodoPago%22)
+  - [Entidad Presupuesto para una solicitud de proyecto: "SolicitudProyectoPresupuesto"](#CSPSOLMódelológicoDocumentación-EntidadPresupuestoparaunasolicituddeproyecto:%22SolicitudProyectoPresupuesto%22)
+  - [Entidad Responsable económico para una solicitud de proyecto: "SolicitudProyectoResponsableEconomico"](#CSPSOLMódelológicoDocumentación-EntidadResponsableeconómicoparaunasolicituddeproyecto:%22SolicitudProyectoResponsableEconomico%22)
+  - [Entidad Socios para una solicitud de proyecto: "SolicitudProyectoSocio"](#CSPSOLMódelológicoDocumentación-EntidadSociosparaunasolicituddeproyecto:%22SolicitudProyectoSocio%22)
+- [Enumerado del modelo solicitudes tipo proyecto](#CSPSOLMódelológicoDocumentación-Enumeradodelmodelosolicitudestipoproyecto)
+  - [Enumerado Tipos de equipo: "TipoEquipoProyecto"](#CSPSOLMódelológicoDocumentación-EnumeradoTiposdeequipo:%22TipoEquipoProyecto%22)
+  - [Enumerado Tipos de orden para un rol de equipo: "TipoOrden"](#CSPSOLMódelológicoDocumentación-EnumeradoTiposdeordenparaunroldeequipo:%22TipoOrden%22)
+  - [Enumerado Tipos de presupuesto para una solicitud: "TipoPresupuesto"](#CSPSOLMódelológicoDocumentación-EnumeradoTiposdepresupuestoparaunasolicitud:%22TipoPresupuesto%22)
+- [Entidades del modelo de solicitudes de tipo grupo](#CSPSOLMódelológicoDocumentación-Entidadesdelmodelodesolicitudesdetipogrupo)
+  - [Entidad Solicitud de tipo grupo: "SolicitudGrupo"](#CSPSOLMódelológicoDocumentación-EntidadSolicituddetipogrupo:%22SolicitudGrupo%22)
+- [Enumerados del modelo de solicitudes de tipo grupo](#CSPSOLMódelológicoDocumentación-Enumeradosdelmodelodesolicitudesdetipogrupo)
+  - [Enumerado Tipos de solicitudes de grupo: "TipoSolicitudGrupo"](#CSPSOLMódelológicoDocumentación-EnumeradoTiposdesolicitudesdegrupo:%22TipoSolicitudGrupo%22)
+- [Entidades del modelo de solicitudes de tipo RRHH](#CSPSOLMódelológicoDocumentación-EntidadesdelmodelodesolicitudesdetipoRRHH)
+  - [Entidad Solicitud de tipo RRHH: "SolicitudRRRHH"](#CSPSOLMódelológicoDocumentación-EntidadSolicituddetipoRRHH:%22SolicitudRRRHH%22)
+  - [Entidad Categorías de convocatoria para una solicitud de RRHH: "SolicitudRRRHHRequisitoCategoría"](#CSPSOLMódelológicoDocumentación-EntidadCategoríasdeconvocatoriaparaunasolicituddeRRHH:%22SolicitudRRRHHRequisitoCategoría%22)
+  - [Entidad Niveles académicos de convocatoria para una solicitud de RRHH: "SolicitudRRRHHRequisitoNivelAcadémico"](#CSPSOLMódelológicoDocumentación-EntidadNivelesacadémicosdeconvocatoriaparaunasolicituddeRRHH:%22SolicitudRRRHHRequisitoNivelAcadémico%22)
+  - [Entidad Solicitante externo para una solicitud: "SolicitanteExterno"](#CSPSOLMódelológicoDocumentación-EntidadSolicitanteexternoparaunasolicitud:%22SolicitanteExterno%22)
+  - [Entidad solicitud externa: "SolicitudExterna"](#CSPSOLMódelológicoDocumentación-Entidadsolicitudexterna:%22SolicitudExterna%22)
+
+</div>
+
+
+
+## Entidades del modelo de solicitud genérica 
+
+### Entidad Solicitud 
+
+Entidad principal del modelo CSP Solicitud. Representa una solicitud genérica y contiene los datos básicos de la misma. 
+
+Según el tipo de solicitud, esta entidad se complementará o no con otra entidad que particulariza los datos de acuerdo al tipo. 
+
+Los tipos de solicitudes implementados en el SGI se encuentran identificados por el enumerado "Tipo formulario solicitud": 
+
+- Proyecto
+- Grupo
+- RRHH
+
+La entidad convocatoria dispone de un atributo "tipo formulario solicitud" que permite discriminar con qué tipo de solicitud se dará cobertura a las solicitudes de la convocatoria y en qué entidades se recogerían sus datos. 
+
+  
+
+Para el tipo de solicitud "proyecto" los datos de la solicitud se complementan con la tabla "solicitud proyecto" y todas sus relaciones. 
+
+Para el tipo de solicitud "grupo" los datos de la solicitud se complementan únicamente con la tabla "solicitud grupo" .
+
+
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="odd">
+<td class="confluenceTd"><p><strong><span>ATTRIBUTES</span></strong><span> </span></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><span>activo : Boolean  Private</span><span> </span></p>
+<p><span>Flag con el que se da cobertura al borrado lógico de los registros de esta tabla. Una solicitud solo puede ser eliminada mientras su estado sea "borrador".</span><span> </span><span> </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>codigoExterno : String  Private</span><span> </span></p>
+<p><span>Identificador, código o referencia asignado a la solicitud por la entidad convocante. No es un valor dependiente del SGI. </span><span> </span></p>
+<p><span>En el caso de solicitudes del plan propio este campo podría corresponderse con el código asignado al presentar la solicitud en el Registro Universitario.</span><span> </span></p>
+<p><span>El valor de este campo será heredado por el proyecto en el campo "código externo".</span><span> </span><span> </span><span> </span></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><span>codigoRegistroInterno : String  Private</span><span> </span></p>
+<p><span>Código generado automáticamente por el SGI al crear la solicitud.</span><span> </span></p>
+<p><span>Está formado por un sufijo concatenado a la fecha y hora de la creación, por tanto, será único y permitirá identificar de manera única a la solicitud. </span><span> </span><span> </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>convocatoria : Convocatoria  Private</span><span> </span></p>
+<p><span>Identificador de la convocatoria del SGI a la que pertenece la solicitud. Es una FK a la tabla "convocatoria" incluida en el modelo lógico CSP Convocatoria.</span><span> </span><span> </span><span> </span></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><span>convocatoriaExterna : String  Private</span><span> </span></p>
+<p><span>Código o referencia de la convocatoria externa (no registrada en el SGI) sobre la que se presenta la solicitud. </span><span> </span></p>
+<p><span>El SGI admite que se creen solicitudes sin necesidad de haber creado la convocatoria asociada en el SGI. Este campo permite identificar la convocatoria a la que pertenece la solicitud.</span><span> </span></p>
+<p><span>A nivel de interface de usuario del SGI es obligatorio que una solicitud o bien esté vinculada a una convocatoria del SGI (campo "convocatoria" de esta tabla) o bien tenga informado este campo "convocatoria externa".</span><span> </span><span> </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>estado : EstadoSolicitud  Private</span><span> </span></p>
+<p><span>Estado actual de la solicitud. Es una FK a la tabla "estado solicitud"</span><span> </span><span> </span><span> </span></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><span>formularioSolicitud : TipoFormularioSolicitud  Private</span><span> </span></p>
+<p><span>Discrimina el tipo de solicitud. Toma un valor del enumerado "tipo formulario solicitud".</span><span> </span></p>
+<p><span>En función del valor los datos de la solicitud genérica se complementan con otras entidades de este modelo.</span><span> </span></p>
+<ul>
+<li><span>Proyecto: los datos de la solicitud se complementan con la entidad "solicitud proyecto" y todas sus relaciones.</span><span> </span></li>
+<li><span>Grupo: s datos de la solicitud se complementan con la entidad "solicitud grupo".</span><span> </span></li>
+<li>RRHH</li>
+</ul></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>id : Long  Private</span><span> </span></p>
+<p><span>Identificador único de la tabla. Secuencia. Clave primaria.</span><span> </span><span> </span><span> </span></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><span>observaciones : String  Private</span><span> </span></p>
+<p><span>Texto libre para recoger cualquier información complementaria de la solicitud.</span><span> </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span> </span><span>solicitanteRef : String  Private</span><span> </span></p>
+<p><span>Titular de la solicitud. Es el identificador de la persona en el sistema de gestión de personas corporativo.</span><span> </span></p>
+<p><span>Una solicitud puede ser creada en el SGI directamente por su solicitante o por la unidad de gestión. Para identificar al creador de la solicitud se utilizará el campo de auditoría "created by" (disponible modelo físico).</span><span> </span><span> </span></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><span>tipoSolicitudGrupo : TipoSolicitudGrupo  Private</span><span> </span></p>
+<p><span>Subtipo de la solicitud en caso de que la solicitud sea de tipo grupo ("formulario solicitud"). Es un valor del enumerado "tipo solicitud grupo"</span><span> </span><span> </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>titulo : String  Private</span><span> </span></p>
+<p><span>Título de la solicitud. En el caso de las solicitudes de tipo proyecto se corresponderá con el título del proyecto, en el caso de las solicitudes de grupo con el nombre del grupo.</span><span> </span><span> </span></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><span>unidadGestionRef : String  Private</span><span> </span></p>
+<p><span> </span><span>Identificador de la unidad de gestión responsable de la solicitud. En caso que la solicitud se vincule a una convocatoria registrada en el SGI la unidad de gestión se corresponderá con la de la convocatoria. Es una FK a la tabla "unidad" incluida en el modelo lógico SGI USR.</span><span> </span><span> </span></p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+ 
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd"><p><strong><span>ASSOCIATIONS</span></strong><span> </span></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd"><p><span>Association (</span><span>direction:</span><span> Unspecified)  </span><span> </span></p>
+<p><span> </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>Source: Public (Class) Solicitud </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[1]</span><span> </span><span> </span></p></td>
+<td class="confluenceTd"><p><span>Target: Public (Class) SolicitudDocumento </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[0..*]</span><span> </span></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd"><p><span> </span><span>Association (</span><span>direction:</span><span> Unspecified)  </span><span> </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>Source: Public (Class) Solicitud </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[1]</span><span> </span></p></td>
+<td class="confluenceTd"><p><span>Target: Public (Class) SolicitudProyecto </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[1]</span><span> </span></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd"><p><span> </span><span>Association (</span><span>direction:</span><span> Unspecified)  </span><span> </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>Source: Public (Class) Solicitud </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[1]</span><span> </span><span> </span></p></td>
+<td class="confluenceTd"><p><span>Target: Public (Class) Petición Evaluación Proyecto </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[1]</span><span> </span></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd"><p><span>Association (</span><span>direction:</span><span> Unspecified)  </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>Source: Public (Class) Solicitud </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[1]</span><span> </span><span> </span></p></td>
+<td class="confluenceTd"><p><span>Target: Public (Class) Cuestionario Valoración Ética </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[1]</span><span> </span></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd"><p><span> </span><span> </span><span>Association (</span><span>direction:</span><span> Unspecified)  </span><span> </span></p>
+<p><br />
+</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>Source: Public (Class) Solicitud </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[1]</span><span> </span></p></td>
+<td class="confluenceTd"><p><span>Target: Public (Class) Proyecto </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[0..*]</span></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd"><p><span>Association (</span><span>direction:</span><span> Unspecified)  </span><span> </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>Source: Public (Class) Solicitud </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[1]</span><span> </span></p></td>
+<td class="confluenceTd"><p><span>Target: Public (Class) SolicitudPalabraClave </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[0..*]</span><span> </span></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd"><p><span>Association (</span><span>direction:</span><span> Unspecified)  </span><span> </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>Source: Public (Class) Solicitud </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[1]</span></p></td>
+<td class="confluenceTd"><p><span>Target: Public (Class) SolicitudModalidad </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[0..*]</span></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd"><p><span> </span><span>Association (</span><span>direction:</span><span> Unspecified)  </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>Source: Public (Class) Solicitud </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[1]</span><span> </span></p></td>
+<td class="confluenceTd"><p><span>Target: Public (Class) SolicitudGrupo </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[1]</span><span> </span></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd"><p><span>Association (</span><span>direction:</span><span> Unspecified)  </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>Source: Public (Class) Solicitud </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[1]</span><span> </span></p></td>
+<td class="confluenceTd"><p><span>Target: Public (Class) EstadoSolicitud </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[0..*]</span></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd"><p><span>Association (</span><span>direction:</span><span> Unspecified)  </span><span> </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>Source: Public (Class) Solicitud </span><span> </span></p></td>
+<td class="confluenceTd"><p><span>Target: Public (Class) Programa </span><span> </span></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd"><p><span>Association (</span><span>direction:</span><span> Unspecified)  </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>Source: Public (Class) Solicitud </span><span> </span></p></td>
+<td class="confluenceTd"><p><span>Target: Public (Enumeration) TipoFormularioSolicitud </span><span> </span></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd"><p><span>Association (</span><span>direction:</span><span> Unspecified)  </span><span> </span></p>
+<p><br />
+</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>Source: Public (Class) Solicitud </span><span> </span></p></td>
+<td class="confluenceTd"><p><span>Target: Public (Class) Persona </span></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd"><p><span>Association (</span><span>direction:</span><span> Unspecified) </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>Source: Public (Class) Solicitud </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[1]</span></p></td>
+<td class="confluenceTd"><p><span>Target: Public (Class) SolicitudHito </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[0..*]</span></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd"><p><span>Association (</span><span>direction:</span><span> Unspecified) </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>Source: Public (Class) Unidad </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[1]</span><span> </span></p></td>
+<td class="confluenceTd"><p><span>Target: Public (Class) Solicitud </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[0..*]</span></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd"><p><span>Association (</span><span>direction:</span><span> Unspecified)  </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>Source: Public (Class) Investigador </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[1]</span><span> </span></p></td>
+<td class="confluenceTd"><p><span>Target: Public (Class) Solicitud </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[1]</span><span> </span></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd"><p><span>Association (</span><span>direction:</span><span> Unspecified)  </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>Source: Public (Enumeration) TipoSolicitudGrupo </span><span> </span></p></td>
+<td class="confluenceTd"><p><span>Target: Public (Class) Solicitud </span><span> </span></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd"><p><span>Association (</span><span>direction:</span><span> Unspecified)  </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>Source: Public (Class) Convocatoria </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[1]</span><span> </span></p></td>
+<td class="confluenceTd"><p><span>Target: Public (Class) Solicitud </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[0..*]</span></p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+### Entidad Histórico de estados de una solicitud: "EstadoSolicitud" 
+
+Estado actual e histórico de estados por los que ha pasado la solicitud. El estado actual será el referenciado desde el campo "estado" de la entidad "solicitud". Los estados posibles se recogen en el enumerado "tipo estado solicitud". 
+
+
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="odd">
+<td class="confluenceTd"><p><strong><span>ATTRIBUTES</span></strong><span> </span></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><span>comentario : String  Private</span><span> </span></p>
+<p><span>Comentario incluido al realizar el cambio de estado. Texto libre.</span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>estado : TipoEstadoSolicitud  Private</span><span> </span></p>
+<p><span>Valor del estado. Es un valor del enumerado "tipo estado solicitud"</span><span> </span><span> </span></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><span>fechaEstado : Date  Private</span><span> </span></p>
+<p><span>Fecha en la que la solicitud alcanza el estado. Es un formato fecha + hora.</span><span> </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>id : Long  Private</span><span> </span></p>
+<p><span>Identificador único de la tabla. Secuencia. Clave primaria. </span><span> </span></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><span> </span><span>solicitudId : Long  Private</span><span> </span></p>
+<p><span>Solicitud a la que pertenece el estado. Es una FK a la tabla "solicitud".</span><span> </span><span> </span></p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+ 
+
+
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd"><p><strong><span>ASSOCIATIONS</span></strong><span> </span></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd"><p><span>Association (</span><span>direction:</span><span> Unspecified)  </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>Source: Public (Class) EstadoSolicitud </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[0..*]</span></p></td>
+<td class="confluenceTd"><p><span>Target: Public (Enumeration) TipoEstadoSolicitud </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[1]</span></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd"><p><span> </span><span>Association (</span><span>direction:</span><span> Unspecified)  </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>Source: Public (Class) Solicitud </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[1]</span><span> </span></p></td>
+<td class="confluenceTd"><p><span>Target: Public (Class) EstadoSolicitud </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[0..*]</span></p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+
+
+### Entidad Documentos de una solicitud: "SolicitudDocumento" 
+
+Documentos de la solicitud. 
+
+
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="odd">
+<td class="confluenceTd"><p><strong><span>ATTRIBUTES</span></strong><span> </span></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><span>comentario : String  Private</span><span> </span></p>
+<p><span> </span><span>Texto libre incluido como comentario sobre el documento.</span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>documentoRef : String  Private</span><span> </span></p>
+<p><span> </span><span>Identificador o referencia del documento físico en el repositorio o sistema de almacenamiento propio o con el que se integre el SGI.</span><span> </span><span> </span></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><span> </span><span>id : Long  Private</span><span> </span></p>
+<p><span>Identificador único de la tabla. Secuencia. Clave primaria. </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span> </span><span>nombre : String  Private</span><span> </span></p>
+<p><span>Nombre del documento. Es un nombre interno al SGI, independiente del propio nombre el fichero.</span><span> </span><span> </span></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><span> </span><span>solicitud : Solicitud  Private</span><span> </span></p>
+<p><span>Identificador de la solicitud a la que pertenece el documento. Es una FK a la tabla "solicitud..</span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span> </span><span>tipoDocumento : TipoDocumento  Private</span><span> </span></p>
+<p><span> </span><span>Clasificación del documento de acuerdo a la tipología propia "tipo documeto" definida en el SGI. </span><span> </span></p>
+<p><span>Si la solicitud está vinculada a una convcatoria registada en el SGI, los tipos de documento disponibles en una solicitud son los tipos asociados a la fase configurada en la convocatoria como fase de "presentación de solicitudes" (tabla "configuración solicitud" de convocatoria). </span><span> </span></p>
+<p><span>Si la solicitud no está asociada a una convocatoria del SGI sino a una referencia externa (campo "convocatoria externa") el tipo documento no estará disponible. Es una FK a la tabla "tipo documento" incluida en el modelo CSP Modelo Ejecución.</span><span> </span><span> </span></p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd"><p><strong><span>ASSOCIATIONS</span></strong><span> </span></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd"><p><span> </span><span>Association (</span><span>direction:</span><span> Unspecified)  </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>Source: Public (Class) SolicitudDocumento </span><span> </span></p></td>
+<td class="confluenceTd"><p><span>Target: Public (Class) Documento </span><span> </span></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd"><p><span> </span><span>Association (</span><span>direction:</span><span> Unspecified)  </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>Source: Public (Class) Solicitud </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[1]</span><span> </span></p></td>
+<td class="confluenceTd"><p><span>Target: Public (Class) SolicitudDocumento </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[0..*]</span><span> </span></p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+### Entidad Hitos de una solicitud: "SolicitudHito" 
+
+Hitos de la solicitud. Se define hito de forma genérica como cualquier acontecimiento/evento que resulte de interés mantener identificado en el historial de la solicitud. La disponibilidad de los tipos de hito es dependiente del modelo de ejecución al que se vincula la convocatoria a la que pertenece la solicitud. Los hitos pueden registrarse a pasado o a futuro. Si se registran a futuro podrán conllevar la generación de un comunicado. 
+
+
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="odd">
+<td class="confluenceTd"><p><strong><span>ATTRIBUTES</span></strong><span> </span></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><span> </span><span>aviso : SolicitudHitoAviso  Private</span><span> </span></p>
+<p><span>Relación con el aviso que haya podido generar el Hito si se ha marcado el flag "Generar aviso". El valor de este flag lo establece la unidad de gestión a través del interface de usuario en la propia pantalla de creación/modificación del hito. Es una FK a la tabla “solicitud hito aviso”.</span><span> </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span> </span><span>comentario : String  Private</span><span> </span></p>
+<p><span>Campo de texto libre para recoger cualquier comentario sobre el hito.</span><span> </span></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><span> </span><span>fecha : Date  Private</span><span> </span></p>
+<p><span>Fecha en la que se produce el hito. Podrá ser una fecha a pasado o a futuro.</span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span> </span><span>id : int  Private</span><span> </span></p>
+<p><span>Identificador único de la tabla. Secuencia. Clave primaria.</span><span> </span></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><span>solicitud : Solicitud  Private</span><span> </span></p>
+<p><span>Solicitud a la que pertenece el hito. Es una FK a la tabla solicitud.</span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>tipoHito : TipoHito  Private</span><span> </span></p>
+<p><span>Identificador del tipo de hito. Es una FK a la tabla "tipo hito" incluida en el modelo lógico "CSP Modelo ejecución". Los tipos de hitos disponibles para la solicitud son dependientes del modelo de ejecución de la convocatoria al que se asocia la solicitud. Si l a solicitud no se asocia a una convocatoria registrada en el SGI sino que solamente se especifica el nombre de una convocatoria externa (campo "convocatoria externa"), la solicitud no tendrá disponible el apartado hitos.</span><span> </span><span> </span></p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd"><p><strong><span>ASSOCIATIONS</span></strong><span> </span></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd"><p><span> </span><span>Association (</span><span>direction:</span><span> Unspecified)  </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>Source: Public (Class) SolicitudHito </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[1]</span><span> </span></p></td>
+<td class="confluenceTd"><p><span>Target: Public (Class) SolicitudHitoAviso </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[0..1]</span><span> </span><span> </span></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd"><p><span> </span><span>Association (</span><span>direction:</span><span> Unspecified)  </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>Source: Public (Class) SolicitudHito </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[0..*]</span><span> </span></p></td>
+<td class="confluenceTd"><p><span>Target: Public (Class) TipoHito </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[1]</span><span> </span></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd"><p><span> </span><span>Association (</span><span>direction:</span><span> Unspecified)  </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>Source: Public (Class) Solicitud </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[1]</span><span> </span></p></td>
+<td class="confluenceTd"><p><span>Target: Public (Class) SolicitudHito </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[0..*]</span><span> </span></p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+### Entidad Avisos para un hito de solicitud: "SolicitudHitoAviso" 
+
+Configuración del aviso asociado a un hito de una solicitud. Solo los hitos creados sobre una fecha futura podrán originar comunicado. Los comunicados se generan automáticamente mediante tarea programada (modelo lógico SGI TP) y se remiten vía mail. En el caso de los hitos de solicitudes se permite configurar, a nivel de comunicado, si éste se debe remitir a los/as IP de la solicitud. 
+
+
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="odd">
+<td class="confluenceTd"><p><strong><span>ATTRIBUTES</span></strong><span> </span></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><span> </span><span>comunicadoRef : String  Private</span><span> </span></p>
+<p><span> </span><span>Referencia o identificador del comunicado que se generará asociado al hito de solicitud. La tabla "email" está incluida en el modelo lógico SGI COM. Al ser una tabla de otro servicio no se establece FK.</span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>id : Long  Private</span><span> </span></p>
+<p><span>Identificador único de la tabla. Secuencia. Clave primaria. </span><span> </span></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><span> </span><span>incluirIPsSolicitud : boolean  Private</span><span> </span></p>
+<p><span>Flag que indica si el comunicado debe remitirse a los/las IP de la solicitud. El valor de este flag lo establece la unidad de gestión a través del interface de usuario en la propia pantalla de creación/modificación del hito.</span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span> </span><span>tareaProgramadaRef : String  Private</span><span> </span></p>
+<p><span> </span><span>Referencia o identificador de la tarea programada que gestionará el envío de los mails asociados al comunicado. La entidad asociada ("bean method task") está incluida en el modelo lógico SGI TP. Al ser una entidad de un servicio independiente a CSP no se establece una FK.</span><span> </span></p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd"><p><strong><span>ASSOCIATIONS</span></strong><span> </span></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd"><p><span> </span><span>Association (</span><span>direction:</span><span> Unspecified)  </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>Source: Public (Class) SolicitudHito </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[1]</span><span> </span></p></td>
+<td class="confluenceTd"><p><span>Target: Public (Class) SolicitudHitoAviso </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[0..1]</span><span> </span></p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+
+
+### Entidad Modalidad de una solicitud: "SolicitudModalidad" 
+
+Programa al que se acoge la solicitud por cada entidad convocante. Las entidades convocantes proceden de la convocatoria. 
+
+
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="odd">
+<td class="confluenceTd"><p><strong><span>ATTRIBUTES</span></strong><span> </span></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><span>entidadRef : String  Private</span><span> </span></p>
+<p><span>Identificador o referencia de la entidad (empresa) en el sistema de gestión de empresas corporativo.</span><span> </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>id : Long  Private</span><span> </span></p>
+<p><span>Identificador único de la tabla. Secuencia. Clave primaria.</span><span> </span></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><span> </span><span>solicitud : Solicitud  Private</span><span> </span></p>
+<p><span> </span><span>Solicitud a la que pertenece el registro. Es una FK a la tabla "solicitud".</span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p>programaConvocatoria : Programa Private</p>
+<p>Programa con el que está asociada la entidad convocante en la convocatoria de origen de la solicitud (<span>tabla "convocatoria entidad convocante")</span>.<span> Es una FK a la tabla "programa" (modelo lógico "CSP Convocatoria").</span></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><span>programa : Programa  Private</span><span> </span></p>
+<p><span>Programa al que se acoge la solicitud para la entidad convocante. Será un nodo hijo de "programa convocatoria". Es una FK a la tabla "programa" (modelo lógico "CSP Convocatoria").</span><span> </span></p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd"><p><strong><span>ASSOCIATIONS</span></strong><span> </span></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd"><p><span>Association (</span><span>direction:</span><span> Unspecified)  </span><span> </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>Source: Public (Class) Solicitud </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[1]</span></p></td>
+<td class="confluenceTd"><p><span>Target: Public (Class) SolicitudModalidad </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[0..*]</span><span> </span></p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+### Entidad Palabras clave de una solicitud: "SolicitudPalabraClave" 
+
+Palabras clave asociadas a la solicitud. El catálogo de palabras clave común al SGI se implementa en la tabla "palabra clave" del ESB (modelo SGO) 
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="odd">
+<td class="confluenceTd"><p><strong><span>ATTRIBUTES</span></strong><span> </span></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><span>id : Long  Private</span><span> </span></p>
+<p><span>Identificador único de la tabla. Secuencia. Clave primaria.</span><span> </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>palabraClave : String  Private</span><span> </span></p>
+<p><span>Palabra clave asociada a la solicitud. Es una referencia a la tabla "palabra clave" del modelo ESB SGO. Al ser una tabla de un módulo independiente a CSP no se establece una FK.</span><span> </span><span> </span></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><span>solicitudId : Long  Private</span><span> </span></p>
+<p><span> </span><span>Solicitud a la que pertenece el registro. Es una FK a la tabla "solicitud".</span><span> </span></p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd"><p><strong><span>ASSOCIATIONS</span></strong><span> </span></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd"><p><span>Association (</span><span>direction:</span><span> Unspecified)  </span><span> </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>Source: Public (Class) SolicitudPalabraClave </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[0..*]</span><span> </span></p></td>
+<td class="confluenceTd"><p><span>Target: Public (Class) PalabraClave </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[1]</span><span> </span></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd"><p><span>Association (</span><span>direction:</span><span> Unspecified)  </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>Source: Public (Class) Solicitud </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[1]</span><span> </span></p></td>
+<td class="confluenceTd"><p><span>Target: Public (Class) SolicitudPalabraClave </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[0..*]</span><span> </span></p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+
+
+## Enumerados del modelo de solicitud genérica 
+
+### Enumerado Listado de estados de solicitud: "TipoEstadoSolicitud" 
+
+Listado de estados por lo que puede pasar una solicitud. Enumerado con los siguientes valores: 
+
+- ADMITIDA_DEFINITIVA 
+- ADMITIDA_PROVISIONAL 
+- ALEGACION_FASE_ADMISION 
+- ALEGACION_FASE_PROVISIONAL 
+- BORRADOR 
+- CONCEDIDA 
+- CONCEDIDA_PROVISIONAL 
+- CONCEDIDA_PROVISIONAL_ALEGADA 
+- CONCEDIDA_PROVISIONAL_NO_ALEGADA 
+- DENEGADA 
+- DENEGADA_PROVISIONAL 
+- DENEGADA_PROVISIONAL_ALEGADA 
+- DENEGADA_PROVISIONAL_NO_ALEGADA 
+- DESISTIDA 
+- EXCLUIDA_DEFINITIVA 
+- EXCLUIDA_PROVISIONAL 
+- FIRMADA 
+- NEGOCIACION 
+- PRESENTADA_SUBSANACION 
+- RECURSO_FASE_ADMISION 
+- RECURSO_FASE_CONCESION 
+- RENUNCIADA 
+- RESERVA 
+- RESERVA_PROVISIONAL 
+- SOLICITADA 
+- SUBSANACION
+
+
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd"><p><strong><span>ASSOCIATIONS</span></strong><span> </span></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd"><p><span>Association (</span><span>direction:</span><span> Unspecified)  </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>Source: Public (Class) EstadoSolicitud </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[0..*]</span><span> </span><span> </span></p></td>
+<td class="confluenceTd"><p><span>Target: Public (Enumeration) TipoEstadoSolicitud </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[1]</span><span> </span></p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+
+
+## Entidades del modelo Solicitudes de tipo proyecto
+
+### Entidad Solicitud de tipo proyecto: "solicitudProyecto"
+
+<span class="TextRun SCXW32732049 BCX0" style="color:var(--ds-text,#172b4d);"><span class="NormalTextRun SCXW32732049 BCX0">Extensión de los datos de la solicitud genérica para particularizarla a una solicitud de tipo "proyecto".</span></span><span class="EOP SCXW32732049 BCX0" style="color:var(--ds-text,#172b4d);"> </span>
+
+
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="odd">
+<td class="confluenceTd"><p><strong><span>ATTRIBUTES</span></strong><span> </span></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><span> </span><span>acronimo : String  Private</span><span> </span></p>
+<p><span> </span><span>Acrónimo del proyecto. </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span> </span><span>areaTematica : AreaTematica  Private</span><span> </span></p>
+<p><span> </span><span>Identificador del área temática con la que se vincula la solicitud. Es una FK a la tabla "área temática" incluida en el modelo lógico "CSP Convocatoria".</span><span> </span></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><span>checklistRef : String  Private</span><span> </span></p>
+<p><span>Identificador o referencia del registro de autoevaluación de ética. Es la referencia al registro de la tabla "checklist" incluida en el modelo lógico de Ética. Al pertenecer a otro esquema de BD no se establece FK.</span><span> </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>codExterno : String  Private</span><span> </span></p>
+<p><span>Código alfanumérico que la entidad convocante asigna al proyecto solicitado. A partir de este campo se informa el campo "código externo" de la tabla "proyecto" (modelo lógico CSP Proyecto).</span><span> </span><span> </span></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><span> </span><span>colaborativo : Boolean  Private  = False</span><span> </span></p>
+<p><span> </span><span>Indica si un proyecto coordinado es además colaborativo (alguno de los socios participantes es una empresa privada).</span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span> </span><span>coordinado : Boolean  Private</span><span> </span></p>
+<p><span> </span><span>Indica si el proyecto se realizará de forma coordinada con otros socios. Un valor "true" en este campo activará la disponibilidad de los campos:</span><span> </span></p>
+<ul>
+<li><span>coordinador externo</span><span> </span></li>
+<li><span>colaborativo</span><span> </span></li>
+<li><span>y del apartado "socios proyecto"</span><span> </span></li>
+</ul>
+<p><br />
+</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><span>coordinadorExterno : Boolean  Private</span><span> </span></p>
+<p><span>Indica qué socio (entidad) actuará como coordinador del proyecto solicitado. Un valor "false" indica que será la propia Universidad quien actuará en calidad de coordinador del proyecto. Un valor "true" indicará que el coordinador será uno de los socios que participará en el proyecto.</span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>duracion : Integer  Private</span><span> </span></p>
+<p><span>Duración del proyecto solicitado expresada en meses.</span><span> </span></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><span>id : Long  Private</span><span> </span></p>
+<p><span>Identificador único de la tabla. Secuencia. Clave primaria.</span><span> </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>importePresupuestado : BigDecimal  Private</span><span> </span></p>
+<p><span>Importe presupuestado para el proyecto solicitado correspondiente únicamente a la Universidad (no al resto de socios) y asociado a conceptos de gasto que no representan costes indirectos. Este valor está desvinculado del presupuesto detallado del proyecto solicitado que se haya podido introducir (tabla "solicitud proyecto presupuesto"). El campo es de utilidad en caso de el usuario prefiera no introducir el detalle del presupuesto.</span><span> </span><span> </span></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><span>importePresupuestadoCostesIndirectos : BigDecimal  Private</span><span> </span></p>
+<p><span>Importe presupuestado para el proyecto solicitado correspondiente únicamente a la Universidad (no al resto de socios) y asociado a conceptos de gasto que representan costes indirectos. Este valor está desvinculado del presupuesto detallado del proyecto solicitado que se haya podido introducir (tabla "solicitud proyecto presupuesto"). El campo es de utilidad en caso de el usuario prefiera no introducir el detalle del presupuesto.)</span><span> </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>importePresupuestadoSocios : BigDecimal  Private</span><span> </span></p>
+<p><span>Es el importe presupuestado para el proyecto solicitado para el total del resto socios (adicionales a la Universidad) que participarán en el proyecto. Es un valor desvinculado de la información que podría haberse introducido de manera individual para cada uno de los socios (campo "importe presupuestado" de la tabla "solicitud proyecto socio"). Este campo es de utilidad en caso de que el usuario prefiera no indicar el desglose del importe para cada uno de los socios.</span><span> </span></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><span> </span><span>importeSolicitado : BigDecimal  Private</span><span> </span></p>
+<p><span>Importe que se solicita a las entidades financiadoras para el proyecto solicitado correspondiente únicamente a la Universidad (no al resto de socios) y asociado a conceptos de gasto que no representan costes indirectos. Este valor está desvinculado del presupuesto detallado del proyecto solicitado que se haya podido introducir (tabla "solicitud proyecto presupuesto"). El campo es de utilidad en caso de el usuario prefiera no introducir el detalle del presupuesto.</span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span> </span><span>importeSolicitadoCostesIndirectos : BigDecimal  Private</span><span> </span></p>
+<p><span>Importe que se solicita a las entidades financiadoras para el proyecto solicitado correspondiente únicamente a la Universidad (no al resto de socios) y asociado a conceptos de gasto que representan costes indirectos. Este valor está desvinculado del presupuesto detallado del proyecto solicitado que se haya podido introducir (tabla "solicitud proyecto presupuesto"). El campo es de utilidad en caso de el usuario prefiera no introducir el detalle del presupuesto.</span><span> </span></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><span>importeSolicitadoSocios : BigDecimal  Private</span><span> </span></p>
+<p><span>Es el importe que se solicita a las entidades financiadoras para el proyecto solicitado de manera global por el resto socios (adicionales a la Universidad) que participarán en el proyecto. Es un valor desvinculado de la información que podría haberse introducido de manera individual para cada uno de los socios (campo "importe solicitado" de la tabla "solicitud proyecto socio"). Este campo es de utilidad en caso de que el usuario prefiera no indicar el desglose del importe para cada uno de los socios.</span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>intereses : String  Private</span><span> </span></p>
+<p><span>Texto libre para recoger los intereses perseguidos con el proyecto solicitado.</span><span> </span></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><span> </span><span>objetivos : String  Private</span><span> </span></p>
+<p><span>Texto libre para recoger los objetivos del proyecto.</span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>peticionEvaluacionRef : String  Private</span><span> </span></p>
+<p><span>Es el identificador o referencia de la solicitud de petición de evaluación de ética creada a partir de la solicitud del proyecto de investigación. La petición de evaluación de ética se crea automáticamente en caso de que cualquiera de las preguntas del formulario de autoevaluación de ética (campo "checklist") tome valor afirmativo. Es el identificador del registro creado en la tabla "petición evaluación" incluida en el modelo lógico de Ética. A ser una tabla de otro esquema no se establece una FK.</span><span> </span></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><span> </span><span>resultadosPrevistos : String  Private</span><span> </span></p>
+<p><span>Texto libre para recoger los resultados esperados del proyecto.</span><span> </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>solicitud : Solicitud  Private</span><span> </span></p>
+<p><span>Solicitud genérica a la que pertenece el registro. Es una FK a la tabla "solicitud".</span><span> </span></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><span> </span><span>tipoPresupuesto : TipoPresupuesto  Private</span><span> </span></p>
+<p><span>Indica la forma en la que se va a detallar el presupuesto del proyecto solicitado. Toma un valor del enumerado "tipo presupuesto". </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span> </span><span>totalImportePresupuestado : BigDecimal  Private</span><span> </span></p>
+<p><span>Es el importe total presupuestado para el proyecto solicitado incluyendo tanto el presupuesto de la Universidad como el del resto de socios participantes. Este valor está desvinculado del presupuesto detallado del proyecto que se hubiera podido introducir (tabla "solicitud proyecto presupuesto"). El campo es de utilidad en caso de el usuario prefiera no introducir el detalle del presupuesto.</span><span> </span></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><span> </span><span>totalImporteSolicitado : BigDecimal  Private</span><span> </span></p>
+<p><span>Es el importe total que se solicita a las entidades financiadoras para el proyecto solicitado incluyendo tanto el presupuesto de la Universidad como el del resto de socios participantes. Este valor está desvinculado del presupuesto detallado del proyecto que se hubiera podido introducir (tabla "solicitud proyecto presupuesto"). El campo es de utilidad en caso de el usuario prefiera no introducir el detalle del presupuesto</span><span> </span></p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd"><p><strong><span>ASSOCIATIONS</span></strong><span> </span></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd"><p><span> </span><span>Association (</span><span>direction:</span><span> Unspecified)  </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>Source: Public (Class) SolicitudProyecto </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[1]</span><span> </span></p></td>
+<td class="confluenceTd"><p><span>Target: Public (Class) SolicitudProyectoSocio </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[0..*]</span><span> </span></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd"><p><span> </span><span>Association (</span><span>direction:</span><span> Unspecified)  </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>Source: Public (Class) SolicitudProyecto </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[0..*]</span><span> </span></p></td>
+<td class="confluenceTd"><p><span>Target: Public (Class) ConvocatoriaAreaTematica </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[0..1]</span><span> </span></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd"><p><span> </span><span>AssociationClass (</span><span>direction:</span><span> Unspecified)  </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>Source: Public (Class) SolicitudProyecto </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[0..*]</span><span> </span></p></td>
+<td class="confluenceTd"><p><span>Target: Public (Class) AreaTematica </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[1]</span></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd"><p><span> </span><span>Association (</span><span>direction:</span><span> Unspecified)  </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>Source: Public (Class) SolicitudProyecto </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[1]</span><span> </span></p></td>
+<td class="confluenceTd"><p><span>Target: Public (Class) SolicitudProyectoArea </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[0..*]</span></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd"><p><span>Association (</span><span>direction:</span><span> Unspecified)  </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>Source: Public (Class) SolicitudProyecto </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[1]</span><span> </span></p></td>
+<td class="confluenceTd"><p><span>Target: Public (Class) SolicitudProyectoEquipo </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[0..*]</span><span> </span></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd"><p><span> </span><span>Association (</span><span>direction:</span><span> Unspecified)  </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>Source: Public (Class) SolicitudProyecto </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[1]</span><span> </span></p></td>
+<td class="confluenceTd"><p><span>Target: Public (Class) SolicitudProyectoClasificacion </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[0..*]</span><span> </span></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd"><p><span>Association (</span><span>direction:</span><span> Unspecified)  </span><span> </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>Source: Public (Class) SolicitudProyecto </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[1]</span><span> </span></p></td>
+<td class="confluenceTd"><p><span>Target: Public (Class) SolicitudProyectoResponsableEconomico </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[0..*]</span><span> </span></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd"><p><span> </span><span>Association (</span><span>direction:</span><span> Unspecified)  </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>Source: Public (Class) Solicitud </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[1]</span></p></td>
+<td class="confluenceTd"><p><span>Target: Public (Class) SolicitudProyecto </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[1]</span><span> </span></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd"><p><span> </span><span>Association (</span><span>direction:</span><span> Unspecified)  </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>Source: Public (Class) SolicitudProyectoEntidadFinanciadoraAjena </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[0..*]</span><span> </span></p></td>
+<td class="confluenceTd"><p><span>Target: Public (Class) SolicitudProyecto </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[1]</span><span> </span></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd"><p><span> </span><span>Association (</span><span>direction:</span><span> Unspecified)  </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>Source: Public (Enumeration) TipoPresupuesto </span><span> </span></p></td>
+<td class="confluenceTd"><p><span>Target: Public (Class) SolicitudProyecto </span></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd"><p><span>Association (</span><span>direction:</span><span> Unspecified)  </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>Source: Public (Class) SolicitudProyectoEntidad </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[0..*]</span></p></td>
+<td class="confluenceTd"><p><span>Target: Public (Class) SolicitudProyecto </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[1]</span><span> </span></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd"><p><span> </span><span>Association (</span><span>direction:</span><span> Unspecified)  </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>Source: Public (Class) SolicitudProyectoPresupuesto </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[0..*]</span><span> </span></p></td>
+<td class="confluenceTd"><p><span>Target: Public (Class) SolicitudProyecto </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[0..1]</span><span> </span></p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+
+
+### Entidad Roles de miembro de equipo: "RolProyecto" 
+
+Roles disponibles para su utilización en la composición de los equipos de proyecto (tanto en solicitud como en el propio proyecto) y grupos de investigación. Esta tabla no admite configuración a nivel de interface de usuario sino que debe ser configurada en implantación. 
+
+Cada rol definido puede estar asociado a uno o varios colectivos de personas. Un colectivo agrupará a un conjunto de personas. La naturaleza de estos conjuntos de personas y la granularidad de los mismos debe de ser determinada en cada implantación de acuerdo a las directrices marcadas por la Universidad, sin bien lo más común es que hagan referencia a la categorización del vínculo con la universidad (alumnado, pdi, pas, etc). El colectivo al que pertenece cada persona debe de poder ser determinado por el sistema de gestión de personas corporativo. 
+
+
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="odd">
+<td class="confluenceTd"><p><strong><span>ATTRIBUTES</span></strong><span> </span></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><span>abreviatura : String  Private</span><span> </span></p>
+<p><span>Abreviatura identificativa del rol</span><span> </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>activo : Boolean  Private  = True</span><span> </span></p>
+<p><span>Flag a través del que se implementa el borrado lógico de esta tabla. Los registros para los que este flag tome valor "false" no estarán disponibles para la definición de equipos de proyecto/grupo.</span><span> </span></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><span>baremablePRC : Boolean  Private</span><span> </span></p>
+<p><span>Flag que indica si el rol de proyecto recibirá puntuación en el proceso de baremación de la producción científica. Sobre los ítems de producción científica aplican unos determinados criterios de baremación, en función de su tipología. La puntuación obtenida se reparte, a nivel de grupo de investigación, entre los/las autores/as del ítem miembros del grupo. Para que se reciba puntuación por la autoría de un ítem el/la autor/a debe participar en el grupo con un rol que tenga el flag "baremable" a "true" (se toma como referencia el rol desempañado a fecha 31/12 del año que se está baremando). </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span> </span><span>descripcion : String  Private</span><span> </span></p>
+<p><span>Descripción del rol.</span><span> </span></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><span> </span><span>equipo : TipoEquipoProyecto  Private</span><span> </span></p>
+<p><span>Clasificación del equipo al que pertenece el rol. Es un valor del enumerado "tipo equipo proyecto."</span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span> </span><span>id : Long  Private</span><span> </span></p>
+<p><span>Identificador único de la tabla. Secuencia. Clave primaria.</span><span> </span></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><span> </span><span>nombre : String  Private</span><span> </span></p>
+<p><span>Nombre identificativo del rol. Es el nombre visible en los desplegables del interface de usuario.</span><span> </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span> </span><span>orden : TipoOrden  Private</span><span> </span></p>
+<p><span>Campo que marca la prioridad del rol principal. Es un campo de configuración utilizado internamente en la lógica del SGI.</span><span> </span></p>
+<p><span>Es un parámetro que se utiliza internamente en el SGI para dar visibilidad a algunas partes de la aplicación. </span><span> </span></p>
+<p><span>Al ser los roles de proyecto configurables por implantación el SGI precisa saber cuál es el rol que identifica la figura de IP. Para el SGI el rol IP (independientemente del nombre que se dé en cada implantación) será el registro de esta tabla que tenga el flag "principal" a "true" y para el que el campo "orden" tome el valor "primario". Un rol con el flag principal a "true" y orden "secundario" también será considerado "IP" pero el SGI precisa esta distinción para incluir de forma automática al solicitante en el equipo de proyecto de las solicitudes de tipo proyecto.</span><span> </span></p>
+<p><span>Es un valor del enumerado "tipo orden".</span><span> </span></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><span> </span><span>rolPrincipal : Boolean  Private</span><span> </span></p>
+<p><span>Flag que permite indicar los roles que tendrán la categoría de "principal" (roles que representen las figuras de IP o Co-IP por ejemplo). Es un parámetro que se utiliza internamente en el SGI para dar visibilidad a algunas partes de la aplicación. </span><span> </span></p>
+<p><span>Al ser los roles de proyecto configurables por implantación el SGI precisa saber cuál es el rol que identifica la figura de IP. Para el SGI el rol IP (independientemente del nombre que se dé en cada implantación) será el registro de esta tabla que tenga el flag "principal" a "true" y para el que el campo "orden" tome el valor "primario". Un rol con el flag principal a "true" y orden "secundario" también será considerado "IP" pero el SGI precisa esta distinción para incluir de forma automática al solicitante en el equipo de proyecto de las solicitudes de tipo proyecto.</span><span> </span><span> </span></p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd"><p><strong><span>ASSOCIATIONS</span></strong><span> </span></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd"><p><span>Association (</span><span>direction:</span><span> Unspecified)  </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>Source: Public (Class) RolProyecto </span><span> </span><span> </span></p></td>
+<td class="confluenceTd"><p><span>Target: Public (Enumeration) TipoOrden </span><span> </span></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd"><p><span>Association (</span><span>direction:</span><span> Unspecified)  </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>Source: Public (Class) RolProyecto </span><span> </span></p></td>
+<td class="confluenceTd"><p><span>Target: Public (Enumeration) TipoEquipoProyecto </span><span> </span></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd"><p><span>Association (</span><span>direction:</span><span> Unspecified)  </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>Source: Public (Class) RolProyecto </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[1]</span><span> </span></p></td>
+<td class="confluenceTd"><p><span>Target: Public (Class) RolProyectoColectivo </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[1..*]</span><span> </span></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd"><p><span>Association (</span><span>direction:</span><span> Unspecified)  </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>Source: Public (Class) ProyectoEquipo </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[0..*]</span></p></td>
+<td class="confluenceTd"><p><span>Target: Public (Class) RolProyecto </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[1]</span><span> </span></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd"><p><span>Association (</span><span>direction:</span><span> Unspecified)  </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>Source: Public (Class) SolicitudProyectoEquipoSocio </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[0..*]</span><span> </span></p></td>
+<td class="confluenceTd"><p><span>Target: Public (Class) RolProyecto </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[1]</span><span> </span></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd"><p><span> </span><span>Association (</span><span>direction:</span><span> Unspecified)  </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>Source: Public (Class) SolicitudProyectoEquipo </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[0..*]</span><span> </span></p></td>
+<td class="confluenceTd"><p><span>Target: Public (Class) RolProyecto </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[1]</span><span> </span></p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+
+
+### Entidad Colectivos para un rol de equipo: "RolProyectoColectivo" 
+
+Colectivos que pueden desempeñar un rol de proyecto/grupo determinado. 
+
+Un colectivo agrupará a un conjunto de personas. La naturaleza de estos conjuntos de personas y la granularidad de los mismos debe de ser determinada en cada implantación de acuerdo a las directrices marcadas por la Universidad, sin bien lo más común es que hagan referencia a la categorización del vínculo con la universidad (alumnado, pdi, pas, etc). El colectivo al que pertenece cada persona debe de poder ser determinado por el sistema de gestión de personas corporativo. 
+
+ El buscador de personas implementado en el SGI utiliza los colectivos para acotar el conjunto de personas sobre el que se realiza la búsqueda, limitando así las personas que estarán disponibles para la asignación al equipo con un rol determinado.  
+
+
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="odd">
+<td class="confluenceTd"><p><strong><span>ATTRIBUTES</span></strong><span> </span></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><span>colectivoRef : String  Private</span><span> </span></p>
+<p><span>Identificador o referencia del colectivo en el sistema de gestión personas de corporativo.</span><span> </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>id : Long  Private</span><span> </span></p>
+<p><span>Identificador único de la tabla. Secuencia. Clave primaria.</span><span> </span><span> </span></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><span>rolProyecto : RolProyecto  Private</span><span> </span></p>
+<p><span>Identificador del rol al que se vincula el colectivo. Es una FK a la tabla "rol proyecto".</span><span> </span><span> </span></p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd"><p><strong><span>ASSOCIATIONS</span></strong><span> </span></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd"><p><span>Association (</span><span>direction:</span><span> Unspecified)  </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>Source: Public (Class) RolProyectoColectivo </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[0..*]</span><span> </span></p></td>
+<td class="confluenceTd"><p><span>Target: Public (Class) Colectivo </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[1]</span><span> </span></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd"><p><span>Association (</span><span>direction:</span><span> Unspecified)  </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>Source: Public (Class) RolProyecto </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[1]</span><span> </span></p></td>
+<td class="confluenceTd"><p><span>Target: Public (Class) RolProyectoColectivo </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[1..*]</span><span> </span></p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+
+
+### Entidad Roles de  socio de proyecto: "RolSocio" 
+
+Tabla de configuración de los roles de participación de los socios (entidades o empresas) que participan en el proyecto. Es una tabla cuya configuración no está disponible a nivel de usuario. Debe configurarse n en tiempo de implantación. Ejemplos de valores: socio, coordinador, tercera parte, partner organization, etc. 
+
+
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="odd">
+<td class="confluenceTd"><p><strong><span>ATTRIBUTES</span></strong><span> </span></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><span> </span><span>abreviatura : String  Private</span><span> </span></p>
+<p><span> </span><span>Abreviatura identificativa del rol.</span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>activo : Boolean  Private  = True</span><span> </span></p>
+<p><span>Flag que da cobertura al borrado lógico de los registros de esta tabla.</span><span> </span><span> </span></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><span> </span><span>coordinador : Boolean  Private</span><span> </span></p>
+<p><span>Flag que permite identificar si el rol definido se utilizará para identificar al socio coordinador del proyecto (para aquellos casos en los que el proyecto no sea coordinado por la propia Universidad).</span><span> </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>descripcion : String  Private</span><span> </span></p>
+<p><span>Descripción del rol.</span><span> </span><span> </span></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><span> </span><span>id : Long  Private</span><span> </span></p>
+<p><span>Identificador único de la tabla. Secuencia. Clave primaria.</span><span> </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span> </span><span>nombre : String  Private</span><span> </span></p>
+<p><span>Nombre identificativo del rol. Es el nombre visible en los desplegables del interface de usuario.</span><span> </span><span> </span></p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd"><p><strong><span>ASSOCIATIONS</span></strong><span> </span></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd"><p><span>Association (</span><span>direction:</span><span> Unspecified)  </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>Source: Public (Class) SolicitudProyectoSocio </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[0..*]</span><span> </span></p></td>
+<td class="confluenceTd"><p><span>Target: Public (Class) RolSocio </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[1]</span><span> </span></p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+
+
+### Entidad Áreas de conocimiento de una solicitud de proyecto: "SolicitudProyectoArea" 
+
+Área o áreas de conocimiento con las que se asocia la solicitud de proyecto. El SGI no limita la vinculación de un proyecto solicitado al área de conocimiento a la que está adscrito su IP. La unidad de gestión podrá decidir vincular la solicitud a una o varias áreas independientemente del área de pertenencia de su IP. Es una clasificación que puede o no ser utilizada. El listado de áreas disponible se obtiene del ESB, pudiendo proceder de integración con el sistema corporativo correspondiente o ser un listado configurado en tiempo de implantación. 
+
+
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="odd">
+<td class="confluenceTd"><p><strong><span>ATTRIBUTES</span></strong><span> </span></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><span>areaConocimientoRef : String  Private</span><span> </span></p>
+<p><span> </span><span>Identificador o referencia al área de conocimiento en el sistema corporativo universitario correspondiente.</span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>id : Long  Private</span><span> </span></p>
+<p><span>Identificador único de la tabla. Secuencia. Clave primaria. </span><span> </span></p>
+<p><span> </span></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><span> </span><span>solicitudProyecto : SolicitudProyecto  Private</span><span> </span></p>
+<p><span> </span><span>Solicitud proyecto a la que pertenece el registro. Es una FK a la tabla "solicitud proyecto".</span><span> </span></p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd"><p><strong><span>ASSOCIATIONS</span></strong><span> </span></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd"><p><span>Association (</span><span>direction:</span><span> Unspecified)  </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>Source: Public (Class) SolicitudProyectoArea </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[0..*]</span><span> </span></p></td>
+<td class="confluenceTd"><p><span>Target: Public (Class) AreaConocimiento </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[1]</span><span> </span></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd"><p><span>Association (</span><span>direction:</span><span> Unspecified)  </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>Source: Public (Class) SolicitudProyecto </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[1]</span><span> </span></p></td>
+<td class="confluenceTd"><p><span>Target: Public (Class) SolicitudProyectoArea </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[0..*]</span><span> </span></p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+
+
+### Entidad Clasificaciones de una solicitud de proyecto: "SolicitudProyectoClasificacion" 
+
+Tabla que recoge todas las clasificaciones del proyecto solicitado. El SGI dispone de una estructura genérica "clasificación", en forma de árbol, que permite, en tiempo de implantación, configurar los listados bajo los que resulte de interés clasificar el proyecto. No se establecen límites al respecto. En cada implantación se definirán las clasificaciones a utilizar. Esta estructura clasificación reside en el ESB, de forma que cada uno de los listados asociados a cada clasificación podrá ser alimentado desde un sistema de gestión corporativo (de forma genérica en el SGI se hace referencia a este posible sistema como SGO, sistema de gestión de la organización), a través del servicio de integración correspondiente, o bien ser configurados en tiempo de implantación. 
+
+Algunas clasificaciones tipo serían: 
+
+- Clasificación de códigos UNESCO. 
+- Clasificación de códigos NABS. 
+- Clasificación de códigos CNAE 
+
+
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="odd">
+<td class="confluenceTd"><p><strong><span>ATTRIBUTES</span></strong><span> </span></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><span>codigoClasificacionRef : String  Private</span><span> </span></p>
+<p><span>Elemento dentro de una clasificación con el que se vincula el proyecto solicitado. La referencia es el identificador del elemento dentro de la tabla "clasificación" incluida en modelo lógico del SGO (sistema de gestión de la organización).</span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>id : Long  Private</span><span> </span></p>
+<p><span>Identificador único de la tabla. Secuencia. Clave primaria. </span><span> </span><span> </span></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><span>solicitudProyecto : SolicitudProyecto  Private</span><span> </span></p>
+<p><span>Solicitud-proyecto a la que pertenece la clasificación. Es una FK a la tabla "solicitud proyecto".</span><span> </span><span> </span></p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd"><p><strong><span>ASSOCIATIONS</span></strong><span> </span></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd"><p><span> </span><span>Association (</span><span>direction:</span><span> Unspecified)  </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>Source: Public (Class) SolicitudProyectoClasificacion </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[0..*]</span><span> </span></p></td>
+<td class="confluenceTd"><p><span>Target: Public (Class) Clasificacion </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[1]</span><span> </span></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd"><p><span> </span><span>Association (</span><span>direction:</span><span> Unspecified)  </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>Source: Public (Class) SolicitudProyecto </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[1]</span><span> </span></p></td>
+<td class="confluenceTd"><p><span>Target: Public (Class) SolicitudProyectoClasificacion </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[0..*]</span><span> </span></p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+### Entidad Entidades financiadoras de una solicitud de proyecto: "SolicitudProyectoEntidad" 
+
+Entidades propuestas para la financiación del proyecto solicitado. Los proyectos solicitados tomarán las entidades financiadoras configuradas en la convocatoria de procedencia (siempre que se vinculen a una convocatoria registrada en el SGI). Adicionalmente se podrán incluir entidades financiadoras ajenas a la convocatoria (tabla "solicitud proyecto entidad financiadora ajena"). En esta tabla se unifica la referencia a todas las entidades financiadoras de la solicitud proyecto. 
+
+
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="odd">
+<td class="confluenceTd"><p><strong><span>ATTRIBUTES</span></strong><span> </span></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><span>convocatoriaEntidadFinanciadora : ConvocatoriaEntidadFinanciadora  Private</span><span> </span></p>
+<p><span> </span><span>Identificador de una de las entidades financiadoras procedentes de la convocatoria a la que se vincula la solicitud de proyecto. Es una FK a la tabla "convocatoria entidad financiadora" incluida en el modelo lógico CSP Convocatoria.</span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>convocatoriaEntidadGestora : ConvocatoriaEntidadGestora  Private</span><span> </span></p>
+<p><span>Identificador de la entidad gestora de la convocatoria a la que se vincula la solicitud de proyecto. Es una FK a la tabla "convocatoria entidad gestora" incluida en el modelo lógico CSP Convocatoria.</span><span> </span></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><span> </span><span>id : Long  Private</span><span> </span></p>
+<p><span>Identificador único de la tabla. Secuencia. Clave primaria.</span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>solicitudProyecto : SolicitudProyecto  Private</span><span> </span></p>
+<p><span>Solicitud de proyecto a la que pertenece la entidad. Es una FK a la tabla "solicitud proyecto".</span><span> </span></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><span>solicitudProyectoEntidadFinanciadoraAjena : SolicitudProyectoEntidadFinanciadoraAjena  Private</span><span> </span></p>
+<p><span>Identificador de la entidad financiadora ajena que participará en la financiación del proyecto solicitado. Es una FK a la tabla "solicitud proyecto entidad financiadora ajena".</span><span> </span><span> </span></p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd"><p><strong><span>ASSOCIATIONS</span></strong><span> </span></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd"><p><span>Association (</span><span>direction:</span><span> Unspecified)  </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>Source: Public (Class) SolicitudProyectoEntidad </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[1]</span><span> </span></p></td>
+<td class="confluenceTd"><p><span>Target: Public (Class) SolicitudProyectoEntidadFinanciadoraAjena </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[0..1]</span><span> </span></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd"><p><span> </span><span>Association (</span><span>direction:</span><span> Unspecified)  </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>Source: Public (Class) SolicitudProyectoEntidad </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[0..*</span></p></td>
+<td class="confluenceTd"><p><span>Target: Public (Class) SolicitudProyecto </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[1]</span></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd"><p><span> </span><span>Association (</span><span>direction:</span><span> Unspecified)  </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>Source: Public (Class) SolicitudProyectoPresupuesto </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[0..*]</span><span> </span></p></td>
+<td class="confluenceTd"><p><span>Target: Public (Class) SolicitudProyectoEntidad </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[0..1]</span><span> </span></p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+### Entidad Entidad financiadoras de una ajenas a la convocatoria de una solicitud de proyecto: "SolicitudProyectoEntidadFinanciadoraAjena" 
+
+Entidades financiadoras incorporadas al proyecto solicitado de forma ajena a las entidades financiadoras de la convocatoria. 
+
+
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="odd">
+<td class="confluenceTd"><p><strong><span>ATTRIBUTES</span></strong><span> </span></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><span>entidadRef : String  Private</span><span> </span></p>
+<p><span>Referencia o identificador de la entidad en el sistema de gestión de empresas corporativo.</span><span> </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>fuenteFinanciacion : fuenteFinanciacion  Private</span><span> </span></p>
+<p><span>Fuente de financiación a través de la que la entidad financiará el proyecto solicitado. Es una FK a la tabla "fuente financiación".</span><span> </span><span> </span></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><span>id : int  Private</span><span> </span></p>
+<p><span>Identificador único de la tabla. Secuencia. Clave primaria. </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>importeFinanciacion : BigDecimal  Private</span><span> </span></p>
+<p><span>Importe de financiación aportado por la entidad al proyecto solicitado.</span><span> </span><span> </span></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><span> </span><span>porcentajeFinanciacion : BigDecimal  Private</span><span> </span></p>
+<p><span>Porcentaje respecto al total de financiación que recibiría el proyecto solicitado correspondiente a la entidad.</span><span> </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span> </span><span>solicitudProyecto : SolicitudProyecto  Private</span><span> </span></p>
+<p><span>Solicitud proyecto a la que pertenece la entidad ajena. Es una FK a la tabla "solicitud proyecto".</span><span> </span><span> </span></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><span> </span><span>tipoFinanciacion : tipoFinanciacion  Private</span><span> </span></p>
+<p><span>Tipo de financiación a través del que la entidad financiará el proyecto solicitado. Es una FK a la tabla "tipo financiación"</span><span> </span><span> </span></p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd"><p><strong><span>ASSOCIATIONS</span></strong><span> </span></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd"><p><span> </span><span>Association (</span><span>direction:</span><span> Unspecified)  </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>Source: Public (Class) SolicitudProyectoEntidadFinanciadoraAjena </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[0..*]</span><span> </span></p></td>
+<td class="confluenceTd"><p><span>Target: Public (Class) SolicitudProyecto </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[1]</span><span> </span></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd"><p><span> </span><span>Association (</span><span>direction:</span><span> Unspecified)  </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>Source: Public (Class) SolicitudProyectoEntidad </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[1]</span></p></td>
+<td class="confluenceTd"><p><span>Target: Public (Class) SolicitudProyectoEntidadFinanciadoraAjena </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[0..1]</span><span> </span></p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+
+
+### Entidad Miembros de equipo de una solicitud de proyecto: "SolicitudProyectoEquipo" 
+
+Equipo propuesto para el proyecto solicitado. Se podrá especificar qué personas está previsto que participen en el proyecto, con qué rol y durante qué periodo. 
+
+
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="odd">
+<td class="confluenceTd"><p><strong><span>ATTRIBUTES</span></strong><span> </span></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><span> </span><span>id : Long  Private</span><span> </span></p>
+<p><span>Identificador único de la tabla. Secuencia. Clave primaria. </span><span> </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>mesFin : Integer  Private</span><span> </span></p>
+<p><span>Mes final de la participación prevista para una persona del equipo. En la fase de solicitud del proyecto los periodos se especifican en meses relativos a la duración total propuesta.</span><span> </span><span> </span></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><span> </span><span>mesInicio : Integer  Private</span><span> </span></p>
+<p><span>Mes de inicio de la participación prevista para una persona del equipo. En la fase de solicitud del proyecto los periodos se especifican en meses relativos a la duración total propuesta.</span><span> </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span> </span><span>personaRef : String  Private</span><span> </span></p>
+<p><span>Referencia de la persona que se incluyen en el equipo propuesto para el proyecto solicitado. Es el identificador de la persona en el sistema de gestión de personas corporativo</span><span> </span><span> </span></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><span> </span><span>rolProyecto : RolProyecto  Private</span><span> </span></p>
+<p><span> </span><span>Rol con el que participará en el equipo propuesto la persona. Es una FK a la tabla "rol proyecto".</span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span> </span><span>solicitudProyecto : SolicitudProyecto  Private</span><span> </span></p>
+<p><span>Solicitud proyecto al que pertenece el miembro de equipo. Es una FK a la tabla "solicitud proyecto".</span><span> </span><span> </span></p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd"><p><strong><span>ASSOCIATIONS</span></strong><span> </span></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd"><p><span> </span><span>Association (</span><span>direction:</span><span> Unspecified)  </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>Source: Public (Class) SolicitudProyectoEquipo </span><span> </span></p></td>
+<td class="confluenceTd"><p><span>Target: Public (Class) Persona </span><span> </span></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd"><p><span>Association (</span><span>direction:</span><span> Unspecified)  </span><span> </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>Source: Public (Class) SolicitudProyectoEquipo </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[1..*]</span><span> </span></p></td>
+<td class="confluenceTd"><p><span>Target: Public (Class) Investigador </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[1]</span><span> </span></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd"><p><span> </span><span>Association (</span><span>direction:</span><span> Unspecified)  </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>Source: Public (Class) SolicitudProyectoEquipo </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[0..*]</span><span> </span></p></td>
+<td class="confluenceTd"><p><span>Target: Public (Class) RolProyecto </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[1]</span><span> </span></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd"><p><span> </span><span>Association (</span><span>direction:</span><span> Unspecified)  </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>Source: Public (Class) SolicitudProyecto </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[1]</span><span> </span></p></td>
+<td class="confluenceTd"><p><span>Target: Public (Class) SolicitudProyectoEquipo </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[0..*]</span><span> </span></p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+
+
+### Entidad Miembros de equipo de un socio para una solicitud de proyecto: "SolicitudProyectoEquipoSocio" 
+
+Equipo de proyecto previsto de los socios (empresas o entidades) que participarán en el proyecto solicitado. 
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="odd">
+<td class="confluenceTd"><p><strong><span>ATTRIBUTES</span></strong><span> </span></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><span>id : Long  Private</span><span> </span></p>
+<p><span>Identificador único de la tabla. Secuencia. Clave primaria.</span><span> </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>mesFin : Integer  Private</span><span> </span></p>
+<p><span> </span><span>Mes final de la participación prevista del miembro de equipo del socio (empresa o entidad) en el proyecto solicitado.</span><span> </span></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><span>mesInicio : Integer  Private</span><span> </span></p>
+<p><span>Mes inicial de la participación prevista del miembro de equipo del socio (empresa o entidad) en el proyecto solicitado.</span><span> </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span> </span><span>personaRef : String  Private</span><span> </span></p>
+<p><span>Referencia del miembro de equipo propuesto del socio (empresa o entidad). Es el identificador de la persona en el sistema de gestión de personas corporativo</span><span> </span><span> </span></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><span> </span><span>rolProyecto : RolProyecto  Private</span><span> </span></p>
+<p><span> </span><span>Identificador del socio al que pertenece el miembro de equipo. Es una FK a la tabla "solicitud proyecto socio"</span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span> </span><span>solicitudProyectoSocio : SolicitudProyectoSocio  Private</span><span> </span></p>
+<p><span>Socio de la solicitud proyecto a la que pertenece el miembro de equipo. Es una FK a la tabla "solicitud proyecto socio".</span><span> </span><span> </span></p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd"><p><strong><span>ASSOCIATIONS</span></strong><span> </span></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd"><p><span> </span><span>Association (</span><span>direction:</span><span> Unspecified)  </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>Source: Public (Class) SolicitudProyectoEquipoSocio </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[0..*]</span><span> </span></p></td>
+<td class="confluenceTd"><p><span>Target: Public (Class) RolProyecto </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[1]</span><span> </span></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd"><p><span> </span><span>Association (</span><span>direction:</span><span> Unspecified)  </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>Source: Public (Class) SolicitudProyectoEquipoSocio </span><span> </span></p></td>
+<td class="confluenceTd"><p><span>Target: Public (Class) Persona </span><span> </span></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd"><p><span> </span><span>Association (</span><span>direction:</span><span> Unspecified)  </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>Source: Public (Class) SolicitudProyectoSocio </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[1]</span></p></td>
+<td class="confluenceTd"><p><span>Target: Public (Class) SolicitudProyectoEquipoSocio </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[0..*]</span><span> </span></p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+### Entidad Periodos de justificación de un socio para una solicitud de proyecto: "SolicitudProyectoPeriodoJustificacion" 
+
+Periodos de justificación a los que está previsto que se comprometa el socio con la Universidad. Los periodos de justificación aplicarán cuando el coordinador del proyecto sea la Universidad (campo "coordinador externo" de la tabla "proyecto" toma el valor "false"). 
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="odd">
+<td class="confluenceTd"><p><strong><span>ATTRIBUTES</span></strong><span> </span></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><span>fechaFin : Timestamp  Private</span><span> </span></p>
+<p><span>Fecha de fin prevista del plazo de presentación a la Universidad de la documentación asociada al periodo justificación por parte del socio que participará en el proyecto solicitado. </span><span> </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span> </span><span>fechaInicio : Timestamp  Private</span><span> </span></p>
+<p><span> </span><span>Fecha de inicio prevista del plazo de presentación a la Universidad de la documentación asociada al periodo justificación por parte del socio que participará en el proyecto solicitado. </span><span> </span></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><span> </span><span>id : Long  Private</span><span> </span></p>
+<p><span>Identificador único de la tabla. Secuencia. Clave primaria.</span><span> </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>mesFinal : Integer  Private</span><span> </span></p>
+<p><span>Mes final del periodo de justificación definido con el socio. Es relativo a la duración total del proyecto solicitado.</span><span> </span><span> </span></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><span> </span><span>mesInicial : Integer  Private</span><span> </span></p>
+<p><span> </span><span>Mes inicial del periodo de justificación definido con el socio. Es relativo a la duración total del proyecto solicitado.</span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span> </span><span>numPeriodo : Integer  Private</span><span> </span></p>
+<p><span>Número secuencial asignado automáticamente por el sistema ordenando los periodos de justificación de un socio en un proyecto de acuerdo al mes inicial.</span><span> </span><span> </span></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><span>observaciones : String  Private</span><span> </span></p>
+<p><span>Texto libre</span><span> </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span> </span><span>SolicitudProyectoSocio : SolicitudProyectoSocio  Private</span><span> </span></p>
+<p><span>Identificador del socio que participa en el proyecto al que pertenece el periodo. Es una FK a la tabla "solicitud proyecto socio".</span><span> </span><span> </span></p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd"><p><strong><span>ASSOCIATIONS</span></strong><span> </span></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd"><p><span>Association (</span><span>direction:</span><span> Unspecified)  </span><span> </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>Source: Public (Class) SolicitudProyectoSocio </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[1]</span><span> </span></p></td>
+<td class="confluenceTd"><p><span>Target: Public (Class) SolicitudProyectoPeriodoJustificacion </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[0..*]</span><span> </span></p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+
+
+### Entidad Periodos de pago de un socio para una solicitud de proyecto: "SolicitudProyectoPeriodoPago" 
+
+Periodos de pago a los que se compromete la Universidad con el socio (empresa o entidad). Los periodos de pago aplicarán cuando el coordinador del proyecto sea la Universidad (campo "coordinador externo" de la tabla "solicitud proyecto" toma el valor "false"). 
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="odd">
+<td class="confluenceTd"><p><strong><span>ATTRIBUTES</span></strong><span> </span></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><span>id : Long  Private</span><span> </span></p>
+<p><span>Identificador único de la tabla. Secuencia. Clave primaria.</span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>importe : BigDecimal  Private</span><span> </span></p>
+<p><span>Importe previsto a pagar en un periodo determinado al socio (empresa o entidad) .</span><span> </span></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><span>mes : Integer  Private</span><span> </span></p>
+<p><span>Mes en el que está previsto que se realice el pago al socio (empresa o entidad) por parte de la Universidad.</span><span> </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>numPeriodo : Integer  Private</span><span> </span></p>
+<p><span>Número secuencial asignada automáticamente por el sistema de acuerdo a la ordenación por el número de mes de todos los periodos de pago creados para el socio.</span><span> </span></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><span>solicitudProyectoSocio : SolicitudProyectoSocio  Private</span><span> </span></p>
+<p><span>Socio dentro de una solicitud de tipo proyecto al que pertenece el registro. Es una FK a la tabla "solicitud proyecto socio".</span><span> </span><span> </span></p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd"><p><strong><span>ASSOCIATIONS</span></strong><span> </span></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd"><p><span> </span><span>Association (</span><span>direction:</span><span> Unspecified)  </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>Source: Public (Class) SolicitudProyectoPeriodoPago </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[0..*]</span><span> </span></p></td>
+<td class="confluenceTd"><p><span>Target: Public (Class) SolicitudProyectoSocio </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[1]</span><span> </span></p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+
+
+### Entidad Presupuesto para una solicitud de proyecto: "SolicitudProyectoPresupuesto" 
+
+Presupuesto del proyecto solicitado. El presupuesto se podrá desglosar por entidad financiadora (de acuerdo al valor del campo “tipo presupuesto” de la tabla “solicitud proyecto”) y dentro de cada una de éstas por anualidad y concepto de gasto. 
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="odd">
+<td class="confluenceTd"><p><strong><span>ATTRIBUTES</span></strong><span> </span></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><span>anualidad : Integer  Private</span><span> </span></p>
+<p><span>Anualidad a la que pertenece el registro del desglose de presupuesto.</span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>conceptoGasto : ConceptoGasto  Private</span><span> </span></p>
+<p><span>Identificador del concepto de gasto detallado en el presupuesto. Es una FK a la tabla “concepto gasto” incluida en el modelo CSP Convocatoria.</span><span> </span></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><span> </span><span>entidadRef : String  Private</span><span> </span></p>
+<p><span>Identificador o referencia de la entidad financiadora con la que se vincula el registro del presupuesto. Es la referencia de la entidad en el sistema de gestión de empresas corporativo.</span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>financiacionAjena : Boolean  Private</span><span> </span></p>
+<p><span>Flag que distingue si la entidad financiadora es ajena a la convocatoria.</span><span> </span></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><span>id : Long  Private</span><span> </span></p>
+<p><span>Identificador único de la tabla.  Secuencia. Clave primaria. </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span> </span><span>importePresupuestado : BigDecimal  Private</span><span> </span></p>
+<p><span> </span><span>Importe presupuestado para el concepto de gasto en el presupuesto correspondiente a una entidad financiadora determinada.</span><span> </span></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><span>importeSolicitado : BigDecimal  Private</span><span> </span></p>
+<p><span>Importe solicitado a la entidad financiadora a la que pertenece el presupuesto para un concepto de gasto determinado.</span><span> </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>observaciones : String  Private</span><span> </span></p>
+<p><span>Texto libre</span><span> </span></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><span>solicitudProyecto : SolicitudProyecto  Private</span><span> </span></p>
+<p><span>Identificador de la solicitud de proyecto a la que pertenece el presupuesto. Es una FK a la tabla “solicitud proyecto”.</span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>solicitudProyectoEntidad : SolicitudProyectoEntidad  Private</span><span> </span></p>
+<p><span>Identificador de la entidad dentro de una solicitud de proyecto a la que pertenece el presupuesto. Es una FK a la tabla “solicitud proyecto entidad”.</span><span> </span><span> </span></p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd"><p><strong><span>ASSOCIATIONS</span></strong><span> </span></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd"><p><span> </span><span>Association (</span><span>direction:</span><span> Unspecified)  </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>Source: Public (Class) SolicitudProyectoPresupuesto </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[0..*]</span><span> </span></p></td>
+<td class="confluenceTd"><p><span>Target: Public (Class) ConvocatoriaEntidadFinanciadora </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[0..1]</span><span> </span></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd"><p><span> </span><span>Association (</span><span>direction:</span><span> Unspecified)  </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>Source: Public (Class) SolicitudProyectoPresupuesto </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[0..*]</span><span> </span></p></td>
+<td class="confluenceTd"><p><span>Target: Public (Class) SolicitudProyecto </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[0..1]</span><span> </span></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd"><p><span> </span><span>Association (</span><span>direction:</span><span> Unspecified)  </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>Source: Public (Class) SolicitudProyectoPresupuesto </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[0..*]</span><span> </span></p></td>
+<td class="confluenceTd"><p><span>Target: Public (Class) SolicitudProyectoEntidad </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[0..1]</span><span> </span></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd"><p><span> </span><span>Association (</span><span>direction:</span><span> Unspecified)  </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>Source: Public (Class) SolicitudProyectoPresupuesto </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[0..*]</span><span> </span></p></td>
+<td class="confluenceTd"><p><span>Target: Public (Class) ConceptoGasto </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[1]</span><span> </span></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd"><p><span> </span><span>Association (</span><span>direction:</span><span> Unspecified)  </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>Source: Public (Class) EntidadPagadora </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[0..1]</span><span> </span></p></td>
+<td class="confluenceTd"><p><span>Target: Public (Class) SolicitudProyectoPresupuesto </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[0..*]</span><span> </span></p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+
+
+### Entidad Responsable económico para una solicitud de proyecto: "SolicitudProyectoResponsableEconomico" 
+
+Responsable económico propuesto para el proyecto solicitado. Podrían existir varios responsables económicos a lo largo de toda la duración del proyecto solicitado pero cada uno en un periodo concreto.  
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="odd">
+<td class="confluenceTd"><p><strong><span>ATTRIBUTES</span></strong><span> </span></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><span> </span><span>id : Long  Private</span><span> </span></p>
+<p><span> </span><span>Identificador único de la tabla. Secuencia. Clave primaria. </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>mesFin : Integer  Private</span><span> </span></p>
+<p><span>Mes final de la participación prevista para la persona que actuará como responsable económico en el proyecto solicitado. En la fase de solicitud del proyecto los periodos se especifican en meses relativos a la duración total propuesta.</span><span> </span><span> </span></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><span>mesInicio : Integer  Private</span><span> </span></p>
+<p><span>Mes de inicio de la participación prevista para la persona que actuará como responsable económico en el proyecto solicitado. En la fase de solicitud del proyecto los periodos se especifican en meses relativos a la duración total propuesta.</span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>personaRef : String  Private</span><span> </span></p>
+<p><span>Referencia de la persona que se propone como responsable económico del proyecto solicitado. Es el identificador de la persona en el sistema de gestión de personas corporativo.</span><span> </span><span> </span></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><span>solicitudProyecto : SolicitudProyecto  Private</span><span> </span></p>
+<p><span>Solicitud proyecto a la que pertenece el equipo. Es una FK a la tabla "solicitud proyecto".</span><span> </span><span> </span></p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd"><p><strong><span>ASSOCIATIONS</span></strong><span> </span></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd"><p><span> </span><span>Association (</span><span>direction:</span><span> Unspecified)  </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>Source: Public (Class) SolicitudProyecto </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[1]</span><span> </span></p></td>
+<td class="confluenceTd"><p><span>Target: Public (Class) SolicitudProyectoResponsableEconomico </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[0..*]</span><span> </span></p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+
+
+### Entidad Socios para una solicitud de proyecto: "SolicitudProyectoSocio" 
+
+Listado de socios (entidades o empresas) que participarán en el desarrollo proyecto solicitado. A nivel de interface gráfico la opción de añadir socios al proyecto solo estará disponible si el campo "coordinado" de la tabla "solicitud proyecto" toma valor "true". 
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="odd">
+<td class="confluenceTd"><p><strong><span>ATTRIBUTES</span></strong><span> </span></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><span>empresaRef : String  Private</span><span> </span></p>
+<p><span>Referencia de la entidad (empresa) que participa como socio en el proyecto. Es el identificador de la entidad en el sistema de gestión de empresas corporativo.</span><span> </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>id : Long  Private</span><span> </span></p>
+<p><span>Identificador único de la tabla. Secuencia. Clave primaria. </span><span> </span><span> </span></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><span>importePresupuestado : BigDecimal  Private</span><span> </span></p>
+<p><span>Importe presupuestado por el socio para el proyecto en solicitado.</span><span> </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>importeSolicitado : BigDecimal  Private</span><span> </span></p>
+<p><span>Importe solicitado por el socio a las entidades financiadoras para el proyecto en solicitado.</span><span> </span></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><span>mesFin : Integer  Private</span><span> </span></p>
+<p><span>Mes final de la colaboración del socio en el proyecto solicitado tomando como referencia la duración planteada para el mismo.</span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>mesInicio : Integer  Private</span><span> </span></p>
+<p><span>Mes inicial de la colaboración del socio en el proyecto solicitado tomando como referencia la duración planteada para el mismo.</span><span> </span><span> </span></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><span> </span><span>numInvestigadores : Integer  Private</span><span> </span></p>
+<p><span> </span><span>Número de investigadores que forman parte del equipo del socio.</span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span> </span><span>rolSocio : rolSocio  Private</span><span> </span></p>
+<p><span> </span><span>Rol con el que participa el socio en el proyecto. Es una FK a la tabla rol socio.</span><span> </span></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><span> </span><span>solicitudProyecto : SolicitudProyecto  Private</span><span> </span></p>
+<p><span> </span><span>Identificador de la "solicitud proyecto" a la que pertenece el socio. Es una FK a la tabla "solicitud proyecto".</span><span> </span></p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd"><p><strong><span>ASSOCIATIONS</span></strong><span> </span></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd"><p><span> </span><span>Association (</span><span>direction:</span><span> Unspecified)  </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>Source: Public (Class) SolicitudProyectoSocio </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[0..*]</span></p></td>
+<td class="confluenceTd"><p><span>Target: Public (Class) EmpresaEconomica </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[1]</span><span> </span></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd"><p><span>Association (</span><span>direction:</span><span> Unspecified)  </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>Source: Public (Class) SolicitudProyectoSocio </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[1]</span><span> </span></p></td>
+<td class="confluenceTd"><p><span>Target: Public (Class) SolicitudProyectoPeriodoJustificacion </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[0..*]</span><span> </span></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd"><p><span> </span><span>Association (</span><span>direction:</span><span> Unspecified)  </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>Source: Public (Class) SolicitudProyectoSocio </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[1]</span></p></td>
+<td class="confluenceTd"><p><span>Target: Public (Class) SolicitudProyectoEquipoSocio </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[0..*]</span></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd"><p><span> </span><span>Association (</span><span>direction:</span><span> Unspecified)  </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>Source: Public (Class) SolicitudProyectoSocio </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[0..*]</span><span> </span></p></td>
+<td class="confluenceTd"><p><span>Target: Public (Class) RolSocio </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[1]</span><span> </span></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd"><p><span> </span><span>Association (</span><span>direction:</span><span> Unspecified)  </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>Source: Public (Class) SolicitudProyecto </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[1]</span><span> </span></p></td>
+<td class="confluenceTd"><p><span>Target: Public (Class) SolicitudProyectoSocio </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[0..*]</span><span> </span></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd"><p><span> </span><span>Association (</span><span>direction:</span><span> Unspecified)  </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>Source: Public (Class) SolicitudProyectoPeriodoPago </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[0..*]</span></p></td>
+<td class="confluenceTd"><p><span>Target: Public (Class) SolicitudProyectoSocio </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[1]</span><span> </span></p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+
+
+## Enumerado del modelo solicitudes tipo proyecto   
+
+### Enumerado Tipos de equipo: "TipoEquipoProyecto" 
+
+Clasificación de los roles. Enumerado con los siguientes valores: 
+
+- INVESTIGACION 
+- TRABAJO 
+
+<div class="table-wrap">
+
+|                                  |
+|----------------------------------|
+| **ATTRIBUTES**                   |
+|  Equipo Trabajo :   Public       |
+| Equipo Investigación :   Public  |
+
+</div>
+
+
+
+
+
+<div class="table-wrap">
+
+|                                          |                                                    |
+|------------------------------------------|----------------------------------------------------|
+| **ASSOCIATIONS**                         |                                                    |
+| Association (direction: Unspecified)     |                                                    |
+| Source: Public (Class) RolProyecto       | Target: Public (Enumeration) TipoEquipoProyecto    |
+
+</div>
+
+
+
+### Enumerado Tipos de orden para un rol de equipo: "TipoOrden" 
+
+De utilización en la configuración de los roles. Enumerado con los valores: 
+
+- PRIMARIO 
+- SECUNDARIO 
+
+ 
+
+Al ser los roles de proyecto configurables por implantación, el SGI precisa saber cuál es el rol que identifica la figura de IP. Para el SGI el rol IP (independientemente del nombre que se dé en cada implantación) será el registro de la tabla "rol proyecto" que tenga el flag "principal" a "true" y para el que el campo "orden" tome el valor "primario". Un rol con el flag principal a "true" y orden "secundario" también será considerado "IP" pero el SGI precisa esta distinción para incluir de forma automática al solicitante en el equipo de proyecto de las solicitudes de tipo proyecto. 
+
+<div class="table-wrap">
+
+|                         |
+|-------------------------|
+| **ATTRIBUTES**          |
+|  Primario :   Public    |
+|  Secundario :   Public  |
+
+</div>
+
+<div class="table-wrap">
+
+|                                         |                                          |
+|-----------------------------------------|------------------------------------------|
+| **ASSOCIATIONS**                        |                                          |
+| Association (direction: Unspecified)    |                                          |
+| Source: Public (Class) RolProyecto      | Target: Public (Enumeration) TipoOrden   |
+
+</div>
+
+
+
+
+
+### Enumerado Tipos de presupuesto para una solicitud: "TipoPresupuesto" 
+
+Parámetro del SGI que identifica el método de introducción del presupuesto del proyecto solicitado. Enumerado con los siguientes valores: 
+
+- GLOBAL 
+- INDIVIDUAL 
+- MIXTO 
+
+GLOBAL: El presupuesto del proyecto solicitado se indicará de manera global, sin distinguir el presupuesto para cada entidad financiadora. 
+
+INDIVIDUAL: Se detallará el presupuesto solicitado a cada una de las entidades financiadoras, tanto las entidades que participan en la convocatoria como e otras entidades ajenas a la convocatoria a las que se solicite financiación. 
+
+MIXTO: Se detallará un presupuesto único para todas las entidades financiadoras de la convocatoria y un presupuesto individual por cada entidad financiadora ajena a la convocatoria. El presupuesto de las entidades financiadoras de la convocatoria se asociará a la entidad que figure como entidad gestora de la convocatoria. 
+
+
+
+<div class="table-wrap">
+
+|                         |
+|-------------------------|
+| **ATTRIBUTES**          |
+| Global :   Public       |
+|  Mixto :   Public       |
+|  Individual :   Public  |
+
+</div>
+
+
+
+
+
+<div class="table-wrap">
+
+|                                                |                                            |
+|------------------------------------------------|--------------------------------------------|
+| **ASSOCIATIONS**                               |                                            |
+|  Association (direction: Unspecified)          |                                            |
+| Source: Public (Enumeration) TipoPresupuesto   | Target: Public (Class) SolicitudProyecto   |
+
+</div>
+
+
+
+
+
+## Entidades del modelo de solicitudes de tipo grupo 
+
+### Entidad Solicitud de tipo grupo: "SolicitudGrupo" 
+
+Extensión de los datos de la solicitud genérica para particularizarla a una solicitud de tipo "grupo". Solamente se creará esta extensión para las solicitudes de tipo "modificación de datos de grupo" ("tipo formulario solicitud" = "grupo" y "tipo solicitud grupo" = "modificación grupo")  
+
+<div class="table-wrap">
+
+|                                  |
+|----------------------------------|
+| **ATTRIBUTES**                   |
+|  grupo : Grupo  Private          |
+| id : Long  Private               |
+| solicitud : Solicitud  Private   |
+
+</div>
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd"><p><strong><span>ASSOCIATIONS</span></strong><span> </span></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd"><p><span> </span><span>Association (</span><span>direction:</span><span> Unspecified)  </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>Source: Public (Class) Solicitud </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[1]</span><span> </span></p></td>
+<td class="confluenceTd"><p><span>Target: Public (Class) SolicitudGrupo </span><span> </span></p>
+<p><span>Cardinality:  </span><span>[1]</span><span> </span></p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+
+
+## Enumerados del modelo de solicitudes de tipo grupo 
+
+### Enumerado Tipos de solicitudes de grupo: "TipoSolicitudGrupo" 
+
+Subtipo de solicitud cuando ésta es una solicitud de grupo. Enumerado con los valores: 
+
+- Modificación grupo 
+- Constitución grupo 
+
+
+
+<div class="table-wrap">
+
+|                                      |
+|--------------------------------------|
+| **ATTRIBUTES**                       |
+| Constitución nuevo grupo :   Public  |
+| Modificación datos grupo :   Public  |
+
+</div>
+
+<div class="table-wrap">
+
+|                                                   |                                    |
+|---------------------------------------------------|------------------------------------|
+| **ASSOCIATIONS**                                  |                                    |
+|  Association (direction: Unspecified)             |                                    |
+| Source: Public (Enumeration) TipoSolicitudGrupo   | Target: Public (Class) Solicitud   |
+
+</div>
+
+
+
+## Entidades del modelo de solicitudes de tipo RRHH
+
+### Entidad Solicitud de tipo RRHH: "SolicitudRRRHH"
+
+<span style="color: black;">Extensión de los datos de la solicitud genérica para particularizarla a una solicitud de tipo "rrhh". </span>
+
+
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<thead>
+<tr class="header">
+<th class="confluenceTd"><p>ATTRIBUTES</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td class="confluenceTd"><p>id : Long  Private</p>
+<p>Identificador único de la tabla. Secuencia. Clave primaria.</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>solicitud : Solicitud  Private</p>
+<p>Solicitud genérica a la que pertenece el registro. Es una FK a la tabla "solicitud".</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p>universidadRef : String  Private</p>
+<p>Campo para recoger la referencia de la Universidad a la que pertenece el solicitante. Esta referencia se corresponde con el identificador de la entidad que representa a la Universidad en el sistema de gestión de empresas corporativo.</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>areaANEPRef : String  Private</p>
+<p>Área ANEP especificada en la solicitud. Las áreas ANEP se implementan como una Clasificación (modelo lógico ESB-SGO). Se corresponde con el identificador del área en la tabla Clasificación.</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p>universidad : String  Private</p>
+<p>Nombre de la universidad a la que pertenece la persona que realiza la solicitud (solicitante). Si la solicitud es introducida directamente por la persona solicitante, no dispondrá en el interface gráfico del buscador de entidades (a través del que quedaría cumplimentado el campo "universidad ref") sino que debe introducir el nombre de la universidad como un literal. Será la unidad de gestión, en el proceso de validación de la solicitud, quien traducirá ese texto a la referencia de la entidad universidad (campo "universidad ref"), a través del buscador de entidades.</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>tutorRef : String  Private</p>
+<p>Referencia a la persona especificada como tutor/a en la solicitud. Es el identificador de la persona en el sistema de gestión de personas corporativo.</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p>tituloTrabajo : String  Private</p>
+<p>Título del trabajo con el que se opta a la solicitud. Este campo está incluido en el apartado Memoria del interface gráfico.</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>resumen : String  Private</p>
+<p>Campo de texto para recoger el resumen del trabajo con el que se opta a la solicitud (incluido en el apartado memoria del interface gráfico).</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p>observaciones : String  Private</p>
+<p>Campo de texto libre para incluir cualquier observación sobre el trabajo propuesto en la solicitud (incluido en el apartado memoria del interface gráfico).</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<thead>
+<tr class="header">
+<th colspan="2" class="confluenceTd"><p>ASSOCIATIONS</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd"><p>Association (<span>direction:</span> Unspecified) </p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>Source: Public (Class) SolicitudRRHH</p>
+<p><span>Cardinality:  </span>[1]</p></td>
+<td class="confluenceTd"><p>Target: Public (Class) SolicitudRRHHRequisitoCategoria</p>
+<p><span>Cardinality:  </span>[0..*]</p></td>
+</tr>
+<tr class="odd">
+<td colspan="2" class="confluenceTd"><p>Association (<span>direction:</span> Unspecified) </p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>Source: Public (Class) SolicitudRRHH</p>
+<p><span>Cardinality:  </span>[1]</p></td>
+<td class="confluenceTd"><p>Target: Public (Class) SolicitudRRHHRequisitoNivelAcademico</p>
+<p><span>Cardinality:  </span>[0..*]</p></td>
+</tr>
+<tr class="odd">
+<td colspan="2" class="confluenceTd"><p>Association (<span>direction:</span> Unspecified) </p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>Source: Public (Class) SolicitudRRHH</p>
+<p><span>Cardinality:  </span>[0..*]</p></td>
+<td class="confluenceTd"><p>Target: Public (Class) Clasificacion</p>
+<p><span>Cardinality:  </span>[0..1]</p></td>
+</tr>
+<tr class="odd">
+<td colspan="2" class="confluenceTd"><p>Association (<span>direction:</span> Unspecified) </p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>Source: Public (Class) Solicitud</p>
+<p><span>Cardinality:  </span>[1]</p></td>
+<td class="confluenceTd"><p>Target: Public (Class) SolicitudRRHH</p>
+<p><span>Cardinality:  </span>[1]</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+### Entidad Categorías de convocatoria para una solicitud de RRHH: "SolicitudRRRHHRequisitoCategoría"
+
+<span style="color: black;">Entidad para almacenar la respuesta proporcionada en la solicitud de RRHH relativos al cumplimiento de los requisitos de categoría especificados en la convocatoria.</span>
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<thead>
+<tr class="header">
+<th class="confluenceTd"><p>ATTRIBUTES</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td class="confluenceTd"><p>id : Long  Private</p>
+<p>Identificador único de la tabla. Secuencia. Clave primaria.</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>solicitudRRHH : SolicitudRRHH  Private</p>
+<p>Solicitud de RRHH a la que pertenece el registro. Es una FK a la tabla Solicitud RRHH.</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p>requisitoIPCategoria : RequisitoIPCategoria  Private</p>
+<p>Identificador del requisito de categoría que debe cumplir la persona solicitante de acuerdo a la configuración establecida en la convocatoria. Es una FK a la tabla "requisito IP categoría" incluida en el modelo lógico CSP Convocatoria.</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>documentoRef : String  Private</p>
+<p>Identificador o referencia del documento físico en el repositorio o sistema de almacenamiento propio o con el que se integre el SGI.</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<thead>
+<tr class="header">
+<th colspan="2" class="confluenceTd"><p>ASSOCIATIONS</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd"><p>Association (<span>direction:</span> Unspecified) </p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>Source: Public (Class) SolicitudRRHH</p>
+<p><span>Cardinality:  </span>[1]</p></td>
+<td class="confluenceTd"><p>Target: Public (Class) SolicitudRRHHRequisitoCategoria</p>
+<p><span>Cardinality:  </span>[0..*]</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+### Entidad Niveles académicos de convocatoria para una solicitud de RRHH: "SolicitudRRRHHRequisitoNivelAcadémico"
+
+<span style="color: black;">Entidad para almacenar la respuesta proporcionada en la solicitud de RRHH relativos al cumplimiento de los requisitos de nivel académico especificados en la convocatoria.</span>
+
+
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<thead>
+<tr class="header">
+<th class="confluenceTd"><p>ATTRIBUTES</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td class="confluenceTd"><p>id : Long  Private</p>
+<p>Identificador único de la tabla. Secuencia. Clave primaria.</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>solicitudRRHH : SolicitudRRHH  Private</p>
+<p>Solicitud de RRHH a la que pertenece el registro. Es una FK a la tabla Solicitud RRHH.</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p>requisitoIPNivelAcademico : RequisitoIPNivelAcademico  Private</p>
+<p>Identificador del requisito de nivel académico que debe cumplir la persona solicitante de acuerdo a la configuración establecida en la convocatoria. Es una FK a la tabla "requisito IP nivel académico" incluida en el modelo lógico CSP Convocatoria.</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>documentoRef : String  Private</p>
+<p>Identificador o referencia del documento físico en el repositorio o sistema de almacenamiento propio o con el que se integre el SGI.</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<thead>
+<tr class="header">
+<th colspan="2" class="confluenceTd"><p>ASSOCIATIONS</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd"><p>Association (<span>direction:</span> Unspecified) </p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>Source: Public (Class) SolicitudRRHH</p>
+<p><span>Cardinality:  </span>[1]</p></td>
+<td class="confluenceTd"><p>Target: Public (Class) SolicitudRRHHRequisitoNivelAcademico</p>
+<p><span>Cardinality:  </span>[0..*]</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+
+
+### Entidad Solicitante externo para una solicitud: "SolicitanteExterno"
+
+<span style="color: black;">Entidad que recoge los datos de la persona solicitante cuando se trata de una persona externa que no figura en el sistema de gestión de personas corporativo.</span>
+
+
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<thead>
+<tr class="header">
+<th class="confluenceTd"><p>ATTRIBUTES</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td class="confluenceTd"><p>id : Long  Private</p>
+<p>Identificador único de la tabla. Secuencia. Clave primaria.</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>solicitud : Solicitud  Private</p>
+<p>Solicitud a la que pertenece el registro. Es una FK a la tabla Solicitud.</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p>nombre : String  Private</p>
+<p>Nombre de la persona solicitante (externa).</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>apellidos : String  Private</p>
+<p>Apellidos de la persona solicitante (externa).</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p>tipoDocumentoRef : String  Private</p>
+<p>Tipo de documento de identificación personal bajo el que se especifica el número de documento en el formulario de solicitud. Los tipos de documento de identificación personal se recogen a través de integración con el sistema de gestión corporativo. Es una referencia a la tabla Tipo documento incluida en el modelo lógico ESB SGP</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>numeroDocumento : String  Private</p>
+<p>Número de documento de identificación personal de la persona solicitante (externa).</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p>sexoRef : String  Private</p>
+<p>Sexo de la persona solicitante (externa). El listado de sexos disponible será proporcionado a través de integración con el sistema de gestión de personas. Es una referencia al identificador correspondiente en el sistema de gestión de personas.</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>fechaNacimiento : TimeStamp  Private</p>
+<p>Fecha de nacimiento de la persona solicitante (externa).</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p>paisNacimientoRef : String  Private</p>
+<p>País de nacimiento de la persona solicitante (externa). El listado de países disponible será proporcionado a través de integración con el sistema de gestión de personas. Es una referencia al identificador correspondiente en el sistema de gestión de personas.</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>telefono : String  Private</p>
+<p>Campo que recoge el teléfono de contacto de la persona solicitante (externa).</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p>email : String  Private</p>
+<p>Dirección de emial de la persona solicitante (externa).</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>direccion : String  Private</p>
+<p>Dirección postal de la persona solicitante (externa).</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p>paisContactoRef : String  Private</p>
+<p>País de contacto de la persona solicitante (externa). El listado de países disponible será proporcionado a través de integración con el sistema de gestión de personas. Es una referencia al identificador correspondiente en el sistema de gestión de personas.</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>comAutonomaRef : String  Private</p>
+<p>Comunidad autónoma de la persona solicitante (externa). El listado de países disponible será proporcionado a través de integración con el sistema de gestión de personas. Es una referencia al identificador correspondiente en el sistema de gestión de personas.</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p>provinciaRef : String  Private</p>
+<p>Provincia de la persona solicitante (externa). El listado de provincias disponible será proporcionado a través de integración con el sistema de gestión de personas. Es una referencia al identificador correspondiente en el sistema de gestión de personas.</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>ciudad : String  Private</p>
+<p>Ciudad de la persona solicitante (externa).</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p>codigoPostal : String  Private</p>
+<p>Código postal de la persona solicitante (externa).</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<thead>
+<tr class="header">
+<th colspan="2" class="confluenceTd"><p>ASSOCIATIONS</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd"><p>Association (<span>direction:</span> Unspecified) </p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>Source: Public (Class) Solicitud</p>
+<p><span>Cardinality:  </span>[1]</p></td>
+<td class="confluenceTd"><p>Target: Public (Class) SolicitanteExterno</p>
+<p><span>Cardinality:  </span>[0..1]</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+### Entidad solicitud externa: "SolicitudExterna"
+
+Entidad para identificar las solicitudes que se crean  desde el acceso público (usuarios/as externos/as). Cuando un/a usuario/a externo/a crea una solicitud se generará un código único (UUID). Este UUID será el ID de esta tabla, desde la que se referenciará a la solicitud correspondiente (tabla solicitud).
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<thead>
+<tr class="header">
+<th class="confluenceTd"><p>ATTRIBUTES</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td class="confluenceTd"><p>id : long  Private</p>
+<p>Identificador único de la tabla. Clave primaria. Es el UUID generado como identificador único de la solicitud creada desde el acceso público (usuario/a externo/a).</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>solicitud : Solicitud  Private</p>
+<p>Solicitud con la que se corresponde el UUID. Es una FK a la tabla Solicitud.</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<thead>
+<tr class="header">
+<th colspan="2" class="confluenceTd"><p>ASSOCIATIONS</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd"><p>Association (<span>direction:</span> Unspecified) </p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>Source: Public (Class) SolicitudExterna</p>
+<p><span>Cardinality:  </span>[0..1]</p></td>
+<td class="confluenceTd"><p>Target: Public (Class) Solicitud</p>
+<p><span>Cardinality:  </span>[1]</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+
+
+</div>
+
+</div>
+
+</div>
+
+<div id="footer" role="contentinfo">
+
+<div class="section footer-body">
+
+Document generated by Confluence on oct 27, 2025 08:52
+
+<div id="footer-logo">
+
+[Atlassian](https://www.atlassian.com/)
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 
 

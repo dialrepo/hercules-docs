@@ -796,7 +796,800 @@
 
   <h1>Index</h1>
 
+<div id="page">
 
+<div id="main" class="aui-page-panel">
+
+<div id="main-header">
+
+<div id="breadcrumb-section">
+
+1.  [Hércules](index.html)
+2.  [Hércules](/)
+3.  [SGI. Sistema de gestión de investigación](//sgi-sistema-de-gestion-de-investigacion)
+4.  [Diseño](//sgi-sistema-de-gestion-de-investigacion/diseno)
+5.  [Componentes](//sgi-sistema-de-gestion-de-investigacion/diseno/componentes)
+6.  [SGI - ESB](//sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb)
+7.  [SGI - ESB - SGE](//sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sge)
+
+</div>
+
+# <span id="title-text"> Hércules : SGI - ESB - SGE - Calendario facturación </span>
+
+</div>
+
+<div id="content" class="view">
+
+<div class="page-metadata">
+
+Created by <span class="author"> Usuario desconocido (lorena.alvarez)</span>, last updated by <span class="editor"> Usuario desconocido (alicia.alvarez)</span> on jun 22, 2022
+
+</div>
+
+<div id="main-content" class="wiki-content group">
+
+
+
+------------------------------------------------------------------------
+
+<div class="toc-macro rbtoc1761551569340">
+
+- [Ejecución económica](#SGIESBSGECalendariofacturación-Ejecucióneconómica)
+  - [Entidades](#SGIESBSGECalendariofacturación-Entidades)
+  - [Modelo lógico](#SGIESBSGECalendariofacturación-Modelológico)
+  - [API](#SGIESBSGECalendariofacturación-API)
+    - [Definición de los objetos](#SGIESBSGECalendariofacturación-Definicióndelosobjetos)
+      - [FacturaEmitida](#SGIESBSGECalendariofacturación-FacturaEmitida)
+      - [FacturaEmitidaDetalle](#SGIESBSGECalendariofacturación-FacturaEmitidaDetalle)
+      - [Detalle](#SGIESBSGECalendariofacturación-Detalle)
+      - [Columna](#SGIESBSGECalendariofacturación-Columna)
+      - [Documento](#SGIESBSGECalendariofacturación-Documento)
+      - [FacturaPrevistaEmitida](#SGIESBSGECalendariofacturación-FacturaPrevistaEmitida)
+    - [Servicios](#SGIESBSGECalendariofacturación-Servicios)
+    - [Columnas Facturas emitidas](#SGIESBSGECalendariofacturación-ColumnasFacturasemitidas)
+    - [Campos Factura emitida](#SGIESBSGECalendariofacturación-CamposFacturaemitida)
+    - [Ejemplos](#SGIESBSGECalendariofacturación-Ejemplos)
+      - [Columnas Facturas emitidas (/facturas-emitidas/columnas)](#SGIESBSGECalendariofacturación-ColumnasFacturasemitidas(/facturas-emitidas/columnas))
+      - [Facturas emitidas (/facturas-emitidas)](#SGIESBSGECalendariofacturación-Facturasemitidas(/facturas-emitidas))
+      - [Detalle factura emitida (/facturas-emitidas/{id})](#SGIESBSGECalendariofacturación-Detallefacturaemitida(/facturas-emitidas/%7Bid%7D))
+      - [Consulta facturas previstas de emitir (/facturas-previstas-emitidas)](#SGIESBSGECalendariofacturación-Consultafacturasprevistasdeemitir(/facturas-previstas-emitidas))
+
+</div>
+
+# Ejecución económica
+
+## Entidades
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="header">
+<th class="confluenceTh">Entidad</th>
+<th class="confluenceTh">Descripción</th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd">FacturaEmitida</td>
+<td class="confluenceTd"><p>Entidad que representa una factura emitida del SGE. Tendrá que venir identificado por un identificador único, por el proyecto al que pertenece y la anualidad.</p>
+<p>El resto de campos de la factura emitida se tratarán como columnas dinámicas. Se indicará por cada columna el identificador del campo, el nombre del campo y si es una columna sobre la que se tiene que hacer una suma para mostrarlo en el SGI como un campo totalizador.</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">Columna</td>
+<td class="confluenceTd"><p>Contiene el listado de columnas que serán mostradas en la pantalla del SGI de Factura emitidas.</p>
+<p>Por cada columna se tendrá el identificador del campo, el nombre del campo y si es una columna sobre la que se tiene que hacer una suma para mostrarlo en el SGI como un campo totalizador.</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">FacturaEmitidaDetalle</td>
+<td class="confluenceTd"><p>Entidad que representa el detalle de una factura emitida con todos sus campos para mostrarlo en una pantalla de consulta de la factura emitida.</p>
+<p>Tendrá unos campos fijos (identificador único, identificador del proyecto al que pertenece y anualidad) y unos campos dinámicos. Por cada campo se detallará el nombre y el valor del campo para mostrarlo en la pantalla del SGI</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">Campo</td>
+<td class="confluenceTd"><p>Contiene el listado de campos dinámicos que serán mostradas en las pantallas de detalle de una factura emitida.</p>
+<p>Por cada campo se tendrá el el nombre y el valor del campo</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">Documento</td>
+<td class="confluenceTd">Entidad que representa los documentos que pueda tener relacionados una factura emitida</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">FacturaPrevistaEmitida</td>
+<td class="confluenceTd"><p>Entidad que representa una factura emitida del SGE pero con menos información que la entidad "FacturaEmitida". Únicamente tiene la información sobre el "número de factura del SGE" y del "número de previsión". Es para poder mostrar en la pantalla de Calendario facturación del SGI el número de factura.</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+## Modelo lógico
+
+<a href="https://confluence.um.es/confluence/display/HERCULES/Consultas+filtradas+y+paginadas" rel="nofollow"><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852437/597866184.jpg" class="confluence-embedded-image" draggable="false" data-image-src="attachments/597852437/597866184.jpg" data-unresolved-comment-count="0" data-linked-resource-id="597866184" data-linked-resource-version="6" data-linked-resource-type="attachment" data-linked-resource-default-alias="ESB SGE Logical Model Calendario Facturacion.jpg" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/jpeg" data-linked-resource-container-id="597852437" data-linked-resource-container-version="19" tabindex="0" width="650" /></span></a>
+
+## API
+
+Características generales que todas las API REST deben de cumplir:
+
+- <a href="https://confluence.um.es/confluence/display/HERCULES/Consultas+filtradas+y+paginadas" rel="nofollow">Consultas filtradas y paginadas</a>
+- <a href="https://confluence.um.es/confluence/display/HERCULES/Formatos+de+datos+API" rel="nofollow">Formatos de datos API</a>
+
+### Definición de los objetos
+
+#### FacturaEmitida
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="odd">
+<td class="highlight-grey confluenceTd" data-highlight-colour="grey"><strong>Nombre</strong></td>
+<td class="highlight-grey confluenceTd" data-highlight-colour="grey"><strong>Tipo</strong></td>
+<td class="highlight-grey confluenceTd" data-highlight-colour="grey"><strong>Descripción</strong></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">id</td>
+<td class="confluenceTd">String</td>
+<td class="confluenceTd">Identificador de la factura emitida. Tiene que ser un identificador único.</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">proyectoId</td>
+<td class="confluenceTd">String</td>
+<td class="confluenceTd">Identificador del proyecto económico</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">anualidad</td>
+<td class="confluenceTd">String</td>
+<td class="confluenceTd">Anualidad</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p>numeroFactura</p></td>
+<td class="confluenceTd">String</td>
+<td class="confluenceTd">Número de la factura emitida (en el SGE)</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">columnas</td>
+<td class="confluenceTd">Map[clave,valor]</td>
+<td class="confluenceTd"><p>Mapa de propiedades</p>
+<p>El valor será un String salvo en aquellas columnas que sean acumulables (se tenga que hacer sumas sobre ellas) donde será de tipo Numérico (<u>sin separador de miles y como separador decimal el punto</u>)</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+#### FacturaEmitidaDetalle
+
+#### Detalle
+
+<div class="table-wrap">
+
+|               |                    |                                                                                            |
+|---------------|--------------------|--------------------------------------------------------------------------------------------|
+| **Nombre**    | **Tipo**           | **Descripción**                                                                            |
+| id            | String             | Identificador de la factura emitida. Tiene que ser un identificador único.                 |
+| proyectoId    | String             | Identificador del proyecto económico                                                       |
+| anualidad     | String             | Anualidad                                                                                  |
+| numeroFactura | String             | Número de la factura emitida (en el SGE)                                                   |
+| campos        | Lista\[Campo\]     | Lista de campos, por cada campo se define el nombre y el valor del campo                   |
+| documentos    | Lista\[Documento\] | Lista de documentos asociados a la factura emitida (sin el contenido binario del fichero). |
+
+</div>
+
+#### Columna
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="odd">
+<td class="highlight-grey confluenceTd" data-highlight-colour="grey"><strong>Nombre</strong></td>
+<td class="highlight-grey confluenceTd" data-highlight-colour="grey"><strong>Tipo</strong></td>
+<td class="highlight-grey confluenceTd" data-highlight-colour="grey"><strong>Descripción</strong></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">id</td>
+<td class="confluenceTd">String</td>
+<td class="confluenceTd">Identificador de la columna</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">nombre</td>
+<td class="confluenceTd">String</td>
+<td class="confluenceTd">Nombre de la columna</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">acumulable</td>
+<td class="confluenceTd">Boolean</td>
+<td class="confluenceTd"><p>Indica si se tiene que sumar o no para mostrar los totales en la pantalla del SGI.</p>
+<p>Dos valores:</p>
+<ul>
+<li>true</li>
+<li>false</li>
+</ul></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+#### Documento
+
+<div class="table-wrap">
+
+|               |          |                                   |
+|---------------|----------|-----------------------------------|
+| **Nombre**    | **Tipo** | **Descripción**                   |
+| id            | String   | Identificador único del documento |
+| nombre        | String   | Nombre del documento a mostrar    |
+| nombreFichero | String   | Nombre del fichero con extensión  |
+
+</div>
+
+#### FacturaPrevistaEmitida
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="odd">
+<td class="highlight-grey confluenceTd" data-highlight-colour="grey"><strong>Nombre</strong></td>
+<td class="highlight-grey confluenceTd" data-highlight-colour="grey"><strong>Tipo</strong></td>
+<td class="highlight-grey confluenceTd" data-highlight-colour="grey"><strong>Descripción</strong></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">id</td>
+<td class="confluenceTd">String</td>
+<td class="confluenceTd">Identificador de la factura emitida. Tiene que ser un identificador único.</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p>proyectoIdSGI</p></td>
+<td class="confluenceTd">String</td>
+<td class="confluenceTd">Identificador del proyecto SGI.</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>numeroFactura</p></td>
+<td class="confluenceTd">String</td>
+<td class="confluenceTd">Número de la factura emitida (en el SGE)</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">numeroPrevision</td>
+<td class="confluenceTd">String</td>
+<td class="confluenceTd"><p>Es el campo que establece la relación entre el ítem del calendario de facturación y las facturas emitidas en el SGE.</p>
+<p>Junto con el identificador del proyecto SGI identificarán un item del calendario de facturación del SGI.</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+### Servicios
+
+<div class="confluence-information-macro confluence-information-macro-information" role="region" aria-label="Info">
+
+<span class="aui-icon aui-icon-small aui-iconfont-info-filled confluence-information-macro-icon" role="presentation"></span>
+
+<div class="confluence-information-macro-body">
+
+Para componer la URL llamada completa, se debe anteponer a lo indicado en la columna URL lo siguiente: **{HOST}/api/sge**, donde **{HOST}** de deberá sustituir el dominio correspondiente al entorno al que se está accediendo y dicho acceso será por http o https según el caso.
+
+</div>
+
+</div>
+
+<div class="table-wrap">
+
+<table class="aui metadata-summary-macro null" style="width:100%;" data-cql="label = &quot;servicios&quot; and space = currentSpace() and ancestor = currentContent()" data-details-space-key="HERCULES" data-details-content-id="597852437" data-headings="Método, URL, Parámetros, Respuesta, Descripción" data-first-column-heading="Servicio" data-count-comments="false" data-count-likes="false" data-total-pages="1" data-page-size="1000" data-sort-by="null" data-reverse-sort="false" data-blueprint-present="false">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th class="sorter-text">Servicio</th>
+<th>Método</th>
+<th>URL</th>
+<th>Parámetros</th>
+<th>Respuesta</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td class="title" data-content-id="597853065"><a href="/confluence/spaces/HERCULES/pages/597853065/SGI+-+ESB+-+SGE+-+Calendario+facturaci%C3%B3n+-+Facturas+emitidas+-+Buscar+columnas">SGI - ESB - SGE - Calendario facturación - Facturas emitidas - Buscar columnas</a></td>
+<td>GET</td>
+<td>/facturas-emitidas/columnas</td>
+<td><p>q+s (query + sort)</p>
+<p>La query estará formada por:</p>
+<ul>
+<li>proyectoId</li>
+<li>reducida</li>
+<li>fechaFactura</li>
+</ul>
+<p>El campo reducida puede tomar los siguientes valores:</p>
+<ul>
+<li>true: sólo se envían las columnas a mostrar en la pantalla principal</li>
+<li>false:  se envían todas las columnas (para su exportación)</li>
+</ul>
+<p>Si no esta informado el campo reducida se considera false.</p></td>
+<td>Lista[<a href="https://confluence.um.es/confluence/pages/viewpage.action?pageId=113050871#SGIESBSGECalendariofacturaci%C3%B3n-Columna" rel="nofollow">Columna</a>]</td>
+<td><p>Listado con las columnas que va a devolver la llamada /facturas-emitidas</p>
+<p>Por cada columna se indica un id, nombre, si es una columna acumulable (se va a hacer una suma de ella en el SGI)</p>
+<p>Ver el apartado "<strong>Columnas Factura Emitida</strong>" para ver que columnas se deben de mostrar.</p></td>
+</tr>
+<tr class="even">
+<td class="title" data-content-id="597853066"><a href="/confluence/spaces/HERCULES/pages/597853066/SGI+-+ESB+-+SGE+-+Calendario+facturaci%C3%B3n+-+Facturas+emitidas+-+Buscar">SGI - ESB - SGE - Calendario facturación - Facturas emitidas - Buscar</a></td>
+<td>GET</td>
+<td>/facturas-emitidas</td>
+<td><p>q+s (query + sort)</p>
+<p>La query estará formada por:</p>
+<ul>
+<li>proyectoId</li>
+<li>reducida</li>
+<li>fechaFactura</li>
+</ul>
+<p>El campo reducida puede tomar los siguientes valores:</p>
+<ul>
+<li>true: sólo se envían las columnas a mostrar en la pantalla principal</li>
+<li>false:  se envían todas las columnas (para su exportación)</li>
+</ul>
+<p>Si no esta informado el campo reducida se considera false.</p></td>
+<td>Lista[<a href="https://confluence.um.es/confluence/pages/viewpage.action?pageId=113050871#SGIESBSGECalendariofacturaci%C3%B3n-FacturaEmitida" rel="nofollow">FacturaEmitida</a>]</td>
+<td><p>Listado con las facturas emitidas del SGE. Por cada factura emitida se devolverán los siguientes campos:</p>
+<ul>
+<li>Identificador de la factura emitida</li>
+<li>Identificador del proyecto SGE</li>
+<li>Anualidad</li>
+<li>Número de factura</li>
+<li>Mapa de columnas de clave - valor (donde la clave será los id definidos en la llamada /facturas-emitidas/columnas y el valor será el valor de la columna. El valor será un String salvo en aquellas columnas que sean acumulables,se tenga que hacer sumas sobre ellas, donde será de tipo Numérico (<u>sin separador de miles y como separador decimal el punto</u>)). Ver el apartado "<strong>Columnas Factura Emitida</strong>" para ver los id de la columnas que se deben de mostrar.</li>
+</ul></td>
+</tr>
+<tr class="odd">
+<td class="title" data-content-id="597853063"><a href="/confluence/spaces/HERCULES/pages/597853063/SGI+-+ESB+-+SGE+-+Calendario+facturaci%C3%B3n+-+Facturas+previstas+emitidas+-+Buscar">SGI - ESB - SGE - Calendario facturación - Facturas previstas emitidas - Buscar</a></td>
+<td>GET</td>
+<td>/facturas-previstas-emitidas</td>
+<td><p>q+s (query + sort)</p>
+<p>La query estará formada por:</p>
+<ul>
+<li>proyectoIdSGI</li>
+<li>numeroPrevision</li>
+<li>numeroFactura</li>
+</ul>
+<p>proyectoIdSGI: identificador del proyecto en el SGI</p></td>
+<td>Lista[<a href="https://confluence.um.es/confluence/pages/viewpage.action?pageId=113050871#SGIESBSGECalendariofacturaci%C3%B3n-FacturaPrevistaEmitida" rel="nofollow">FacturaPrevistaEmitida</a>]</td>
+<td><p>Listado con las facturas emitidas del SGE. Por cada factura emitida se devolverán los siguientes campos:</p>
+<ul>
+<li>Identificador de la factura emitida</li>
+<li>Identificador del proyecto SGI</li>
+<li>Número factura</li>
+<li>Número previsión</li>
+</ul></td>
+</tr>
+<tr class="even">
+<td class="title" data-content-id="597853064"><a href="/confluence/spaces/HERCULES/pages/597853064/SGI+-+ESB+-+SGE+-+Calendario+facturaci%C3%B3n+-+Facturas+emitidas+-+Consultar+detalle">SGI - ESB - SGE - Calendario facturación - Facturas emitidas - Consultar detalle</a></td>
+<td>GET</td>
+<td>/facturas-emitidas/{id}</td>
+<td><p><br />
+</p></td>
+<td><a href="https://confluence.um.es/confluence/pages/viewpage.action?pageId=113050871#SGIESBSGECalendariofacturaci%C3%B3n-FacturaEmitidaDetalle" rel="nofollow">FacturaEmitidaDetalle</a></td>
+<td><p>Detalle de la factura emitida con todas sus columnas.</p>
+<ul>
+<li>Identificador de la factura emitida</li>
+<li>Identificador del proyecto SGE</li>
+<li>Anualidad</li>
+<li>Listado de campos con su nombre y valor (Ver el apartado "<strong>Campos Detalle factura emitida</strong>" para ver que campos se deben de mostrar. En el detalle se muestran todos la columnas o campos.)</li>
+<li>Listado de documentos (identificador, nombre del documento y nombre del fichero, sin el contenido)</li>
+</ul></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+### Columnas Facturas emitidas
+
+(**reducida =='true'** o **reducida =='false')**  (independientemente del campo reducida, ya que siempre se mandan todas las columnas) las columnas a devolver en la Universidad de Murcia serán:
+
+<div class="table-wrap">
+
+|     |                  |            |
+|-----|------------------|------------|
+| id  | nombre           | acumulable |
+| 1   | Fecha emisión    | false      |
+| 2   | Entidad          | false      |
+| 3   | Concepto         | false      |
+| 4   | Importe base     | true       |
+| 5   | Porcentaje IVA   | false      |
+| 6   | Importe total    | true       |
+| 7   | Estado           | false      |
+| 8   | Fecha cobro      | false      |
+| 9   | Importe cobrado  | true       |
+| 10  | Número previsión | false      |
+
+</div>
+
+### Campos **Factura emitida **
+
+Los campos a devolver en la Universidad de Murcia serán:
+
+- Fecha emisión
+- Entidad
+- Concepto
+- Importe base
+- Porcentaje IVA
+- Importe total
+- Estado
+- Fecha cobro
+- Importe cobrado
+- Número previsión
+
+### Ejemplos
+
+#### Columnas Facturas emitidas (/facturas-emitidas/columnas)
+
+
+
+<div class="code panel pdl" style="border-width: 1px;">
+
+<div class="codeHeader panelHeader pdl" style="border-bottom-width: 1px;">
+
+**Parámetros**
+
+</div>
+
+<div class="codeContent panelContent pdl">
+
+
+<pre><code class="language-syntaxhighlighter-pre">proyectoId==&quot;123456&quot;;fechaFactura=bt=(&quot;2020-12-01T00:00:00Z&quot;,&quot;2021-01-31T23:59:59Z&quot;)
+</code></pre>
+
+
+</div>
+
+</div>
+
+<div class="code panel pdl" style="border-width: 1px;">
+
+<div class="codeHeader panelHeader pdl" style="border-bottom-width: 1px;">
+
+**Respuesta**
+
+</div>
+
+<div class="codeContent panelContent pdl">
+
+
+<pre><code class="language-syntaxhighlighter-pre">[
+ {
+   &quot;id&quot;: &quot;1&quot;
+   &quot;nombre&quot;:&quot;Fecha emisión&quot;
+   &quot;acumulable&quot;: &quot;false&quot;
+
+  },
+  {
+   &quot;id&quot;:&quot;2&quot;,
+   &quot;nombre&quot;:&quot;Entidad&quot;,
+   &quot;acumulable&quot;: &quot;false&quot;
+
+  },
+  {
+   &quot;id&quot;:&quot;3&quot;,
+   &quot;nombre&quot;:&quot;Concepto&quot;,
+   &quot;acumulable&quot;: &quot;false&quot;
+
+  },
+  {
+   &quot;id&quot;:&quot;4&quot;,
+   &quot;nombre&quot;:&quot;Importe base&quot;,
+   &quot;acumulable&quot;: &quot;true&quot;
+  },
+  {
+   &quot;id&quot;:&quot;5&quot;,
+   &quot;nombre&quot;:&quot;Porcentaje IVA&quot;,
+   &quot;acumulable&quot;: &quot;false&quot;
+  },
+  {
+   &quot;id&quot;:&quot;6&quot;,
+   &quot;nombre&quot;:&quot;Importe total&quot;,
+   &quot;acumulable&quot;: &quot;true&quot;
+  },
+  {
+   &quot;id&quot;:&quot;7&quot;,
+   &quot;nombre&quot;:&quot;Estado&quot;,
+   &quot;acumulable&quot;: &quot;false&quot;
+  },
+  {
+   &quot;id&quot;:&quot;8&quot;,
+   &quot;nombre&quot;:&quot;Fecha cobro&quot;,
+   &quot;acumulable&quot;: &quot;false&quot;
+  },
+  {
+   &quot;id&quot;:&quot;9&quot;,
+   &quot;nombre&quot;:&quot;Importe cobrado&quot;,
+   &quot;acumulable&quot;: &quot;true&quot;
+  },
+  {
+   &quot;id&quot;:&quot;10&quot;,
+   &quot;nombre&quot;:&quot;Número previsión&quot;,
+   &quot;acumulable&quot;: &quot;false&quot;
+  }
+
+]
+</code></pre>
+
+
+</div>
+
+</div>
+
+
+
+#### Facturas emitidas (/facturas-emitidas)
+
+
+
+<div class="code panel pdl" style="border-width: 1px;">
+
+<div class="codeHeader panelHeader pdl" style="border-bottom-width: 1px;">
+
+**Parámetros**
+
+</div>
+
+<div class="codeContent panelContent pdl">
+
+
+<pre><code class="language-syntaxhighlighter-pre">proyectoId==&quot;123456&quot;;fechaFactura=bt=(&quot;2020-12-01T00:00:00Z&quot;,&quot;2021-01-31T23:59:59Z&quot;)
+</code></pre>
+
+
+</div>
+
+</div>
+
+<div class="code panel pdl" style="border-width: 1px;">
+
+<div class="codeHeader panelHeader pdl" style="border-bottom-width: 1px;">
+
+**Respuesta**
+
+</div>
+
+<div class="codeContent panelContent pdl">
+
+
+<pre><code class="language-syntaxhighlighter-pre">[
+{
+    &quot;id&quot;:&quot;11-2021&quot;
+    &quot;proyectoId&quot;:&quot;123456&quot;,
+    &quot;anualidad&quot;:&quot;2021&quot;,
+    &quot;numeroFactura&quot;:&quot;J2021/01&quot;,
+    &quot;columnas&quot;: {
+        &quot;1&quot;:&quot;20/05/2021&quot;,
+        &quot;2&quot;:&quot;Entidad1&quot;,
+        &quot;3&quot;:&quot;Concepto1&quot;,
+        &quot;4&quot;:1000.00,
+        &quot;5&quot;:&quot;10&quot;,
+        &quot;6&quot;:1100.00,
+        &quot;7&quot;:&quot;Pagada&quot;,
+        &quot;8&quot;:&quot;20/08/2021&quot;,
+        &quot;9&quot;:1100.00,
+        &quot;10&quot;:&quot;1&quot;
+        }
+},
+{
+    &quot;id&quot;:&quot;12-2021&quot;
+    &quot;proyectoId&quot;:&quot;123456&quot;,
+    &quot;anualidad&quot;:&quot;2021&quot;,
+    &quot;numeroFactura&quot;:&quot;J2021/02&quot;,
+    &quot;columnas&quot;: {
+        &quot;1&quot;:&quot;20/06/2021&quot;,
+        &quot;2&quot;:&quot;Entidad2&quot;,
+        &quot;3&quot;:&quot;Concepto2&quot;,
+        &quot;4&quot;:1000.00,
+        &quot;5&quot;:&quot;10&quot;,
+        &quot;6&quot;:1100.00,
+        &quot;7&quot;:&quot;Pagada&quot;,
+        &quot;8&quot;:&quot;20/08/2021&quot;,
+        &quot;9&quot;:1100.00,
+        &quot;10&quot;:&quot;2&quot;
+        }
+}
+]
+</code></pre>
+
+
+</div>
+
+</div>
+
+
+
+#### Detalle factura emitida (/facturas-emitidas/{id})
+
+{
+
+<div class="code panel pdl" style="border-width: 1px;">
+
+<div class="codeHeader panelHeader pdl" style="border-bottom-width: 1px;">
+
+**Respueta**
+
+</div>
+
+<div class="codeContent panelContent pdl">
+
+
+<pre><code class="language-syntaxhighlighter-pre">{
+    &quot;id&quot;:&quot;12-2021&quot;
+    &quot;proyectoId&quot;:&quot;123456&quot;,
+    &quot;anualidad&quot;:&quot;2021&quot;,
+    &quot;numeroFactura&quot;:&quot;J2021/02&quot;,
+    &quot;campos&quot;:[
+        {
+            &quot;nombre&quot;:&quot;Fecha emisión&quot;,
+            &quot;valor&quot;:&quot;1243&quot;
+        },
+        {
+            &quot;nombre&quot;:&quot;Entidad&quot;,
+            &quot;valor&quot;:&quot;Entidad1&quot;
+        },
+        {
+            &quot;nombre&quot;:&quot;Concepto&quot;,
+            &quot;valor&quot;:&quot;Concepto1&quot;
+        },
+        {
+            &quot;nombre&quot;:&quot;Importe base&quot;,
+            &quot;valor&quot;:1000.00
+        },
+        {
+            &quot;nombre&quot;:&quot;Porcentaje IVA&quot;,
+            &quot;valor&quot;:&quot;10&quot;
+        },
+        {
+            &quot;nombre&quot;:&quot;Importe total&quot;,
+            &quot;valor&quot;:1100.00
+        },
+        {
+            &quot;nombre&quot;:&quot;Estado&quot;,
+            &quot;valor&quot;:&quot;Pagada&quot;
+        },
+        {
+            &quot;nombre&quot;:&quot;Fecha cobro&quot;,
+            &quot;valor&quot;:&quot;20/08/2021&quot;
+        },
+        {
+            &quot;nombre&quot;:&quot;Importe cobrado&quot;,
+            &quot;valor&quot;:1100.00
+        },
+        {
+            &quot;nombre&quot;:&quot;Número previsión&quot;,
+            &quot;valor&quot;:&quot;2
+        }
+    ],
+   &quot;documentos&quot;:[
+        {
+         &quot;id&quot;: &quot;11&quot;, 
+         &quot;nombre&quot;:&quot;Factura&quot;,
+         &quot;nombreFichero&quot;:&quot;factura.pdf&quot;
+        }
+    ]
+
+}
+</code></pre>
+
+
+</div>
+
+</div>
+
+#### Consulta facturas previstas de emitir  (/facturas-previstas-emitidas)
+
+Las registradas en el SGE y que debe consultar el SGI para obtener el "número de factura" para mostrarlo en la pantalla de calendario facturación
+
+
+
+<div class="code panel pdl" style="border-width: 1px;">
+
+<div class="codeHeader panelHeader pdl" style="border-bottom-width: 1px;">
+
+**Parámetros**
+
+</div>
+
+<div class="codeContent panelContent pdl">
+
+
+<pre><code class="language-syntaxhighlighter-pre">proyectoIdSGI==&quot;11&quot;;
+</code></pre>
+
+
+</div>
+
+</div>
+
+<div class="code panel pdl" style="border-width: 1px;">
+
+<div class="codeHeader panelHeader pdl" style="border-bottom-width: 1px;">
+
+**Respuesta**
+
+</div>
+
+<div class="codeContent panelContent pdl">
+
+
+<pre><code class="language-syntaxhighlighter-pre">[
+    {
+    &quot;id&quot;:&quot;1&quot;
+    &quot;proyectoIdSGI&quot;:&quot;11&quot;,
+    &quot;numeroFactura&quot;:&quot;J2021/01&quot;,
+    &quot;numeroPrevision&quot;:&quot;1&quot;
+     },
+    {
+    &quot;id&quot;:&quot;2&quot;
+    &quot;proyectoIdSGI&quot;:&quot;11&quot;,
+    &quot;numeroFactura&quot;:&quot;J2021/02&quot;,
+    &quot;numeroPrevision&quot;:&quot;2&quot;
+     }
+
+]
+</code></pre>
+
+
+</div>
+
+</div>
+
+</div>
+
+<div class="pageSection group">
+
+<div class="pageSectionHeader">
+
+## Attachments:
+
+</div>
+
+<div class="greybox" align="left">
+
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [ESB SGE Logical Model Ejecución económica.jpg](/attachments/597852437/597866179.jpg) (image/jpeg)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [ESB SGE Logical Model.jpg](/attachments/597852437/597866180.jpg) (image/jpeg)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [ESB SGE Logical Model Calendario Facturacion.jpg](/attachments/597852437/597866183.jpg) (image/jpeg)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [ESB SGE Logical Model Calendario Facturacion.jpg](/attachments/597852437/597866136.jpg) (image/jpeg)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [ESB SGE Logical Model Calendario Facturacion.jpg](/attachments/597852437/597866063.jpg) (image/jpeg)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [ESB SGE Logical Model Calendario Facturacion.jpg](/attachments/597852437/597866060.jpg) (image/jpeg)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [ESB SGE Logical Model Calendario Facturacion.jpg](/attachments/597852437/597857878.jpg) (image/jpeg)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [ESB SGE Logical Model Calendario Facturacion.jpg](/attachments/597852437/597866184.jpg) (image/jpeg)  
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div id="footer" role="contentinfo">
+
+<div class="section footer-body">
+
+Document generated by Confluence on oct 27, 2025 08:52
+
+<div id="footer-logo">
+
+[Atlassian](https://www.atlassian.com/)
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 
 

@@ -796,7 +796,244 @@
 
   <h1>Index</h1>
 
+<div id="page">
 
+<div id="main" class="aui-page-panel">
+
+<div id="main-header">
+
+<div id="breadcrumb-section">
+
+1.  [Hércules](index.html)
+2.  [Hércules](/)
+3.  [SGI. Sistema de gestión de investigación](//sgi-sistema-de-gestion-de-investigacion)
+4.  [Diseño](//sgi-sistema-de-gestion-de-investigacion/diseno)
+5.  [Componentes](//sgi-sistema-de-gestion-de-investigacion/diseno/componentes)
+6.  [SGI - ESB](//sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb)
+7.  [ESB - SGI](//sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/esb-sgi)
+
+</div>
+
+# <span id="title-text"> Hércules : ESB - SGI - Usuarios </span>
+
+</div>
+
+<div id="content" class="view">
+
+<div class="page-metadata">
+
+Created by <span class="author"> Usuario desconocido (alicia.alvarez)</span>, last updated on jun 24, 2022
+
+</div>
+
+<div id="main-content" class="wiki-content group">
+
+------------------------------------------------------------------------
+
+<div class="toc-macro rbtoc1761551592677">
+
+- [Sistema de Gestión Investigación](#ESBSGIUsuarios-SistemadeGestiónInvestigación)
+  - [Entidades](#ESBSGIUsuarios-Entidades)
+  - [Modelo lógico](#ESBSGIUsuarios-Modelológico)
+  - [API](#ESBSGIUsuarios-API)
+    - [Definición de los objetos](#ESBSGIUsuarios-Definicióndelosobjetos)
+      - [Unidad](#ESBSGIUsuarios-Unidad)
+    - [Servicios](#ESBSGIUsuarios-Servicios)
+
+</div>
+
+------------------------------------------------------------------------
+
+# Sistema de Gestión Investigación
+
+## Entidades
+
+<div class="table-wrap">
+
+|         |                   |
+|---------|-------------------|
+| Entidad | Descripción       |
+| Unidad  | Unidad de gestión |
+
+</div>
+
+## Modelo lógico
+
+<a href="/confluence/pages/createpage.action?spaceKey=HERCULES&amp;title=USR+-+Modelo+l%C3%B3gico&amp;linkCreation=true&amp;fromPageId=597853116" class="createlink">USR - Modelo lógico</a>
+
+## API
+
+Características generales que todas las API REST deben de cumplir:
+
+- [Consultas filtradas y paginadas](//sgi-sistema-de-gestion-de-investigacion/desarrollo-y-configuracion/estandares-de-desarrollo/consultas-filtradas-y-paginadas)
+- [Formatos de datos API](//sgi-sistema-de-gestion-de-investigacion/desarrollo-y-configuracion/estandares-de-desarrollo/formatos-de-datos-api)
+
+### Definición de los objetos
+
+#### Unidad
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="header">
+<th class="confluenceTh">Nombre</th>
+<th class="confluenceTh">Tipo</th>
+<th class="confluenceTh">Descripción</th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd">createdBy</td>
+<td class="confluenceTd">String</td>
+<td class="confluenceTd">Referencia al usuario creador del registro en los sistemas de la Universidad.</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">creationDate</td>
+<td class="confluenceTd">Fecha + Hora</td>
+<td class="confluenceTd"><p>Fecha y hora de creación del registro.</p>
+<p>Formato UTC.</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">lastModifiedBy</td>
+<td class="confluenceTd">String</td>
+<td class="confluenceTd">Referencia al último usuario que modificó el registro en los sistemas de la Universidad.</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">lastModifiedDate</td>
+<td class="confluenceTd">Fecha + Hora</td>
+<td class="confluenceTd"><p>Fecha y hora de creación del registro.</p>
+<p>Formato UTC.</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">id</td>
+<td class="confluenceTd">Long</td>
+<td class="confluenceTd">Identificador único de la Unidad de gestión.</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">nombre</td>
+<td class="confluenceTd">String</td>
+<td class="confluenceTd">Nombre de la unidad de gestión.</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">acronimo</td>
+<td class="confluenceTd">String</td>
+<td class="confluenceTd">Acrónimo de la unidad de gestión.</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">descripcion</td>
+<td class="confluenceTd">String</td>
+<td class="confluenceTd">Descripción de la unidad de gestión.</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">activo</td>
+<td class="confluenceTd">Boolean</td>
+<td class="confluenceTd">Flag con el que se da cobertura al borrado lógico de los registros de esta tabla.</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+### Servicios 
+
+<div class="confluence-information-macro confluence-information-macro-information" role="region" aria-label="Info">
+
+<span class="aui-icon aui-icon-small aui-iconfont-info-filled confluence-information-macro-icon" role="presentation"></span>
+
+<div class="confluence-information-macro-body">
+
+Para componer la URL llamada completa, se debe anteponer a lo indicado en la columna URL lo siguiente: **{HOST}/api/sgiusr**, donde **{HOST}** de deberá sustituir el dominio correspondiente al entorno al que se está accediendo y dicho acceso será por http o https según el caso.
+
+</div>
+
+</div>
+
+<div class="table-wrap">
+
+<table class="aui metadata-summary-macro null" style="width:100%;" data-cql="label = &quot;servicios&quot; and space = currentSpace() and ancestor = currentContent()" data-details-space-key="HERCULES" data-details-content-id="597853116" data-headings="Método, URL, Parámetros, Respuesta, Descripción" data-first-column-heading="Servicio" data-count-comments="false" data-count-likes="false" data-total-pages="1" data-page-size="1000" data-sort-by="null" data-reverse-sort="false" data-blueprint-present="false">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th class="sorter-text">Servicio</th>
+<th>Método</th>
+<th>URL</th>
+<th>Parámetros</th>
+<th>Respuesta</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td class="title" data-content-id="597853419"><a href="/confluence/spaces/HERCULES/pages/597853419/ESB+-+SGI+-+Usuarios+-+Unidades+-+Consultar+detalle">ESB - SGI - Usuarios - Unidades - Consultar detalle</a></td>
+<td>GET</td>
+<td>/unidades/{id}</td>
+<td><p><br />
+</p></td>
+<td><a href="https://confluence.um.es/confluence/display/HERCULES/ESB+-+SGI+-+Usuarios#ESBSGIUsuarios-Unidad" rel="nofollow">Unidad</a></td>
+<td>Retorna el detalle de una Unidad de gestión.</td>
+</tr>
+<tr class="even">
+<td class="title" data-content-id="597853418"><a href="/confluence/spaces/HERCULES/pages/597853418/ESB+-+SGI+-+Usuarios+-+Unidades+-+Buscar">ESB - SGI - Usuarios - Unidades - Buscar</a></td>
+<td>GET</td>
+<td>/unidades</td>
+<td><p>q+s (query + sort)</p>
+<p>La query estará formada por:</p>
+<ul>
+<li>cualquiera de los campos del objeto Unidad</li>
+</ul></td>
+<td>Lista[<a href="https://confluence.um.es/confluence/display/HERCULES/ESB+-+SGI+-+Usuarios#ESBSGIUsuarios-Unidad" rel="nofollow">Unidad</a>]</td>
+<td>Busca / Lista Unidades de gestión.</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+<div class="pageSection group">
+
+<div class="pageSectionHeader">
+
+## Attachments:
+
+</div>
+
+<div class="greybox" align="left">
+
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [SGI USR Logical Model.png](/attachments/597853116/597862658.png) (image/png)  
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div id="footer" role="contentinfo">
+
+<div class="section footer-body">
+
+Document generated by Confluence on oct 27, 2025 08:53
+
+<div id="footer-logo">
+
+[Atlassian](https://www.atlassian.com/)
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 
 

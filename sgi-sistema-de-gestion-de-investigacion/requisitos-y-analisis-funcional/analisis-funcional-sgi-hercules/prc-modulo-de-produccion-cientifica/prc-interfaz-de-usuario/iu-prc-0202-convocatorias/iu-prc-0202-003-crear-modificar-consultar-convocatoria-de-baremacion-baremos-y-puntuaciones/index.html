@@ -796,7 +796,458 @@
 
   <h1>Iu prc 0202 003 crear modificar consultar convocatoria de baremacion baremos y puntuaciones</h1>
 
+<div id="page">
 
+<div id="main" class="aui-page-panel">
+
+<div id="main-header">
+
+<div id="breadcrumb-section">
+
+1.  [Hércules](index.html)
+2.  [Hércules](/)
+3.  [SGI. Sistema de gestión de investigación](//sgi-sistema-de-gestion-de-investigacion)
+4.  [Requisitos y análisis funcional](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional)
+5.  [Análisis Funcional SGI - Hércules](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules)
+6.  [PRC - Módulo de producción científica](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/prc-modulo-de-produccion-cientifica)
+7.  [PRC - Interfaz de Usuario](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/prc-modulo-de-produccion-cientifica/prc-interfaz-de-usuario)
+8.  [IU-PRC-0202-Convocatorias](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/prc-modulo-de-produccion-cientifica/prc-interfaz-de-usuario/iu-prc-0202-convocatorias)
+
+</div>
+
+# <span id="title-text"> Hércules : IU-PRC-0202-003 - Crear-Modificar-Consultar convocatoria de baremación - Baremos y puntuaciones </span>
+
+</div>
+
+<div id="content" class="view">
+
+<div class="page-metadata">
+
+Created by <span class="author"> Usuario desconocido (lorena.alvarez)</span>, last updated on oct 14, 2022
+
+</div>
+
+<div id="main-content" class="wiki-content group">
+
+<div class="plugin-tabmeta-details">
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable" style="width: 75.1988%;">
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 84%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<th class="confluenceTh">Cod. IU</th>
+<td class="confluenceTd"><p><strong><strong><strong><strong>IU-PRC-0202-003 - Crear-Modificar-Consultar convocatoria de baremación - Baremos y puntuaciones<br />
+</strong></strong></strong></strong></p></td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Ver. objetivo</th>
+<td class="confluenceTd">0.4.0</td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh">Ver. IU</th>
+<td class="confluenceTd">1.0.0</td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Estado</th>
+<td class="confluenceTd"> <span class="status-macro aui-lozenge aui-lozenge-current conf-macro output-inline">IN PROGRESS</span></td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh">Fec. Aprobación</th>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Épica, historia</th>
+<td class="confluenceTd"><div class="content-wrapper">
+<p><br />
+</p>
+</div></td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh">Actores</th>
+<td class="confluenceTd">ACT-PRC-003-Gestor, ACT-PRC-004-Visor</td>
+</tr>
+<tr class="even">
+<th class="confluenceTh"><p>Frecuencia</p></th>
+<td class="confluenceTd">Media</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+# Formulario Crear/Modificar/consultar convocatoria de baremación - Baremos y puntuaciones
+
+Formulario de creación/modificación/consulta de una convocatoria de baremación, apartado de Baremos y puntuaciones. El usuario ACT-PRC-003-Gestor podrá crear o realizar cambios.
+
+Si el usuario es un ACT-PRC-004-Visor se mostrarán todos los campos en modo consulta y no podrá realizar modificaciones. El botón Guardar estará deshabilitado.
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable" style="width: 100.0%;">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 13%" />
+<col style="width: 76%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<th colspan="3" class="confluenceTd" style="width: 100.0%"><div class="content-wrapper">
+<p><strong><em>Vista cuando no existe ningún baremo creado y no se ha abierto ningún nodo del árbol<br />
+</em></strong></p>
+<p><strong><em><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852315/597876647.png" class="confluence-embedded-image" draggable="false" data-image-src="attachments/597852315/597876647.png" data-unresolved-comment-count="0" data-linked-resource-id="597876647" data-linked-resource-version="4" data-linked-resource-type="attachment" data-linked-resource-default-alias="nuevaconvocatoriabaremosarbolcerrado.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852315" data-linked-resource-container-version="12" tabindex="0" width="750" /></span><br />
+</em></strong></p>
+<p><strong><em>Vista cuando existen baremos creados, no se ha abierto ningún nodo del árbol y no se ha pinchado en ningún detalle<br />
+</em></strong></p>
+<p><strong><em><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852315/597876662.png" class="confluence-embedded-image" draggable="false" data-image-src="attachments/597852315/597876662.png" data-unresolved-comment-count="0" data-linked-resource-id="597876662" data-linked-resource-version="4" data-linked-resource-type="attachment" data-linked-resource-default-alias="edicionconvocatoriabaremosarbolcerrado.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852315" data-linked-resource-container-version="12" tabindex="0" width="750" /></span><br />
+</em></strong></p>
+<p><strong><em>Vista cuando existen baremos creados, se ha desplegado el nodo de Producción científica  y se va a la edición de uno de ellos (icono del lápiz). En este caso "Sexenios"</em></strong></p>
+<p><strong><em><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852315/597876648.png" class="confluence-embedded-image" draggable="false" data-image-src="attachments/597852315/597876648.png" data-unresolved-comment-count="0" data-linked-resource-id="597876648" data-linked-resource-version="8" data-linked-resource-type="attachment" data-linked-resource-default-alias="nueva_convocatorias_baremos_sexenios.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852315" data-linked-resource-container-version="12" tabindex="0" width="750" /></span><br />
+</em></strong></p>
+<p><strong><em>Vista cuando existen baremos creados, se ha desplegado el nodo de Producción científica  y se va al detalle de uno de ellos (icono del lápiz). En este caso "Aportación costes indirectos"</em></strong></p>
+<p><strong><em><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852315/597876653.png" class="confluence-embedded-image" draggable="false" data-image-src="attachments/597852315/597876653.png" data-unresolved-comment-count="0" data-linked-resource-id="597876653" data-linked-resource-version="6" data-linked-resource-type="attachment" data-linked-resource-default-alias="nueva_convocatorias_baremos_aportacin_coste_indirectos.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852315" data-linked-resource-container-version="12" tabindex="0" width="750" /></span><br />
+</em></strong></p>
+<p><strong><em>Vista cuando existen baremos creados, se ha desplegado el nodo de Producción científica  y se va al detalle de uno de ellos (icono del lápiz). En este caso "Producción científica"</em></strong></p>
+<p><strong><em><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852315/597876654.png" class="confluence-embedded-image" draggable="false" data-image-src="attachments/597852315/597876654.png" data-unresolved-comment-count="0" data-linked-resource-id="597876654" data-linked-resource-version="5" data-linked-resource-type="attachment" data-linked-resource-default-alias="nueva_convocatorias_baremos_produccin_cientfica.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852315" data-linked-resource-container-version="12" tabindex="0" width="750" /></span><br />
+</em></strong></p>
+<p><strong><em>Vista cuando existen baremos creados, se ha desplegado el nodo de Producción científica y Libros  y se va al detalle de uno de ellos (icono del lápiz). En este caso "Autoría -  BCI - Editorial extranjera"</em></strong></p>
+<p><strong><em><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852315/597876658.png" class="confluence-embedded-image confluence-content-image-border" draggable="false" data-image-src="attachments/597852315/597876658.png" data-unresolved-comment-count="0" data-linked-resource-id="597876658" data-linked-resource-version="4" data-linked-resource-type="attachment" data-linked-resource-default-alias="nueva_convocatorias_baremos_libros_bci_editorial_extranjera.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852315" data-linked-resource-container-version="12" tabindex="0" width="750" height="684" /></span><br />
+</em></strong></p>
+<p><br />
+</p>
+</div></th>
+</tr>
+<tr class="even">
+<th class="confluenceTh" style="width: 10.3709%">Nombre</th>
+<th class="confluenceTh" style="width: 13.3232%"><div class="content-wrapper">
+<p>Tipo</p>
+</div></th>
+<th class="confluenceTh" style="width: 76.3058%"><div class="content-wrapper">
+<p>Características / Notas</p>
+</div></th>
+</tr>
+<tr class="odd">
+<th colspan="3" class="highlight-blue confluenceTd" data-highlight-colour="blue" style="width: 100.0%"><div class="content-wrapper">
+<p>Árbol de baremos</p>
+</div></th>
+</tr>
+<tr class="even">
+<th class="confluenceTd" style="width: 10.3709%">Baremos</th>
+<th class="confluenceTd" style="width: 13.3232%"><p>Componente gráfico de árbol</p>
+<p>Opcional</p></th>
+<th class="confluenceTd" style="width: 76.3058%"><p>Se mostrará el árbol de baremos definidos para una convocatoria de baremación, es decir, se mostrará el campo "nombre" de la tabla "ConfiguracionBaremo" que tengan el campo "activo" a "true".</p>
+<p>En un primer momento, cuando no se haya desplegado ningún nodo del árbol, se mostrarán únicamente los baremos de primer nivel (campo "padre" igual a null). Según se vaya abriendo el árbol, se mostrará el nivel descendiente del nodo seleccionado y así sucesivamente. Para ello se irá a la tabla "ConfiguracionBaremo" cuyo campo "padre" sea el nodo que se quiere desplegar y el campo "activo" sea "true".</p>
+<p>En caso de que exista el registro en la tabla "baremo" asociado a "configuracionBaremo" el nodo saldrá seleccionado, sino existe el registro saldrá sin marcar.</p>
+<p>Para los nodos seleccionados (existe registro en la tabla "baremo" ) y sean nodos de primer nivel (campo "padre" es null) y/o nodos hoja (no tienen nodos hijos) saldrá el icono del "ojo" para mostrar su detalle.</p>
+<p>Si un nodo de primer nivel (campo "padre" es null) esta seleccionado será obligatorio informar del campo "Peso"  si el campo "tipo nodo" tiene no de estos valores: PESO_PUNTOS o PESO</p>
+<p>Si un nodo de último nivel (sin hijos) esta seleccionado será obligatorio informar del campo "Puntos" si el campo "tipo nodo" tiene uno de estos valores: PESO_PUNTOS, PUNTOS_CUANTIA, PUNTOS</p>
+<p>Para el nodo que corresponde con el baremo que tiene en el campo "TipoBaremo" el valor de COSTE_INDIRECTO (tabla "ConfiguracionBaremo") si esta seleccionado será obligatorio a partir de informar del campo "Peso" y el campo "Tipo de cuantía". Si en el combo de "Tipo de cuantía" se selecciona el valor de "Puntos" se tendrá que informar del campo "Cuantía por punto". Dicho nodo es el que tiene en el campo "tipo nodo" el valor "PESO_CUANTIA".</p>
+<p>Los nodos cuyo campo "tipo nodo" en la tabla "ConfiguracionBaremo" tiene el valor "NO_BAREMABLE" serán nodos agrupadores, que no tienen ni campo Peso ni campo Puntos, únicamente sirven como agrupadores de otros baremos, por ejemplo "Libros", "Artículos", etc..</p>
+<p>Los nodos cuyo campo "tipo nodo" en la tabla "ConfiguracionBaremo" tiene el valor "SIN_PUNTOS" serán nodos que únicamente se dejarán seleccionarlos o no pero que sus puntos se especificarán en la pantalla de "Moduladores o rango" o en las tablas de configuración, por ejemplo "Número de autores", "Editoriales de prestigio"</p>
+<p>Se tendrá que añadir un scroll al árbol de baremos, para que siempre se vea el formulario de edición del baremo de la derecha del árbol, al consultar uno de los baremos.</p></th>
+</tr>
+<tr class="odd">
+<th colspan="3" class="highlight-#deebff confluenceTd" data-highlight-colour="#deebff" title="Color de fondo: 35 % azul claro">Peso/Ponderación del baremo seleccionado</th>
+</tr>
+<tr class="even">
+<th class="confluenceTd">Baremo</th>
+<th class="confluenceTd"><p>Texto corto</p>
+<p>Obligatorio</p>
+<p>Modo consulta</p></th>
+<th class="confluenceTd">Nombre del baremo. Campo "nombre" de la tabla "ConfiguracionBaremo"</th>
+</tr>
+<tr class="odd">
+<th class="confluenceTd">Peso</th>
+<th class="confluenceTd"><p>Número decimal</p>
+<p>Obligatorio si el nodo seleccionado es un nodo raíz (nodo de primer nivel, el campo "padre" es null)</p></th>
+<th class="confluenceTd"><p>Peso sobre 100 del baremo respecto a la cuantía total de la subvención. Entre los baremos seleccionados de primer nivel (Sexenios, Aportación costes indirectos y Producción científica) tienen que sumar 100.</p>
+<p>El campo "Peso" únicamente se muestra si el nodo seleccionado es de primer nivel (campo "padre" de la tabla "ConfiguracionBaremo" es null) y si el campo "tipo nodo" de la tabla "ConfiguracionBaremo" tiene no de estos valores: PESO_PUNTOS o PESO</p>
+<p>Tendrá que ser un número menor a 100.</p>
+<p>Campo "peso" de la tabla "baremo"</p></th>
+</tr>
+<tr class="even">
+<th class="confluenceTd">Puntos</th>
+<th class="confluenceTd"><p>Número decimal</p>
+<p>Obligatorio si el nodo seleccionado es un nodo hoja (no tiene hijos)</p></th>
+<th class="confluenceTd"><p>Puntos que se le dará al item si cumple el baremo seleccionado.</p>
+<p>El campo "Puntos"  únicamente se muestra si el nodo seleccionado es un nodo hoja (un nodo sin hijos) y si el campo "tipo nodo" de la tabla "ConfiguracionBaremo"  tiene uno de estos valores: PESO_PUNTOS, PUNTOS_CUANTIA, PUNTOS</p>
+<p>Campo "puntos" de la tabla "baremo"</p></th>
+</tr>
+<tr class="odd">
+<th class="confluenceTd">Tipo de cuantía</th>
+<th class="confluenceTd"><p>Selector</p>
+<p>Texto corto</p>
+<p>Obligatorio si el nodo seleccionado es del tipo baremo COSTE_INDIRECTO</p></th>
+<th class="confluenceTd"><p>Tipo de cuantía para el baremo "Aportación costes indirectos"</p>
+<p>Sólo se muestra si el nodo seleccionado corresponde con el tipo baremo COSTE_INDIRECTO (campo "tipoBaremo" de la tabla "ConfiguracionBaremo"), es decir, si el campo "tipo nodo" de la tabla "ConfiguracionBaremo"  tiene el valor PESO_CUANTIA</p>
+<p>Será un desplegable con dos valores:</p>
+<ul>
+<li>Por puntos</li>
+<li>Por rango</li>
+</ul>
+<p>En el caso que se elija "Por puntos" se mostrará la caja de texto "Cuantía por punto" y en otro caso no se mostrará dicho campo.</p>
+<p>Campo "tipoCuantia" de la tabla "baremo"</p></th>
+</tr>
+<tr class="even">
+<th class="confluenceTd">Cuantía por punto</th>
+<th class="confluenceTd"><p>Número decimal</p>
+<p>Obligatorio si en el campo "Tipo de cuantía" se elige el valor "Puntos"</p></th>
+<th class="confluenceTd"><p>Indica el importe por el que se dan los puntos.</p>
+<p>Sólo se muestra y será obligatorio si el nodo seleccionado corresponde con el tipo baremo COSTE_INDIRECTO (si el campo "tipo nodo" de la tabla "ConfiguracionBaremo"  tiene el valor PESO_CUANTIA y en el campo "Tipo de cuantía" se ha seleccionado el valor "Por puntos". En otro caso no se mostrará.</p>
+<p>Campo "cuantia" de la tabla "baremo"</p></th>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="table-wrap">
+
+<table class="wrapped relative-table confluenceTable" style="width: 79.3764%;">
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 16%" />
+<col style="width: 54%" />
+<col style="width: 15%" />
+</colgroup>
+<tbody>
+<tr class="header">
+<th class="confluenceTh">Acciones</th>
+<th class="confluenceTh">Descripción</th>
+<th class="confluenceTh"> Enlace CU.</th>
+<th class="confluenceTh">Permisos</th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd">Check</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><p>Se mostrará chequeado el baremo si existe el baremo en la vista con datos o en el caso de que sea un nodo agrupador (libros, artículos, comités, etc..) cuando uno de sus hijos exista en la vista con datos.</p>
+<p>Si se desmarca el check se eliminará a nivel de vista el Baremo y todos sus hijos. Si luego se marca otra vez y estaba en la vista tendrá los datos que había antes.</p>
+<p>Estará deshabilitado hasta que el baremo se añada como Baremo a nivel de vista.</p></td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">Añadir</td>
+<td class="confluenceTd">Icono "añadir"</td>
+<td class="confluenceTd">El icono de "Añadir" únicamente saldrá para los nodos que sean de primer nivel (campo "padre" es null) o para los nodos que no tienen hijos siempre y cuando todavía no este creado en la tabla "Baremo", una vez creado saldrá el icono de Editar</td>
+<td class="confluenceTd"><p>PRC-CON-C</p>
+<p>PRC-CON-E</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">Editar</td>
+<td class="confluenceTd">Icono "editar"</td>
+<td class="confluenceTd">El icono de "Editar" se mostrará para los nodos creados (existen en la tabla "baremo") y sean nodos de primer nivel (campo "padre" es null) y/o en los nodos que no tienen hijos.</td>
+<td class="confluenceTd"><p>PRC-CON-C</p>
+<p>PRC-CON-E</p>
+<p><br />
+</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">Ver</td>
+<td class="confluenceTd">Icono "ver"</td>
+<td class="confluenceTd">El icono de "Ver" se mostrará para los nodos creados (existen en la tabla "baremo") y sean nodos de primer nivel (campo "padre" es null) y/o en los nodos que no tienen hijos para los visores (persona que no tiene permiso de edición y solo el e consulta)</td>
+<td class="confluenceTd">PRC-CON-V</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">Aceptar</td>
+<td class="confluenceTd">Guarda los datos del baremo seleccionado</td>
+<td class="confluenceTd"><p>Guarda los campos informados en la pantalla del detalle del baremo en la tabla "baremo".</p>
+<p>Si el baremo seleccionado es un nodo de primer nivel (campo "padre" es null) será obligatorio informar del campo "Peso" y si el campo "tipo nodo" de la tabla "ConfiguracionBaremo" tiene no de estos valores: PESO_PUNTOS o PESO</p>
+<p>Si el baremo seleccionado es un nodo de último nivel (sin hijos) y si el campo "tipo nodo" de la tabla "ConfiguracionBaremo"  tiene uno de estos valores: PESO_PUNTOS, PUNTOS_CUANTIA, PUNTOS será obligatorio informar del campo "Puntos".</p>
+<p>Si el baremo seleccionado es de tipo "COSTE_INDIRECTO" (el campo "tipo nodo" de la tabla "ConfiguracionBaremo"  tiene el valor PESO_CUANTIA) será obligatorio a partir de informar del campo "Peso" y el campo "Tipo de cuantía". Si en el combo de "Tipo de cuantía" se selecciona el valor de "Puntos" se tendrá que informar del campo "Cuantía por punto".</p>
+<p>No saldrá activado el botón hasta que todos lo campos obligatorios estén informados.</p></td>
+<td class="confluenceTd"><p>PRC-CON-C</p>
+<p>PRC-CON-E</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+## Botones generales a la pantalla
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable" style="width: 91.4044%;">
+<colgroup>
+<col style="width: 8%" />
+<col style="width: 39%" />
+<col style="width: 38%" />
+<col style="width: 13%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th class="confluenceTh"><p>Acciones</p></th>
+<th class="confluenceTh"><p>Descripción</p></th>
+<th class="confluenceTh"><p> Enlace CU.</p></th>
+<th class="confluenceTh">Permisos</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td class="confluenceTd">Guardar</td>
+<td class="confluenceTd"><p>Crea la Convocatoria de baremación con la información introducida en el formulario.</p>
+<p>Al guardar una convocatoria se guarda la información de todos los apartados de definición de la convocatoria, es decir, los datos generales, baremos y rangos. En esta pantalla sólo se describe la parte de Baremos, ver las pantallas de Datos generales y Rangos para ver su descripción.</p>
+<p><br />
+</p></td>
+<td class="confluenceTd"><p>Se creará o modificará para cada nodo seleccionado del árbol ("ConfiguracionBaremo") un registro en la tabla "baremo" con los datos informados en la pantalla de detalle del baremo. Se deberá comprobar que si el nodo esta seleccionado se haya introducido los campos obligatorios:</p>
+<ul>
+<li>Si el baremo seleccionado tiene el campo "tipo nodo" de la tabla "ConfiguracionBaremo" tiene no de estos valores: PESO_PUNTOS o PESO será obligatorio informar del campo "Peso" .</li>
+<li>Si el baremo seleccionado tiene el campo "tipo nodo" de la tabla "ConfiguracionBaremo"  tiene uno de estos valores: PESO_PUNTOS, PUNTOS_CUANTIA, PUNTOS será obligatorio informar del campo "Puntos".</li>
+<li>Si el baremo seleccionado es "Aportación costes indirectos" (el campo "tipo nodo" de la tabla "ConfiguracionBaremo"  tiene el valor PESO_CUANTIA) será obligatorio a parte de informar del campo "Peso", el campo "Tipo de cuantía". Si en el combo de "Tipo de cuantía" se selecciona el valor de "Puntos" se tendrá que informar del campo "Cuantía por punto".</li>
+</ul>
+<p>Se tendrá que comprobar también que la suma del campo "Peso" de los nodos seleccionados de primer nivel (campo "padre" es null) sume 100, es caso contrario no se dejará guardar y se informará del error "La suma de los pesos de los nodos raíz debe de sumar 100".</p>
+<p>Se hace el guardado de todos los baremos que están en la vista, del árbol entero. En la tabla Baremo sólo se guardan los baremos que son nodos raíz o nodos hojas, es decir, los que son únicamente un agrupados no se guarda.</p></td>
+<td class="confluenceTd"><p>PRC-CON-C</p>
+<p>PRC-CON-E</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">Cancelar</td>
+<td class="confluenceTd"><p>Retorna al listado de Convocatorias de baremación sin salvar los posibles cambios.</p>
+<p><span>Al cancelar una convocatoria se cancela la información de todas las pestañas de la pantalla, </span>sin salvar los posibles cambios.</p></td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+## Permisos de acceso a la pantalla
+
+### Por actor
+
+<div class="plugin-tabmeta-details">
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable" style="width: 80.2339%;">
+<colgroup>
+<col style="width: 32%" />
+<col style="width: 67%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<th class="confluenceTh"><p>ACT-PRC-004-Visor</p></th>
+<td class="confluenceTd">PRC-CON-V<span><br />
+</span></td>
+</tr>
+<tr class="even">
+<th class="confluenceTh"><p>ACT-PRC-003-Gestor</p></th>
+<td class="confluenceTd"><span>PRC-CON-C, PRC-CON-E</span></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+### Todos los permisos de acceso
+
+<div class="plugin-tabmeta-details">
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable" style="width: 80.4566%;">
+<colgroup>
+<col style="width: 31%" />
+<col style="width: 68%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<th class="confluenceTh">Permisos</th>
+<td class="confluenceTd"><span>PRC-CON-V, PRC-CON-C, PRC-CON-E<br />
+</span></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="pageSection group">
+
+<div class="pageSectionHeader">
+
+## Attachments:
+
+</div>
+
+<div class="greybox" align="left">
+
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [nueva_convocatorias_baremos_sexenios.png](/attachments/597852315/597876656.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [nuevaconvocatoriabaremosarbolcerrado.png](/attachments/597852315/597876663.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [nuevaconvocatoriabaremosarbolcerrado.png](/attachments/597852315/597854472.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [edicionconvocatoriabaremosarbolcerrado.png](/attachments/597852315/597865403.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [edicionconvocatorias_baremosdesplegados.png](/attachments/597852315/597854454.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [nueva_convocatorias_baremos_aportacin_coste_indirectos.png](/attachments/597852315/597876655.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [nueva_convocatorias_baremos_sexenios.png](/attachments/597852315/597876660.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [nueva_convocatorias_baremos_aportacin_coste_indirectos.png](/attachments/597852315/597874050.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [nueva_convocatorias_baremos_produccin_cientfica.png](/attachments/597852315/597874049.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [nueva_convocatorias_baremos_sexenios.png](/attachments/597852315/597874051.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [nueva_convocatorias_baremos_libros_bci_editorial_extranjera.png](/attachments/597852315/597874052.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [nueva_convocatorias_baremos_sexenios.png](/attachments/597852315/597865404.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [nueva_convocatorias_baremos_aportacin_coste_indirectos.png](/attachments/597852315/597865405.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [nueva_convocatorias_baremos_produccin_cientfica.png](/attachments/597852315/597865406.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [nueva_convocatorias_baremos_libros_bci_editorial_extranjera.png](/attachments/597852315/597865407.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [edicionconvocatoriabaremosarbolcerrado.png](/attachments/597852315/597854475.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [nueva_convocatorias_baremos_sexenios.png](/attachments/597852315/597854484.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [nueva_convocatorias_baremos_aportacin_coste_indirectos.png](/attachments/597852315/597854479.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [nueva_convocatorias_baremos_produccin_cientfica.png](/attachments/597852315/597854452.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [nueva_convocatorias_baremos_libros_bci_editorial_extranjera.png](/attachments/597852315/597857656.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [nueva_convocatorias_baremos_sexenios.png](/attachments/597852315/597854476.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [nuevaconvocatoriabaremosarbolcerrado.png](/attachments/597852315/597857662.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [edicionconvocatoriabaremosarbolcerrado.png](/attachments/597852315/597857666.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [nueva_convocatorias_baremos_sexenios.png](/attachments/597852315/597857668.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [nueva_convocatorias_baremos_aportacin_coste_indirectos.png](/attachments/597852315/597857670.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [nueva_convocatorias_baremos_produccin_cientfica.png](/attachments/597852315/597857655.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [edicionconvocatorias_baremosdesplegados.png](/attachments/597852315/597876652.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [nuevaconvocatoriabaremosarbolcerrado.png](/attachments/597852315/597876647.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [edicionconvocatoriabaremosarbolcerrado.png](/attachments/597852315/597876662.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [nueva_convocatorias_baremos_sexenios.png](/attachments/597852315/597876648.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [nueva_convocatorias_baremos_aportacin_coste_indirectos.png](/attachments/597852315/597876653.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [nueva_convocatorias_baremos_produccin_cientfica.png](/attachments/597852315/597876654.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [nueva_convocatorias_baremos_libros_bci_editorial_extranjera.png](/attachments/597852315/597876658.png) (image/png)  
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div id="footer" role="contentinfo">
+
+<div class="section footer-body">
+
+Document generated by Confluence on oct 27, 2025 08:45
+
+<div id="footer-logo">
+
+[Atlassian](https://www.atlassian.com/)
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 
 

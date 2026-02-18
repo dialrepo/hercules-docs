@@ -796,7 +796,238 @@
 
   <h1>Req int 0060 edma cvn 0005 detalle proyecto</h1>
 
+<div id="page">
 
+<div id="main" class="aui-page-panel">
+
+<div id="main-header">
+
+<div id="breadcrumb-section">
+
+1.  [Hércules](index.html)
+2.  [Hércules](/)
+3.  [SGI. Sistema de gestión de investigación](//sgi-sistema-de-gestion-de-investigacion)
+4.  [Requisitos y análisis funcional](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional)
+5.  [Análisis Funcional SGI - Hércules](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules)
+6.  [GEN - Aspectos generales](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales)
+7.  [INT - Requisitos de integración](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion)
+8.  [REQ-INT-0060-EDMA-CVN - Integración con el sistema de Enriquecimiento de datos y métodos de análisis y gestión de CVN](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0060-edma-cvn-integracion-con-el-sistema-de-enriquecimiento-de-datos-y-metodos-de-analisis-y-gestion-de-cvn)
+
+</div>
+
+# <span id="title-text"> Hércules : REQ-INT-0060-EDMA-CVN-0005 - Detalle Proyecto </span>
+
+</div>
+
+<div id="content" class="view">
+
+<div class="page-metadata">
+
+Created by <span class="author"> Usuario desconocido (lorena.alvarez)</span>, last updated by <span class="editor"> Usuario desconocido (covadonga.garcia)</span> on may 12, 2022
+
+</div>
+
+<div id="main-content" class="wiki-content group">
+
+<div class="contentLayout2">
+
+<div class="columnLayout single" layout="single">
+
+<div class="cell normal" data-type="normal">
+
+<div class="innerCell">
+
+<div class="plugin-tabmeta-details">
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="odd">
+<th class="confluenceTh">Cod. REQ</th>
+<td class="confluenceTd"><p><strong>REQ-INT-0060-EDMA-CVN-0005 - Detalle Proyecto</strong></p></td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Ver. Objetivo</th>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh">Ver. REQ</th>
+<td class="confluenceTd">1.0.0</td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Estado</th>
+<td class="confluenceTd"><div class="content-wrapper">
+<span class="status-macro aui-lozenge aui-lozenge-current conf-macro output-inline">IN PROGRESS</span>
+</div></td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh">Fec. Aprobación</th>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Épica, historia</th>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh">Frecuencia</th>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Características</th>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh"><span>M. Consumidor</span></th>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+## Definición y objetivos
+
+El SGI deberá disponer de una función o varias que permita al módulo de CVN (parte del sistema EDMA) consultar el detalle de un proyecto.
+
+## Descripción integración
+
+Parámetros de entrada:
+
+- Identificador del proyecto. Identificador interno del proyecto.
+
+Parámetros de salida:
+
+- Identificador del proyecto. Identificador interno del proyecto. (Se obtiene de la entidad Proyecto)
+- Nombre del proyecto (Se obtiene de la entidad Proyecto)
+- Fecha de inicio (Se obtiene de la entidad Proyecto)
+- Fecha de finalización (Se obtiene de la entidad Proyecto)
+- Ámbito geográfico  (Se obtiene de la entidad Proyecto)
+- Cod. según financiadora (Se obtiene de la entidad Proyecto)
+- Tipo de proyecto (Se obtiene de la entidad Proyecto)
+- Resultados relevantes (Se obtiene de la entidad ContextoProyecto)
+- Listado de miembros del equipo (Se obtiene de la entidad ProyectoEquipo)
+- Entidad gestora (Se obtiene de la entidad ProyectoEntidadGestora)
+- Listado de entidades convocantes  (Se obtiene de la entidad ProyectoEntidadConvocante)
+- Listado de entidades financiadoras (Se obtiene de la entidad ProyectoEntidadFinanciadora)
+- Listado de clasificaciones (Se obtiene de la entidad ProyectoClasificacion)
+- Listado de anualidades (Se obtiene de la entidad ProyectoAnualidadResumen)
+- Listado de notificaciones de proyectos externos del CVN asociados al proyecto (Se obtiene de la entidad NotificacionProyectoExternoCVN)
+
+
+
+## Diseño técnico
+
+<span style="color:var(--ds-text,#172b4d);">En el siguiente enlace se muestra el diseño del modelo lógico y el diseño del API  [ESB - SGI - Proyectos](//sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/esb-sgi/esb-sgi-proyectos)  
+</span>
+
+<span style="color:var(--ds-text,#172b4d);">La forma de recuperar el detalle de un proyecto al ser una entidad compleja es a partir de varios servicios:</span>
+
+- <span style="color:var(--ds-text,#172b4d);">GET /proyectos/<span class="url-filename">{id}</span></span>
+- <span style="color:var(--ds-text,#172b4d);">GET <span class="url-filename">/proyectos/{id}/contexto</span></span>
+- <span style="color:var(--ds-text,#172b4d);">GET /proyectos/<span class="url-filename">{id}/equipos</span></span>
+- <span style="color:var(--ds-text,#172b4d);">GET /proyectos/<span class="url-filename">{id}/entidadgestoras</span></span>
+- <span style="color:var(--ds-text,#172b4d);">GET /proyectos/<span class="url-filename">{id}/entidadconvocantes</span></span>
+- <span style="color:var(--ds-text,#172b4d);">GET /proyectos/<span class="url-filename">{id}/entidadfinanciadoras</span></span>
+- <span style="color:var(--ds-text,#172b4d);">GET /proyectos/<span class="url-filename">{id}/proyectoclasificaciones</span></span>
+- <span style="color:var(--ds-text,#172b4d);">GET /proyectos/<span class="url-filename">{id}/anualidades</span></span>
+- <span style="color:var(--ds-text,#172b4d);">GET /proyectos/<span class="url-filename">{id}/notificacionesproyectos</span></span>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+<div class="columnLayout three-equal" layout="three-equal">
+
+<div class="cell normal" data-type="normal">
+
+<div class="innerCell">
+
+## Interfaces de usuario relacionados
+
+<img src="plugins/servlet/confluence/placeholder/unknown-macro" class="wysiwyg-unknown-macro" />
+
+</div>
+
+</div>
+
+<div class="cell normal" data-type="normal">
+
+<div class="innerCell">
+
+## Informes relacionados
+
+<img src="plugins/servlet/confluence/placeholder/unknown-macro" class="wysiwyg-unknown-macro" />
+
+</div>
+
+</div>
+
+<div class="cell normal" data-type="normal">
+
+<div class="innerCell">
+
+## Casos de uso relacionados
+
+<img src="plugins/servlet/confluence/placeholder/unknown-macro" class="wysiwyg-unknown-macro" />
+
+</div>
+
+</div>
+
+</div>
+
+<div class="columnLayout single" layout="single">
+
+<div class="cell normal" data-type="normal">
+
+<div class="innerCell">
+
+
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div id="footer" role="contentinfo">
+
+<div class="section footer-body">
+
+Document generated by Confluence on oct 27, 2025 08:38
+
+<div id="footer-logo">
+
+[Atlassian](https://www.atlassian.com/)
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 
 

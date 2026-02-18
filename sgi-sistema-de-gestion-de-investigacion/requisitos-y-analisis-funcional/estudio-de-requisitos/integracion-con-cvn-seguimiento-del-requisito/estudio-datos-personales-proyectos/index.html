@@ -796,7 +796,807 @@
 
   <h1>Estudio datos personales proyectos</h1>
 
+<div id="page">
 
+<div id="main" class="aui-page-panel">
+
+<div id="main-header">
+
+<div id="breadcrumb-section">
+
+1.  [Hércules](index.html)
+2.  [Hércules](/)
+3.  [SGI. Sistema de gestión de investigación](//sgi-sistema-de-gestion-de-investigacion)
+4.  [Requisitos y análisis funcional](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional)
+5.  [Estudio de requisitos](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/estudio-de-requisitos)
+6.  [Integración con CVN - Seguimiento del requisito](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/estudio-de-requisitos/integracion-con-cvn-seguimiento-del-requisito)
+
+</div>
+
+# <span id="title-text"> Hércules : Estudio Datos Personales - Proyectos </span>
+
+</div>
+
+<div id="content" class="view">
+
+<div class="page-metadata">
+
+Created by <span class="author"> Usuario desconocido (lorena.alvarez)</span>, last updated on mar 08, 2022
+
+</div>
+
+<div id="main-content" class="wiki-content group">
+
+<div class="toc-macro rbtoc1761550709124">
+
+- [Datos Personales](#EstudioDatosPersonalesProyectos-DatosPersonales)
+  - [Servicios API a utilizar:](#EstudioDatosPersonalesProyectos-ServiciosAPIautilizar:)
+- [Proyectos](#EstudioDatosPersonalesProyectos-Proyectos)
+  - [Servicios API a utilizar:](#EstudioDatosPersonalesProyectos-ServiciosAPIautilizar:.1)
+
+</div>
+
+# Datos Personales
+
+Los datos del CVN de datos personales son:
+
+
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="header">
+<th class="confluenceTh">Campo</th>
+<th class="confluenceTh"><p>Código Fecyt</p></th>
+<th class="confluenceTh"><p>Campo en el SGP</p></th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd"><p>Nº documento personal</p></td>
+<td class="confluenceTd"><p>000.010.000.100 (DNI)<br />
+000.010.000.110 (NIE)<br />
+000.010.000.120 (pasaporte)</p></td>
+<td class="confluenceTd"><p>Recuperado por medio de <a href="https://confluence.um.es/confluence/display/HERCULES/REQ-INT-0020-SGP-0030+-+Consultar+datos+generales+de+persona" rel="nofollow">REQ-INT-0020-SGP-0030 - Consultar datos generales de persona</a></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>Nombre</p></td>
+<td class="confluenceTd"><p>000.010.000.020</p></td>
+<td class="confluenceTd"><p>Recuperado por medio de <a href="https://confluence.um.es/confluence/display/HERCULES/REQ-INT-0020-SGP-0030+-+Consultar+datos+generales+de+persona" rel="nofollow">REQ-INT-0020-SGP-0030 - Consultar datos generales de persona</a></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p>Apellidos</p></td>
+<td class="confluenceTd"><p>000.010.000.010</p></td>
+<td class="confluenceTd"><p>Recuperado por medio de <a href="https://confluence.um.es/confluence/display/HERCULES/REQ-INT-0020-SGP-0030+-+Consultar+datos+generales+de+persona" rel="nofollow">REQ-INT-0020-SGP-0030 - Consultar datos generales de persona</a></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>Fecha de nacimiento</p></td>
+<td class="confluenceTd"><p>000.010.000.050</p></td>
+<td class="confluenceTd"><p>Recuperado por medio de <a href="https://confluence.um.es/confluence/display/HERCULES/REQ-INT-0020-SGP-0030+-+Consultar+datos+generales+de+persona" rel="nofollow">REQ-INT-0020-SGP-0030 - Consultar datos generales de persona</a></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p>Sexo</p></td>
+<td class="confluenceTd"><p>000.010.000.030</p></td>
+<td class="confluenceTd"><p>Recuperado por medio de <a href="https://confluence.um.es/confluence/display/HERCULES/REQ-INT-0020-SGP-0030+-+Consultar+datos+generales+de+persona" rel="nofollow">REQ-INT-0020-SGP-0030 - Consultar datos generales de persona</a><br />
+Se tendrá que mapear el valor del SGP al valor de la Fecyt en caso de que no se use el mismo. (CVN_SEX_A)</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>Nacionalidad</p></td>
+<td class="confluenceTd"><p>000.010.000.040</p></td>
+<td class="confluenceTd"><p>Recuperado por medio de <a href="https://confluence.um.es/confluence/display/HERCULES/REQ-INT-0020-SGP-0031+-+Consultar+datos+personales+de+persona" rel="nofollow">REQ-INT-0020-SGP-0031 - Consultar datos personales de persona</a> <a href="https://confluence.um.es/confluence/display/HERCULES/REQ-INT-0020-SGP-0031+-+Consultar+datos+personales+de+persona" rel="nofollow">.</a><br />
+Se tendrá que mapear el valor del SGP al valor de la Fecyt en caso de que no se use el mismo. (ISO_3166)</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p>País de nacimiento</p></td>
+<td class="confluenceTd"><p>000.010.000.060</p></td>
+<td class="confluenceTd"><p>Recuperado por medio de <a href="https://confluence.um.es/confluence/display/HERCULES/REQ-INT-0020-SGP-0031+-+Consultar+datos+personales+de+persona" rel="nofollow">REQ-INT-0020-SGP-0031 - Consultar datos personales de persona</a> <a href="https://confluence.um.es/confluence/display/HERCULES/REQ-INT-0020-SGP-0031+-+Consultar+datos+personales+de+persona" rel="nofollow">.</a><br />
+Se tendrá que mapear el valor del SGP al valor de la Fecyt en caso de que no se use el mismo. (ISO_3166)</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>C. Autón./Reg. de nacimiento</p></td>
+<td class="confluenceTd"><p>000.010.000.070</p></td>
+<td class="confluenceTd"><p>Recuperado por medio de <a href="https://confluence.um.es/confluence/display/HERCULES/REQ-INT-0020-SGP-0031+-+Consultar+datos+personales+de+persona" rel="nofollow">REQ-INT-0020-SGP-0031 - Consultar datos personales de persona</a> <a href="https://confluence.um.es/confluence/display/HERCULES/REQ-INT-0020-SGP-0031+-+Consultar+datos+personales+de+persona" rel="nofollow">.</a> Se tendrá que mapear el valor del SGP al valor de la Fecyt en caso de que no se use el mismo. (CVN_REGION))</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p>Ciudad de nacimiento</p></td>
+<td class="confluenceTd"><p>000.010.000.090</p></td>
+<td class="confluenceTd"><p>Recuperado por medio de <a href="https://confluence.um.es/confluence/display/HERCULES/REQ-INT-0020-SGP-0031+-+Consultar+datos+personales+de+persona" rel="nofollow">REQ-INT-0020-SGP-0031 - Consultar datos personales de persona</a> <a href="https://confluence.um.es/confluence/display/HERCULES/REQ-INT-0020-SGP-0031+-+Consultar+datos+personales+de+persona" rel="nofollow">.</a></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>Dirección de contacto</p></td>
+<td class="confluenceTd"><p>000.010.000.140</p></td>
+<td class="confluenceTd"><p>Recuperado por medio de <a href="https://confluence.um.es/confluence/display/HERCULES/REQ-INT-0020-SGP-0032+-+Consultar+datos+de+contacto+de+persona" rel="nofollow">REQ-INT-0020-SGP-0032 - Consultar datos de contacto de persona</a></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p>Ciudad</p></td>
+<td class="confluenceTd"><p>000.010.000.170</p></td>
+<td class="confluenceTd"><p>Recuperado por medio de <a href="https://confluence.um.es/confluence/display/HERCULES/REQ-INT-0020-SGP-0032+-+Consultar+datos+de+contacto+de+persona" rel="nofollow">REQ-INT-0020-SGP-0032 - Consultar datos de contacto de persona</a></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>Código postal</p></td>
+<td class="confluenceTd"><p>000.010.000.160</p></td>
+<td class="confluenceTd"><p>Recuperado por medio de <a href="https://confluence.um.es/confluence/display/HERCULES/REQ-INT-0020-SGP-0032+-+Consultar+datos+de+contacto+de+persona" rel="nofollow">REQ-INT-0020-SGP-0032 - Consultar datos de contacto de persona</a></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p>País</p></td>
+<td class="confluenceTd"><p>000.010.000.180</p></td>
+<td class="confluenceTd"><p>Recuperado por medio de <a href="https://confluence.um.es/confluence/display/HERCULES/REQ-INT-0020-SGP-0032+-+Consultar+datos+de+contacto+de+persona" rel="nofollow">REQ-INT-0020-SGP-0032 - Consultar datos de contacto de persona</a> <a href="https://confluence.um.es/confluence/display/HERCULES/REQ-INT-0020-SGP-0031+-+Consultar+datos+personales+de+persona" rel="nofollow">.</a> Se tendrá que mapear el valor del SGP al valor de la Fecyt en caso de que no se use el mismo. (ISO_3166))</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>Comunidad autónoma</p></td>
+<td class="confluenceTd"><p>000.010.000.190</p></td>
+<td class="confluenceTd"><p>Recuperado por medio de <a href="https://confluence.um.es/confluence/display/HERCULES/REQ-INT-0020-SGP-0032+-+Consultar+datos+de+contacto+de+persona" rel="nofollow">REQ-INT-0020-SGP-0032 - Consultar datos de contacto de persona</a> <a href="https://confluence.um.es/confluence/display/HERCULES/REQ-INT-0020-SGP-0031+-+Consultar+datos+personales+de+persona" rel="nofollow">.</a> Se tendrá que mapear el valor del SGP al valor de la Fecyt en caso de que no se use el mismo. (CVN_REGION))</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p>Provincia</p></td>
+<td class="confluenceTd"><p>000.010.000.200</p></td>
+<td class="confluenceTd"><p>Recuperado por medio de <a href="https://confluence.um.es/confluence/display/HERCULES/REQ-INT-0020-SGP-0032+-+Consultar+datos+de+contacto+de+persona" rel="nofollow">REQ-INT-0020-SGP-0032 -</a> <a href="https://confluence.um.es/confluence/display/HERCULES/REQ-INT-0020-SGP-0032+-+Consultar+datos+de+contacto+de+persona" rel="nofollow">Consultar datos de contacto de persona</a> <a href="https://confluence.um.es/confluence/display/HERCULES/REQ-INT-0020-SGP-0031+-+Consultar+datos+personales+de+persona" rel="nofollow">.</a><br />
+Se tendrá que mapear el valor del SGP al valor de la Fecyt en caso de que no se use el mismo. (CVN_PROVINCE)</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>Correo electrónico</p></td>
+<td class="confluenceTd"><p>000.010.000.230</p></td>
+<td class="confluenceTd"><p>Recuperado por medio de <a href="https://confluence.um.es/confluence/display/HERCULES/REQ-INT-0020-SGP-0032+-+Consultar+datos+de+contacto+de+persona" rel="nofollow">REQ-INT-0020-SGP-0032 - Consultar datos de contacto de persona</a></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p>Fax</p></td>
+<td class="confluenceTd"><p>000.010.000.220</p></td>
+<td class="confluenceTd"><p>Recuperado por medio de <a href="https://confluence.um.es/confluence/display/HERCULES/REQ-INT-0020-SGP-0032+-+Consultar+datos+de+contacto+de+persona" rel="nofollow">REQ-INT-0020-SGP-0032 - Consultar datos de contacto de persona</a></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>Teléfono móvil</p></td>
+<td class="confluenceTd"><p>000.010.000.240</p></td>
+<td class="confluenceTd"><p>Recuperado por medio de <a href="https://confluence.um.es/confluence/display/HERCULES/REQ-INT-0020-SGP-0032+-+Consultar+datos+de+contacto+de+persona" rel="nofollow">REQ-INT-0020-SGP-0032 - Consultar datos de contacto de persona</a></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p>Teléfono fijo</p></td>
+<td class="confluenceTd"><p>000.010.000.210</p></td>
+<td class="confluenceTd"><p>Recuperado por medio de <a href="https://confluence.um.es/confluence/display/HERCULES/REQ-INT-0020-SGP-0032+-+Consultar+datos+de+contacto+de+persona" rel="nofollow">REQ-INT-0020-SGP-0032 - Consultar datos de contacto de persona</a></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>Fotografía</p></td>
+<td class="confluenceTd"><p>000.010.000.130</p></td>
+<td class="confluenceTd"><p>Recuperado por medio del servicio <strong>/personas/{id}/fotografia</strong></p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+## Servicios API a utilizar:
+
+Se tendrán que realizar las siguientes llamadas:
+
+
+
+- Consultar el API de **/personas/modificadas-ids** para recuperar los identificadores de personas que han sufrido cambios en los datos identificativos (nombre, apellidos, sexo, número de documento y tipo de documento) y/o en los datos personales (fecha de nacimiento, país de nacimiento, comunidad autónoma de nacimiento y ciudad de nacimiento) y/o en datos de contacto (país de contacto, comunidad autónoma de contacto, provincia de contacto, ciudad de contacto, dirección de contacto, código postal, listado de teléfonos y listado de emails) y/o en la fotografía a partir de la fecha de modificación pasada por parámetro.
+- Consultar el API de **/personas/{id}** para recuperar el detalle de los datos identificativos de la persona modificada.
+- Consultar el API de **/datos-personales/persona/{id}** para recuperar el detalle de los datos personales de la persona modificada.
+- Consultar el API de **/datos-contacto/persona/{id}** para recuperar el detalle de los datos de contacto de la persona modificada.
+- Consultar el API de **/personas/{id}/fotografia** para recuperar la fotografía modificada de la persona.
+
+
+
+# Proyectos
+
+Los proyectos que se enviarían al CVN serían los proyectos en estado “Concedido” (los de estado “Borrador”, “Renunciado” o “Rescindido” no se envían), que tengan el campo "activo" a "true" y el campo "confidencial" a "false" y los que tienen en el campo “clasificación CVN” uno de los siguientes valores:
+
+- Proyecto competitivo
+
+- Proyecto no competitivo
+
+- Ayudas y becas
+
+
+
+
+A continuación se muestran todos los datos del CVN de los apartados de Proyectos competitivos y no competitivos de la Fecyt y su posible parseo con los datos del SGI:
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="header">
+<th class="confluenceTh"><p>Campo</p></th>
+<th class="confluenceTh"><p>Código Fecyt Proyecto competitivo</p></th>
+<th class="confluenceTh"><p>Código Fecyt Proyecto no competitivo</p></th>
+<th class="confluenceTh"><p>Campo en el SGI</p></th>
+<th class="confluenceTh"><p>Entidad SGI</p></th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd"><p>Nombre del proyecto</p></td>
+<td class="confluenceTd"><p>050.020.010.010</p></td>
+<td class="confluenceTd"><p>050.020.020.010</p></td>
+<td class="confluenceTd"><p>Título del proyecto</p></td>
+<td class="confluenceTd"><p>Proyecto</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>Fecha de inicio</p></td>
+<td class="confluenceTd"><p>050.020.010.270</p></td>
+<td class="confluenceTd"><p>050.020.020.180</p></td>
+<td class="confluenceTd"><p>Fecha inicio</p></td>
+<td class="confluenceTd"><p>Proyecto</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p>Fecha de finalización</p></td>
+<td class="confluenceTd"><p>050.020.010.410</p></td>
+<td class="confluenceTd"><p>-</p></td>
+<td class="confluenceTd"><p>Fecha fin</p></td>
+<td class="confluenceTd"><p>Proyecto</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>Duración</p></td>
+<td class="confluenceTd"><p>050.020.010.280</p></td>
+<td class="confluenceTd"><p>050.020.020.190</p></td>
+<td class="confluenceTd"><p>-</p></td>
+<td class="confluenceTd"><p><br />
+</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p>Número de investigadores/as participantes</p></td>
+<td class="confluenceTd"><p>050.020.010.150</p></td>
+<td class="confluenceTd"><p>050.020.020.260</p></td>
+<td class="confluenceTd"><p>Se podría sacar de la información que envíe el SGI del equipo de proyecto. Sería la suma de los miembros del equipo. Hay que tener en cuenta que una persona puede estar dos veces como miembro del equipo en rangos distintos de fechas.</p></td>
+<td class="confluenceTd"><p>ProyectoEquipo</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>Entidad realización</p></td>
+<td class="confluenceTd"><p>050.020.010.100</p>
+<p><a href="mailto:ENTITY@Entity.xsd" class="external-link" rel="nofollow">ENTITY@Entity.xsd</a>.</p></td>
+<td class="confluenceTd"><p>050.020.020.370</p>
+<p><a href="mailto:ENTITY@Entity.xsd" class="external-link" rel="nofollow">ENTITY@Entity.xsd</a>.</p></td>
+<td class="confluenceTd"><p>Entidad gestora del proyecto (empresaRef)</p></td>
+<td class="confluenceTd"><p>ProyectoEntidadGestora</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p>Tipo de entidad</p></td>
+<td class="confluenceTd"><p>050.020.010.120</p></td>
+<td class="confluenceTd"><p>050.020.020.330</p></td>
+<td class="confluenceTd"><p>-</p></td>
+<td class="confluenceTd"><p><br />
+</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>Otro tipo de entidad</p></td>
+<td class="confluenceTd"><p>050.020.010.130</p></td>
+<td class="confluenceTd"><p>050.020.020.380</p></td>
+<td class="confluenceTd"><p>-</p></td>
+<td class="confluenceTd"><p><br />
+</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p>País entidad realización</p></td>
+<td class="confluenceTd"><p>050.020.010.060</p></td>
+<td class="confluenceTd"><p>050.020.020.060</p></td>
+<td class="confluenceTd"><p>-</p></td>
+<td class="confluenceTd"><p><br />
+</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>C. Autón./Reg. entidad realización</p></td>
+<td class="confluenceTd"><p>050.020.010.070</p></td>
+<td class="confluenceTd"><p>050.020.020.070</p></td>
+<td class="confluenceTd"><p>-</p></td>
+<td class="confluenceTd"><p><br />
+</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p>Ciudad entidad realización</p></td>
+<td class="confluenceTd"><p>050.020.010.090</p></td>
+<td class="confluenceTd"><p>050.020.020.090</p></td>
+<td class="confluenceTd"><p>-</p></td>
+<td class="confluenceTd"><p><br />
+</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>Cuantía total</p></td>
+<td class="confluenceTd"><p>050.020.010.290</p></td>
+<td class="confluenceTd"><p>050.020.020.200</p></td>
+<td class="confluenceTd"><p>totalImporteConcedido si viene informado en la entidad Proyecto y sino será la suma del campo totalGastosConcedido de todos los registros de la entidad ProyectoAnanualidad</p></td>
+<td class="confluenceTd"><p>Proyecto o sacarlo calculado de ProyectoAnualidad</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p>Cuantía del subproyecto</p></td>
+<td class="confluenceTd"><p>050.020.010.300</p></td>
+<td class="confluenceTd"><p>050.020.020.210</p></td>
+<td class="confluenceTd"><p>-</p></td>
+<td class="confluenceTd"><p><br />
+</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>Modalidad del proyecto</p></td>
+<td class="confluenceTd"><p>050.020.010.030</p>
+<p>CVN_PROJECT_C</p></td>
+<td class="confluenceTd"><p>050.020.020.030</p>
+<p>CVN_PROJECT_C</p></td>
+<td class="confluenceTd"><p>-</p></td>
+<td class="confluenceTd"><p><br />
+</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p>Nº de personas/año</p></td>
+<td class="confluenceTd"><p>050.020.010.160</p></td>
+<td class="confluenceTd"><p>050.020.020.270</p></td>
+<td class="confluenceTd"><p>-</p></td>
+<td class="confluenceTd"><p><br />
+</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>Ámbito geográfico</p></td>
+<td class="confluenceTd"><p>050.020.010.040</p>
+<p>CVN_SCOPE_A</p></td>
+<td class="confluenceTd"><p>050.020.020.040</p>
+<p>CVN_SCOPE_A</p></td>
+<td class="confluenceTd"><p>Ámbito geográfico</p></td>
+<td class="confluenceTd"><p>Proyecto</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p>Otro ámbito geográfico</p></td>
+<td class="confluenceTd"><p>050.020.010.050</p></td>
+<td class="confluenceTd"><p>050.020.020.050</p></td>
+<td class="confluenceTd"><p>-</p></td>
+<td class="confluenceTd"><p><br />
+</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>Grado de contribución</p></td>
+<td class="confluenceTd"><p>050.020.010.170</p>
+<p>CVN_PARTICIPATION_B</p></td>
+<td class="confluenceTd"><p>050.020.020.280</p>
+<p>CVN_PARTICIPATION_B</p></td>
+<td class="confluenceTd"><p>Campo "rolProyecto" de los miembros del equipo</p></td>
+<td class="confluenceTd"><p>ProyectoEquipo</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p>Otro grado de contribución</p></td>
+<td class="confluenceTd"><p>050.020.010.180</p></td>
+<td class="confluenceTd"><p>050.020.020.290</p></td>
+<td class="confluenceTd"><p>-</p></td>
+<td class="confluenceTd"><p><br />
+</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>Tipo de participación</p></td>
+<td class="confluenceTd"><p>050.020.010.230</p>
+<p>CVN_PARTICIPATION_A</p></td>
+<td class="confluenceTd"><p>-</p></td>
+<td class="confluenceTd"><p>Campo "rolProyecto" de los miembros del equipo</p></td>
+<td class="confluenceTd"><p>ProyectoEquipo</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p>Otro tipo de participación</p></td>
+<td class="confluenceTd"><p>050.020.010.240</p></td>
+<td class="confluenceTd"><p>-</p></td>
+<td class="confluenceTd"><p>-</p></td>
+<td class="confluenceTd"><p><br />
+</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>Nombre del programa</p></td>
+<td class="confluenceTd"><p>050.020.010.250</p></td>
+<td class="confluenceTd"><p>050.020.020.170</p></td>
+<td class="confluenceTd"><p>Programas de las Entidades convocantes</p></td>
+<td class="confluenceTd"><p>ProyectoEntidadConvocante</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p>Cod. según financiadora</p></td>
+<td class="confluenceTd"><p>050.020.010.260</p></td>
+<td class="confluenceTd"><p>050.020.020.110</p></td>
+<td class="confluenceTd"><p>CodigoExterno</p></td>
+<td class="confluenceTd"><p>Proyecto</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>Tipo de proyecto</p></td>
+<td class="confluenceTd"><p>-</p></td>
+<td class="confluenceTd"><p>050.020.020.160</p>
+<p>CVN_PARTICIPATION_F</p></td>
+<td class="confluenceTd"><p>CoordinadorExterno</p>
+<p>Si "coordinadorExterno" es true =  Coordinación</p>
+<p>Si "coordinadorExterno" es fale =  Cooperación</p></td>
+<td class="confluenceTd"><p>Proyecto</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p>Régimen de dedicación</p></td>
+<td class="confluenceTd"><p>050.020.010.430</p>
+<p>CVN_DEDICATION_A</p></td>
+<td class="confluenceTd"><p>-</p></td>
+<td class="confluenceTd"><p>-</p></td>
+<td class="confluenceTd"><p><br />
+</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>Porcentaje en subvención</p></td>
+<td class="confluenceTd"><p>050.020.010.310</p></td>
+<td class="confluenceTd"><p>050.020.020.220</p></td>
+<td class="confluenceTd"><p>PorcentajeFinanciacion</p>
+<p>tipoFinanciacion</p>
+<p>fuenteFinacicacion</p></td>
+<td class="confluenceTd"><p>ProyectoEntidadFinanciadora</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p>Porcentaje en crédito</p></td>
+<td class="confluenceTd"><p>050.020.010.320</p></td>
+<td class="confluenceTd"><p>050.020.020.230</p></td>
+<td class="confluenceTd"><p>PorcentajeFinanciacion</p>
+<p>tipoFinanciacion</p>
+<p>fuenteFinacicacion</p></td>
+<td class="confluenceTd"><p>ProyectoEntidadFinanciadora</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>Porcentaje mixto</p></td>
+<td class="confluenceTd"><p>050.020.010.330</p></td>
+<td class="confluenceTd"><p>050.020.020.240</p></td>
+<td class="confluenceTd"><p>PorcentajeFinanciacion</p>
+<p>tipoFinanciacion</p>
+<p>fuenteFinacicacion</p></td>
+<td class="confluenceTd"><p>ProyectoEntidadFinanciadora</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p>Resultados relevantes</p></td>
+<td class="confluenceTd"><p>050.020.010.340</p></td>
+<td class="confluenceTd"><p>050.020.020.300)</p></td>
+<td class="confluenceTd"><p>Resultados esperados</p></td>
+<td class="confluenceTd"><p>Contexto proyecto</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>Aportación del solicitante</p></td>
+<td class="confluenceTd"><p>050.020.010.420</p></td>
+<td class="confluenceTd"><p>-</p></td>
+<td class="confluenceTd"><p>-</p></td>
+<td class="confluenceTd"><p><br />
+</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+
+**Listado de investigadores principales:**
+
+Miembros del equipo del proyecto que tengan asignado un rol que tenga marcado el flag “principal”
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="header">
+<th class="confluenceTh"><p>Campo</p></th>
+<th class="confluenceTh"><p>Código Fecyt Proyecto competitivo</p></th>
+<th class="confluenceTh"><p>Código Fecyt Proyecto no competitivo</p></th>
+<th class="confluenceTh"><p>Campo en el SGI</p></th>
+<th class="confluenceTh"><p>Tabla SGI</p></th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd"><p>Posición</p></td>
+<td class="confluenceTd"><p>050.020.010.140</p></td>
+<td class="confluenceTd"><p>050.020.020.250</p></td>
+<td class="confluenceTd"><p>Orden, que solo puede tomar el valor PRIMARIO o SECUNDARIO</p></td>
+<td class="confluenceTd"><p>ProyectoEquipo</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>Nombre</p></td>
+<td class="confluenceTd"><p>050.020.010.140</p></td>
+<td class="confluenceTd"><p>050.020.020.250</p></td>
+<td class="confluenceTd"><p>Recuperado por medio de <a href="https://confluence.um.es/confluence/display/HERCULES/REQ-INT-0020-SGP-0030+-+Consultar+datos+generales+de+persona" rel="nofollow">REQ-INT-0020-SGP-0030 - Consultar datos generales de persona</a></p>
+<p>(personaRef)</p></td>
+<td class="confluenceTd"><p>ProyectoEquipo</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p>Apellidos</p></td>
+<td class="confluenceTd"><p>050.020.010.140</p></td>
+<td class="confluenceTd"><p>050.020.020.250</p></td>
+<td class="confluenceTd"><p>Recuperado por medio de <a href="https://confluence.um.es/confluence/display/HERCULES/REQ-INT-0020-SGP-0030+-+Consultar+datos+generales+de+persona" rel="nofollow">REQ-INT-0020-SGP-0030 - Consultar datos generales de persona</a></p>
+<p>(personaRef)</p></td>
+<td class="confluenceTd"><p>ProyectoEquipo</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>Firma</p></td>
+<td class="confluenceTd"><p>050.020.010.140</p></td>
+<td class="confluenceTd"><p>050.020.020.250</p></td>
+<td class="confluenceTd"><p>-</p></td>
+<td class="confluenceTd"><p>-</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p>personaRef</p></td>
+<td class="confluenceTd"><p>-</p></td>
+<td class="confluenceTd"><p>-</p></td>
+<td class="confluenceTd"><p>personaRef</p></td>
+<td class="confluenceTd"><p>ProyectoEquipo</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+
+**Listado de palabras clave**
+
+Se enviarán las clasificaciones el proyecto
+
+
+
+
+
+
+**Listado de entidades financiadoras**
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="header">
+<th class="confluenceTh"><p>Campo</p></th>
+<th class="confluenceTh"><p>Código Fecyt Proyecto competitivo</p></th>
+<th class="confluenceTh"><p>Código Fecyt Proyecto no competitivo</p></th>
+<th class="confluenceTh"><p>Campo en el SGI</p></th>
+<th class="confluenceTh"><p>Tabla SGI</p></th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd"><p>Entidad</p></td>
+<td class="confluenceTd"><p>050.020.010.190</p></td>
+<td class="confluenceTd"><p>050.020.020.120</p></td>
+<td class="confluenceTd"><p>empresaRef</p></td>
+<td class="confluenceTd"><p>ProyectoEntidaFinanciadora</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>Tipo entidad</p></td>
+<td class="confluenceTd"><p>050.020.010.210</p></td>
+<td class="confluenceTd"><p>050.020.020.140</p></td>
+<td class="confluenceTd"><p>-</p></td>
+<td class="confluenceTd"><p><br />
+</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+
+**Listado de entidades participantes**
+
+<div class="table-wrap">
+
+|         |                                   |                                      |                 |                          |
+|---------|-----------------------------------|--------------------------------------|-----------------|--------------------------|
+| Campo   | Código Fecyt Proyecto competitivo | Código Fecyt Proyecto no competitivo | Campo en el SGI | Tabla SGI                |
+| Entidad | 050.020.010.400                   | 050.020.020.320                      | empresaRef      | ProyectoEntidaConvocante |
+
+</div>
+
+
+
+
+A continuación se muestran todos los datos del CVN de los apartados de Ayudas y becas de la Fecyt y su posible parseo con los datos del SGI:
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="header">
+<th class="confluenceTh"><p>Campo</p></th>
+<th class="confluenceTh"><p>Código Fecyt <strong>Ayudas y Becas</strong></p></th>
+<th class="confluenceTh"><p>Campo en el SGI</p></th>
+<th class="confluenceTh"><p>Tabla SGI</p></th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd"><p>Nombre de la ayuda</p></td>
+<td class="confluenceTd"><p>060.020.060.020</p></td>
+<td class="confluenceTd"><p>Título del proyecto</p></td>
+<td class="confluenceTd"><p>Proyecto</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>Fecha de concesión</p></td>
+<td class="confluenceTd"><p>060.030.010.130</p></td>
+<td class="confluenceTd"><p>Fecha inicio</p></td>
+<td class="confluenceTd"><p>Proyecto</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p>Fecha de finalización</p></td>
+<td class="confluenceTd"><p>060.030.010.160</p></td>
+<td class="confluenceTd"><p>Fecha fin</p></td>
+<td class="confluenceTd"><p>Proyecto</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>Duración</p></td>
+<td class="confluenceTd"><p>060.030.010.140</p></td>
+<td class="confluenceTd"><p>-</p></td>
+<td class="confluenceTd"><p><br />
+</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p>Finalidad</p></td>
+<td class="confluenceTd"><p>060.030.010.060</p>
+<p>CVN_SUMMONS_A</p></td>
+<td class="confluenceTd"><p>Finalidad</p></td>
+<td class="confluenceTd"><p>Proyecto</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>Finalidad, otros</p></td>
+<td class="confluenceTd"><p>060.030.010.070</p></td>
+<td class="confluenceTd"><p>-</p></td>
+<td class="confluenceTd"><p><br />
+</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p>Entidad concesionaria</p></td>
+<td class="confluenceTd"><p>060.030.010.080</p></td>
+<td class="confluenceTd"><p>Se cogerá una de las "Entidades convocantes" del proyecto ¿cuál?</p></td>
+<td class="confluenceTd"><p>ProyectoEntidadConvocante</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>Tipo de entidad</p></td>
+<td class="confluenceTd"><p>060.030.010.100</p></td>
+<td class="confluenceTd"><p>-</p></td>
+<td class="confluenceTd"><p><br />
+</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p>Otro tipo de entidad</p></td>
+<td class="confluenceTd"><p>060.030.010.110</p></td>
+<td class="confluenceTd"><p>-</p></td>
+<td class="confluenceTd"><p><br />
+</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>País entidad concesionaria</p></td>
+<td class="confluenceTd"><p>060.020.060.030</p></td>
+<td class="confluenceTd"><p>-</p></td>
+<td class="confluenceTd"><p><br />
+</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p>C Auton/Reg entidad <span>concesionaria</span></p></td>
+<td class="confluenceTd"><p>060.020.060.040</p></td>
+<td class="confluenceTd"><p>-</p></td>
+<td class="confluenceTd"><p><br />
+</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>Ciudad entidad <span>concesionaria</span></p></td>
+<td class="confluenceTd"><p>060.020.060.190</p></td>
+<td class="confluenceTd"><p>-</p></td>
+<td class="confluenceTd"><p><br />
+</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p>Entidad realización</p></td>
+<td class="confluenceTd"><p>060.030.010.180</p></td>
+<td class="confluenceTd"><p>¿Será Murcia siempre?</p></td>
+<td class="confluenceTd"><p><br />
+</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>Facultad, instituto, centro</p></td>
+<td class="confluenceTd"><p>060.030.010.170</p></td>
+<td class="confluenceTd"><p>-</p></td>
+<td class="confluenceTd"><p><br />
+</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p>Importe de la ayuda</p></td>
+<td class="confluenceTd"><p>060.030.010.120</p></td>
+<td class="confluenceTd"><p>totalImporteConcedido si viene informado en la entidad Proyecto y sino será la suma del campo totalGastosConcedido de todos los registros de la entidad ProyectoAnanualidad</p></td>
+<td class="confluenceTd"><p>Proyecto o sacarlo calculado de ProyectoAnualidad</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+## Servicios API a utilizar:
+
+Se tendrán que realizar las siguientes llamadas:
+
+- Consultar el API de **/proyectos/modificados-ids** para recuperar el listado de Identificadores de Proyecto que han sido modificados o añadidos (tanto la entidad Proyecto como todas sus entidades relacionadas: ProyectoEquipo, ContextoProyecto, ProyectoEntidadGestora, ProyectoEntidadConvocante y ProyectoEntidadFinanciadora).
+- Consultar el API de /**proyectos/{id**} para recuperar el detalle de los datos generales de proyecto
+- Consultar el API de **<span class="url-filename">/proyecto-contextoproyectos/{id}</span>** para recuperar el listado de investigadores del proyecto
+- Consultar el API de **<span class="url-filename">/proyectos/{id}</span>/proyectoequipos** para recuperar el listado de investigadores del proyecto
+- Consultar el API de **/proyectos/<span class="url-filename">{id}</span>/proyectoentidadgestoras** para recuperar la entidad gestora del proyecto
+- Consultar el API de **/proyectos/<span class="url-filename">{id}</span>/entidadconvocantes** para recuperar el listado de entidades participantes
+- Consultar el API de **/proyectos/<span class="url-filename">{id}</span>/proyectoentidadfinanciadoras** para recuperar el listado de entidades financiadoras
+- Consultar el API de **/proyectos/<span class="url-filename">{id}</span>/proyectoanualidades** para recuperar el listado de anualidades **(**contiene el campo totalGastosConcedido por cada anualidad, sería sumar la de todas las anualidades para obtener el importe concedido del Proyecto)
+- Consultar el API de **/proyectos/{id}/proyectoclasificaciones** para recuperar el listado de clasificaciones (UNESCO, NABS, CNAE)
+- Consultar el API de **/proyectos/{id}/notificacionesproyectos** para recuperar el listado de proyectos creados en el CVN y enviados al SGI para su creación como proyecto externo
+
+<u>**Tablas CVN**</u>
+
+**CVN_PROJECT_C**
+
+190 De demostración, proyectos piloto, de formulación conceptual y diseño de productos y de
+
+procesos o servicios
+
+200 De investigación fundamental (incluyendo excavaciones arqueológicas, etc.).
+
+210 De investigación industrial
+
+220 De investigación y desarrollo incluida traslacional
+
+310 Estudio de viabilidad técnica
+
+878 De actividad de desarrollo precompetitiva
+
+**CVN_PARTICIPATION_B**
+
+270 Coordinador/a científico/a
+
+280 Coordinador del proyecto total, red o consorcio
+
+290 Coordinador/a gerente
+
+490 Investigador/a
+
+870 Técnico/a
+
+890 Titulado/a universitario/a en formación
+
+OTHERS Otros
+
+**CVN_PARTICIPATION_A**
+
+050 Investigador principal
+
+060 Miembro de equipo
+
+210 Colaborador
+
+260 Coordinador
+
+OTHERS Otros
+
+**CVN_PARTICIPATION_F**
+
+875 Coordinación
+
+876 Cooperación
+
+**CVN_DEDICATION_A**
+
+020 Tiempo completo
+
+030 Tiempo parcial
+
+**CVN_SUMMONS_A**
+
+670 Posdoctoral
+
+710 Predoctoral
+
+OTHERS Otros
+
+</div>
+
+</div>
+
+</div>
+
+<div id="footer" role="contentinfo">
+
+<div class="section footer-body">
+
+Document generated by Confluence on oct 27, 2025 08:38
+
+<div id="footer-logo">
+
+[Atlassian](https://www.atlassian.com/)
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 
 

@@ -796,7 +796,228 @@
 
   <h1>Urnproblem typevalidation</h1>
 
+<div id="page">
 
+<div id="main" class="aui-page-panel">
+
+<div id="main-header">
+
+<div id="breadcrumb-section">
+
+1.  [Hércules](index.html)
+2.  [Hércules](/)
+3.  [SGI. Sistema de gestión de investigación](//sgi-sistema-de-gestion-de-investigacion)
+4.  [Desarrollo y configuración](//sgi-sistema-de-gestion-de-investigacion/desarrollo-y-configuracion)
+5.  [Estándares de desarrollo](//sgi-sistema-de-gestion-de-investigacion/desarrollo-y-configuracion/estandares-de-desarrollo)
+6.  [Gestión de errores en el API Rest](//sgi-sistema-de-gestion-de-investigacion/desarrollo-y-configuracion/estandares-de-desarrollo/gestion-de-errores-en-el-api-rest)
+
+</div>
+
+# <span id="title-text"> Hércules : urn:problem-type:validation </span>
+
+</div>
+
+<div id="content" class="view">
+
+<div class="page-metadata">
+
+Created by <span class="author"> Usuario desconocido (ruben.suarez)</span>, last updated on may 26, 2021
+
+</div>
+
+<div id="main-content" class="wiki-content group">
+
+Este error se produce cuando el sistema recibe una petición cuyo contenido no cumple las reglas de validación del negocio.
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable" style="width: 60.7123%;">
+<colgroup>
+<col style="width: 7%" />
+<col style="width: 55%" />
+<col style="width: 36%" />
+</colgroup>
+<tbody>
+<tr class="header">
+<th class="confluenceTh">Campo</th>
+<th class="confluenceTh">Valor</th>
+<th class="confluenceTh">Observaciones</th>
+</tr>
+&#10;<tr class="odd">
+<th class="confluenceTh">type</th>
+<td class="confluenceTd">urn:problem-type:validation</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">title</th>
+<td class="confluenceTd"><div class="table-wrap">
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="odd">
+<th class="confluenceTh">Fichero i18n</th>
+<td class="confluenceTd">ProblemMessages.properties</td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Key</th>
+<td class="confluenceTd">org.springframework.http.HttpStatus.BAD_REQUEST.message</td>
+</tr>
+</tbody>
+</table>
+</div></td>
+<td class="confluenceTd"><div class="content-wrapper">
+<div class="confluence-information-macro confluence-information-macro-information" role="region" aria-label="Info">
+<p>Ej:</p>
+<span class="aui-icon aui-icon-small aui-iconfont-info-filled confluence-information-macro-icon" role="presentation"></span>
+<div class="confluence-information-macro-body">
+<p>Bad Request</p>
+</div>
+</div>
+</div></td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh">status</th>
+<td class="confluenceTd">400</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">detail</th>
+<td class="confluenceTd"><div class="table-wrap">
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="odd">
+<th class="confluenceTh">Fichero i18n</th>
+<td class="confluenceTd">ProblemMessages.properties</td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Key</th>
+<td class="confluenceTd">org.springframework.validation.BindingResult.message</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><br />
+</p>
+<p><br />
+</p></td>
+<td class="confluenceTd"><div class="content-wrapper">
+<div class="confluence-information-macro confluence-information-macro-information" role="region" aria-label="Info">
+<p>Ej:</p>
+<span class="aui-icon aui-icon-small aui-iconfont-info-filled confluence-information-macro-icon" role="presentation"></span>
+<div class="confluence-information-macro-body">
+<p>Validation failed</p>
+</div>
+</div>
+</div></td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh">instance</th>
+<td class="confluenceTd">urn:uuid:&lt;&lt;UUID&gt;&gt;</td>
+<td class="confluenceTd"><div class="content-wrapper">
+<div class="confluence-information-macro confluence-information-macro-information" role="region" aria-label="Info">
+<p>Ej:</p>
+<span class="aui-icon aui-icon-small aui-iconfont-info-filled confluence-information-macro-icon" role="presentation"></span>
+<div class="confluence-information-macro-body">
+urn:uuid:123e4567-e89b-12d3-a456-556642440000
+</div>
+</div>
+</div></td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">errors</th>
+<td class="confluenceTd"><p>Lista de errores.  Cada será del tipo:</p>
+<div class="table-wrap">
+<table class="wrapped confluenceTable">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<th class="confluenceTh">field</th>
+<td class="confluenceTd">Nombre del campo cuya validación ha fallado</td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">error</th>
+<td class="confluenceTd"><p>Mensaje de error específico.  <span style="color:var(--ds-text,#172b4d);">El mensaje concreto dependerá del campo y el tipo de problema.</span></p>
+<div class="table-wrap">
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="odd">
+<th class="confluenceTh">Fichero i18n</th>
+<td class="confluenceTd">ValidationMessages.properties</td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Key</th>
+<td class="confluenceTd">Variable, en función de la validación.  Normalmente FQN del validador + ".message"</td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh">Parámetros</th>
+<td class="confluenceTd">Variables en función de la validación.</td>
+</tr>
+</tbody>
+</table>
+</div></td>
+</tr>
+</tbody>
+</table>
+</div></td>
+<td class="confluenceTd"><div class="content-wrapper">
+<div class="confluence-information-macro confluence-information-macro-information" role="region" aria-label="Info">
+<p>Ej:</p>
+<span class="aui-icon aui-icon-small aui-iconfont-info-filled confluence-information-macro-icon" role="presentation"></span>
+<div class="confluence-information-macro-body">
+<div class="code panel pdl" style="border-width: 1px;">
+<div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: js; gutter: false"><code>[
+  {
+    &quot;field&quot;:&quot;nombre&quot;,
+    &quot;error&quot;:&quot;must not be empty&quot;
+  },
+  {
+    &quot;field&quot;:&quot;tipoAmbitoGeograficoId&quot;,
+    &quot;error&quot;:&quot;must not be null&quot;
+  },
+  {
+    &quot;field&quot;:&quot;tipoOrigenFuenteFinanciacionId&quot;,
+    &quot;error&quot;:&quot;must not be null&quot;
+  }
+]</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div id="footer" role="contentinfo">
+
+<div class="section footer-body">
+
+Document generated by Confluence on oct 27, 2025 08:54
+
+<div id="footer-logo">
+
+[Atlassian](https://www.atlassian.com/)
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 
 

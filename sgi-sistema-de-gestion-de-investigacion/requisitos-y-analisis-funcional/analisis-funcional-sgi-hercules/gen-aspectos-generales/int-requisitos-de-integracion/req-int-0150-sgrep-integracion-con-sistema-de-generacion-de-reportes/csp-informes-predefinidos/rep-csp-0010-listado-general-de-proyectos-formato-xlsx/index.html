@@ -796,7 +796,1352 @@
 
   <h1>Rep csp 0010 listado general de proyectos formato xlsx</h1>
 
+<div id="page">
 
+<div id="main" class="aui-page-panel">
+
+<div id="main-header">
+
+<div id="breadcrumb-section">
+
+1.  [Hércules](index.html)
+2.  [Hércules](/)
+3.  [SGI. Sistema de gestión de investigación](//sgi-sistema-de-gestion-de-investigacion)
+4.  [Requisitos y análisis funcional](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional)
+5.  [Análisis Funcional SGI - Hércules](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules)
+6.  [GEN - Aspectos generales](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales)
+7.  [INT - Requisitos de integración](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion)
+8.  [REQ-INT-0150-SGREP - Integración con Sistema de Generación de Reportes](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0150-sgrep-integracion-con-sistema-de-generacion-de-reportes)
+9.  [CSP - Informes predefinidos](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0150-sgrep-integracion-con-sistema-de-generacion-de-reportes/csp-informes-predefinidos)
+
+</div>
+
+# <span id="title-text"> Hércules : REP-CSP-0010 - Listado general de proyectos - Formato xlsx </span>
+
+</div>
+
+<div id="content" class="view">
+
+<div class="page-metadata">
+
+Created by <span class="author"> Usuario desconocido (covadonga.garcia)</span>, last updated on oct 07, 2022
+
+</div>
+
+<div id="main-content" class="wiki-content group">
+
+<div class="contentLayout2">
+
+<div class="columnLayout single" layout="single">
+
+<div class="cell normal" data-type="normal">
+
+<div class="innerCell">
+
+<div class="plugin-tabmeta-details">
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="odd">
+<th class="confluenceTh">Cod. REP</th>
+<td class="confluenceTd"><p><strong>REP-CSP-0010 - Listado general de proyectos - Formato xlsx</strong></p></td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Ver. Objetivo</th>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh">Ver. REP</th>
+<td class="confluenceTd">1.0.0</td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Estado</th>
+<td class="confluenceTd"><div class="content-wrapper">
+<span class="status-macro aui-lozenge conf-macro output-inline">PENDIENTE</span>
+</div></td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh">Fec. Aprobación</th>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Épica, historia</th>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh">Frecuencia</th>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+## Diseño Informe 
+
+<span style="letter-spacing: 0.0px;">Se debe de generar un informe en formato xlsx que reciba como parámetro de entrada la lista de bloques de datos a incluir. A continuación se indica el mapeo de los nombres de columnas del fichero xlsx de salida con la tabla y campo del SGI desde el que deben ser recuperadas. Se indica también el bloque de datos al que pertenece cada columna. Las columnas que disponen de un bloque de datos se mostrarán en el informe solo si el bloque de datos está incluido en la lista recibida como parámetro de entrada. Las columnas que no disponen de un bloque de datos se incluirán siempre en el informe.</span>
+
+Los nombres de las columnas en el fichero xlsx que formen parte de un bloque que se repita, deberán llevar en su nombre un número cardinal representativo del número de repetición, de forma que se permita la distinción del título de la columna. En la siguiente tabla se identifican también los bloques de datos susceptibles de repetirse. El fichero resultante contendrá las columnas necesarias, sobre cada bloque de repetición, de acuerdo al proyecto que más elementos contenga para ese bloque. Para los proyectos que no contengan tantos elementos sobre cada bloque como marque el máximo, se mostrarán las columnas sin contenido.
+
+Ejemplo: <a href="attachments/597853632/597868721.xls" data-linked-resource-id="597868721" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="proyectos_with_columns_repeated.xls" data-nice-type="Excel Spreadsheet" data-linked-resource-content-type="application/vnd.ms-excel" data-linked-resource-container-id="597853632" data-linked-resource-container-version="27">proyectos_with_columns_repeated.xls</a>
+
+
+
+<div class="table-wrap">
+
+<table class="wrapped relative-table confluenceTable" style="width: 76.2618%;">
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 29%" />
+<col style="width: 46%" />
+<col style="width: 10%" />
+</colgroup>
+<tbody>
+<tr class="header">
+<th class="confluenceTh">Bloque de datos</th>
+<th class="confluenceTh">Columna informe</th>
+<th class="confluenceTh">Campo SGI</th>
+<th class="confluenceTh">Repetición</th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Identificador SGI</td>
+<td class="confluenceTd">campo "id" de la tabla "proyecto"</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Código identificación SGE X</td>
+<td class="confluenceTd">campo "proyecto SGE ref" de la tabla "proyecto proyecto SGE" </td>
+<td class="confluenceTd">Sí</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Título</td>
+<td class="confluenceTd">campo "título" de la tabla "proyecto"</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Acrónimo</td>
+<td class="confluenceTd">campo "acrónimo" de la tabla "proyecto"</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Referencia en entidad convocante</td>
+<td class="confluenceTd">campo "código externo" de la tabla "proyecto"</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Estado</td>
+<td class="confluenceTd">Valor del enumerado "tipo estado proyecto" para el registro de la tabla "estado proyecto" referenciado desde el campo "estado" de la tabla "proyecto"</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Fecha estado</td>
+<td class="confluenceTd"><p>Campo "fecha" para el registro de la tabla "estado proyecto" referenciado desde el campo "estado" de la tabla "proyecto"</p></td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Ámbito geográfico</td>
+<td class="confluenceTd">Campo "nombre" de la tabla "tipo ámbito geográfico" referenciado desde el campo "ámbito geográfico" de la tabla "proyecto"</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Unidad de gestión</td>
+<td class="confluenceTd">Campo "nombre" de la tabla "unidad gestión" referenciado desde el campo "unidad gestión" de la tabla "proyecto"</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Modelo de ejecución</td>
+<td class="confluenceTd">Campo "nombre" de la tabla "modelo ejecución" referenciado desde el campo "modelo ejecución" de la tabla "proyecto"</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Finalidad</td>
+<td class="confluenceTd"><p>Campo "nombre" de la tabla "finalidad" referenciado desde el campo "finalidad" de la tabla "proyecto"</p></td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Fecha inicio</td>
+<td class="confluenceTd"><p>Campo "fecha inicio" de la tabla "proyecto"</p></td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Fecha fin</td>
+<td class="confluenceTd">Campo "fecha fin" de la tabla "proyecto"</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Fecha fin definitiva</td>
+<td class="confluenceTd">Campo "fecha fin definitiva" de la tabla "proyecto"</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Confidencial</td>
+<td class="confluenceTd">Campo "confidencial" de la tabla "proyecto"</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Clasificación producción científica/CVN</td>
+<td class="confluenceTd">Campo "clasificación CVN" de la tabla "proyecto"</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Proyecto coordinado</td>
+<td class="confluenceTd">Campo "coordinado" de la tabla "proyecto"</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Coordinador externo</td>
+<td class="confluenceTd">Campo "coordinador externo" de la tabla "proyecto"</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Proyecto colaborativo</td>
+<td class="confluenceTd">Campo "colaborativo" de la tabla "proyecto"</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Porcentaje IVA</td>
+<td class="confluenceTd">Campo "iva" de la tabla "proyecto iva" referenciado desde el campo "iva" de la tabla proyecto</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Causa exención IVA</td>
+<td class="confluenceTd">Campo "causa exención" de la tabla "proyecto"</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Área temática</td>
+<td class="confluenceTd">Campo "nombre" de la tabla "área temática" para el registro referenciado desde el campo "área temática" de la tabla "contexto proyecto"</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">Áreas conocimiento</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Sí</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Área conocimiento X</td>
+<td class="confluenceTd">Campo "nombre"  recuperado a través de <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0030-sgo-integracion-con-sistema-de-gestion-de-la-estructura-organica/req-int-0030-sgo-0011-consultar-area-de-conocimiento">REQ-INT-0030-SGO-0011 - Consultar área de conocimiento</a> para la referencia indicada por el campo "código área ref" en la tabla "proyecto área"</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">Clasificaciones</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Sí</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Clasificación X</td>
+<td class="confluenceTd"><p>Se deberán recuperar todas las clasificaciones con las que esté relacionado el proyecto (tabla "proyecto clasificación"). Se mostrará en una primera columna el nombre de la clasificación y a continuación tantas columnas como códigos dentro de esta clasificación con los que esté relacionado el proyecto.</p>
+<p>El nombre de la clasificación se obtendrá como sigue. Se corresponde con el campo "nombre" recuperado a través de <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0030-sgo-integracion-con-sistema-de-gestion-de-la-estructura-organica/req-int-0030-sgo-0031-consultar-clasificacion">REQ-INT-0030-SGO-0031 - Consultar clasificación</a> para el nodo raíz del árbol de clasificación al que pertenece el <span> "código clasificación ref" referenciado en la tabla "proyecto clasificación". El nodo raíz se obtendrá ascendiendo a través del campo "padre" obtenido con <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0030-sgo-integracion-con-sistema-de-gestion-de-la-estructura-organica/req-int-0030-sgo-0031-consultar-clasificacion">REQ-INT-0030-SGO-0031 - Consultar clasificación</a> hasta llegar al elemento para el que el campo "padre" toma el valor "null" (se dispone de <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0030-sgo-integracion-con-sistema-de-gestion-de-la-estructura-organica/req-int-0030-sgo-0030-listar-clasificaciones">REQ-INT-0030-SGO-0030 - Listar clasificaciones</a> para obtener el listado completo de una clasificación)</span></p></td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Código Y</td>
+<td class="confluenceTd"><p><span style="letter-spacing: 0.0px;">Campo "nombre" recuperado a través de <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0030-sgo-integracion-con-sistema-de-gestion-de-la-estructura-organica/req-int-0030-sgo-0031-consultar-clasificacion">REQ-INT-0030-SGO-0031 - Consultar clasificación</a> para el </span><span> "código clasificación ref" de la tabla "proyecto clasificación".</span></p></td>
+<td class="confluenceTd">Sí. Repetición dentro de clasificación</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">Relaciones</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Sí</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Tipo relación X</td>
+<td class="confluenceTd">Se recuperarán de la tabla "relación" los registros para los que los campos "entidad origen ref" o "entidad destino ref" sea el proyecto que está siendo listado. Si la referencia al proyecto se encuentra en el campo "entidad origen ref" se mostrará en esta columna el valor del campo "tipo entidad destino" y si la referencia del proyecto se encuentra sobre el campo "entidad destino ref" se mostrará en esta columna el valor del campo "tipo entidad origen".</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Relación X: Título</td>
+<td class="confluenceTd"><p>Si la referencia al proyecto se encuentra en el campo "entidad origen ref", en esta columna se mostrará:</p>
+<ul>
+<li>Si "tipo entidad destino" es igual "proyecto": se mostrará el valor del campo "título" de la tabla "proyecto" para el proyecto referenciado en "entidad destino ref".</li>
+<li>Si "tipo entidad destino" es igual "convocatoria": se mostrará el valor del campo "título" de la tabla "convocatoria" para el proyecto referenciado en "entidad destino ref".</li>
+<li>Si "tipo entidad destino" es igual "invención": se mostrará el valor del campo "título" de la tabla "invención" para el proyecto referenciado en "entidad destino ref".</li>
+</ul>
+<p><span style="letter-spacing: 0.0px;">Si la referencia al proyecto se encuentra en el campo "entidad destino ref", en esta columna se mostrará:</span></p>
+<ul>
+<li>Si "tipo entidad origen" es igual "proyecto": se mostrará el valor del campo "título" de la tabla "proyecto" para el proyecto referenciado en "entidad origen ref".</li>
+<li>Si "tipo entidad destino" es igual "convocatoria": se mostrará el valor del campo "título" de la tabla "convocatoria" para el proyecto referenciado en "entidad origen ref".</li>
+<li>Si "tipo entidad destino" es igual "invención": se mostrará el valor del campo "título" de la tabla "invención" para el proyecto referenciado en "entidad origen ref".</li>
+</ul></td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">Entidad gestora</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">No</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Entidad gestora: Nombre</td>
+<td class="confluenceTd">Campo "nombre" recuperado a través de <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0015-sgemp-integracion-con-sistema-de-gestion-de-empresas/req-int-0015-sgemp-0030-consultar-datos-generales-de-empresa">REQ-INT-0015-SGEMP-0030 - Consultar datos generales de empresa</a> para la entidad indicada por el campo "entidad ref" de la tabla "proyecto entidad gestora"</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Entidad gestora: Número identificación</td>
+<td class="confluenceTd">Campo "número de identificación fiscal" recuperado a través de <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0015-sgemp-integracion-con-sistema-de-gestion-de-empresas/req-int-0015-sgemp-0030-consultar-datos-generales-de-empresa">REQ-INT-0015-SGEMP-0030 - Consultar datos generales de empresa</a> para la entidad indicada por el campo "entidad ref" de la tabla "proyecto entidad gestora"</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">Entidad convocante</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Sí</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Entidad convocante X: Nombre</td>
+<td class="confluenceTd">Campo "nombre" recuperado a través de <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0015-sgemp-integracion-con-sistema-de-gestion-de-empresas/req-int-0015-sgemp-0030-consultar-datos-generales-de-empresa">REQ-INT-0015-SGEMP-0030 - Consultar datos generales de empresa</a> para la entidad indicada por el campo "entidad ref" de la tabla "proyecto entidad convocante".</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Entidad convocante X: Número  identificación</td>
+<td class="confluenceTd">Campo "número de identificación fiscal" recuperado a través de <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0015-sgemp-integracion-con-sistema-de-gestion-de-empresas/req-int-0015-sgemp-0030-consultar-datos-generales-de-empresa">REQ-INT-0015-SGEMP-0030 - Consultar datos generales de empresa</a> para la entidad indicada por el campo "entidad ref" de la tabla "proyecto entidad convocante".</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Entidad convocante X: Plan</td>
+<td class="confluenceTd"><p>Si cualquiera de los campos  "programa" o "programa convocatoria" (se tomará éste si ambos están informados) de la tabla "proyecto entidad convocante" están informados, se mostrará el campo "nombre" de la tabla "programa" del nodo raíz para el elemento indicado por el campo "programa" / "programa convocatoria". Para alcanzar el nodo raíz se "ascenderá" en la tabla "programa" desde el elemento de partida ("programa" / "programa convocatoria"), a través del campo "padre" hasta alcanzar el elemento cuyo campo "padre" tome valor "null". Éste será el nombre del plan a mostrar en esta columna.</p></td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Plan entidad convocante X: Programa convocatoria </td>
+<td class="confluenceTd">Se mostrará el valor del campo "nombre" de la tabla "programa" para el elemento referenciado desde el campo "programa convocatoria" de la tabla "proyecto entidad convocante".</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Plan entidad convocante X: Modalidad proyecto</td>
+<td class="confluenceTd"><p>Se mostrará el valor del campo "nombre" de la tabla "programa" para el elemento referenciado desde el campo "programa<span style="letter-spacing: 0.0px;">" de la tabla "proyecto entidad convocante".</span></p></td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">Entidad financiadora</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"> Sí</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Entidad financiadora X: Nombre </td>
+<td class="confluenceTd">Campo "nombre" recuperado a través de <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0015-sgemp-integracion-con-sistema-de-gestion-de-empresas/req-int-0015-sgemp-0030-consultar-datos-generales-de-empresa">REQ-INT-0015-SGEMP-0030 - Consultar datos generales de empresa</a> para la entidad indicada por el campo "entidad ref" de la tabla "proyecto entidad financiadora".</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Entidad financiadora X: Número identificación</td>
+<td class="confluenceTd">Campo "número de identificación fiscal" recuperado a través <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0015-sgemp-integracion-con-sistema-de-gestion-de-empresas/req-int-0015-sgemp-0030-consultar-datos-generales-de-empresa">REQ-INT-0015-SGEMP-0030 - Consultar datos generales de empresa</a> para la entidad indicada por el campo "entidad ref" de la tabla "proyecto entidad financiadora".</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Entidad financiadora X: Fuente financiación </td>
+<td class="confluenceTd">Campo "nombre" de la tabla "fuente financiación" para el elemento referenciado por el campo "fuente financiación" de la tabla "proyecto entidad financiadora".</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Fuente financiación X: Ámbito geográfico</td>
+<td class="confluenceTd">Campo "nombre" de la tabla "tipo ámbito geográfico" para la fuente de financiación (tabla "fuente financiación") "referenciada por el campo fuente financiación" de la tabla "proyecto entidad financiadora".</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Entidad financiadora X: Tipo financiación</td>
+<td class="confluenceTd">Campo "nombre" de la tabla "tipo financiación" para el elemento referenciado por el campo "tipo financiación" de la tabla "proyecto entidad financiadora".</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Entidad financiadora X: Importe financiación</td>
+<td class="confluenceTd">Campo "importe financiación" de la tabla "proyecto entidad financiadora".</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Entidad financiadora X: Porcentaje financiación </td>
+<td class="confluenceTd">Campo "porcentaje financiación" de la tabla "proyecto entidad financiadora".</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Entidad financiadora X: Ajena convocatoria</td>
+<td class="confluenceTd">Valor sí/no. Campo "ajena" de la tabla "proyecto entidad financiadora".</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">Equipo</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Sí</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Equipo - Miembro X: Nombre</td>
+<td class="confluenceTd">Campo "nombre" recuperado a través de <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0020-sgp-integracion-con-sistema-de-gestion-de-personas/req-int-0020-sgp-0030-consultar-datos-generales-de-persona">REQ-INT-0020-SGP-0030 - Consultar datos generales de persona</a> para la referenciada indicada en el campo "persona ref" de la tabla "proyecto equipo".</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Equipo - Miembro X: Apellidos</td>
+<td class="confluenceTd">Campo "apellidos" recuperado a través de <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0020-sgp-integracion-con-sistema-de-gestion-de-personas/req-int-0020-sgp-0030-consultar-datos-generales-de-persona">REQ-INT-0020-SGP-0030 - Consultar datos generales de persona</a> para la referenciada indicada en el campo "persona ref" de la tabla "proyecto equipo".</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Equipo - Miembro X: Email</td>
+<td class="confluenceTd">Campo "email" con el indicador "principal" a "true" recuperado a través de <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0020-sgp-integracion-con-sistema-de-gestion-de-personas/req-int-0020-sgp-0030-consultar-datos-generales-de-persona">REQ-INT-0020-SGP-0030 - Consultar datos generales de persona</a> para la referenciada indicada en el campo "persona ref" de la tabla "proyecto equipo".</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Equipo - Miembro X: Rol</td>
+<td class="confluenceTd">Campo "nombre" de la tabla "rol proyecto" para la referencia establecida por el campo "rol proyecto" de la tabla "proyecto equipo".</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Equipo - Miembro X: Fecha inicio participación</td>
+<td class="confluenceTd">Campo "fecha inicio" de la tabla "proyecto equipo".</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Equipo - Miembro X: Fecha fin participación</td>
+<td class="confluenceTd">Campo "fecha fin" de la tabla "proyecto equipo".</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">Responsable económico</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Sí</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Responsable económico: Nombre</td>
+<td class="confluenceTd">Campo "nombre" recuperado a través de <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0020-sgp-integracion-con-sistema-de-gestion-de-personas/req-int-0020-sgp-0030-consultar-datos-generales-de-persona">REQ-INT-0020-SGP-0030 - Consultar datos generales de persona</a> para la referenciada indicada en el campo "persona ref" de la tabla "proyecto responsable económico".</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Responsable económico: Apellidos</td>
+<td class="confluenceTd">Campo "apellidos" recuperado a través de <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0020-sgp-integracion-con-sistema-de-gestion-de-personas/req-int-0020-sgp-0030-consultar-datos-generales-de-persona">REQ-INT-0020-SGP-0030 - Consultar datos generales de persona</a> para la referenciada indicada en el campo "persona ref" de la tabla "proyecto responsable económico".</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Responsable económico: Email</td>
+<td class="confluenceTd">Campo "email" con el indicador "principal" a "true" recuperado a través de <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0020-sgp-integracion-con-sistema-de-gestion-de-personas/req-int-0020-sgp-0030-consultar-datos-generales-de-persona">REQ-INT-0020-SGP-0030 - Consultar datos generales de persona</a> para la referenciada indicada en el campo "persona ref" de la tabla "proyecto responsable económico".</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Responsable económico: Fecha inicio</td>
+<td class="confluenceTd">Campo "fecha inicio" de la tabla "proyecto responsable económico".</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Responsable económico: Fecha fin</td>
+<td class="confluenceTd">Campo "fecha fin" de la tabla "proyecto responsable económico".</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">Socios</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Sí</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Socio X: Nombre</td>
+<td class="confluenceTd">Campo "nombre" recuperado a través de <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0015-sgemp-integracion-con-sistema-de-gestion-de-empresas/req-int-0015-sgemp-0030-consultar-datos-generales-de-empresa">REQ-INT-0015-SGEMP-0030 - Consultar datos generales de empresa</a> para la referencia establecida por el campo "entidad ref" de la tabla "proyecto socio".</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Socio X: Número identificación</td>
+<td class="confluenceTd">Campo "número identificación" recuperado a través de <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0015-sgemp-integracion-con-sistema-de-gestion-de-empresas/req-int-0015-sgemp-0030-consultar-datos-generales-de-empresa">REQ-INT-0015-SGEMP-0030 - Consultar datos generales de empresa</a> para la referencia establecida por el campo "entidad ref" de la tabla "proyecto socio".</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Socio X: Rol</td>
+<td class="confluenceTd">Campo "nombre" de la tabla "rol socio" para la referencia establecida desde el campo "rol socio" de la tabla "proyecto socio".</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Socio X: Núm. investigadores</td>
+<td class="confluenceTd">Campo "número investigadores" de la tabla "proyecto socio"</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Socio X: Fecha inicio</td>
+<td class="confluenceTd">Campo "fecha inicio" de la tabla "proyecto socio"</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Socio X: Fecha fin</td>
+<td class="confluenceTd">Campo "fecha fin" de la tabla "proyecto socio"</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Socio X: Importe presupuesto</td>
+<td class="confluenceTd">Campo "importe presupuesto" de la tabla "proyecto socio"</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Socio X: Importe concedido</td>
+<td class="confluenceTd">Campo "importe concedido" de la tabla "proyecto socio"</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">Prórrogas</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Sí</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Prórroga X: Número </td>
+<td class="confluenceTd">Campo "número prórroga" de la tabla "proyecto prórroga"</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Prórroga X: Tipo</td>
+<td class="confluenceTd">Valor enumerado "tipo prórroga" asociado al campo "tipo prórroga" de la taba "proyecto prórroga"</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Prórroga X: Fecha concesión</td>
+<td class="confluenceTd">Campo "fecha concesión" de la tabla "proyecto prórroga"</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Prórroga X: Nueva fecha fin</td>
+<td class="confluenceTd">Campo "fecha fin" de la tabla "proyecto prórroga"</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Prórroga X: Importe</td>
+<td class="confluenceTd">Campo "importe" de la tabla "proyecto prórroga"</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">Convocatoria</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">No</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Título</td>
+<td class="confluenceTd">Campo "título" de la tabla "convocatoria" para la referencia establecida desde el campo "convocatoria" de la tabla "proyecto".</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Identificación </td>
+<td class="confluenceTd">Campo "código" de la tabla "convocatoria" para la referencia establecida desde el campo "convocatoria" de la tabla "proyecto".</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Fecha publicación</td>
+<td class="confluenceTd">Campo "fecha publicación" de la tabla "convocatoria" para la referencia establecida desde el campo "convocatoria" de la tabla "proyecto".</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Fecha provisional</td>
+<td class="confluenceTd">Campo "fecha provisional" de la tabla "convocatoria" para la referencia establecida desde el campo "convocatoria" de la tabla "proyecto".</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Fecha concesión</td>
+<td class="confluenceTd">Campo "fecha concesión" de la tabla "convocatoria" para la referencia establecida desde el campo "convocatoria" de la tabla "proyecto".</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Régimen concurrencia</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">Solicitud</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">No</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Código registro interno</td>
+<td class="confluenceTd">Campo "código registro interno" de la tabla "solicitud"</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Título</td>
+<td class="confluenceTd">Campo "título" de la tabla "solicitud"</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Código entidad convocante</td>
+<td class="confluenceTd">Campo "código externo" de la tabla "solicitud"</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Estado</td>
+<td class="confluenceTd">Campo "estado" de la tabla "estado solicitud" para el registro referenciado por el campo "estado" de la tabla "solicitud".</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Fecha estado</td>
+<td class="confluenceTd">Campo "fecha estado" de la tabla "estado solicitud" para el registro referenciado por el campo "estado" de la tabla "solicitud".</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">Seguimiento científico</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Sí</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Seg. científico - periodo X: Número</td>
+<td class="confluenceTd">Campo "número periodo" de la tabla "proyecto periodo seguimiento".</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Seg. científico - periodo X: Tipo</td>
+<td class="confluenceTd">Valor correspondiente dentro del enumerado "Tipo seguimiento"  al campo "tipo seguimiento" de la tabla "proyecto periodo seguimiento".</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Seg. científico - periodo X: Fecha inicio ejecución</td>
+<td class="confluenceTd">Campo "fecha inicio" de la tabla "proyecto periodo seguimiento".</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Seg. científico - periodo X: Fecha fin ejecución</td>
+<td class="confluenceTd">Campo "fecha fin" de la tabla "proyecto periodo seguimiento".</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Seg. científico - periodo X: Fecha inicio presentación</td>
+<td class="confluenceTd">Campo "fecha inicio presentación" de la tabla "proyecto periodo seguimiento".</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Seg. científico - periodo X: Fecha fin presentación</td>
+<td class="confluenceTd">Campo "fecha fin presentación" de la tabla "proyecto periodo seguimiento".</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">Elegibilidad</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Se recuperarán en primer lugar los conceptos de gasto permitidos de la tabla "proyecto concepto gasto", que serán aquellos que estén marcados con el campo "permitido" a "true". Para cada concepto de gasto se deberán recuperar los códigos económicos relacionados, obtenidos de la tabla "proyecto concepto gasto código económico". Tras listar todos los conceptos de gasto permitidos, se recuperarán los conceptos de gasto no permitidos (campo "permitido" a "false"). Modelo lógico "Proyecto - Configuración económica".</td>
+<td class="confluenceTd">Sí</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Concepto gasto permitido X: Nombre</td>
+<td class="confluenceTd">Campo "nombre" de la tabla "concepto gasto" correspondiente al campo "concepto gasto" de la tabla "proyecto concepto gasto", debiendo ser un concepto marcado con el campo "permitido" a "true".</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Concepto gasto permitido X: Importe máximo</td>
+<td class="confluenceTd">Campo "importe máximo" de la tabla "proyecto concepto gasto".</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Concepto gasto permitido X: Fecha inicio</td>
+<td class="confluenceTd">Campo "fecha inicio" de la tabla "proyecto concepto gasto".</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Concepto gasto permitido X: Fecha fin</td>
+<td class="confluenceTd">Campo "fecha fin" de la tabla "proyecto concepto gasto".</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Concepto gasto permitido X: Código económico Y</td>
+<td class="confluenceTd"><p><span style="letter-spacing: 0.0px;">Se mostrará el identificador concatenado con el nombre del código económico recuperados a través de </span><a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0010-sge-integracion-con-sistema-de-gestion-economica/req-int-0010-sge-0072-detalle-codigo-economico-gasto">REQ-INT-0010-SGE-0072 - Detalle código económico gasto</a><span style="letter-spacing: 0.0px;"> para el "código económico ref" de la tabla "proyecto concepto gasto código económico".</span></p></td>
+<td class="confluenceTd">Sí. Repetición dentro de concepto de gasto permitido</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Concepto gasto no permitido X: Nombre</td>
+<td class="confluenceTd">Campo "nombre" de la tabla "concepto gasto" correspondiente al campo "concepto gasto" de la tabla "proyecto concepto gasto", debiendo ser un concepto marcado con el campo "permitido" a "false".</td>
+<td class="confluenceTd">Sí</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Concepto gasto no permitido X: Importe máximo</td>
+<td class="confluenceTd">Campo "importe máximo" de la tabla "proyecto concepto gasto".</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Concepto gasto no permitido X: Fecha inicio</td>
+<td class="confluenceTd">Campo "fecha inicio" de la tabla "proyecto concepto gasto".</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Concepto gasto no permitido X: Fecha fin</td>
+<td class="confluenceTd">Campo "fecha fin" de la tabla "proyecto concepto gasto".</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Concepto gasto no permitido X: Código económico Y</td>
+<td class="confluenceTd"><span>Se mostrará el identificador concatenado con el nombre del código económico recuperados a través de <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0010-sge-integracion-con-sistema-de-gestion-economica/req-int-0010-sge-0072-detalle-codigo-economico-gasto">REQ-INT-0010-SGE-0072 - Detalle código económico gasto</a></span><span> para el "código económico ref" de la tabla "proyecto concepto gasto código económico".</span></td>
+<td class="confluenceTd">Sí. Repetición dentro de concepto de gasto no permitido</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">Partidas presupuestarias</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Se recuperarán todos los registros de la tabla "proyecto partida" para el proyecto listado. Modelo lógico "Proyecto - Configuración económica".</td>
+<td class="confluenceTd">Sí</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Partida X</td>
+<td class="confluenceTd">Se mostrará el campo "código" de la tabla "proyecto partida".</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Tipo partida X</td>
+<td class="confluenceTd">Se mostrará el valor correspondiente sobre el enumerado "tipo partida" del campo "tipo partida" de la tabla "proyecto partida".</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">Presupuesto</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Si están informados los campos de introducción manual se mostrarán éstos (campos directamente incluidos en la tabla "proyecto").  En caso contrario, se deberá realizar el el cálculo obtenido de presupuesto (tabla  "anualidad gasto", modelo lógico "Proyecto - Configuración económica".).</td>
+<td class="confluenceTd">No</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Importe presupuesto Universidad</td>
+<td class="confluenceTd"><p>Si alguno de los campos <span style="color:var(--ds-text,#172b4d);">"importe presupuesto",  "importe presupuesto costes indirectos", "importe concedido", "importe concedido costes indirectos", "importe presupuesto socios", "importe concedido socios", "total importe presupuesto", "total importe socios" de la tabla "proyecto" están informados, se mostrará en esta celda el valor del </span><span style="letter-spacing: 0.0px;"> campo </span><span style="color:var(--ds-text,#172b4d);">"importe presupuesto" de la tabla "proyecto". </span></p>
+<p><span style="color:var(--ds-text,#172b4d);">Si no, se deberá realizar el cálculo como sigue: </span><span style="letter-spacing: 0.0px;">Suma del campo "importe presupuesto" de todos los registros de la tabla "anualidad gasto" del proyecto cuyo campo "concepto gasto" figure en la tabla "concepto gasto" con el campo "costes indirectos" a "false" (sin distinguir ni por concepto de gasto, ni por anualidad ni por proyecto SGE).  </span></p></td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Importe presupuesto Universidad costes indirectos</td>
+<td class="confluenceTd"><p>Si alguno de los campos <span style="color:var(--ds-text,#172b4d);">"importe presupuesto",  "importe presupuesto costes indirectos", "importe concedido", "importe concedido costes indirectos", "importe presupuesto socios", "importe concedido socios", "total importe presupuesto", "total importe socios" de la tabla "proyecto" están informados, se mostrará en esta celda el valor del </span><span> campo </span><span style="color:var(--ds-text,#172b4d);">"importe presupuesto costes indirectos" de la tabla "proyecto". </span></p>
+<p><span style="color:var(--ds-text,#172b4d);"><span>Si no, se deberá realizar el cálculo como sigue: Suma del campo "importe presupuesto" de todos los registros de la tabla "anualidad gasto" del proyecto cuyo campo "concepto gasto" figure en la tabla "concepto gasto" con el campo "costes indirectos" a "true" (sin distinguir ni por concepto de gasto, ni por anualidad ni por proyecto SGE). </span></span></p></td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Total importe presupuesto Universidad</td>
+<td class="confluenceTd"><p>Si alguno de los campos <span style="color:var(--ds-text,#172b4d);">"importe presupuesto",  "importe presupuesto costes indirectos", "importe concedido", "importe concedido costes indirectos", "importe presupuesto socios", "importe concedido socios", "total importe presupuesto", "total importe socios" de la tabla "proyecto" están informados, se mostrará en esta celda el valor resultante de sumar los campos "importe presupuesto" e "importe presupuesto costes indirectos" de la tabla proyectos. </span></p>
+<p><span style="color:var(--ds-text,#172b4d);"><span>Si no, se deberá realizar el cálculo como sigue: </span></span><span style="letter-spacing: 0.0px;"> suma del campo "importe presupuesto" de todos los registros de la tabla "anualidad gasto" (sin distinguir ni por concepto de gasto, ni por anualidad ni por proyecto SGE).</span></p></td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Importe concedido Universidad</td>
+<td class="confluenceTd"><p>Si alguno de los campos <span style="color:var(--ds-text,#172b4d);">"importe presupuesto",  "importe presupuesto costes indirectos", "importe concedido", "importe concedido costes indirectos", "importe presupuesto socios", "importe concedido socios", "total importe presupuesto", "total importe socios" de la tabla "proyecto" están informados, se mostrará en esta celda el valor del </span><span> campo </span><span style="color:var(--ds-text,#172b4d);">"importe concedido" de la tabla "proyecto". </span></p>
+<p><span style="color:var(--ds-text,#172b4d);">Si no, se deberá realizar el cálculo como sigue: </span><span>Suma del campo "importe concedido" de todos los registros de la tabla "anualidad gasto" del proyecto cuyo campo "concepto gasto" figure en la tabla "concepto gasto" con el campo "costes indirectos" a "false" (sin distinguir ni por concepto de gasto, ni por anualidad ni por proyecto SGE).  </span></p></td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Importe concedido Universidad costes indirectos</td>
+<td class="confluenceTd"><p>Si alguno de los campos <span style="color:var(--ds-text,#172b4d);">"importe presupuesto",  "importe presupuesto costes indirectos", "importe concedido", "importe concedido costes indirectos", "importe presupuesto socios", "importe concedido socios", "total importe presupuesto", "total importe socios" de la tabla "proyecto" están informados, se mostrará en esta celda el valor del </span><span> campo </span><span style="color:var(--ds-text,#172b4d);">"importe concedido costes indirectos" de la tabla "proyecto". </span></p>
+<p><span style="color:var(--ds-text,#172b4d);"><span>Si no, se deberá realizar el cálculo como sigue: Suma del campo "importe concedido" de todos los registros de la tabla "anualidad gasto" del proyecto cuyo campo "concepto gasto" figure en la tabla "concepto gasto" con el campo "costes indirectos" a "true" (sin distinguir ni por concepto de gasto, ni por anualidad ni por proyecto SGE). </span></span></p></td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Total importe concedido Universidad</td>
+<td class="confluenceTd"><p>Si alguno de los campos <span style="color:var(--ds-text,#172b4d);">"importe presupuesto",  "importe presupuesto costes indirectos", "importe concedido", "importe concedido costes indirectos", "importe presupuesto socios", "importe concedido socios", "total importe presupuesto", "total importe socios" de la tabla "proyecto" están informados, se mostrará en esta celda el valor resultante de sumar los campos "importe concedido" e "importe concedido costes indirectos" de la tabla proyectos. </span></p>
+<p><span style="color:var(--ds-text,#172b4d);"><span>Si no, se deberá realizar el cálculo como sigue: </span></span><span> suma del campo "importe concedido" de todos los registros de la tabla "anualidad gasto" (sin distinguir ni por concepto de gasto, ni por anualidad ni por proyecto SGE).</span></p></td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Importe presupuesto socios</td>
+<td class="confluenceTd"><p>Si alguno de los campos <span style="color:var(--ds-text,#172b4d);">"importe presupuesto",  "importe presupuesto costes indirectos", "importe concedido", "importe concedido costes indirectos", "importe presupuesto socios", "importe concedido socios", "total importe presupuesto", "total importe socios" de la tabla "proyecto" están informados, se mostrará en esta celda el valor del campo "importe presupuesto socios" de la tabla "proyecto".</span></p>
+<p><span style="color:var(--ds-text,#172b4d);"><span>Si no, se deberá realizar el cálculo como sigue: </span> suma del campo "importe presupuesto" de todos los registros de la tabla "proyecto socio". </span></p></td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Importe concedido socios</td>
+<td class="confluenceTd"><p>Si alguno de los campos <span style="color:var(--ds-text,#172b4d);">"importe presupuesto",  "importe presupuesto costes indirectos", "importe concedido", "importe concedido costes indirectos", "importe presupuesto socios", "importe concedido socios", "total importe presupuesto", "total importe socios" de la tabla "proyecto" están informados, se mostrará en esta celda el valor del campo "importe concedido socios" de la tabla "proyecto".</span></p>
+<p><span style="color:var(--ds-text,#172b4d);"><span>Si no, se deberá realizar el cálculo como sigue: </span> suma del campo "importe concedido" de todos los registros de la tabla "proyecto socio". </span></p></td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Total importe presupuesto</td>
+<td class="confluenceTd"><p><span style="color:var(--ds-text,#172b4d);">Si alguno de los campos "importe presupuesto",  "importe presupuesto costes indirectos", "importe concedido", "importe concedido costes indirectos", "importe presupuesto socios", "importe concedido socios", "total importe presupuesto", "total importe socios" de la tabla "proyecto" están informados, se mostrará en esta celda el valor del campo "total importe presupuesto" de la tabla "proyecto".</span></p>
+<p><span style="color:var(--ds-text,#172b4d);">Si no, se deberá realizar el cálculo como sigue: <span> </span>suma del campo "importe presupuesto" de todos los registros de la tabla "anualidad gasto" (sin distinguir ni por anualidad ni por proyecto SGE) y del campo "importe presupuesto" de todos los registros de la tabla "proyecto socio".</span></p></td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Total importe concedido</td>
+<td class="confluenceTd"><p><span style="color:var(--ds-text,#172b4d);">Si alguno de los campos "importe presupuesto",  "importe presupuesto costes indirectos", "importe concedido", "importe concedido costes indirectos", "importe presupuesto socios", "importe concedido socios", "total importe presupuesto", "total importe socios" de la tabla "proyecto" están informados, se mostrará en esta celda el valor del campo "total importe concedido" de la tabla "proyecto".</span></p>
+<p><span style="color:var(--ds-text,#172b4d);">Si no, se deberá realizar el cálculo como sigue: <span> </span>suma del campo "importe concedido" de todos los registros de la tabla "anualidad gasto" (sin distinguir ni por anualidad ni por proyecto SGE) y del campo "importe concedido" de todos los registros de la tabla "proyecto socio".</span></p></td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">Calendario justificación</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Se recuperarán todos los elementos de la tabla "proyecto periodo justificación". Modelo lógico "Proyecto - Configuración económica".</td>
+<td class="confluenceTd">Sí</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Periodo justificación X</td>
+<td class="confluenceTd">Campo "número periodo" de la tabla "proyecto periodo justificación".</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Periodo justificación X. Tipo</td>
+<td class="confluenceTd">Valor recuperado del enumerado "tipo justificación" para el campo "tipo justificación" de la tabla "proyecto periodo justificación".</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Periodo justificación X. Fecha inicio ejecución</td>
+<td class="confluenceTd">Campo "fecha inicio" de la tabla "proyecto periodo justificación".</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Periodo justificación X. Fecha fin ejecución</td>
+<td class="confluenceTd">Campo "fecha fin" de la tabla "proyecto periodo justificación".</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Periodo justificación X. Fecha inicio presentación</td>
+<td class="confluenceTd">Campo "fecha inicio presentación" de la tabla "proyecto periodo justificación".</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Periodo justificación X. Fecha fin presentación</td>
+<td class="confluenceTd">Campo "fecha fin presentación" de la tabla "proyecto periodo justificación".</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">Calendario facturación</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Se recuperarán todos los elementos de la tabla "proyecto facturación". Modelo lógico "Proyecto - Configuración económica".</td>
+<td class="confluenceTd">Sí</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Ítem facturación X. Número previsión</td>
+<td class="confluenceTd">Campo "número previsión" de la tabla "proyecto facturación". (X debería coincidir con el número de previsión, ya que éste es un secuencial calculado para cada proyecto, ordenado por la fecha de emisión)</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Ítem facturación X. Fecha emisión</td>
+<td class="confluenceTd">Campo "fecha emisión" de la tabla "proyecto facturación".</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Ítem facturación X. Importe base</td>
+<td class="confluenceTd">Campo "importe base" de la tabla "proyecto facturación".</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Ítem facturación X. IVA</td>
+<td class="confluenceTd">Campo "porcentaje iva" de la tabla "proyecto facturación".</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Ítem facturación X. Importe total</td>
+<td class="confluenceTd">Campo calculado:  Campo "importe base" +  campo "importe base" x "porcentaje iva" de la tabla "proyecto facturación".</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Ítem facturación X. Tipo facturación</td>
+<td class="confluenceTd">Valor dentro del enumerado "tipo facturación" para el campo "tipo facturación" de la tabla "proyecto facturación".</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Ítem facturación X. Estado validación</td>
+<td class="confluenceTd">Valor del enumerado "tipo estado validación" correspondiente al campo "estado" del registro de la tabla "estado validación IP" referenciado por el campo "estado validación IP" de la tabla "proyecto facturación".</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Ítem facturación X. Fecha conformidad</td>
+<td class="confluenceTd">Campo "fecha conformidad" de la tabla "proyecto facturación".</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Ítem facturación X. Núm. factura emitida</td>
+<td class="confluenceTd">Se debe recuperar a través del servicio de  integración<span> </span><a href="https://confluence.um.es/confluence/display/HERCULES/REQ-INT-0010-SGE-0153+-+Buscar+facturas+previstas+emitidas" rel="nofollow">REQ-INT-0010-SGE-0153 - Buscar facturas previstas emitidas</a>, pasando como parámetro el identificador del proyecto SGI, campo "id" de la tabla "proyecto" y el campo "número previsión" de la tabla "proyecto facturación". Se deberá buscar el campo "número factura" asociado al "número previsión" que se está listando.</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<span style="letter-spacing: 0.0px;">  
+
+</span>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+<div class="columnLayout two-equal" layout="two-equal">
+
+<div class="cell normal" data-type="normal">
+
+<div class="innerCell">
+
+## <span style="letter-spacing: -0.008em;">Interfaces de usuario relacionados</span>
+
+<img src="plugins/servlet/confluence/placeholder/unknown-macro" class="wysiwyg-unknown-macro" />
+
+</div>
+
+</div>
+
+<div class="cell normal" data-type="normal">
+
+<div class="innerCell">
+
+## Casos de uso relacionados
+
+<img src="plugins/servlet/confluence/placeholder/unknown-macro" class="wysiwyg-unknown-macro" />
+
+
+
+</div>
+
+</div>
+
+</div>
+
+<div class="columnLayout single" layout="single">
+
+<div class="cell normal" data-type="normal">
+
+<div class="innerCell">
+
+<div class="plugin-tabmeta-details">
+
+<div class="table-wrap">
+
+|                           |              |
+|---------------------------|--------------|
+| ACT-CPS-003-Gestor        | CSP-PRO-E_UO |
+| ACT-CSP-004-Administrador | CSP-PRO-E_UO |
+| ACT-CSP-005-Visor         | CSP-PRO-V_UO |
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="pageSection group">
+
+<div class="pageSectionHeader">
+
+## Attachments:
+
+</div>
+
+<div class="greybox" align="left">
+
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [proyectos_with_columns_repeated.xls](/attachments/597853632/597868721.xls) (application/vnd.ms-excel)  
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div id="footer" role="contentinfo">
+
+<div class="section footer-body">
+
+Document generated by Confluence on oct 27, 2025 08:38
+
+<div id="footer-logo">
+
+[Atlassian](https://www.atlassian.com/)
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 
 

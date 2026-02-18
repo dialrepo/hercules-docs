@@ -796,7 +796,456 @@
 
   <h1>Rep eti 0141 listado general de solicitudes de evaluacion formato xlsx</h1>
 
+<div id="page">
 
+<div id="main" class="aui-page-panel">
+
+<div id="main-header">
+
+<div id="breadcrumb-section">
+
+1.  [Hércules](index.html)
+2.  [Hércules](/)
+3.  [SGI. Sistema de gestión de investigación](//sgi-sistema-de-gestion-de-investigacion)
+4.  [Requisitos y análisis funcional](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional)
+5.  [Análisis Funcional SGI - Hércules](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules)
+6.  [GEN - Aspectos generales](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales)
+7.  [INT - Requisitos de integración](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion)
+8.  [REQ-INT-0150-SGREP - Integración con Sistema de Generación de Reportes](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0150-sgrep-integracion-con-sistema-de-generacion-de-reportes)
+9.  [ETI - Informes Predifinidos](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0150-sgrep-integracion-con-sistema-de-generacion-de-reportes/eti-informes-predifinidos)
+
+</div>
+
+# <span id="title-text"> Hércules : REP-ETI-0141 - Listado general de solicitudes de evaluación - Formato xlsx </span>
+
+</div>
+
+<div id="content" class="view">
+
+<div class="page-metadata">
+
+Created by <span class="author"> Usuario desconocido (lorena.alvarez)</span>, last updated on abr 28, 2022
+
+</div>
+
+<div id="main-content" class="wiki-content group">
+
+<div class="contentLayout2">
+
+<div class="columnLayout single" layout="single">
+
+<div class="cell normal" data-type="normal">
+
+<div class="innerCell">
+
+<div class="plugin-tabmeta-details">
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="odd">
+<th class="confluenceTh">Cod. REP</th>
+<td class="confluenceTd"><p><strong>REP-ETI-0141 - Listado general de solicitudes de evaluación - Formato xlsx<br />
+</strong></p></td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Ver. Objetivo</th>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh">Ver. REP</th>
+<td class="confluenceTd">1.0.0</td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Estado</th>
+<td class="confluenceTd"><div class="content-wrapper">
+<span class="status-macro aui-lozenge conf-macro output-inline">PENDIENTE</span>
+</div></td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh">Fec. Aprobación</th>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Épica, historia</th>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh">Frecuencia</th>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+## Diseño Informe 
+
+<span style="letter-spacing: 0.0px;">Se debe de generar un informe en formato xlsx que reciba como parámetro de entrada la lista de bloques de datos a incluir. A continuación se indica el mapeo de los nombres de columnas del fichero xlsx de salida con la tabla y campo del SGI desde el que deben ser recuperadas. Se indica también el bloque de datos al que pertenece cada columna. Las columnas que disponen de un bloque de datos se mostrarán en el informe solo si el bloque de datos está incluido en la lista recibida como parámetro de entrada. Las columnas que no disponen de un bloque de datos se incluirán siempre en el informe.</span>
+
+Los nombres de las columnas en el fichero xlsx que formen parte de un bloque que se repita, deberán llevar en su nombre un número cardinal representativo del número de repetición, de forma que se permita la distinción del título de la columna. En la siguiente tabla se identifican también los bloques de datos susceptibles de repetirse. El fichero resultante contendrá las columnas necesarias, sobre cada bloque de repetición, de acuerdo a la solicitud de evaluación que más elementos contenga para ese bloque. Para las solicitudes de evaluación que no contengan tantos elementos sobre cada bloque como marque el máximo, se mostrarán las columnas sin contenido.
+
+Ejemplo: <a href="attachments/597852555/597874080.xlsx" data-linked-resource-id="597874080" data-linked-resource-version="2" data-linked-resource-type="attachment" data-linked-resource-default-alias="sol_evaluacion_with_columns_repeated.xlsx" data-nice-type="Excel Spreadsheet" data-linked-resource-content-type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" data-linked-resource-container-id="597852555" data-linked-resource-container-version="7">sol_evaluacion_with_columns_repeated.xlsx</a>
+
+
+
+<div class="table-wrap">
+
+<table class="wrapped relative-table confluenceTable" style="width: 85.4472%;">
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 24%" />
+<col style="width: 49%" />
+<col style="width: 13%" />
+</colgroup>
+<tbody>
+<tr class="header">
+<th class="confluenceTh">Bloque de datos</th>
+<th class="confluenceTh">Columna informe</th>
+<th class="confluenceTh">Campo SGI</th>
+<th class="confluenceTh">Repetición</th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Solicitante: Nombre</td>
+<td class="confluenceTd"><p><span class="confluence-link"><span style="color:var(--ds-text,#172b4d);"><span>Campo "nombre" recuperado a través de <a href="https://confluence.um.es/confluence/display/HERCULES/REQ-INT-0020-SGP-0030+-+Consultar+datos+generales+de+persona" rel="nofollow">REQ-INT-0020-SGP-0030 - Consultar datos generales de persona</a> para la referenciada indicada en el campo "personaRef" de la tabla "PeticionEvaluacion".</span></span><span style="color:var(--ds-text,#172b4d);"><br />
+</span></span></p></td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Solicitante: Apellidos</td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Campo "apellidos" recuperado a través de <a href="https://confluence.um.es/confluence/display/HERCULES/REQ-INT-0020-SGP-0030+-+Consultar+datos+generales+de+persona" rel="nofollow">REQ-INT-0020-SGP-0030 - Consultar datos generales de persona</a></span><span style="color:var(--ds-text,#172b4d);"><span> </span>para la referenciada indicada en el campo "<span class="confluence-link">personaRef</span>" de la tabla "<span class="confluence-link">PeticionEvaluacion</span>".</span></td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Código</td>
+<td class="confluenceTd">Campo "codigo" de la tabla "<span class="confluence-link"><span style="color:var(--ds-text,#172b4d);">PeticionEvaluacion</span></span>"</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Código de la solicitud de convocatoria</td>
+<td class="confluenceTd"><p>Campo "códigoRegistroInterno" de la tabla "solicitud" recuperada a través del identificador de la solicitud indicado en el campo "solicitudConvocatoriaRef" de la tabla "<span class="confluence-link"><span style="color:var(--ds-text,#172b4d);">PeticionEvaluacion</span></span>"</p></td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Título del proyecto</td>
+<td class="confluenceTd">Campo "titulo" de la tabla "<span class="confluence-link"><span style="color:var(--ds-text,#172b4d);">PeticionEvaluacion</span></span>"</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Tipo de actividad</td>
+<td class="confluenceTd"><p>Campo "nombre" perteneciente al campo "tipoActividad" de la tabla "<span class="confluence-link"><span style="color:var(--ds-text,#172b4d);">PeticionEvaluacion</span></span>"</p></td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Tipo de investigación tutelada</td>
+<td class="confluenceTd"><p>Campo "nombre" perteneciente al campo "tipoInvestigacionTutelada" de la tabla "<span class="confluence-link"><span style="color:var(--ds-text,#172b4d);">PeticionEvaluacion</span></span>"</p></td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Órgano financiador</td>
+<td class="confluenceTd">Campo "fuenteFinanciacion" de la tabla "<span class="confluence-link"><span style="color:var(--ds-text,#172b4d);">PeticionEvaluacion</span></span>"</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Importe financiación</td>
+<td class="confluenceTd">Campo "importeFinanciacion" de la tabla "<span class="confluence-link"><span style="color:var(--ds-text,#172b4d);">PeticionEvaluacion</span></span>"</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Fecha inicio</td>
+<td class="confluenceTd">Campo "fechaInicio" de la tabla "<span class="confluence-link"><span style="color:var(--ds-text,#172b4d);">PeticionEvaluacion</span></span>"</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Fecha fin</td>
+<td class="confluenceTd">Campo "fechaFin" de la tabla "<span class="confluence-link"><span style="color:var(--ds-text,#172b4d);">PeticionEvaluacion</span></span>"</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">Equipo investigador</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><p>Se mostrará el equipo investigador de la solicitud de evaluación (tabla "EquipoTrabajo")</p></td>
+<td class="confluenceTd">Sí</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Equipo - Miembro X: Email</td>
+<td class="confluenceTd">Campo "email" con el indicador "principal" a "true" recuperado a través de <a href="https://confluence.um.es/confluence/display/HERCULES/REQ-INT-0020-SGP-0030+-+Consultar+datos+generales+de+persona" rel="nofollow">REQ-INT-0020-SGP-0030 - Consultar datos generales de persona</a> para la referencia indicada en el campo "usurioRef" de la tabla "EquipoTrabajo".</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Equipo - Miembro X: Nombre</td>
+<td class="confluenceTd">Campo "nombre" recuperado a través de <a href="https://confluence.um.es/confluence/display/HERCULES/REQ-INT-0020-SGP-0030+-+Consultar+datos+generales+de+persona" rel="nofollow">REQ-INT-0020-SGP-0030 - Consultar datos generales de persona</a> para la referencia indicada en el campo "usurioRef" de la tabla "EquipoTrabajo".</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Equipo - Miembro X: Apellidos</td>
+<td class="confluenceTd">Campo "apellidos" recuperado a través de <a href="https://confluence.um.es/confluence/display/HERCULES/REQ-INT-0020-SGP-0030+-+Consultar+datos+generales+de+persona" rel="nofollow">REQ-INT-0020-SGP-0030 - Consultar datos generales de persona</a> para la referencia indicada en el campo "usurioRef" de la tabla "EquipoTrabajo".</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Equipo - Miembro X: Vinculación</td>
+<td class="confluenceTd">Campo "categoriaProfesional" recuperado a través de <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0020-sgp-integracion-con-sistema-de-gestion-de-personas/req-int-0020-sgp-0033-consultar-datos-de-vinculacion-de-persona">REQ-INT-0020-SGP-0033 - Consultar datos de vinculación de persona</a> para la referencia indicada en el campo "usurioRef" de la tabla "EquipoTrabajo".</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">Asignación de tareas</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Se muestra el listado de tareas de los miembros del equipo de investigación para cada una de las memorias (tabla "Tarea")</td>
+<td class="confluenceTd">Sí</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Tarea X: Nombre</td>
+<td class="confluenceTd">Campo "nombre" recuperado a través de <a href="https://confluence.um.es/confluence/display/HERCULES/REQ-INT-0020-SGP-0030+-+Consultar+datos+generales+de+persona" rel="nofollow">REQ-INT-0020-SGP-0030 - Consultar datos generales de persona</a> para la referencia indicada en el campo "usurioRef" asociado al campo "equipoTrabajo" de la tabla "Tarea"</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Tarea X: Apellidos</td>
+<td class="confluenceTd">Campo "apellidos" recuperado a través de <a href="https://confluence.um.es/confluence/display/HERCULES/REQ-INT-0020-SGP-0030+-+Consultar+datos+generales+de+persona" rel="nofollow">REQ-INT-0020-SGP-0030 - Consultar datos generales de persona</a> para la referencia indicada en el campo "usurioRef" asociado al campo "equipoTrabajo" de la tabla "Tarea"</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Tarea X: Memoria</td>
+<td class="confluenceTd"><p>Campo "numReferencia" perteneciente al campo "memoria" de la tabla "Tarea"</p></td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Tarea X: Tarea</td>
+<td class="confluenceTd">Si el campo "comite" perteneciente al campo "memoria" de la tabla "Tarea" hace referencia a un comité de tipo COMITE.CEISH (id = 1) o COMITE.CEIAB (id = 3) entonces se obtiene el campo "tarea" de la tabla "Tarea", si por el contrario es un tipo de comité COMITE.CEEA (id = 2) entonces se obtiene del campo "nombre" perteneciente al campo "tipoTarea" de la tabla "Tarea"</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Tarea X: Experiencia/Formación</td>
+<td class="confluenceTd">Si el campo "comite" perteneciente al campo "memoria" de la tabla "Tarea" hace referencia a un comité de tipo COMITE.CEISH (id = 1) o COMITE.CEIAB (id = 3) entonces se obtiene el campo "formacion" de la tabla "Tarea", si por el contrario es un tipo de comité COMITE.CEEA (id = 2) entonces se obtiene del campo "nombre" perteneciente al campo "formacionEspecifica" de la tabla "Tarea"</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">Memorias</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Se muestra el listado de memorias de la solicitud de evaluación (tabla "Memoria")</td>
+<td class="confluenceTd">Sí</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">MemoriaX: Referencia</td>
+<td class="confluenceTd">Campo "numReferencia" de la tabla "Memoria"</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">MemoriaX: Comité</td>
+<td class="confluenceTd"><p>Campo "comite" perteneciente al campo "comite" de la tabla "<span class="confluence-link"><span style="color:var(--ds-text,#172b4d);">Memoria</span></span>"</p></td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">MemoriaX: Estado</td>
+<td class="confluenceTd">Valor del enumerado "EstadoMemoria" para el registro de la tabla "EstadoMemoria" referenciado desde el campo "estadoActual" de la tabla "Memoria"</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">MemoriaX: Fecha evaluación</td>
+<td class="confluenceTd"><ul>
+<li>Para las memorias que no tienen ninguna evaluación asociada se deja vacío. (no existe ningún registro en la tabla "Evaluacion" cuyo campo "memoria" tenga a la propia memoria)</li>
+<li>Para las memorias que si tienen evaluación asociada se busca la evaluación de su última versión y se muestra la fecha evaluación de la convocatoria de reunión asociada → Se recuperan todas los registros de la tabla "Evaluacion" donde el campo "memoria" tenga a la propia memoria y el campo "tipoEvaluacion" tenga el valor del enumerado TipoEvaluacion.Memoria y se ordenan por el campo "version" de forma descendente. De esos registros se coge el primero (el de versión mas alta) y se obtiene el campo "fechaEvaluacion" de la tabla "ConvocatoriaReunion" referenciada por el campo "convocatoriaReunion" de la tabla "Evaluacion"</li>
+</ul></td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<span style="letter-spacing: 0.0px;">  
+
+</span>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+<div class="columnLayout two-equal" layout="two-equal">
+
+<div class="cell normal" data-type="normal">
+
+<div class="innerCell">
+
+## <span style="letter-spacing: -0.008em;">Interfaces de usuario relacionados</span>
+
+<img src="plugins/servlet/confluence/placeholder/unknown-macro" class="wysiwyg-unknown-macro" />
+
+</div>
+
+</div>
+
+<div class="cell normal" data-type="normal">
+
+<div class="innerCell">
+
+## Casos de uso relacionados
+
+<img src="plugins/servlet/confluence/placeholder/unknown-macro" class="wysiwyg-unknown-macro" />
+
+
+
+</div>
+
+</div>
+
+</div>
+
+<div class="columnLayout single" layout="single">
+
+<div class="cell normal" data-type="normal">
+
+<div class="innerCell">
+
+<div class="plugin-tabmeta-details">
+
+<div class="table-wrap">
+
+|                                 |                                     |
+|---------------------------------|-------------------------------------|
+| ACT-ETI-001-Gestor              | ETI-PEV-V, ETI-MEM-V, CSP-SOL-ETI-V |
+| ACT-ETI-002-Investigador        | ETI-PEV-INV-ER                      |
+| ACT-ETI-003-Solicitante         | ETI-PEV-INV-ER                      |
+| ACT-ETI-006-Responsable memoria | ETI-PEV-INV-ER                      |
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="pageSection group">
+
+<div class="pageSectionHeader">
+
+## Attachments:
+
+</div>
+
+<div class="greybox" align="left">
+
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [proyectos_with_columns_repeated.csv](/attachments/597852555/597874073.csv) (text/csv)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [sol_evaluacion_with_columns_repeated.xlsx](/attachments/597852555/597874091.xlsx) (application/vnd.openxmlformats-officedocument.spreadsheetml.sheet)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [sol_evaluacion_with_columns_repeated.xlsx](/attachments/597852555/597874080.xlsx) (application/vnd.openxmlformats-officedocument.spreadsheetml.sheet)  
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div id="footer" role="contentinfo">
+
+<div class="section footer-body">
+
+Document generated by Confluence on oct 27, 2025 08:38
+
+<div id="footer-logo">
+
+[Atlassian](https://www.atlassian.com/)
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 
 

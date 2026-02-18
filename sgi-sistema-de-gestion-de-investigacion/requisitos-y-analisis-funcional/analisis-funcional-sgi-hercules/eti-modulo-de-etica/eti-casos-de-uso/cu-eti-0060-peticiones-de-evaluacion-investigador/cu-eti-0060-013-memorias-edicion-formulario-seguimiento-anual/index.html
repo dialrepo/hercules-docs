@@ -796,7 +796,168 @@
 
   <h1>Cu eti 0060 013 memorias edicion formulario seguimiento anual</h1>
 
+<div id="page">
 
+<div id="main" class="aui-page-panel">
+
+<div id="main-header">
+
+<div id="breadcrumb-section">
+
+1.  [Hércules](index.html)
+2.  [Hércules](/)
+3.  [SGI. Sistema de gestión de investigación](//sgi-sistema-de-gestion-de-investigacion)
+4.  [Requisitos y análisis funcional](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional)
+5.  [Análisis Funcional SGI - Hércules](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules)
+6.  [ETI - Módulo de ética](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica)
+7.  [ETI - Casos de Uso](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-casos-de-uso)
+8.  [CU-ETI-0060 - Peticiones de evaluación - Investigador](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-casos-de-uso/cu-eti-0060-peticiones-de-evaluacion-investigador)
+
+</div>
+
+# <span id="title-text"> Hércules : CU-ETI-0060-013 - Memorias - Edición formulario seguimiento anual </span>
+
+</div>
+
+<div id="content" class="view">
+
+<div class="page-metadata">
+
+Created by <span class="author"> Usuario desconocido (lorena.alvarez)</span>, last updated by <span class="editor"> Usuario desconocido (alicia.alvarez)</span> on may 12, 2021
+
+</div>
+
+<div id="main-content" class="wiki-content group">
+
+<div class="plugin-tabmeta-details">
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable" style="width: 75.1988%;">
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 84%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<th class="confluenceTh">Cod. CU</th>
+<td class="confluenceTd"><p><strong><strong><strong><strong>CU-ETI-0060-013 - Memorias - Edición formulario seguimiento anual<br />
+</strong></strong></strong></strong></p></td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Ver. objetivo</th>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh">Ver. CU</th>
+<td class="confluenceTd">1.0.0</td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Estado</th>
+<td class="confluenceTd"><div class="content-wrapper">
+<span class="status-macro aui-lozenge aui-lozenge-complete conf-macro output-inline">LIBERADO_</span>
+</div></td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh">Fec. Aprobación</th>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Épica, historia</th>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh">Actores</th>
+<td class="confluenceTd"><p>ACT-ETI-002-Investigador</p>
+<p>ACT-ETI-003-Solicitante</p>
+<p>ACT-ETI-006-Responsable memoria</p></td>
+</tr>
+<tr class="even">
+<th class="confluenceTh"><p>Frecuencia</p></th>
+<td class="confluenceTd">Media</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+## Descripción
+
+Formulario para rellenar el formulario de seguimiento anual
+
+## Actores
+
+### Actor principal
+
+ACT-ETI-002-Investigador
+
+ACT-ETI-003-Solicitante
+
+ACT-ETI-006-Responsable memoria
+
+## Precondiciones
+
+Usuario logado en el sistema con el rol adecuado dentro del módulo ETI.
+
+Haber accedido a la opción de menú Mis peticiones de evaluación y seleccionado una petición del listado para su edición.
+
+Sólo se muestran las peticiones de evaluación dadas de alta en el sistema y que la persona creadora de la misma sea la persona que se está logando en el sistema o bien este como responsable de la memoria de la petición de evaluación.
+
+<u>Únicamente se mostrará el formulario de Seguimiento anual en modo edición si la memoria esta en estado "Fin evaluación"  o "Completada seguimiento anual" y ha pasado 1 año desde la fecha de inicio del proyecto. En otro caso se mostrará en modo consulta.</u>
+
+
+
+## Garantías de éxito (postcondiciones)
+
+Se guardan las respuestas del formulario y se cambia el estado de la memoria a "Completada seguimiento anual"
+
+
+
+## Escenario principal (flujo básico)
+
+1.  Se presenta la pantalla Mis peticiones de evaluación con el listado de todas las peticiones de evaluación dadas de alta en el sistema y que la persona creadora de la misma sea la persona que se está logando en el sistema o bien este como responsable de la memoria de la petición de evaluación.
+2.  Se selecciona la petición de evaluación.
+3.  Se presenta la pantalla de edición de la petición de evaluación.
+4.  El usuario va a la pestaña de Memorias.
+5.  El usuario selecciona del listado una memoria en estado "Fin evaluación"
+6.  Ha pasado mas de un año desde la fecha de inicio del proyecto.
+7.  Al usuario se le presenta la pantalla de Datos generales de la memoria.
+8.  El usuario selecciona la opción de menú Seguimiento anual.
+9.  El usuario rellena el formulario.
+10. El usuario selecciona la acción Guardar Memoria.
+11. Se realizan las validaciones en cuanto a formato, obligatoriedad habituales.
+12. El usuario es informado del resultado positivo de la acción.
+13. Se mantienen en misma pantalla de edición.
+14. Se cambia el estado de la memoria a "Completada seguimiento anual"
+
+</div>
+
+</div>
+
+</div>
+
+<div id="footer" role="contentinfo">
+
+<div class="section footer-body">
+
+Document generated by Confluence on oct 27, 2025 08:51
+
+<div id="footer-logo">
+
+[Atlassian](https://www.atlassian.com/)
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 
 

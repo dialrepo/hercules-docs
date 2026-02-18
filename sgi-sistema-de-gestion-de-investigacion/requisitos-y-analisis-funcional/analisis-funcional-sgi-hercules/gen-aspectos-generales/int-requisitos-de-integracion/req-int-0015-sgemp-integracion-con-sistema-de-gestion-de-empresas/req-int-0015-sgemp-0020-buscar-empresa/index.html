@@ -796,7 +796,248 @@
 
   <h1>Req int 0015 sgemp 0020 buscar empresa</h1>
 
+<div id="page">
 
+<div id="main" class="aui-page-panel">
+
+<div id="main-header">
+
+<div id="breadcrumb-section">
+
+1.  [Hércules](index.html)
+2.  [Hércules](/)
+3.  [SGI. Sistema de gestión de investigación](//sgi-sistema-de-gestion-de-investigacion)
+4.  [Requisitos y análisis funcional](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional)
+5.  [Análisis Funcional SGI - Hércules](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules)
+6.  [GEN - Aspectos generales](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales)
+7.  [INT - Requisitos de integración](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion)
+8.  [REQ-INT-0015-SGEMP - Integración con Sistema de gestión de empresas](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0015-sgemp-integracion-con-sistema-de-gestion-de-empresas)
+
+</div>
+
+# <span id="title-text"> Hércules : REQ-INT-0015-SGEMP-0020 - Buscar empresa </span>
+
+</div>
+
+<div id="content" class="view">
+
+<div class="page-metadata">
+
+Created by <span class="author"> Usuario desconocido (covadonga.garcia)</span>, last updated by <span class="editor"> Usuario desconocido (alicia.alvarez)</span> on jun 23, 2022
+
+</div>
+
+<div id="main-content" class="wiki-content group">
+
+<div class="contentLayout2">
+
+<div class="columnLayout single" layout="single">
+
+<div class="cell normal" data-type="normal">
+
+<div class="innerCell">
+
+<div class="plugin-tabmeta-details">
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="odd">
+<th class="confluenceTh">Cod. REQ</th>
+<td class="confluenceTd"><p><strong>REQ- INT-0015-SGEMP-0020 - Buscar empresa</strong></p></td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Ver. Objetivo</th>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh">Ver. REQ</th>
+<td class="confluenceTd">1.0.0</td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Estado</th>
+<td class="confluenceTd"><div class="content-wrapper">
+ <span class="status-macro aui-lozenge aui-lozenge-current conf-macro output-inline">IN PROGRESS</span> 
+</div></td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh">Fec. Aprobación</th>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Épica, historia</th>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh">Frecuencia</th>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Características</th>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh"><span>M. Consumidor</span></th>
+<td class="confluenceTd">ESB (Empresa), CSP, PII, RCL</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="columnLayout single" layout="single">
+
+<div class="cell normal" data-type="normal">
+
+<div class="innerCell">
+
+## Definición y objetivos
+
+El SGI requiere disponer de información de las Empresas con las se requiera establecer algún tipo de relación. El SGI tratará la entidad Empresa de forma centralizada de manera que todos los módulos que requieran de la misma (CSP, RCL, PII, ETI, CAT, etc.) la utilicen de forma común. El SGI no dispondrá  de una gestión directa de Empresas sino que éstas deberán proceder de la integración con el o los sistemas universitarios correspondientes donde se centralice la gestión de las mismas. Como en el resto de integraciones, se persigue la gestión unificada de los datos de las empresas evitando así la duplicidad de la gestión y asegurando la integridad de los datos.
+
+El ESB del SGI será el encargado de derivar la invocación del servicio de búsqueda a uno u otro sistema universitario si fuese necesario en función de alguna tipología concreta (que en este caso sería determinada por algún parámetro de identificación interno al SGI y ESB).
+
+El mecanismo de operación en todos los módulos del SGI será homogéneo: se dispondrá de un buscador de Empresa, que a través del interface de integración con el SGEMP, devolverá los datos de la Empresa que estuviesen disponibles en el SGEMP. 
+
+## Descripción técnica integración
+
+Parámetros de entrada:
+
+- Cadena de texto que podrá contener indistintamente:
+  - Nombre de la empresa
+  - Razón social 
+  - Número de identificación fiscal
+
+El SGI proveerá el interface gráfico para recoger los parámetros de búsqueda [IU-GEN-0100-0080 - Búsqueda de empresa.](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/sha-buscadores-y-listados-comunes/iu-gen-0080-busqueda-de-empresas)
+
+Salida: el resultado será el listado de todas las empresas que cumplan con los criterios establecidos, incluyendo para cada una de ellas:
+
+- Identificador/Referencia (código interno entre ESB y SGI que permitirá referenciar de forma única a la empresa tanto en la comunicación SGI-ESB como en el modelo de datos del SGI)
+- Nombre
+- Tipo de identificador fiscal (CIF, VAT, ...)
+- Número de identificación fiscal
+- Razón social  
+
+
+El SGI mostrará los resultados devueltos en un listado sobre el que se podrá seleccionar el registro concreto que vaya a ser utilizado en el caso de uso que invoca al buscador. Ver [IU-GEN-0080 - Búsqueda de empresa](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/sha-buscadores-y-listados-comunes/iu-gen-0080-busqueda-de-empresas). El SGI facilitará el interface para recoger la solicitud de alta de una empresa en el sistema externo, a través de [IU-GEN-0081 - Solicitar alta de empresa](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/sha-buscadores-y-listados-comunes/iu-gen-0081-solicitar-alta-de-empresa) que hará uso del servicio de integración [REQ-INT-0015-SGEMP-0040 - Solicitar alta de empresa](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0015-sgemp-integracion-con-sistema-de-gestion-de-empresas/req-int-0015-sgemp-0040-solicitar-alta-de-empresa).
+
+## Diseño técnico
+
+En el siguiente enlace se muestra el diseño del modelo lógico y el diseño de la API del Sistema de Gestión de Empresas y, en concreto, de los Servicios Básicos: [SGI - ESB - SGEMP - Servicios Básicos](//sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sgemp/sgi-esb-sgemp-servicios-basicos).
+
+El servicio concreto del API que cubre este requisito es [SGI - ESB - SGEMP - Empresas - Buscar](//sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sgemp/sgi-esb-sgemp-servicios-basicos/sgi-esb-sgemp-empresas-buscar).
+
+
+
+</div>
+
+</div>
+
+</div>
+
+<div class="columnLayout three-equal" layout="three-equal">
+
+<div class="cell normal" data-type="normal">
+
+<div class="innerCell">
+
+## Interfaces de usuario relacionados
+
+<img src="plugins/servlet/confluence/placeholder/unknown-macro" class="wysiwyg-unknown-macro" />
+
+</div>
+
+</div>
+
+<div class="cell normal" data-type="normal">
+
+<div class="innerCell">
+
+## Informes relacionados
+
+<img src="plugins/servlet/confluence/placeholder/unknown-macro" class="wysiwyg-unknown-macro" />
+
+</div>
+
+</div>
+
+<div class="cell normal" data-type="normal">
+
+<div class="innerCell">
+
+## Casos de uso relacionados
+
+<img src="plugins/servlet/confluence/placeholder/unknown-macro" class="wysiwyg-unknown-macro" />
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="pageSection group">
+
+<div class="pageSectionHeader">
+
+## Comments:
+
+</div>
+
+<table data-border="0" width="100%">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><span id="comment-597868922"></span> $contentConverter.convertToXHtml($comment)
+<div class="smallfont" data-align="left" style="color: #666666; width: 98%; margin-bottom: 10px;">
+<img src="images/icons/contenttypes/comment_16.png" data-border="0" data-align="absmiddle" width="16" height="16" /> Posted by jesus.ruiz.ticarum at dic 16, 2020 09:40
+</div></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
+<div id="footer" role="contentinfo">
+
+<div class="section footer-body">
+
+Document generated by Confluence on oct 27, 2025 08:38
+
+<div id="footer-logo">
+
+[Atlassian](https://www.atlassian.com/)
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 
 

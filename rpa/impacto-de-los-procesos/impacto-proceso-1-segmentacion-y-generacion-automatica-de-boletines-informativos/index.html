@@ -796,7 +796,162 @@
 
   <h1>Impacto proceso 1 segmentacion y generacion automatica de boletines informativos</h1>
 
+<div id="page">
 
+<div id="main" class="aui-page-panel">
+
+<div id="main-header">
+
+<div id="breadcrumb-section">
+
+1.  [Hércules](index.html)
+2.  [Hércules](/)
+3.  [RPA](//rpa)
+4.  [Impacto de los procesos](//rpa/impacto-de-los-procesos)
+
+</div>
+
+# <span id="title-text"> Hércules : Impacto proceso 1. Segmentación y generación automática de boletines informativos </span>
+
+</div>
+
+<div id="content" class="view">
+
+<div class="page-metadata">
+
+Created by <span class="author"> Usuario genérico para HERCULES</span>, last updated on nov 04, 2022
+
+</div>
+
+<div id="main-content" class="wiki-content group">
+
+## Acciones qué realiza el proceso
+
+Este proceso, [Proceso 1 : Segmentación y generación automática de boletines informativos](//rpa/modulo-de-automatizacion-y-gestion/analisis-y-procesos/proceso-1-segmentacion-y-generacion-automatica-de-boletines-informativos), es el encargado de generar un resumen con los datos que se incluyen en el Boletín de Transferencia realizados por el Vicerrectorado de Transferencia, Comunicación y Divulgación Científica. El envío de estos boletines a la comunidad universitaria se realiza cada 15 días, por lo que el proceso será programado para que se ejecute cada 15 días y obtenga la nueva información publicada o añadida a los subsistemas Hércules en ese rango de tiempo.
+
+El proceso obtiene los siguientes elementos de las siguientes fuentes:
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="header">
+<th class="confluenceTh" style="text-align: center;">Elemento</th>
+<th class="confluenceTh" style="text-align: left;">Fuente</th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd" style="text-align: center;">Convocatorias</td>
+<td class="confluenceTd" style="text-align: left;">Hércules-SGI</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: center;">Proyectos</td>
+<td class="confluenceTd" style="text-align: left;">Hércules-SGI</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: center;">Contratos</td>
+<td class="confluenceTd" style="text-align: left;">Hércules-SGI</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: center;">Tesis</td>
+<td class="confluenceTd" style="text-align: left;">Hércules-SGI</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: center;">Oferta tecnológica</td>
+<td class="confluenceTd" style="text-align: left;">Hércules-EDMA</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: center;">Artículos científicos</td>
+<td class="confluenceTd" style="text-align: left;"><p>Hércules-EDMA</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: center;">Propiedad intelectual</td>
+<td class="confluenceTd" style="text-align: left;"><p>Hércules-SGI</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: center;">Propiedad industrial</td>
+<td class="confluenceTd" style="text-align: left;">Hércules-SGI</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: center;">Noticias</td>
+<td class="confluenceTd" style="text-align: left;"><p>Notas de prensa UM ( <a href="https://www.um.es/en/web/sala-prensa/notas-de-prensa" class="external-link" rel="nofollow">https://www.um.es/en/web/sala-prensa/notas-de-prensa</a>)</p>
+<p>UCC (<span style="color:var(--ds-text,#172b4d);"><a href="https://www.um.es/web/ucc/" class="external-link" rel="nofollow">https://www.um.es/web/ucc/</a></span>)</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+Para obtener los elementos almacenados en los subsistemas, Hércules realiza consultas por rango de fechas y obtiene, entre otras cosas, los siguientes elementos:
+
+- Título.
+- Fecha de creación o publicación.
+- URL: enlace a la página donde se ha obtenido la información para completar la información enviada si fuera necesario.
+- Autores, si los hubiera.
+- Entidades convocantes, si las hubiera.
+- Períodos de ejecución.
+
+En el caso de las noticias, se obtiene la siguiente información:
+
+- Título.
+- Fecha de creación.
+- Responsable de redacción.
+
+Una vez obtenida toda la información se redactará un correo electrónico y se enviará a los destinatarios configurados, siendo posible configurar una lista de correo como destinatario final.
+
+## Análisis del impacto de la automatización
+
+En este apartado se hará una comparación entre el tiempo que tardaría el personal encargado de la creación de un boletín informativo, en recabar la información y crear el boletín, y el tiempo que tarda la automatización creada en Hércules-RPA.
+
+Este proceso tiene dos partes diferenciadas:
+
+1.  Obtención de información.
+2.  Creación del boletín y envío del email.
+
+Para realizar la obtención de información, el personal encargado de la redacción del boletín debería consultar una a una las siguientes páginas o secciones de los subsistemas Hércules:
+
+- Sección de convocatorias de Hércules-SGI donde debería de filtrar por rango de fechas y ejecutar la búsqueda.
+- Sección de contratos de Hércules-SGI donde debería de filtrar por rango de fechas y ejecutar la búsqueda.
+- Sección de proyectos de Hércules-SGI donde debería de filtrar por rango de fechas y ejecutar la búsqueda.
+- Sección de tesis doctorales de Hércules-SGI donde debería de filtrar por rango de fechas y ejecutar la búsqueda.
+- Sección de artículos de Hércules-EDMA donde debería de filtrar por rango de fechas y ejecutar la búsqueda.
+- Sección de oferta tecnológica de Hércules-EDMA donde debería de filtrar por rango de fechas y ejecutar la búsqueda.
+- La página de Notas de Prensa de Salas de Prensa de la Universidad de Murcia,  <a href="https://www.um.es/en/web/sala-prensa/notas-de-prensa" class="external-link" rel="nofollow">https://www.um.es/en/web/sala-prensa/notas-de-prensa</a>, y la página de UCC , Unidad de Cultura Científica, <span style="color:var(--ds-text,#172b4d);"><a href="https://www.um.es/web/ucc/" class="external-link" rel="nofollow">https://www.um.es/web/ucc/</a>, </span> para la obtención de noticias, donde deberá de consultar uno a uno todos los enlaces que llevan a cada noticia en cuestión.
+
+Esto hace un total de cuatro secciones de Hércules-SGI, dos secciones de Hércules-EDMA y dos páginas webs, de cada una de estas deberá consultar los elementos obtenidos y almacenar dicha información consultando las secciones y campos de cada elemento y/o página.
+
+Si se plantea un ejemplo, donde por cada elemento del boletín se obtienen 20 resultados:
+
+1.  El personal deberá consultar 8 páginas diferentes realizando la búsqueda e incluyendo los filtros necesarios para obtener la información correcta.
+2.  Obtendrá 20 elementos por cada búsqueda, lo que hace un total de 160 elementos.
+3.  Por cada uno de estos 160 elementos, deberá consultar el título, fecha, entidades convocantes, autores, investigadores relacionados, etc., e ir redactando esta información, además de almacenar el enlace a cada uno de los elementos, por lo que de media, consultará 5 o 6 datos de cada uno de ellos. Esto da como resultado unos 800 campos consultados aproximadamente.
+
+Una vez consultados los 800 campos, deberá redactar el correo y enviar la información.
+
+El proceso de Hércules-RPA realiza la consulta y el procesamiento de la información en dos minutos, mientras que el personal consumiría esos dos minutos accediendo a la página de noticias de sala de presa de la Universidad de Murcia y consultando la primera noticia, como podemos comprobar el tiempo que se ahorraría en esta tarea es bastante significativo.
+
+</div>
+
+</div>
+
+</div>
+
+<div id="footer" role="contentinfo">
+
+<div class="section footer-body">
+
+Document generated by Confluence on oct 27, 2025 09:31
+
+<div id="footer-logo">
+
+[Atlassian](https://www.atlassian.com/)
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 
 

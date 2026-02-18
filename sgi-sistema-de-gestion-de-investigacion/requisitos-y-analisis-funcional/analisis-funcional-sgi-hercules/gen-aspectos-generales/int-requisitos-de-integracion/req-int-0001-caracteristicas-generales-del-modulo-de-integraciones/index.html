@@ -796,7 +796,270 @@
 
   <h1>Req int 0001 caracteristicas generales del modulo de integraciones</h1>
 
+<div id="page">
 
+<div id="main" class="aui-page-panel">
+
+<div id="main-header">
+
+<div id="breadcrumb-section">
+
+1.  [Hércules](index.html)
+2.  [Hércules](/)
+3.  [SGI. Sistema de gestión de investigación](//sgi-sistema-de-gestion-de-investigacion)
+4.  [Requisitos y análisis funcional](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional)
+5.  [Análisis Funcional SGI - Hércules](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules)
+6.  [GEN - Aspectos generales](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales)
+7.  [INT - Requisitos de integración](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion)
+
+</div>
+
+# <span id="title-text"> Hércules : REQ-INT-0001 - Características generales del módulo de integraciones </span>
+
+</div>
+
+<div id="content" class="view">
+
+<div class="page-metadata">
+
+Created by <span class="author"> Usuario desconocido (hector.suarez)</span>, last updated by <span class="editor"> Usuario desconocido (covadonga.garcia)</span> on nov 30, 2020
+
+</div>
+
+<div id="main-content" class="wiki-content group">
+
+<div class="plugin-tabmeta-details">
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="odd">
+<th class="confluenceTh">Cod. REQ</th>
+<td class="confluenceTd"><p><strong>REQ-INT-0001 - Características generales del módulo de integraciones</strong></p></td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Ver. Objetivo</th>
+<td class="confluenceTd">1.0.0</td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh">Ver. REQ</th>
+<td class="confluenceTd">1.0.0</td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Estado</th>
+<td class="confluenceTd"><div class="content-wrapper">
+<p><span style="color:var(--ds-text-inverse,#ffffff);"><span class="status-macro aui-lozenge aui-lozenge-current">LIBERADO_</span>ADO_</span><span style="color:var(--ds-text-inverse,#ffffff);">LIB<span style="color:var(--ds-text-inverse,#ffffff);">LIBERADO_</span>ERADO_</span></p>
+</div></td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh">Fec. Aprobación</th>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Épica, historia</th>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh">Frecuencia</th>
+<td class="confluenceTd">N/A</td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Características</th>
+<td class="confluenceTd">N/A</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+## Definición y objetivos
+
+El SGI debe poder integrarse con otros sistemas de información existentes, tanto internos a las Universidades como externos. Es importante tener en cuenta que, en función de la universidad, la paternidad del dato puede pertenecer a sistemas diferentes.
+
+El objetivo de la integración, de ciertos datos y procesos de gestión, es que los datos se gestionen una sola vez en le sistema donde funcionalmente se haya diseñado su gestión y que el resto de sistemas obtengan esta información sin necesidad de volver a gestionarla.
+
+El SGI estará relacionado, pero no sustituirá, al siguiente conjunto de sistemas de información de cada universidad, en el caso de que la universidad disponga de ellos.
+
+En el caso de no existir ese sistema externo gestor, externo al SGI, el sistema contemplará mecanismos que permitan integrar dicha funcionalidad en cada implantación.
+
+### Modelo genérico de integración
+
+Para abordar estos objetivos, el sistema SGI establecerá un modelo genérico de integración donde cada componente podrá ser adaptado según las necesidades de la integración en cada implantación.
+
+En este modelo genérico de integración se definen los siguientes componentes p<span style="letter-spacing: 0.0px;">or subsistemas:</span>
+
+- - SGI SGBD : Sistema de Gestión de Base de Datos dará persistencia a los datos gestionados en cada módulo.
+    - SGI Modulo A BD: Esquema de base de datos encargado de persistir los datos de un módulo particular.
+    - SGI Modulo B BD: Esquema de base de datos encargado de persistir los datos de un módulo particular.
+  - SGI : Sistema de Gestión de la Investigación contendrá los servicios de gestión de la información y procesos para cada módulo del sistema.  
+    - SGI Módulo A: Servicios que resuelven, funcionalmente, las necesidades de un módulo particular de gestión.
+    - SGI Módulo B: Servicios que resuelven, funcionalmente, las necesidades de un módulo particular de gestión.
+  - SGI ESB: Bus de Integración de Servicios expondrá al SGI un interfaz de integración común para cada módulo, resolviendo internamente la integración con los distintos sistemas a integrarse.
+    - ESB Modulo A Integrator: Componente que expone un interfaz de integración común e implementa las técnicas y mecanismos necesarios para realizar la integración con las interfaces definidas en cada SGEx.
+  - SGEx : Sistema de Gestión Externo representa cualquier sistema a integrarse con el SGI.
+    - SGEx Modulo A : Componente que expone un interfaz de comunicación para la gestión adecuada de la información de su sistema.
+
+La relación entre los distintos componentes puede verse en :
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597853256/597867629.png" class="confluence-embedded-image" draggable="false" data-image-src="attachments/597853256/597867629.png" data-unresolved-comment-count="0" data-linked-resource-id="597867629" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="Integracion generica SGI -ESB.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597853256" data-linked-resource-container-version="6" tabindex="0" height="400" /></span>
+
+
+
+## Casos de uso relacionados
+
+Se irán incluyendo los CU según se vaya desarrollando el sistema
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="header">
+<th class="confluenceTh">Cod. CU</th>
+<th class="confluenceTh">Estado</th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+## Componentes proveedores identificados
+
+Se irán incluyendo las API de los proveedores según se vaya desarrollando el sistema
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable" style="width: 100.0%;">
+<colgroup>
+<col style="width: 21%" />
+<col style="width: 6%" />
+<col style="width: 7%" />
+<col style="width: 26%" />
+<col style="width: 21%" />
+<col style="width: 16%" />
+</colgroup>
+<tbody>
+<tr class="header">
+<th class="confluenceTh">ID</th>
+<th class="confluenceTh">Sistema</th>
+<th class="confluenceTh"><span>Modulo</span></th>
+<th class="confluenceTh">Descripción</th>
+<th class="confluenceTh">Casos de uso implicados</th>
+<th class="confluenceTh">Componente de integración</th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd">Cod. CU</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+
+
+</div>
+
+<div class="pageSection group">
+
+<div class="pageSectionHeader">
+
+## Attachments:
+
+</div>
+
+<div class="greybox" align="left">
+
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [Integracion generica SGI -ESB.png](/attachments/597853256/597867629.png) (image/png)  
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div id="footer" role="contentinfo">
+
+<div class="section footer-body">
+
+Document generated by Confluence on oct 27, 2025 08:38
+
+<div id="footer-logo">
+
+[Atlassian](https://www.atlassian.com/)
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 
 

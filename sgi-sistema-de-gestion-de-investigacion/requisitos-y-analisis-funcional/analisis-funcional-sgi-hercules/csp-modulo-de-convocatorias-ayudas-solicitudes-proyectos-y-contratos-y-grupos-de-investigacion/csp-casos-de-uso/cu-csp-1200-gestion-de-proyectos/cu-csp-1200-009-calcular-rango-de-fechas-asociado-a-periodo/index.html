@@ -796,7 +796,218 @@
 
   <h1>Cu csp 1200 009 calcular rango de fechas asociado a periodo</h1>
 
+<div id="page">
 
+<div id="main" class="aui-page-panel">
+
+<div id="main-header">
+
+<div id="breadcrumb-section">
+
+1.  [Hércules](index.html)
+2.  [Hércules](/)
+3.  [SGI. Sistema de gestión de investigación](//sgi-sistema-de-gestion-de-investigacion)
+4.  [Requisitos y análisis funcional](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional)
+5.  [Análisis Funcional SGI - Hércules](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules)
+6.  [CSP - Módulo de convocatorias, ayudas, solicitudes, proyectos y contratos y grupos de investigación](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion)
+7.  [CSP - Casos de uso](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-casos-de-uso)
+8.  [CU-CSP-1200 - Gestión de proyectos](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-casos-de-uso/cu-csp-1200-gestion-de-proyectos)
+
+</div>
+
+# <span id="title-text"> Hércules : CU-CSP-1200-009 - Calcular rango de fechas asociado a periodo </span>
+
+</div>
+
+<div id="content" class="view">
+
+<div class="page-metadata">
+
+Created by <span class="author"> Usuario desconocido (covadonga.garcia)</span>, last updated on may 04, 2022
+
+</div>
+
+<div id="main-content" class="wiki-content group">
+
+<div class="plugin-tabmeta-details">
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable" style="width: 75.1988%;">
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 84%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<th class="confluenceTh">Cod. CU</th>
+<td class="confluenceTd"><p><strong>CU-CSP-1200-009 - Calcular rango de fechas asociado a periodo</strong></p></td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Ver. objetivo</th>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh">Ver. CU</th>
+<td class="confluenceTd">1.0.0</td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Estado</th>
+<td class="confluenceTd"><div class="content-wrapper">
+<span class="status-macro aui-lozenge aui-lozenge-success conf-macro output-inline">VALIDADO</span>
+</div></td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh">Fec. Aprobación</th>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Épica, historia</th>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh">Actores</th>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">ACT-CSP-003-Gestor,<span> </span></span><span style="color:var(--ds-text,#172b4d);">ACT-CSP-004-Administrador</span></td>
+</tr>
+<tr class="even">
+<th class="confluenceTh"><p>Frecuencia</p></th>
+<td class="confluenceTd">Baja</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+## Descripción
+
+
+
+
+
+## Actores
+
+### Actor principal
+
+ACT-CSP-003-Gestor de las unidades de gestión UGI, OTRI u OPE.
+
+ACP-CSP-004-Administrador de las unidades de gestión UGI, OTRI u OPE.
+
+### Personal involucrado e intereses
+
+ACT-CSP-001-Investigador que requiere que sus proyectos estén creados para su correcto seguimiento.
+
+## Precondiciones
+
+ACT-CSP-003-Gestor o ACT-CSP-004-Administrador crean un proyecto vinculado a una convocatoria y/o una solicitud que tengan cumplimentado alguno de los siguientes apartados:
+
+- elegibilidad (convocatoria)
+- periodos de seguimiento científico (convocatoria)
+- periodos de justificación económica (convocatoria)
+- equipo (solicitud)
+- responsable económico (solicitud)
+- socios (solicitud)
+- periodos de justificación de los socios (solicitud)
+- periodos de pago a los socios (solicitud)
+- equipo de los socios (solicitud)
+
+
+
+## Garantías de éxito (postcondiciones)
+
+Se crea el proyecto con los apartados 
+
+- elegibilidad 
+- seguimiento científico
+- calendario de justificación
+- equipo
+- responsable económico
+- socios
+- periodos de justificación de los socios
+- periodos de pago a los socios
+- equipo de los socios
+
+cumplimentados según estén o no informados en la convocatoria y disponiendo de los campos fecha de inicio y fecha de fin de los correspondientes apartados informados de manera automática a partir de la definición recogida en meses en la convocatoria.
+
+## Escenario principal (flujo básico)
+
+ACT-CSP-003-Gestor o ACT-CSP-004-Administrador seleccionan una convocatoria en el campo "convocatoria" del apartado datos generales del proyecto.
+
+El sistema calcula los campos fecha de inicio y fecha de fin de los apartados del proyecto, de acuerdo a la información aportada en los respectivos apartados de la convocatoria y/o solicitud:
+
+- **Elegibilidad de conceptos de gasto** (a partir de los datos de una **convocatoria**)
+- **Periodos de seguimiento científico** (a partir de los datos de una **convocatoria**)
+- **Periodos de justificación** (a partir de los datos de una **convocatoria**) 
+- **Equipo** (a partir de los datos de una **solicitud**)
+- **Responsable económico** (a partir de los datos de una **solicitud**)
+- **Socios** (a partir de los datos de una **solicitud**)
+- **Periodos de justificación de socios** (a partir de los datos de una **solicitud**)
+- **Periodos de pago de socios** (a partir de los datos de una **solicitud**)
+- **Equipo de socios** (a partir de los datos de una **solicitud**)
+
+Todas las fechas se calculan a partir de la **fecha de inicio del proyecto** estando esta, por lo general, establecida a las **00:00:00** del día correspondiente en la Zona Horaria configurada en la aplicación (por defecto **España**).
+
+El cálculo que se realiza en todos los casos es el siguiente:
+
+- **Fecha Inicio**:   
+  Para el cálculo se tiene en cuenta la **fecha de inicio del proyecto** y el **número de mes** del cuál se quiere calcular la fecha de inicio.  
+  A la **fecha de inicio del proyecto** se le **suma** el **número de meses** correspondiente **menos uno**, ya que, por ejemplo, el primer mes se correspondería precisamente con la fecha de inicio del proyecto.
+- **Fecha Fin**:  
+  Para el cálculo se tiene en cuenta la **fecha de inicio del proyecto**, la **fecha final del proyecto** y el **número de mes** del cuál se quiere calcular la fecha de fin.  
+  A la **fecha de inicio del proyecto** se le **suma** el **número de mes** correspondiente (de modo que estaríamos calculando el momento temporal en el que empezaría el mes siguiente) y se le **resta** **un segundo**, de modo que, partiendo de la premisa inicial de que la **fecha de inicio** estaría establecida en un día concreto a las **00:00:00**, se devolvería el **día anterior** a las **23:59:59**.  
+  Si esta **fecha teórica de fin** resulta que es **superior** a la **fecha final del proyecto**, entonces se devuelve directamente la **fecha final del proyecto**.
+
+
+
+Ejemplos
+
+<div class="table-wrap">
+
+| Fecha Inicio Proyecto   | Fecha Fin Proyecto      | Mes inicio | Mes fin | Fecha Inicio            | Fecha Fin               |
+|:------------------------|:------------------------|:-----------|:--------|:------------------------|:------------------------|
+| **08/01/2021** 00:00:00 | **31/12/2021** 23:59:59 | **1**      | **1**   | **08/01/2021** 00:00:00 | **07/02/2021** 23:59:59 |
+| **08/01/2021** 00:00:00 | **31/12/2021** 23:59:59 | **1**      | **2**   | **08/01/2021** 00:00:00 | **07/03/2021** 23:59:59 |
+| **08/01/2021** 00:00:00 | **31/12/2021** 23:59:59 | **1**      | **3**   | **08/01/2021** 00:00:00 | **07/04/2021** 23:59:59 |
+| **08/01/2021** 00:00:00 | **31/12/2021** 23:59:59 | **4**      | **5**   | **08/04/2021** 00:00:00 | **07/06/2021** 23:59:59 |
+| **31/01/2021** 00:00:00 | **31/12/2021** 23:59:59 | **2**      | **2**   | **28/02/2021** 00:00:00 | **30/03/2021** 23:59:59 |
+| **31/01/2021** 00:00:00 | **31/12/2021** 23:59:59 | **3**      | **3**   | **31/03/2021** 00:00:00 | **29/04/2021** 23:59:59 |
+| **28/02/2021** 00:00:00 | **31/12/2021** 23:59:59 | **1**      | **3**   | **28/02/2021** 00:00:00 | **27/05/2021** 23:59:59 |
+| **01/10/2020** 00:00:00 | **31/12/2024** 23:59:59 | **1**      | **18**  | **01/10/2020** 00:00:00 | **31/03/2022** 23:59:59 |
+| **01/10/2020** 00:00:00 | **31/12/2024** 23:59:59 | **19**     | **36**  | **01/04/2022** 00:00:00 | **30/09/2023** 23:59:59 |
+
+</div>
+
+
+
+
+
+</div>
+
+</div>
+
+</div>
+
+<div id="footer" role="contentinfo">
+
+<div class="section footer-body">
+
+Document generated by Confluence on oct 27, 2025 08:39
+
+<div id="footer-logo">
+
+[Atlassian](https://www.atlassian.com/)
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 
 

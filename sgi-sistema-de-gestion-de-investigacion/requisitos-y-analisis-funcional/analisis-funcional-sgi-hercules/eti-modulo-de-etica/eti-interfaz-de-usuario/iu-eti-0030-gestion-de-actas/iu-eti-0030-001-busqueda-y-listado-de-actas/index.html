@@ -796,7 +796,447 @@
 
   <h1>Iu eti 0030 001 busqueda y listado de actas</h1>
 
+<div id="page">
 
+<div id="main" class="aui-page-panel">
+
+<div id="main-header">
+
+<div id="breadcrumb-section">
+
+1.  [Hércules](index.html)
+2.  [Hércules](/)
+3.  [SGI. Sistema de gestión de investigación](//sgi-sistema-de-gestion-de-investigacion)
+4.  [Requisitos y análisis funcional](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional)
+5.  [Análisis Funcional SGI - Hércules](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules)
+6.  [ETI - Módulo de ética](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica)
+7.  [ETI - Interfaz de Usuario](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario)
+8.  [IU-ETI-0030- Gestión de Actas](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario/iu-eti-0030-gestion-de-actas)
+
+</div>
+
+# <span id="title-text"> Hércules : IU-ETI-0030-001 Búsqueda y listado de actas </span>
+
+</div>
+
+<div id="content" class="view">
+
+<div class="page-metadata">
+
+Created by <span class="author"> Usuario desconocido (lorena.alvarez)</span>, last updated by <span class="editor"> Isabel Martinez Hernandez</span> on dic 05, 2022
+
+</div>
+
+<div id="main-content" class="wiki-content group">
+
+<div class="plugin-tabmeta-details">
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable" style="width: 75.1988%;">
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 84%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<th class="confluenceTh">Cod. IU</th>
+<td class="confluenceTd"><div class="content-wrapper">
+<p><strong><strong><strong><strong>IU-ETI-0030-001 Búsqueda y listado de actas<br />
+</strong></strong></strong></strong></p>
+</div></td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Ver. objetivo</th>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh">Ver. CU</th>
+<td class="confluenceTd">1.0.0</td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Estado</th>
+<td class="confluenceTd"><div class="content-wrapper">
+<p> <span class="status-macro aui-lozenge aui-lozenge-current">LIBERADO_</span></p>
+</div></td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh">Fec. Aprobación</th>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Épica, historia</th>
+<td class="confluenceTd"><div class="content-wrapper">
+<p><br />
+</p>
+</div></td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh">Actores</th>
+<td class="confluenceTd"><p>ACT-ETI-001-Gestor, ACT-ETI-004-Evaluador, ACT-ETI-005-Técnico</p></td>
+</tr>
+<tr class="even">
+<th class="confluenceTh"><p>Frecuencia</p></th>
+<td class="confluenceTd">Media</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+# Formulario de Búsqueda y listado de actas
+
+Pantalla que muestra un formulario, que permite aplicar filtros sobre el listado de las actas de las reuniones de evaluación.
+
+Podrán acceder al listado de actas:
+
+- los gestores (a todas)
+- los investigadores/técnicos que sean evaluadores activos en el comité del acta (la fecha de baja es null o la fecha de baja es mayor a la fecha actual). Sólo se les mostrarán las actas que pertenezcan al comité del cual es miembro activo.
+
+<div class="table-wrap">
+
+<table class="wrapped relative-table confluenceTable" style="width: 75.1422%;">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 10%" />
+<col style="width: 78%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<th colspan="3" class="confluenceTd"><div class="content-wrapper">
+<p><strong><strong><strong><strong><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597853793/597869108.png" class="confluence-embedded-image" draggable="false" data-image-src="attachments/597853793/597869108.png" data-unresolved-comment-count="0" data-linked-resource-id="597869108" data-linked-resource-version="4" data-linked-resource-type="attachment" data-linked-resource-default-alias="listadoactas.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597853793" data-linked-resource-container-version="42" tabindex="0" width="650" /></span><br />
+</strong></strong></strong></strong></p>
+</div></th>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Nombre</th>
+<th class="confluenceTh">Tipo</th>
+<th class="confluenceTh">Características / Notas</th>
+</tr>
+<tr class="odd">
+<th colspan="3" class="highlight-blue confluenceTd" data-highlight-colour="blue"><div class="content-wrapper">
+<p>Formulario de búsqueda</p>
+</div></th>
+</tr>
+<tr class="even">
+<th class="confluenceTd">Comité</th>
+<th class="confluenceTd"><p>Desplegable</p>
+<p><span>abreviatura</span></p></th>
+<th class="confluenceTd"><p>Listado con los tres comités: CEISH, CEEA y CEIAB</p></th>
+</tr>
+<tr class="odd">
+<th class="confluenceTd"><p>Fecha evaluación</p>
+<p>(desde - hasta)</p></th>
+<th class="confluenceTd"><p>fecha</p>
+<p>Opcional</p></th>
+<th class="confluenceTd"><p>Rango de fechas por las que se busca la fecha de evaluación.</p>
+<p>Fecha evaluación mayor o igual a fecha desde</p>
+<p>Fecha evaluación menor o igual a fecha hasta</p></th>
+</tr>
+<tr class="even">
+<th class="confluenceTd">Número de acta</th>
+<th class="confluenceTd"><p><span>Numérico decimal genérico</span></p>
+<p>Opcional</p></th>
+<th class="confluenceTd"><p>Número de acta</p></th>
+</tr>
+<tr class="odd">
+<th class="confluenceTd">Estado</th>
+<th class="confluenceTd"><p>Desplegable</p>
+<p><span>Texto corto</span></p></th>
+<th class="confluenceTd">Listado con dos valores: En elaboración y Finalizada</th>
+</tr>
+<tr class="even">
+<th colspan="3" class="highlight-blue confluenceTd" data-highlight-colour="blue">Listado de resultados</th>
+</tr>
+<tr class="odd">
+<th class="confluenceTd">Comité</th>
+<th class="confluenceTd"><span>abreviatura</span></th>
+<th class="confluenceTd">Comité de la convocatoria.</th>
+</tr>
+<tr class="even">
+<th class="confluenceTd"><p>Fecha evaluación</p></th>
+<th class="confluenceTd">fecha</th>
+<th class="confluenceTd">Día de la reunión de evaluación.</th>
+</tr>
+<tr class="odd">
+<th class="confluenceTd">Número de acta</th>
+<th class="confluenceTd"><span>Numérico decimal genérico</span></th>
+<th class="confluenceTd">Número de acta</th>
+</tr>
+<tr class="even">
+<th class="confluenceTd">Convocatoria</th>
+<th class="confluenceTd"><span>Texto corto</span></th>
+<th class="confluenceTd">Indica si es ordinaria, extraordinaria o de seguimiento</th>
+</tr>
+<tr class="odd">
+<th class="confluenceTd">Nº iniciales</th>
+<th class="confluenceTd"><span>Numérico decimal genérico</span></th>
+<th class="confluenceTd"><p>Número de memorias iniciales (nuevas) que se van a revisar o se han revisado en la reunión de evaluación asociada a la acta.</p>
+<p>Se obtiene sumando el número de evaluaciones asociadas a la convocatoria del acta que tengan en el campo versión el valor 1 (es la primera evaluación)</p></th>
+</tr>
+<tr class="even">
+<th class="confluenceTd">Nº revisiones</th>
+<th class="confluenceTd"><span>Numérico decimal genérico</span></th>
+<th class="confluenceTd"><p>Número de memorias reevaluadas que se van a revisar o se han revisado en la reunión de evaluación asociada a la acta.</p>
+<p>Se obtiene sumando el número de evaluaciones asociadas a la convocatoria del acta que  tengan en el campo versión un valor mayor de 1 (son reevaluaciones) y no sean de revisión mínima</p></th>
+</tr>
+<tr class="odd">
+<th class="confluenceTd">Nº total</th>
+<th class="confluenceTd"><span>Numérico decimal genérico</span></th>
+<th class="confluenceTd">Número total, es decir, iniciales  mas las reevaluadas.</th>
+</tr>
+<tr class="even">
+<th class="confluenceTd">Estado</th>
+<th class="confluenceTd">Texto corto</th>
+<th class="confluenceTd">Estado del acta</th>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="table-wrap">
+
+<table class="wrapped relative-table confluenceTable" style="width: 75.1641%;">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 53%" />
+<col style="width: 19%" />
+<col style="width: 15%" />
+</colgroup>
+<tbody>
+<tr class="header">
+<th class="confluenceTh">Acciones</th>
+<th class="confluenceTh">Descripción</th>
+<th class="confluenceTh"> Enlace CU.</th>
+<th class="confluenceTh">Permisos</th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd">Buscar</td>
+<td class="confluenceTd"><p>Aplica los filtros introducidos sobre la lista de actas mostrando las que cumplen las condiciones.</p>
+<p>Los investigadores/técnicos sólo se les mostrarán las actas en las que son evaluadores activos del comité (fecha de baja es null o fecha de baja es mayor a la actual)</p></td>
+<td class="confluenceTd"><a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-casos-de-uso/cu-eti-0030-gestion-de-actas/cu-eti-0030-001-buscar-actas">CU-ETI-0030-001 - Buscar Actas</a></td>
+<td class="confluenceTd"><p>ETI-ACT-V</p>
+<p>ETI-ACT-E</p>
+<p>ETI-ACT-DES</p>
+<p><span>ETI-ACT-FIN</span></p>
+<p><span>ETI-ACT-INV-ER</span></p>
+<p><span>ETI-ACT-ER</span></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">Limpiar</td>
+<td class="confluenceTd">Elimina los datos introducidos en el formulario de búsqueda de Actas</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">Nueva</td>
+<td class="confluenceTd">Se muestra el formulario de alta de un acta</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><p><span>ETI-ACT-C</span></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">Editar</td>
+<td class="confluenceTd"><p>Sólo se muestra si el acta esta en estado "En elaboración". Se muestra el formulario de modificación de un acta.</p>
+<p>Para que a un evaluador (investigador/técnico) le salga la opción de Editar tiene que ser evaluador activo del comité (fecha de baja es null o fecha de baja es mayor a la actual) ademas de que el estado sea "En elaboración".</p></td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><p>ETI-ACT-E</p>
+<p><span>ETI-ACT-INV-ER</span></p>
+<p><span>ETI-ACT-ER</span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">Ver</td>
+<td class="confluenceTd"><p>Si el estado del acta es "Finalizada" se muestra en modo consulta.</p>
+<p>Para que a un evaluador (investigador/técnico) le salga la opción de Ver tiene que ser evaluador activo del comité (fecha de baja es null o fecha de baja es mayor a la actual) ademas de que el estado sea "Finalizada"</p></td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><p>ETI-ACT-V</p>
+<p>ETI-ACT-E</p>
+<p>ETI-ACT-DES</p>
+<p><span>ETI-ACT-FIN</span></p>
+<p><span>ETI-ACT-INV-ER</span></p>
+<p><span>ETI-ACT-ER</span></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">Ver informe acta</td>
+<td class="confluenceTd"><p>Si el estado del acta es "En elaboración"</p>
+<ul>
+<li>Se genera de forma automática a partir de una plantilla el informe de acta a partir de los datos almacenados del acta. <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0150-sgrep-integracion-con-sistema-de-generacion-de-reportes/eti-informes-predifinidos/rep-eti-0070-informe-acta">REP-ETI- 0070-Informe acta</a></li>
+</ul>
+<p>Si el estado del acta es "Finalizada"</p>
+<ul>
+<li>Se descarga el documento almacenado en el SGGOC cuyo identificador esta almacenado en el campo "documentoRef" de la tabla "Acta"</li>
+</ul>
+<p>Para que a un evaluador (investigador/técnico) le salga la opción de Ver el informe del acta tiene que ser evaluador activo del comité (fecha de baja es null o fecha de baja es mayor a la actual)</p></td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><p>ETI-ACT-DES</p>
+<p>ETI-ACT-INV-DESR</p>
+<p><span>ETI-ACT-DESR</span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">Finalizar</td>
+<td class="confluenceTd"><p>Sólo se muestra si el acta esta en estado "En elaboración".</p>
+<p>Para poder finalizar una acta deben de estar evaluadas todas sus evaluaciones de memorias que no son de revisión mínima, es decir, que todas tengan un dictamen.</p>
+<p>Acciones a realizar:</p>
+<ul>
+<li>Se pasa a estado "Finalizada" el acta, por lo que ya no se podrá modificar los datos del acta ni realizar ningún cambio en ninguna de las evaluaciones de memorias asociadas a la convocatoria (las que no son de revisión mínima).</li>
+<li>El finalizar el acta implica cambiar el estado según el dictamen de la evaluación a todas las memorias implicadas (aquellas que no son de revisión mínima).</li>
+<li>Si es una evaluación de retrospectiva se pasará el campo estadoRetrospectiva a "Fin evaluación".</li>
+<li>Cuando un acta se pasa a finalizada se tiene que notificar a los investigadores de que ya tienen disponible el informe favorable o de evaluación<span style="color:var(--ds-text,#172b4d);">, por lo que al realizar esta acción, </span><span style="color:var(--ds-text,#172b4d);">habrá que tener en cuenta los comunicados que se deben generar según se describe en el apartado <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-comunicados">ETI - Comunicados</a>. (Se notificarán solamente las evaluaciones que no son de revisión mínima).<br />
+</span></li>
+<li>Generar el documento del acta llamando al servicio de reporting.</li>
+<li>Guardar el documento generado en el SGDOC.</li>
+<li>Llamar al servicio <strong>POST /documentos</strong> con el documento del acta generado. Devuelve el identificador del documento.</li>
+<li>Guardar en la tabla "Acta" el identificador del documento devuelto por el SGDOC (en el campo "documentoRef")</li>
+<li>En el caso que la variable de CNF "blockchain_enable" este a true:
+<ul>
+<li>Se llamará al servicio para sellar el  documento en blockchain pasando como parámetro el hash del documento. <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0160-blockchain/req-int-0160-bk-0002-crear-transaccion">REQ-INT-0160-BK-0002 - Crear transacción</a></li>
+<li>Guardar el id de la transacción devuelta en la tabla "Acta" (en el campo "transaccionRef").</li>
+</ul></li>
+</ul>
+<p><span style="color:var(--ds-text,#172b4d);">Solo el rol ACT-ETI-001-Gestor puede Finalizar un acta.</span></p></td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><p><span>ETI-ACT-FIN</span></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">Confirmar registro blockchain</td>
+<td class="confluenceTd"><p><span style="color:var(--ds-text,#172b4d);">Sólo se mostrará esta acción si:</span></p>
+<ul>
+<li><span style="color:var(--ds-text,#172b4d);">es un  ACT-ETI-001-Gestor</span></li>
+<li><span style="color:var(--ds-text,#172b4d);">la variable de configuración  CNF "blockchain_enable" este a true </span></li>
+<li><span style="color:var(--ds-text,#172b4d);">si el acta esta en estado "Finalizada"<br />
+</span></li>
+</ul>
+<p>Esta acción consistirá en:</p>
+<ul>
+<li>Obtener  los metadatos almacenado en el SGDOC del acta. (llamar al servicio GET /documentos)</li>
+<li>Llamar al servicio del blockchain que devuelve la cadena (el hash) que enviamos en su momento pasando como parámetro el id de la transacción almacenada en nuestra tabla acta (campo "transaccionRef"). <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0160-blockchain/req-int-0160-bk-0001-consultar-transaccion">REQ-INT-0160-BK-0001 - Consultar transacción</a></li>
+<li>Comprobar que el hash del documento es igual a la cadena devuelta por el servicio.</li>
+<li>En caso afirmativo mostrar el mensaje "El acta no se ha alterado, es un documento correcto" , en otro caso mostrar el mensaje "El acta se ha alterado, no es documento correcto."</li>
+</ul>
+<p>Ponerle el icono llamado <code>fact_check o </code><code>verified (uno que no se este usando actualmente en el SGI)</code></p>
+<p><br />
+</p></td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span>ETI-ACT-FIN</span></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">Exportar</td>
+<td class="confluenceTd">Genera el informe asociado al listado de actas.</td>
+<td class="confluenceTd">Muestra la pantalla <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario/iu-eti-0030-gestion-de-actas/iu-eti-0030-006-exportacion-listado-de-actas">IU-ETI-0030-006 - Exportación listado de actas</a></td>
+<td class="confluenceTd"><p>ETI-ACT-V</p>
+<p>ETI-ACT-E</p>
+<p><span>ETI-ACT-INV-ER</span></p>
+<p><span>ETI-ACT-ER</span></p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+## <span id="IUETI0030001Búsquedaylistadodeactas-#comunicados" class="confluence-anchor-link"></span>Comunicados
+
+Al realizar la acción de "Finalizar" un acta, y solo para <span style="color:var(--ds-text,#172b4d);">las evaluaciones que NO son de revisión mínima</span>, se creará la entrada correspondiente en el módulo de comunicados para avisar a los investigadores de que ya tienen disponible el informe favorable o de evaluación.
+
+La descripción detallada para la generación de este tipo de comunicado se encuentra en el apartado **Acta de evaluación finalizada (evaluaciones que no son de revisión mínima)** dentro de [ETI - Comunicados](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-comunicados) y el flujo general de operativa de este tipo de comunicados en [CU-COM-0010 - Generar comunicado de envío inmediato](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/com-modulo-de-comunicados/com-casos-de-uso/cu-com-0010-generar-comunicado-de-envio-inmediato).
+
+## Permisos de acceso a la pantalla
+
+### Por actor
+
+<div class="plugin-tabmeta-details">
+
+<div class="table-wrap">
+
+|                           |                                                |
+|---------------------------|------------------------------------------------|
+| ACT-ETI-001-Gestor        | ETI-ACT-C, ETI-ACT-E, ETI-ACT-DES, ETI-ACT-FIN |
+| **ACT-ETI-004-Evaluador** | ETI-ACT-INV-ER,ETI-ACT-INV-DESR                |
+| **ACT-ETI-005-Técnico**   | ETI-ACT-ER,ETI-ACT-DESR                        |
+
+</div>
+
+</div>
+
+### Todos los permisos de acceso
+
+<div class="plugin-tabmeta-details">
+
+<div class="table-wrap">
+
+<table class="wrapped relative-table confluenceTable" style="width: 76.2293%;">
+<colgroup>
+<col style="width: 21%" />
+<col style="width: 78%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<th class="confluenceTh">Permisos</th>
+<td class="confluenceTd">ETI-ACT-V, <span>ETI-ACT-C, ETI-ACT-E, ETI-ACT-DES, ETI-ACT-FIN, ETI-ACT-INV-ER, ETI-ACT-ER,ETI-ACT-INV-DESR,ETI-ACT-DESR<br />
+</span></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="pageSection group">
+
+<div class="pageSectionHeader">
+
+## Attachments:
+
+</div>
+
+<div class="greybox" align="left">
+
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [listadoevaluacionesgestor.png](/attachments/597853793/597869106.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [listadoconvocatorias.png](/attachments/597853793/597869107.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [listadoactas.png](/attachments/597853793/597868754.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [listadoactas.png](/attachments/597853793/597865634.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [listadoactas.png](/attachments/597853793/597876687.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [listadoactas.png](/attachments/597853793/597869108.png) (image/png)  
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div id="footer" role="contentinfo">
+
+<div class="section footer-body">
+
+Document generated by Confluence on oct 27, 2025 08:47
+
+<div id="footer-logo">
+
+[Atlassian](https://www.atlassian.com/)
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 
 

@@ -796,7 +796,1035 @@
 
   <h1>Csp me servicios api</h1>
 
+<div id="page">
 
+<div id="main" class="aui-page-panel">
+
+<div id="main-header">
+
+<div id="breadcrumb-section">
+
+1.  [Hércules](index.html)
+2.  [Hércules](/)
+3.  [SGI. Sistema de gestión de investigación](//sgi-sistema-de-gestion-de-investigacion)
+4.  [Diseño](//sgi-sistema-de-gestion-de-investigacion/diseno)
+5.  [Componentes](//sgi-sistema-de-gestion-de-investigacion/diseno/componentes)
+6.  [SGI - CSP](//sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-csp)
+7.  [CSP-ME - Modelo de Ejecución](//sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-csp/csp-me-modelo-de-ejecucion)
+
+</div>
+
+# <span id="title-text"> Hércules : CSP-ME - Servicios API </span>
+
+</div>
+
+<div id="content" class="view">
+
+<div class="page-metadata">
+
+Created by <span class="author"> Usuario desconocido (pelayo.menendez)</span>, last updated by <span class="editor"> Usuario desconocido (covadonga.garcia)</span> on may 05, 2022
+
+</div>
+
+<div id="main-content" class="wiki-content group">
+
+------------------------------------------------------------------------
+
+------------------------------------------------------------------------
+
+<div class="toc-macro rbtoc1761551540693">
+
+- [ModeloEjecucion](#CSPMEServiciosAPI-ModeloEjecucion)
+- [ModeloTipoFase](#CSPMEServiciosAPI-ModeloTipoFase)
+- [ModeloTipoDocumento](#CSPMEServiciosAPI-ModeloTipoDocumento)
+- [ModeloTipoEnlace](#CSPMEServiciosAPI-ModeloTipoEnlace)
+- [ModeloTipoFinalidad](#CSPMEServiciosAPI-ModeloTipoFinalidad)
+- [ModeloTipoHito](#CSPMEServiciosAPI-ModeloTipoHito)
+- [TipoFase](#CSPMEServiciosAPI-TipoFase)
+- [TipoEnlace](#CSPMEServiciosAPI-TipoEnlace)
+- [TipoDocumento](#CSPMEServiciosAPI-TipoDocumento)
+- [TipoFinalidad](#CSPMEServiciosAPI-TipoFinalidad)
+- [TipoHito](#CSPMEServiciosAPI-TipoHito)
+- [ModeloUnidad](#CSPMEServiciosAPI-ModeloUnidad)
+
+</div>
+
+------------------------------------------------------------------------
+
+
+
+## ModeloEjecucion
+
+<div class="table-wrap">
+
+<table class="wrapped relative-table confluenceTable" style="width: 87.5281%;">
+<colgroup>
+<col style="width: 4%" />
+<col style="width: 25%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 10%" />
+<col style="width: 37%" />
+</colgroup>
+<tbody>
+<tr class="header">
+<th class="confluenceTh">Método</th>
+<th class="confluenceTh">URL</th>
+<th class="confluenceTh">Parámetros</th>
+<th class="confluenceTh">Respuesta</th>
+<th class="confluenceTh">Permisos</th>
+<th class="confluenceTh">Descripción</th>
+</tr>
+&#10;<tr class="odd">
+<th class="confluenceTd">POST</th>
+<td class="confluenceTd">/modeloejecuciones</td>
+<td class="confluenceTd">ModeloEjecucion</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span>CSP-ME-C</span></td>
+<td class="confluenceTd">Crea ModeloEjecucion</td>
+</tr>
+<tr class="even">
+<th class="confluenceTd">GET</th>
+<td class="confluenceTd">/<span>modeloejecuciones</span></td>
+<td class="confluenceTd">q + s</td>
+<td class="confluenceTd">Lista[ModeloEjecucion]</td>
+<td class="confluenceTd"><p>CSP-<span>ME</span>-V</p></td>
+<td class="confluenceTd">Busca / Lista ModeloEjecucion (sólo devuelve los activos)</td>
+</tr>
+<tr class="odd">
+<th class="confluenceTd"><span style="color:var(--ds-text-accent-teal-bolder,#164555);">GET</span></th>
+<td class="confluenceTd"><span style="color:var(--ds-text-accent-teal-bolder,#164555);">/modeloejecuciones/todos</span></td>
+<td class="confluenceTd"><span style="color:var(--ds-text-accent-teal-bolder,#164555);">q + s</span></td>
+<td class="confluenceTd"><span style="color:var(--ds-text-accent-teal-bolder,#164555);">Lista[ModeloEjecucion]</span></td>
+<td class="confluenceTd"><p><span style="color:var(--ds-text-accent-teal-bolder,#164555);">CSP-ME-V</span></p></td>
+<td class="confluenceTd"><span style="color:var(--ds-text-accent-teal-bolder,#164555);">Busca / Lista ModeloEjecucion (devuelve todos)</span></td>
+</tr>
+<tr class="even">
+<th class="confluenceTd">GET</th>
+<td class="confluenceTd">/<span>modeloejecuciones</span>/{id}</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">ModeloEjecucion</td>
+<td class="confluenceTd"><span>CSP-<span>ME</span>-V</span></td>
+<td class="confluenceTd">Retorna el detalle de ModeloEjecucion</td>
+</tr>
+<tr class="odd">
+<th class="confluenceTd">PUT</th>
+<td class="confluenceTd">/<span>modeloejecuciones</span><span><span>/{<span>id</span>}</span></span></td>
+<td class="confluenceTd">ModeloEjecucion</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span>CSP-<span>ME</span>-E</span></td>
+<td class="confluenceTd">Modifica ModeloEjecucion</td>
+</tr>
+<tr class="even">
+<th class="confluenceTd">PATCH</th>
+<td class="confluenceTd">/<span>modeloejecuciones</span><span>/{<span>id</span>}/desactivar</span></td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span>ModeloEjecucion</span></td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Desactiva ModeloEjecucion</td>
+</tr>
+<tr class="odd">
+<th class="confluenceTd">PATCH</th>
+<td class="confluenceTd"><span>/</span><span>modeloejecuciones</span><span>/{id}/reactivar</span></td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span>ModeloEjecucion</span></td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span>Reactiva ModeloEjecucion</span></td>
+</tr>
+<tr class="even">
+<th class="highlight-blue confluenceTh" data-highlight-colour="blue">Listar - Subentidades</th>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<th class="confluenceTd"><span>GET</span></th>
+<td class="confluenceTd"><span>/</span><span>modeloejecuciones</span><span>/{id}/modelotipofases</span></td>
+<td class="confluenceTd"><span>q + s</span></td>
+<td class="confluenceTd"><span>Lista[ModeloTipoFase</span><span>]</span></td>
+<td class="confluenceTd"><span>CSP-ME-V</span></td>
+<td class="confluenceTd"><span>Listado de ModeloTipoFase (sólo devuelve los activos)<br />
+</span></td>
+</tr>
+<tr class="even">
+<th class="confluenceTd"><span>GET</span></th>
+<td class="confluenceTd"><span>/<span>modeloejecuciones</span></span><span>/{<span>id</span>}/modelo<span>tipofases</span>/convocatoria</span></td>
+<td class="confluenceTd"><span>q + s</span></td>
+<td class="confluenceTd"><span>Lista[<span>ModeloTipoFase</span></span><span>]</span></td>
+<td class="confluenceTd"><span>CSP-ME-V</span></td>
+<td class="confluenceTd"><span>Listado de <span>Modelo</span>TipoFase activos de convocatoria del ModeloEjecucion (sólo devuelve los activos)<br />
+</span></td>
+</tr>
+<tr class="odd">
+<th class="confluenceTd"><span>GET</span></th>
+<td class="confluenceTd"><span>/<span>modeloejecuciones</span></span><span>/{<span>id</span>}/modelo<span>tipofases</span>/proyecto</span></td>
+<td class="confluenceTd"><span>q + s</span></td>
+<td class="confluenceTd"><span>Lista[<span>ModeloTipoFase</span></span><span>]</span></td>
+<td class="confluenceTd"><span>CSP-ME-V</span></td>
+<td class="confluenceTd"><span>Listado de <span>Modelo</span>TipoFase <span>activos de proyecto </span>del ModeloEjecucion (sólo devuelve los activos)<br />
+</span></td>
+</tr>
+<tr class="even">
+<th class="confluenceTd">GET</th>
+<td class="confluenceTd"><span>/<span>modeloejecuciones</span></span><span>/{<span>id</span>}/modelotipodocumentos</span></td>
+<td class="confluenceTd"><span>q + s</span></td>
+<td class="confluenceTd"><span>Lista[Modelo</span><span>TipoDocumento]</span></td>
+<td class="confluenceTd"><span>CSP-ME-V</span></td>
+<td class="confluenceTd"><span>Listado de <span>Modelo</span><span>TipoDocumento</span> del ModeloEjecucion (sólo devuelve los activos)<br />
+</span></td>
+</tr>
+<tr class="odd">
+<th class="confluenceTd"><span>GET</span></th>
+<td class="confluenceTd"><span>/modeloejecuciones</span><span>/{id}/modelotipoenlaces</span></td>
+<td class="confluenceTd"><span>q + s</span></td>
+<td class="confluenceTd"><span>Lista[Modelo</span><span>TipoEnlace]</span></td>
+<td class="confluenceTd"><span>CSP-ME-V</span></td>
+<td class="confluenceTd"><span>Listado de <span>Modelo</span></span><span>TipoEnlace</span><span> del ModeloEjecucion (sólo devuelve los activos)<br />
+</span></td>
+</tr>
+<tr class="even">
+<th class="confluenceTd"><span>GET</span></th>
+<td class="confluenceTd"><span>/<span>modeloejecuciones</span></span><span>/{<span>id</span>}/modelotipofinalidades</span></td>
+<td class="confluenceTd"><span>q + s</span></td>
+<td class="confluenceTd"><span>Lista[<span>Modelo</span></span><span>TipoFinalidad]</span></td>
+<td class="confluenceTd"><span>CSP-ME-V</span></td>
+<td class="confluenceTd"><span>Listado de <span>Modelo</span><span>TipoFinalidad</span> del ModeloEjecucion (sólo devuelve los activos)<br />
+</span></td>
+</tr>
+<tr class="odd">
+<th class="confluenceTd"><span>GET</span></th>
+<td class="confluenceTd"><span>/<span>modeloejecuciones</span></span><span>/{<span>id</span>}/modelotipohitos</span></td>
+<td class="confluenceTd"><span>q + s</span></td>
+<td class="confluenceTd"><span>Lista[<span>Modelo</span></span><span>TipoHito]</span></td>
+<td class="confluenceTd"><span>CSP-ME-V</span></td>
+<td class="confluenceTd"><span>Listado de <span>Modelo</span><span>HItoModelo</span> del ModeloEjecucion (sólo devuelve los activos)<br />
+</span></td>
+</tr>
+<tr class="even">
+<th class="confluenceTd"><span>GET</span></th>
+<td class="confluenceTd"><span>/<span>modeloejecuciones</span></span><span>/{<span>id</span>}/modelo<span>tipohitos</span>/convocatoria</span></td>
+<td class="confluenceTd"><span>q + s</span></td>
+<td class="confluenceTd"><span>Lista[<span>Modelo</span><span>TipoHito</span></span><span>]</span></td>
+<td class="confluenceTd"><span>CSP-ME-V</span></td>
+<td class="confluenceTd"><span>Listado de <span>Modelo</span></span><span>HItoModelo<span> activos de convocatoria </span></span><span>del ModeloEjecucion (sólo devuelve los activos)<br />
+</span></td>
+</tr>
+<tr class="odd">
+<th class="confluenceTd"><span>GET</span></th>
+<td class="confluenceTd"><span>/<span>modeloejecuciones</span></span><span>/{<span>id</span>}/modelo<span>tipohitos</span>/solicitud</span></td>
+<td class="confluenceTd"><span>q + s</span></td>
+<td class="confluenceTd"><span>Lista[<span>Modelo</span><span>TipoHito</span></span><span>]</span></td>
+<td class="confluenceTd"><span>CSP-ME-V</span></td>
+<td class="confluenceTd"><span>Listado <span>Modelo</span><span>TipoHito</span></span><span><span> activos de solicitud </span></span><span>del ModeloEjecucion (sólo devuelve los activos)<br />
+</span></td>
+</tr>
+<tr class="even">
+<th class="confluenceTd"><span>GET</span></th>
+<td class="confluenceTd"><span>/<span>modeloejecuciones</span></span><span>/{<span>id</span>}/modelo<span>tipohitos</span>/proyecto</span></td>
+<td class="confluenceTd"><span>q + s</span></td>
+<td class="confluenceTd"><span>Lista[<span>Modelo</span><span>TipoHito</span></span><span>]</span></td>
+<td class="confluenceTd"><span>CSP-ME-V</span></td>
+<td class="confluenceTd"><span>Listado de <span>Modelo</span><span>TipoHito</span></span><span> activos de proyecto del ModeloEjecucion (sólo devuelve los activos)<br />
+</span></td>
+</tr>
+<tr class="odd">
+<th class="confluenceTd"><span>GET</span></th>
+<td class="confluenceTd"><span>/<span>modeloejecuciones</span></span><span>/{<span>id</span>}/modelounidades</span></td>
+<td class="confluenceTd"><span>q + s</span></td>
+<td class="confluenceTd"><span>Lista[<span>Modelo</span></span><span>UnidadGestion]</span></td>
+<td class="confluenceTd"><span>CSP-ME-V</span></td>
+<td class="confluenceTd"><span>Listado de <span>Modelo</span><span>UnidadGestion</span> del ModeloEjecucion (sólo devuelve los activos)<br />
+</span></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+##  ModeloTipoFase
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable" style="width: 87.5281%;">
+<tbody>
+<tr class="header">
+<th class="confluenceTh">Método</th>
+<th class="confluenceTh">URL</th>
+<th class="confluenceTh">Parámetros</th>
+<th class="confluenceTh">Respuesta</th>
+<th class="confluenceTh">Permisos</th>
+<th class="confluenceTh">Descripción</th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd">POST</td>
+<td class="confluenceTd"><p>/modelotipofases</p></td>
+<td class="confluenceTd">ModeloTipoFase</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">CSP-ME-C, CSP-ME-E</td>
+<td class="confluenceTd">Añade ModeloTipoFase al ModeloEjecucion</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">PUT</td>
+<td class="confluenceTd">/modelotipofases/{id}</td>
+<td class="confluenceTd">ModeloTipoFase</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span>CSP-ME-C, CSP-ME-E</span></td>
+<td class="confluenceTd">Modifica <span>ModeloTipoFase</span> de ModeloEjecucion</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">DELETE</td>
+<td class="confluenceTd">/modelotipofases/{id}</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span>CSP-ME-C, CSP-ME-E</span></td>
+<td class="confluenceTd">Elimina <span>ModeloTipoFase</span> de ModeloEjecucion</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">GET</td>
+<td class="confluenceTd">/modelotipofases/{id}</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">ModeloTipoFase</td>
+<td class="confluenceTd"><span>CSP-ME-C, CSP-ME-E</span></td>
+<td class="confluenceTd">Detalle de <span>ModeloTipoFase</span> de ModeloEjecucion</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+## <span class="inline-comment-marker" ref="9a1b753c-9b9d-41f3-9769-8c4cded97f79">ModeloTipoDocumento</span>
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable" style="width: 87.5281%;">
+<tbody>
+<tr class="header">
+<th class="confluenceTh">Método</th>
+<th class="confluenceTh">URL</th>
+<th class="confluenceTh">Parámetros</th>
+<th class="confluenceTh">Respuesta</th>
+<th class="confluenceTh">Permisos</th>
+<th class="confluenceTh">Descripción</th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd">POST</td>
+<td class="confluenceTd"><p>/modelotipodocumentos</p></td>
+<td class="confluenceTd">ModeloTipoDocumento</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">CSP-ME-C, CSP-ME-E</td>
+<td class="confluenceTd">Añade <span>ModeloTipoDocumento</span> en ModeloEjecucion</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">DELETE</td>
+<td class="confluenceTd">/<span>modelotipodocumentos</span>/{id}</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">CSP-ME-C, CSP-ME-E</td>
+<td class="confluenceTd">Elimina <span>ModeloTipoDocumento</span> de ModeloEjecucion</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">GET</td>
+<td class="confluenceTd">/<span>modelotipodocumentos</span>/{id}</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span><span>ModeloTipoDocumento</span><br />
+</span></td>
+<td class="confluenceTd">CSP-ME-C, CSP-ME-E</td>
+<td class="confluenceTd">Detalle de <span>ModeloTipoDocumento</span> de ModeloEjecucion</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+## ModeloTipoEnlace
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable" style="width: 87.5281%;">
+<tbody>
+<tr class="header">
+<th class="confluenceTh">Método</th>
+<th class="confluenceTh">URL</th>
+<th class="confluenceTh">Parámetros</th>
+<th class="confluenceTh">Respuesta</th>
+<th class="confluenceTh">Permisos</th>
+<th class="confluenceTh">Descripción</th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd">POST</td>
+<td class="confluenceTd"><p>/modelotipoenlaces</p></td>
+<td class="confluenceTd">ModeloTipoEnlace</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">CSP-ME-C, CSP-ME-E</td>
+<td class="confluenceTd">Añade <span>ModeloTipoEnlace</span> en ModeloEjecucion</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">DELETE</td>
+<td class="confluenceTd">/<span>modelotipoenlaces</span>/{id}</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">CSP-ME-C, CSP-ME-E</td>
+<td class="confluenceTd">Elimina <span>ModeloTipoEnlace</span> de ModeloEjecucion</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">GET</td>
+<td class="confluenceTd">/<span>modelotipoenlaces</span>/{id}</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span>ModeloTipoEnlace</span></td>
+<td class="confluenceTd">CSP-ME-C, CSP-ME-E</td>
+<td class="confluenceTd">Detalle de <span>ModeloTipoEnlace</span> de ModeloEjecucion</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+## ModeloTipoFinalidad
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable" style="width: 87.5281%;">
+<tbody>
+<tr class="header">
+<th class="confluenceTh">Método</th>
+<th class="confluenceTh">URL</th>
+<th class="confluenceTh">Parámetros</th>
+<th class="confluenceTh">Respuesta</th>
+<th class="confluenceTh">Permisos</th>
+<th class="confluenceTh">Descripción</th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd">POST</td>
+<td class="confluenceTd"><p>/modelotipofinalidades</p></td>
+<td class="confluenceTd">ModeloTipoFinalidades</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">CSP-ME-C, CSP-ME-E</td>
+<td class="confluenceTd">Añade <span>ModeloTipoFinalidades</span> en ModeloEjecucion</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">DELETE</td>
+<td class="confluenceTd">/<span>modelotipofinalidades</span>/{id}</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">CSP-ME-C, CSP-ME-E</td>
+<td class="confluenceTd">Elimina <span>ModeloTipoFinalidades</span> de ModeloEjecucion</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">GET</td>
+<td class="confluenceTd">/<span>modelotipofinalidades</span>/{id}</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">ModeloTipoEnlace</td>
+<td class="confluenceTd">CSP-ME-C, CSP-ME-E</td>
+<td class="confluenceTd">Detalle de <span>ModeloTipoFinalidades</span> de ModeloEjecucion</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+## ModeloTipoHito
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable" style="width: 87.5281%;">
+<tbody>
+<tr class="header">
+<th class="confluenceTh">Método</th>
+<th class="confluenceTh">URL</th>
+<th class="confluenceTh">Parámetros</th>
+<th class="confluenceTh">Respuesta</th>
+<th class="confluenceTh">Permisos</th>
+<th class="confluenceTh">Descripción</th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd">POST</td>
+<td class="confluenceTd"><p>/modelotipohito</p></td>
+<td class="confluenceTd"><span>ModeloTipoHito</span></td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">CSP-ME-C, CSP-ME-E</td>
+<td class="confluenceTd">Añade <span>ModeloTipoHito</span> en ModeloEjecucion</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">PUT</td>
+<td class="confluenceTd">/<span>modelotipohito</span>/{id}</td>
+<td class="confluenceTd">ModeloTipoHito</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">CSP-ME-C, CSP-ME-E</td>
+<td class="confluenceTd">Modifica <span>ModeloTipoHito</span> de ModeloEjecucion</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">DELETE</td>
+<td class="confluenceTd">/<span>modelotipohito</span>/{id}</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">CSP-ME-C, CSP-ME-E</td>
+<td class="confluenceTd">Elimina <span>ModeloTipoHito</span> de ModeloEjecucion</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">GET</td>
+<td class="confluenceTd">/<span>modelotipohito</span>/{id}</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span>ModeloTipoHito</span></td>
+<td class="confluenceTd">CSP-ME-C, CSP-ME-E</td>
+<td class="confluenceTd">Detalle de <span>ModeloTipoHito</span> de ModeloEjecucion</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+## TipoFase
+
+<div class="table-wrap">
+
+<table class="wrapped relative-table confluenceTable" style="width: 60.8427%;">
+<colgroup>
+<col style="width: 6%" />
+<col style="width: 16%" />
+<col style="width: 9%" />
+<col style="width: 15%" />
+<col style="width: 23%" />
+<col style="width: 29%" />
+</colgroup>
+<tbody>
+<tr class="header">
+<th class="confluenceTh">Método</th>
+<th class="confluenceTh">URL</th>
+<th class="confluenceTh">Parámetros</th>
+<th class="confluenceTh">Respuesta</th>
+<th class="confluenceTh">Permisos</th>
+<th class="confluenceTh">Descripción</th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd">POST</td>
+<td class="confluenceTd">/<span>tipofases</span></td>
+<td class="confluenceTd"><span>TipoFase</span></td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span>CSP-TFAS-C</span></td>
+<td class="confluenceTd"><span>Crea <span>TipoFase</span></span></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">GET</td>
+<td class="confluenceTd">/<span>tipofases</span></td>
+<td class="confluenceTd"><span>q + s</span></td>
+<td class="confluenceTd">Lista[<span>TipoFase</span>]</td>
+<td class="confluenceTd"><p>CSP-<span>TFAS</span>-V</p></td>
+<td class="confluenceTd">Busca / Lista <span>TipoFase (sólo devuelve los activos)<br />
+</span></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><span style="color:var(--ds-text-accent-teal-bolder,#164555);">GET</span></td>
+<td class="confluenceTd"><span style="color:var(--ds-text-accent-teal-bolder,#164555);">/tipofases/todos</span></td>
+<td class="confluenceTd"><span style="color:var(--ds-text-accent-teal-bolder,#164555);">q + s</span></td>
+<td class="confluenceTd"><span style="color:var(--ds-text-accent-teal-bolder,#164555);">Lista[TipoFase]</span></td>
+<td class="confluenceTd"><p><span style="color:var(--ds-text-accent-teal-bolder,#164555);">CSP-TFAS-V</span></p></td>
+<td class="confluenceTd"><span style="color:var(--ds-text-accent-teal-bolder,#164555);">Busca / Lista TipoFase (devuelve todos)</span></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">GET</td>
+<td class="confluenceTd">/<span>tipofases</span>/{<span>id</span>}</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span>TipoFase</span></td>
+<td class="confluenceTd">CSP-<span>TFAS</span>-V</td>
+<td class="confluenceTd">Retorna el detalle de <span>TipoFase</span></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">PUT</td>
+<td class="confluenceTd">/<span>tipofases<span>/{<span>id</span></span><span>}</span></span></td>
+<td class="confluenceTd"><span>TipoFase</span></td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">CSP-<span>TFAS</span>-E</td>
+<td class="confluenceTd">Modifica <span>TipoFase</span></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">PATCH</td>
+<td class="confluenceTd">/<span>tipofases</span>/{id}/desactivar</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span>TipoFase</span></td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Desactiva <span>TipoFase</span></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">PATCH</td>
+<td class="confluenceTd">/<span>tipofases</span>/{id}/reactivar</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span>TipoFase</span></td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Reactiva <span>TipoFase</span></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+## TipoEnlace
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="header">
+<th class="confluenceTh">Método</th>
+<th class="confluenceTh">URL</th>
+<th class="confluenceTh">Parámetros</th>
+<th class="confluenceTh">Respuesta</th>
+<th class="confluenceTh">Permisos</th>
+<th class="confluenceTh"><span>Descripción</span></th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd">POST</td>
+<td class="confluenceTd">/<span>tipoenlaces</span></td>
+<td class="confluenceTd"><span>TipoEnlace</span></td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span>CSP-TENL-C</span></td>
+<td class="confluenceTd">Crea <span>TipoEnlace</span></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">GET</td>
+<td class="confluenceTd">/<span>tipoenlaces</span></td>
+<td class="confluenceTd"><span>q + s</span></td>
+<td class="confluenceTd">Lista[<span>TipoEnlace</span>]</td>
+<td class="confluenceTd"><p>CSP-<span>TENL</span>-V</p></td>
+<td class="confluenceTd">Busca / Lista <span>TipoEnlace <span> (sólo devuelve los activos)</span><br />
+</span></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><span style="color:var(--ds-text-accent-teal-bolder,#164555);">GET</span></td>
+<td class="confluenceTd"><span style="color:var(--ds-text-accent-teal-bolder,#164555);">/tipoenlaces/todos</span></td>
+<td class="confluenceTd"><span style="color:var(--ds-text-accent-teal-bolder,#164555);">q + s</span></td>
+<td class="confluenceTd"><span style="color:var(--ds-text-accent-teal-bolder,#164555);">Lista[TipoEnlace]</span></td>
+<td class="confluenceTd"><p><span style="color:var(--ds-text-accent-teal-bolder,#164555);">CSP-TENL-V</span></p></td>
+<td class="confluenceTd"><span style="color:var(--ds-text-accent-teal-bolder,#164555);">Busca / Lista TipoEnlace (devuelve todos)<br />
+</span></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">GET</td>
+<td class="confluenceTd">/<span>tipoenlaces</span>/{<span>id</span>}</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span>TipoEnlace</span></td>
+<td class="confluenceTd">CSP-<span>TENL</span>-V</td>
+<td class="confluenceTd">Retorna el detalle de <span>TipoEnlace</span></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">PUT</td>
+<td class="confluenceTd">/<span>tipoenlaces<span>/{<span>id</span></span><span>}</span></span></td>
+<td class="confluenceTd"><span>TipoEnlace</span></td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">CSP-<span>TENL</span>-E</td>
+<td class="confluenceTd">Modifica <span>TipoEnlace</span></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">PATCH</td>
+<td class="confluenceTd">/<span>tipoenlaces</span>/{id}/desactivar</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span>TipoEnlace</span></td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Desactiva <span>TipoEnlace</span></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">PATCH</td>
+<td class="confluenceTd">/<span>tipoenlaces</span>/{id}/reactivar</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span>TipoEnlace</span></td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Reactiva <span>TipoEnlace</span></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+## TipoDocumento
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable" style="font-size: 14.0px;letter-spacing: 0.0px;">
+<tbody>
+<tr class="header">
+<th class="confluenceTh">Método</th>
+<th class="confluenceTh">URL</th>
+<th class="confluenceTh">Parámetros</th>
+<th class="confluenceTh">Respuesta</th>
+<th class="confluenceTh">Permisos</th>
+<th class="confluenceTh"><span>Descripción</span></th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd">POST</td>
+<td class="confluenceTd">/tipodocumentos</td>
+<td class="confluenceTd">TipoDocumento</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span>CSP-TDOC-C</span></td>
+<td class="confluenceTd">Crea <span>TipoDocumento</span></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">GET</td>
+<td class="confluenceTd">/<span>tipodocumentos</span></td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Lista[<span>TipoDocumento</span>]</td>
+<td class="confluenceTd"><p>CSP-<span>TDOC</span>-V</p></td>
+<td class="confluenceTd">Busca / Lista <span>TipoDocumento <span><span> (sólo devuelve los activos)</span></span><br />
+</span></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><span style="color:var(--ds-text-accent-teal-bolder,#164555);">GET</span></td>
+<td class="confluenceTd"><span style="color:var(--ds-text-accent-teal-bolder,#164555);">/tipodocumentos/todos</span></td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span style="color:var(--ds-text-accent-teal-bolder,#164555);">Lista[TipoDocumento]</span></td>
+<td class="confluenceTd"><p><span style="color:var(--ds-text-accent-teal-bolder,#164555);">CSP-TDOC-V</span></p></td>
+<td class="confluenceTd"><span style="color:var(--ds-text-accent-teal-bolder,#164555);">Busca / Lista TipoDocumento  (devuelve todos)<br />
+</span></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">GET</td>
+<td class="confluenceTd">/<span>tipodocumentos</span>/{<span>id</span>}</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span>TipoDocumento</span></td>
+<td class="confluenceTd">CSP-<span>TDOC</span>-V</td>
+<td class="confluenceTd">Retorna el detalle de <span>TipoDocumento</span></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">PUT</td>
+<td class="confluenceTd">/<span>tipodocumentos<span>/{<span>id</span>}</span></span></td>
+<td class="confluenceTd"><span>TipoDocumento</span></td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">CSP-<span>TDOC</span>-E</td>
+<td class="confluenceTd">Modifica <span>TipoDocumento</span></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">PATCH</td>
+<td class="confluenceTd">/<span>tipodocumentos</span>/{id}/desactivar</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span>TipoDocumento</span></td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Desactiva <span>TipoDocumento</span></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">PATCH</td>
+<td class="confluenceTd">/<span>tipodocumentos</span>/{id}/reactivar</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span>TipoDocumento</span></td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Reactiva <span>TipoDocumento</span></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+## TipoFinalidad
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="header">
+<th class="confluenceTh">Método</th>
+<th class="confluenceTh">URL</th>
+<th class="confluenceTh">Parámetros</th>
+<th class="confluenceTh">Respuesta</th>
+<th class="confluenceTh">Permisos</th>
+<th class="confluenceTh"><span>Descripción</span></th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd">POST</td>
+<td class="confluenceTd">/tipofinalidades</td>
+<td class="confluenceTd">TipoFinalidad</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span>CSP-TFIN-C</span></td>
+<td class="confluenceTd"><span>Crea <span>TipoFinalidad</span></span></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">GET</td>
+<td class="confluenceTd">/<span>tipofinalidades</span></td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Lista[<span>TipoFinalidad</span>]</td>
+<td class="confluenceTd"><p>CSP-<span>TFIN</span>-V</p></td>
+<td class="confluenceTd">Busca / Lista <span>TipoFinalidad <span><span><span> (sólo devuelve los activos)</span></span></span><br />
+</span></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><span style="color:var(--ds-text-accent-teal-bolder,#164555);">GET</span></td>
+<td class="confluenceTd"><span style="color:var(--ds-text-accent-teal-bolder,#164555);">/tipofinalidades/todos</span></td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span style="color:var(--ds-text-accent-teal-bolder,#164555);">Lista[TipoFinalidad]</span></td>
+<td class="confluenceTd"><p><span style="color:var(--ds-text-accent-teal-bolder,#164555);">CSP-TFIN-V</span></p></td>
+<td class="confluenceTd"><span style="color:var(--ds-text-accent-teal-bolder,#164555);">Busca / Lista TipoFinalidad (devuelve todos)<br />
+</span></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">GET</td>
+<td class="confluenceTd">/<span>tipofinalidades</span>/{<span>id</span>}</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span>TipoFinalidad</span></td>
+<td class="confluenceTd">CSP-<span>TFIN</span>-V</td>
+<td class="confluenceTd">Retorna el detalle de <span>TipoFinalidad</span></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">PUT</td>
+<td class="confluenceTd">/<span>tipofinalidades<span>/{<span>id</span></span><span>}</span></span></td>
+<td class="confluenceTd"><span>TipoFinalidad</span></td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">CSP-<span>TFIN</span>-E</td>
+<td class="confluenceTd">Modifica <span>TipoFinalidad</span></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">PATCH</td>
+<td class="confluenceTd">/<span>tipofinalidades</span>/{id}/desactivar</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span>TipoFinalidad</span></td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Desactiva <span>TipoFinalidad</span></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">PATCH</td>
+<td class="confluenceTd">/<span>tipofinalidades</span>/{id}/reactivar</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span>TipoFinalidad</span></td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Reactiva <span>TipoFinalidad</span></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+## TipoHito
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="header">
+<th class="confluenceTh">Método</th>
+<th class="confluenceTh">URL</th>
+<th class="confluenceTh">Parámetros</th>
+<th class="confluenceTh">Respuesta</th>
+<th class="confluenceTh">Permisos</th>
+<th class="confluenceTh">Descripción</th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd">POST</td>
+<td class="confluenceTd">/tipohitos</td>
+<td class="confluenceTd">TipoHito</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">C<span>SP-<span>THIT</span>-C</span></td>
+<td class="confluenceTd">Crea <span>TipoHito</span></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">GET</td>
+<td class="confluenceTd">/tipohitos</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Lista[<span>TipoHito</span>]</td>
+<td class="confluenceTd"><p>CSP-<span>THIT</span>-V</p></td>
+<td class="confluenceTd">Busca / Lista <span>TipoHito <span> <span><span><span> (sólo devuelve los activos)</span></span></span></span><br />
+</span></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><span style="color:var(--ds-text-accent-teal-bolder,#164555);">GET</span></td>
+<td class="confluenceTd"><span style="color:var(--ds-text-accent-teal-bolder,#164555);">/tipohitos/todos</span></td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span style="color:var(--ds-text-accent-teal-bolder,#164555);">Lista[TipoHito]</span></td>
+<td class="confluenceTd"><p><span style="color:var(--ds-text-accent-teal-bolder,#164555);">CSP-THIT-V</span></p></td>
+<td class="confluenceTd"><span style="color:var(--ds-text-accent-teal-bolder,#164555);">Busca / Lista TipoHito (devuelve todos)<br />
+</span></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">GET</td>
+<td class="confluenceTd">/<span>tipohitos</span>/{<span>id</span>}</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span>TipoHito</span></td>
+<td class="confluenceTd">CSP-<span>THIT</span>-V</td>
+<td class="confluenceTd">Retorna el detalle de <span>TipoHito</span></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">PUT</td>
+<td class="confluenceTd">/<span>tipohitos<span>/{<span>id</span>}</span></span></td>
+<td class="confluenceTd"><span>TipoHito</span></td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">CSP-<span>THIT</span>-E</td>
+<td class="confluenceTd">Modifica <span>TipoHito</span></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">PATCH</td>
+<td class="confluenceTd">/<span>tipohitos</span>/{id}/desactivar</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span>TipoHito</span></td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Desactiva <span>TipoHito</span></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">PATCH</td>
+<td class="confluenceTd">/<span>tipohitos</span>/{id}/reactivar</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span>TipoHito</span></td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Reactiva <span>TipoHito</span></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+## ModeloUnidad
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable">
+<tbody>
+<tr class="odd">
+<td class="highlight-grey confluenceTd" data-highlight-colour="grey"><strong>Método</strong></td>
+<td class="highlight-grey confluenceTd" data-highlight-colour="grey"><strong>URL</strong></td>
+<td class="highlight-grey confluenceTd" data-highlight-colour="grey"><strong>Parámetros</strong></td>
+<td class="highlight-grey confluenceTd" data-highlight-colour="grey"><strong>Respuesta</strong></td>
+<td class="highlight-grey confluenceTd" data-highlight-colour="grey"><strong>Permisos</strong></td>
+<td class="highlight-grey confluenceTd" data-highlight-colour="grey"><strong>Descripción</strong></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">POST</td>
+<td class="confluenceTd"><p>/modelounidades</p></td>
+<td class="confluenceTd">ModeloUnidad</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">CSP-MU-C, CSP-MU-E</td>
+<td class="confluenceTd">Añade ModeloUnidad al ModeloEjecucion</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">GET</td>
+<td class="confluenceTd">/modelounidades</td>
+<td class="confluenceTd">q + s</td>
+<td class="confluenceTd">Lista[ModeloUnidad]</td>
+<td class="confluenceTd"><span>CSP-MU-C, CSP-MU-E</span></td>
+<td class="confluenceTd">Busca / Lista ModeloUnidad <span><span><span><span><span>(sólo devuelve los activos)</span></span></span></span></span></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><span style="color:var(--ds-text-accent-teal-bolder,#164555);">GET</span></td>
+<td class="confluenceTd"><span style="color:var(--ds-text-accent-teal-bolder,#164555);">/modelounidades/todos</span></td>
+<td class="confluenceTd"><span style="color:var(--ds-text-accent-teal-bolder,#164555);">q + s</span></td>
+<td class="confluenceTd"><span style="color:var(--ds-text-accent-teal-bolder,#164555);">Lista[ModeloUnidad]</span></td>
+<td class="confluenceTd"><span style="color:var(--ds-text-accent-teal-bolder,#164555);">CSP-MU-C, CSP-MU-E</span></td>
+<td class="confluenceTd"><span style="color:var(--ds-text-accent-teal-bolder,#164555);">Busca / Lista ModeloUnidad (devuelve todos)</span></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">DELETE</td>
+<td class="confluenceTd">/modelounidades/{id}</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span>CSP-MU-C, CSP-MU-E</span></td>
+<td class="confluenceTd">Elimina ModeloUnidad de ModeloEjecucion</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">GET</td>
+<td class="confluenceTd">/modelounidades/{id}</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">ModeloUnidad</td>
+<td class="confluenceTd"><span>CSP-MU-C, CSP-MU-E</span></td>
+<td class="confluenceTd">Detalle de ModeloUnidad de ModeloEjecucion</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div id="footer" role="contentinfo">
+
+<div class="section footer-body">
+
+Document generated by Confluence on oct 27, 2025 08:52
+
+<div id="footer-logo">
+
+[Atlassian](https://www.atlassian.com/)
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 
 

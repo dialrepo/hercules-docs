@@ -796,7 +796,632 @@
 
   <h1>Index</h1>
 
+<div id="page">
 
+<div id="main" class="aui-page-panel">
+
+<div id="main-header">
+
+<div id="breadcrumb-section">
+
+1.  [Hércules](index.html)
+2.  [Hércules](/)
+3.  [SGI. Sistema de gestión de investigación](//sgi-sistema-de-gestion-de-investigacion)
+4.  [Diseño](//sgi-sistema-de-gestion-de-investigacion/diseno)
+5.  [Componentes](//sgi-sistema-de-gestion-de-investigacion/diseno/componentes)
+6.  [SGI - ESB](//sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb)
+
+</div>
+
+# <span id="title-text"> Hércules : SGI - ESB - SGEPII </span>
+
+</div>
+
+<div id="content" class="view">
+
+<div class="page-metadata">
+
+Created by <span class="author"> Usuario desconocido (alicia.alvarez)</span>, last updated on jun 22, 2022
+
+</div>
+
+<div id="main-content" class="wiki-content group">
+
+
+
+------------------------------------------------------------------------
+
+<div class="toc-macro rbtoc1761551572615">
+
+- [Sistema de Gestión Económica de Protección Industrial e Intelectual](#SGIESBSGEPII-SistemadeGestiónEconómicadeProtecciónIndustrialeIntelectual)
+  - [Entidades](#SGIESBSGEPII-Entidades)
+  - [Enumerados](#SGIESBSGEPII-Enumerados)
+  - [Modelo lógico](#SGIESBSGEPII-Modelológico)
+  - [API](#SGIESBSGEPII-API)
+    - [Definición de los objetos](#SGIESBSGEPII-Definicióndelosobjetos)
+      - [Invencion](#SGIESBSGEPII-Invencion)
+      - [DatoEconomico](#SGIESBSGEPII-DatoEconomico)
+      - [DatoEconomicoDetalle](#SGIESBSGEPII-DatoEconomicoDetalle)
+      - [Columna](#SGIESBSGEPII-Columna)
+      - [Documento (se reutilizaría el mismo que el definido en UM - SGI - ESB - SGE - Ejecución económica)](#SGIESBSGEPII-Documento(sereutilizaríaelmismoqueeldefinidoenUM-SGI-ESB-SGE-Ejecucióneconómica))
+    - [Servicios](#SGIESBSGEPII-Servicios)
+    - [Columnas Gastos](#SGIESBSGEPII-ColumnasGastos)
+    - [Columnas Ingresos](#SGIESBSGEPII-ColumnasIngresos)
+    - [Ejemplos](#SGIESBSGEPII-Ejemplos)
+      - [Columnas de gastos (/gastos-invencion/columnas)](#SGIESBSGEPII-Columnasdegastos(/gastos-invencion/columnas))
+      - [Gastos (/gastos-invencion)](#SGIESBSGEPII-Gastos(/gastos-invencion))
+      - [Detalle gasto (/gastos-invencion/{id})](#SGIESBSGEPII-Detallegasto(/gastos-invencion/%7Bid%7D))
+
+</div>
+
+------------------------------------------------------------------------
+
+# Sistema de Gestión Económica de Protección Industrial e Intelectual
+
+## Entidades
+
+Hay entidades que se reutilizan del modelo de Ejecución económica del SGE y pero se repiten aquí por claridad aunque ya están descritas en el API del SGE: [SGI - ESB - SGE - Ejecución económica](//sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sge/sgi-esb-sge-ejecucion-economica).
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="header">
+<th class="confluenceTh">Entidad</th>
+<th class="confluenceTh">Descripción</th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd">DatoEconomico</td>
+<td class="confluenceTd"><p>Entidad que representa cualquier dato económico. Tendrá que venir identificado por un identificador único, por el proyecto al que pertenece, anualidad, partida presupuestaria y un código económico (opcional en algunos de los casos).</p>
+<p>El resto de campos del dato económico se tratarán como columnas dinámicas. Se indicará por cada columna el identificador del campo, el nombre del campo y si es una columna sobre la que se tiene que hacer una suma para mostrarlo en el SGI como un campo totalizador.</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">Columna</td>
+<td class="confluenceTd"><p>Contiene el listado de columnas que serán mostradas en las pantallas del SGI dependiendo de la pantalla en la que se esté: gastos o repartos.</p>
+<p>Por cada columna se tendrá el identificador del campo, el nombre del campo, si es una columna sobre la que se tiene que hacer una suma para mostrarlo en el SGI como un campo totalizador, que, a los efectos de esta integración para las invenciones, equivaldría a identificar dicha columna como de tipo numéricos y si es <u>la columna</u> (solo puede haber una) que se ha de utilizar para hacer el cálculo del importe a deducir en los repartos de regalías.</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">DatoEconomicoDetalle</td>
+<td class="confluenceTd"><p>Entidad que representa el detalle de un dato económico con todos sus campos para mostrarlo en una pantalla de consulta del dato económico.</p>
+<p>Tendrá unos campos fijos (identificador único, identificador del proyecto al que pertenece, anualidad, partida presupuestaria y un código económico) y unos campos dinámicos. Por cada campo se detallará el nombre y el valor del campo para mostrarlo en la pantalla del SGI</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>Invencion</p></td>
+<td class="confluenceTd">Entidad que representa a la invención cara a poder ser presentada en listas de valores con su título.</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+## Enumerados
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable" style="width: 100.0%;">
+<colgroup>
+<col style="width: 8%" />
+<col style="width: 91%" />
+</colgroup>
+<tbody>
+<tr class="header">
+<th class="confluenceTh">Entidad</th>
+<th class="confluenceTh">Descripción</th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd">TipoDatoEconomico</td>
+<td class="confluenceTd"><p>Puede tomar los siguientes valores:</p>
+<ul>
+<li>Ingreso</li>
+<li>Gasto</li>
+</ul></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">TipoOperacion</td>
+<td class="confluenceTd"><p>Puede tomar los siguientes valores:</p>
+<ul>
+<li>GAS</li>
+<li>REP</li>
+</ul></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+## Modelo lógico
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852927/597872655.png" class="confluence-embedded-image" draggable="false" data-image-src="attachments/597852927/597872655.png" data-unresolved-comment-count="0" data-linked-resource-id="597872655" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="ESB SGEPII Logical Model.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852927" data-linked-resource-container-version="28" tabindex="0" width="600" /></span>
+
+## API
+
+Características generales que todas las API REST deben de cumplir:
+
+- <a href="https://confluence.um.es/confluence/display/HERCULES/Consultas+filtradas+y+paginadas" rel="nofollow">Consultas filtradas y paginadas</a>
+- <a href="https://confluence.um.es/confluence/display/HERCULES/Formatos+de+datos+API" rel="nofollow">Formatos de datos API</a>
+
+### Definición de los objetos
+
+Hay objetos que se reutilizan del modelo de Ejecución económica del SGE y por tanto no se repiten aquí, están descritos en el API del SGE:  [UM - SGI - ESB - SGE - Ejecución económica](//sgi-sistema-de-gestion-de-investigacion/guia-de-implantacion-checklist/um-universidad-de-murcia/sistema-de-gestion-de-investigacion-apis-integracion/sistema-de-gestion-economico-um-sgi-esb-sge/um-sgi-esb-sge-ejecucion-economica).
+
+#### Invencion
+
+<div class="table-wrap">
+
+|            |          |                                      |
+|------------|----------|--------------------------------------|
+| **Nombre** | **Tipo** | **Descripción**                      |
+| id         | String   | Identificador único de la invención. |
+| titulo     | String   | Título de la invención.              |
+
+</div>
+
+#### DatoEconomico
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable" style="width: 86.3239%;">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 7%" />
+<col style="width: 81%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td class="highlight-grey confluenceTd" data-highlight-colour="grey"><strong>Nombre</strong></td>
+<td class="highlight-grey confluenceTd" data-highlight-colour="grey"><strong>Tipo</strong></td>
+<td class="highlight-grey confluenceTd" data-highlight-colour="grey"><strong>Descripción</strong></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">id</td>
+<td class="confluenceTd">String</td>
+<td class="confluenceTd">Identificador del dato económico. Tiene que ser un identificador único.</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">tipo</td>
+<td class="confluenceTd">String</td>
+<td class="confluenceTd"><p>Dos valores:</p>
+<ul>
+<li>Gasto</li>
+<li>Ingreso</li>
+</ul></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">columnas</td>
+<td class="confluenceTd">Map[clave,valor]</td>
+<td class="confluenceTd"><p>Mapa de propiedades.</p>
+<p>El valor será un String salvo en aquellas columnas que sean acumulables (se puede manejar como un importe y hacer operaciones numéricas con ella en el SGI).</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+#### DatoEconomicoDetalle
+
+<div class="table-wrap">
+
+|            |                    |                                                                                |
+|------------|--------------------|--------------------------------------------------------------------------------|
+| **Nombre** | **Tipo**           | **Descripción**                                                                |
+| id         | String             | Identificador del dato económico. Tiene que ser un identificador único.        |
+| documentos | Lista\[Documento\] | Lista de documentos asociados al gasto (sin el contenido binario del fichero). |
+
+</div>
+
+#### Columna
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="header">
+<th class="confluenceTh"><strong>Nombre</strong></th>
+<th class="confluenceTh"><strong>Tipo</strong></th>
+<th class="confluenceTh"><strong>Descripción</strong></th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd">id</td>
+<td class="confluenceTd">String</td>
+<td class="confluenceTd">Identificador de la columna</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">nombre</td>
+<td class="confluenceTd">String</td>
+<td class="confluenceTd">Nombre de la columna</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">acumulable</td>
+<td class="confluenceTd">Boolean</td>
+<td class="confluenceTd"><p>Indica si la columna se puede sumar y por extensión, además indica que es numérica.</p>
+<p>Dos valores:</p>
+<ul>
+<li>true</li>
+<li>false</li>
+</ul></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">importeReparto</td>
+<td class="confluenceTd">Boolean</td>
+<td class="confluenceTd"><p>Indica que la columna se corresponde con el importe que se quiere tener en cuenta a la hora de calcular el reparto de regalías. SOLO UNA COLUMNA PODRÁ TENER ESTE CAMPO ACTIVO.</p>
+<p>Dos valores:</p>
+<ul>
+<li>true</li>
+<li>false</li>
+</ul></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+#### Documento (se reutilizaría el mismo que el definido en [UM - SGI - ESB - SGE - Ejecución económica](//sgi-sistema-de-gestion-de-investigacion/guia-de-implantacion-checklist/um-universidad-de-murcia/sistema-de-gestion-de-investigacion-apis-integracion/sistema-de-gestion-economico-um-sgi-esb-sge/um-sgi-esb-sge-ejecucion-economica))
+
+<div class="table-wrap">
+
+|               |          |                                   |
+|---------------|----------|-----------------------------------|
+| **Nombre**    | **Tipo** | **Descripción**                   |
+| id            | String   | Identificador único del documento |
+| nombre        | String   | Nombre del documento a mostrar    |
+| nombreFichero | String   | Nombre del fichero con extensión  |
+
+</div>
+
+### Servicios
+
+<div class="confluence-information-macro confluence-information-macro-information" role="region" aria-label="Info">
+
+<span class="aui-icon aui-icon-small aui-iconfont-info-filled confluence-information-macro-icon" role="presentation"></span>
+
+<div class="confluence-information-macro-body">
+
+Para componer la URL llamada completa, se debe anteponer a lo indicado en la columna URL lo siguiente: **{HOST}/api/sge-pii**, donde **{HOST}** de deberá sustituir el dominio correspondiente al entorno al que se está accediendo y dicho acceso será por http o https según el caso.
+
+</div>
+
+</div>
+
+Hay servicios a los que no se hace mención en este API porque la funcionalidad que los precisa, por ejemplo, la recuperación del binario de cada documento asociado a un gasto, ha de reutilizar los que ya están definidos en el modelo de Ejecución económica del SGE y por tanto no se repiten aquí, están descritos en el API del SGE: [UM - SGI - ESB - SGE - Ejecución económica](//sgi-sistema-de-gestion-de-investigacion/guia-de-implantacion-checklist/um-universidad-de-murcia/sistema-de-gestion-de-investigacion-apis-integracion/sistema-de-gestion-economico-um-sgi-esb-sge/um-sgi-esb-sge-ejecucion-economica).
+
+<div class="table-wrap">
+
+<table class="aui metadata-summary-macro null" style="width:100%;" data-cql="label = &quot;servicios&quot; and space = currentSpace() and ancestor = currentContent()" data-details-space-key="HERCULES" data-details-content-id="597852927" data-headings="Método, URL, Parámetros, Respuesta, Descripción" data-first-column-heading="Servicio" data-count-comments="false" data-count-likes="false" data-total-pages="1" data-page-size="1000" data-sort-by="null" data-reverse-sort="false" data-blueprint-present="false">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th class="sorter-text">Servicio</th>
+<th>Método</th>
+<th>URL</th>
+<th>Parámetros</th>
+<th>Respuesta</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td class="title" data-content-id="597853051"><a href="/confluence/spaces/HERCULES/pages/597853051/SGI+-+ESB+-+SGEPII+-+Buscar+ingresos">SGI - ESB - SGEPII - Buscar ingresos</a></td>
+<td>GET</td>
+<td>/ingresos-invencion</td>
+<td><p>q+s (query + sort)</p>
+<p>La query estará formada por:</p>
+<ul>
+<li>proyectoId</li>
+</ul></td>
+<td>Lista[<a href="https://confluence.um.es/confluence/display/HERCULES/SGI+-+ESB+-+SGEPII#SGIESBSGEPII-DatoEconomico" rel="nofollow">DatoEconomico</a>]</td>
+<td><p>Listado de todos los ingresos asociados a una invención. La asociación en el SGI se realizará a través de contratos de CSP (proyectos) y el identificador de proyecto a enviar al SGE ha de ser el del proyecto económico en Justo.</p>
+<p>Los ingresos devueltos se corresponderán con las facturas emitidas asociadas a la invención a través del contrato.</p>
+<p>Para cada ingreso se devolverán los siguientes datos:</p>
+<ul>
+<li>Identificador del ingreso</li>
+<li>Mapa de columnas de clave - valor (donde la clave será los id definidos en la llamada /ingresos-pii/columnas y el valor será el valor de la columna. El valor será un String salvo en aquellas columnas que sean acumulables, esto es, se puedan manejar como un importe y hacer operaciones numéricas con ella en el SGI, donde será de tipo Numérico (<u>sin separador de miles y como separador decimal el punto</u>).</li>
+</ul></td>
+</tr>
+<tr class="even">
+<td class="title" data-content-id="597853050"><a href="/confluence/spaces/HERCULES/pages/597853050/SGI+-+ESB+-+SGEPII+-+Buscar+columnas+de+ingresos">SGI - ESB - SGEPII - Buscar columnas de ingresos</a></td>
+<td>GET</td>
+<td>/ingresos-invencion/columnas</td>
+<td><p>q+s (query + sort)</p>
+<p>La query estará formada por:</p>
+<ul>
+<li>proyectoId</li>
+</ul></td>
+<td>Lista[<a href="https://confluence.um.es/confluence/display/HERCULES/SGI+-+ESB+-+SGEPII#SGIESBSGEPII-Columna" rel="nofollow">Columna</a>]</td>
+<td><p>Listado con las columnas que va a devolver la llamada /ingresos-invencion.</p>
+<p>El identificador de proyecto a enviar al SGE ha de ser el del proyecto económico en Justo.</p>
+<p>Por cada columna se indica un id, nombre, si es una columna acumulable (se puede manejar como un importe y hacer operaciones numéricas con ella en el SGI).</p>
+<p>Por defecto, devolverá las siguientes columnas:</p>
+<ul>
+<li>Fecha</li>
+<li>Referencia</li>
+<li>Importe (acumulable = Sí)</li>
+<li>Nº interno de contrato</li>
+<li>Entidad pagadora</li>
+</ul></td>
+</tr>
+<tr class="odd">
+<td class="title" data-content-id="597853062"><a href="/confluence/spaces/HERCULES/pages/597853062/SGI+-+ESB+-+SGEPII+-+Buscar+gastos">SGI - ESB - SGEPII - Buscar gastos</a></td>
+<td>GET</td>
+<td>/gastos-invencion</td>
+<td><p>q+s (query + sort)</p>
+<p>La query estará formada por:</p>
+<ul>
+<li>invencionId</li>
+<li>tipoOperacion</li>
+</ul>
+<p>El tipo de operación puede tomar los siguientes valores:</p>
+<ul>
+<li>GAS (Ejecución económica - Gastos)</li>
+<li>REP (Ejecución económica - Repartos - Gastos a deducir)</li>
+</ul></td>
+<td>Lista[<a href="https://confluence.um.es/confluence/display/HERCULES/SGI+-+ESB+-+SGEPII#SGIESBSGEPII-DatoEconomico" rel="nofollow">DatoEconomico</a>]</td>
+<td><p>Listado de todos los gastos asociados a una invención.</p>
+<p>Para cada gasto se devolverán los siguientes datos:</p>
+<ul>
+<li>Identificador del gasto</li>
+<li>Mapa de columnas de clave - valor (donde la clave será los id definidos en la llamada /gastos-invencion/columnas y el valor será el valor de la columna. El valor será un String salvo en aquellas columnas que sean acumulables, esto es, se puedan manejar como un importe y hacer operaciones numéricas con ella en el SGI, donde será de tipo Numérico (<u>sin separador de miles y como separador decimal el punto</u>).</li>
+</ul>
+<p>Si el tipo de operación se informa con el valor GAS, se han de devolver todos los gastos asociados a la invención.</p>
+<p>Si por el contrario el tipo de operación es REP, se han de devolver del conjunto de gastos asociados a la invención únicamente aquellos que se deban tener en cuenta para el reparto de regalías.</p></td>
+</tr>
+<tr class="even">
+<td class="title" data-content-id="597853061"><a href="/confluence/spaces/HERCULES/pages/597853061/SGI+-+ESB+-+SGEPII+-+Buscar+columnas+gastos">SGI - ESB - SGEPII - Buscar columnas gastos</a></td>
+<td>GET</td>
+<td>/gastos-invencion/columnas</td>
+<td><p>q+s (query + sort)</p>
+<p>La query estará formada por:</p>
+<ul>
+<li>invencionId</li>
+</ul></td>
+<td>Lista[<a href="https://confluence.um.es/confluence/display/HERCULES/SGI+-+ESB+-+SGEPII#SGIESBSGEPII-Columna" rel="nofollow">Columna</a>]</td>
+<td><p>Listado con las columnas que va a devolver la llamada /gastos-invencion.</p>
+<p>Por cada columna se indica un id, nombre, si es una columna acumulable (se puede manejar como un importe y hacer operaciones numéricas con ella en el SGI).</p>
+<p>Por defecto, devolverá las siguientes columnas:</p>
+<ul>
+<li>Fecha</li>
+<li>Referencia</li>
+<li>Concepto</li>
+<li>Tipo</li>
+<li>Importe (acumulable = Sí SOLO para una de las columnas)</li>
+</ul></td>
+</tr>
+<tr class="odd">
+<td class="title" data-content-id="597853048"><a href="/confluence/spaces/HERCULES/pages/597853048/SGI+-+ESB+-+SGEPII+-+Consultar+detalle+de+gasto">SGI - ESB - SGEPII - Consultar detalle de gasto</a></td>
+<td>GET</td>
+<td>/gastos-invencion/{id}</td>
+<td><p>q+s (query + sort)</p>
+<p>La query estará formada por:</p>
+<ul>
+<li>invencionId</li>
+<li>tipoOperacion</li>
+</ul>
+<p>El tipo de operación puede tomar los siguientes valores:</p>
+<ul>
+<li>GAS (Ejecución económica - Gastos)</li>
+<li>REP (Ejecución económica - Repartos - Gastos a deducir)</li>
+</ul></td>
+<td><a href="https://confluence.um.es/confluence/display/HERCULES/SGI+-+ESB+-+SGEPII#SGIESBSGEPII-DatoEconomicoDetalle" rel="nofollow">DatoEconomicoDetalle</a></td>
+<td><p>Detalle de un gasto.</p>
+<p>Para cada gasto se devolverán los siguientes datos:</p>
+<ul>
+<li>Identificador del gasto.</li>
+<li><span style="color:var(--ds-text,#172b4d);">Listado de documentos (identificador, nombre del documento y nombre del fichero, sin el contenido)</span>.</li>
+</ul></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+### Columnas Gastos
+
+<div class="table-wrap">
+
+|     |            |            |                        |
+|-----|------------|------------|------------------------|
+| id  | nombre     | acumulable | descripción            |
+| 1   | Fecha      | false      | Fecha de emisión       |
+| 2   | Referencia | false      | Nº / año factura       |
+| 3   | Concepto   | false      | Descripción de factura |
+| 4   | Tipo       | false      | Tipo de gasto          |
+| 5   | Importe    | true       | Base imponible         |
+
+</div>
+
+### Columnas Ingresos
+
+<div class="table-wrap">
+
+|     |                        |            |                                                        |
+|-----|------------------------|------------|--------------------------------------------------------|
+| id  | nombre                 | acumulable | descripción                                            |
+| 1   | Fecha                  | false      | Fecha de emisión                                       |
+| 2   | Referencia             | false      | Serie-Nº factura / año factura                         |
+| 3   | Importe                | true       | Base imponible                                         |
+| 3   | Nº interno de contrato | false      | Identificador del contrato del SGI asociado al ingreso |
+| 4   | Entidad pagadora       | false      | Nombre del tercero pagador de la factura emitida       |
+
+</div>
+
+### Ejemplos
+
+#### Columnas de gastos (/gastos-invencion/columnas)
+
+<div class="code panel pdl" style="border-width: 1px;">
+
+<div class="codeHeader panelHeader pdl" style="border-bottom-width: 1px;">
+
+**Respuesta**
+
+</div>
+
+<div class="codeContent panelContent pdl">
+
+
+<pre><code class="language-syntaxhighlighter-pre">[
+ {
+   &quot;id&quot;: &quot;1&quot;
+   &quot;nombre&quot;:&quot;Fecha&quot;
+   &quot;acumulable&quot;: &quot;false&quot;
+  },
+  {
+   &quot;id&quot;:&quot;2&quot;,
+   &quot;nombre&quot;:&quot;Referencia&quot;,
+   &quot;acumulable&quot;: &quot;false&quot;
+  },
+  {
+   &quot;id&quot;:&quot;3&quot;,
+   &quot;nombre&quot;:&quot;Concepto&quot;,
+   &quot;acumulable&quot;: &quot;false&quot;
+  },
+  {
+   &quot;id&quot;:&quot;4&quot;,
+   &quot;nombre&quot;:&quot;Tipo&quot;,
+   &quot;acumulable&quot;: &quot;false&quot;
+  },
+  {
+   &quot;id&quot;:&quot;5&quot;,
+   &quot;nombre&quot;:&quot;Importe&quot;,
+   &quot;acumulable&quot;: &quot;true&quot;
+  }
+
+]
+</code></pre>
+
+
+</div>
+
+</div>
+
+#### Gastos (/gastos-invencion)
+
+<div class="code panel pdl" style="border-width: 1px;">
+
+<div class="codeHeader panelHeader pdl" style="border-bottom-width: 1px;">
+
+**Respuesta**
+
+</div>
+
+<div class="codeContent panelContent pdl">
+
+
+<pre><code class="language-syntaxhighlighter-pre">[
+{
+    &quot;id&quot;:&quot;1&quot;,
+    &quot;tipo&quot;:&quot;Gasto&quot;,
+    &quot;columnas&quot;: {
+        &quot;1&quot;:,
+        &quot;2&quot;:&quot;F123456&quot;,
+        &quot;3&quot;:&quot;Informe de patentabilidad&quot;,
+        &quot;4&quot;:&quot;Honorarios&quot;,
+        &quot;5&quot;:55.99
+        }
+
+},
+{
+    &quot;id&quot;:&quot;2&quot;,
+    &quot;tipo&quot;:&quot;Gasto&quot;,
+    &quot;columnas&quot;: {
+        &quot;1&quot;:,
+        &quot;2&quot;:&quot;F123457&quot;,
+        &quot;3&quot;:&quot;Solicitud de patente&quot;,
+        &quot;4&quot;:&quot;Tasa&quot;,
+        &quot;5&quot;:99.99
+        }
+}
+]
+</code></pre>
+
+
+</div>
+
+</div>
+
+#### **Detalle gasto (/gastos-invencion/{id})**
+
+<div class="code panel pdl" style="border-width: 1px;">
+
+<div class="codeHeader panelHeader pdl" style="border-bottom-width: 1px;">
+
+**Respuesta**
+
+</div>
+
+<div class="codeContent panelContent pdl">
+
+
+<pre><code class="language-syntaxhighlighter-pre">&quot;id&quot;:&quot;2&quot;,
+&quot;documentos&quot;:[
+  {
+   &quot;id&quot;: &quot;11&quot;,  
+   &quot;nombre&quot;:&quot;Factura&quot;,
+   &quot;nombreFichero&quot;:&quot;factura.pdf&quot;
+  },
+  {
+    &quot;id&quot;: &quot;12&quot;, 
+    &quot;nombre&quot;:&quot;Otro documento&quot;,
+    &quot;nombreFichero&quot;:&quot;otroDocumento.pdf&quot;
+  }
+]
+</code></pre>
+
+
+</div>
+
+</div>
+
+
+
+
+
+</div>
+
+<div class="pageSection group">
+
+<div class="pageSectionHeader">
+
+## Attachments:
+
+</div>
+
+<div class="greybox" align="left">
+
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [SGI PII Logical Model - Ejecución económica.png](/attachments/597852927/597858686.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [ESB SGEPII Logical Model.png](/attachments/597852927/597872655.png) (image/png)  
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div id="footer" role="contentinfo">
+
+<div class="section footer-body">
+
+Document generated by Confluence on oct 27, 2025 08:52
+
+<div id="footer-logo">
+
+[Atlassian](https://www.atlassian.com/)
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 
 

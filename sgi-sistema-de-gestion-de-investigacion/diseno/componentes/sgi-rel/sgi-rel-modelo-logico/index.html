@@ -796,7 +796,163 @@
 
   <h1>Sgi rel modelo logico</h1>
 
+<div id="page">
 
+<div id="main" class="aui-page-panel">
+
+<div id="main-header">
+
+<div id="breadcrumb-section">
+
+1.  [Hércules](index.html)
+2.  [Hércules](/)
+3.  [SGI. Sistema de gestión de investigación](//sgi-sistema-de-gestion-de-investigacion)
+4.  [Diseño](//sgi-sistema-de-gestion-de-investigacion/diseno)
+5.  [Componentes](//sgi-sistema-de-gestion-de-investigacion/diseno/componentes)
+6.  [SGI - REL](//sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-rel)
+
+</div>
+
+# <span id="title-text"> Hércules : SGI-REL - Modelo lógico </span>
+
+</div>
+
+<div id="content" class="view">
+
+<div class="page-metadata">
+
+Created by <span class="author"> Usuario desconocido (covadonga.garcia)</span>, last updated on may 06, 2022
+
+</div>
+
+<div id="main-content" class="wiki-content group">
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852752/597861341.bmp" class="confluence-embedded-image" draggable="false" data-image-src="attachments/597852752/597861341.bmp" data-unresolved-comment-count="0" data-linked-resource-id="597861341" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="REL Relaciones.bmp" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/bmp" data-linked-resource-container-id="597852752" data-linked-resource-container-version="3" tabindex="0" height="180" /></span>
+
+
+
+## Entidades del modelo lógico de Relaciones
+
+### Entidad Relaciones de un proyecto: "Relacion"
+
+Un proyecto puede quedar relacionado con más elementos del SGI además de con su convocatoria y/o solicitud de origen. Esta tabla identifica las relaciones del proyecto/contrato con otras entidades del SGI. Las entidades con las que se pueden establecer relaciones adicionales sobre un proyecto/contrato son:   
+
+- Otro proyecto/contrato. 
+- Una convocatoria distinta a la que origina el proyecto. Por ejemplo, para vincular el proyecto con otra posible convocatoria con la que pudiera estar relacionado (convocatoria de selección de contratados, a modo de ejemplo). No se establecerá ninguna dependencia entre ambos, simplemente se trata de registrar el vínculo entre ambos. 
+- Invención. 
+
+
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<tbody>
+<tr class="odd">
+<td class="confluenceTd"><p><strong><span>ATTRIBUTES</span></strong><span> </span></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><span>entidadDestinoRef : String  Private</span><span> </span></p>
+<p><span>Identificador de la entidad destino de la relación. Es el identificador único de la tabla correspondiente del SGI de acuerdo al "tipo entidad".</span><span> </span><span> </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>entidadOrigenRef : String  Private</span><span> </span></p>
+<p><span>Identificador de la entidad desde la que se establece la relación. Es el identificador único de la tabla correspondiente del SGI de acuerdo al "tipo entidad".</span><span> </span><span> </span></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><span>id : Long  Private</span><span> </span></p>
+<p><span>Identificador único de la tabla. Secuencia. Clave primaria.</span><span> </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>observaciones : String  Private</span><span> </span></p>
+<p><span>Texto libre.</span><span> </span><span> </span></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><span>tipoEntidadDestino : TipoEntidad  Private</span><span> </span></p>
+<p><span>Identifica el tipo de entidad hacia el que se establece la relación. Es un valor del enumerado "tipo entidad".</span><span> </span><span> </span><span> </span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span>tipoEntidadOrigen : TipoEntidad  Private</span><span> </span></p>
+<p><span> </span><span>Identifica el tipo de entidad desde el que se establece la relación. Es un valor del enumerado "tipo entidad".</span></p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+### Enumerado Tipos de entidad: "TipoEntidad"
+
+Enumerado que recoge los tipos de entidad del SGI con los que se permite establecer una relación de proyecto. Valores: 
+
+- PROYECTO 
+- CONVOCATORIA 
+- INVENCION 
+
+
+
+<div class="table-wrap">
+
+|                          |
+|--------------------------|
+| **ATTRIBUTES**           |
+| Proyecto :   Public      |
+| Convocatoria :   Public  |
+| Invención :   Public     |
+
+</div>
+
+
+
+
+
+<div class="table-wrap">
+
+|                                            |                                   |
+|--------------------------------------------|-----------------------------------|
+| **ASSOCIATIONS**                           |                                   |
+| Association (direction: Unspecified)       |                                   |
+| Source: Public (Enumeration) TipoEntidad   | Target: Public (Class) Relacion   |
+
+</div>
+
+</div>
+
+<div class="pageSection group">
+
+<div class="pageSectionHeader">
+
+## Attachments:
+
+</div>
+
+<div class="greybox" align="left">
+
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [REL Relaciones.bmp](/attachments/597852752/597861341.bmp) (image/bmp)  
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div id="footer" role="contentinfo">
+
+<div class="section footer-body">
+
+Document generated by Confluence on oct 27, 2025 08:52
+
+<div id="footer-logo">
+
+[Atlassian](https://www.atlassian.com/)
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 
 

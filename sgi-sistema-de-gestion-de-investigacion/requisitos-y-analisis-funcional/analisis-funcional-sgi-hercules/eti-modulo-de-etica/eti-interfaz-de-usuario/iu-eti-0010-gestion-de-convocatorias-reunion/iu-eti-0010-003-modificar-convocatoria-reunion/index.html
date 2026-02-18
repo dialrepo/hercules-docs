@@ -796,7 +796,454 @@
 
   <h1>Iu eti 0010 003 modificar convocatoria reunion</h1>
 
+<div id="page">
 
+<div id="main" class="aui-page-panel">
+
+<div id="main-header">
+
+<div id="breadcrumb-section">
+
+1.  [Hércules](index.html)
+2.  [Hércules](/)
+3.  [SGI. Sistema de gestión de investigación](//sgi-sistema-de-gestion-de-investigacion)
+4.  [Requisitos y análisis funcional](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional)
+5.  [Análisis Funcional SGI - Hércules](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules)
+6.  [ETI - Módulo de ética](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica)
+7.  [ETI - Interfaz de Usuario](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario)
+8.  [IU-ETI-0010- Gestión de Convocatorias reunión](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario/iu-eti-0010-gestion-de-convocatorias-reunion)
+
+</div>
+
+# <span id="title-text"> Hércules : IU-ETI-0010-003 Modificar convocatoria reunión </span>
+
+</div>
+
+<div id="content" class="view">
+
+<div class="page-metadata">
+
+Created by <span class="author"> Usuario desconocido (lorena.alvarez)</span>, last updated on jun 06, 2022
+
+</div>
+
+<div id="main-content" class="wiki-content group">
+
+<div class="plugin-tabmeta-details">
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable" style="width: 75.1988%;">
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 84%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<th class="confluenceTh">Cod. IU</th>
+<td class="confluenceTd"><p><strong><strong><strong><strong>IU-ETI-0010-003- Modificar convocatoria reunión<br />
+</strong></strong></strong></strong></p></td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Ver. objetivo</th>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh">Ver. IU</th>
+<td class="confluenceTd">1.0.0</td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Estado</th>
+<td class="confluenceTd"><div class="content-wrapper">
+<p> <span class="status-macro aui-lozenge aui-lozenge-current">LIBERADO_</span></p>
+</div></td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh">Fec. Aprobación</th>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Épica, historia</th>
+<td class="confluenceTd"><div class="content-wrapper">
+<p><br />
+</p>
+</div></td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh">Actores</th>
+<td class="confluenceTd">ACT-ETI-001-Gestor</td>
+</tr>
+<tr class="even">
+<th class="confluenceTh"><p>Frecuencia</p></th>
+<td class="confluenceTd"><div class="content-wrapper">
+<p>Media</p>
+</div></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+# Formulario de Modificar convocatoria reunión
+
+Pantalla compuesta por dos formularios:
+
+- Datos generales: muestra el formulario para modificar los datos generales de una convocatoria de reunión.
+- Asignación memorias: muestra el formulario para asignar las memorias que van a ser evaluadas en la reunión de convocatoria de reunión.
+
+## Datos generales
+
+Si la convocatoria de reunión tiene un acta asociada en estado "Finalizada" no se podrá modificar ningún dato de la convocatoria, sólo se puede consultar.
+
+Si la convocatoria de reunión tiene un acta asociada en estado "En elaboración" únicamente se podrán modificar los campos "Lugar" y "Orden del día" de Datos generales. En asignación de memorias se podrán añadir, modificar o eliminar memorias a la convocatoria.
+
+Si la convocatoria de reunión no tiene un acta asociada se podrán modificar todos los campos de Datos generales salvo el "comité" y el campo "convocatoria" y "fecha límite" en caso de que ya tenga memorias asignadas. En asignación de memorias se podrán añadir, modificar o eliminar memorias a la convocatoria.
+
+<div class="table-wrap">
+
+<table class="wrapped relative-table confluenceTable" style="width: 100.0%;">
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 9%" />
+<col style="width: 58%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<th colspan="3" class="confluenceTd" style="width: 100.0%"><div class="content-wrapper">
+<h2 id="IUETI0010003Modificarconvocatoriareunión-"><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597853552/597868320.png" class="confluence-embedded-image" draggable="false" data-image-src="attachments/597853552/597868320.png" data-unresolved-comment-count="0" data-linked-resource-id="597868320" data-linked-resource-version="8" data-linked-resource-type="attachment" data-linked-resource-default-alias="modificarconvocatoria_datos_generales.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597853552" data-linked-resource-container-version="42" tabindex="0" width="650" /></span></h2>
+</div></th>
+</tr>
+<tr class="even">
+<th class="confluenceTh" style="width: 14.9472%">Nombre</th>
+<th class="confluenceTh" style="width: 12.3477%">Tipo</th>
+<th class="confluenceTh" style="width: 72.7051%">Características / Notas</th>
+</tr>
+<tr class="odd">
+<th class="confluenceTd" style="width: 14.9472%">Código</th>
+<th class="confluenceTd" style="width: 12.3477%"><div class="content-wrapper">
+<p><span>código</span></p>
+<p>Obligatorio</p>
+</div></th>
+<th class="confluenceTd" style="width: 72.7051%"><p>Código con formato ACTAsecuencial/YYYY/COMITE , donde COMITE es el comité elegido, YYYY es el año actual y secuencial es el número del acta que corresponde a la convocatoria, es un secuencial por comité</p>
+<p>Modo consulta</p></th>
+</tr>
+<tr class="even">
+<th class="confluenceTd" style="width: 14.9472%">Comité</th>
+<th class="confluenceTd" style="width: 12.3477%"><p>Desplegable</p>
+<p>Texto corto</p>
+<p>Obligatorio</p></th>
+<th class="confluenceTd" style="width: 72.7051%">Desplegable con los valores:<br />
+&#10;<ul>
+<li>CEISH</li>
+<li>CEEA</li>
+<li>CEIAB</li>
+</ul>
+<p>Modo consulta</p></th>
+</tr>
+<tr class="odd">
+<th class="confluenceTd" style="width: 14.9472%"><p>Fecha evaluación</p></th>
+<th class="confluenceTd" style="width: 12.3477%"><span>fecha</span></th>
+<th class="confluenceTd" style="width: 72.7051%"><p>Calendario para marcar el día.</p>
+<p>No se puede modificar su valor si tiene un acta relacionada.</p></th>
+</tr>
+<tr class="even">
+<th class="confluenceTd" style="width: 14.9472%">Fecha límite</th>
+<th class="confluenceTd" style="width: 12.3477%"><span>fecha</span></th>
+<th class="confluenceTd" style="width: 72.7051%"><p>Calendario para marcar el día (por defecto una semana antes de la reunión).</p>
+<p>No puede ser posterior a la fecha de reunión.</p>
+<p>No se puede modificar su valor si tiene un acta relacionada o tiene memorias asignadas.</p></th>
+</tr>
+<tr class="odd">
+<th class="confluenceTd" style="width: 14.9472%">Convocatoria</th>
+<th class="confluenceTd" style="width: 12.3477%"><p>Desplegable</p>
+<p>Texto corto</p>
+<p>Obligatorio</p></th>
+<th class="confluenceTd" style="width: 72.7051%">Desplegable con los valores:<br />
+&#10;<ul>
+<li>Ordinaria</li>
+<li>Extraordinaria</li>
+<li>Seguimiento</li>
+</ul>
+<p>No se puede modificar su valor si tiene un acta relacionada o tiene memorias asignadas.</p></th>
+</tr>
+<tr class="even">
+<th class="confluenceTd" style="width: 14.9472%">Hora inicio Primera Convocatoria</th>
+<th class="confluenceTd" style="width: 12.3477%"><p>Horas y minutos</p>
+<p><span>Obligatorio</span></p></th>
+<th class="confluenceTd" style="width: 72.7051%"><p>Hora y minutos de inicio de la reunión de primera convocatoria.</p>
+<p>No se puede modificar su valor si tiene un acta relacionada.</p></th>
+</tr>
+<tr class="odd">
+<th class="confluenceTd" style="width: 14.9472%">Hora inicio Segunda Convocatoria</th>
+<th class="confluenceTd" style="width: 12.3477%"><p>Horas y minutos</p>
+<p><span>Opcional</span></p></th>
+<th class="confluenceTd" style="width: 72.7051%"><p>Hora  y minutos de inicio de la reunión de segunda convocatoria.</p>
+<p>No se puede modificar su valor si tiene un acta relacionada.</p></th>
+</tr>
+<tr class="even">
+<th class="confluenceTd" style="width: 14.9472%">Lugar</th>
+<th class="confluenceTd" style="width: 12.3477%"><p>Texto corto</p>
+<p>Obligatorio</p></th>
+<th class="confluenceTd" style="width: 72.7051%"><p>Lugar donde se celebra la reunión.</p>
+<p>No se puede modificar su valor si tiene un acta relacionada es estado Finalizada.</p></th>
+</tr>
+<tr class="odd">
+<th class="confluenceTd" style="width: 14.9472%">Orden del día</th>
+<th class="confluenceTd" style="width: 12.3477%"><p>Texto</p>
+<p>Obligatorio</p></th>
+<th class="confluenceTd" style="width: 72.7051%"><p>Caja de texto para explicar el orden del día de la reunión.</p>
+<p>No se puede modificar su valor si tiene un acta relacionada es estado Finalizada.</p></th>
+</tr>
+<tr class="even">
+<th class="confluenceTd" style="width: 14.9472%">Convocantes</th>
+<th class="confluenceTd" style="width: 12.3477%"><p>Listado seleccionable</p>
+<p>Texto corto</p>
+<p>Opcional</p></th>
+<th class="confluenceTd" style="width: 72.7051%"><p>Listado con todos los miembros activos del comité seleccionado (NIF, nombre, apellidos) más los gestores del módulo de ética. Se autocompleta automáticamente al seleccionar el comité. Aunque se deja poder modificar sobre dicha lista por si se necesita borrar a alguien del listado.</p>
+<p>Datos de cada miembro recuperados a través de <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0020-sgp-integracion-con-sistema-de-gestion-de-personas/req-int-0020-sgp-0030-consultar-datos-generales-de-persona">REQ-INT-0020-SGP-0030 - Consultar datos generales de persona</a><span class="confluence-link">.</span></p>
+<p>No se puede modificar su valor si tiene un acta relacionada.</p></th>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+## Asignación memorias
+
+Pantalla que muestra el formulario para asignar las memorias que van a ser evaluadas en la reunión de convocatoria de reunión. Son registros de la tabla evaluación.
+
+El listado saca aquellas evaluaciones de la convocatoria de reunión que no son revisión mínima. Las evaluaciones debidas a dictamen Favorable pendiente de revisión mínima implican una nueva evaluación pero asociadas a la misma convocatoria de reunión. Por eso puede existir mas de un registro en la tabla evaluación para la mima memoria y misma convocatoria de reunión.
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable" style="width: 75.2137%;">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 9%" />
+<col style="width: 79%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<th colspan="3" class="confluenceTd"><div class="content-wrapper">
+<p><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597853552/597868324.png" class="confluence-embedded-image" draggable="false" data-image-src="attachments/597853552/597868324.png" data-unresolved-comment-count="0" data-linked-resource-id="597868324" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="modificarconvocatoria_asignacin_memorias.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597853552" data-linked-resource-container-version="42" tabindex="0" width="650" /></span></p>
+</div></th>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Nombre</th>
+<th class="confluenceTh"><div class="content-wrapper">
+<p>Tipo</p>
+</div></th>
+<th class="confluenceTh">Características / Notas</th>
+</tr>
+<tr class="odd">
+<th colspan="3" class="highlight-blue confluenceTd" data-highlight-colour="blue">Listado de memorias asignadas a la reunión de convocatoria</th>
+</tr>
+<tr class="even">
+<th class="confluenceTd">Memoria</th>
+<th class="confluenceTd"><p>Desplegable</p>
+<p>Texto corto</p>
+<p>Obligatorio</p></th>
+<th class="confluenceTd">Memoria a evaluar.</th>
+</tr>
+<tr class="odd">
+<th class="confluenceTd"><p>Evaluador1</p></th>
+<th class="confluenceTd"><p>Desplegable</p>
+<p>Texto corto</p>
+<p>Obligatorio</p></th>
+<th class="confluenceTd"><p>Nombre y apellidos del evaluador 1.</p>
+<p>Datos recuperados a través del requisito de integración <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0020-sgp-integracion-con-sistema-de-gestion-de-personas/req-int-0020-sgp-0030-consultar-datos-generales-de-persona">REQ-INT-0020-SGP-0030 - Consultar datos generales de persona</a><span class="confluence-link">.</span></p></th>
+</tr>
+<tr class="even">
+<th class="confluenceTd">Evaluador2</th>
+<th class="confluenceTd"><p>Desplegable</p>
+<p>Texto corto</p>
+<p>Obligatorio</p></th>
+<th class="confluenceTd"><div class="content-wrapper">
+<p>Nombre y apellidos del evaluador 2.</p>
+<p>Datos recuperados a través del requisito de integración <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0020-sgp-integracion-con-sistema-de-gestion-de-personas/req-int-0020-sgp-0030-consultar-datos-generales-de-persona">REQ-INT-0020-SGP-0030 - Consultar datos generales de persona</a>.</p>
+</div></th>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="table-wrap">
+
+<table class="wrapped relative-table confluenceTable" style="width: 75.4376%;">
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 55%" />
+<col style="width: 28%" />
+<col style="width: 10%" />
+</colgroup>
+<tbody>
+<tr class="header">
+<th class="confluenceTh">Acciones</th>
+<th class="confluenceTh">Descripción</th>
+<th class="confluenceTh"> Enlace CU.</th>
+<th class="confluenceTh">Permisos</th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd">Añadir</td>
+<td class="confluenceTd"><p>Se va a la pantalla de Nueva asignación de memoria.</p>
+<p>Solo se podrá añadir si no ha empezado la reunión de evaluación.</p></td>
+<td class="confluenceTd"><a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-casos-de-uso/cu-eti-0010-gestion-convocatorias-reunion/cu-eti-0010-004-asignacion-de-memorias-anadir">CU-ETI-0010-004 - Asignación de memorias - Añadir</a></td>
+<td class="confluenceTd"><p>ETI-CNV-E</p>
+<p><br />
+</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">Editar</td>
+<td class="confluenceTd"><p>Se va a la pantalla de Modificación asignación de memoria.</p>
+<p>Solo se podrá editar si no ha empezado la reunión de evaluación.</p></td>
+<td class="confluenceTd"><a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-casos-de-uso/cu-eti-0010-gestion-convocatorias-reunion/cu-eti-0010-007-asignacion-de-memorias-modificar">CU-ETI-0010-007 - Asignación de memorias - Modificar</a></td>
+<td class="confluenceTd"><p>ETI-CNV-E</p>
+<p><br />
+</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">Eliminar</td>
+<td class="confluenceTd"><p>Se podrá eliminar siempre y cuando no haya empezado la reunión de evaluación. Dichos cambios se hacen en memoria, no se consolidan hasta pulsar el botón Guardar.</p>
+<p>No se podrá eliminar si hay dictamen o ya existan comentarios creados, es decir, se ha empezado a trabajar en la evaluación.</p>
+<p>Solo se podrá eliminar si no ha empezado la reunión de evaluación.</p></td>
+<td class="confluenceTd"><span><a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-casos-de-uso/cu-eti-0010-gestion-convocatorias-reunion/cu-eti-0010-005-asignacion-de-memorias-eliminar">CU-ETI-0010-005 - Asignación de memorias - Eliminar</a></span></td>
+<td class="confluenceTd"><p>ETI-CNV-E</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+## Botones generales a la pantalla
+
+<div class="table-wrap">
+
+<table class="wrapped relative-table confluenceTable" style="width: 75.6565%;">
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 56%" />
+<col style="width: 27%" />
+<col style="width: 10%" />
+</colgroup>
+<tbody>
+<tr class="header">
+<th class="confluenceTh">Acciones</th>
+<th class="confluenceTh">Descripción</th>
+<th class="confluenceTh"> Enlace CU.</th>
+<th class="confluenceTh">Permiso</th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd">Guardar</td>
+<td class="confluenceTd"><p>Se modifica la convocatoria.</p>
+<p>Para los nuevos registros de memoria creados:</p>
+<ul>
+<li>Se crean las evaluaciones para las memorias nuevas del listado de memorias rellenando los datos de memoria, convocatoria de reunión, versión (se calcula buscando la última versión de la memoria mas uno), que no son de revisión mínima y fecha dictamen con la fecha de evaluación de la convocatoria.</li>
+<li>Se les cambia el estado de las memoria a "En evaluación"</li>
+<li>Se notifica al investigador/solicitante de la fecha de convocatoria de su evaluación</li>
+</ul>
+<p>En caso de eliminar una memoria se cambia el estado de la memoria a "En secretaria" y se borra la evaluación creada, siempre y cuando no hay dictamen ni haya comentarios creados, es decir, no se ha empezado a trabajar en la evaluación.</p></td>
+<td class="confluenceTd"><p><a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-casos-de-uso/cu-eti-0010-gestion-convocatorias-reunion/cu-eti-0010-003-modificar-convocatoria-reunion-datos-generales-guardar">CU-ETI-0010-003 - Modificar Convocatoria reunión - Datos generales - Guardar</a></p>
+<p><a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-casos-de-uso/cu-eti-0010-gestion-convocatorias-reunion/cu-eti-0010-006-modificar-convocatoria-reunion-asignacion-de-memorias-guardar">CU-ETI-0010-006 - Modificar Convocatoria reunión - Asignación de memorias - Guardar</a></p></td>
+<td class="confluenceTd">ETI-CNV-E</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">Cancelar</td>
+<td class="confluenceTd">Retorna al listado de Convocatorias reunión.</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+## Acciones
+
+### Por actor
+
+<div class="plugin-tabmeta-details">
+
+<div class="table-wrap">
+
+|                    |           |
+|--------------------|-----------|
+| ACT-ETI-001-Gestor | ETI-CNV-E |
+
+</div>
+
+</div>
+
+### Todos los permisos de acceso
+
+<div class="plugin-tabmeta-details">
+
+<div class="table-wrap">
+
+|          |           |
+|----------|-----------|
+| Permisos | ETI-CNV-E |
+
+</div>
+
+</div>
+
+</div>
+
+<div class="pageSection group">
+
+<div class="pageSectionHeader">
+
+## Attachments:
+
+</div>
+
+<div class="greybox" align="left">
+
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [listadoconvocatorias.png](/attachments/597853552/597868325.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [nuevaconvocatoria.png](/attachments/597853552/597868323.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [modificarconvocatoria.png](/attachments/597853552/597868322.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [modificarconvocatoria_asignacin_memorias.png](/attachments/597853552/597868324.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [modificarconvocatoria_datos_generales.png](/attachments/597853552/597868321.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [modificarconvocatoria_datos_generales.png](/attachments/597853552/597869378.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [modificarconvocatoria_datos_generales.png](/attachments/597853552/597869562.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [modificarconvocatoria_datos_generales.png](/attachments/597853552/597868973.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [modificarconvocatoria_datos_generales.png](/attachments/597853552/597868976.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [modificarconvocatoria_datos_generales.png](/attachments/597853552/597880764.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [modificarconvocatoria_datos_generales.png](/attachments/597853552/597857066.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [modificarconvocatoria_datos_generales.png](/attachments/597853552/597868320.png) (image/png)  
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div id="footer" role="contentinfo">
+
+<div class="section footer-body">
+
+Document generated by Confluence on oct 27, 2025 08:47
+
+<div id="footer-logo">
+
+[Atlassian](https://www.atlassian.com/)
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 
 

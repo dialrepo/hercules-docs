@@ -796,7 +796,401 @@
 
   <h1>Iu gen 0080 busqueda de empresas</h1>
 
+<div id="page">
 
+<div id="main" class="aui-page-panel">
+
+<div id="main-header">
+
+<div id="breadcrumb-section">
+
+1.  [Hércules](index.html)
+2.  [Hércules](/)
+3.  [SGI. Sistema de gestión de investigación](//sgi-sistema-de-gestion-de-investigacion)
+4.  [Requisitos y análisis funcional](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional)
+5.  [Análisis Funcional SGI - Hércules](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules)
+6.  [GEN - Aspectos generales](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales)
+7.  [SHA - Buscadores y listados comunes](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/sha-buscadores-y-listados-comunes)
+
+</div>
+
+# <span id="title-text"> Hércules : IU-GEN-0080 - Búsqueda de empresas </span>
+
+</div>
+
+<div id="content" class="view">
+
+<div class="page-metadata">
+
+Created by <span class="author"> Usuario desconocido (covadonga.garcia)</span>, last updated by <span class="editor"> Usuario desconocido (alicia.alvarez)</span> on feb 17, 2022
+
+</div>
+
+<div id="main-content" class="wiki-content group">
+
+<div class="contentLayout2">
+
+<div class="columnLayout single" layout="single">
+
+<div class="cell normal" data-type="normal">
+
+<div class="innerCell">
+
+<div class="plugin-tabmeta-details">
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable" style="width: 75.1988%;">
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 84%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<th class="confluenceTh">Cod. IU</th>
+<td class="confluenceTd"><p><strong><strong><strong><strong>IU-GEN<strong>-0080 - Búsqueda de empresas</strong></strong></strong></strong></strong></p></td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Ver. objetivo</th>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh">Ver. IU</th>
+<td class="confluenceTd">1.0.0</td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Estado</th>
+<td class="confluenceTd"><div class="content-wrapper">
+<div class="content-wrapper">
+<span class="status-macro aui-lozenge aui-lozenge-moved">IN PROGRESS</span>
+</div>
+</div></td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh">Fec. Aprobación</th>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Épica, historia</th>
+<td class="confluenceTd"><div class="content-wrapper">
+<p><br />
+</p>
+</div></td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh">Actores</th>
+<td class="confluenceTd"><p><span style="color:var(--ds-background-accent-red-bolder,#c9372c);"><span style="color:var(--ds-text,#172b4d);">ACT-CSP-003-Gestor, ACT-CSP-004-Administrador, ACT-CSP-005-Visor, ACT-CSP-001-Investigador, ACT-PII-001-Gestor</span></span><span style="color:var(--ds-text,#172b4d);"><br />
+</span></p></td>
+</tr>
+<tr class="even">
+<th class="confluenceTh"><p>Frecuencia</p></th>
+<td class="confluenceTd">Baja</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+# Autocomplete de búsqueda de empresas
+
+En los formularios donde se presenta el acceso al buscador de empresas, descrito en el apartado posterior, existirá además un comportamiento especial, estos campos "empresa" tendrán un comportamiento autocomplete, de forma que:
+
+- El campo debe ser editable para poder introducir un criterio de búsqueda en él antes de pulsar el botón buscar.
+- Según el usuario introduce texto en el campo, se mostrará una lista dinámica que irá filtrando por el nombre/razón social los resultados encontrados (Autocomplete). Seleccionando uno de ellos, se asociará el identificador de esa empresa donde corresponda. Si no hay resultados, no muestra el listado.
+- Si el usuario pulsa buscar sin introducir ningún texto por el que filtrar, se abrirá en un popup el formulario de búsqueda de empresas descrito a continuación.
+
+# Formulario de búsqueda de empresas
+
+Pantalla que implementa el buscador de empresas, común a todo el SGI. 
+
+Se podrá abrir en una ventana emergente o popup desde las gestiones que necesiten utilizarlo pulsando el botón Buscar asociado al campo de empresa existente en dicha gestión o formulario.
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable" style="width: 87.046%;">
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 12%" />
+<col style="width: 73%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<th colspan="3" class="confluenceTd"><div class="content-wrapper">
+<p><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852553/597884598.png" class="confluence-embedded-image confluence-content-image-border" draggable="false" data-image-src="attachments/597852553/597884598.png" data-unresolved-comment-count="0" data-linked-resource-id="597884598" data-linked-resource-version="3" data-linked-resource-type="attachment" data-linked-resource-default-alias="01_BuscarEmpresaPopupExistenResultados.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852553" data-linked-resource-container-version="25" tabindex="0" width="800" /></span></p>
+</div></th>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Nombre</th>
+<th class="confluenceTh">Tipo</th>
+<th class="confluenceTh"><p>Características / Notas</p></th>
+</tr>
+<tr class="odd">
+<th colspan="3" class="highlight-blue confluenceTd" data-highlight-colour="blue">Formulario de búsqueda</th>
+</tr>
+<tr class="even">
+<th class="confluenceTd">Campo único de entrada</th>
+<th class="confluenceTd">Texto</th>
+<th class="confluenceTd"><span>Campo único de búsqueda. El valor introducido se pasará como parámetro a la función <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0015-sgemp-integracion-con-sistema-de-gestion-de-empresas/req-int-0015-sgemp-0020-buscar-empresa">REQ-INT-0015-SGEMP-0020 - Buscar empresa</a></span></th>
+</tr>
+<tr class="odd">
+<th colspan="3" class="highlight-blue confluenceTd" data-highlight-colour="blue">Listado de resultados</th>
+</tr>
+<tr class="even">
+<th class="confluenceTd"><span>Nº Identificación fiscal</span></th>
+<th class="confluenceTd"><span>Texto</span></th>
+<th class="confluenceTd">Número de identificación fiscal de la empresa, de acuerdo a los datos disponibles en el sistema de gestión económico (o en el que corresponda en cada Universidad)</th>
+</tr>
+<tr class="odd">
+<th class="confluenceTd"><span>Entidad / Razón social<br />
+</span></th>
+<th class="confluenceTd"><span>Texto</span></th>
+<th class="confluenceTd">Nombre y/o razón social de la empresa, de acuerdo a los datos disponibles en el sistema de gestión de empresas (o en el que corresponda en cada Universidad)</th>
+</tr>
+<tr class="even">
+<th class="confluenceTd">Datos económicos</th>
+<th class="confluenceTd">Texto corto</th>
+<th class="confluenceTd">Información acerca de si la entidad dispone de datos económicos o no. Posibles valores: Sí / No.</th>
+</tr>
+<tr class="odd">
+<th class="confluenceTd">Seleccionar</th>
+<th class="confluenceTd">Icono de acción</th>
+<th class="confluenceTd">Acción "seleccionar".</th>
+</tr>
+<tr class="even">
+<th class="confluenceTd">Ver</th>
+<th class="confluenceTd">Icono de acción</th>
+<th class="confluenceTd">Acción "ver".</th>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="table-wrap">
+
+<table class="wrapped relative-table confluenceTable" style="width: 87.178%;">
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 57%" />
+<col style="width: 14%" />
+<col style="width: 15%" />
+</colgroup>
+<tbody>
+<tr class="header">
+<th class="confluenceTh">Acciones</th>
+<th class="confluenceTh">Descripción</th>
+<th class="confluenceTh"> Enlace CU.</th>
+<th class="confluenceTh">Permisos</th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd">Buscar</td>
+<td class="confluenceTd"><p>Invoca a la función de búsqueda y muestra el listado de resultados.</p>
+<p>Se invocará a la función de búsqueda, <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0015-sgemp-integracion-con-sistema-de-gestion-de-empresas/req-int-0015-sgemp-0020-buscar-empresa">REQ-INT-0015-SGEMP-0020 - Buscar empresa</a>, proporcionada por el módulo de integración.</p>
+<p>Los parámetros a pasar a esta función serán:</p>
+<ul>
+<li>Valor introducido en el campo único de búsqueda que presenta el formulario.</li>
+</ul></td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span>No se necesita permiso, cualquier usuario que haya podido acceder puede realizar la búsqueda</span>.</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">Limpiar</td>
+<td class="confluenceTd">Vacía los datos introducidos en el formulario de búsqueda de empresas, en este caso, el campo único de búsqueda.</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">Seleccionar</td>
+<td class="confluenceTd"><p>Selecciona la empresa del listado.</p>
+<p>Tras seleccionar una empresa, se devuelve la misma al módulo que invoca al buscador y se cierra el buscador.</p></td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">Ver</td>
+<td class="confluenceTd"><p>Muestra en una ventana emergente sobre la ventana del buscador el formulario con los datos ampliados de la empresa <a href="/confluence/pages/createpage.action?spaceKey=HERCULES&amp;title=IU-GEN-0082+-+Ver+detalle+-+Solicitar+modificaci%C3%B3n+de+empresa&amp;linkCreation=true&amp;fromPageId=597852553" class="createlink">IU-GEN-0082 - Ver detalle - Solicitar modificación de empresa</a>.</p>
+<p>Los datos se mostrarán en modo solo lectura o en modo edición dependiendo del rol o los permisos de los que disponga el usuario.</p></td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><p>ESB-EMP-V</p>
+<p>ESB-EMP-E</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">Solicitar alta de entidad</td>
+<td class="confluenceTd">Muestra en una ventana emergente el formulario <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/sha-buscadores-y-listados-comunes/iu-gen-0081-solicitar-alta-de-empresa">IU-GEN-0081 - Solicitar alta de empresa</a>.</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">ESB-EMP-C</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">Cancelar</td>
+<td class="confluenceTd">No se realiza ninguna acción, se cierra el formulario sin devolver ningún dato al formulario de invocación.</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+## Interfaces de usuario y casos de uso relacionados
+
+</div>
+
+</div>
+
+</div>
+
+<div class="columnLayout two-equal" layout="two-equal">
+
+<div class="cell normal" data-type="normal">
+
+<div class="innerCell">
+
+<img src="plugins/servlet/confluence/placeholder/unknown-macro" class="wysiwyg-unknown-macro" />
+
+</div>
+
+</div>
+
+<div class="cell normal" data-type="normal">
+
+<div class="innerCell">
+
+<img src="plugins/servlet/confluence/placeholder/unknown-macro" class="wysiwyg-unknown-macro" />
+
+</div>
+
+</div>
+
+</div>
+
+<div class="columnLayout single" layout="single">
+
+<div class="cell normal" data-type="normal">
+
+<div class="innerCell">
+
+## Permisos de acceso a la pantalla
+
+### Por actor
+
+<div class="plugin-tabmeta-details">
+
+<div class="table-wrap">
+
+<table class="wrapped relative-table confluenceTable" style="width: 88.3026%;">
+<colgroup>
+<col style="width: 21%" />
+<col style="width: 78%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<th class="confluenceTh"><span style="color:var(--ds-background-accent-red-bolder,#c9372c);"><span style="color:var(--ds-text,#172b4d);">ACT-CSP-001-Investigador</span></span></th>
+<td class="confluenceTd"><span>ESB-EMP</span><span>-</span><span>V</span></td>
+</tr>
+<tr class="even">
+<th class="confluenceTh"><span style="color:var(--ds-background-accent-red-bolder,#c9372c);"><span style="color:var(--ds-text,#172b4d);">ACT-CSP-003-Gestor</span></span></th>
+<td class="confluenceTd">ESB-EMP-E, <span>ESB-EMP</span><span>-C</span></td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh"><span style="color:var(--ds-background-accent-red-bolder,#c9372c);"><span style="color:var(--ds-text,#172b4d);">ACT-CSP-004-Administrador</span></span><span style="color:var(--ds-text,#172b4d);"><br />
+</span></th>
+<td class="confluenceTd">ESB-EMP-E, <span>ESB-EMP</span><span>-C</span></td>
+</tr>
+<tr class="even">
+<th class="confluenceTh"><span style="color:var(--ds-background-accent-red-bolder,#c9372c);"><span style="color:var(--ds-text,#172b4d);"> ACT-CSP-005-Visor</span></span></th>
+<td class="confluenceTd"><span>ESB-EMP</span><span>-</span><span>V</span></td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh"><span style="color:var(--ds-text,#172b4d);">ACT-PII-001-Gestor</span></th>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">ESB-EMP-E, ESB-EMP-C</span></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+### Todos los permisos de acceso
+
+<div class="plugin-tabmeta-details">
+
+<div class="table-wrap">
+
+|          |                                 |
+|----------|---------------------------------|
+| Permisos | ESB-EMP-V, ESB-EMP-E, ESB-EMP-C |
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="pageSection group">
+
+<div class="pageSectionHeader">
+
+## Attachments:
+
+</div>
+
+<div class="greybox" align="left">
+
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [01_BuscarEmpresa.png](/attachments/597852553/597855457.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [02_BuscarEmpresaSinResultados.png](/attachments/597852553/597855514.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [01_BuscarEmpresa.png](/attachments/597852553/597855814.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [01_BuscarEmpresa.png](/attachments/597852553/597855510.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [01_BuscarEmpresaPopupExistenResultados.png](/attachments/597852553/597884599.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [01_BuscarEmpresaPopupExistenResultados.png](/attachments/597852553/597859751.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [01_BuscarEmpresaPopupExistenResultados.png](/attachments/597852553/597884598.png) (image/png)  
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div id="footer" role="contentinfo">
+
+<div class="section footer-body">
+
+Document generated by Confluence on oct 27, 2025 08:38
+
+<div id="footer-logo">
+
+[Atlassian](https://www.atlassian.com/)
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 
 

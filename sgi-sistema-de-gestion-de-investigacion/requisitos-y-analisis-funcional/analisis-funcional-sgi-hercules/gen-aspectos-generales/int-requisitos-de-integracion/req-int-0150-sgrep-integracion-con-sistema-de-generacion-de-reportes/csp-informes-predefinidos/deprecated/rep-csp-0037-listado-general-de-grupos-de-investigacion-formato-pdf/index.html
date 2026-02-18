@@ -796,7 +796,605 @@
 
   <h1>Rep csp 0037 listado general de grupos de investigacion formato pdf</h1>
 
+<div id="page">
 
+<div id="main" class="aui-page-panel">
+
+<div id="main-header">
+
+<div id="breadcrumb-section">
+
+1.  [Hércules](index.html)
+2.  [Hércules](/)
+3.  [SGI. Sistema de gestión de investigación](//sgi-sistema-de-gestion-de-investigacion)
+4.  [Requisitos y análisis funcional](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional)
+5.  [Análisis Funcional SGI - Hércules](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules)
+6.  [GEN - Aspectos generales](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales)
+7.  [INT - Requisitos de integración](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion)
+8.  [REQ-INT-0150-SGREP - Integración con Sistema de Generación de Reportes](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0150-sgrep-integracion-con-sistema-de-generacion-de-reportes)
+9.  [CSP - Informes predefinidos](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0150-sgrep-integracion-con-sistema-de-generacion-de-reportes/csp-informes-predefinidos)
+10. [\_deprecated](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0150-sgrep-integracion-con-sistema-de-generacion-de-reportes/csp-informes-predefinidos/deprecated)
+
+</div>
+
+# <span id="title-text"> Hércules : REP-CSP-0037 - Listado general de grupos de investigación - Formato pdf </span>
+
+</div>
+
+<div id="content" class="view">
+
+<div class="page-metadata">
+
+Created by <span class="author"> Usuario desconocido (lorena.alvarez)</span>, last updated on mar 17, 2022
+
+</div>
+
+<div id="main-content" class="wiki-content group">
+
+<div class="contentLayout2">
+
+<div class="columnLayout single" layout="single">
+
+<div class="cell normal" data-type="normal">
+
+<div class="innerCell">
+
+<div class="plugin-tabmeta-details">
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="odd">
+<th class="confluenceTh">Cod. REP</th>
+<td class="confluenceTd"><p><strong>REP-CSP-0037 - Listado general de grupos de investigación - Formato pdf</strong></p></td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Ver. Objetivo</th>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh">Ver. REP</th>
+<td class="confluenceTd">1.0.0</td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Estado</th>
+<td class="confluenceTd"><div class="content-wrapper">
+<span class="status-macro aui-lozenge conf-macro output-inline">PENDIENTE</span>
+</div></td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh">Fec. Aprobación</th>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Épica, historia</th>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh">Frecuencia</th>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+## Diseño Informe 
+
+Se debe de generar un informe en formato PDF que reciba como parámetros de entrada el título del listado y la lista de bloques de datos a incluir. El informe contendrá la información detallada de proyectos. Se listarán todos los grupos de investigación recuperados con el detalle de los mismos. Se incluirá el parámetro de entrada "título" como título del informe.
+
+El listado se mostrará agrupado por proyecto. Cada vez que se cambie de proyecto se resaltará la línea de texto en el informe y a continuación comenzará a listarse su detalle.
+
+<span style="letter-spacing: 0.0px;">El detalle se visualizará en función del bloque de datos:</span>
+
+- <span style="letter-spacing: 0.0px;">A dos columnas. Si</span>endo la primera columna la etiqueta de la misma y la segunda columna el contenido recuperado con los datos del grupo.
+- En varias filas, pero también a dos columnas, de forma que varias filas compartan una misma columna de título. La primera columna será el título y en la segunda columna, saltando de fila, se mostrará el contenido.  ejemplo
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852499/597858285.png" class="confluence-embedded-image" draggable="false" data-image-src="attachments/597852499/597858285.png" data-unresolved-comment-count="0" data-linked-resource-id="597858285" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="export-proyectos_equipo.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852499" data-linked-resource-container-version="5" tabindex="0" width="450" /></span>
+
+<span style="letter-spacing: 0.0px;">Habrá bloques de datos que se repitan, en este caso la etiqueta será representativa del bloque de datos, e incluirá entre paréntesis el nombre de las columnas que se mostrarán para cada elemento. Cada elemento repetido se mostrará de alguna de las formas indicadas previamente (dependiendo de cada bloque de datos).</span>
+
+<span style="letter-spacing: 0.0px;">A continuación se indica el mapeo de los nombres de columnas del fichero de salida con la tabla y campo del SGI desde el que deben ser recuperadas. Se indica también el bloque de datos al que pertenece cada columna, así como el modo en el que se visualizará (a dos columnas o repeticiones de filas).</span>
+
+Ejemplo:  <a href="attachments/597852499/597858357.pdf" data-linked-resource-id="597858357" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="grupo_with_list.pdf" data-nice-type="PDF Document" data-linked-resource-content-type="application/pdf" data-linked-resource-container-id="597852499" data-linked-resource-container-version="5">grupo_with_list.pdf</a>
+
+<div class="table-wrap">
+
+<table class="wrapped relative-table confluenceTable" style="width: 79.4786%;">
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 26%" />
+<col style="width: 9%" />
+<col style="width: 41%" />
+<col style="width: 9%" />
+</colgroup>
+<tbody>
+<tr class="header">
+<th class="confluenceTh">Bloque de datos</th>
+<th class="confluenceTh">Columna informe</th>
+<th class="confluenceTh">Formato</th>
+<th class="confluenceTh">Campo SGI</th>
+<th class="confluenceTh">Repetición</th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Nombre</td>
+<td class="confluenceTd">Dos columnas</td>
+<td class="confluenceTd">Campo "nombre" de la tabla "grupo"</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Investigador/a principal</td>
+<td class="confluenceTd">Dos columnas</td>
+<td class="confluenceTd">Se recuperarán el Nombre y apellidos por medio de <a href="https://confluence.um.es/confluence/display/HERCULES/REQ-INT-0020-SGP-0030+-+Consultar+datos+generales+de+persona" rel="nofollow">REQ-INT-0020-SGP-0030 - Consultar datos generales de persona</a> del investigador/a principal, es decir, de todos los miembros del grupo de investigación (tabla "grupo equipo") aquel que <strong>actualmente</strong> (a fecha actual) tiene el "rol" con el flag "principal" a true. En caso de existir mas de una persona, se mostrará el que tenga el mayor porcentaje de dedicación al grupo (campo "participación" de la tabla "grupo equipo"). Y en caso de coincidir se mostrarán separados por coma. </td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Código</td>
+<td class="confluenceTd">Dos columnas</td>
+<td class="confluenceTd">Campo "codigo" de la tabla "grupo"</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Código de identificación SGE</td>
+<td class="confluenceTd">Dos columnas</td>
+<td class="confluenceTd">Código de identificación SGE</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Fecha inicio</td>
+<td class="confluenceTd">Dos columnas</td>
+<td class="confluenceTd">Fecha inicio</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Fecha fin</td>
+<td class="confluenceTd">Dos columnas</td>
+<td class="confluenceTd">Campo "fecha fin" de la tabla "grupo"</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Tipo grupo</td>
+<td class="confluenceTd">Dos columnas</td>
+<td class="confluenceTd"><p>Valor del enumerado "tipo grupo" para el registro de la tabla "grupo tipo" referenciado desde el campo "tipo" de la tabla "grupo"</p></td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">Equipo investigación</td>
+<td class="confluenceTd">Equipo (Nombre - E-mail - Rol en el equipo - Fecha inicio - Fecha fin - Participación)</td>
+<td class="confluenceTd">Varias filas</td>
+<td class="confluenceTd">Se mostrarán todos los miembros del equipo de investigación del grupo, tabla "grupo equipo"</td>
+<td class="confluenceTd">Sí</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Miembro X:</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Campos "nombre" y "apellidos" recuperados a través de <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0020-sgp-integracion-con-sistema-de-gestion-de-personas/req-int-0020-sgp-0030-consultar-datos-generales-de-persona">REQ-INT-0020-SGP-0030 - Consultar datos generales de persona</a> para la referenciada indicada en el campo "persona ref" de la tabla "grupo equipo".</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Campo "email" con el indicador "principal" a "true" recuperado a través de <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0020-sgp-integracion-con-sistema-de-gestion-de-personas/req-int-0020-sgp-0030-consultar-datos-generales-de-persona">REQ-INT-0020-SGP-0030 - Consultar datos generales de persona</a> para la referenciada indicada en el campo "persona ref" de la tabla "grupo equipo".</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Campo "nombre" de la tabla "rol proyecto" para la referencia establecida por el campo "rol proyecto" de la tabla "grupo equipo".</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Campo "fecha inicio" de la tabla "grupo equipo".</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Campo "fecha fin" de la tabla "grupo equipo".</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Campo "participación" de la tabla "grupo equipo".</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">Responsable económico</td>
+<td class="confluenceTd">Responsable económico (Nombre - E-mail - Fecha inicio - Fecha fin)</td>
+<td class="confluenceTd">Varias filas</td>
+<td class="confluenceTd">Se mostrarán todos los responsables económicos (histórico) del grupo, tabla "grupo responsable económico"</td>
+<td class="confluenceTd">Sí</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Responsable económico X: </td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Campos "nombre" y "apellidos" recuperados a través de <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0020-sgp-integracion-con-sistema-de-gestion-de-personas/req-int-0020-sgp-0030-consultar-datos-generales-de-persona">REQ-INT-0020-SGP-0030 - Consultar datos generales de persona</a> para la referenciada indicada en el campo "persona ref" de la tabla "grupo responsable económico".</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Campo "email" con el indicador "principal" a "true" recuperado a través de <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0020-sgp-integracion-con-sistema-de-gestion-de-personas/req-int-0020-sgp-0030-consultar-datos-generales-de-persona">REQ-INT-0020-SGP-0030 - Consultar datos generales de persona</a> para la referenciada indicada en el campo "persona ref" de la tabla "grupo responsable económico".</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Campo "fecha inicio" de la tabla "grupo responsable económico".</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Campo "fecha fin" de la tabla "grupo responsable económico".</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">Líneas de investigación</td>
+<td class="confluenceTd">Líneas investigación (Nombre - Fecha inicio - Fecha fin - Miembros adscritos - Clasificaciones - Equipos instrumentales)</td>
+<td class="confluenceTd">Varias filas</td>
+<td class="confluenceTd">Se mostrarán todos las líneas de investigación del grupo, tabla "grupo línea investigación". Por cada línea de investigación se tendrá que mostrar la información de sus miembros adscritos (tabla "grupo línea investigador") separados por ";", sus clasificaciones (tabla "grupo línea clasificación)  separadas por ";" y sus equipos instrumentales (tabla "grupo línea equipo instrumental") separados por ";"</td>
+<td class="confluenceTd">Sí</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Línea X:</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Campo "nombre" de la tabla "línea investigación" correspondiente al campo "línea investigación" de la tabla "grupo línea investigación"</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Campo "fecha inicio" de la tabla "grupo línea investigación".</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Campo "fecha fin" de la tabla "grupo línea investigación".</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><p>Listados de miembros de la línea de investigación, se concatenan con el carácter " ; " y para cada miembros se sacará los campos  "nombre" y "apellidos" recuperados a través de <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0020-sgp-integracion-con-sistema-de-gestion-de-personas/req-int-0020-sgp-0030-consultar-datos-generales-de-persona">REQ-INT-0020-SGP-0030 - Consultar datos generales de persona</a> para la referenciada indicada en el campo "persona ref" de la tabla "<span>grupo línea investigador</span>" concatenada con "Fecha inicio: " concatenado con el campo "fecha inicio" de la tabla "<span>grupo línea investigador</span>" concatenada con "Fecha fin: " y concatenado con el campo "fecha fin" de la tabla "<span>grupo línea investigador</span>"</p>
+<p>Ej: JUAN LÓPEZ PÉREZ Fecha inicio: 01/01/2020 Fecha fin: - ; MARÍA ÁLVAREZ GONZÁLEZ Fecha inicio: 01/01/2019 Fecha fin: 31/02/2020</p></td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Listado de clasificaciones de la línea de investigación, 
+<p>se deberán recuperar todas las clasificaciones con las que esté relacionada la línea (tabla "grupo línea clasificación") y concatenarlas poniendo como separador el carácter " ; "</p>
+<p><span>Para cada clasificación se sacará el nombre del nodo raíz ":" nombre de la clasificación. El nombre de la clasificación se obtendrá como sigue. Se corresponde con el campo "nombre" de  la tabla "ESB SGO Clasificación" para el nodo raíz del árbol de clasificación al que pertenece el </span><span> "código clasificación ref" referenciado en la tabla "grupo línea clasificación". El nodo raíz se obtendrá ascendiendo a través del campo "padre" de la tabla "ESB SGO Clasificación" hasta llegar al elemento para el que el campo "padre" toma el valor "null".</span></p>
+<p><span>El nombre del elemento dentro de la clasificación se recuperará de la tabla "ESB SGO Clasificación" para el "código clasificación ref" referenciado en la tabla "grupo línea clasificación"</span></p></td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><p>Listados de equipos instrumentales de la línea de investigación, se sacará el campo  "nombre" de la tabla "grupo línea equipo instrumental" separados por el carácter " ; "</p></td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">Equipos instrumentales</td>
+<td class="confluenceTd">Equipos instrumentales (Nombre - Número registro)</td>
+<td class="confluenceTd">Varias filas</td>
+<td class="confluenceTd">Se mostrarán los equipos instrumentales del grupo de investigación (tabla "grupo equipo instrumental")</td>
+<td class="confluenceTd">Sí</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Equipo instrumental X: </td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Campo "nombre" de la tabla "grupo equipo instrumental"</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Campo "numRegistro" de la tabla "grupo equipo instrumental"</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">Enlaces</td>
+<td class="confluenceTd">Enlaces</td>
+<td class="confluenceTd">Varias filas</td>
+<td class="confluenceTd">Se mostrarán los enlaces del grupo de investigación (tabla "grupo enlace")</td>
+<td class="confluenceTd">Sí</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Enlace X:</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Campo "enlace" de la tabla "grupo enlace"</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">Persona autorizada</td>
+<td class="confluenceTd">Persona autorizada (Nombre - E-mail - Fecha inicio - Fecha fin)</td>
+<td class="confluenceTd">Varias filas</td>
+<td class="confluenceTd">Se mostrarán todas las personas autorizadas (histórico) del grupo, tabla "grupo persona autorizada"</td>
+<td class="confluenceTd">Sí</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Persona autorizada X: </td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Campos "nombre" y "apellidos" recuperados a través de <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0020-sgp-integracion-con-sistema-de-gestion-de-personas/req-int-0020-sgp-0030-consultar-datos-generales-de-persona">REQ-INT-0020-SGP-0030 - Consultar datos generales de persona</a> para la referenciada indicada en el campo "persona ref" de la tabla "grupo persona autorizada".</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Campo "email" con el indicador "principal" a "true" recuperado a través de <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0020-sgp-integracion-con-sistema-de-gestion-de-personas/req-int-0020-sgp-0030-consultar-datos-generales-de-persona">REQ-INT-0020-SGP-0030 - Consultar datos generales de persona</a> para la referenciada indicada en el campo "persona ref" de la tabla "grupo persona autorizada".</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Campo "fecha inicio" de la tabla "grupo persona autorizada".</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Campo "fecha fin" de la tabla "grupo persona autorizada".</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<span style="letter-spacing: 0.0px;">  
+
+</span>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+<div class="columnLayout two-equal" layout="two-equal">
+
+<div class="cell normal" data-type="normal">
+
+<div class="innerCell">
+
+## <span style="letter-spacing: -0.008em;">Interfaces de usuario relacionados</span>
+
+<img src="plugins/servlet/confluence/placeholder/unknown-macro" class="wysiwyg-unknown-macro" />
+
+</div>
+
+</div>
+
+<div class="cell normal" data-type="normal">
+
+<div class="innerCell">
+
+## Casos de uso relacionados
+
+<img src="plugins/servlet/confluence/placeholder/unknown-macro" class="wysiwyg-unknown-macro" />
+
+
+
+</div>
+
+</div>
+
+</div>
+
+<div class="columnLayout single" layout="single">
+
+<div class="cell normal" data-type="normal">
+
+<div class="innerCell">
+
+<div class="plugin-tabmeta-details">
+
+<div class="table-wrap">
+
+|                           |           |
+|---------------------------|-----------|
+| ACT-CPS-003-Gestor        | CSP-GIN-E |
+| ACT-CSP-004-Administrador | CSP-GIN-E |
+| ACT-CSP-005-Visor         | CSP-GIN-V |
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="pageSection group">
+
+<div class="pageSectionHeader">
+
+## Attachments:
+
+</div>
+
+<div class="greybox" align="left">
+
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [export-proyectos_equipo.png](/attachments/597852499/597858285.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [proyectos_with_list.rtf](/attachments/597852499/597858231.rtf) (application/msword)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [grupo_with_list.pdf](/attachments/597852499/597858357.pdf) (application/pdf)  
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div id="footer" role="contentinfo">
+
+<div class="section footer-body">
+
+Document generated by Confluence on oct 27, 2025 08:38
+
+<div id="footer-logo">
+
+[Atlassian](https://www.atlassian.com/)
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 
 

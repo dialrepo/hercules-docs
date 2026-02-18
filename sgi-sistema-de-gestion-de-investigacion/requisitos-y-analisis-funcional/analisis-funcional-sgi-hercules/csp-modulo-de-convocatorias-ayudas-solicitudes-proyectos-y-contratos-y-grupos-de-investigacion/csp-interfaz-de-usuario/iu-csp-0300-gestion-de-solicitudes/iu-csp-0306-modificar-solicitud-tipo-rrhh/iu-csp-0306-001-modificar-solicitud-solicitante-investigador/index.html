@@ -796,7 +796,407 @@
 
   <h1>Iu csp 0306 001 modificar solicitud solicitante investigador</h1>
 
+<div id="page">
 
+<div id="main" class="aui-page-panel">
+
+<div id="main-header">
+
+<div id="breadcrumb-section">
+
+1.  [Hércules](index.html)
+2.  [Hércules](/)
+3.  [SGI. Sistema de gestión de investigación](//sgi-sistema-de-gestion-de-investigacion)
+4.  [Requisitos y análisis funcional](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional)
+5.  [Análisis Funcional SGI - Hércules](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules)
+6.  [CSP - Módulo de convocatorias, ayudas, solicitudes, proyectos y contratos y grupos de investigación](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion)
+7.  [CSP - Interfaz de usuario](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-interfaz-de-usuario)
+8.  [IU-CSP-0300 - Gestión de solicitudes](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-interfaz-de-usuario/iu-csp-0300-gestion-de-solicitudes)
+9.  [IU-CSP-0306 - Modificar solicitud - Tipo RRHH](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-interfaz-de-usuario/iu-csp-0300-gestion-de-solicitudes/iu-csp-0306-modificar-solicitud-tipo-rrhh)
+
+</div>
+
+# <span id="title-text"> Hércules : IU-CSP-0306-001 - Modificar solicitud - Solicitante - Investigador </span>
+
+</div>
+
+<div id="content" class="view">
+
+<div class="page-metadata">
+
+Created by <span class="author"> Usuario desconocido (lorena.alvarez)</span>, last updated by <span class="editor"> Usuario desconocido (covadonga.garcia)</span> on oct 06, 2022
+
+</div>
+
+<div id="main-content" class="wiki-content group">
+
+<div class="plugin-tabmeta-details">
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable" style="width: 75.1988%;">
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 84%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<th class="confluenceTh">Cod. IU</th>
+<td class="confluenceTd"><p><strong><strong><strong><strong>IU-CSP-0306-001 - Modificar solicitud - Solicitante - Investigador<br />
+</strong></strong></strong></strong></p></td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Ver. objetivo</th>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh">Ver. IU</th>
+<td class="confluenceTd">1.0.0</td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Estado</th>
+<td class="confluenceTd"><div class="content-wrapper">
+<div class="content-wrapper">
+ <span class="status-macro aui-lozenge aui-lozenge-current conf-macro output-inline">IN PROGRESS</span> 
+</div>
+</div></td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh">Fec. Aprobación</th>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Épica, historia</th>
+<td class="confluenceTd"><div class="content-wrapper">
+<p><br />
+</p>
+</div></td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh">Actores</th>
+<td class="confluenceTd">ACT-CSP-001-Investigador</td>
+</tr>
+<tr class="even">
+<th class="confluenceTh"><p>Frecuencia</p></th>
+<td class="confluenceTd">Media</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+# Formulario Modificar solicitud - Solicitante - Investigador
+
+Formulario de modificación de solicitud de RRHH, apartado Solicitante, cuando la solicitud es cumplimentada por el propio  ACT-CSP-001-Investigador o cuando es el "tutor/a" de la "solicitud RRHH"  
+
+Si se trata del ACT-CSP-001-Investigador que ha cumplimentado la solicitud (el creador de la solicitud es la misma persona que el "solicitante ref" de la tabla "solicitud") podrá modificar la solicitud mientras ésta se encuentre en estado "**Borrador**" y "**Rechazada**". Si se trata del ACT-CSP-001-Investigador que es el "tutor ref" de la tabla "solicitud RRHH" verá todos los campos en modo consulta.  
+
+
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable" style="width: 79.1781%;">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 13%" />
+<col style="width: 76%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<th colspan="3" class="confluenceTd"><div class="content-wrapper">
+<p><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852832/597865434.png" class="confluence-embedded-image" draggable="false" data-image-src="attachments/597852832/597865434.png" data-unresolved-comment-count="0" data-linked-resource-id="597865434" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="50_Solicitud_RRHH_INVPropio_Solicitante.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852832" data-linked-resource-container-version="11" tabindex="0" width="1000" /></span></p>
+<p><br />
+</p>
+</div></th>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Nombre</th>
+<th class="confluenceTh"><div class="content-wrapper">
+<p>Tipo</p>
+</div></th>
+<th class="confluenceTh"><p>Características / Notas</p></th>
+</tr>
+<tr class="odd">
+<th colspan="3" class="highlight-blue confluenceTd" data-highlight-colour="blue" title="Color de fondo: Azul"><span style="color:var(--ds-text,#172b4d);" title="">Este apartado "Solicitante" y, en general, todo del bloque "Datos solicitudes RRHH" solamente se hará visible cuando el campo "formulario solicitud" de la tabla "solicitud" toma valor "RRHH"</span></th>
+</tr>
+<tr class="even">
+<th class="confluenceTd">Nombre</th>
+<th class="confluenceTd"><p>Texto</p>
+<p>Consulta</p></th>
+<th class="confluenceTd"><p><span><span class="confluence-link"><span style="color:var(--ds-text,#172b4d);">Campo "nombre" recuperado a través de <a href="https://confluence.um.es/confluence/display/HERCULES/REQ-INT-0020-SGP-0030+-+Consultar+datos+generales+de+persona" rel="nofollow">REQ-INT-0020-SGP-0030 - Consultar datos generales de persona</a></span><span style="color:var(--ds-text,#172b4d);"> para la referenciada indicada en el campo "solicitanteRef" de la tabla "solicitud".</span></span></span></p></th>
+</tr>
+<tr class="odd">
+<th class="confluenceTd">Apellidos</th>
+<th class="confluenceTd"><p>Texto</p>
+<p>Consulta</p></th>
+<th class="confluenceTd"><p><span><span class="confluence-link"><span style="color:var(--ds-text,#172b4d);">Campo "apellidos" recuperado a través de <a href="https://confluence.um.es/confluence/display/HERCULES/REQ-INT-0020-SGP-0030+-+Consultar+datos+generales+de+persona" rel="nofollow">REQ-INT-0020-SGP-0030 - Consultar datos generales de persona</a></span><span style="color:var(--ds-text,#172b4d);"> para la referenciada indicada en el campo "solicitanteRef" de la tabla "solicitud".</span></span></span></p></th>
+</tr>
+<tr class="even">
+<th class="confluenceTd">Tipo de documento</th>
+<th class="confluenceTd"><p>Texto</p>
+<p>Consulta</p></th>
+<th class="confluenceTd"><span><span class="confluence-link"><span style="color:var(--ds-text,#172b4d);">Campo "nombre" de la entidad "tipo documento" recuperado a través de <a href="https://confluence.um.es/confluence/display/HERCULES/REQ-INT-0020-SGP-0030+-+Consultar+datos+generales+de+persona" rel="nofollow">REQ-INT-0020-SGP-0030 - Consultar datos generales de persona</a></span><span style="color:var(--ds-text,#172b4d);"> para la referenciada indicada en el campo "solicitanteRef" de la tabla "solicitud".</span></span></span></th>
+</tr>
+<tr class="odd">
+<th class="confluenceTd">Número documento</th>
+<th class="confluenceTd"><p>Texto</p>
+<p>Consulta</p></th>
+<th class="confluenceTd"><span><span class="confluence-link"><span style="color:var(--ds-text,#172b4d);">Campo "número documento" recuperado a través de <a href="https://confluence.um.es/confluence/display/HERCULES/REQ-INT-0020-SGP-0030+-+Consultar+datos+generales+de+persona" rel="nofollow">REQ-INT-0020-SGP-0030 - Consultar datos generales de persona</a></span><span style="color:var(--ds-text,#172b4d);"> para la referenciada indicada en el campo "solicitanteRef" de la tabla "solicitud".</span></span></span></th>
+</tr>
+<tr class="even">
+<th class="confluenceTd">Sexo</th>
+<th class="confluenceTd"><p>Texto</p>
+<p>Consulta</p></th>
+<th class="confluenceTd"><span><span class="confluence-link"><span style="color:var(--ds-text,#172b4d);">Campo "nombre" de la "sexo" recuperado a través de <a href="https://confluence.um.es/confluence/display/HERCULES/REQ-INT-0020-SGP-0030+-+Consultar+datos+generales+de+persona" rel="nofollow">REQ-INT-0020-SGP-0030 - Consultar datos generales de persona</a></span><span style="color:var(--ds-text,#172b4d);"> para la referenciada indicada en el campo "solicitanteRef" de la tabla "solicitud".</span></span></span></th>
+</tr>
+<tr class="odd">
+<th class="confluenceTd">Fecha de nacimiento</th>
+<th class="confluenceTd"><p>Texto</p>
+<p>Consulta</p></th>
+<th class="confluenceTd"><span><span class="confluence-link"><span style="color:var(--ds-text,#172b4d);">Campo "fecha nacimiento" recuperado a través de <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0020-sgp-integracion-con-sistema-de-gestion-de-personas/req-int-0020-sgp-0031-consultar-datos-personales-de-persona">REQ-INT-0020-SGP-0031 - Consultar datos personales de persona</a></span><span style="color:var(--ds-text,#172b4d);"> para la referenciada indicada en el campo "solicitanteRef" de la tabla "solicitud".</span></span></span></th>
+</tr>
+<tr class="even">
+<th class="confluenceTd">País de nacimiento</th>
+<th class="confluenceTd"><p>Texto</p>
+<p>Consulta</p></th>
+<th class="confluenceTd"><span><span class="confluence-link"><span style="color:var(--ds-text,#172b4d);">Campo "nombre" de la entidad "país nacimiento" recuperado a través de <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0020-sgp-integracion-con-sistema-de-gestion-de-personas/req-int-0020-sgp-0031-consultar-datos-personales-de-persona">REQ-INT-0020-SGP-0031 - Consultar datos personales de persona</a></span><span style="color:var(--ds-text,#172b4d);"> para la referenciada indicada en el campo "solicitanteRef" de la tabla "solicitud".</span></span></span></th>
+</tr>
+<tr class="odd">
+<th colspan="3" class="highlight-#deebff confluenceTd" data-highlight-colour="#deebff" title="Color de fondo: 35 % azul claro">Teléfonos</th>
+</tr>
+<tr class="even">
+<th class="confluenceTd">Teléfono</th>
+<th class="confluenceTd"><p>Texto</p>
+<p>Consulta</p></th>
+<th class="confluenceTd"><p><span><span class="confluence-link"><span style="color:var(--ds-text,#172b4d);">Campo "telefonos" recuperado a través de <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0020-sgp-integracion-con-sistema-de-gestion-de-personas/req-int-0020-sgp-0032-consultar-datos-de-contacto-de-persona">REQ-INT-0020-SGP-0032 - Consultar datos de contacto de persona</a></span><span style="color:var(--ds-text,#172b4d);"> para la referenciada indicada en el campo "solicitanteRef" de la tabla "solicitud".</span></span></span></p>
+<p><span><span class="confluence-link"><span style="color:var(--ds-text,#172b4d);">Cada elemento de la lista de "telefonos" se dibuja en una fila de la tabla.</span></span></span></p></th>
+</tr>
+<tr class="odd">
+<th colspan="3" class="highlight-#deebff confluenceTd" data-highlight-colour="#deebff" title="Color de fondo: 35 % azul claro">E-mails</th>
+</tr>
+<tr class="even">
+<th class="confluenceTd">E-mail</th>
+<th class="confluenceTd"><p>Texto</p>
+<p>Consulta</p></th>
+<th class="confluenceTd"><p><span><span class="confluence-link"><span style="color:var(--ds-text,#172b4d);">Campo "emails" recuperado a través de <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0020-sgp-integracion-con-sistema-de-gestion-de-personas/req-int-0020-sgp-0032-consultar-datos-de-contacto-de-persona">REQ-INT-0020-SGP-0032 - Consultar datos de contacto de persona</a></span><span style="color:var(--ds-text,#172b4d);"> para la referenciada indicada en el campo "solicitanteRef" de la tabla "solicitud".</span></span></span></p>
+<p><span><span class="confluence-link"><span style="color:var(--ds-text,#172b4d);">Cada elemento de la lista de "emails" se dibuja en una fila de la tabla.</span></span></span></p></th>
+</tr>
+<tr class="odd">
+<th colspan="3" class="highlight-#deebff confluenceTd" data-highlight-colour="#deebff" title="Color de fondo: 35 % azul claro">Dirección de contacto</th>
+</tr>
+<tr class="even">
+<th class="confluenceTd">Dirección</th>
+<th class="confluenceTd"><p>Texto</p>
+<p>Consulta</p></th>
+<th class="confluenceTd"><span><span class="confluence-link"><span style="color:var(--ds-text,#172b4d);">Campo "dirección contacto" recuperado a través de  <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0020-sgp-integracion-con-sistema-de-gestion-de-personas/req-int-0020-sgp-0032-consultar-datos-de-contacto-de-persona">REQ-INT-0020-SGP-0032 - Consultar datos de contacto de persona</a> </span><span style="color:var(--ds-text,#172b4d);">para la referenciada indicada en el campo "solicitanteRef" de la tabla "solicitud".</span></span></span></th>
+</tr>
+<tr class="odd">
+<th class="confluenceTd">País</th>
+<th class="confluenceTd"><p>Texto</p>
+<p>Consulta</p></th>
+<th class="confluenceTd"><span><span class="confluence-link"><span style="color:var(--ds-text,#172b4d);">Campo "nombre" de la entidad "país contacto" recuperado a través de </span><span style="color:var(--ds-text,#172b4d);"> <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0020-sgp-integracion-con-sistema-de-gestion-de-personas/req-int-0020-sgp-0032-consultar-datos-de-contacto-de-persona">REQ-INT-0020-SGP-0032 - Consultar datos de contacto de persona</a> </span><span style="color:var(--ds-text,#172b4d);">para la referenciada indicada en el campo "solicitanteRef" de la tabla "solicitud".</span></span></span></th>
+</tr>
+<tr class="even">
+<th class="confluenceTd">Comunidad autónoma</th>
+<th class="confluenceTd"><p>Texto</p>
+<p>Consulta</p></th>
+<th class="confluenceTd"><span><span class="confluence-link"><span style="color:var(--ds-text,#172b4d);">Campo "nombre" de la entidad "comunidad autónoma contacto" recuperado a través de</span><span style="color:var(--ds-text,#172b4d);"> <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0020-sgp-integracion-con-sistema-de-gestion-de-personas/req-int-0020-sgp-0032-consultar-datos-de-contacto-de-persona">REQ-INT-0020-SGP-0032 - Consultar datos de contacto de persona</a> </span><span style="color:var(--ds-text,#172b4d);">para la referenciada indicada en el campo "solicitanteRef" de la tabla "solicitud".</span></span></span></th>
+</tr>
+<tr class="odd">
+<th class="confluenceTd">Provincia</th>
+<th class="confluenceTd"><p>Texto</p>
+<p>Consulta</p></th>
+<th class="confluenceTd"><span><span class="confluence-link"><span style="color:var(--ds-text,#172b4d);">Campo "nombre" de la entidad "provincia contacto" recuperado a través de </span><span style="color:var(--ds-text,#172b4d);"> <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0020-sgp-integracion-con-sistema-de-gestion-de-personas/req-int-0020-sgp-0032-consultar-datos-de-contacto-de-persona">REQ-INT-0020-SGP-0032 - Consultar datos de contacto de persona</a> </span><span style="color:var(--ds-text,#172b4d);">para la referenciada indicada en el campo "solicitanteRef" de la tabla "solicitud".</span></span></span></th>
+</tr>
+<tr class="even">
+<th class="confluenceTd">Localidad</th>
+<th class="confluenceTd"><p>Texto</p>
+<p>Consulta</p></th>
+<th class="confluenceTd"><span><span class="confluence-link"><span style="color:var(--ds-text,#172b4d);">Campo "ciudad contacto" recuperado a través de  <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0020-sgp-integracion-con-sistema-de-gestion-de-personas/req-int-0020-sgp-0032-consultar-datos-de-contacto-de-persona">REQ-INT-0020-SGP-0032 - Consultar datos de contacto de persona</a> para la referenciada indicada en el campo "solicitanteRef" de la tabla "solicitud".</span><span style="color:var(--ds-text,#172b4d);">"</span></span></span></th>
+</tr>
+<tr class="odd">
+<th class="confluenceTd">Código postal</th>
+<th class="confluenceTd"><p>Texto</p>
+<p>Consulta</p></th>
+<th class="confluenceTd"><span><span class="confluence-link"><span style="color:var(--ds-text,#172b4d);">Campo "código postal contacto" recuperado a través de  <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0020-sgp-integracion-con-sistema-de-gestion-de-personas/req-int-0020-sgp-0032-consultar-datos-de-contacto-de-persona">REQ-INT-0020-SGP-0032 - Consultar datos de contacto de persona</a> para la referenciada indicada en el campo "solicitanteRef" de la tabla "solicitud".</span><span style="color:var(--ds-text,#172b4d);">"</span></span></span></th>
+</tr>
+<tr class="even">
+<th colspan="3" class="highlight-#deebff confluenceTd" data-highlight-colour="#deebff" title="Color de fondo: 35 % azul claro"><br />
+</th>
+</tr>
+<tr class="odd">
+<th class="confluenceTd">Universidad de origen</th>
+<th class="confluenceTd"><p>Texto</p>
+<p>Opcional</p></th>
+<th class="confluenceTd"><p>Campo para que el investigador pueda introducir el nombre de la Universidad de origen del trabajo.</p>
+<p>Campo "universidad" de la tabla "solicitud rrhhh"</p></th>
+</tr>
+<tr class="even">
+<th class="confluenceTd">Área ANEP</th>
+<th class="confluenceTd"><p>Buscador</p>
+<p>Texto</p>
+<p>Opcional</p></th>
+<th class="confluenceTd"><p>Muestra la pantalla común <a href="https://confluence.um.es/confluence/pages/viewpage.action?pageId=103904412" rel="nofollow">IU-GEN-0120 - Selección de clasificaciones</a><span class="confluence-link"> filtrando por el "Tipo de clasificación" igual a "Áreas ANEP" de tal manera que únicamente se podrá seleccionar un nodo hijo del tipo de clasificación "Áreas ANEP" estando inicializado el combo de "Clasificación" con dicho valor y no dejando modificar el valor del combo. El combo estará deshabilitado.</span></p>
+<p><span class="confluence-link">Sólo se permite seleccionar un nodo del árbol de área ANEP.</span></p>
+<p>La referencia de la área ANEP recuperada se almacenará en el campo "<span style="color:var(--ds-text,#172b4d);">área ANEP ref</span>" de la tabla "solicitud rrhh".</p></th>
+</tr>
+<tr class="odd">
+<th class="confluenceTd">Mensaje informativo</th>
+<th class="confluenceTd">Texto largo</th>
+<th class="confluenceTd"><p>Este mensaje solo se mostrará si la solicitud se encuentra en estado borrador (campo "estado" de la tabla "solicitud").</p>
+<p>Se mostrará con los estilos de aviso informativo el siguiente mensaje "Para que la solicitud pueda ser validad por su tutor/a debe cambiar el estado de la misma a "Solicitada"".</p></th>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="header">
+<th class="confluenceTh">Acciones</th>
+<th class="confluenceTh">Descripción</th>
+<th class="confluenceTh"> Enlace CU.</th>
+<th class="confluenceTh">Permisos</th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd">Buscar (área ANEP)</td>
+<td class="confluenceTd">Abre la pantalla del buscador de la clasificación de "Áreas ANEP"</td>
+<td class="confluenceTd"><p>Muestra la pantalla común <a href="https://confluence.um.es/confluence/pages/viewpage.action?pageId=103904412" rel="nofollow">IU-GEN-0120 - Selección de clasificaciones</a><span class="confluence-link"> filtrando por el "Tipo de clasificación" igual a "Áreas ANEP" de tal manera que únicamente se podrá seleccionar un nodo hijo del tipo de clasificación "Áreas ANEP" estando inicializado el combo de "Clasificación" con dicho valor y no dejando modificar el valor del combo. El combo estará deshabilitado.</span></p>
+<p><span class="confluence-link">Sólo se permite seleccionar un nodo del árbol de área ANEP.</span></p></td>
+<td class="confluenceTd"><p>No se necesita permiso adicional para realizar esta búsqueda</p>
+<p><br />
+</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+## Botones generales a la pantalla
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable" style="width: 92.7966%;">
+<colgroup>
+<col style="width: 8%" />
+<col style="width: 35%" />
+<col style="width: 46%" />
+<col style="width: 9%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th class="confluenceTh"><p>Acciones</p></th>
+<th class="confluenceTh"><p>Descripción</p></th>
+<th class="confluenceTh"><p> Enlace CU.</p></th>
+<th class="confluenceTh">Permisos</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td class="confluenceTd">Guardar</td>
+<td class="confluenceTd"><p>Modificar la solicitud con la información introducida en el formulario.</p>
+<p>Al guardar una solicitud se guardar la información de todos los apartados de definición de la solicitud.</p></td>
+<td class="confluenceTd"><p>Ver precondiciones en <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-casos-de-uso/cu-csp-1100-gestion-de-solicitudes/cu-csp-1100-001-modificar-solicitud-guardar">CU-CSP-1100-001 Modificar solicitud - Guardar</a><span class="confluence-link">.</span></p>
+<p><br />
+</p></td>
+<td class="confluenceTd">CSP-SOL-INV-ER</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">Cancelar</td>
+<td class="confluenceTd"><p>Retorna al listado de Solicitud sin salvar los posibles cambios.</p>
+<p><span>Al cancelar una solicitud se cancela la información de todas las pestañas de la pantalla, </span>sin salvar los posibles cambios.</p></td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+## Permisos de acceso a la pantalla
+
+### Por actor
+
+<div class="plugin-tabmeta-details">
+
+<div class="table-wrap">
+
+|                          |                |
+|--------------------------|----------------|
+| ACT-CSP-001-Investigador | CSP-SOL-INV-ER |
+
+</div>
+
+</div>
+
+### Todos los permisos de acceso
+
+<div class="plugin-tabmeta-details">
+
+<div class="table-wrap">
+
+|          |                |
+|----------|----------------|
+| Permisos | CSP-SOL-INV-ER |
+
+</div>
+
+
+
+
+
+</div>
+
+</div>
+
+<div class="pageSection group">
+
+<div class="pageSectionHeader">
+
+## Attachments:
+
+</div>
+
+<div class="greybox" align="left">
+
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [50solicitudrrhhugsolicitante.png](/attachments/597852832/597858715.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [50solicitudrrhhinvsolicitantepersonalpropio.png](/attachments/597852832/597858741.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [50_Solicitud_RRHH_INVPropio_Solicitante.png](/attachments/597852832/597865434.png) (image/png)  
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div id="footer" role="contentinfo">
+
+<div class="section footer-body">
+
+Document generated by Confluence on oct 27, 2025 08:41
+
+<div id="footer-logo">
+
+[Atlassian](https://www.atlassian.com/)
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 
 

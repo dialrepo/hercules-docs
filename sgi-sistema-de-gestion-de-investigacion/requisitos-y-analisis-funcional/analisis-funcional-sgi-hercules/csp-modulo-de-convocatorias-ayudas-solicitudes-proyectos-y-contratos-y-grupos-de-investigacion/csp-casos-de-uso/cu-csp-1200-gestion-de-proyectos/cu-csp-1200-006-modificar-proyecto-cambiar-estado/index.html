@@ -796,7 +796,166 @@
 
   <h1>Cu csp 1200 006 modificar proyecto cambiar estado</h1>
 
+<div id="page">
 
+<div id="main" class="aui-page-panel">
+
+<div id="main-header">
+
+<div id="breadcrumb-section">
+
+1.  [Hércules](index.html)
+2.  [Hércules](/)
+3.  [SGI. Sistema de gestión de investigación](//sgi-sistema-de-gestion-de-investigacion)
+4.  [Requisitos y análisis funcional](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional)
+5.  [Análisis Funcional SGI - Hércules](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules)
+6.  [CSP - Módulo de convocatorias, ayudas, solicitudes, proyectos y contratos y grupos de investigación](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion)
+7.  [CSP - Casos de uso](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-casos-de-uso)
+8.  [CU-CSP-1200 - Gestión de proyectos](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-casos-de-uso/cu-csp-1200-gestion-de-proyectos)
+
+</div>
+
+# <span id="title-text"> Hércules : CU-CSP-1200-006 - Modificar proyecto - Cambiar estado </span>
+
+</div>
+
+<div id="content" class="view">
+
+<div class="page-metadata">
+
+Created by <span class="author"> Usuario desconocido (lorena.alvarez)</span>, last updated on may 25, 2022
+
+</div>
+
+<div id="main-content" class="wiki-content group">
+
+<div class="plugin-tabmeta-details">
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable" style="width: 75.1988%;">
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 84%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<th class="confluenceTh">Cod. CU</th>
+<td class="confluenceTd"><p><strong>CU-CSP-1200-006 - Modificar proyecto - Cambiar de estado<br />
+</strong></p></td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Ver. objetivo</th>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh">Ver. CU</th>
+<td class="confluenceTd">1.0.0</td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Estado</th>
+<td class="confluenceTd"><div class="content-wrapper">
+ <span class="status-macro aui-lozenge aui-lozenge-current conf-macro output-inline">IN PROGRESS</span> 
+</div></td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh">Fec. Aprobación</th>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Épica, historia</th>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh"><p>Actores</p>
+<p><br />
+</p></th>
+<td class="confluenceTd"><p>ACT-CSP-003-Gestor, ACT-CSP-004-Administrador</p></td>
+</tr>
+<tr class="even">
+<th class="confluenceTh"><p>Frecuencia</p></th>
+<td class="confluenceTd">Alta</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+## Descripción
+
+Cambio de estado de un proyecto
+
+## Actores
+
+### Actor principal
+
+ACT-CSP-003-Gestor de las unidades de gestión UGI, OTRI u OPE.
+
+ACP-CSP-004-Administrador de las unidades de gestión UGI, OTRI u OPE.
+
+### Personal involucrado e intereses
+
+ACT-CSP-001-Investigador que requiere que sus proyectos estén en estado distinto al borrador para ver sus datos.
+
+## Precondiciones
+
+El usuario ACT-CSP-003-Gestor, ACP-CSP-004-Administrador se autentica a través del usuario de dominio corporativo y tiene asociada una Unidad de gestión para las que está habilitado el permiso de modificación de convocatoria.
+
+No hay datos sin guardar en el proyecto.
+
+## Garantías de éxito (postcondiciones)
+
+Se realiza el cambio de estado.
+
+## Escenario principal (flujo básico)
+
+- El usuario accede al detalle de un proyecto y pulsa sobre el botón de cambio de estado
+- En el caso de que el cambio de estado sea a **Concedido** realizar las siguientes validaciones/comprobaciones:
+  - Campos obligatorios de la pestaña de <u>Ficha general</u> del proyecto para pasar a este estado:
+
+    - Finalidad
+    - Ámbito geográfico
+    - Confidencial
+    - Proyecto coordinado
+    - Coordinador externo (si Proyecto coordinado tiene valor Sí)
+    - Paquetes de trabajo
+
+  - <u>Si el proyecto procede de una solicitud (campo "solicitud" de la "proyecto" está informado) y tiene la solicitud el campo "formulario" con valor "Proyecto" se debe verificar en la pestaña Equipo:</u>  
+    - Que el solicitante de la solicitud (campo "solicitante" de la tabla "solicitud") pertenezca al equipo de proyecto (pudiendo ser el único miembro del mismo)
+- En el caso de que el cambio de estado sea a **Renunciado o Rescindido** poner de manera automática la "fecha fin definitiva" del proyecto con la fecha actual. Si existen registros en la tabla "proyecto equipo":
+  - Si "fecha fin definitiva" estaba vacía (valor null en la tabla "proyecto") se actualizará el campo "fecha fin" de la tabla "proyecto equipo" para todos aquellos miembros cuya "fecha fin" actual coincida con la "fecha fin" del proyecto.
+  - Si "fecha fin definitiva" no estaba vacía (valor distinto a null en la tabla "proyecto"), se actualizará el campo "fecha fin" de la tabla "proyecto equipo" para todos aquellos miembros cuya "fecha fin" actual coincida con el valor original de la "fecha fin definitiva" del proyecto.
+
+
+
+</div>
+
+</div>
+
+</div>
+
+<div id="footer" role="contentinfo">
+
+<div class="section footer-body">
+
+Document generated by Confluence on oct 27, 2025 08:39
+
+<div id="footer-logo">
+
+[Atlassian](https://www.atlassian.com/)
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 
 

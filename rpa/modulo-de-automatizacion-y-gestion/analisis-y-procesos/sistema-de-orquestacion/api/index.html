@@ -796,7 +796,254 @@
 
   <h1>Index</h1>
 
+<div id="page">
 
+<div id="main" class="aui-page-panel">
+
+<div id="main-header">
+
+<div id="breadcrumb-section">
+
+1.  [Hércules](index.html)
+2.  [Hércules](/)
+3.  [RPA](//rpa)
+4.  [Módulo de Automatización y Gestión](//rpa/modulo-de-automatizacion-y-gestion)
+5.  [Análisis y Procesos](//rpa/modulo-de-automatizacion-y-gestion/analisis-y-procesos)
+6.  [Sistema de Orquestación](//rpa/modulo-de-automatizacion-y-gestion/analisis-y-procesos/sistema-de-orquestacion)
+
+</div>
+
+# <span id="title-text"> Hércules : API </span>
+
+</div>
+
+<div id="content" class="view">
+
+<div class="page-metadata">
+
+Created by <span class="author"> Juan Tardón Martínez</span>, last updated by <span class="editor"> Usuario genérico para HERCULES</span> on oct 10, 2022
+
+</div>
+
+<div id="main-content" class="wiki-content group">
+
+El sistema contará con una API REST desde la que se podrán controlar todas y cada unas de sus funcionalidades, facilitando así la construcción de cualquier cuadro de mando ya que su desarrollo estará totalmente desacoplado de la Interfaz de usuario. Dicha API se desarrollará en Python como una aplicación web mediante el framework **Flask **y se introducirán blueprints que se construirán mediante la librería flask-restful, para una fácil organización de los endpoints y métodos de la aplicación web. También se proporcionará un **Swagger **que facilitará la legibilidad de la documentación realizada.
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="header">
+<th class="confluenceTh">Método</th>
+<th class="confluenceTh">Url</th>
+<th class="confluenceTh">Parámetros</th>
+<th class="confluenceTh">Respuesta</th>
+<th class="confluenceTh">Descripción</th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd">GET</td>
+<td class="confluenceTd"><code>/api/orchestrator/statistics/maindashboard</code></td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Datos estadísticos del sistema</td>
+<td class="confluenceTd">Devuelve los datos estadísticos del sistema para rellenar un dashboard.</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">GET</td>
+<td class="confluenceTd"><code>/api/orchestrator/robots</code></td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Lista[Robot]</td>
+<td class="confluenceTd">Obtiene la lista de robots que hay en el sistema.</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">GET</td>
+<td class="confluenceTd"><p><code>/api/orchestrator/robots/problems</code></p></td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Lista[Problem]</td>
+<td class="confluenceTd">Obtiene todos los problemas de ejecución que ha habido.</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">GET</td>
+<td class="confluenceTd"><code>/api/orchestrator/robots/{robotId}</code></td>
+<td class="confluenceTd">robotId: identificador del robot</td>
+<td class="confluenceTd">Robot</td>
+<td class="confluenceTd">Obtiene la información de un robot.</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">GET</td>
+<td class="confluenceTd"><code>/api/orchestrator/robots/{robotId}/problems</code></td>
+<td class="confluenceTd">robotId: identificador del robot</td>
+<td class="confluenceTd">Lista[Problem]</td>
+<td class="confluenceTd">Obtiene la lista de problemas de ejecución que ha tenido un robot.</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">GET</td>
+<td class="confluenceTd"><code>/api/orchestrator/robots/{robotId}/logs</code></td>
+<td class="confluenceTd">robotId: identificador del robot</td>
+<td class="confluenceTd">Lista[Log]</td>
+<td class="confluenceTd">Obtiene la lista de logs de todos los procesos que ha ejecutado un robot.</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">GET</td>
+<td class="confluenceTd"><code>/api/orchestrator/process/</code></td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Lista[Proceso]</td>
+<td class="confluenceTd">Obtiene la lista de procesos que se pueden llevar a cabo en ese instante dependiendo de los robots que estén conectados.</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">GET</td>
+<td class="confluenceTd"><code>/api/orchestrator/process/{id}</code></td>
+<td class="confluenceTd">id: identificador del proceso</td>
+<td class="confluenceTd">Proceso</td>
+<td class="confluenceTd">Obtiene la información completa del proceso.</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">GET</td>
+<td class="confluenceTd"><code>/api/orchestrator/process/{id}/form</code></td>
+<td class="confluenceTd">id: identificador del proceso</td>
+<td class="confluenceTd">JSON</td>
+<td class="confluenceTd">Devuelve una especificación para realizar un formulario dinámico en una interfaz.</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">GET</td>
+<td class="confluenceTd"><code>/api/orchestrator/schedules/</code></td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Lista[Schedule]</td>
+<td class="confluenceTd">Obtiene la lista de planificaciones que hay en el orquestador.</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">GET</td>
+<td class="confluenceTd"><code>/api/orchestrator/schedules/{id}</code></td>
+<td class="confluenceTd">id: identificador de la planificación (schedule)</td>
+<td class="confluenceTd">Schedule</td>
+<td class="confluenceTd">Obtiene un schedule indicado por un identificador.</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">PATCH</td>
+<td class="confluenceTd"><code>/api/orchestrator/schedules/{id}</code></td>
+<td class="confluenceTd"><p>id: identificador de la planificación (schedule)</p>
+<p>JSON</p></td>
+<td class="confluenceTd">Control para saber si se ha editado la planificación</td>
+<td class="confluenceTd">Edición de schedule.</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">DELETE</td>
+<td class="confluenceTd"><code>/api/orchestrator/schedules/{id}</code></td>
+<td class="confluenceTd">id: identificador de la planificación (schedule)</td>
+<td class="confluenceTd">Control para saber que se ha borrado correctamente</td>
+<td class="confluenceTd">Eliminación de schedule.</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">POST</td>
+<td class="confluenceTd"><code>/api/orchestrator/schedules/execute</code></td>
+<td class="confluenceTd">JSON</td>
+<td class="confluenceTd">Control para saber que se ha creado correctamente</td>
+<td class="confluenceTd">Crea una planificación de proceso, con este endpoint se ejecutarán los procesos.</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">GET</td>
+<td class="confluenceTd"><code>/api/orchestrator/schedules/{id}/logs</code></td>
+<td class="confluenceTd">id: identificador de la planificación (schedule)</td>
+<td class="confluenceTd">Lista[Log]</td>
+<td class="confluenceTd">Obtiene todos los logs que ha producido una planificación de proceso.</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">GET</td>
+<td class="confluenceTd"><code>/api/orchestrator/robots/{robotId}/schedules/{scheduleId}</code></td>
+<td class="confluenceTd"><p>robotId: identificador del robot</p>
+<p>scheduleId: identificador de la planificación</p></td>
+<td class="confluenceTd">Lista[Schedule]</td>
+<td class="confluenceTd">Obtiene la lista de planificaciones (schedules) que tiene un robot.</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">GET</td>
+<td class="confluenceTd"><code>/api/orchestrator/logs</code></td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Lista[Log]</td>
+<td class="confluenceTd">Obtiene todos los reportes de ejecución de todos los procesos que se han ejecutado.</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">GET</td>
+<td class="confluenceTd"><code>/api/orchestrator/logs/{id}</code></td>
+<td class="confluenceTd">id: identificador del log</td>
+<td class="confluenceTd">Log</td>
+<td class="confluenceTd">Obtiene el reporte de ejecución de un proceso.</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">GET</td>
+<td class="confluenceTd"><code>/api/orchestrator/reload</code></td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Refresca el sistema.</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">GET</td>
+<td class="confluenceTd"><code>/api/orchestrator/restart</code></td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Reinicia el sistema.</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">GET</td>
+<td class="confluenceTd"><code>/api/orchestrator/files</code></td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Lista[Files]</td>
+<td class="confluenceTd">Obtiene una lista de ficheros que hay en los CDNs con su respectiva URL.</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">GET</td>
+<td class="confluenceTd"><code>/api/orchestrator/files/</code>{id}</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">File</td>
+<td class="confluenceTd">Obtiene la información de un fichero que se encuentra en algún CDN.</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">POST</td>
+<td class="confluenceTd"><code>/api/orchestrator/files</code></td>
+<td class="confluenceTd">File</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Proporciona una URL del CDN para subir un fichero.</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div id="footer" role="contentinfo">
+
+<div class="section footer-body">
+
+Document generated by Confluence on oct 27, 2025 09:30
+
+<div id="footer-logo">
+
+[Atlassian](https://www.atlassian.com/)
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 
 

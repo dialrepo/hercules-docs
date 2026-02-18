@@ -796,7 +796,163 @@
 
   <h1>Index</h1>
 
+<div id="page">
 
+<div id="main" class="aui-page-panel">
+
+<div id="main-header">
+
+<div id="breadcrumb-section">
+
+1.  [Hércules](index.html)
+2.  [Hércules](/)
+3.  [SGI. Sistema de gestión de investigación](//sgi-sistema-de-gestion-de-investigacion)
+4.  [Requisitos y análisis funcional](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional)
+5.  [Análisis Funcional SGI - Hércules](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules)
+6.  [CSP - Módulo de convocatorias, ayudas, solicitudes, proyectos y contratos y grupos de investigación](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion)
+7.  [CSP - Casos de uso](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-casos-de-uso)
+
+</div>
+
+# <span id="title-text"> Hércules : CU-CSP-0090 - Gestión de conceptos de gasto </span>
+
+</div>
+
+<div id="content" class="view">
+
+<div class="page-metadata">
+
+Created by <span class="author"> Usuario desconocido (covadonga.garcia)</span>, last updated by <span class="editor"> Usuario desconocido (lorena.alvarez)</span> on mar 11, 2021
+
+</div>
+
+<div id="main-content" class="wiki-content group">
+
+<div class="plugin-tabmeta-details">
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable" style="width: 75.1988%;">
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 84%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<th class="confluenceTh">Cod. CU</th>
+<td class="confluenceTd"><strong>CU-CSP-0090 - Gestión de conceptos de gasto</strong></td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Ver. objetivo</th>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh">Ver. CU</th>
+<td class="confluenceTd">1.0.0</td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Estado</th>
+<td class="confluenceTd"><div class="content-wrapper">
+<span class="status-macro aui-lozenge aui-lozenge-complete conf-macro output-inline">LIBERADO_</span>
+</div></td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh">Fec. Aprobación</th>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Épica, historia</th>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh">Actores</th>
+<td class="confluenceTd">ACT-CSP-004-Administrador</td>
+</tr>
+<tr class="even">
+<th class="confluenceTh"><p>Frecuencia</p></th>
+<td class="confluenceTd">Media</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+## Descripción
+
+Agrupación de casos de uso que permitirá realizar la gestión de los conceptos de gastos que se utilizarán para la definición de los presupuestos en la gestión de convocatorias y proyectos. Los conceptos de gasto tendrán una nomenclatura propia del área de investigación y se definirán de forma común por los ACT-CSP-004-Administrador. Los conceptos de gastos deberán estar asociados, en cada convocatoria/proyecto, a los códigos económicos/contables definidos en el SGE [REQ-INT-0010-SGE-0070 - Listar códigos económicos de gastos](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0010-sge-integracion-con-sistema-de-gestion-economica/req-int-0010-sge-0070-listar-codigos-economicos-de-gastos)
+
+<span style="font-size: 20.0px;letter-spacing: 0.0px;">  
+</span>
+
+<span style="font-size: 20.0px;letter-spacing: 0.0px;">Actores</span>
+
+### Actor principal
+
+ACT-CSP-004-Administrador
+
+### Personal involucrado e intereses
+
+ACT-CSP-003-Gestor que requiere que los conceptos económicos se encuentren correctamente configurados para poder registrar la Elegibilidad y Presupuesto de convocatorias y proyectos.
+
+ACT- CSP-001-Investigador que requiere los conceptos económicos para ver la Elegibilidad de convocatorias y proyectos e incorporar el desglose del Presupuesto en las solicitudes.
+
+## Precondiciones
+
+El usuario ACT-CSP-004-Administrador  se autentica a través del usuario de dominio corporativo.
+
+A través del servicio de integración con el directorio activo y de la información del usuario almacenada en el propio SGI, se obtiene su rol y las unidades de gestión sobre las que tiene disponible el rol. El usuario está autorizado sobre la funcionalidades asociadas a esta gestión.
+
+## Garantías de éxito (postcondiciones)
+
+Los conceptos económicos se encuentran correctamente configurados y pueden ser seleccionados desde las pantallas de gestión de convocatorias y proyectos.
+
+
+
+## Listado de casos de uso
+
+
+
+- [CU-CSP-0090-001 - Buscar y listar conceptos de gasto](https://confluence.um.es/confluence/spaces/HERCULES/pages/597852653/CU-CSP-0090-001+-+Buscar+y+listar+conceptos+de+gasto)
+- [CU-CSP-0090-002 - Crear concepto de gasto](https://confluence.um.es/confluence/spaces/HERCULES/pages/597852654/CU-CSP-0090-002+-+Crear+concepto+de+gasto)
+- [CU-CSP-0090-003 - Modificar concepto de gasto](https://confluence.um.es/confluence/spaces/HERCULES/pages/597852716/CU-CSP-0090-003+-+Modificar+concepto+de+gasto)
+- [CU-CSP-0090-004 - Eliminar concepto de gasto](https://confluence.um.es/confluence/spaces/HERCULES/pages/597852715/CU-CSP-0090-004+-+Eliminar+concepto+de+gasto)
+
+
+
+
+
+
+
+
+
+</div>
+
+</div>
+
+</div>
+
+<div id="footer" role="contentinfo">
+
+<div class="section footer-body">
+
+Document generated by Confluence on oct 27, 2025 08:39
+
+<div id="footer-logo">
+
+[Atlassian](https://www.atlassian.com/)
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 
 

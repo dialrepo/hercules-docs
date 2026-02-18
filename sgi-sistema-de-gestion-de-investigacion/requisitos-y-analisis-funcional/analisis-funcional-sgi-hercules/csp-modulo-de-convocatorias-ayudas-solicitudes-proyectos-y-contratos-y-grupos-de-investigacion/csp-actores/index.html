@@ -796,7 +796,136 @@
 
   <h1>Csp actores</h1>
 
+<div id="page">
 
+<div id="main" class="aui-page-panel">
+
+<div id="main-header">
+
+<div id="breadcrumb-section">
+
+1.  [Hércules](index.html)
+2.  [Hércules](/)
+3.  [SGI. Sistema de gestión de investigación](//sgi-sistema-de-gestion-de-investigacion)
+4.  [Requisitos y análisis funcional](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional)
+5.  [Análisis Funcional SGI - Hércules](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules)
+6.  [CSP - Módulo de convocatorias, ayudas, solicitudes, proyectos y contratos y grupos de investigación](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion)
+
+</div>
+
+# <span id="title-text"> Hércules : CSP - Actores </span>
+
+</div>
+
+<div id="content" class="view">
+
+<div class="page-metadata">
+
+Created by <span class="author"> Usuario desconocido (covadonga.garcia)</span>, last updated by <span class="editor"> Reyes Hernández-Mora Martínez</span> on ene 16, 2024
+
+</div>
+
+<div id="main-content" class="wiki-content group">
+
+<div class="plugin-tabmeta-details">
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable" style="width:82%;">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 47%" />
+<col style="width: 14%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<th class="confluenceTh">Nombre</th>
+<td class="highlight-grey confluenceTd" data-highlight-colour="grey" title="Color de fondo: Gris"><strong>Descripción</strong></td>
+<td class="highlight-grey confluenceTd" data-highlight-colour="grey" title="Color de fondo: Gris"><strong>Observaciones</strong></td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">ACT-CSP-001-Investigador</th>
+<td class="confluenceTd"><p>Personal investigador. Es un actor prioritario en este módulo. Deberá tener acceso para consultar las convocatorias disponibles, deberá poder registrar las solicitudes (aquellas que se habiliten a través del SGI), deberá poder consultar el estado de los proyectos en los que participa y deberá poder consultar los grupos de investigación a los que pertenece.</p>
+<p>Un investigador podrá tener diferentes roles de participación:</p>
+<ul>
+<li>miembro del equipo de un proyecto de investigación</li>
+<li>investigador principal de un proyecto de investigación</li>
+<li>responsable económico de un proyecto de investigación</li>
+<li>miembro de un grupo de investigación o un grupo de transferencia de conocimiento</li>
+<li>investigador principal de un proyecto de investigación</li>
+<li>responsable económico de un grupo de investigación o de transferencia del conocimiento</li>
+<li>persona autorizada de un grupo de investigación</li>
+<li>coordinador o persona autorizada de un grupo de transferencia del conocimiento</li>
+</ul></td>
+<td class="confluenceTd">Puede darse el caso que un investigador pudiera actuar como gestor, administrador o visor de una oficina o unidad de gestión.</td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh"><span>ACT-CSP-002-InvestigadorExterno</span></th>
+<td class="confluenceTd"><span>Personal investigador, sin vinculación contractual con la Universidad. Será candidato a acceder a la información de los proyectos en los colabora, es decir, de aquellos proyectos en los que figura como miembro del equipo. Para ello debe de disponer del usuario convenientemente configurado en el sistema de autenticación corporativo.</span></td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">ACT-CSP-003-Gestor</th>
+<td class="confluenceTd"><p>Personal de gestión. Un gestor pertenecerá una unidad, oficina o servicio. Se entiende por unidad u oficina, por ejemplo, UGI, OTRI, OPE o SAI.</p>
+<p>Es el actor principal en este módulo, es quien inicia el flujo al registrar las convocatorias, revisará las solicitudes presentadas por el personal investigador (<span>ACT- CSP-001-Investigador</span>), realizará el seguimiento de proyectos, con especial prioridad a la recopilación de la información necesaria para la justificación económica. En el caso de las acciones de RRHH deberá tener disponible la información asociada a la duración de los contratos.</p>
+<p><br />
+</p>
+<p><span>El personal de gestión podrá tener permisos (en el SGI) sobre más de una unidad de gestión. Sobre cada una de las unidades podrán actuar como gestores (</span><span>ACT-CSP-003-Gestor</span><span>), administradores de datos (</span><span>ACT-CSP-004-Administrador)</span><span> o visores de la información (</span><span>ACT-CSP-005-Visor). Las </span><span>convocatorias quedarán asociadas a una unidad de gestión en el momento de su creación. El usuario accederá a la información de la convocatoria (y sus solicitudes y proyectos derivados) en función del rol con el que esté adscrito a la unidad de gestión creadora de la convocatoria. Si el gestor no está asociado a una unidad de gestión concreta no podrá visualizar ninguna convocatoria, solicitud, proyecto de esa unidad.</span></p></td>
+<td class="confluenceTd"><span> </span></td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh">ACT-CSP-004-Administrador</th>
+<td class="confluenceTd"><p>Personal de gestión que puede realizar la gestión de datos maestros asociados a un determinado módulo del SGI.</p>
+<p>Tendrá permisos para poder realizar la gestión (creación de nuevos registros, modificación o eliminación) de los datos de categorización utilizados en la gestión de las entidades principales de este módulo (convocatorias, solicitudes y proyectos). Ejemplo: tipos de proyectos.</p>
+<p>Como en el caso anterior el <span>personal de gestión podrá tener permisos (en el SGI) sobre más de una unidad de gestión. Sobre cada una de las unidades podrán actuar como gestores (</span><span>ACT-CSP-003-Gestor</span><span>), administradores de datos (</span><span>ACT-CSP-004-Administrador)</span><span> o visores de la información (</span><span>ACT-CSP-005-Visor). Las </span><span>convocatorias quedarán asociadas a una unidad de gestión en el momento de su creación. El usuario accederá a la información de la convocatoria (y sus solicitudes y proyectos derivados) en función del rol con el que esté adscrito a la unidad de gestión creadora de la convocatoria. Si el gestor no está asociado a una unidad de gestión concreta no podrá visualizar ninguna convocatoria, solicitud, proyecto de esa unidad.</span></p></td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">ACT-CSP-005-Visor</th>
+<td class="confluenceTd"><p><span>Personal de gestión que solamente puede acceder en modo lectura a los datos de las convocatorias, solicitudes y proyectos.</span></p>
+<p><span><span>Como en el caso anterior el </span><span>personal de gestión podrá tener permisos (en el SGI) sobre más de una unidad de gestión. Sobre cada una de las unidades podrán actuar como gestores (</span><span>ACT-CSP-003-Gestor</span><span>), administradores de datos (</span><span>ACT-CSP-004-Administrador)</span><span> o visores de la información (</span><span>ACT-CSP-005-Visor). Las </span><span>convocatorias quedarán asociadas a una unidad de gestión en el momento de su creación. El usuario accederá a la información de la convocatoria (y sus solicitudes y proyectos derivados) en función del rol con el que esté adscrito a la unidad de gestión creadora de la convocatoria. Si el gestor no está asociado a una unidad de gestión concreta no podrá visualizar ninguna convocatoria, solicitud, proyecto de esa unidad.</span><br />
+</span></p></td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh"><span>ACT-008-Sysadm</span></th>
+<td class="confluenceTd"><span>Personal técnico de administración y configuración del sistema.</span></td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div id="footer" role="contentinfo">
+
+<div class="section footer-body">
+
+Document generated by Confluence on oct 27, 2025 08:39
+
+<div id="footer-logo">
+
+[Atlassian](https://www.atlassian.com/)
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 
 

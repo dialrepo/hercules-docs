@@ -796,7 +796,234 @@
 
   <h1>Um sgi esb sgp adaptaciones integracion</h1>
 
+<div id="page">
 
+<div id="main" class="aui-page-panel">
+
+<div id="main-header">
+
+<div id="breadcrumb-section">
+
+1.  [Hércules](index.html)
+2.  [Hércules](/)
+3.  [SGI. Sistema de gestión de investigación](//sgi-sistema-de-gestion-de-investigacion)
+4.  [Guia de Implantación - Checklist](//sgi-sistema-de-gestion-de-investigacion/guia-de-implantacion-checklist)
+5.  [UM - Universidad de Murcia](//sgi-sistema-de-gestion-de-investigacion/guia-de-implantacion-checklist/um-universidad-de-murcia)
+6.  [Sistema de Gestión de Investigación - APIs Integración](//sgi-sistema-de-gestion-de-investigacion/guia-de-implantacion-checklist/um-universidad-de-murcia/sistema-de-gestion-de-investigacion-apis-integracion)
+7.  [Sistema de gestión de Personas (RRHH) (UM - SGI - ESB - SGP)](//sgi-sistema-de-gestion-de-investigacion/guia-de-implantacion-checklist/um-universidad-de-murcia/sistema-de-gestion-de-investigacion-apis-integracion/sistema-de-gestion-de-personas-rrhh-um-sgi-esb-sgp)
+
+</div>
+
+# <span id="title-text"> Hércules : UM - SGI - ESB - SGP - Adaptaciones integración </span>
+
+</div>
+
+<div id="content" class="view">
+
+<div class="page-metadata">
+
+Created by <span class="author"> Usuario genérico para HERCULES</span> on jun 14, 2023
+
+</div>
+
+<div id="main-content" class="wiki-content group">
+
+# <span style="color:var(--ds-text,#172b4d);">Transformaciones de objetos</span>
+
+## <span style="color:var(--ds-text,#172b4d);">Método GET /vinculaciones/persona/{id}</span>
+
+### <span style="color:var(--ds-text,#172b4d);">Objeto Vinculacion UM → Objeto Vinculacion SGI</span>
+
+<div class="table-wrap">
+
+<table class="relative-table confluenceTable" style="width: 97.3742%;">
+<colgroup>
+<col style="width: 31%" />
+<col style="width: 37%" />
+<col style="width: 31%" />
+</colgroup>
+<tbody>
+<tr class="header">
+<th class="confluenceTh"><span style="color:var(--ds-text,#172b4d);">Objeto Vinculacion UM-ESB</span></th>
+<th class="confluenceTh"><span style="color:var(--ds-text,#172b4d);">Transformación a realizar UM-ESB-SGI</span></th>
+<th class="confluenceTh"><span style="color:var(--ds-text,#172b4d);">Objeto Vinculacion ESB-SGI</span></th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd"><p><span style="color:var(--ds-text,#172b4d);">Cada objeto de tipo Vinculacion-UM tiene estos campos:</span></p>
+<p><span style="color:var(--ds-text,#172b4d);">vinculacionesCategoriasProfesionales: Lista[VinculacionCategoriaProfesional];</span></p>
+<p><span style="color:var(--ds-text,#172b4d);">vinculacionesDepartamentos: Lista[VinculacionDepartamento]</span></p>
+<p><span style="color:var(--ds-text,#172b4d);">areaConocimiento: AreaConocimiento;</span></p>
+<p><span style="color:var(--ds-text,#172b4d);">empresaRef: String;</span></p>
+<p><span style="color:var(--ds-text,#172b4d);">personalPropio: Boolean;</span></p>
+<p><span style="color:var(--ds-text,#172b4d);">entidadPropiaRef: String;</span></p>
+<p><span style="color:var(--ds-text,#172b4d);">Dentro de las listas de objetos del tipo VinculacionCategoriaProfesional y del tipo VinculacionDepartamento pueden venir 1, 2 o ningún elemento. Si viene 1 elemento podrá ser una vinculación para un tipo de personal PAS o PDI. </span></p>
+<p><span style="color:var(--ds-text,#172b4d);">Si vienen 2, cada una será para un tipo de personal distinto, una para PAS y otra para PDI.</span></p>
+<p><span style="color:var(--ds-text,#172b4d);">No hay opción en principio de que vengan más elementos.</span></p></td>
+<td class="confluenceTd"><p><u><strong><span style="color:var(--ds-text,#172b4d);">La prioridad será siempre de los datos como PDI frente a como PAS aunque se divida en 3 transformaciones independientes, si viene un mix de información, sería un error en  los datos.</span></strong></u></p>
+<p><u><strong><span style="color:var(--ds-text,#172b4d);">Transformación 1: </span></strong></u></p>
+<p><span style="color:var(--ds-text,#172b4d);"><strong>DE vinculacionCategoriaProfesional.categoriaProfesional donde vinculacionCategoriaProfesional.tipoPersonal = PDI y/o vinculacionCategoriaProfesional.categoriaProfesional donde  vinculacionCategoriaProfesional.tipoPersonal = PAS → A</strong> <strong>vinculacionCategoriaProfesional.categoriaProfesional</strong></span></p>
+<p><span style="color:var(--ds-text,#172b4d);">Se habrá rellenar en el campo del objeto del SGI la vinculación con la categoría profesional que esté informada con la siguiente prioridad en caso de que se informen las dos:<br />
+</span></p>
+<ol>
+<li><span style="color:var(--ds-text,#172b4d);">Categoría profesional como PDI (vinculacionCategoriaProfesional.categoriaProfesional donde vinculacionCategoriaProfesional.tipoPersonal = PDI).<br />
+</span></li>
+<li><span style="color:var(--ds-text,#172b4d);">Categoría profesional como PAS  (vinculacionCategoriaProfesional.categoriaProfesional donde vinculacionCategoriaProfesional.tipoPersonal = PAS).</span></li>
+</ol>
+<p><br />
+</p>
+<p><span style="color:var(--ds-text,#172b4d);"><u><strong>Transformación 2:</strong></u> </span></p>
+<p><span style="color:var(--ds-text,#172b4d);"><strong>DE vinculacionCategoriaProfesional.fechaObtencion donde vinculacionCategoriaProfesional.tipoPersonal = PDI y vinculacionCategoriaProfesional.fechaObtencion donde  vinculacionCategoriaProfesional.tipoPersonal = PAS → A vinculacionCategoriaProfesional.fechaObtencion<br />
+</strong></span></p>
+<p><span style="color:var(--ds-text,#172b4d);">Se habrá rellenar en el campo del objeto del SGI la categoría profesional que esté informada con la siguiente prioridad en caso de que se informen las dos:</span></p>
+<ol>
+<li><span style="color:var(--ds-text,#172b4d);">Fecha de obtención de categoría profesional como PDI (vinculacionCategoriaProfesional.fechaObtencionCategoria donde vinculacionCategoriaProfesional.tipoPersonal = PDI).</span></li>
+<li><span style="color:var(--ds-text,#172b4d);">Fecha de obtención de categoría profesional como PAS (vinculacionCategoriaProfesional.fechaObtencionCategoria donde vinculacionCategoriaProfesional.tipoPersonal = PAS).</span></li>
+</ol>
+<p><br />
+</p>
+<p><span style="color:var(--ds-text,#172b4d);"><u><strong>Transformación 3:</strong></u> </span></p>
+<p><span style="color:var(--ds-text,#172b4d);"><strong>DE vinculacionDepartamento.departamento donde vinculacionCategoriaProfesional.tipoPersonal = PDI y vinculacionDepartamento.departamento donde vinculacionCategoriaProfesional.tipoPersonal = PAS → </strong> <strong>A departamento<br />
+</strong></span></p>
+<p><span style="color:var(--ds-text,#172b4d);">Se habrá rellenar en el campo del objeto del SGI el departamento que esté informado con la siguiente prioridad en caso de que estén los dos:</span></p>
+<ol>
+<li><span style="color:var(--ds-text,#172b4d);">Departamento como PDI (vinculacionDepartamento.departamento donde vinculacionCategoriaProfesional.tipoPersonal = PDI).</span></li>
+<li><span style="color:var(--ds-text,#172b4d);">Departamento como PAS (vinculacionDepartamento.departamento donde vinculacionCategoriaProfesional.tipoPersonal = PAS).</span></li>
+</ol>
+<p><span style="color:var(--ds-text,#172b4d);">Del resto de campos (areaConocimiento, personalPropio, empresaRef, entidadPropiaRef), se hará el paso tal cuál de los del mismo nombre de uno a otro objeto y en cuanto a los campos fechaFinCategoria de los objetos de tipo VinculacionCategoriaProfesional, no son de interés para el SGI, por lo que no se informarán en su objeto.</span></p></td>
+<td class="confluenceTd"><p><span style="color:var(--ds-text,#172b4d);">categoriaProfesional: CategoriaProfesional;</span></p>
+<p><span style="color:var(--ds-text,#172b4d);"><span style="color:var(--ds-text-accent-lime-bolder,#37471f);">fechaObtencionCategoria</span>: Date;</span></p>
+<p><span style="color:var(--ds-text,#172b4d);">departamento: Departamento;</span></p>
+<p><span style="color:var(--ds-text,#172b4d);">areaConocimiento: AreaConocimiento;</span></p>
+<p><span style="color:var(--ds-text,#172b4d);">empresaRef: String;</span></p>
+<p><span style="color:var(--ds-text,#172b4d);">personalPropio: Boolean;</span></p>
+<p><span style="color:var(--ds-text,#172b4d);">entidadPropiaRef: String;</span></p>
+<p><br />
+</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+## <span style="color:var(--ds-text,#172b4d);">Método GET /vinculaciones/persona/{id}/vinculaciones-categorias-profesionales</span>
+
+### <span style="color:var(--ds-text,#172b4d);">Lista de objetos VinculacionCategoriaProfesional UM → Objeto VinculacionCategoriaProfesional SGI</span>
+
+<div class="table-wrap">
+
+<table class="relative-table confluenceTable" style="width: 97.7571%;">
+<colgroup>
+<col style="width: 31%" />
+<col style="width: 37%" />
+<col style="width: 31%" />
+</colgroup>
+<tbody>
+<tr class="header">
+<th class="confluenceTh"><span style="color:var(--ds-text,#172b4d);">Lista de objetos VinculacionCategoriaProfesional UM-ESB</span></th>
+<th class="confluenceTh"><span style="color:var(--ds-text,#172b4d);">Transformación a realizar UM-ESB-SGI</span></th>
+<th class="confluenceTh"><span style="color:var(--ds-background-accent-red-bolder,#c9372c);"><span style="color:var(--ds-text,#172b4d);">Objeto VinculacionCategoriaProfesional</span><br />
+</span></th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd"><p><span style="color:var(--ds-text,#172b4d);">Cada objeto de tipo VinculacionCategoriaProfesional tiene estos campos:</span></p>
+<p><span style="color:var(--ds-text,#172b4d);">categoriaProfesional: CategoriaProfesional;</span></p>
+<p><span style="color:var(--ds-text,#172b4d);">fechaObtencion: Date;</span></p>
+<p><span style="color:var(--ds-text,#172b4d);">fechaFin: Date;</span></p>
+<p><span style="color:var(--ds-text,#172b4d);">tipoPersonal: PAS o PDI;</span></p>
+<p><span style="color:var(--ds-text,#172b4d);">Dentro de las listas de objetos del tipo VinculacionCategoriaProfesional que devuelve el método <em> /vinculaciones/persona/{id}/vinculaciones-categorias-profesionales</em> pueden venir 1, 2 o ningún elemento. Si viene 1 elemento podrá ser una vinculación para un tipo de personal PAS o PDI. </span></p>
+<p><span style="color:var(--ds-text,#172b4d);">Si vienen 2, cada una será para un tipo de personal distinto, una para PAS y otra para PDI.</span></p>
+<p><span style="color:var(--ds-text,#172b4d);">No hay opción en principio de que vengan más elementos.</span></p></td>
+<td class="confluenceTd"><p><u><strong><span style="color:var(--ds-text,#172b4d);">Transformación: </span></strong></u></p>
+<p><span style="color:var(--ds-text,#172b4d);"><strong>DE vinculacionCategoriaProfesional.categoriaProfesional donde vinculacionCategoriaProfesional.tipoPersonal = PDI y/o vinculacionCategoriaProfesional.categoriaProfesional donde  vinculacionCategoriaProfesional.tipoPersonal = PAS → </strong> <strong>A categoriaProfesional</strong></span></p>
+<p><span style="color:var(--ds-text,#172b4d);">Se habrá de devolver en un objeto de tipo CategoriaProfesional del SGI la vinculación con la categoría profesional que esté informada con la siguiente prioridad en caso de que se informen las dos:<br />
+</span></p>
+<ol>
+<li><span style="color:var(--ds-text,#172b4d);">Categoría profesional como PDI (vinculacionCategoriaProfesional.categoriaProfesional donde vinculacionCategoriaProfesional.tipoPersonal = PDI).<br />
+</span></li>
+<li><span style="color:var(--ds-text,#172b4d);">Categoría profesional como PAS  (vinculacionCategoriaProfesional.categoriaProfesional donde vinculacionCategoriaProfesional.tipoPersonal = PAS).</span></li>
+</ol></td>
+<td class="confluenceTd"><p><span style="color:var(--ds-text,#172b4d);">categoriaProfesional: CategoriaProfesional;</span></p>
+<p><span style="color:var(--ds-text,#172b4d);">fechaObtencion: Date;</span></p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+## <span style="color:var(--ds-text,#172b4d);">Método GET /datos-contacto/persona/{id} </span>
+
+### <span style="color:var(--ds-text,#172b4d);">Objeto DatosContacto UM → Objeto DatosContacto SGI</span>
+
+<div class="table-wrap">
+
+<table class="relative-table confluenceTable" style="width:100%;">
+<colgroup>
+<col style="width: 28%" />
+<col style="width: 42%" />
+<col style="width: 29%" />
+</colgroup>
+<tbody>
+<tr class="header">
+<th class="confluenceTh"><span style="color:var(--ds-text,#172b4d);">Objeto DatosContacto UM-ESB</span></th>
+<th class="confluenceTh"><span style="color:var(--ds-text,#172b4d);">Transformación a realizar UM-ESB-SGI</span></th>
+<th class="confluenceTh"><span style="color:var(--ds-text,#172b4d);">Objeto DatosContacto ESB-SGI</span></th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd"><p>paisContacto: Pais;</p>
+<p><span style="color:var(--ds-text,#172b4d);">comAutonomaContacto: ComunidadAutonoma;</span></p>
+<p><span style="color:var(--ds-text,#172b4d);">provinciaContacto: Provincia;</span></p>
+<p><span style="color:var(--ds-text,#172b4d);">ciudadContacto: String;</span></p>
+<p><span style="color:var(--ds-text,#172b4d);">codigoPostalContacto: String;</span></p>
+<p><span style="color:var(--ds-text,#172b4d);">tipoViaContacto: TipoVia;</span></p>
+<p><span style="color:var(--ds-text,#172b4d);">nombreViaContacto: String;</span></p>
+<p><span style="color:var(--ds-text,#172b4d);">numeroViaContacto: String;</span></p>
+<p><span style="color:var(--ds-text,#172b4d);">ampliacionDireccionContacto: String;</span></p>
+<p><br />
+</p></td>
+<td class="confluenceTd"><p><u><strong><span style="color:var(--ds-text,#172b4d);">Transformación: </span></strong></u></p>
+<p><span style="color:var(--ds-text,#172b4d);"><strong>tipoViaContacto, nombreViaContacto, numeroViaContacto, ampliacionDireccionContacto  → </strong> <strong>direccionContacto<br />
+</strong></span></p>
+<p><span style="color:var(--ds-text,#172b4d);">Se habrá de rellenar el campo direccionContacto del objeto del SGI concatenando, en el orden indicado y con algún tipo de separador (",", "-", ...) definido al momento de la integración, los campos indicados del objeto de UM.</span></p>
+<p><span style="color:var(--ds-text,#172b4d);">En el caso del tipo de vía, se usará el campo descripción del objeto TipoVia para la concatenación.</span></p>
+<p><span style="color:var(--ds-text,#172b4d);">El resto de campos, se trasladarán tal cuál entre un objeto y otro, ya que mantienen además el mismo nombre.</span></p></td>
+<td class="confluenceTd"><p>paisContacto: Pais;</p>
+<p><span style="color:var(--ds-text,#172b4d);">comAutonomaContacto: ComunidadAutonoma;</span></p>
+<p><span style="color:var(--ds-text,#172b4d);">provinciaContacto: Provincia;</span></p>
+<p><span style="color:var(--ds-text,#172b4d);">ciudadContacto: String;</span></p>
+<p><span style="color:var(--ds-text,#172b4d);">codigoPostalContacto: String;</span></p>
+<p><span style="color:var(--ds-text,#172b4d);">direccionContacto: String;<br />
+</span></p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+<div id="footer" role="contentinfo">
+
+<div class="section footer-body">
+
+Document generated by Confluence on oct 27, 2025 09:22
+
+<div id="footer-logo">
+
+[Atlassian](https://www.atlassian.com/)
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 
 

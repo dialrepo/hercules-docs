@@ -796,7 +796,410 @@
 
   <h1>Pre analisis predictivo</h1>
 
+<div id="page">
 
+<div id="main" class="aui-page-panel">
+
+<div id="main-header">
+
+<div id="breadcrumb-section">
+
+1.  [Hércules](index.html)
+2.  [Hércules](/)
+3.  [SGI. Sistema de gestión de investigación](//sgi-sistema-de-gestion-de-investigacion)
+4.  [Requisitos y análisis funcional](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional)
+5.  [Análisis Funcional SGI - Hércules](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules)
+
+</div>
+
+# <span id="title-text"> Hércules : PRE - Análisis predictivo </span>
+
+</div>
+
+<div id="content" class="view">
+
+<div class="page-metadata">
+
+Created by <span class="author"> Usuario desconocido (hector.suarez)</span>, last updated by <span class="editor"> Usuario desconocido (jesus.alvarez)</span> on sep 02, 2022
+
+</div>
+
+<div id="main-content" class="wiki-content group">
+
+# Introducción
+
+Los SGI en las universidades españolas son herramientas software que permiten a la comunidad investigadora universitaria llevar el control completo de los distintos proyectos de investigación que se llevan a cabo. Se trata de sistemas de gestión que almacenan toda la información de las distintas convocatorias de financiación para los proyectos de investigación, las solicitudes de financiación de los distintos investigadores o grupos de investigación, los proyectos finalmente financiados y que se llevan a cabo, y los datos de los resultados de las investigaciones, bien sea en forma de publicaciones científicas o patentes. Todo ello manteniendo un control económico completo de los presupuestos de investigación, su ejecución y los gastos e ingresos de los mismos, y, a un tiempo, gestionando la producción científica y el propio currículum de todos los investigadores a lo largo de su carrera.
+
+Una de las dificultades que los distintos SGIs presentes en la comunidad universitaria española es la gran cantidad de datos heterogéneos que se gestionan. De esta manera, resulta complicado con el paso de los años saber si para una determinada temática hay mucha o poca participación investigadora en una universidad concreta o si existe algún grupo o algún investigador individual más cercano, o más experimentado, en lo que se pretende buscar.
+
+El gestor de la investigación no tiene el conocimiento completo de todas las áreas de investigación ni la profundidad de detalle para poder valorar si los proyectos de un determinado grupo son más cercanos a una u otra temática de búsqueda y debe recurrir al profesional investigador. 
+
+Se pretende, en esta primera fase inicial, realizar una prueba de concepto de un sistema capaz de recomendar a uno o varios investigadores en función de una cadena de búsqueda, cotejando la similitud semántica de dicha cadena con una nube de términos extraída de las publicaciones del personal investigador. 
+
+# Fuente de datos
+
+A día de hoy todavía no se dispone en el SGI de un conjunto de datos relevante con información de pares "investigador  /  contenido-artículo".
+
+Es por ello que se ha optado por trabajar con un conjunto de datos públicos formado por miles de artículos publicados en PubMed:
+
+<a href="https://www.tensorflow.org/datasets/catalog/scientific_papers#scientific_paperspubmed" class="external-link" rel="nofollow">https://www.tensorflow.org/datasets/catalog/scientific_papers#scientific_paperspubmed</a>
+
+El fichero de datos se compone de líneas en formato "json", con la siguiente información:
+
+<div class="table-wrap">
+
+|               |                                            |
+|---------------|--------------------------------------------|
+| Campo         | Descripción                                |
+| article_id    | Identificador único del artículo en PubMed |
+| abstract_text | Abstract del artículo                      |
+| article_text  | Contenido del artículo                     |
+| section_names | Lista de secciones dentro del artículo     |
+| sections      | Contenido de cada sección                  |
+
+</div>
+
+
+
+Por ejemplo:
+
+<span class="confluence-embedded-file-wrapper"><img src="attachments/597852379/597882258.png" class="confluence-embedded-image" draggable="false" data-image-src="attachments/597852379/597882258.png" data-unresolved-comment-count="0" data-linked-resource-id="597882258" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="Selección_999(165).png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852379" data-linked-resource-container-version="11" tabindex="0" /></span>
+
+
+
+# Procesamiento inicial de datos
+
+La fuente de datos anterior carece, sin embargo, de información clave para nuestro propósito: el listado de autores de cada artículo.
+
+Por ello, se ha obtenido dicha información mediante la API pública de PubMed, que ofrece una manera rápida y sencilla de obtener el resto de meta-información a partir del identificador del artículo:
+
+<a href="https://api.ncbi.nlm.nih.gov/lit/ctxp" class="external-link" rel="nofollow">https://api.ncbi.nlm.nih.gov/lit/ctxp</a>
+
+Una vez obtenido el listado de autores por artículo, se ha procedido a agrupar la información de cada artículo por autor, extrayendo del abstract una nube de términos.
+
+El resultado final es un archivo en formato tabular con un registro por cada autor individual, y las siguientes columnas.
+
+- **Author**: nombre y apellidos del autor
+- **Abstract**: nube de términos extraida de los abstracts de los artículos publicados por el autor
+- **n_articles**: número de artículos de los que se ha extraído la información
+
+
+
+# Modelado del texto
+
+En problemas de naturaleza tan compleja como los de este proyecto, los datos se transforman en un conjunto de características que resulten útiles para su comparación con la query de búsqueda, dichas características deben contener información relevante.
+
+Para ello se han implementado los siguientes procesos:
+
+#### **Preprocesado de texto:**
+
+El preprocesdo del texto se compone de los siguientes procesos:
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852379/597884696.png" class="confluence-embedded-image confluence-thumbnail" draggable="false" data-image-src="attachments/597852379/597884696.png" data-unresolved-comment-count="0" data-linked-resource-id="597884696" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image2022-6-14_12-37-59.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852379" data-linked-resource-container-version="11" tabindex="0" height="231" /></span></span>
+
+#### **Tokenización:**
+
+<span style="color:var(--ds-text,#172b4d);">Tokenizar es el proceso de segmentar un texto en sus elementos semánticos básicos, es decir, dividir las frases en palabras. Para ellos eliminaremos los caracteres no alfanuméricos y utilizaremos el espacio como elemento separador.</span>
+
+Ejemplo:
+
+Texto de entrada: 'DisPFL: Towards a Communication-Efficient Federated Learning'
+
+Texto de salida: ‘DISPLF’ ‘TOWARDS’ ‘COMMUNICATION’ ‘EFFICIENT’ 'FEDERATED' 'LEARNING'
+
+#### **Stemming:**
+
+Es un proceso para reducir una palabra a su raíz (‘stem’ in inglés). Se utiliza para agrupar palabras con la misma información útil para la clasificación.
+
+Por ejemplo, las palabras ‘Venta’, ‘Vender’, ‘Vendido’ y ‘Vendiendo’ pasan a ser ‘Vend’.
+
+Para el proyecto se probarán diferentes algoritmos de stemming (Porter, Lancaster, …) y se seleccionará el que obtenga mejores prestaciones.
+
+#### **Eliminación de palabras frecuentes e infrecuentes:**
+
+Eliminación de palabras frecuentes: Son palabras sin significado semántico y que aportan poca información útil la temática del texto, que son filtradas antes del procesamiento del lenguaje natural de texto. Ejemplos de stopwords en español: ‘un’, ‘una’, ‘de’, ‘es’,…
+
+Eliminación de palabras infrecuentes: Son palabras que aparecen con tan poco frecuencia que probablemente sea debido a que contienen una errata.
+
+#### **Modelado matemático del texto - Vectorización:**
+
+Tanto la información de la query como la información relativa a cada investigador, se modelará como un vector numérico. Para ello se barajarán diferentes alternativas:
+
+- - - - Metrica TF-IDF (frecuencia de término – frecuencia de documento inversa): TF\*IDF o tf-idf es el acrónimo de “Term Frequency times Inverse Document Frequency”, que podemos traducir como “frecuencia del término por frecuencia inversa de documento”. Es una métrica desarrollada dentro de la disciplina conocida como IR o Information Retrieval (Recuperación de la información) para encontrar el documento más relevante para cierto término dentro de una colección de documentos. Antes de internet se usaba para rankear documentos dentro de una biblioteca o red de bibliotecas. ¿Cómo funciona? Mide con qué frecuencia aparece un término o frase dentro de un documento determinado, y lo compara con el número de documentos que mencionan ese  término dentro de una colección entera de documentos.
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852379/597884697.png" class="confluence-embedded-image" draggable="false" data-image-src="attachments/597852379/597884697.png" data-unresolved-comment-count="0" data-linked-resource-id="597884697" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image2022-6-14_12-33-39.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852379" data-linked-resource-container-version="11" tabindex="0" height="188" /></span></span>
+
+- - - - Doc2Vec: Su objetivo es crear una representación vectorial de un documento, independientemente de su longitud.  Estos vectores de párrafo heredan una propiedad importante de los vectores de palabras: la semántica. De manera que vectores de párrafos cercanos se asocian con documentos que, semánticamente, tienen un contenido similar.
+
+
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852379/597884695.png" class="confluence-embedded-image" draggable="false" data-image-src="attachments/597852379/597884695.png" data-unresolved-comment-count="0" data-linked-resource-id="597884695" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image2022-6-14_12-34-35.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852379" data-linked-resource-container-version="11" tabindex="0" height="250" /></span></span>
+
+Dada la necesidad de un conjunto masivo de artículos para la creación de un modelo propio Doc2Vec, se ha hecho uso de un modelo pre-entrenado a partir de la Wikipedia en habla inglesa:
+
+<span style="color:var(--ds-background-accent-green-subtle-pressed,#baf3db);"><a href="https://github.com/jhlau/doc2vec" class="external-link" rel="nofollow">https://github.com/jhlau/doc2vec</a></span>
+
+Se han implementado, pues, dos técnicas de modelado diferentes con el fin de evaluar su efectividad.
+
+
+
+# Instalación
+
+Nota: el proyecto requiere Python 2.7 para cargar los modelos de lenguaje Doc2Vec Gensim.
+
+Requisitos:
+
+- conda: <a href="https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html" class="external-link" rel="nofollow">https://docs.conda.io/projects/conda/en/latest/user-guide/install/index.html</a>
+
+Pasos a seguir:
+
+1.  Crear entorno de conda:
+
+    <div class="code panel pdl" style="border-width: 1px;">
+
+    <div class="codeContent panelContent pdl">
+
+    ``` syntaxhighlighter-pre
+    conda create -n python2 python=2.7 anacond
+    ```
+
+    </div>
+
+    </div>
+
+2.  Activar entorno:
+
+    <div class="code panel pdl" style="border-width: 1px;">
+
+    <div class="codeContent panelContent pdl">
+
+    ``` syntaxhighlighter-pre
+    source activate python2
+    ```
+
+    </div>
+
+    </div>
+
+3.  Clonar proyecto:
+
+    <div class="code panel pdl" style="border-width: 1px;">
+
+    <div class="codeContent panelContent pdl">
+
+    ``` syntaxhighlighter-pre
+    git clone http://gitlab.treelogic.local/operaciones/hercules/sgi/sgi-ap
+    ```
+
+    </div>
+
+    </div>
+
+4.  Instalar dependencias:
+
+    <div class="code panel pdl" style="border-width: 1px;">
+
+    <div class="codeContent panelContent pdl">
+
+    ``` syntaxhighlighter-pre
+    cd <LOCAL_PATH>/sgi-ap
+    pip install requirements.txt
+    ```
+
+    </div>
+
+    </div>
+
+    Nota: deberá cambiarse la cadena \<LOCAL_PATH\> por la ruta local del proyecto.
+
+
+
+# Uso
+
+
+
+Una vez instalado el proyecto, para su ejecución deberán seguirse los siguientes pasos:
+
+1.  Desde una ventana de línea de comandos, activar el entorno Python, en caso de que no haya sido activado previamente:
+
+    <div class="code panel pdl" style="border-width: 1px;">
+
+    <div class="codeContent panelContent pdl">
+
+    ``` syntaxhighlighter-pre
+    conda activate python2
+    ```
+
+    </div>
+
+    </div>
+
+2.  Ejecución del script de búsqueda de investigadores. Como se ha indicado, se dispone de dos implementaciones diferentes. Desde una ventana de línea de comandos, navegar al directorio raíz del proyecto (sgi-ap) y ejecutar:
+    1.  TF-IDF:
+
+        <div class="code panel pdl" style="border-width: 1px;">
+
+        <div class="codeContent panelContent pdl">
+
+        ``` syntaxhighlighter-pre
+        python ./src/ranking/rank_tfidf.py --file_path ./data/processed/abstracts_54-authors.csv --query "<YOUR_SEARCH_QUERY>"
+        ```
+
+        </div>
+
+        </div>
+
+    2.  Doc2Vec: 
+
+        <div class="code panel pdl" style="border-width: 1px;">
+
+        <div class="codeContent panelContent pdl">
+
+        ``` syntaxhighlighter-pre
+        python ./src/ranking/rank_doc2vec.py --file_path ./data/processed/abstracts_54-authors.csv --query "<YOUR_SEARCH_QUERY>"
+        ```
+
+        </div>
+
+        </div>
+
+        Donde \<YOUR_SEARCH_QUERY\> corresponde con una cadena de búsqueda.
+
+# Exploración
+
+
+
+Procederemos a continuación a usar la herramienta en un conjunto de datos obtenido del modo descrito anteriormente, y limitado a unos 21000 autores.
+
+El fichero de datos puede encontrarse en la carpeta del proyecto:  /sgi-ap/data/processed/abstracts_21000-authors.csv
+
+Realizamos la siguiente búsqueda, "vertebrobasilar dolichoectasia", mediante las dos implementaciones del proyecto. Primero, la correspondiente al algoritmo TF-IDF:
+
+**TF-IDF**
+
+<div class="code panel pdl" style="border-width: 1px;">
+
+<div class="codeContent panelContent pdl">
+
+
+<pre><code class="language-syntaxhighlighter-pre">python ./src/ranking/rank_tfidf.py --file_path ./data/processed/abstracts_21000-authors.csv --query &quot;vertebrobasilar dolichoectasia&quot;
+</code></pre>
+
+
+</div>
+
+</div>
+
+El proceso tomará cierto tiempo (del orden de minutos). Este tiempo de espera podría acortarse significativamente en un entorno productivo mediante el pre-cálculo de los vectores (word embeddings) asociados a cada autor.
+
+Se obtiene el siguiente resultado:
+
+<div class="table-wrap">
+
+|               |                    |
+|---------------|--------------------|
+| Autor         | Distancia coseno   |
+| Prakhar Gupta | 0.6096401793267894 |
+| Gaurav Shah   | 0.6096401793267894 |
+| Mohd Khalid   | 0.6096401793267894 |
+
+</div>
+
+(La columna "Distancia coseno" hace referencia a la "distancia" entre la cadena de búsqueda y la nube de términos asociada a cada investigador)
+
+El número de resultados se está limitando a 3 por defecto, pero es posible fijar la longitud del resultado de búsqueda de acuerdo a lo deseado mediante el parámetro ""–n":
+
+**Doc2Vec**
+
+<div class="code panel pdl" style="border-width: 1px;">
+
+<div class="codeContent panelContent pdl">
+
+
+<pre><code class="language-syntaxhighlighter-pre">python ./src/ranking/rank_doc2vec.py --file_path ./data/processed/abstracts_21000-authors.csv --query &quot;vertebrobasilar dolichoectasia&quot;
+</code></pre>
+
+
+</div>
+
+</div>
+
+Resultados:
+
+<div class="table-wrap">
+
+|               |                    |
+|---------------|--------------------|
+| Autor         | Distancia coseno   |
+| Prakhar Gupta | 0.3284202810813404 |
+| Gaurav Shah   | 0.3284202810813404 |
+| Mohd Khalid   | 0.3284202810813404 |
+
+</div>
+
+
+
+Se observa que, en el caso de ambas implementaciones, el resultado coincide con lo esperado, al ser los autores citados los únicos de todo el corpus de artículos con publicaciones referidas a dicha patología.
+
+# Anexo
+
+## Estructura del proyecto
+
+
+
+<span class="confluence-embedded-file-wrapper"><img src="attachments/597852379/597882257.png" class="confluence-embedded-image" draggable="false" data-image-src="attachments/597852379/597882257.png" data-unresolved-comment-count="0" data-linked-resource-id="597882257" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="Selección_999(166).png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852379" data-linked-resource-container-version="11" tabindex="0" /></span>
+
+
+
+
+
+</div>
+
+<div class="pageSection group">
+
+<div class="pageSectionHeader">
+
+## Attachments:
+
+</div>
+
+<div class="greybox" align="left">
+
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [image2022-6-14_12-29-46.png](/attachments/597852379/597884698.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [image2022-6-14_12-33-39.png](/attachments/597852379/597884697.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [image2022-6-14_12-34-35.png](/attachments/597852379/597884695.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [image2022-6-14_12-35-46.png](/attachments/597852379/597884694.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [image2022-6-14_12-37-59.png](/attachments/597852379/597884696.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [image2022-6-28_10-44-6.png](/attachments/597852379/597881208.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [image2022-6-28_11-38-50.png](/attachments/597852379/597881207.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [Selección_999(166).png](/attachments/597852379/597882257.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [Selección_999(165).png](/attachments/597852379/597882258.png) (image/png)  
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div id="footer" role="contentinfo">
+
+<div class="section footer-body">
+
+Document generated by Confluence on oct 27, 2025 08:39
+
+<div id="footer-logo">
+
+[Atlassian](https://www.atlassian.com/)
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 
 

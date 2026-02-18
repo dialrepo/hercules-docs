@@ -796,7 +796,230 @@
 
   <h1>Api rest</h1>
 
+<div id="page">
 
+<div id="main" class="aui-page-panel">
+
+<div id="main-header">
+
+<div id="breadcrumb-section">
+
+1.  [Hércules](index.html)
+2.  [Hércules](/)
+3.  [RPA](//rpa)
+4.  [Módulo de tecnologías cognitivas](//rpa/modulo-de-tecnologias-cognitivas)
+
+</div>
+
+# <span id="title-text"> Hércules : API Rest </span>
+
+</div>
+
+<div id="content" class="view">
+
+<div class="page-metadata">
+
+Created by <span class="author"> Usuario genérico para HERCULES</span>, last updated on sep 22, 2022
+
+</div>
+
+<div id="main-content" class="wiki-content group">
+
+El módulo proporcionará una API para que pueda ser utilizado e integrado por los distintos subsistemas del proyecto HÉRCULES. A continuación explicaremos las llamadas que esta API ofrece:
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable" style="width: 99.4771%;">
+<colgroup>
+<col style="width: 4%" />
+<col style="width: 22%" />
+<col style="width: 18%" />
+<col style="width: 22%" />
+<col style="width: 31%" />
+</colgroup>
+<tbody>
+<tr class="header">
+<th class="confluenceTh">Método</th>
+<th class="confluenceTh">Url</th>
+<th class="confluenceTh">Parámetros</th>
+<th class="confluenceTh">Respuesta</th>
+<th class="confluenceTh"><p>Descripción</p></th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd"><code>POST</code></td>
+<td class="confluenceTd"><code>/api/module_cognitive/pdf_to_table</code></td>
+<td class="confluenceTd"><p><code>Body JSON:</code></p>
+<p><code>{ "files": ["path_PDFs"],</code></p>
+<p><code>"excel": "True"/"False"</code></p>
+<p><code>"email": "email@mail.es"}</code></p></td>
+<td class="confluenceTd"><p>JSON Dataframe con el contenido del PFD</p></td>
+<td class="confluenceTd">Extrae tablas de imágenes o documentos PDF's  que te devuelve en un dataframe y adicionalmente, si se ha especificado, en un formato XLSX a través del correo electrónico.</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><code>POST</code></td>
+<td class="confluenceTd"><code>/api/module_cognitive/xml/execute</code></td>
+<td class="confluenceTd"><p><code>Body JSON:</code></p>
+<p><code>{"url": "url", "filename": "file.xml"}</code></p></td>
+<td class="confluenceTd"><p>JSON Nodos obtenidos del fichero XML y de la URL</p></td>
+<td class="confluenceTd">Devuelve los nodos XML dado la URL y el fichero XML.</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><code>POST</code></td>
+<td class="confluenceTd"><code>/api/module_cognitive/xml/get_document</code></td>
+<td class="confluenceTd"><p><code>Body JSON:</code><br />
+<code>{ "origen": "url_origen", "destino": "path_destino"</code></p>
+<p><code>}</code></p></td>
+<td class="confluenceTd">Código de respuesta si se ha traído el documento.</td>
+<td class="confluenceTd">Esta llamada consulta la <em>url_origen</em> dado y escribe el resultado, si existe, en el destino seleccionado. Devuelve el código de respuesta a la llamada con la <em>url_origen.</em></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><code>POST</code></td>
+<td class="confluenceTd"><code>/api/module_cognitive/xml/get_dictionary</code></td>
+<td class="confluenceTd"><p><code>Body JSON:</code></p>
+<p><code>{ "filename": "path_filename",</code></p>
+<p><code>"rootname": "rootname",</code></p>
+<p><code>"atribname": "atribname",</code></p>
+<p><code>"childsname": "childsname"}</code></p></td>
+<td class="confluenceTd">Diccionario con el contenido del fichero XML con los parámetros dados.</td>
+<td class="confluenceTd"><p>Dado un fichero XML y los parámetros devuelve un diccionario con el resultado de ese fichero XML.</p>
+<p><br />
+</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><code>POST</code></td>
+<td class="confluenceTd"><code>/api/module_cognitive/bdns/search</code></td>
+<td class="confluenceTd"><p><code>Body JSON:</code></p>
+<p><code>{ "start_date":"2022-05-15",</code></p>
+<p><code>"end_date": "2022-05-31",</code></p>
+<p><code>"args":"palabra1 palabra2 palabra3" ... }</code></p></td>
+<td class="confluenceTd">JSON con el resultado de la búsqueda realizada.</td>
+<td class="confluenceTd">Esta llamada consulta la página web de la Base de datos nacional de subvenciones y te devuelve el resultado en formato CSV de la consulta realizada con los parámetros dados.</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><code>POST</code></td>
+<td class="confluenceTd"><div class="content-wrapper">
+<p><code>/api/module_cognitive/bdns/data</code></p>
+</div></td>
+<td class="confluenceTd"><div class="content-wrapper">
+<p><code>Body JSON:</code></p>
+<p><code>{"bdns": "123456"} </code></p>
+</div></td>
+<td class="confluenceTd">Diccionario con la información ampliada de la convocatoria dada a través de su número de BDNS.</td>
+<td class="confluenceTd">Dado el número de la BDNS te devuelve la información ampliada en la página web sobre dicha convocatoria.</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><code>GET</code></td>
+<td class="confluenceTd"><code>/api/module_cognitive/datamining/all_cluster</code></td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Dataframe con todo el cluster.</td>
+<td class="confluenceTd">Devuelve todo el <em>cluster</em> de la llamada SPARQL que realiza al entorno EDMA con toda la información sobre investigadores.</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><code>GET</code></td>
+<td class="confluenceTd"><code>/api/module_cognitive/datamining/all_categories</code></td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Lista de todas las categorías del dataframe.</td>
+<td class="confluenceTd">Devuelve una lista de las <em>categories</em> extraídas del <em>dataframe</em> de la consulta SPARQL que se realiza al entorno EDMA.</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><code>GET</code></td>
+<td class="confluenceTd"><code>/api/module_cognitive/datamining/all_tag</code></td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Lista de todos los tags del dataframe.</td>
+<td class="confluenceTd">Devuelve una lista de <em>tags</em> extraídos del <em>dataframe</em> de la consulta SPARQL que se realiza al entorno EDMA.</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><code>POST</code></td>
+<td class="confluenceTd"><code>/api/module_cognitive/datamining/categories_interest_research</code></td>
+<td class="confluenceTd"><div class="content-wrapper">
+<p><code>Body JSON:</code></p>
+<p><code>{"email":"email@</code><a href="http://mail.com" class="external-link" rel="nofollow"><code>mail.com</code></a><code>"}</code></p>
+</div></td>
+<td class="confluenceTd">Lista de las categorías a las que pertenece el investigador</td>
+<td class="confluenceTd">Devuelve una lista de categorías en las que el investigador ha participado.</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><code>POST</code></td>
+<td class="confluenceTd"><code>/api/module_cognitive/datamining/tags_interest_research</code></td>
+<td class="confluenceTd"><p><code>Body JSON:</code></p>
+<p><code>{"email":"email@</code><a href="http://mail.com" class="external-link" rel="nofollow"><code>mail.com</code></a><code>"}</code></p></td>
+<td class="confluenceTd">Lista de los tags a los que pertenece el investigador.</td>
+<td class="confluenceTd">Devuelve una lista de <em>tags</em> en las que el investigado ha participado.</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><code>POST</code></td>
+<td class="confluenceTd"><code>/api/module_cognitive/datamining/research_clusters</code></td>
+<td class="confluenceTd"><p><code>Body JSON:</code></p>
+<p><code>{"email":"email@</code><a href="http://mail.com" class="external-link" rel="nofollow"><code>mail.com</code></a><code>"}</code></p></td>
+<td class="confluenceTd">Lista de los clusters a los que pertenece el investigador.</td>
+<td class="confluenceTd">Devuelve una lista de <em>clusters</em> en las que el investigador ha participado.</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><code>POST</code></td>
+<td class="confluenceTd"><code>/api/module_cognitive/datamining/research_relation</code></td>
+<td class="confluenceTd"><p><code>Body JSON:</code></p>
+<p><code>{"email":"email@</code><a href="http://mail.com" class="external-link" rel="nofollow"><code>mail.com</code></a><code>"}</code></p></td>
+<td class="confluenceTd">Lista de las relaciones que tiene el investigador.</td>
+<td class="confluenceTd">Devuelve una lista de las relaciones que tiene el investigador.</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><code>POST</code></td>
+<td class="confluenceTd"><code>/api/module_cognitive/datamining/research_tag</code></td>
+<td class="confluenceTd"><div class="content-wrapper">
+<p><code>Body JSON:</code></p>
+<p><span style="color:var(--ds-text,#172b4d);"><code>{"tags": [ "tag1","tag2","tag3", ... ]}</code></span></p>
+</div></td>
+<td class="confluenceTd">Lista de emails que tienen relación con los tags.</td>
+<td class="confluenceTd">Devuelve una lista de emails asociados a investigadores los cuales cumplen que tienen alguna relación con los <em>tags</em> dados como parámetros.</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><code>POST</code></td>
+<td class="confluenceTd"><code>/api/module_cognitive/datamining/research_category</code></td>
+<td class="confluenceTd"><p><code>Body JSON:</code></p>
+<p><span style="color:var(--ds-text,#172b4d);"><code>{"categories": [ "category1","category2","category3", ... ]}</code></span></p></td>
+<td class="confluenceTd">Lista de emails que tienen relación con las categories.</td>
+<td class="confluenceTd">Devuelve una lista de emails asociados a los investigadores los cuales cumplen que tienen alguna relación con las <em>categories</em> dadas como parámetros.</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><code>POST</code></td>
+<td class="confluenceTd"><code>/api/module_cognitive/datamining/research_category_tag</code></td>
+<td class="confluenceTd"><p><code>Body JSON:</code></p>
+<p><span style="color:var(--ds-text,#172b4d);"><code>{"tags": [ "tag1","tag2","tag3", ... ],</code></span></p>
+<p><span style="color:var(--ds-text,#172b4d);"><code>"categories": [ "category1","category2","category3", ... ]}</code></span></p></td>
+<td class="confluenceTd">Lista de emails que tienen relación con los tags y categories.</td>
+<td class="confluenceTd">Devuelve una lista de emails asociados a los investigadores lo cuales cumplen que tienen alguna relación con las <em>categories</em> y <em>tags</em> dados como parámetros.</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div id="footer" role="contentinfo">
+
+<div class="section footer-body">
+
+Document generated by Confluence on oct 27, 2025 09:31
+
+<div id="footer-logo">
+
+[Atlassian](https://www.atlassian.com/)
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 
 

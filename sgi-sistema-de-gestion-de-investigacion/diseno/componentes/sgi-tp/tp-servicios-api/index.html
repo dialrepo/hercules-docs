@@ -796,7 +796,559 @@
 
   <h1>Tp servicios api</h1>
 
+<div id="page">
 
+<div id="main" class="aui-page-panel">
+
+<div id="main-header">
+
+<div id="breadcrumb-section">
+
+1.  [Hércules](index.html)
+2.  [Hércules](/)
+3.  [SGI. Sistema de gestión de investigación](//sgi-sistema-de-gestion-de-investigacion)
+4.  [Diseño](//sgi-sistema-de-gestion-de-investigacion/diseno)
+5.  [Componentes](//sgi-sistema-de-gestion-de-investigacion/diseno/componentes)
+6.  [SGI - TP](//sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-tp)
+
+</div>
+
+# <span id="title-text"> Hércules : TP - Servicios API </span>
+
+</div>
+
+<div id="content" class="view">
+
+<div class="page-metadata">
+
+Created by <span class="author"> Usuario desconocido (lorena.alvarez)</span>, last updated by <span class="editor"> Usuario desconocido (ruben.suarez)</span> on mar 01, 2022
+
+</div>
+
+<div id="main-content" class="wiki-content group">
+
+<div class="toc-macro rbtoc1761551617793">
+
+- [Config](#TPServiciosAPI-Config)
+- [SgiApiCronTask y SgiApiInstantTask](#TPServiciosAPI-SgiApiCronTaskySgiApiInstantTask)
+
+</div>
+
+## Config
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="header">
+<th class="confluenceTh">Método</th>
+<th class="confluenceTh">URL</th>
+<th class="confluenceTh">Parámetros</th>
+<th class="confluenceTh">Respuesta</th>
+<th class="confluenceTh">Descripción</th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd">GET</td>
+<td class="confluenceTd">/config/time-zone</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><div class="content-wrapper">
+<div id="expander-532620822" class="expand-container">
+<div id="expander-control-532620822" class="expand-control">
+<span class="expand-icon aui-icon aui-icon-small aui-iconfont-chevron-down" aria-hidden="true"></span><span class="expand-control-text conf-macro-render">Ejemplo...</span>
+</div>
+<div id="expander-content-532620822" class="expand-content" role="region" aria-labelledby="expand-button-532620822">
+<p>Europe/Madrid</p>
+</div>
+</div>
+</div></td>
+<td class="confluenceTd">Devuelve una cadena con el identificador de TimeZone configurado en el módulo</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">GET</td>
+<td class="confluenceTd">/config/locale</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><div class="content-wrapper">
+<div id="expander-2049111665" class="expand-container">
+<div id="expander-control-2049111665" class="expand-control">
+<span class="expand-icon aui-icon aui-icon-small aui-iconfont-chevron-down" aria-hidden="true"></span><span class="expand-control-text conf-macro-render">Ejemplo...</span>
+</div>
+<div id="expander-content-2049111665" class="expand-content" role="region" aria-labelledby="expand-button-2049111665">
+<p>es_ES</p>
+</div>
+</div>
+</div></td>
+<td class="confluenceTd">Devuelve una cadena con el Locale según los valores antiguos del estándar ISO 639.  Este Locale se utilizará para realizar las invocaciones al API REST de SGI.</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+## SgiApiCronTask y SgiApiInstantTask
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable" style="width: 87.5083%;">
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 16%" />
+<col style="width: 8%" />
+<col style="width: 12%" />
+<col style="width: 28%" />
+</colgroup>
+<tbody>
+<tr class="header">
+<th class="confluenceTh">Método</th>
+<th class="confluenceTh">URL</th>
+<th class="confluenceTh">Parámetros</th>
+<th class="confluenceTh">Respuesta</th>
+<th class="confluenceTh">Descripción</th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd">POST</td>
+<td class="confluenceTd">/sgiapitasks/cron</td>
+<td class="confluenceTd"><div class="content-wrapper">
+<p>SgiApiCronTaskInput</p>
+<div id="expander-1742602155" class="expand-container">
+<div id="expander-control-1742602155" class="expand-control">
+<span class="expand-icon aui-icon aui-icon-small aui-iconfont-chevron-down" aria-hidden="true"></span><span class="expand-control-text conf-macro-render">Ejemplo...</span>
+</div>
+<div id="expander-content-1742602155" class="expand-content" role="region" aria-labelledby="expand-button-1742602155">
+<div class="code panel pdl" style="border-width: 1px;">
+<div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: js; gutter: false"><code>{
+    &quot;description&quot;: &quot;Prueba CRON&quot;,
+    &quot;serviceType&quot;: &quot;USR&quot;,
+    &quot;relativeUrl&quot;: &quot;/config/time-zone&quot;,
+    &quot;httpMethod&quot;: &quot;GET&quot;,
+    &quot;cronExpression&quot;: &quot;0/10 * * * * ?&quot;
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div></td>
+<td class="confluenceTd"><div class="content-wrapper">
+<p>SgiApiCronTaskOutput</p>
+<div id="expander-2136927390" class="expand-container">
+<div id="expander-control-2136927390" class="expand-control">
+<span class="expand-icon aui-icon aui-icon-small aui-iconfont-chevron-down" aria-hidden="true"></span><span class="expand-control-text conf-macro-render">Ejemplo...</span>
+</div>
+<div id="expander-content-2136927390" class="expand-content" role="region" aria-labelledby="expand-button-2136927390">
+<div class="code panel pdl" style="border-width: 1px;">
+<div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: js; gutter: false"><code>{
+    &quot;description&quot;: &quot;Prueba CRON&quot;,
+    &quot;serviceType&quot;: &quot;USR&quot;,
+    &quot;relativeUrl&quot;: &quot;/config/time-zone&quot;,
+    &quot;httpMethod&quot;: &quot;GET&quot;,
+    &quot;cronExpression&quot;: &quot;0/10 * * * * ?&quot;,
+    &quot;id&quot;: 7,
+    &quot;disabled&quot;: false
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div></td>
+<td class="confluenceTd">Crea una tarea programada repetitiva de invocación a API REST de SGI</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">POST</td>
+<td class="confluenceTd">/sgiapitasks/instant</td>
+<td class="confluenceTd"><div class="content-wrapper">
+<p>SgiApiInstantTaskInput</p>
+<div id="expander-1510608949" class="expand-container">
+<div id="expander-control-1510608949" class="expand-control">
+<span class="expand-icon aui-icon aui-icon-small aui-iconfont-chevron-down" aria-hidden="true"></span><span class="expand-control-text conf-macro-render">Ejemplo...</span>
+</div>
+<div id="expander-content-1510608949" class="expand-content" role="region" aria-labelledby="expand-button-1510608949">
+<div class="code panel pdl" style="border-width: 1px;">
+<div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: js; gutter: false"><code>{
+    &quot;description&quot;: &quot;Prueba Instant&quot;,
+    &quot;serviceType&quot;: &quot;USR&quot;,
+    &quot;relativeUrl&quot;: &quot;/config/time-zone&quot;,
+    &quot;httpMethod&quot;: &quot;GET&quot;,
+    &quot;instant&quot;: &quot;2021-11-04T07:19:00Z&quot;
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div></td>
+<td class="confluenceTd"><div class="content-wrapper">
+<p>SgiApiInstantTaskOutput</p>
+<div id="expander-1969277505" class="expand-container">
+<div id="expander-control-1969277505" class="expand-control">
+<span class="expand-icon aui-icon aui-icon-small aui-iconfont-chevron-down" aria-hidden="true"></span><span class="expand-control-text conf-macro-render">Ejemplo...</span>
+</div>
+<div id="expander-content-1969277505" class="expand-content" role="region" aria-labelledby="expand-button-1969277505">
+<div class="code panel pdl" style="border-width: 1px;">
+<div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: js; gutter: false"><code>{
+    &quot;description&quot;: &quot;Prueba Instant&quot;,
+    &quot;serviceType&quot;: &quot;USR&quot;,
+    &quot;relativeUrl&quot;: &quot;/config/time-zone&quot;,
+    &quot;httpMethod&quot;: &quot;GET&quot;,
+    &quot;instant&quot;: &quot;2021-11-04T07:19:00Z&quot;,
+    &quot;id&quot;: 8,
+    &quot;disabled&quot;: false
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div></td>
+<td class="confluenceTd">Crea una tarea programada para un instante determinado de invocación a API REST de SGI</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">PUT</td>
+<td class="confluenceTd">/sgiapitasks/cron/{id}</td>
+<td class="confluenceTd"><div class="content-wrapper">
+<p>SgiApiCronTaskInput</p>
+<div id="expander-1945687215" class="expand-container">
+<div id="expander-control-1945687215" class="expand-control">
+<span class="expand-icon aui-icon aui-icon-small aui-iconfont-chevron-down" aria-hidden="true"></span><span class="expand-control-text conf-macro-render">Ejemplo...</span>
+</div>
+<div id="expander-content-1945687215" class="expand-content" role="region" aria-labelledby="expand-button-1945687215">
+<div class="code panel pdl" style="border-width: 1px;">
+<div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: js; gutter: false"><code>{
+    &quot;description&quot;: &quot;Prueba CRON mod&quot;,
+    &quot;serviceType&quot;: &quot;USR&quot;,
+    &quot;relativeUrl&quot;: &quot;/config/time-zone&quot;,
+    &quot;httpMethod&quot;: &quot;GET&quot;,
+    &quot;cronExpression&quot;: &quot;0 0 0 * * ?&quot;
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div></td>
+<td class="confluenceTd"><div class="content-wrapper">
+<p>SgiApiCronTaskOutput</p>
+<div id="expander-402157419" class="expand-container">
+<div id="expander-control-402157419" class="expand-control">
+<span class="expand-icon aui-icon aui-icon-small aui-iconfont-chevron-down" aria-hidden="true"></span><span class="expand-control-text conf-macro-render">Ejemplo...</span>
+</div>
+<div id="expander-content-402157419" class="expand-content" role="region" aria-labelledby="expand-button-402157419">
+<div class="code panel pdl" style="border-width: 1px;">
+<div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: js; gutter: false"><code>{
+    &quot;description&quot;: &quot;Prueba CRON mod&quot;,
+    &quot;serviceType&quot;: &quot;USR&quot;,
+    &quot;relativeUrl&quot;: &quot;/config/time-zone&quot;,
+    &quot;httpMethod&quot;: &quot;GET&quot;,
+    &quot;cronExpression&quot;: &quot;0 0 0 * * ?&quot;,
+    &quot;id&quot;: 7,
+    &quot;disabled&quot;: false
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div></td>
+<td class="confluenceTd">Actualiza una tarea programada repetitiva de invocación a API REST de SGI</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">PUT</td>
+<td class="confluenceTd">/sgiapitasks/instant/{id}</td>
+<td class="confluenceTd"><div class="content-wrapper">
+<p>SgiApiInstantTaskInput</p>
+<div id="expander-2005091225" class="expand-container">
+<div id="expander-control-2005091225" class="expand-control">
+<span class="expand-icon aui-icon aui-icon-small aui-iconfont-chevron-down" aria-hidden="true"></span><span class="expand-control-text conf-macro-render">Ejemplo...</span>
+</div>
+<div id="expander-content-2005091225" class="expand-content" role="region" aria-labelledby="expand-button-2005091225">
+<div class="code panel pdl" style="border-width: 1px;">
+<div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: js; gutter: false"><code>{
+    &quot;description&quot;: &quot;Prueba Instant mod&quot;,
+    &quot;serviceType&quot;: &quot;USR&quot;,
+    &quot;relativeUrl&quot;: &quot;/config/time-zone&quot;,
+    &quot;httpMethod&quot;: &quot;GET&quot;,
+    &quot;instant&quot;: &quot;2022-03-01T16:00:00Z&quot;
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div></td>
+<td class="confluenceTd"><div class="content-wrapper">
+<p>SgiApiInstantTaskOutput</p>
+<div id="expander-1562886605" class="expand-container">
+<div id="expander-control-1562886605" class="expand-control">
+<span class="expand-icon aui-icon aui-icon-small aui-iconfont-chevron-down" aria-hidden="true"></span><span class="expand-control-text conf-macro-render">Ejemplo...</span>
+</div>
+<div id="expander-content-1562886605" class="expand-content" role="region" aria-labelledby="expand-button-1562886605">
+<div class="code panel pdl" style="border-width: 1px;">
+<div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: js; gutter: false"><code>{
+    &quot;description&quot;: &quot;Prueba Instant mod&quot;,
+    &quot;serviceType&quot;: &quot;USR&quot;,
+    &quot;relativeUrl&quot;: &quot;/config/time-zone&quot;,
+    &quot;httpMethod&quot;: &quot;GET&quot;,
+    &quot;instant&quot;: &quot;2022-03-01T16:00:00Z&quot;,
+    &quot;id&quot;: 8,
+    &quot;disabled&quot;: false
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div></td>
+<td class="confluenceTd">Actualiza una tarea programada para un instante determinado de invocación a API REST de SGI</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">DELETE</td>
+<td class="confluenceTd">/sgiapitasks/{id}</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Elimina una tarea programada (repetitiva o para un instante determinado) de invocación a API REST de SGI</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">GET</td>
+<td class="confluenceTd">/sgiapitasks/{id}</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><div class="content-wrapper">
+<p>SgiApiCronTaskOutput ó SgiApiInstantTaskOutput según el tipo de tarea</p>
+<div id="expander-370169258" class="expand-container">
+<div id="expander-control-370169258" class="expand-control">
+<span class="expand-icon aui-icon aui-icon-small aui-iconfont-chevron-down" aria-hidden="true"></span><span class="expand-control-text conf-macro-render">Ejemplo CRON...</span>
+</div>
+<div id="expander-content-370169258" class="expand-content" role="region" aria-labelledby="expand-button-370169258">
+<div class="code panel pdl" style="border-width: 1px;">
+<div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: js; gutter: false"><code>{
+    &quot;description&quot;: &quot;Paso a archivado por inactividad&quot;,
+    &quot;serviceType&quot;: &quot;ETI&quot;,
+    &quot;relativeUrl&quot;: &quot;/memorias/inactivo/archivar&quot;,
+    &quot;httpMethod&quot;: &quot;PATCH&quot;,
+    &quot;cronExpression&quot;: &quot;0 30 0 * * ?&quot;,
+    &quot;id&quot;: 3,
+    &quot;disabled&quot;: false
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div id="expander-1341699543" class="expand-container">
+<div id="expander-control-1341699543" class="expand-control">
+<span class="expand-icon aui-icon aui-icon-small aui-iconfont-chevron-down" aria-hidden="true"></span><span class="expand-control-text conf-macro-render">Ejemplo Instant...</span>
+</div>
+<div id="expander-content-1341699543" class="expand-content" role="region" aria-labelledby="expand-button-1341699543">
+<div class="code panel pdl" style="border-width: 1px;">
+<div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: js; gutter: false"><code>{
+    &quot;description&quot;: &quot;Prueba Instant&quot;,
+    &quot;serviceType&quot;: &quot;USR&quot;,
+    &quot;relativeUrl&quot;: &quot;/config/time-zone&quot;,
+    &quot;httpMethod&quot;: &quot;GET&quot;,
+    &quot;instant&quot;: &quot;2021-11-04T07:19:00Z&quot;,
+    &quot;id&quot;: 8,
+    &quot;disabled&quot;: false
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div></td>
+<td class="confluenceTd">Recupera una tarea (repetitiva o para un instante determinado) de invocación a API REST de SGI</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">GET</td>
+<td class="confluenceTd">/sgiapitasks</td>
+<td class="confluenceTd">q + s</td>
+<td class="confluenceTd"><div class="content-wrapper">
+<p>Lista[SgiApiCronTaskOutput ó SgiApiInstantTaskOutput]</p>
+<div id="expander-259063415" class="expand-container">
+<div id="expander-control-259063415" class="expand-control">
+<span class="expand-icon aui-icon aui-icon-small aui-iconfont-chevron-down" aria-hidden="true"></span><span class="expand-control-text conf-macro-render">Ejemplo...</span>
+</div>
+<div id="expander-content-259063415" class="expand-content" role="region" aria-labelledby="expand-button-259063415">
+<div class="code panel pdl" style="border-width: 1px;">
+<div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: js; gutter: false"><code>[
+    {
+        &quot;description&quot;: &quot;Paso a archivado por no presentar de nuevo el informe&quot;,
+        &quot;serviceType&quot;: &quot;ETI&quot;,
+        &quot;relativeUrl&quot;: &quot;/memorias/no-presentado/archivar&quot;,
+        &quot;httpMethod&quot;: &quot;PATCH&quot;,
+        &quot;cronExpression&quot;: &quot;0 15 0 * * ?&quot;,
+        &quot;id&quot;: 2,
+        &quot;disabled&quot;: false
+    },
+    {
+        &quot;description&quot;: &quot;Paso a archivado por inactividad&quot;,
+        &quot;serviceType&quot;: &quot;ETI&quot;,
+        &quot;relativeUrl&quot;: &quot;/memorias/inactivo/archivar&quot;,
+        &quot;httpMethod&quot;: &quot;PATCH&quot;,
+        &quot;cronExpression&quot;: &quot;0 30 0 * * ?&quot;,
+        &quot;id&quot;: 3,
+        &quot;disabled&quot;: false
+    },
+    {
+        &quot;description&quot;: &quot;Comunicado de inicio de período de presentación de justificación de gastos&quot;,
+        &quot;serviceType&quot;: &quot;CSP&quot;,
+        &quot;relativeUrl&quot;: &quot;/comunicados/inicio-presentacion-justificacion-gastos&quot;,
+        &quot;httpMethod&quot;: &quot;GET&quot;,
+        &quot;cronExpression&quot;: &quot;0/10 * * * * ?&quot;,
+        &quot;id&quot;: 6,
+        &quot;disabled&quot;: false
+    },
+    {
+        &quot;description&quot;: &quot;Prueba CRON&quot;,
+        &quot;serviceType&quot;: &quot;USR&quot;,
+        &quot;relativeUrl&quot;: &quot;/config/time-zone&quot;,
+        &quot;httpMethod&quot;: &quot;GET&quot;,
+        &quot;instant&quot;: &quot;2021-11-04T07:19:00Z&quot;,
+        &quot;id&quot;: 7,
+        &quot;disabled&quot;: false
+    },
+    {
+        &quot;description&quot;: &quot;Prueba CRON&quot;,
+        &quot;serviceType&quot;: &quot;USR&quot;,
+        &quot;relativeUrl&quot;: &quot;/config/time-zone&quot;,
+        &quot;httpMethod&quot;: &quot;GET&quot;,
+        &quot;instant&quot;: &quot;2022-03-01T16:00:00Z&quot;,
+        &quot;id&quot;: 8,
+        &quot;disabled&quot;: false
+    }
+]</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div></td>
+<td class="confluenceTd">Busca/Lista tareas programadas (repetitivas o para un instante determinado) de invocación a API REST de SGI</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">GET</td>
+<td class="confluenceTd">/sgiapitasks/cron</td>
+<td class="confluenceTd">q + s</td>
+<td class="confluenceTd"><div class="content-wrapper">
+<p>Lista[SgiApiCronTaskOutput]</p>
+<div id="expander-521951354" class="expand-container">
+<div id="expander-control-521951354" class="expand-control">
+<span class="expand-icon aui-icon aui-icon-small aui-iconfont-chevron-down" aria-hidden="true"></span><span class="expand-control-text conf-macro-render">Ejemplo...</span>
+</div>
+<div id="expander-content-521951354" class="expand-content" role="region" aria-labelledby="expand-button-521951354">
+<div class="code panel pdl" style="border-width: 1px;">
+<div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: js; gutter: false"><code>[
+    {
+        &quot;description&quot;: &quot;Paso a archivado por no presentar de nuevo el informe&quot;,
+        &quot;serviceType&quot;: &quot;ETI&quot;,
+        &quot;relativeUrl&quot;: &quot;/memorias/no-presentado/archivar&quot;,
+        &quot;httpMethod&quot;: &quot;PATCH&quot;,
+        &quot;cronExpression&quot;: &quot;0 15 0 * * ?&quot;,
+        &quot;id&quot;: 2,
+        &quot;disabled&quot;: false
+    },
+    {
+        &quot;description&quot;: &quot;Paso a archivado por inactividad&quot;,
+        &quot;serviceType&quot;: &quot;ETI&quot;,
+        &quot;relativeUrl&quot;: &quot;/memorias/inactivo/archivar&quot;,
+        &quot;httpMethod&quot;: &quot;PATCH&quot;,
+        &quot;cronExpression&quot;: &quot;0 30 0 * * ?&quot;,
+        &quot;id&quot;: 3,
+        &quot;disabled&quot;: false
+    },
+    {
+        &quot;description&quot;: &quot;Comunicado de inicio de período de presentación de justificación de gastos&quot;,
+        &quot;serviceType&quot;: &quot;CSP&quot;,
+        &quot;relativeUrl&quot;: &quot;/comunicados/inicio-presentacion-justificacion-gastos&quot;,
+        &quot;httpMethod&quot;: &quot;GET&quot;,
+        &quot;cronExpression&quot;: &quot;0/10 * * * * ?&quot;,
+        &quot;id&quot;: 6,
+        &quot;disabled&quot;: false
+    }
+]</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div></td>
+<td class="confluenceTd">Busca/Lista tareas programadas repetitivas de invocación a API REST de SGI</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">GET</td>
+<td class="confluenceTd">/sgiapitasks/instant</td>
+<td class="confluenceTd">q + s</td>
+<td class="confluenceTd"><div class="content-wrapper">
+<p>Lista[SgiApiInstantTaskOutput]</p>
+<div id="expander-876822729" class="expand-container">
+<div id="expander-control-876822729" class="expand-control">
+<span class="expand-icon aui-icon aui-icon-small aui-iconfont-chevron-down" aria-hidden="true"></span><span class="expand-control-text conf-macro-render">Ejemplo...</span>
+</div>
+<div id="expander-content-876822729" class="expand-content" role="region" aria-labelledby="expand-button-876822729">
+<div class="code panel pdl" style="border-width: 1px;">
+<div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: js; gutter: false"><code>[
+    {
+        &quot;description&quot;: &quot;Prueba CRON&quot;,
+        &quot;serviceType&quot;: &quot;USR&quot;,
+        &quot;relativeUrl&quot;: &quot;/config/time-zone&quot;,
+        &quot;httpMethod&quot;: &quot;GET&quot;,
+        &quot;instant&quot;: &quot;2021-11-04T07:19:00Z&quot;,
+        &quot;id&quot;: 7,
+        &quot;disabled&quot;: false
+    },
+    {
+        &quot;description&quot;: &quot;Prueba CRON&quot;,
+        &quot;serviceType&quot;: &quot;USR&quot;,
+        &quot;relativeUrl&quot;: &quot;/config/time-zone&quot;,
+        &quot;httpMethod&quot;: &quot;GET&quot;,
+        &quot;instant&quot;: &quot;2022-03-01T16:00:00Z&quot;,
+        &quot;id&quot;: 8,
+        &quot;disabled&quot;: false
+    }
+]</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div></td>
+<td class="confluenceTd">Busca/Lista tareas programadas para un instante determinado de invocación a API REST de SGI</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+
+
+</div>
+
+</div>
+
+</div>
+
+<div id="footer" role="contentinfo">
+
+<div class="section footer-body">
+
+Document generated by Confluence on oct 27, 2025 08:53
+
+<div id="footer-logo">
+
+[Atlassian](https://www.atlassian.com/)
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 
 

@@ -796,7 +796,570 @@
 
   <h1>Rep csp 0090 0 exportacion de gastos de seguimiento de justificacion formato xlsx</h1>
 
+<div id="page">
 
+<div id="main" class="aui-page-panel">
+
+<div id="main-header">
+
+<div id="breadcrumb-section">
+
+1.  [Hércules](index.html)
+2.  [Hércules](/)
+3.  [SGI. Sistema de gestión de investigación](//sgi-sistema-de-gestion-de-investigacion)
+4.  [Requisitos y análisis funcional](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional)
+5.  [Análisis Funcional SGI - Hércules](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules)
+6.  [GEN - Aspectos generales](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales)
+7.  [INT - Requisitos de integración](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion)
+8.  [REQ-INT-0150-SGREP - Integración con Sistema de Generación de Reportes](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0150-sgrep-integracion-con-sistema-de-generacion-de-reportes)
+9.  [CSP - Informes predefinidos](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0150-sgrep-integracion-con-sistema-de-generacion-de-reportes/csp-informes-predefinidos)
+
+</div>
+
+# <span id="title-text"> Hércules : REP-CSP-0090-0 - Exportación de gastos de seguimiento de justificación - Formato xlsx </span>
+
+</div>
+
+<div id="content" class="view">
+
+<div class="page-metadata">
+
+Created by <span class="author"> Usuario desconocido (covadonga.garcia)</span>, last updated on sep 16, 2022
+
+</div>
+
+<div id="main-content" class="wiki-content group">
+
+<div class="contentLayout2">
+
+<div class="columnLayout single" layout="single">
+
+<div class="cell normal" data-type="normal">
+
+<div class="innerCell">
+
+<div class="plugin-tabmeta-details">
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="odd">
+<th class="confluenceTh">Cod. REP</th>
+<td class="confluenceTd"><p><strong><strong><strong><strong>REP-CSP-0090 - Exportación de gastos de seguimiento de justificación - Formato xlsx</strong></strong></strong></strong></p></td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Ver. Objetivo</th>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh">Ver. REP</th>
+<td class="confluenceTd">1.0.0</td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Estado</th>
+<td class="confluenceTd"><div class="content-wrapper">
+<br />
+&#10;</div></td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh">Fec. Aprobación</th>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Épica, historia</th>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh">Frecuencia</th>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+## Diseño Informe
+
+Se debe de generar un informe en formato xlsx. A continuación se indica el mapeo de los nombres de columnas del fichero xlsx de salida con la tabla y campo desde el que deben ser recuperadas. 
+
+Se debe mostrar una fila por cada gasto justificado. El listado de gastos justificados se deberán obtener a través del requisito de integración [REQ-INT-0010-SGE-0166 - Buscar gastos justificados](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0010-sge-integracion-con-sistema-de-gestion-economica/req-int-0010-sge-0166-buscar-gastos-justificados) al que se pasará como parámetro el "proyecto sge ref" desde el que se ha accedido al seguimiento de justificación.
+
+Para cada gasto devuelto por el servicio de integración se deberá invocar al servicio de integración para obtener su detalle, [REQ-INT-0010-SGE-0166 - Detalle gasto justificado](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0010-sge-integracion-con-sistema-de-gestion-economica/req-int-0010-sge-0166-detalle-gasto-justificado) que se invocará con los parámetros identificador del gasto ("gasto ref" devuelto en el listado), identificador de justificación ("justificación ref" devuelto en el listado) y el "proyecto sge ref" desde el que se ha accedido al seguimiento de justificación. <span style="color:var(--ds-text,#172b4d);">El servicio </span><a href="https://confluence.um.es/confluence/display/HERCULES/REQ-INT-0010-SGE-0166+-+Detalle+gasto+justificado" style="" rel="nofollow">REQ-INT-0010-SGE-0166 - Detalle gasto justificado</a><span style="color:var(--ds-text,#172b4d);"> devolverá  una serie de campos variables (de acuerdo a la forma genérica en la que se ha resuelto la integración de datos que pueden variar de una Universidad a otra). Estos campos variables se incluirán todos como columnas en el fichero de exportación. Se mostrarán todos los campos del gasto devueltos, uno en cada columna, poniendo como nombre de la columna el nombre devuelto por el servicio de integración (en la tabla adjunta se representa solamente como Campo X, pero habrá tantas columnas en el informe como columnas devuelva el servicio de integración).</span>
+
+Además de los campos recuperados del servicio de integración, se deben incorporar una serie de bloques de campos obtenidos de tablas propias del SGI. Uno de estos bloques serán los diferentes requerimientos del seguimiento de justificación en los que haya sido incluido el gasto. Cada gasto puede estar incluido en un número de requerimientos diferente o incluso en ninguno. Sobre las columnas asociadas a los campos de los requerimientos deberá distinguirse el requerimiento al que pertenecen.  El gasto que más requerimientos tenga asociados, será el que marque el número de columnas del fichero xlsx resultante. <span style="color:var(--ds-text,#172b4d);">Para los gastos que no contengan tantos requerimientos como marque el máximo, se mostrarán las columnas sin contenido.</span>
+
+En la siguiente tabla se recogen todas las columnas que debe contener el fichero resultante, así como aquellas que forman parte de bloques de repetición.
+
+
+
+<div class="table-wrap">
+
+<table class="wrapped relative-table confluenceTable" style="width: 72.9895%;">
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 81%" />
+<col style="width: 6%" />
+</colgroup>
+<tbody>
+<tr class="header">
+<th class="confluenceTh">Columna informe</th>
+<th class="confluenceTh">Campo</th>
+<th class="confluenceTh">Repetición</th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd">Identificador justificación</td>
+<td class="confluenceTd">Identificador de justificación devuelto por <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0010-sge-integracion-con-sistema-de-gestion-economica/req-int-0010-sge-0166-detalle-gasto-justificado">REQ-INT-0010-SGE-0166 - Detalle gasto justificado</a></td>
+<td class="confluenceTd">No</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">Campo X</td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Tipo de acuerdo al campo recuperado de la función de integración</span></td>
+<td class="confluenceTd">No</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">Código proyecto SGE</td>
+<td class="confluenceTd">Es el código del proyecto SGE desde el que se accede al seguimiento de justificación. Camp "proyecto SGE ref" (tabla "proyecto proyecto SGE")</td>
+<td class="confluenceTd">No</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">ID proyecto SGI</td>
+<td class="confluenceTd"><p><span style="color:var(--ds-text,#172b4d);">Se obtendrá el proyecto SGI al que está asociado el gasto justificado recuperado del SGE. Para ello se utilizará el campo "identificador de justificación" recuperado de <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0010-sge-integracion-con-sistema-de-gestion-economica/req-int-0010-sge-0166-detalle-gasto-justificado">REQ-INT-0010-SGE-0166 - Detalle gasto justificado</a></span><span style="color:var(--ds-text,#172b4d);"> para el "gasto ref" cuyo detalle se está volcando a la fila del xslx. Se deberá obtener el proyecto SGI al que pertenece este "identificador de justificación". Para ello se obtendrá, de la tabla "proyecto periodo justificación", el registro para el que el campo "justificación ref" tome el valor del campo "identificador de justificación" del gasto recuperado del servicio de integración. Se mostrará el campo "ID" del proyecto al que pertenezca el registro de  "proyecto periodo justificación".</span></p></td>
+<td class="confluenceTd">No</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">Referencia en entidad convocante</td>
+<td class="confluenceTd">Se corresponde con el campo "código externo" de la tabla "proyecto" para el ID proyecto SGI recuperado previamente.</td>
+<td class="confluenceTd">No</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">Título proyecto</td>
+<td class="confluenceTd">Se corresponde con el campo "título" de la tabla "proyecto" para el ID proyecto SGI recuperado previamente.</td>
+<td class="confluenceTd">No</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">Fecha inicio</td>
+<td class="confluenceTd">Se corresponde con el campo "fecha inicio" de la tabla "proyecto" para el ID proyecto SGI recuperado previamente.</td>
+<td class="confluenceTd">No</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">Fecha fin</td>
+<td class="confluenceTd">Se corresponde con el campo "fecha fin" de la tabla "proyecto" para el ID proyecto SGI recuperado previamente.</td>
+<td class="confluenceTd">No</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">Fecha fin definitiva</td>
+<td class="confluenceTd">Se corresponde con el campo "fecha fin definitiva" de la tabla "proyecto" para el ID proyecto SGI recuperado previamente.</td>
+<td class="confluenceTd">No</td>
+</tr>
+<tr class="even">
+<td colspan="3" class="confluenceTd">Los datos del responsable (nombre, apellidos e email) se plantean como un bloque de repetición puesto que, por configuración, podrían existir varias personas con un rol "principal", si bien lo normal es que solo exista uno.</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">Responsable X: Nombre</td>
+<td class="confluenceTd"><p><span style="letter-spacing: 0.0px;">Nombre de la persona que ocupa el rol IP del equipo de proyecto en la fecha actual.</span></p>
+<p><span style="letter-spacing: 0.0px;">Se mostrará en este columna el nombre obtenido a través del requisito de integración</span><span style="letter-spacing: 0.0px;"> <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0020-sgp-integracion-con-sistema-de-gestion-de-personas/req-int-0020-sgp-0030-consultar-datos-generales-de-persona">REQ-INT-0020-SGP-0030 - Consultar datos generales de persona</a></span><span style="letter-spacing: 0.0px;"> </span><span style="letter-spacing: 0.0px;">para la "persona ref" de la tabla "proyecto equipo" que tenga el rol principal (registro de la tabla "rol proyecto" con campo "principal" a "true") para la fecha actual (la fecha actual debe estar comprendida entre los campos "fecha inicio" y "fecha fin" de la tabla "proyecto equipo", considerando el valor null sobre fecha fin como periodo vigente).</span></p></td>
+<td class="confluenceTd">Sí</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">Responsable X: Apellidos</td>
+<td class="confluenceTd"><p>Apellidos de la persona que ocupa el rol IP del equipo de proyecto en la fecha actual.</p>
+<p><span>Se mostrarán en esta columna los apellidos obtenidos a través del requisito de integración</span><span> <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0020-sgp-integracion-con-sistema-de-gestion-de-personas/req-int-0020-sgp-0030-consultar-datos-generales-de-persona">REQ-INT-0020-SGP-0030 - Consultar datos generales de persona</a></span><span> </span><span>para la "persona ref" de la tabla "proyecto equipo" que tenga el rol principal (registro de la tabla "rol proyecto" con campo "principal" a "true") para la fecha actual (la fecha actual debe estar comprendida entre los campos "fecha inicio" y "fecha fin" de la tabla "proyecto equipo", considerando el valor null sobre fecha fin como periodo vigente).</span></p></td>
+<td class="confluenceTd">Sí</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">Responsable X: Email</td>
+<td class="confluenceTd"><p>Email de la persona que ocupa el rol IP del equipo de proyecto en la fecha actual.</p>
+<p><span>Se mostrarán el ca<span style="color:var(--ds-text,#172b4d);">mpo "email" con el indicador "principal" a "true" recuperado a través del </span>requisito de integración</span><span> <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0020-sgp-integracion-con-sistema-de-gestion-de-personas/req-int-0020-sgp-0030-consultar-datos-generales-de-persona">REQ-INT-0020-SGP-0030 - Consultar datos generales de persona</a></span><span> </span><span>para la "persona ref" de la tabla "proyecto equipo" que tenga el rol principal (registro de la tabla "rol proyecto" con campo "principal" a "true") para la fecha actual (la fecha actual debe estar comprendida entre los campos "fecha inicio" y "fecha fin" de la tabla "proyecto equipo", considerando el valor null sobre fecha fin como periodo vigente).</span></p></td>
+<td class="confluenceTd">Sí</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">Título convocatoria</td>
+<td class="confluenceTd"><p>Título de la convocatoria a la que está asociado el proyecto.</p>
+<p>Si el proyecto SGI está asociado a una convocatoria, es decir, el campo "convocatoria" de la tabla "proyecto" está informado (para el identificador de proyecto SGI recuperado previamente) se mostrará el campo "título" de la tabla "convocatoria". En caso contrario el campo se mostrará vacío.</p></td>
+<td class="confluenceTd">No</td>
+</tr>
+<tr class="odd">
+<td colspan="3" class="confluenceTd">Se mostrarán en un bloque de repetición el nombre y el número de identificación de todas las entidades financiadoras del proyecto. Se obtendrán de la tabla "proyecto entidad financiadora" para el identificador del proyecto SGI recuperador previamente).</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">Entidad financiadora X: Nombre</td>
+<td class="confluenceTd"><p><span style="color:var(--ds-text,#172b4d);">Campo "nombre" recuperado a través de <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0015-sgemp-integracion-con-sistema-de-gestion-de-empresas/req-int-0015-sgemp-0030-consultar-datos-generales-de-empresa">REQ-INT-0015-SGEMP-0030 - Consultar datos generales de empresa</a> </span><span style="color:var(--ds-text,#172b4d);">para la entidad indicada por el campo "entidad ref" de la tabla "proyecto entidad financiadora".</span></p></td>
+<td class="confluenceTd">Sí</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">Entidad financiadora X: Número identificación</td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Campo "número de identificación fiscal" recuperado a través <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0015-sgemp-integracion-con-sistema-de-gestion-de-empresas/req-int-0015-sgemp-0030-consultar-datos-generales-de-empresa">REQ-INT-0015-SGEMP-0030 - Consultar datos generales de empresa</a><span> p</span></span><span style="color:var(--ds-text,#172b4d);">ara la entidad indicada por el campo "entidad ref" de la tabla "proyecto entidad financiadora".</span></td>
+<td class="confluenceTd">Sí</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">Importe concedido</td>
+<td class="confluenceTd"><p>Si alguno de los campos<span> </span><span style="color:var(--ds-text,#172b4d);">"importe presupuesto",  "importe presupuesto costes indirectos", "importe concedido", "importe concedido costes indirectos", "importe presupuesto socios", "importe concedido socios", "total importe presupuesto", "total importe socios" de la tabla "proyecto" están informados, se mostrará en esta celda el valor resultante de sumar los campos "importe concedido" e "importe concedido costes indirectos" de la tabla proyectos. </span></p>
+<p><span style="color:var(--ds-text,#172b4d);"><span>Si no, se deberá realizar el cálculo como sigue: </span></span><span> suma del campo "importe concedido" de todos los registros de la tabla "anualidad gasto" (sin distinguir ni por concepto de gasto, ni por anualidad ni por proyecto SGE) para el ID de proyecto SGI recuperado previamente.</span></p></td>
+<td class="confluenceTd">No</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">Importe concedido CD</td>
+<td class="confluenceTd"><p>Si alguno de los campos<span> </span><span style="color:var(--ds-text,#172b4d);">"importe presupuesto",  "importe presupuesto costes indirectos", "importe concedido", "importe concedido costes indirectos", "importe presupuesto socios", "importe concedido socios", "total importe presupuesto", "total importe socios" de la tabla "proyecto" están informados, se mostrará en esta celda el valor del<span> </span></span><span> campo </span><span style="color:var(--ds-text,#172b4d);">"importe concedido" de la tabla "proyecto".</span></p>
+<p><span style="color:var(--ds-text,#172b4d);">Si no, se deberá realizar el cálculo como sigue:<span> </span></span><span>Suma del campo "importe concedido" de todos los registros de la tabla "anualidad gasto", para el ID proyecto SGI recuperado previamente, cuyo campo "concepto gasto" figure en la tabla "concepto gasto" con el campo "costes indirectos" a "false" (sin distinguir ni por concepto de gasto, ni por anualidad ni por proyecto SGE).  </span></p></td>
+<td class="confluenceTd">No</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">Importe concedido CI</td>
+<td class="confluenceTd"><p>Si alguno de los campos<span> </span><span style="color:var(--ds-text,#172b4d);">"importe presupuesto",  "importe presupuesto costes indirectos", "importe concedido", "importe concedido costes indirectos", "importe presupuesto socios", "importe concedido socios", "total importe presupuesto", "total importe socios" de la tabla "proyecto" están informados, se mostrará en esta celda el valor del<span> </span></span><span> campo </span><span style="color:var(--ds-text,#172b4d);">"importe concedido" de la tabla "proyecto".</span></p>
+<p><span style="color:var(--ds-text,#172b4d);">Si no, se deberá realizar el cálculo como sigue:<span> </span></span><span>Suma del campo "importe concedido" de todos los registros de la tabla "anualidad gasto", para el ID proyecto SGI recuperado previamente, cuyo campo "concepto gasto" figure en la tabla "concepto gasto" con el campo "costes indirectos" a "true" (sin distinguir ni por concepto de gasto, ni por anualidad ni por proyecto SGE).  </span></p></td>
+<td class="confluenceTd">No</td>
+</tr>
+<tr class="odd">
+<td colspan="3" class="confluenceTd">Se mostrarán los datos de cofinanciación del gasto, recuperados de la tabla "cofinanciación gasto justificación". Será un bloque de repetición.</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">Convocatoria cofinaciadora X</td>
+<td class="confluenceTd"><p><br />
+</p>
+<p>Se mostrará el campo "título" de la tabla  "convocatoria" para la convocatoria referenciada desde la tabla "cofinanciación gasto justificación".</p></td>
+<td class="confluenceTd">Sí</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">Proyecto cofinaciador X</td>
+<td class="confluenceTd">Se mostrará el campo "título" de la tabla  "proyecto" para el proyecto referenciado desde la tabla "cofinanciación gasto justificación".</td>
+<td class="confluenceTd">Sí</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">Entidad cofinanciadora X</td>
+<td class="confluenceTd">Se mostrará el campo "nombre"  de la tabla  "proyecto" para la entidad referenciada desde la tabla "cofinanciación gasto justificación".</td>
+<td class="confluenceTd">Sí</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">Importe cofinanciación X</td>
+<td class="confluenceTd">Se mostrará el campo "importe" de la tabla "cofinanciación gasto justificación".</td>
+<td class="confluenceTd">Sí</td>
+</tr>
+<tr class="even">
+<td colspan="3" class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">Fecha última justificación</td>
+<td class="confluenceTd"><p>Fecha de justificación más actual para el ID proyecto SGI recuperado previamente.</p>
+<p>Se mostrará el campo "fecha presentación justificación" más reciente de la tabla "proyecto periodo justificación".</p></td>
+<td class="confluenceTd">No</td>
+</tr>
+<tr class="even">
+<td colspan="3" class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">Importe justificado</td>
+<td class="confluenceTd">Se mostrará el valor del campo "importe justificado" de la tabla "proyecto seguimiento justificación", correspondiente al registro asociado al par el proyecto SGE (desde el que se accede) - ID proyecto SGI (recuperado previamente a partir del gasto)</td>
+<td class="confluenceTd">No</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">Importe justificado CD</td>
+<td class="confluenceTd">Se mostrará el valor del campo "importe justificado CD" de la tabla "proyecto seguimiento justificación", correspondiente al registro asociado al par el proyecto SGE (desde el que se accede) - ID proyecto SGI (recuperado previamente a partir del gasto)</td>
+<td class="confluenceTd">No</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">Importe justificado CI</td>
+<td class="confluenceTd">Se mostrará el valor del campo "importe justificado CI" de la tabla "proyecto seguimiento justificación", correspondiente al registro asociado al par el proyecto SGE (desde el que se accede) - ID proyecto SGI (recuperado previamente a partir del gasto)</td>
+<td class="confluenceTd">No</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">Importe no ejecutado</td>
+<td class="confluenceTd">Se mostrará el valor del campo "importe no ejecutado" de la tabla "proyecto seguimiento justificación", correspondiente al registro asociado al par el proyecto SGE (desde el que se accede) - ID proyecto SGI (recuperado previamente a partir del gasto)</td>
+<td class="confluenceTd">No</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">Importe no ejecutado CD</td>
+<td class="confluenceTd">Se mostrará el valor del campo "importe no ejecutado CD" de la tabla "proyecto seguimiento justificación", correspondiente al registro asociado al par el proyecto SGE (desde el que se accede) - ID proyecto SGI (recuperado previamente a partir del gasto)</td>
+<td class="confluenceTd">No</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">Importe no ejecutado CI</td>
+<td class="confluenceTd">Se mostrará el valor del campo "importe no ejecutado CI" de la tabla "proyecto seguimiento justificación", correspondiente al registro asociado al par el proyecto SGE (desde el que se accede) - ID proyecto SGI (recuperado previamente a partir del gasto)</td>
+<td class="confluenceTd">No</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">Importe reintegrado</td>
+<td class="confluenceTd">Se mostrará el valor del campo "importe reintegrado" de la tabla "proyecto seguimiento justificación", correspondiente al registro asociado al par el proyecto SGE (desde el que se accede) - ID proyecto SGI (recuperado previamente a partir del gasto)</td>
+<td class="confluenceTd">No</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">Importe reintegrado CD</td>
+<td class="confluenceTd">Se mostrará el valor del campo "importe reintegrado CD" de la tabla "proyecto seguimiento justificación", correspondiente al registro asociado al par el proyecto SGE (desde el que se accede) - ID proyecto SGI (recuperado previamente a partir del gasto)</td>
+<td class="confluenceTd">No</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">Importe reintegrado CI</td>
+<td class="confluenceTd">Se mostrará el valor del campo "importe reintegrado CI" de la tabla "proyecto seguimiento justificación", correspondiente al registro asociado al par el proyecto SGE (desde el que se accede) - ID proyecto SGI (recuperado previamente a partir del gasto)</td>
+<td class="confluenceTd">No</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">Fecha reintegro</td>
+<td class="confluenceTd">Se mostrará el valor del campo "fecha reintegro" de la tabla "proyecto seguimiento justificación", correspondiente al registro asociado al par el proyecto SGE (desde el que se accede) - ID proyecto SGI (recuperado previamente a partir del gasto)</td>
+<td class="confluenceTd">No</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">Núm. just. reintegro</td>
+<td class="confluenceTd">Se mostrará el valor del campo "justificante reintegro" de la tabla "proyecto seguimiento justificación", correspondiente al registro asociado al par el proyecto SGE (desde el que se accede) - ID proyecto SGI (recuperado previamente a partir del gasto). </td>
+<td class="confluenceTd">No</td>
+</tr>
+<tr class="even">
+<td colspan="3" class="confluenceTd">Se mostrarán los datos del gasto aportados en cada requerimiento. Se mostrarán tantos bloques "requerimiento" como requerimientos en los que haya sido incluido el gasto (tabla "gasto requerimiento justificación") para el "gasto ref" que se está mostrando. Los requerimientos del gastos se mostrarán ordenados por el campo "número requerimiento" que a su vez estará ordenado de acuerdo al campo "fecha notificación", ambos son campos de la tabla "requerimiento justificación".</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">Requerimiento X: Núm. req</td>
+<td class="confluenceTd"><p><span style="letter-spacing: 0.0px;">Se mostrará el campo "número requerimiento" de la tabla "requerimiento justificación" para el requerimiento referenciado desde la tabla "gasto requerimiento justificación"</span></p></td>
+<td class="confluenceTd">Sí</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">Requerimiento X: Tipo req</td>
+<td class="confluenceTd"><span>Se mostrará el campo "nombre" de la tabla "tipo requerimiento". El tipo de requerimiento se obtendrá de la tabla "requerimiento justificación" para el requerimiento referenciado desde la tabla "gasto requerimiento justificación".</span></td>
+<td class="confluenceTd">Sí</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">Requerimiento X: Fecha notificación</td>
+<td class="confluenceTd"><span>Se mostrará el campo "fecha notificación" de la tabla "requerimiento justificación" para el requerimiento referenciado desde la tabla "gasto requerimiento justificación"</span></td>
+<td class="confluenceTd">Sí</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">Requerimiento X: Gasto Aceptado</td>
+<td class="confluenceTd">El valor a mostrará se corresponde con el campo "aceptado" de la tabla "gasto requerimiento justificación". Se mostrará "Sí" si el campo "aceptado" toma valor "true" y "No" si el campo "aceptado" toma valor "false".</td>
+<td class="confluenceTd">Sí</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">Requerimiento X: Importe aceptado gasto</td>
+<td class="confluenceTd">El valor a mostrará se corresponde con el campo "importe aceptado" de la tabla "gasto requerimiento justificación".</td>
+<td class="confluenceTd">Sí</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">Requerimiento X: Importe rechazado gasto</td>
+<td class="confluenceTd">El valor a mostrará se corresponde con el campo "importe rechazado" de la tabla "gasto requerimiento justificación".</td>
+<td class="confluenceTd">Sí</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">Requerimiento X: motivo rechazo gasto</td>
+<td class="confluenceTd">El valor a mostrará se corresponde con el campo "incidencia" de la tabla "gasto requerimiento justificación".</td>
+<td class="confluenceTd">Sí</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">Requerimiento X: importe alegado gsato</td>
+<td class="confluenceTd">El valor a mostrará se corresponde con el campo "importe alegado" de la tabla "gasto requerimiento justificación".</td>
+<td class="confluenceTd">Sí</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">Requerimiento X: alegación gasto</td>
+<td class="confluenceTd">El valor a mostrará se corresponde con el campo "alegación" de la tabla "gasto requerimiento justificación".</td>
+<td class="confluenceTd">Sí</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">Requerimiento X: importe aceptado proyecto</td>
+<td class="confluenceTd"><span>Se mostrará el campo "importe aceptado" de la tabla "requerimiento justificación" para el requerimiento referenciado desde la tabla "gasto requerimiento justificación"</span></td>
+<td class="confluenceTd">Sí</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">Requerimiento X: importe aceptado CD proyecto</td>
+<td class="confluenceTd"><span>Se mostrará el campo "importe aceptado CD" de la tabla "requerimiento justificación" para el requerimiento referenciado desde la tabla "gasto requerimiento justificación"</span></td>
+<td class="confluenceTd">Sí</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">Requerimiento X: importe aceptado  CI proyecto</td>
+<td class="confluenceTd"><span>Se mostrará el campo "importe aceptado CI" de la tabla "requerimiento justificación" para el requerimiento referenciado desde la tabla "gasto requerimiento justificación"</span></td>
+<td class="confluenceTd">Sí</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">Requerimiento X: importe rechazado proyecto</td>
+<td class="confluenceTd"><span>Se mostrará el campo "importe rechazado" de la tabla "requerimiento justificación" para el requerimiento referenciado desde la tabla "gasto requerimiento justificación"</span></td>
+<td class="confluenceTd">Sí</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">Requerimiento X: importe rechazado CD proyecto</td>
+<td class="confluenceTd"><span>Se mostrará el campo "importe rechazado CD" de la tabla "requerimiento justificación" para el requerimiento referenciado desde la tabla "gasto requerimiento justificación"</span></td>
+<td class="confluenceTd">Sí</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">Requerimiento X: importe rechazado  CI proyecto</td>
+<td class="confluenceTd"><span>Se mostrará el campo "importe rechazado CI" de la tabla "requerimiento justificación" para el requerimiento referenciado desde la tabla "gasto requerimiento justificación"</span></td>
+<td class="confluenceTd">Sí</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">Requerimiento X: importe reintegrar proyecto</td>
+<td class="confluenceTd"><span>Se mostrará el campo "importe reintegrar" de la tabla "requerimiento justificación" para el requerimiento referenciado desde la tabla "gasto requerimiento justificación"</span></td>
+<td class="confluenceTd">Sí</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">Requerimiento X: importe reintegrar CD proyecto</td>
+<td class="confluenceTd"><span>Se mostrará el campo "importe reintegrar CD" de la tabla "requerimiento justificación" para el requerimiento referenciado desde la tabla "gasto requerimiento justificación"</span></td>
+<td class="confluenceTd">Sí</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">Requerimiento X: importe reintegrar CI proyecto</td>
+<td class="confluenceTd"><span>Se mostrará el campo "importe reintegrar CI" de la tabla "requerimiento justificación" para el requerimiento referenciado desde la tabla "gasto requerimiento justificación"</span></td>
+<td class="confluenceTd">Sí</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">Requerimiento X: Subvención justificada</td>
+<td class="confluenceTd"><span>Se mostrará el campo "subvención justificada" de la tabla "requerimiento justificación" para el requerimiento referenciado desde la tabla "gasto requerimiento justificación"</span></td>
+<td class="confluenceTd">Sí</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">Requerimiento X: Defecto subvención </td>
+<td class="confluenceTd"><span>Se mostrará el campo "defecto subvención" de la tabla "requerimiento justificación" para el requerimiento referenciado desde la tabla "gasto requerimiento justificación"</span></td>
+<td class="confluenceTd">Sí</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">Requerimiento X: Anticipo justificado</td>
+<td class="confluenceTd"><span>Se mostrará el campo "anticipo justificado" de la tabla "requerimiento justificación" para el requerimiento referenciado desde la tabla "gasto requerimiento justificación"</span></td>
+<td class="confluenceTd">Sí</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">Requerimiento X: Defecto anticipo</td>
+<td class="confluenceTd"><span>Se mostrará el campo "defecto anticipo" de la tabla "requerimiento justificación" para el requerimiento referenciado desde la tabla "gasto requerimiento justificación"</span></td>
+<td class="confluenceTd">Sí</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">Requerimiento X: recurso estimado</td>
+<td class="confluenceTd"><span>Se mostrará el campo "recurso estimado" de la tabla "requerimiento justificación" para el requerimiento referenciado desde la tabla "gasto requerimiento justificación"</span></td>
+<td class="confluenceTd">Sí</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">Requerimiento X: fecha alegación</td>
+<td class="confluenceTd">Se mostrará el campo "fecha alegación" de la tabla "alegación requerimiento" (de la alegación vinculada al requerimiento que se está mostrando)</td>
+<td class="confluenceTd">Sí</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">Requerimiento X: importe alegado</td>
+<td class="confluenceTd">Se mostrará el campo "importe alegado" de la tabla "alegación requerimiento" (de la alegación vinculada al requerimiento que se está mostrando)</td>
+<td class="confluenceTd">Sí</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">Requerimiento X: importe alegado CD</td>
+<td class="confluenceTd">Se mostrará el campo "importe alegado CD" de la tabla "alegación requerimiento" (de la alegación vinculada al requerimiento que se está mostrando)</td>
+<td class="confluenceTd">Sí</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">Requerimiento X: importe alegado CI</td>
+<td class="confluenceTd">Se mostrará el campo "importe alegado CI" de la tabla "alegación requerimiento" (de la alegación vinculada al requerimiento que se está mostrando)</td>
+<td class="confluenceTd">Sí</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">Requerimiento X: importe reintegrado</td>
+<td class="confluenceTd">Se mostrará el campo "importe reintegrado" de la tabla "alegación requerimiento" (de la alegación vinculada al requerimiento que se está mostrando)</td>
+<td class="confluenceTd">Sí</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">Requerimiento X: importe reintegrado CD</td>
+<td class="confluenceTd">Se mostrará el campo "importe reintegrado CD" de la tabla "alegación requerimiento" (de la alegación vinculada al requerimiento que se está mostrando)</td>
+<td class="confluenceTd">Sí</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">Requerimiento X: importe reintegrado CI</td>
+<td class="confluenceTd">Se mostrará el campo "importe reintegrado CI" de la tabla "alegación requerimiento" (de la alegación vinculada al requerimiento que se está mostrando)</td>
+<td class="confluenceTd">Sí</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">Requerimiento X: intereses reintegrados</td>
+<td class="confluenceTd">Se mostrará el campo "intereses reintegrados" de la tabla "alegación requerimiento" (de la alegación vinculada al requerimiento que se está mostrando)</td>
+<td class="confluenceTd">Sí</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">Requerimiento X: fecha reintegro</td>
+<td class="confluenceTd">Se mostrará el campo "fecha reintegro" de la tabla "alegación requerimiento" (de la alegación vinculada al requerimiento que se está mostrando)</td>
+<td class="confluenceTd">Sí</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">Requerimiento X: justificante reintegro</td>
+<td class="confluenceTd">Se mostrará el campo "justificante reintegro" de la tabla "alegación requerimiento" (de la alegación vinculada al requerimiento que se está mostrando)</td>
+<td class="confluenceTd">Sí</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+## Permisos
+
+
+
+<div class="plugin-tabmeta-details">
+
+<div class="table-wrap">
+
+|                                                                              |                                                                              |
+|------------------------------------------------------------------------------|------------------------------------------------------------------------------|
+| <span style="color:var(--ds-text,#172b4d);">ACT-CSP-003-Gestor</span>        | <span style="color:var(--ds-text,#172b4d);">CSP-SJUS-E, CSP-SJUS-E_UO</span> |
+| <span style="color:var(--ds-text,#172b4d);">ACT-CSP-004-Administrador</span> | <span style="color:var(--ds-text,#172b4d);">CSP-SJUS-E, CSP-SJUS-E_UO</span> |
+| <span style="color:var(--ds-text,#172b4d);">ACT-CSP-005-Visor</span>         | <span style="color:var(--ds-text,#172b4d);">CSP-SJUS-V, CSP-SJUS-V_UO</span> |
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="columnLayout two-equal" layout="two-equal">
+
+<div class="cell normal" data-type="normal">
+
+<div class="innerCell">
+
+## Interfaces de usuario relacionados
+
+<img src="plugins/servlet/confluence/placeholder/unknown-macro" class="wysiwyg-unknown-macro" />
+
+</div>
+
+</div>
+
+<div class="cell normal" data-type="normal">
+
+<div class="innerCell">
+
+## Casos de uso relacionados
+
+<img src="plugins/servlet/confluence/placeholder/unknown-macro" class="wysiwyg-unknown-macro" />
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div id="footer" role="contentinfo">
+
+<div class="section footer-body">
+
+Document generated by Confluence on oct 27, 2025 08:38
+
+<div id="footer-logo">
+
+[Atlassian](https://www.atlassian.com/)
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 
 

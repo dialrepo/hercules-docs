@@ -796,7 +796,181 @@
 
   <h1>Cu csp 1200 008 ver ejecucion economica investigador rol responsable economico</h1>
 
+<div id="page">
 
+<div id="main" class="aui-page-panel">
+
+<div id="main-header">
+
+<div id="breadcrumb-section">
+
+1.  [Hércules](index.html)
+2.  [Hércules](/)
+3.  [SGI. Sistema de gestión de investigación](//sgi-sistema-de-gestion-de-investigacion)
+4.  [Requisitos y análisis funcional](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional)
+5.  [Análisis Funcional SGI - Hércules](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules)
+6.  [CSP - Módulo de convocatorias, ayudas, solicitudes, proyectos y contratos y grupos de investigación](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion)
+7.  [CSP - Casos de uso](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-casos-de-uso)
+8.  [CU-CSP-1200 - Gestión de proyectos](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-casos-de-uso/cu-csp-1200-gestion-de-proyectos)
+
+</div>
+
+# <span id="title-text"> Hércules : CU-CSP-1200-008 - Ver ejecución económica - Investigador (rol responsable económico) </span>
+
+</div>
+
+<div id="content" class="view">
+
+<div class="page-metadata">
+
+Created by <span class="author"> Usuario desconocido (lorena.alvarez)</span>, last updated on jun 14, 2021
+
+</div>
+
+<div id="main-content" class="wiki-content group">
+
+<div class="plugin-tabmeta-details">
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable" style="width: 75.1988%;">
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 84%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<th class="confluenceTh">Cod. CU</th>
+<td class="confluenceTd"><p><strong>CU-CSP-1200-008 - Ver ejecución económica - Investigador (rol responsable económico)<br />
+</strong></p></td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Ver. objetivo</th>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh">Ver. CU</th>
+<td class="confluenceTd">1.0.0</td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Estado</th>
+<td class="confluenceTd"><div class="content-wrapper">
+ <span class="status-macro aui-lozenge aui-lozenge-current conf-macro output-inline">IN PROGRESS</span> 
+</div></td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh">Fec. Aprobación</th>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Épica, historia</th>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh">Actores</th>
+<td class="confluenceTd"><span>ACT-CSP-001-Investigador </span></td>
+</tr>
+<tr class="even">
+<th class="confluenceTh"><p>Frecuencia</p></th>
+<td class="confluenceTd">Alta</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+## Descripción
+
+Acceso al detalle de la ejecución económica de un proyecto económico en modo solo lectura.
+
+Los ACP-CSP-001-Investigador sólo podrán acceder en modo lectura a los datos de los proyectos de los que forma parte del equipo o ha formado parte (y su rol tenga a "true" el flag "rol responsable económico"). A partir del proyecto económico se podrá saber con que proyecto del SGI se relaciona (tabla "ProyectoIdentificadorSGE" ) y a partir de éste sacar su equipo (tabla "ProyectoEquipo")
+
+## Actores
+
+### Actor principal
+
+El ACT-CSP-001-Investigador y su rol tenga a "true" el flag "rol responsable económico""
+
+### Personal involucrado e intereses
+
+ACT-CSP-001-Investigador que requiere que sus proyectos estén actualizados para su correcto seguimiento.
+
+## Precondiciones
+
+ACP-CSP-001-Investigador se autentica a través del usuario de dominio corporativo. El proyecto cumple los siguientes requisitos:
+
+- Proyecto activo (campo "activo" a "true") (tabla "Proyecto")  
+- Estado actual del proyecto que no sea "Borrador"
+- ACT-CSP-001-Investigador debe de ser el responsable económico del proyecto actual (exista en la tabla "ProyectoResponsableEconomico" en un rango de fechas que incluya la fecha actual)  
+- El proyecto esta relacionado con el proyecto económico (tabla "ProyectoIdentificadorSGE")
+
+
+
+## Garantías de éxito (postcondiciones)
+
+Se muestra el detalle del proyecto económico.
+
+## Escenario principal (flujo básico)
+
+- El usuario pulsa el botón  Ver asociado al proyecto económico, desde el listado de proyectos económicos.
+
+- Se carga el detalle del proyecto económico, mostrando los siguientes apartados:
+
+  - Listado de proyectos
+  - Ejecución presupuestaria:
+    - Anualidades
+    - Gastos
+    - Ingresos
+  - Detalle de operaciones
+    - Gastos
+    - Ingresos
+    - Modificaciones
+  - Facturas y justificaciones
+    - Facturas y gastos
+    - Viajes y dietas
+    - Personal contratado
+  - Validación de gastos: Listado y con acceso a:
+    - Edición del gasto
+    - Histórico de gastos
+    - Detalle del gasto
+  - Periodos de justificación: Listado de periodos, con acceso a su detalle en modo consulta:
+    - Datos generales
+    - Histórico de estados
+    - Documentación: solo visualización y descarga de documentos.
+    - Facturas y justificaciones: Listado en modo consulta (sin poder añadir, editar ni eliminar)
+    - Viajes y dietas: Listado en modo consulta (sin poder añadir, editar ni eliminar)
+    - Personal contratado: Listado en modo consulta (sin poder añadir, editar ni eliminar)
+    - Horas timesheet: Listado en modo consulta (sin poder añadir, editar ni eliminar)
+  - Facturas emitidas
+
+</div>
+
+</div>
+
+</div>
+
+<div id="footer" role="contentinfo">
+
+<div class="section footer-body">
+
+Document generated by Confluence on oct 27, 2025 08:39
+
+<div id="footer-logo">
+
+[Atlassian](https://www.atlassian.com/)
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 
 

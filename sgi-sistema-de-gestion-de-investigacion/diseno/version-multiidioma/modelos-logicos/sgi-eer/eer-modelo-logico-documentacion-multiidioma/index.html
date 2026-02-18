@@ -796,7 +796,1480 @@
 
   <h1>Eer modelo logico documentacion multiidioma</h1>
 
+<div id="page">
 
+<div id="main" class="aui-page-panel">
+
+<div id="main-header">
+
+<div id="breadcrumb-section">
+
+1.  [Hércules](index.html)
+2.  [Hércules](/)
+3.  [SGI. Sistema de gestión de investigación](//sgi-sistema-de-gestion-de-investigacion)
+4.  [Diseño](//sgi-sistema-de-gestion-de-investigacion/diseno)
+5.  [Versión multiidioma](//sgi-sistema-de-gestion-de-investigacion/diseno/version-multiidioma)
+6.  [Modelos lógicos](//sgi-sistema-de-gestion-de-investigacion/diseno/version-multiidioma/modelos-logicos)
+7.  [SGI-EER](//sgi-sistema-de-gestion-de-investigacion/diseno/version-multiidioma/modelos-logicos/sgi-eer)
+
+</div>
+
+# <span id="title-text"> Hércules : EER-Modelo lógico - Documentación Multiidioma </span>
+
+</div>
+
+<div id="content" class="view">
+
+<div class="page-metadata">
+
+Created by <span class="author"> Usuario genérico para HERCULES</span>, last updated on abr 23, 2025
+
+</div>
+
+<div id="main-content" class="wiki-content group">
+
+<div class="toc-macro rbtoc1761551682447">
+
+- [Entidades del modelo Empresas de Explotación de Resultados](#EERModelológicoDocumentaciónMultiidioma-EntidadesdelmodeloEmpresasdeExplotacióndeResultados)
+  - [Entidad Empresa de explotación de resultados: “Empresa”](#EERModelológicoDocumentaciónMultiidioma-EntidadEmpresadeexplotaciónderesultados:“Empresa”)
+  - [Entidad Nombre o razón social de una empresa de explotación de resultados: “EmpresaNombreRazonSocial”](#EERModelológicoDocumentaciónMultiidioma-EntidadNombreorazónsocialdeunaempresadeexplotaciónderesultados:“EmpresaNombreRazonSocial”)
+  - [Entidad Conocimiento o tecnología de una empresa de explotación de resultados: “EmpresaConocimientoTecnologia”](#EERModelológicoDocumentaciónMultiidioma-EntidadConocimientootecnologíadeunaempresadeexplotaciónderesultados:“EmpresaConocimientoTecnologia”)
+  - [Entidad Objeto social de una empresa de explotación de resultados: “EmpresaObjetoSocial”](#EERModelológicoDocumentaciónMultiidioma-EntidadObjetosocialdeunaempresadeexplotaciónderesultados:“EmpresaObjetoSocial”)
+  - [Entidad Observaciones de una empresa de explotación de resultados: “EmpresaObservaciones”](#EERModelológicoDocumentaciónMultiidioma-EntidadObservacionesdeunaempresadeexplotaciónderesultados:“EmpresaObservaciones”)
+  - [Entidad Datos notaría de una empresa de explotación de resultados: “EmpresaNotario”](#EERModelológicoDocumentaciónMultiidioma-EntidadDatosnotaríadeunaempresadeexplotaciónderesultados:“EmpresaNotario”)
+  - [Entidad Equipo de administración de una empresa de explotación de resultados: “EmpresaAdministracionSociedad”](#EERModelológicoDocumentaciónMultiidioma-EntidadEquipodeadministracióndeunaempresadeexplotaciónderesultados:“EmpresaAdministracionSociedad”)
+  - [Entidad Miembros que componen la sociedad de una empresa de explotación de resultados: “EmpresaComposicionSociedad”](#EERModelológicoDocumentaciónMultiidioma-EntidadMiembrosquecomponenlasociedaddeunaempresadeexplotaciónderesultados:“EmpresaComposicionSociedad”)
+  - [Entidad Miembros del equipo emprendedor de una empresa de explotación de resultados: “EmpresaEquipoEmprendedor”](#EERModelológicoDocumentaciónMultiidioma-EntidadMiembrosdelequipoemprendedordeunaempresadeexplotaciónderesultados:“EmpresaEquipoEmprendedor”)
+  - [Entidad Documento adjuntado a una empresa de explotación de resultados: “EmpresaDocumento”](#EERModelológicoDocumentaciónMultiidioma-EntidadDocumentoadjuntadoaunaempresadeexplotaciónderesultados:“EmpresaDocumento”)
+  - [Entidad Nombre de un documento adjuntado a una empresa de explotación de resultados: “EmpresaDocumentoNombre”](#EERModelológicoDocumentaciónMultiidioma-EntidadNombredeundocumentoadjuntadoaunaempresadeexplotaciónderesultados:“EmpresaDocumentoNombre”)
+  - [Entidad Comentarios sobre un documento adjuntado a una empresa de explotación de resultados: “EmpresaDocumentoComentarios”](#EERModelológicoDocumentaciónMultiidioma-EntidadComentariossobreundocumentoadjuntadoaunaempresadeexplotaciónderesultados:“EmpresaDocumentoComentarios”)
+  - [Entidad Tipo de documento: “TipoDocumento”](#EERModelológicoDocumentaciónMultiidioma-EntidadTipodedocumento:“TipoDocumento”)
+  - [Entidad Nombre de un tipo de documento: “TipoDocumentoNombre”](#EERModelológicoDocumentaciónMultiidioma-EntidadNombredeuntipodedocumento:“TipoDocumentoNombre”)
+  - [Entidad Descripción de un tipo de documento: “TipoDocumentoDescripcion”](#EERModelológicoDocumentaciónMultiidioma-EntidadDescripcióndeuntipodedocumento:“TipoDocumentoDescripcion”)
+- [Enumerados del modelo lógico de EER](#EERModelológicoDocumentaciónMultiidioma-EnumeradosdelmodelológicodeEER)
+  - [Enumerado Estados de una empresa de explotación de resultados: “EstadoEmpresa”](#EERModelológicoDocumentaciónMultiidioma-EnumeradoEstadosdeunaempresadeexplotaciónderesultados:“EstadoEmpresa”)
+  - [Enumerado Tipo de administración: “TipoAdministracion”](#EERModelológicoDocumentaciónMultiidioma-EnumeradoTipodeadministración:“TipoAdministracion”)
+  - [Enumerado Tipo de aportación: “TipoAportacion”](#EERModelológicoDocumentaciónMultiidioma-EnumeradoTipodeaportación:“TipoAportacion”)
+  - [Enumerado Tipo de empresa de explotación de resultados: “TipoEmpresa”](#EERModelológicoDocumentaciónMultiidioma-EnumeradoTipodeempresadeexplotaciónderesultados:“TipoEmpresa”)
+
+</div>
+
+
+
+## Entidades del modelo Empresas de Explotación de Resultados
+
+### Entidad Empresa de explotación de resultados: “Empresa”
+
+Representa a cada una de las empresas de explotación de resultados vinculadas a la Universidad que se considera que es interesante gestionar en el SGI.
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<tbody>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p><strong>ATTRIBUTES</strong></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>id : Long</p>
+<p>Clave primaria. Secuencia. Identificador único del registro dentro de la tabla "Empresa". Obligatorio.</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>tipoEmpresa : String</p>
+<p>Tipo de la empresa de explotación de resultados. Posibles valores:</p>
+<p> - EBT (Empresa de base tecnológica).</p>
+<p> - EINCNT (Empresa intensiva en conocimiento no tecnológico).</p>
+<p>Obligatorio.</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>solicitanteRef : String</p>
+<p>Referencia al solicitante que consta en la solicitud de creación de la empresa de explotación de resultados en los sistemas de la Universidad. Es una clave ajena al modelo SGP que se encuentra en otro esquema de BBDD. Opcional.</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>estado : String</p>
+<p>Estado de la empresa. Tomará uno de los valores:</p>
+<p> - En tramitación</p>
+<p> - No aprobada</p>
+<p> - Activa</p>
+<p> - Sin actividad</p>
+<p> - Disuelta</p>
+<p>Obligatorio.</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>entidadRef : String</p>
+<p>Referencia a la entidad que representa a la empresa de explotación de resultados en los sistemas de la Universidad. Es una FK al modelo del SGEMP. Opcional.</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>fechaAprobacionCG : Date</p>
+<p>Fecha de aprobación en Consejo de Gobierno de la constitución o incorporación de la Universidad a la empresa de explotación de resultados. Opcional.</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>fechaCese: Date</p>
+<p>Fecha de cese de la empresa de explotación de resultados. Opcional.</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>fechaConstitucion: Date</p>
+<p>Fecha de constitución de la empresa de explotación de resultados. Opcional.</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>fechaDesvinculacion : Date</p>
+<p>Fecha de desvinculación de la Universidad de la empresa de explotación de resultados. Opcional.</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>fechaIncorporacion: Date</p>
+<p>Fecha de incorporación de la Universidad a la empresa de explotación de resultados. Opcional.</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>fechaSolicitud : Date</p>
+<p>Fecha de la solicitud de creación de la empresa de explotación de resultados o de la petición de la Universidad de incorporarse a ella. Obligatorio.</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>numeroProtocolo : String</p>
+<p>Número de la notaría asociado a la constitución o a la incorporación de la Universidad a la empresa de explotación de resultados. Opcional.</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>activo: Boolean = True</p>
+<p>Indicador de si el registro está activo o no en el SGI. Obligatorio. Por defecto tendrá valor True. Obligatorio.</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p><strong>ASSOCIATIONS</strong></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p> Association (direction: Unspecified) </p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) Empresa</p>
+<p>Cardinality:  [1]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) EmpresaAdministracionSociedad</p>
+<p>Cardinality:  [0..*]</p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p> Association (direction: Unspecified) </p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) Empresa</p>
+<p>Cardinality:  [0..1]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) Empresa</p>
+<p>Cardinality:  [0..1]</p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p> Association (direction: Unspecified) </p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) Empresa</p>
+<p>Cardinality:  [0..*]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Enumeration) TipoEmpresa</p>
+<p>Cardinality:  [1]</p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p> Association (direction: Unspecified) </p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) Empresa</p>
+<p>Cardinality:  [0..*]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) Persona</p>
+<p>Cardinality:  [0..1]</p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p> Association (direction: Unspecified) </p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) Empresa</p>
+<p>Cardinality:  [0..*]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Enumeration) EstadoEmpresa</p>
+<p>Cardinality:  [1]</p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p> Association (direction: Unspecified) </p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) EmpresaObservaciones</p>
+<p>Cardinality:  [0..*]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) Empresa</p>
+<p>Cardinality:  [1]</p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p> Association (direction: Unspecified) </p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) EmpresaNotario</p>
+<p>Cardinality:  [0..*]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) Empresa</p>
+<p>Cardinality:  [1]</p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p> Association (direction: Unspecified) </p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) EmpresaEquipoEmprendedor</p>
+<p>Cardinality:  [0..*]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) Empresa</p>
+<p>Cardinality:  [1]</p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p> Association (direction: Unspecified) </p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) EmpresaNombreRazonSocial</p>
+<p>Cardinality:  [1..*]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) Empresa</p>
+<p>Cardinality:  [1]</p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p> Association (direction: Unspecified) </p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) EmpresaDocumento</p>
+<p>Cardinality:  [0..*]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) Empresa</p>
+<p>Cardinality:  [1]</p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p> Association (direction: Unspecified) </p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) EmpresaObjetoSocial</p>
+<p>Cardinality:  [1..*]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) Empresa</p>
+<p>Cardinality:  [1]</p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Association (direction: Unspecified) </p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) EmpresaComposicionSociedad</p>
+<p>Cardinality:  [0..*]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) Empresa</p>
+<p>Cardinality:  [1]</p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p> Association (direction: Unspecified) </p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) EmpresaConocimientoTecnologia</p>
+<p>Cardinality:  [1..*]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) Empresa</p>
+<p>Cardinality:  [1]</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+### Entidad Nombre o razón social de una empresa de explotación de resultados: “EmpresaNombreRazonSocial”
+
+Entidad para almacenar, en todos los idiomas habilitados, el nombre o razón social de la empresa de explotación de resultados.
+
+Una empresa de explotación de resultados puede estar vinculada a una entidad que ya exista en el SGEMP. En este caso, no aplicaría el uso del campo nombre o razón social introducido a través de las pantallas del SGI, sino que los datos que aplicaría serían los recuperados desde el SGEMP. El vínculo entre la empresa de explotación de resultados y una entidad existente en el SGEMP se hace a través del buscador integrado en el campo "EntidadRef" de la tabla "Empresa". Si una empresa de explotación de resultados no está vinculada a ninguna entidad del SGEMP, entonces deberá tener informado el campo nombre o razón social. En este caso el campo nombre o razón social será obligatorio, debiendo ser introducido al menos en un idioma.
+
+Si el campo nombre o razón social está informado y posteriormente la empresa de explotación de resultados se vincula a una entidad del SGEMP a través del campo "entidadRef", aplicaría el uso del nombre de la entidad recuperado desde el SGEMP.
+
+
+
+<div class="table-wrap">
+
+<table class="relative-table confluenceTable" style="width: 61.6986%;">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p><strong>ATTRIBUTES</strong></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p> empresa : Empresa  Private</p>
+<p> Empresa de explotación de resultados a la que pertenece el nombre o razón social. Es una FK a la tabla "Empresa".</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p> lang : String  Private</p>
+<p>Idioma en el que está almacenado el valor del campo nombre o razón social de la empresa de explotación de resultados. Cada idioma se representa por un código de 2 caracteres:</p>
+<ul>
+<li><p>es</p></li>
+<li><p>en</p></li>
+<li><p>eu </p></li>
+</ul></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>value_ : String  Private</p>
+<p> Valor del nombre o razón social. Está expresado en el idioma indicado por el campo "lang" </p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+<div class="table-wrap">
+
+<table class="relative-table confluenceTable" style="width: 41.5342%;">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p><strong>ASSOCIATIONS</strong></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p> Association (direction: Unspecified) </p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) EmpresaNombreRazonSocial</p>
+<p>Cardinality:  [1..*]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) Empresa</p>
+<p>Cardinality:  [1]</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+
+
+### Entidad Conocimiento o tecnología de una empresa de explotación de resultados: “EmpresaConocimientoTecnologia”
+
+Entidad para almacenar, en todos los idiomas habilitados en la aplicación, la descripción del conocimiento o tecnología de la empresa de explotación de resultados. Si se trata de una EBT, representará la tecnología. Si se trata de una EINCNT, el conocimiento. Es un campo obligatorio, deberá de introducirse al menos en un idioma.
+
+
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p><strong>ATTRIBUTES</strong></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p> empresa : Empresa  Private</p>
+<p>Empresa de explotación de resultados a la que se asocia el conocimiento/tecnología. Es una FK a la tabla "Empresa"</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p> lang : String  Private</p>
+<p> Idioma en el que está almacenado el valor del campo conocimiento/tecnología de la empresa de explotación de resultados. Cada idioma se representa por un código de 2 caracteres:</p>
+<ul>
+<li><p>es</p></li>
+<li><p>en</p></li>
+<li><p>eu</p></li>
+</ul></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p> value_ : String  Private</p>
+<p> Contenido de la tecnología/conocimiento. Está expresado en el idioma indicado por el campo "lang". </p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p><strong>ASSOCIATIONS</strong></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p> Association (direction: Unspecified) </p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) EmpresaConocimientoTecnologia</p>
+<p>Cardinality:  [1..*] </p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) Empresa</p>
+<p>Cardinality:  [1]</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+### Entidad Objeto social de una empresa de explotación de resultados: “EmpresaObjetoSocial”
+
+Entidad para almacenar, en todos los idiomas habilitados en la aplicación, el objeto social de la empresa de explotación de resultados. El objeto social es un campo de texto. Es obligatorio, debiendo introducirse al menos en un idioma.
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p><strong>ATTRIBUTES</strong></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p> empresa : Empresa  Private</p>
+<p> Empresa de explotación de resultados a la que pertenece el objeto social. Es una FK a la tabla "Empresa" </p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>lang : String  Private</p>
+<p>Idioma en el que está almacenado el valor del campo objeto social de la empresa de explotación de resultados. Cada idioma se representa por un código de 2 caracteres:</p>
+<ul>
+<li><p>es</p></li>
+<li><p>en</p></li>
+<li><p>eu </p></li>
+</ul></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p> value_ : String  Private</p>
+<p> Valor del campo objeto social. Está expresado en el idioma indicado por el campo "lang".</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p><strong>ASSOCIATIONS</strong></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p> Association (direction: Unspecified) </p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) EmpresaObjetoSocial</p>
+<p>Cardinality:  [1..*] </p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) Empresa</p>
+<p>Cardinality:  [1]</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+### Entidad Observaciones de una empresa de explotación de resultados: “EmpresaObservaciones”
+
+Entidad para almacenar en todos los idiomas habilitados en la aplicación, el campo observaciones de una empresa de explotación de resultados. Es un campo de texto libre para introducir cualquier aclaración sobre la empresa. Es opcional, no siendo necesario que se introduzca en ninguno de los idiomas.
+
+
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p><strong>ATTRIBUTES</strong></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p> empresa : Empresa  Private</p>
+<p>Empresa de explotación de resultados a la que está asociado el campo observaciones. Es una FK a la tabla "Empresa" </p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p> lang : String  Private</p>
+<p>Idioma en el que está almacenado el valor del campo observaciones de la empresa de explotación de resultados. Cada idioma se representa por un código de 2 caracteres:</p>
+<ul>
+<li><p>es</p></li>
+<li><p>en</p></li>
+<li><p>eu</p></li>
+</ul></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p> value_ : String  Private</p>
+<p>Valor del campo observaciones perteneciente a una empresa de explotación de resultados. Está expresado en el idioma indicado por el campo "lang". </p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p><strong>ASSOCIATIONS</strong></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p> Association (direction: Unspecified) </p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) EmpresaObservaciones</p>
+<p>Cardinality:  [0..*] </p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) Empresa</p>
+<p>Cardinality:  [1]</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+### Entidad Datos notaría de una empresa de explotación de resultados: “EmpresaNotario”
+
+Entidad para almacenar, en todos los idiomas habilitados en la aplicación, datos sobre la notaría que interviene en el proceso de constitución de la empresa de explotación de resultados o en el de proceso de incorporación de la Universidad a la empresa de explotación de resultados. Es un campo de texto, de introducción opcional.
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p><strong>ATTRIBUTES</strong></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>empresa : Empresa  Private</p>
+<p>Empresa de explotación de resultados a la que está asociado el campo relativo a la notaría. Es una FK a la tabla "Empresa".</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p> lang : String  Private</p>
+<p> Idioma en el que está almacenado el valor del campo referente a la intervención notarial. Cada idioma se representa por un código de 2 caracteres:</p>
+<ul>
+<li><p>es</p></li>
+<li><p>en</p></li>
+<li><p>eu</p></li>
+</ul></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p> value_ : String  Private</p>
+<p> Valor del campo relativo a la intervención notarial. Está expresado en el idioma recogido en el campo "lang". </p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p><strong>ASSOCIATIONS</strong></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p> Association (direction: Unspecified) </p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) EmpresaNotario</p>
+<p>Cardinality:  [0..*]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) Empresa</p>
+<p>Cardinality:  [1]</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+### Entidad Equipo de administración de una empresa de explotación de resultados: “EmpresaAdministracionSociedad”
+
+Representa a cada uno de los miembros de los equipos de administración de las distintas empresas de explotación de resultados.
+
+<div class="table-wrap">
+
+<table class="relative-table confluenceTable" style="width: 83.6712%;">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p><strong>ATTRIBUTES</strong></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>id : Long </p>
+<p>Clave primaria. Secuencia. Identificador único del registro dentro de la tabla "EmpresaAdministracionSociedad".</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>empresaId : Long</p>
+<p>Identificador de la empresa a la que pertenece el miembro del equipo de administración de la sociedad. Es una FK sobre la tabla "Empresa". Obligatorio.</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>miembroEquipoAdministracionRef : String</p>
+<p>Referencia a la persona miembro del equipo de administración de la sociedad. Es una FK al modelo del SGP. Obligatorio.</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>tipoAdministracion : String</p>
+<p>Tipo de administración del miembro del equipo de administración de la sociedad. Los miembros que componen la administración de la sociedad podrán ejercer uno de los tipos de administración del enumerado TipoAdministracion. Obligatorio.</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>fechaInicio : Date</p>
+<p>Fecha desde que el miembro forma parte del equipo de administración con tipo indicado en tipoAdministracion. Obligatorio.</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>fechaFin : Date</p>
+<p>Fecha hasta la que la persona desempeña su labor como miembro del equipo de administración de la sociedad del tipo indicado en tipoAdministracion.</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p><strong>ASSOCIATIONS</strong></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Association (direction: Unspecified) </p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) EmpresaAdministracionSociedad</p>
+<p>Cardinality:  [0..*]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Enumeration) TipoAdministracion</p>
+<p>Cardinality:  [1]</p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Association (direction: Unspecified) </p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) EmpresaAdministracionSociedad</p>
+<p>Cardinality:  [0..*]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) Persona</p>
+<p>Cardinality:  [1]</p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Association (direction: Unspecified) </p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) Empresa</p>
+<p>Cardinality:  [1]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) EmpresaAdministracionSociedad</p>
+<p>Cardinality:  [0..*]</p>
+<p><br />
+</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+### Entidad Miembros que componen la sociedad de una empresa de explotación de resultados: “EmpresaComposicionSociedad”
+
+Representa a cada uno de los miembros de las sociedades que representan las distintas empresas de explotación de resultados.
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p><strong>ATTRIBUTES</strong></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>id : Long</p>
+<p>Clave primaria. Secuencia. Identificador único del registro dentro de la tabla "EmpresaComposicionSociedad".</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>empresaId : Long</p>
+<p>Identificador de la empresa al que pertenece el miembro de la composición de la sociedad. Clave ajena a "Empresa". Obligatorio.</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>miembroSociedadEmpresaRef : String</p>
+<p>Referencia a la entidad miembro de la sociedad. Es una FK al modelo del SGEMP. Estará informado cuando el miembro de la sociedad sea una entidad. Opcional.</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>miembroSociedadPersonaRef : String</p>
+<p>Referencia a la persona miembro de la sociedad. Es una FK al modelo del SGP. Estará informado cuando el mimbro de la sociedad sea una persona. Opcional.</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>fechaInicio : Date</p>
+<p>Fecha desde que es socio la entidad/persona. Obligatorio.</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>fechaFin : Date </p>
+<p>Fecha hasta la que es socio la entidad/persona. Opcional.</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>participacion : Decimal</p>
+<p>Porcentaje de participación del socio en la sociedad. Numérico decimal menor o igual que 100. Obligatorio.</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>tipoAportacion : String</p>
+<p>Tipo de aportación a la sociedad. Los miembros que componen la sociedad podrán aportar uno de los tipos de aportación del enumerado TipoAportacion. Obligatorio.</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>capitalSocial : Decimal</p>
+<p>Importe del capital social aportado por el socio. Numérico decimal. Opcional.</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p><strong>ASSOCIATIONS</strong></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Association (direction: Unspecified) </p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) EmpresaComposicionSociedad</p>
+<p>Cardinality:  [0..*]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) Persona</p>
+<p>Cardinality:  [1]</p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Association (direction: Unspecified) </p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) EmpresaComposicionSociedad</p>
+<p>Cardinality:  [0..*]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) Empresa</p>
+<p>Cardinality:  [1]</p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Association (direction: Unspecified) </p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) EmpresaComposicionSociedad</p>
+<p>Cardinality:  [0..*]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Enumeration) TipoAportacion</p>
+<p>Cardinality:  [1]</p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Association (direction: Unspecified) </p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) EmpresaComposicionSociedad</p>
+<p>Cardinality:  [0..*]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) Empresa</p>
+<p>Cardinality:  [1]</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+### Entidad Miembros del equipo emprendedor de una empresa de explotación de resultados: “EmpresaEquipoEmprendedor”
+
+Representa a cada uno de los miembros de los equipos emprendedores de las distintas empresas de explotación de resultados.
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<tbody>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p><strong>ATTRIBUTES</strong></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>id : Long</p>
+<p>Clave primaria. Secuencia. Identificador único del registro dentro de la tabla "EmpresaEquipoEmprendedor".</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>empresaId : Long </p>
+<p>Identificador de la empresa al que pertenece el miembro del equipo emprendedor. Clave ajena a "Empresa". Obligatorio.</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>miembroEquipoRef : String </p>
+<p>Referencia a la persona miembro del equipo emprendedor. Es una FK al modelo del SGP. Obligatorio.</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p><strong>ASSOCIATIONS</strong></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Association (direction: Unspecified) </p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) EmpresaEquipoEmprendedor</p>
+<p>Cardinality:  [0..*]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) Empresa</p>
+<p>Cardinality:  [1]</p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Association (direction: Unspecified) </p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) EmpresaEquipoEmprendedor</p>
+<p>Cardinality:  [0..*]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) Persona</p>
+<p>Cardinality:  [1]</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+### Entidad Documento adjuntado a una empresa de explotación de resultados: “EmpresaDocumento”
+
+Representa a cada uno de los documentos asociados a una empresa de explotación de resultados. Los documentos quedarán registrados en el repositorio de documentos global del SGI.
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<tbody>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p><strong>ATTRIBUTES</strong></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>id : Long </p>
+<p>Identificador único del registro. Secuencia. Clave primaria.</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>empresaId : Long </p>
+<p>Identificador de la empresa a la que pertenece el documento. Es una FK sobre la tabla "Empresa". Obligatorio.</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>documentoRef : String </p>
+<p>Referencia identificativa del documento en el repositorio de documentos global del SGI.</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>tipoDocumentoId : Long </p>
+<p>Clasificación del documento según su tipología. Es una FK a la tabla "TipoDocumento". Obligatorio.</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p><strong>ASSOCIATIONS</strong></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p> Association (direction: Unspecified) </p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) EmpresaDocumento</p>
+<p>Cardinality:  [1] </p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) EmpresaDocumentoNombre</p>
+<p>Cardinality:  [1..*]</p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Association (direction: Unspecified) </p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) EmpresaDocumento</p>
+<p>Cardinality:  [1]</p>
+<p><br />
+</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) EmpresaDocumentoComentarios</p>
+<p>Cardinality:  [0..*] </p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p> Association (direction: Unspecified) </p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) EmpresaDocumento</p>
+<p>Cardinality:  [0..*]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) Empresa</p>
+<p>Cardinality:  [1]</p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p> Association (direction: Unspecified) </p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) EmpresaDocumento</p>
+<p>Cardinality:  [0..1]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) Documento</p>
+<p>Cardinality:  [1]</p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p> Association (direction: Unspecified) </p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) EmpresaDocumento</p>
+<p>Cardinality:  [0..*]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) TipoDocumento</p>
+<p>Cardinality:  [0..1]</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+### Entidad Nombre de un documento adjuntado a una empresa de explotación de resultados: “EmpresaDocumentoNombre”
+
+Entidad para almacenar, en todos los idiomas soportados por la aplicación, el nombre de un documento que se adjunta a una empresa de explotación de resultados. El nombre es un campo de texto a modo de identificador o título del contenido del documento, de forma independiente al nombre del archivo físico propiamente dicho.
+
+Es un campo obligatorio, ha de introducirse al menos en uno de los idiomas habilitados.
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<tbody>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p><strong>ATTRIBUTES</strong></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p> empresaDocumento : EmpresaDocumento  Private</p>
+<p> Identificador del documento adjuntado a los datos de una empresa de explotación de resultados al que pertenece el nombre. Es una FK a la tabla "EmpresaDocumento"</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p> lang : String  Private</p>
+<p> Idioma en el que está almacenado el valor del campo nombre del documento Cada idioma se representa por un código de 2 caracteres:</p>
+<ul>
+<li><p>es</p></li>
+<li><p>en</p></li>
+<li><p>eu</p></li>
+</ul></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p> value_ : String  Private</p>
+<p>Valor del campo nombre para un documento de una empresa de explotación de resultados. Está expresado en el idioma indicado por el campo "lang". </p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p><strong>ASSOCIATIONS</strong></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p> Association (direction: Unspecified) </p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) EmpresaDocumento</p>
+<p>Cardinality:  [1]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) EmpresaDocumentoNombre</p>
+<p>Cardinality:  [1..*]</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+### Entidad Comentarios sobre un documento adjuntado a una empresa de explotación de resultados: “EmpresaDocumentoComentarios”
+
+Entidad para almacenar, en todos los idiomas soportados por la aplicación, los comentarios asociados a un documento que se adjunta a una empresa de explotación de resultados. El campo "comentarios" es un campo de texto a través del que se puede introducir cualquier observación sobre el documento. Su cumplimentación es opcional, no siendo obligatorio que se introduzca en ninguno de los idiomas.
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p><strong>ATTRIBUTES</strong></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>empresaDocumento : EmpresaDocumento  Private</p>
+<p>Identificador del documento al que pertenecen los comentarios. Es una FK a la tabla "EmpresaDocumento"</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>lang : String  Private</p>
+<p>Idioma en el que está almacenado el valor del campo comentarios del documento. Cada idioma se representa por un código de 2 caracteres:</p>
+<ul>
+<li><p>es</p></li>
+<li><p>en</p></li>
+<li><p>eu</p></li>
+</ul></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>value_ : String  Private</p>
+<p>Valor del campo comentarios asociado a un documento que se adjunta a una empresa de explotación de resultados. Está expresado en el idioma indicado por el campo "lang". </p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p><strong>ASSOCIATIONS</strong></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p> Association (direction: Unspecified) </p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) EmpresaDocumento</p>
+<p>Cardinality:  [1]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) EmpresaDocumentoComentarios</p>
+<p>Cardinality:  [0..*]</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+### Entidad Tipo de documento: “TipoDocumento”
+
+Contiene los tipos de documento disponibles para categorización de los documentos que se adjuntan a las empresas de explotación de resultados. El tipo de documento permitirá clasificar los documentos de acuerdo con la naturaleza de la información que contienen. Es una clasificación jerárquica. Ejemplos de tipos de documento podrían ser: documentos de procedimiento, documentos corporativos, estatutos sociales, ...
+
+Es una tabla que no tiene gestión desde el interface de la aplicación. La introducción de nuevos valores o modificación de los existentes se realizará directamente por BD.
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p><strong>ATTRIBUTES</strong></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>id : Long</p>
+<p>Identificador único de la tabla. Secuencia. Clave primaria.</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>padreId : Long </p>
+<p>Identificador del tipo padre (en caso de que sea un subtipo). FK a TipoDocumento (a sí misma). Opcional.</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>activo : Booelan    = True</p>
+<p>Flag con el que se da cobertura al borrado lógico de los registros de esta tabla. Un tipo de documento con al flag "activo" a "false" no estará disponible para su vinculación a los documentos de la empresa de explotación de resultados.</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p><strong>ASSOCIATIONS</strong></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p> Association (direction: Unspecified) </p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) TipoDocumento</p>
+<p>Cardinality:  [1] </p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) TipoDocumento</p>
+<p>Cardinality:  [0..*]</p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p> Association (direction: Unspecified) </p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) TipoDocumentoNombre</p>
+<p>Cardinality:  [1..*]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) TipoDocumento</p>
+<p>Cardinality:  [1]</p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p> Association (direction: Unspecified) </p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) TipoDocumento</p>
+<p>Cardinality:  [1]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) TipoDocumento</p>
+<p>Cardinality:  [0..*]</p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p> Association (direction: Unspecified) </p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) TipoDocumentoDescripcion</p>
+<p>Cardinality:  [0..*]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) TipoDocumento</p>
+<p>Cardinality:  [1]</p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p> Association (direction: Unspecified) </p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) EmpresaDocumento</p>
+<p>Cardinality:  [0..*]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) TipoDocumento</p>
+<p>Cardinality:  [0..1]</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+### Entidad Nombre de un tipo de documento: “TipoDocumentoNombre”
+
+Entidad para almacenar, en todos los idiomas habilitados en la aplicación, el campo nombre asociado a un tipo de documento bajo el que se clasifican los documentos adjuntos a las empresas de explotación de resultados. El campo nombre será el utilizado para listar los tipos de documento en el selector que permite clasificar un documento adjunto a una empresa de explotación de resultados.
+
+Es un campo obligatorio, debe de existir un valor para el campo nombre al menos en uno de los idiomas.
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p><strong>ATTRIBUTES</strong></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>tipoDocumento : TipoDocumento  Private</p>
+<p> Identificador del tipo de documento al que pertenece el campo nombre. Es una FK a la tabla "TipoDocumento"</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>lang : String  Private</p>
+<p>Idioma en el que está almacenado el valor del campo nombre del tipo de documento Cada idioma se representa por un código de 2 caracteres:</p>
+<ul>
+<li><p>es</p></li>
+<li><p>en</p></li>
+<li><p>eu </p></li>
+</ul></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p> value_ : String  Private</p>
+<p> Valor del campo nombre del tipo de documento. Está expresado en el idioma indicado por el campo "lang". </p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p><strong>ASSOCIATIONS</strong></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Association (direction: Unspecified) </p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) TipoDocumentoNombre</p>
+<p>Cardinality:  [1..*]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) TipoDocumento</p>
+<p>Cardinality:  [1]</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+### Entidad Descripción de un tipo de documento: “TipoDocumentoDescripcion”
+
+Entidad para almacenar, en todos los idiomas habilitados en la aplicación, el campo descripción asociado a un tipo de documento bajo el que se clasifican los documentos adjuntos a las empresas de explotación de resultados.
+
+El campo descripción es un campo de texto opcional, no es obligatorio que sea introducido en ninguno de los idiomas.
+
+<div class="table-wrap">
+
+<table class="relative-table confluenceTable" style="width: 50.9589%;">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p><strong>ATTRIBUTES</strong></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p> tipoDocumento : TipoDocumento  Private</p>
+<p> Identificador del tipo de documento al que pertenece el campo descripción. Es una FK a la tabla "TipoDocumento"</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>lang : String  Private</p>
+<p>Idioma en el que está almacenado el valor del campo descripción del tipo de documento Cada idioma se representa por un código de 2 caracteres:</p>
+<ul>
+<li><p>es</p></li>
+<li><p>en</p></li>
+<li><p>eu </p></li>
+</ul></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p> value_ : String  Private</p>
+<p> Valor del campo descripción del tipo de documento. Está expresado en el idioma indicado por el campo "lang".</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p><strong>ASSOCIATIONS</strong></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Association (direction: Unspecified) </p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) TipoDocumentoDescripcion</p>
+<p>Cardinality:  [0..*]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) TipoDocumento</p>
+<p>Cardinality:  [1]</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+## Enumerados del modelo lógico de EER
+
+### Enumerado Estados de una empresa de explotación de resultados: “EstadoEmpresa”
+
+Enumerado que contiene los posibles estados de las empresas de explotación de resultados. Valores:
+
+- En tramitación
+
+- No aprobada
+
+- Activa
+
+- Sin actividad
+
+- Disuelta
+
+<div class="table-wrap">
+
+|                        |
+|:-----------------------|
+| **ATTRIBUTES**         |
+| En tramitación : Long  |
+| No aprobada : Long     |
+| Activa : Long          |
+| Sin actividad : Long   |
+| Disuelta : Long        |
+
+</div>
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p><strong>ASSOCIATIONS</strong></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Association (direction: Unspecified) </p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source:  (Class) Empresa</p>
+<p>Cardinality:  [0..*]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target:  (Enumeration) EstadoEmpresa</p>
+<p>Cardinality:  [1]</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+### Enumerado Tipo de administración: “TipoAdministracion”
+
+Enumerado que contiene los posibles tipos de administración de la sociedad que representa la empresa de explotación de resultados. Valores:
+
+- Administrador único (1 persona)
+
+- Administrador solidario (2 personas o más)
+
+- Administrador mancomunado (2 personas o más)
+
+- Consejo de administración (3 personas o más)
+
+
+
+<div class="table-wrap">
+
+|                                   |
+|:----------------------------------|
+| **ATTRIBUTES**                    |
+| Administrador único : Long        |
+| Administrador solidario : Long    |
+| Administrador mancomunado : Long  |
+| Consejo de administración : Long  |
+
+</div>
+
+
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p><strong>ASSOCIATIONS</strong></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Association (direction: Unspecified) </p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source:  (Class) EmpresaAdministracionSociedad</p>
+<p>Cardinality:  [0..*]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target:  (Enumeration) TipoAdministracion</p>
+<p>Cardinality:  [1]</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+### Enumerado Tipo de aportación: “TipoAportacion”
+
+Enumerado que contiene los posibles tipos de aportación a la composición de la sociedad que representa la empresa de explotación de resultado por parte de los miembros de la misma. Valores:
+
+- Dineraria
+
+- No dineraria
+
+<div class="table-wrap">
+
+|                     |
+|:--------------------|
+| **ATTRIBUTES**      |
+| Dineraria : Long    |
+| No dineraria : Long |
+
+</div>
+
+
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p><strong>ASSOCIATIONS</strong></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Association (direction: Unspecified)</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source:  (Class) EmpresaComposicionSociedad</p>
+<p>Cardinality:  [0..*]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target:  (Enumeration) TipoAportacion</p>
+<p>Cardinality:  [1]</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+### Enumerado Tipo de empresa de explotación de resultados: “TipoEmpresa”
+
+Enumerado que contiene los posibles tipos de empresa de explotación de resultados. Valores:
+
+- EBT (Empresa de base tecnológica).
+
+- EINCNT (Empresa intensiva en conocimiento no tecnológico).
+
+
+
+<div class="table-wrap">
+
+|                |
+|:---------------|
+| **ATTRIBUTES** |
+| EBT : Long     |
+| EINCNT : Long  |
+
+</div>
+
+
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p><strong>ASSOCIATIONS</strong></p></td>
+</tr>
+<tr class="even">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Association (direction: Unspecified) </p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source:  (Class) Empresa</p>
+<p>Cardinality:  [0..*]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target:  (Enumeration) TipoEmpresa</p>
+<p>Cardinality:  [1]</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+
+
+</div>
+
+</div>
+
+</div>
+
+<div id="footer" role="contentinfo">
+
+<div class="section footer-body">
+
+Document generated by Confluence on oct 27, 2025 08:54
+
+<div id="footer-logo">
+
+[Atlassian](https://www.atlassian.com/)
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 
 

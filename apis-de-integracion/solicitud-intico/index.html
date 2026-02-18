@@ -796,7 +796,228 @@
 
   <h1>Solicitud intico</h1>
 
+<div id="page">
 
+<div id="main" class="aui-page-panel">
+
+<div id="main-header">
+
+<div id="breadcrumb-section">
+
+1.  [Hércules](index.html)
+2.  [Hércules](/)
+3.  [APIs de Integración](//apis-de-integracion)
+
+</div>
+
+# <span id="title-text"> Hércules : Solicitud INTICO </span>
+
+</div>
+
+<div id="content" class="view">
+
+<div class="page-metadata">
+
+Created by <span class="author"> Reyes Hernández-Mora Martínez</span>, last updated on jun 29, 2022
+
+</div>
+
+<div id="main-content" class="wiki-content group">
+
+<span style="color:var(--ds-text-accent-magenta-bolder,#50253f);">Se requiere conocer los endpoints para obtener, de Hércules el listado de personas, proyectos, artículos, patentes y líneas de investigación, así como los relativos a los datos de cada uno de los elementos.</span><span style="color:var(--ds-text-accent-magenta-bolder,#50253f);"> </span>
+
+<span style="color:var(--ds-text-accent-magenta-bolder,#50253f);">Recuperar la información básica:</span>
+
+<span style="color:var(--ds-text-accent-magenta-bolder,#50253f);">1) Listado de los miembros de un grupo de investigación y las líneas de investigación: documentado en detalle en  [SGI - Grupos de investigación](//apis-de-integracion/sgi-servicios-propios-que-expone/sgi-grupos-de-investigacion)</span>
+
+<span style="color:var(--ds-text-accent-magenta-bolder,#50253f);">En el enlace anterior hay una lista exhaustiva de todos los disponibles. Los que creo que proporcionan la información solicitada son:</span>
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable" style="width: 950.05px;">
+<tbody>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left;">GET</td>
+<td class="confluenceTd" style="text-align: left;"><span>/grupos/<span class="url-filename">{id}</span></span></td>
+<td class="confluenceTd" style="text-align: left;"><br />
+</td>
+<td class="confluenceTd" style="text-align: left;">Grupo</td>
+<td class="confluenceTd" style="text-align: left;">Datos generales de un Grupo</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left;">GET</td>
+<td class="confluenceTd" style="text-align: left;"><span><span class="url-filename">/proyectos/{id}</span></span>/<span>miembrosequipo</span></td>
+<td class="confluenceTd" style="text-align: left;"><br />
+</td>
+<td class="confluenceTd" style="text-align: left;">Lista[GrupoEquipo]</td>
+<td class="confluenceTd" style="text-align: left;">Listado de miembros del equipo de un Grupo</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left;">GET</td>
+<td class="confluenceTd" style="text-align: left;"><span><span class="url-filename">/proyectos/{id}</span></span>/palabrasclave</td>
+<td class="confluenceTd" style="text-align: left;"><br />
+</td>
+<td class="confluenceTd" style="text-align: left;">Lista[GrupoPalabraClave]</td>
+<td class="confluenceTd" style="text-align: left;">Listado de palabras clave de un Grupo</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+<span style="color:var(--ds-text-accent-magenta-bolder,#50253f);">2) Listados de los proyectos del equipo, importe, fuente financiadora comienzo y fin, y sus integrantes: documentado en detalle en [Gestión proyectos](//apis-de-integracion/sgi-servicios-propios-que-expone/gestion-proyectos)</span>
+
+<span style="color:var(--ds-text-accent-magenta-bolder,#50253f);">En el enlace anterior hay una lista exhaustiva de todos los disponibles. Los que creo que proporcionan la información solicitada son:</span>
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable" style="width: 1178.18px;">
+<tbody>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left;">GET</td>
+<td class="confluenceTd" style="text-align: left;"><span>/proyectos/<span class="url-filename">{id}</span></span></td>
+<td class="confluenceTd" style="text-align: left;"><br />
+</td>
+<td class="confluenceTd" style="text-align: left;">Proyecto</td>
+<td class="confluenceTd" style="text-align: left;">Datos generales de un Proyecto</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left;">GET</td>
+<td class="confluenceTd" style="text-align: left;"><span><span class="url-filename">/proyectos/{id}/contexto</span></span></td>
+<td class="confluenceTd" style="text-align: left;"><br />
+</td>
+<td class="confluenceTd" style="text-align: left;">ProyectoContexto</td>
+<td class="confluenceTd" style="text-align: left;">Datos del contexto de un Proyecto</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left;">GET</td>
+<td class="confluenceTd" style="text-align: left;"><span><span class="url-filename">/proyectos/{id}</span></span>/<span>equipos</span></td>
+<td class="confluenceTd" style="text-align: left;"><br />
+</td>
+<td class="confluenceTd" style="text-align: left;">Lista[ProyectoEquipo]</td>
+<td class="confluenceTd" style="text-align: left;">Listado de miembros del equipo de un Proyecto</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left;">GET</td>
+<td class="confluenceTd" style="text-align: left;"><span>/proyectos/<span class="url-filename">{id}</span>/entidadgestoras</span></td>
+<td class="confluenceTd" style="text-align: left;"><br />
+</td>
+<td class="confluenceTd" style="text-align: left;">Lista[ProyectoEntidadGestora]</td>
+<td class="confluenceTd" style="text-align: left;">Listado de entidades gestoras de un Proyecto</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left;">GET</td>
+<td class="confluenceTd" style="text-align: left;"><span>/proyectos/<span class="url-filename">{id}</span>/entidadconvocantes</span></td>
+<td class="confluenceTd" style="text-align: left;"><br />
+</td>
+<td class="confluenceTd" style="text-align: left;">Lista[ProyectoEntidadConvocante]</td>
+<td class="confluenceTd" style="text-align: left;">Listado de entidades convocantes de un Proyecto</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left;">GET</td>
+<td class="confluenceTd" style="text-align: left;"><span>/proyectos/<span class="url-filename">{id}</span>/entidadfinanciadoras</span></td>
+<td class="confluenceTd" style="text-align: left;"><br />
+</td>
+<td class="confluenceTd" style="text-align: left;">Lista[ProyectoEntidadFinanciadora]</td>
+<td class="confluenceTd" style="text-align: left;">Listado de entidades financiadoras de un Proyecto</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left;">GET</td>
+<td class="confluenceTd" style="text-align: left;"><span>/proyectos/<span class="url-filename">{id}</span>/anulidades</span></td>
+<td class="confluenceTd" style="text-align: left;"><br />
+</td>
+<td class="confluenceTd" style="text-align: left;">Lista[ProyectoAnualidadResumen]</td>
+<td class="confluenceTd" style="text-align: left;">Listado de anualidades de un Proyecto</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left;">GET</td>
+<td class="confluenceTd" style="text-align: left;">/proyectos/{id}/proyectoclasificaciones</td>
+<td class="confluenceTd" style="text-align: left;"><br />
+</td>
+<td class="confluenceTd" style="text-align: left;">Lista[ProyectoClasificacion]</td>
+<td class="confluenceTd" style="text-align: left;">Listado de clasificaciones de un Proyecto</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<span style="color:var(--ds-text-accent-magenta-bolder,#50253f);">3) Artículos del grupo (datos básicos)</span>
+
+<span style="color:var(--ds-text-accent-magenta-bolder,#50253f);">4) Patentes: documentado en detalle en [Protección Industrial e Intelectual (Patentes)](//apis-de-integracion/sgi-servicios-propios-que-expone/proteccion-industrial-e-intelectual-patentes)</span>
+
+<span style="color:var(--ds-text-accent-magenta-bolder,#50253f);">En el enlace anterior hay una lista exhaustiva de todos los disponibles. Los que creo que proporcionan la información solicitada son:</span>
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable" style="width: 951.2px;">
+<tbody>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left;"><span style="color:var(--ds-text,#172b4d);">GET</span></td>
+<td class="confluenceTd" style="text-align: left;"><span style="color:var(--ds-text,#172b4d);">/invenciones/{id}</span></td>
+<td class="confluenceTd" style="text-align: left;"><p><br />
+</p></td>
+<td class="confluenceTd" style="text-align: left;"><span style="color:var(--ds-text,#172b4d);">Invencion</span></td>
+<td class="confluenceTd" style="text-align: left;"><p><span style="color:var(--ds-text,#172b4d);">Devuelve el detalle de la invención solicitada.</span></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left;"><span style="color:var(--ds-text,#172b4d);">GET</span></td>
+<td class="confluenceTd" style="text-align: left;"><span style="color:var(--ds-text,#172b4d);">/invenciones/{id}/sectoresaplicacion</span></td>
+<td class="confluenceTd" style="text-align: left;"><br />
+</td>
+<td class="confluenceTd" style="text-align: left;"><span style="color:var(--ds-text,#172b4d);">SectorAplicacion</span></td>
+<td class="confluenceTd" style="text-align: left;"><span style="color:var(--ds-text,#172b4d);">Listado de sectores de aplicación asociados a la invención.</span></td>
+</tr>
+<tr class="odd">
+<td colspan="5" class="highlight-#f4f5f7 confluenceTd" style="text-align: left;" data-highlight-colour="#f4f5f7"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left;"><span style="color:var(--ds-text,#172b4d);">GET</span></td>
+<td class="confluenceTd" style="text-align: left;"><span style="color:var(--ds-text,#172b4d);">/invenciones/{id}/invencion-inventores</span></td>
+<td class="confluenceTd" style="text-align: left;"><p><br />
+</p></td>
+<td class="confluenceTd" style="text-align: left;"><span style="color:var(--ds-text,#172b4d);">Lista[InvencionInventor]</span></td>
+<td class="confluenceTd" style="text-align: left;"><p><span style="color:var(--ds-text,#172b4d);">Listado de inventores de una invención.</span></p>
+<p><span style="color:var(--ds-text,#172b4d);"><em>Ejemplo</em>:</span></p>
+<p><span style="color:var(--ds-text,#172b4d);">/invenciones/114/invencion-inventores</span></p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+
+
+<span style="color:var(--ds-text-accent-magenta-bolder,#50253f);"> </span>
+
+</div>
+
+</div>
+
+</div>
+
+<div id="footer" role="contentinfo">
+
+<div class="section footer-body">
+
+Document generated by Confluence on oct 27, 2025 09:24
+
+<div id="footer-logo">
+
+[Atlassian](https://www.atlassian.com/)
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 
 

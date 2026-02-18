@@ -796,7 +796,407 @@
 
   <h1>Um sgi esb sge seguimiento justificacion</h1>
 
+<div id="page">
 
+<div id="main" class="aui-page-panel">
+
+<div id="main-header">
+
+<div id="breadcrumb-section">
+
+1.  [Hércules](index.html)
+2.  [Hércules](/)
+3.  [SGI. Sistema de gestión de investigación](//sgi-sistema-de-gestion-de-investigacion)
+4.  [Guia de Implantación - Checklist](//sgi-sistema-de-gestion-de-investigacion/guia-de-implantacion-checklist)
+5.  [UM - Universidad de Murcia](//sgi-sistema-de-gestion-de-investigacion/guia-de-implantacion-checklist/um-universidad-de-murcia)
+6.  [Sistema de Gestión de Investigación - APIs Integración](//sgi-sistema-de-gestion-de-investigacion/guia-de-implantacion-checklist/um-universidad-de-murcia/sistema-de-gestion-de-investigacion-apis-integracion)
+7.  [Sistema de Gestión Económico (UM - SGI - ESB - SGE)](//sgi-sistema-de-gestion-de-investigacion/guia-de-implantacion-checklist/um-universidad-de-murcia/sistema-de-gestion-de-investigacion-apis-integracion/sistema-de-gestion-economico-um-sgi-esb-sge)
+
+</div>
+
+# <span id="title-text"> Hércules : UM - SGI - ESB - SGE - Seguimiento justificación </span>
+
+</div>
+
+<div id="content" class="view">
+
+<div class="page-metadata">
+
+Created by <span class="author"> Usuario desconocido (lorena.alvarez)</span>, last updated by <span class="editor"> Usuario desconocido (covadonga.garcia)</span> on jun 29, 2022
+
+</div>
+
+<div id="main-content" class="wiki-content group">
+
+<div class="toc-macro rbtoc1761553363410">
+
+- [Seguimiento justificación](#UMSGIESBSGESeguimientojustificación-Seguimientojustificación)
+  - [Entidades](#UMSGIESBSGESeguimientojustificación-Entidades)
+  - [Modelo lógico](#UMSGIESBSGESeguimientojustificación-Modelológico)
+  - [API](#UMSGIESBSGESeguimientojustificación-API)
+    - [Definición de los objetos](#UMSGIESBSGESeguimientojustificación-Definicióndelosobjetos)
+      - [GastoJustificado](#UMSGIESBSGESeguimientojustificación-GastoJustificado)
+      - [GastoJustificadoDetalle](#UMSGIESBSGESeguimientojustificación-GastoJustificadoDetalle)
+      - [Columna](#UMSGIESBSGESeguimientojustificación-Columna)
+      - [Documento](#UMSGIESBSGESeguimientojustificación-Documento)
+    - [Servicios](#UMSGIESBSGESeguimientojustificación-Servicios)
+    - [Columnas Seguimiento Justificación](#UMSGIESBSGESeguimientojustificación-ColumnasSeguimientoJustificación)
+    - [Campos Detalle Gasto Justificado](#UMSGIESBSGESeguimientojustificación-CamposDetalleGastoJustificado)
+
+</div>
+
+# Seguimiento justificación
+
+## Entidades
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="header">
+<th class="confluenceTh">Entidad</th>
+<th class="confluenceTh">Descripción</th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd">GastoJustificado</td>
+<td class="confluenceTd"><p>Entidad que representa al gasto que puede ser añadido en una justificación. Tendrá que venir identificado por un identificador único y por el proyecto al que pertenece.</p>
+<p>El resto de campos del gasto se tratarán como columnas dinámicas. Se indicará por cada columna el identificador del campo, el nombre del campo y si es una columna sobre la que se tiene que hacer una suma para mostrarlo en el SGI como un campo totalizador.</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">Columna</td>
+<td class="confluenceTd"><p>Contiene el listado de columnas dinámicas que serán mostradas en las pantallas del SGI.</p>
+<p>Por cada columna se tendrá el identificador del campo, el nombre del campo y si es una columna sobre la que se tiene que hacer una suma para mostrarlo en el SGI como un campo totalizador.</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">GastoJustificadoDetalle</td>
+<td class="confluenceTd"><p>Entidad que representa el detalle de un gasto de una justificación con todos sus campos para mostrarlo en una pantalla de consulta del gasto.</p>
+<p>Tendrá unos campos fijos (identificador único, identificador del proyecto al que pertenece, fecha de devengo,, un código económico, importe gasto e importe presentado en la justificación) y unos campos dinámicos. Por cada campo se detallará el nombre y el valor del campo para mostrarlo en la pantalla del SGI</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">Campo</td>
+<td class="confluenceTd"><p>Contiene el listado de campos dinámicos que serán mostradas en las pantallas de detalle de un gasto.</p>
+<p>Por cada campo se tendrá el el nombre y el valor del campo</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">Documento</td>
+<td class="confluenceTd">Entidad que representa los documentos que pueda tener relacionados un gasto</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+## Modelo lógico
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597853214/597881041.jpg" class="confluence-embedded-image" draggable="false" data-image-src="attachments/597853214/597881041.jpg" data-unresolved-comment-count="0" data-linked-resource-id="597881041" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="ESB SGE Logical Model Seguimiento justificación.jpg" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/jpeg" data-linked-resource-container-id="597853214" data-linked-resource-container-version="2" tabindex="0" height="250" /></span>  
+</span>
+
+## API
+
+Características generales que todas las API REST deben de cumplir:
+
+- <a href="https://confluence.um.es/confluence/display/HERCULES/Consultas+filtradas+y+paginadas" rel="nofollow">Consultas filtradas y paginadas</a>
+- <a href="https://confluence.um.es/confluence/display/HERCULES/Formatos+de+datos+API" rel="nofollow">Formatos de datos API</a>
+
+### Definición de los objetos
+
+#### GastoJustificado
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="odd">
+<td class="highlight-grey confluenceTd" data-highlight-colour="grey"><strong>Nombre</strong></td>
+<td class="highlight-grey confluenceTd" data-highlight-colour="grey"><strong>Tipo</strong></td>
+<td class="highlight-grey confluenceTd" data-highlight-colour="grey"><strong>Descripción</strong></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">id</td>
+<td class="confluenceTd">String</td>
+<td class="confluenceTd">Identificador del gasto. Tiene que ser un identificador único</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">proyectoId</td>
+<td class="confluenceTd">String</td>
+<td class="confluenceTd">Identificador del proyecto económico (SGE)</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">justificacionId</td>
+<td class="confluenceTd">String</td>
+<td class="confluenceTd">Identificador justificación (del SGE)</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">columnas</td>
+<td class="confluenceTd">Map[clave,valor]</td>
+<td class="confluenceTd"><p>Mapa de propiedades</p>
+<p>El valor será un String salvo en aquellas columnas que sean acumulables (se tenga que hacer sumas sobre ellas) donde será de tipo Numérico (<u>sin separador de miles y como separador decimal el punto</u>). Las fechas vendrán en el formato para mostrarlas por pantalla, es decir, dd/MM/YYYY</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+#### GastoJustificadoDetalle
+
+<div class="table-wrap">
+
+|                 |                |                                                                          |
+|-----------------|----------------|--------------------------------------------------------------------------|
+| **Nombre**      | **Tipo**       | **Descripción**                                                          |
+| id              | String         | Identificador del gasto. Tiene que ser un identificador único.           |
+| proyectoId      | String         | Identificador del proyecto económico (SGE)                               |
+| justificacionId | String         | Identificador justificación (del SGE)                                    |
+| campos          | Lista\[Campo\] | Lista de campos, por cada campo se define el nombre y el valor del campo |
+
+</div>
+
+#### Columna
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="odd">
+<td class="highlight-grey confluenceTd" data-highlight-colour="grey"><strong>Nombre</strong></td>
+<td class="highlight-grey confluenceTd" data-highlight-colour="grey"><strong>Tipo</strong></td>
+<td class="highlight-grey confluenceTd" data-highlight-colour="grey"><strong>Descripción</strong></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">id</td>
+<td class="confluenceTd">String</td>
+<td class="confluenceTd">Identificador de la columna</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">nombre</td>
+<td class="confluenceTd">String</td>
+<td class="confluenceTd">Nombre de la columna</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">acumulable</td>
+<td class="confluenceTd">Boolean</td>
+<td class="confluenceTd"><p>Indica si se tiene que sumar o no para mostrar los totales en la pantalla del SGI.</p>
+<p>Dos valores:</p>
+<ul>
+<li>true</li>
+<li>false</li>
+</ul></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+#### Documento
+
+<div class="table-wrap">
+
+|               |          |                                   |
+|---------------|----------|-----------------------------------|
+| **Nombre**    | **Tipo** | **Descripción**                   |
+| id            | String   | Identificador único del documento |
+| nombre        | String   | Nombre del documento a mostrar    |
+| nombreFichero | String   | Nombre del fichero con extensión  |
+
+</div>
+
+### Servicios
+
+<span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"> </span>  
+Para componer la URL llamada completa, se debe anteponer a lo indicado en la columna URL lo siguiente: **{HOST}/api/sge**, donde **{HOST}** de deberá sustituir el dominio correspondiente al entorno al que se está accediendo y dicho acceso será por http o https según el caso.
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable" style="width: 100.0%;">
+<colgroup>
+<col style="width: 6%" />
+<col style="width: 15%" />
+<col style="width: 17%" />
+<col style="width: 23%" />
+<col style="width: 37%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th class="confluenceTh"><p>Método</p></th>
+<th class="confluenceTh"><p>URL</p></th>
+<th class="confluenceTh"><p>Parámetros</p></th>
+<th class="confluenceTh"><p>Respuesta</p></th>
+<th class="confluenceTh">Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td class="confluenceTd">GET</td>
+<td class="confluenceTd">/seguimiento-justificacion/columnas</td>
+<td class="confluenceTd"><p>q+s (query + sort)</p>
+<p>La query estará formada por:</p>
+<ul>
+<li>proyectoId</li>
+<li>justificacionId</li>
+<li><p>numRegistroProveedor</p></li>
+<li>importeJustificado</li>
+<li>fechaDevengo</li>
+<li>fechaPago</li>
+<li>id (se pasará un listado de id de gastos que se quieren buscar)</li>
+</ul></td>
+<td class="confluenceTd"><div class="content-wrapper">
+<p>Lista[Columna]</p>
+<p><br />
+</p>
+<p><br />
+</p>
+</div></td>
+<td class="confluenceTd"><p>Listado con las columnas que va a devolver la llamada /seguimiento-justificacion</p>
+<p>Por cada columna se indica un id, nombre, si es una columna acumulable (se va a hacer una suma de ella en el SGI)</p>
+<p>Ver el apartado "<strong>Columnas Seguimiento Justificación</strong>" para ver que columnas se deben de mostrar.</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">GET</td>
+<td class="confluenceTd">/seguimiento-justificacion</td>
+<td class="confluenceTd"><p>q+s (query + sort)</p>
+<p>La query estará formada por:</p>
+<ul>
+<li>proyectoId</li>
+<li>justificacionId</li>
+<li><p>numRegistroProveedor</p></li>
+<li>importeJustificado</li>
+<li>fechaDevengo</li>
+<li>fechaPago</li>
+<li>id (se pasará un listado de id de gastos que se quieren buscar)</li>
+</ul></td>
+<td class="confluenceTd"><div class="content-wrapper">
+<p>Lista[GastoJustificado]</p>
+<p><br />
+</p>
+<p><br />
+</p>
+</div></td>
+<td class="confluenceTd"><p>Listado con los gastos. Por cada gasto se devolverán los siguientes campos:</p>
+<ul>
+<li>Identificador del gasto</li>
+<li>Identificador del proyecto SGE</li>
+<li>Identificador justificación (del SGE)</li>
+<li>Mapa de columnas de clave - valor (donde la clave será los id definidos en la llamada /seguimiento-justificacion/columnas y el valor será el valor de la columna. El valor será un String salvo en aquellas columnas que sean acumulables,se tenga que hacer sumas sobre ellas, donde será de tipo Numérico (<u>sin separador de miles y como separador decimal el punto</u>)).</li>
+</ul>
+<p>Los gastos devueltos estarán ordenados por identificador del periodo de justificación y por fecha devengo.</p>
+<p>Ver el apartado "<strong>Columnas Seguimiento Justificación</strong>" para ver los id de la columnas que se deben de mostrar.</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">GET</td>
+<td class="confluenceTd">/seguimiento-justificacion/{id}</td>
+<td class="confluenceTd"><p>proyectoId</p>
+<p>justificacionId</p>
+<p><br />
+</p>
+<p><br />
+</p></td>
+<td class="confluenceTd">GastoJustificadoDetalle</td>
+<td class="confluenceTd"><p>Detalle del gasto con todas sus columnas.</p>
+<ul>
+<li>Identificador del gasto</li>
+<li>Identificador del proyecto SGE</li>
+<li>Identificador justificación (del SGE)</li>
+<li>Listado de campos con su nombre y valor (Ver el apartado "<strong>Campos Detalle Gasto Justificado</strong>" para ver que campos se deben de mostrar.</li>
+<li>Listado de documentos (identificador, nombre del documento y nombre del fichero, sin el contenido)</li>
+</ul></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+### Columnas Seguimiento Justificación
+
+Las columnas a devolver en la Universidad de Murcia serán:
+
+<div class="table-wrap">
+
+|        |                          |                |
+|--------|--------------------------|----------------|
+| **id** | **nombre**               | **acumulable** |
+| 1      | Nº de registro           | false          |
+| 2      | Nº registro proveedor    | false          |
+| 3      | Desc. factura/gasto      | false          |
+| 4      | Código económico         | false          |
+| 5      | Fecha devengo            | false          |
+| 6      | Fecha pago               | false          |
+| 7      | Importe gasto            | true           |
+| 8      | Importe presentado just. | true           |
+| 9      | Fecha inicio contrato    | false          |
+| 10     | Dedicación anual proy.   | false          |
+
+</div>
+
+Los gastos que no sean de personal, tendrán vacías las columnas "Fecha inicio contrato" y "Dedicación anual proy."
+
+### Campos Detalle Gasto Justificado** **
+
+Los campos a devolver en la Universidad de Murcia serán:
+
+- Nº de registro
+- Nº de documento de gasto
+- Anualidad
+- Clasificación SGE
+- Aplicación presupuestaria
+- Código económico
+- Proveedor
+- Nº de registro del proveedor
+- Descripción de la Fac/Gasto
+- Fecha devengo
+- Fecha pago
+- Fecha contabilización
+- Importe
+- Importe IVA
+- Importe presentado en justificación
+
+Si el gasto es personal también se enviarán los campos:
+
+- Fecha inicio de contrato
+- Fecha fin de contrato
+- Categoría contrato
+- Jornada
+- Dedicación anual en timesheet para el proyecto SGI
+
+</div>
+
+<div class="pageSection group">
+
+<div class="pageSectionHeader">
+
+## Attachments:
+
+</div>
+
+<div class="greybox" align="left">
+
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [ESB SGE Logical Model Seguimiento justificación.jpg](/attachments/597853214/597881041.jpg) (image/jpeg)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [ESB SGE Logical Model Ejecución económica.jpg](/attachments/597853214/597881042.jpg) (image/jpeg)  
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div id="footer" role="contentinfo">
+
+<div class="section footer-body">
+
+Document generated by Confluence on oct 27, 2025 09:22
+
+<div id="footer-logo">
+
+[Atlassian](https://www.atlassian.com/)
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 
 

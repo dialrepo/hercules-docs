@@ -796,7 +796,651 @@
 
   <h1>Iu eti 0090 002 consulta peticion de evaluacion</h1>
 
+<div id="page">
 
+<div id="main" class="aui-page-panel">
+
+<div id="main-header">
+
+<div id="breadcrumb-section">
+
+1.  [Hércules](index.html)
+2.  [Hércules](/)
+3.  [SGI. Sistema de gestión de investigación](//sgi-sistema-de-gestion-de-investigacion)
+4.  [Requisitos y análisis funcional](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional)
+5.  [Análisis Funcional SGI - Hércules](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules)
+6.  [ETI - Módulo de ética](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica)
+7.  [ETI - Interfaz de Usuario](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario)
+8.  [IU-ETI-0090- Peticiones de evaluación - Gestor](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario/iu-eti-0090-peticiones-de-evaluacion-gestor)
+
+</div>
+
+# <span id="title-text"> Hércules : IU-ETI-0090-002 Consulta petición de evaluación </span>
+
+</div>
+
+<div id="content" class="view">
+
+<div class="page-metadata">
+
+Created by <span class="author"> Usuario desconocido (lorena.alvarez)</span>, last updated on feb 28, 2022
+
+</div>
+
+<div id="main-content" class="wiki-content group">
+
+<div class="plugin-tabmeta-details">
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable" style="width: 75.1988%;">
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 84%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<th class="confluenceTh">Cod. IU</th>
+<td class="confluenceTd"><p><strong><strong><strong><strong>IU-ETI-0090-002-Consulta petición de evaluación<br />
+</strong></strong></strong></strong></p></td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Ver. objetivo</th>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh">Ver. IU</th>
+<td class="confluenceTd">1.0.0</td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Estado</th>
+<td class="confluenceTd"><div class="content-wrapper">
+<p> <span class="status-macro aui-lozenge aui-lozenge-complete conf-macro output-inline">LIBERADO_</span></p>
+</div></td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh">Fec. Aprobación</th>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Épica, historia</th>
+<td class="confluenceTd"><div class="content-wrapper">
+<p><br />
+</p>
+</div></td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh">Actores</th>
+<td class="confluenceTd"><p>ACT-ETI-001-Gestor</p></td>
+</tr>
+<tr class="even">
+<th class="confluenceTh"><p>Frecuencia</p></th>
+<td class="confluenceTd">Media</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+# Formulario de Consulta petición de evaluación
+
+Pantalla compuesta por cuatro formularios:
+
+- Datos generales
+- Equipo investigador
+- Asignación de tareas
+- Memorias
+
+## Datos generales
+
+Son los datos generales de una petición de evaluación de un proyecto de investigación.
+
+<div class="table-wrap">
+
+<table class="wrapped relative-table confluenceTable" style="width: 99.894%;">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 8%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<th colspan="3" class="confluenceTd" style="width: 99.894%"><div class="content-wrapper">
+<p><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852556/597873111.png" class="confluence-embedded-image" draggable="false" data-image-src="attachments/597852556/597873111.png" data-unresolved-comment-count="0" data-linked-resource-id="597873111" data-linked-resource-version="2" data-linked-resource-type="attachment" data-linked-resource-default-alias="consultapeticionevaluaciondatosgenerales.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852556" data-linked-resource-container-version="32" tabindex="0" width="650" /></span></p>
+</div></th>
+</tr>
+<tr class="even">
+<th class="confluenceTh" style="width: 11.3468%">Nombre</th>
+<th class="confluenceTh" style="width: 11.0286%">Tipo</th>
+<th class="confluenceTh" style="width: 77.5186%"><div class="content-wrapper">
+<p>Características / Notas</p>
+</div></th>
+</tr>
+<tr class="odd">
+<th class="confluenceTd" style="width: 11.3468%">Código de la solicitud de convocatoria</th>
+<th class="confluenceTd" style="width: 11.0286%">Texto corto</th>
+<th class="confluenceTd" style="width: 77.5186%"><div class="content-wrapper">
+<p>Sólo se muestra si viene de una solicitud de convocatoria. Es en modo consulta.</p>
+<p>Se corresponde con el campo "código registro interno" de la tabla "solicitud" (del módulo de CSP). El usuario gestor debe de tener el permiso CSP-SOL-ETI-V</p>
+</div></th>
+</tr>
+<tr class="even">
+<th class="confluenceTd" style="width: 11.3468%">Código petición</th>
+<th class="confluenceTd" style="width: 11.0286%">Texto corto</th>
+<th class="confluenceTd" style="width: 77.5186%">Será un código con el formato YYYY/secuencia , donde YYYY es el año y secuencia en un código secuencial desde 000 hasta 999 del año. Se generará solo al crear una nueva petición. Modo consulta.</th>
+</tr>
+<tr class="odd">
+<th class="confluenceTd" style="width: 11.3468%">Título</th>
+<th class="confluenceTd" style="width: 11.0286%">Texto</th>
+<th class="confluenceTd" style="width: 77.5186%">Título del proyecto. Es en modo consulta.</th>
+</tr>
+<tr class="even">
+<th class="confluenceTd" style="width: 11.3468%"><p>Tipo de actividad</p></th>
+<th class="confluenceTd" style="width: 11.0286%"><p>Selector</p>
+<p>Texto corto</p>
+<p>Obligatorio</p></th>
+<th class="confluenceTd" style="width: 77.5186%"><div class="content-wrapper">
+<p>Desplegable con los valores:</p>
+<ul>
+<li>Proyecto de investigación</li>
+<li>Práctica docente</li>
+</ul>
+<p>Es en modo consulta.</p>
+</div></th>
+</tr>
+<tr class="odd">
+<th class="confluenceTd" style="width: 11.3468%">Tipo de investigación tutelada</th>
+<th class="confluenceTd" style="width: 11.0286%"><p>Selector</p>
+<p>Texto corto</p>
+<p>Obligatorio si en el combo de Tipo de actividad se selecciona Investigación titulada</p></th>
+<th class="confluenceTd" style="width: 77.5186%"><p>Desplegable con los valores:</p>
+<ul>
+<li>Tesis doctoral</li>
+<li>Trabajo Fin de Máster</li>
+<li>Trabajo Fin de Grado</li>
+</ul>
+<p>Es en modo consulta.</p></th>
+</tr>
+<tr class="even">
+<th class="confluenceTd" style="width: 11.3468%">¿Se dispone de financiación para realizar el proyecto?</th>
+<th class="confluenceTd" style="width: 11.0286%"><p>Selector</p>
+<p>Texto corto</p>
+<p>Obligatorio</p></th>
+<th class="confluenceTd" style="width: 77.5186%"><p>Desplegable con los valores:</p>
+<ul>
+<li>Vacío</li>
+<li>Sí</li>
+<li>No</li>
+</ul>
+<p>Si se selecciona Sí se mostrarán los campos:</p>
+<ul>
+<li>Órgano financiador</li>
+<li>Estado</li>
+<li>Importe</li>
+</ul>
+<p>Es en modo consulta.</p></th>
+</tr>
+<tr class="odd">
+<th class="confluenceTd" style="width: 11.3468%"><p>Órgano financiador</p></th>
+<th class="confluenceTd" style="width: 11.0286%"><p>Texto corto</p>
+<p>Obligatorio si "¿Se dispone de financiación para realizar el proyecto?" tiene valor "Sí"</p></th>
+<th class="confluenceTd" style="width: 77.5186%"><div class="content-wrapper">
+<p><span style="color:var(--ds-text,#172b4d);">Financiación del proyecto.<br />
+</span></p>
+<p><span style="color:var(--ds-text,#172b4d);">Sólo se muestra si en el campo "¿Se dispone de financiación para realizar el proyecto?" se ha seleccionado el valor "Sí"</span></p>
+<p><span style="color:var(--ds-text,#172b4d);">Es en modo consulta.</span></p>
+</div></th>
+</tr>
+<tr class="even">
+<th class="confluenceTd" style="width: 11.3468%">Estado</th>
+<th class="confluenceTd" style="width: 11.0286%"><p>Selector</p>
+<p>Texto corto</p>
+<p>Obligatorio si "¿Se dispone de financiación para realizar el proyecto?" tiene valor "Sí"</p></th>
+<th class="confluenceTd" style="width: 77.5186%"><p>Desplegable con los valores:</p>
+<ul>
+<li>Vacío</li>
+<li>Solicitado</li>
+<li>Concedido</li>
+<li>Denegado</li>
+</ul>
+<p><span style="color:var(--ds-text,#172b4d);">Sólo se muestra si en el campo "¿Se dispone de financiación para realizar el proyecto?" se ha seleccionado el valor "Sí"</span></p>
+<p><span style="color:var(--ds-text,#172b4d);">Es en modo consulta.</span></p></th>
+</tr>
+<tr class="odd">
+<th class="confluenceTd" style="width: 11.3468%">Importe financiación</th>
+<th class="confluenceTd" style="width: 11.0286%"><p>Decimal</p>
+<p>Obligatorio si "¿Se dispone de financiación para realizar el proyecto?" tiene valor "Sí"</p></th>
+<th class="confluenceTd" style="width: 77.5186%"><p>Importe de financiación del proyecto</p>
+<p><span style="color:var(--ds-text,#172b4d);">Sólo se muestra si en el campo "¿Se dispone de financiación para realizar el proyecto?" se ha seleccionado el valor "Sí"</span></p>
+<p><span style="color:var(--ds-text,#172b4d);">Es en modo consulta.</span></p>
+<p><br />
+</p></th>
+</tr>
+<tr class="even">
+<th class="confluenceTd" style="width: 11.3468%">¿Si se rechaza su solicitud de financiación ejecutará el proyecto con fondos propios?</th>
+<th class="confluenceTd" style="width: 11.0286%"><p>Booleano</p>
+<p>Valores: Sí, No</p></th>
+<th class="confluenceTd" style="width: 77.5186%">Sólo se muestra <span style="color:var(--ds-text,#172b4d);">si viene de una solicitud de convocatoria. Es en modo consulta.<br />
+</span></th>
+</tr>
+<tr class="odd">
+<th class="confluenceTd" style="width: 11.3468%">Fecha inicio</th>
+<th class="confluenceTd" style="width: 11.0286%">Fecha</th>
+<th class="confluenceTd" style="width: 77.5186%">Fecha de inicio del proyecto. Es en modo consulta.</th>
+</tr>
+<tr class="even">
+<th class="confluenceTd" style="width: 11.3468%">Fecha fin</th>
+<th class="confluenceTd" style="width: 11.0286%">Fecha</th>
+<th class="confluenceTd" style="width: 77.5186%">Fecha fin del proyecto. Es en modo consulta.</th>
+</tr>
+<tr class="odd">
+<th class="confluenceTd" style="width: 11.3468%">Resumen</th>
+<th class="confluenceTd" style="width: 11.0286%"><p>Texto largo</p></th>
+<th class="confluenceTd" style="width: 77.5186%">Resumen del proyecto. Es en modo consulta.</th>
+</tr>
+<tr class="even">
+<th class="confluenceTd" style="width: 11.3468%">Valor social</th>
+<th class="confluenceTd" style="width: 11.0286%"><p>Selector</p>
+<p><br />
+</p></th>
+<th class="confluenceTd" style="width: 77.5186%"><p>Valor social del proyecto. Desplegable con los valores:</p>
+<ul>
+<li>1. Investigación fundamental</li>
+<li>2. Investigación aplicada a la prevención, diagnóstico o tratamiento de alteraciones o de enfermedades físicas, psíquicas u otras anomalías o de sus efectos en los seres humanos, los animales o las plantas.</li>
+<li>3. Investigación aplicada a la evaluación, detección, regulación o modificación de las condiciones fisiológicas, psicológicas o sociales en los seres humanos, los animales o las plantas</li>
+<li>4. Investigación aplicada al desarrollo y la fabricación de aparatos, ayudas técnicas o informáticas, fármacos, alimentos, piensos y otras sustancias o productos, así como la realización de pruebas para comprobar su calidad, eficacia y seguridad</li>
+<li>5. Investigación aplicada a la protección o mejora de las condiciones sociales, políticas, económicas o ambientales en interés del bienestar y/o la salud de los seres humanos.</li>
+<li>6. Investigación aplicada al bienestar de los animales y/o a la mejora de las condiciones de producción de los animales y las plantas.</li>
+<li>7. Investigación dirigida a la protección y conservación de las especies y del medio natural.</li>
+<li>8. Enseñanza superior o la formación para la adquisición o mejora de las aptitudes profesionales.</li>
+<li>9. Investigación jurídica o médico-legal.</li>
+<li>10. Otra finalidad.<br />
+</li>
+</ul>
+<p>En caso de seleccionar la opción 10 será obligatorio informar del campo "Especificar"</p>
+<p>Es en modo consulta.</p></th>
+</tr>
+<tr class="odd">
+<th class="confluenceTd" style="width: 11.3468%">Especificar (valor social)</th>
+<th class="confluenceTd" style="width: 11.0286%"><p>Texto largo</p>
+<p>Obligatorio si en el campo Valor social se selecciona la opción 10</p></th>
+<th class="confluenceTd" style="width: 77.5186%">Otra opción de valor social del proyecto. Es en modo consulta.</th>
+</tr>
+<tr class="even">
+<th class="confluenceTd" style="width: 11.3468%">Objetivos científicos</th>
+<th class="confluenceTd" style="width: 11.0286%"><span style="white-space: normal;">Texto largo</span></th>
+<th class="confluenceTd" style="width: 77.5186%">Objetivos científicos del proyecto. Es en modo consulta.</th>
+</tr>
+<tr class="odd">
+<th class="confluenceTd" style="width: 11.3468%">Diseño metodológico</th>
+<th class="confluenceTd" style="width: 11.0286%"><span style="white-space: normal;">Texto largo</span></th>
+<th class="confluenceTd" style="width: 77.5186%">Diseño metodológico del proyecto. Es en modo consulta.</th>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+## Equipo investigador
+
+Personas que forman parte del equipo investigador.
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable" style="width: 75.1641%;">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 8%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<th colspan="3" class="confluenceTd"><div class="content-wrapper">
+<p><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852556/597873117.png" class="confluence-embedded-image" draggable="false" data-image-src="attachments/597852556/597873117.png" data-unresolved-comment-count="0" data-linked-resource-id="597873117" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="consultapeticionevaluacionequipo.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852556" data-linked-resource-container-version="32" tabindex="0" width="650" /></span></p>
+</div></th>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Nombre</th>
+<th class="confluenceTh">Tipo</th>
+<th class="confluenceTh"><div class="content-wrapper">
+<p>Características / Notas</p>
+</div></th>
+</tr>
+<tr class="odd">
+<th colspan="3" class="highlight-blue confluenceTd" data-highlight-colour="blue"><div class="content-wrapper">
+<p>Listado de personas que forman parte del equipo investigador</p>
+</div></th>
+</tr>
+<tr class="even">
+<th class="confluenceTd">Nº documento</th>
+<th class="confluenceTd">Texto corto</th>
+<th class="confluenceTd">Número de documento, recuperado por medio de <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0020-sgp-integracion-con-sistema-de-gestion-de-personas/req-int-0020-sgp-0030-consultar-datos-generales-de-persona">REQ-INT-0020-SGP-0030 - Consultar datos generales de persona</a></th>
+</tr>
+<tr class="odd">
+<th class="confluenceTd">Nombre y apellidos</th>
+<th class="confluenceTd"><span style="white-space: normal;">Texto</span></th>
+<th class="confluenceTd">Nombre y apellidos, recuperados por medio de <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0020-sgp-integracion-con-sistema-de-gestion-de-personas/req-int-0020-sgp-0030-consultar-datos-generales-de-persona">REQ-INT-0020-SGP-0030 - Consultar datos generales de persona</a></th>
+</tr>
+<tr class="even">
+<th class="confluenceTd">Vinculación</th>
+<th class="confluenceTd">Texto corto</th>
+<th class="confluenceTd">Vinculación de la persona con la Universidad, recuperado por medio de <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0020-sgp-integracion-con-sistema-de-gestion-de-personas/req-int-0020-sgp-0033-consultar-datos-de-vinculacion-de-persona">REQ-INT-0020-SGP-0033 - Consultar datos de vinculación de persona</a> (campo categoría profesional)</th>
+</tr>
+<tr class="odd">
+<th class="confluenceTd">Nivel académico</th>
+<th class="confluenceTd">Texto corto</th>
+<th class="confluenceTd">Nivel académico de la persona, recuperado por medio de <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0020-sgp-integracion-con-sistema-de-gestion-de-personas/req-int-0020-sgp-0034-consultar-datos-academicos-de-persona">REQ-INT-0020-SGP-0034 - Consultar datos académicos de persona</a></th>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+## Asignación de tareas
+
+Listado de tareas de las personas del equipo asignadas a las memorias.
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable" style="width: 75.1641%;">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 8%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<th colspan="3" class="confluenceTd"><div class="content-wrapper">
+<p><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852556/597873116.png" class="confluence-embedded-image" draggable="false" data-image-src="attachments/597852556/597873116.png" data-unresolved-comment-count="0" data-linked-resource-id="597873116" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="consultapeticionevaluacionasginaciontareas.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852556" data-linked-resource-container-version="32" tabindex="0" width="650" /></span></p>
+</div></th>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Nombre</th>
+<th class="confluenceTh">Tipo</th>
+<th class="confluenceTh"><div class="content-wrapper">
+<p>Características / Notas</p>
+</div></th>
+</tr>
+<tr class="odd">
+<th colspan="3" class="highlight-blue confluenceTd" data-highlight-colour="blue">Listado de tareas de las personas del equipo asignadas a las memorias.</th>
+</tr>
+<tr class="even">
+<th class="confluenceTd">Nombre y apellidos</th>
+<th class="confluenceTd"><span style="white-space: normal;">Texto</span></th>
+<th class="confluenceTd">Nombre y apellidos de la persona del equipo investigador, recuperados por medio de <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0020-sgp-integracion-con-sistema-de-gestion-de-personas/req-int-0020-sgp-0030-consultar-datos-generales-de-persona">REQ-INT-0020-SGP-0030 - Consultar datos generales de persona</a><span class="confluence-link">.</span></th>
+</tr>
+<tr class="odd">
+<th class="confluenceTd">Referencia memoria</th>
+<th class="confluenceTd"><span style="white-space: normal;">Referencia</span></th>
+<th class="confluenceTd">Referencia de la memoria</th>
+</tr>
+<tr class="even">
+<th class="confluenceTd">Tarea</th>
+<th class="confluenceTd"><span style="white-space: normal;">Texto</span></th>
+<th class="confluenceTd">Descripción de la tarea</th>
+</tr>
+<tr class="odd">
+<th class="confluenceTd">Formación</th>
+<th class="confluenceTd"><span style="white-space: normal;">Texto</span></th>
+<th class="confluenceTd">Para las memoria de tipo M10 será la experiencia y para las memorias de tipo M20 y M30 será la formación específica.</th>
+</tr>
+<tr class="even">
+<th class="confluenceTd">Organismo</th>
+<th class="confluenceTd">Texto corto</th>
+<th class="confluenceTd">Se informará para las memorias M20 y M30</th>
+</tr>
+<tr class="odd">
+<th class="confluenceTd">Año</th>
+<th class="confluenceTd"><span style="white-space: normal;">Numérico entero genérico</span></th>
+<th class="confluenceTd">Se informará para las memorias M20 y M30</th>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+## Memorias
+
+Listado de memorias que forman parte de la petición de evaluación del proyecto.
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable" style="width: 75.1641%;">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 8%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<th colspan="3" class="confluenceTd"><div class="content-wrapper">
+<p><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852556/597873114.png" class="confluence-embedded-image" draggable="false" data-image-src="attachments/597852556/597873114.png" data-unresolved-comment-count="0" data-linked-resource-id="597873114" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="consultapeticionevaluacionmemoriasgestor.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852556" data-linked-resource-container-version="32" tabindex="0" width="650" /></span></p>
+</div></th>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Nombre</th>
+<th class="confluenceTh">Tipo</th>
+<th class="confluenceTh"><div class="content-wrapper">
+<p>Características / Notas</p>
+</div></th>
+</tr>
+<tr class="odd">
+<th colspan="3" class="highlight-blue confluenceTd" data-highlight-colour="blue">Listado de memorias que forman parte de la petición de evaluación del proyecto.</th>
+</tr>
+<tr class="even">
+<th class="confluenceTd">Referencia memoria</th>
+<th class="confluenceTd">Alfanumérico</th>
+<th class="confluenceTd">Referencia de la memoria</th>
+</tr>
+<tr class="odd">
+<th class="confluenceTd">Comité</th>
+<th class="confluenceTd">Texto corto</th>
+<th class="confluenceTd">Comité de la memoria</th>
+</tr>
+<tr class="even">
+<th class="confluenceTd">Estado</th>
+<th class="confluenceTd">Texto corto</th>
+<th class="confluenceTd">Estado de la memoria</th>
+</tr>
+<tr class="odd">
+<th class="confluenceTd">Fecha evaluación</th>
+<th class="confluenceTd">Fecha</th>
+<th class="confluenceTd"><p>Dependiendo del estado de la memoria se obtendrá de una forma u otra, a continuación se explica la forma dependiendo del estado:</p>
+<ul>
+<li><strong>Completada</strong>,  <strong>En secretaria</strong>: La fecha de evaluación y la fecha límite se sacarán de la próxima convocatoria de reunión de tipo "Ordinaria" o "Extraordinaria" que haya del mismo comité que la memoria, que no tenga el acta asociada a finalizada, y que la fecha límite de la convocatoria sea mayor a la fecha actual y si existe dos o mas, se cogerá la primera, la que tenga la fecha de evaluación menor.</li>
+<li><strong>En evaluación, Pendiente de correcciones, No procede evaluar, Favorable pendiente de revisión mínima, En secretaria revisión mínima, Fin evaluación</strong>: La fecha de evaluación y la fecha límite se sacarán de la convocatoria de reunión asociada a la evaluación asignada a la memoria de tipo "Memoria" y que sea la última versión (versión mayor)</li>
+<li><strong>Completada seguimiento anual</strong>,  <strong>En secretaria seguimiento anual</strong>: La fecha de evaluación y la fecha límite se sacarán de la próxima convocatoria de reunión de tipo "Seguimiento" que haya del mismo comité que la memoria, que no tenga el acta asociada a finalizada, y que la fecha límite de la convocatoria sea mayor a la fecha actual y si existe dos o mas, se cogerá la primera, la que tenga la fecha de evaluación menor.</li>
+<li><strong>En evaluación seguimiento anual, Solicitud modificación, Fin evaluación seguimiento anual</strong>: La fecha de evaluación y la fecha límite se sacarán de la convocatoria de reunión asociada a la evaluación asignada a la memoria de tipo "Seguimiento anual" y que sea la última versión (versión mayor)</li>
+<li><strong>Completada seguimiento final</strong>,  <strong>En secretaria seguimiento final</strong>: La fecha de evaluación y la fecha límite se sacarán de la próxima convocatoria de reunión de tipo "Seguimiento" que haya del mismo comité que la memoria, que no tenga el acta asociada a finalizada, y que la fecha límite de la convocatoria sea mayor a la fecha actual y si existe dos o mas, se cogerá la primera, la que tenga la fecha de evaluación menor.</li>
+<li><strong>En evaluación seguimiento final, En secretaria seguimiento final aclaraciones, En aclaración seguimiento final, Fin evaluación seguimiento final</strong>: La fecha de evaluación y la fecha límite se sacarán de la convocatoria de reunión asociada a la evaluación asignada a la memoria de tipo "Seguimiento final" y que sea la última versión (versión mayor)</li>
+<li><strong>Archivado</strong>: se dejan vacías</li>
+</ul></th>
+</tr>
+<tr class="even">
+<th class="confluenceTd">Fecha límite</th>
+<th class="confluenceTd">Fecha</th>
+<th class="confluenceTd"><p>Dependiendo del estado de la memoria se obtendrá de una forma u otra, a continuación se explica la forma dependiendo del estado:</p>
+<ul>
+<li><strong>Completada</strong>,  <strong>En secretaria</strong>: La fecha de evaluación y la fecha límite se sacarán de la próxima convocatoria de reunión de tipo "Ordinaria" o "Extraordinaria" que haya del mismo comité que la memoria, que no tenga el acta asociada a finalizada, y que la fecha límite de la convocatoria sea mayor a la fecha actual y si existe dos o mas, se cogerá la primera, la que tenga la fecha de evaluación menor.</li>
+<li><strong>En evaluación, Pendiente de correcciones, No procede evaluar, Favorable pendiente de revisión mínima, En secretaria revisión mínima, Fin evaluación</strong>: La fecha de evaluación y la fecha límite se sacarán de la convocatoria de reunión asociada a la evaluación asignada a la memoria de tipo "Memoria" y que sea la última versión (versión mayor)</li>
+<li><strong>Completada seguimiento anual</strong>,  <strong>En secretaria seguimiento anual</strong>: La fecha de evaluación y la fecha límite se sacarán de la próxima convocatoria de reunión de tipo "Seguimiento" que haya del mismo comité que la memoria, que no tenga el acta asociada a finalizada, y que la fecha límite de la convocatoria sea mayor a la fecha actual y si existe dos o mas, se cogerá la primera, la que tenga la fecha de evaluación menor.</li>
+<li><strong>En evaluación seguimiento anual, Solicitud modificación, Fin evaluación seguimiento anual</strong>: La fecha de evaluación y la fecha límite se sacarán de la convocatoria de reunión asociada a la evaluación asignada a la memoria de tipo "Seguimiento anual" y que sea la última versión (versión mayor)</li>
+<li><strong>Completada seguimiento final</strong>,  <strong>En secretaria seguimiento final</strong>: La fecha de evaluación y la fecha límite se sacarán de la próxima convocatoria de reunión de tipo "Seguimiento" que haya del mismo comité que la memoria, que no tenga el acta asociada a finalizada, y que la fecha límite de la convocatoria sea mayor a la fecha actual y si existe dos o mas, se cogerá la primera, la que tenga la fecha de evaluación menor.</li>
+<li><strong>En evaluación seguimiento final, En secretaria seguimiento final aclaraciones, En aclaración seguimiento final, Fin evaluación seguimiento final</strong>: La fecha de evaluación y la fecha límite se sacarán de la convocatoria de reunión asociada a la evaluación asignada a la memoria de tipo "Seguimiento final" y que sea la última versión (versión mayor)</li>
+<li><strong>Archivado</strong>: se dejan vacías</li>
+</ul></th>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="table-wrap">
+
+<table class="wrapped relative-table confluenceTable" style="width: 75.2735%;">
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 46%" />
+<col style="width: 27%" />
+<col style="width: 14%" />
+</colgroup>
+<tbody>
+<tr class="header">
+<th class="confluenceTh">Acciones</th>
+<th class="confluenceTh">Descripción</th>
+<th class="confluenceTh"> Enlace CU.</th>
+<th class="confluenceTh">Permisos</th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd">Consultar</td>
+<td class="confluenceTd">Se muestra la pantalla de consulta de la memoria.</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><p>ETI-MEM-V</p>
+<p><br />
+</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">Volver estado anterior</td>
+<td class="confluenceTd">El gestor puede para ciertas memorias dependiendo del estado volver a poner el estado anterior.</td>
+<td class="confluenceTd"><a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-casos-de-uso/cu-eti-0080-peticiones-de-evaluacion-gestor/cu-eti-0080-002-volver-a-estado-anterior">CU-ETI-0080-002 - Volver a estado anterior</a></td>
+<td class="confluenceTd"><p>ETI-MEM-CEST</p>
+<p><br />
+</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+## Botones generales a la pantalla
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="header">
+<th class="confluenceTh">Acciones</th>
+<th class="confluenceTh">Descripción</th>
+<th class="confluenceTh"> Enlace CU.</th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd">Cancelar</td>
+<td class="confluenceTd">Retorna al listado de peticiones de evaluación .</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+## Acciones
+
+### Por actor
+
+<div class="plugin-tabmeta-details">
+
+<div class="table-wrap">
+
+|                    |                                        |
+|--------------------|----------------------------------------|
+| ACT-ETI-001-Gestor | ETI-MEM-V, ETI-MEM-CEST, CSP-SOL-ETI-V |
+
+</div>
+
+</div>
+
+### Todos los permisos de acceso
+
+<div class="plugin-tabmeta-details">
+
+<div class="table-wrap">
+
+|          |                         |
+|----------|-------------------------|
+| Permisos | ETI-MEM-V, ETI-MEM-CEST |
+
+</div>
+
+<div class="confluence-information-macro confluence-information-macro-information" role="region" aria-label="Info">
+
+<span class="aui-icon aui-icon-small aui-iconfont-info-filled confluence-information-macro-icon" role="presentation"></span>
+
+<div class="confluence-information-macro-body">
+
+Se aplican las mismas restricción para todos los elementos bajo este path del árbol de navegación.
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="pageSection group">
+
+<div class="pageSectionHeader">
+
+## Attachments:
+
+</div>
+
+<div class="greybox" align="left">
+
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [nuevapeticionevaluacionequipo.png](/attachments/597852556/597873127.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [nuevaconvocatoria_datos_generales.png](/attachments/597852556/597873108.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [nuevapeticionevaluaciondatosgenerales.png](/attachments/597852556/597873126.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [nueva_acta_asistentes.png](/attachments/597852556/597873124.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [edicionpeticionevaluaciondatosgeneralesasociadasolicitud.png](/attachments/597852556/597873123.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [edicinpeticionevaluaciondatosgenerales.png](/attachments/597852556/597873122.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [edicinpeticionevaluacionequipo.png](/attachments/597852556/597873120.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [edicinpeticionevaluacionmemorias.png](/attachments/597852556/597873119.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [listadoconvocatorias.png](/attachments/597852556/597873113.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [nuevaedicin_acta_asistentes.png](/attachments/597852556/597873110.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [nuevaedicin_acta_asistentes_editar.png](/attachments/597852556/597873109.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [nuevaconvocatoria.png](/attachments/597852556/597873107.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [nuevaedicin_acta_memorias.png](/attachments/597852556/597873132.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [nueva_acta_datos_generales.png](/attachments/597852556/597873131.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [nueva_acta_datos_descriptivos.png](/attachments/597852556/597873130.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [nuevaedicin_acta_datos_descriptivos.png](/attachments/597852556/597873129.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [edicinpeticionevaluacionasginaciontareas.png](/attachments/597852556/597873128.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [consultapeticionevaluaciondatosgenerales.png](/attachments/597852556/597858334.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [consultapeticionevaluacionequipo.png](/attachments/597852556/597873117.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [consultapeticionevaluacionasginaciontareas.png](/attachments/597852556/597873116.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [consultapeticionevaluacionmemoriasgestor.png](/attachments/597852556/597873114.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [consultapeticionevaluaciondatosgenerales.png](/attachments/597852556/597873111.png) (image/png)  
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div id="footer" role="contentinfo">
+
+<div class="section footer-body">
+
+Document generated by Confluence on oct 27, 2025 08:49
+
+<div id="footer-logo">
+
+[Atlassian](https://www.atlassian.com/)
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 
 

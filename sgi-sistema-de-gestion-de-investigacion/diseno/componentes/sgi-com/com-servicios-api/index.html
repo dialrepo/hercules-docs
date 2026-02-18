@@ -796,7 +796,656 @@
 
   <h1>Com servicios api</h1>
 
+<div id="page">
 
+<div id="main" class="aui-page-panel">
+
+<div id="main-header">
+
+<div id="breadcrumb-section">
+
+1.  [Hércules](index.html)
+2.  [Hércules](/)
+3.  [SGI. Sistema de gestión de investigación](//sgi-sistema-de-gestion-de-investigacion)
+4.  [Diseño](//sgi-sistema-de-gestion-de-investigacion/diseno)
+5.  [Componentes](//sgi-sistema-de-gestion-de-investigacion/diseno/componentes)
+6.  [SGI - COM](//sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-com)
+
+</div>
+
+# <span id="title-text"> Hércules : COM - Servicios - API </span>
+
+</div>
+
+<div id="content" class="view">
+
+<div class="page-metadata">
+
+Created by <span class="author"> Usuario desconocido (alicia.alvarez)</span>, last updated by <span class="editor"> Usuario desconocido (ruben.suarez)</span> on mar 01, 2022
+
+</div>
+
+<div id="main-content" class="wiki-content group">
+
+<div class="toc-macro rbtoc1761551611463">
+
+- [Config](#COMServiciosAPI-Config)
+- [EmailTpl](#COMServiciosAPI-EmailTpl)
+- [Email](#COMServiciosAPI-Email)
+
+</div>
+
+## Config
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="header">
+<th class="confluenceTh">Método</th>
+<th class="confluenceTh">URL</th>
+<th class="confluenceTh">Parámetros</th>
+<th class="confluenceTh">Respuesta</th>
+<th class="confluenceTh">Descripción</th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd">GET</td>
+<td class="confluenceTd">/config/time-zone</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><div class="content-wrapper">
+<div id="expander-1958289953" class="expand-container">
+<div id="expander-control-1958289953" class="expand-control">
+<span class="expand-icon aui-icon aui-icon-small aui-iconfont-chevron-down" aria-hidden="true"></span><span class="expand-control-text conf-macro-render">Ejemplo...</span>
+</div>
+<div id="expander-content-1958289953" class="expand-content" role="region" aria-labelledby="expand-button-1958289953">
+<p>Europe/Madrid</p>
+</div>
+</div>
+</div></td>
+<td class="confluenceTd">Devuelve una cadena con el identificador de TimeZone configurado en el módulo</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+## EmailTpl
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="header">
+<th class="confluenceTh">Método</th>
+<th class="confluenceTh">URL</th>
+<th class="confluenceTh">Parámetros</th>
+<th class="confluenceTh">Respuesta</th>
+<th class="confluenceTh">Descripción</th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd">GET/POST</td>
+<td class="confluenceTd">/emailtpls/{name}/process</td>
+<td class="confluenceTd"><div class="content-wrapper">
+<p>Lista[EmailParam]:  La lista de parámetros</p>
+<div id="expander-2115616709" class="expand-container">
+<div id="expander-control-2115616709" class="expand-control">
+<span class="expand-icon aui-icon aui-icon-small aui-iconfont-chevron-down" aria-hidden="true"></span><span class="expand-control-text conf-macro-render">Ejemplo...</span>
+</div>
+<div id="expander-content-2115616709" class="expand-content" role="region" aria-labelledby="expand-button-2115616709">
+<div class="code panel pdl" style="border-width: 1px;">
+<div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: js; gutter: false"><code>[
+    {
+        &quot;name&quot;: &quot;GENERIC_SUBJECT&quot;,
+        &quot;value&quot;: &quot;Asunto33&quot;
+    },
+    {
+        &quot;name&quot;: &quot;GENERIC_CONTENT_TEXT&quot;,
+        &quot;value&quot;: &quot;Contentido&quot;
+    },
+    {
+        &quot;name&quot;: &quot;GENERIC_CONTENT_HTML&quot;,
+        &quot;value&quot;: &quot;&lt;b color=&#39;red&#39;&gt;Contenido&lt;/b&gt;&quot;
+    }
+]</code></pre>
+</div>
+</div>
+</div>
+</div>
+<p><br />
+</p>
+<p><br />
+</p>
+</div></td>
+<td class="confluenceTd"><div class="content-wrapper">
+<p>ProcessedEmailTpl</p>
+<div id="expander-533052885" class="expand-container">
+<div id="expander-control-533052885" class="expand-control">
+<span class="expand-icon aui-icon aui-icon-small aui-iconfont-chevron-down" aria-hidden="true"></span><span class="expand-control-text conf-macro-render">Ejemplo...</span>
+</div>
+<div id="expander-content-533052885" class="expand-content" role="region" aria-labelledby="expand-button-533052885">
+<div class="code panel pdl" style="border-width: 1px;">
+<div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: js; gutter: false"><code>{
+    &quot;subject&quot;: &quot;Asunto33&quot;,
+    &quot;contentText&quot;: &quot;Contentido&quot;,
+    &quot;contentHtml&quot;: &quot;&lt;!DOCTYPE html&gt;\n&lt;html&gt;\n  &lt;head&gt;\n    &lt;meta http-equiv=\&quot;Content-Type\&quot; content=\&quot;text/html; charset=UTF-8\&quot; /&gt;\n  &lt;/head&gt;\n  &lt;body&gt;\n    &lt;b color=&#39;red&#39;&gt;Contenido&lt;/b&gt;\n  &lt;/body&gt;\n&lt;/html&gt;&quot;
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<p><br />
+</p>
+<p><br />
+</p>
+</div></td>
+<td class="confluenceTd">Realiza el procesamiento de una plantilla de Email cuyo nombre se especifica en la propia URL, aplicando los parámetros recibidos</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">GET</td>
+<td class="confluenceTd">/emailtpls/{name}/parameters</td>
+<td class="confluenceTd">q + s</td>
+<td class="confluenceTd"><div class="content-wrapper">
+<p>Lista[Param]</p>
+<div id="expander-687654068" class="expand-container">
+<div id="expander-control-687654068" class="expand-control">
+<span class="expand-icon aui-icon aui-icon-small aui-iconfont-chevron-down" aria-hidden="true"></span><span class="expand-control-text conf-macro-render">Ejemplo...</span>
+</div>
+<div id="expander-content-687654068" class="expand-content" role="region" aria-labelledby="expand-button-687654068">
+<div class="code panel pdl" style="border-width: 1px;">
+<div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: js; gutter: false"><code>[
+    {
+        &quot;name&quot;: &quot;GENERIC_SUBJECT&quot;,
+        &quot;description&quot;: &quot;Asunto genérico&quot;,
+        &quot;type&quot;: &quot;STRING&quot;
+    },
+    {
+        &quot;name&quot;: &quot;GENERIC_CONTENT_TEXT&quot;,
+        &quot;description&quot;: &quot;Contenido textual genérico&quot;,
+        &quot;type&quot;: &quot;STRING&quot;
+    },
+    {
+        &quot;name&quot;: &quot;GENERIC_CONTENT_HTML&quot;,
+        &quot;description&quot;: &quot;Contenido HTML genérico&quot;,
+        &quot;type&quot;: &quot;STRING&quot;
+    }
+]</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div></td>
+<td class="confluenceTd">Busca/Lista los Param de la plantilla de Email (tanto de asunto como de contenido) cuyo nombre se especifica en la propia URL</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">GET</td>
+<td class="confluenceTd">/emailtpls/{name}/parameters/subject</td>
+<td class="confluenceTd">q + s</td>
+<td class="confluenceTd"><div class="content-wrapper">
+<p>Lista[Param]</p>
+<div id="expander-1699438850" class="expand-container">
+<div id="expander-control-1699438850" class="expand-control">
+<span class="expand-icon aui-icon aui-icon-small aui-iconfont-chevron-down" aria-hidden="true"></span><span class="expand-control-text conf-macro-render">Ejemplo...</span>
+</div>
+<div id="expander-content-1699438850" class="expand-content" role="region" aria-labelledby="expand-button-1699438850">
+<div class="code panel pdl" style="border-width: 1px;">
+<div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: js; gutter: false"><code>[
+    {
+        &quot;name&quot;: &quot;GENERIC_SUBJECT&quot;,
+        &quot;description&quot;: &quot;Asunto genérico&quot;,
+        &quot;type&quot;: &quot;STRING&quot;
+    }
+]</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div></td>
+<td class="confluenceTd">Busca/Lista los Param que requiere la plantilla del asunto del Email cuyo nombre se especifica en la propia URL</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">GET</td>
+<td class="confluenceTd">/emailtpls/{name}/parameters/content</td>
+<td class="confluenceTd">q + s</td>
+<td class="confluenceTd"><div class="content-wrapper">
+<p>Lista[Param]</p>
+<div id="expander-1220195262" class="expand-container">
+<div id="expander-control-1220195262" class="expand-control">
+<span class="expand-icon aui-icon aui-icon-small aui-iconfont-chevron-down" aria-hidden="true"></span><span class="expand-control-text conf-macro-render">Ejemplo...</span>
+</div>
+<div id="expander-content-1220195262" class="expand-content" role="region" aria-labelledby="expand-button-1220195262">
+<div class="code panel pdl" style="border-width: 1px;">
+<div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: js; gutter: false"><code>[
+    {
+        &quot;name&quot;: &quot;GENERIC_CONTENT_TEXT&quot;,
+        &quot;description&quot;: &quot;Contenido textual genérico&quot;,
+        &quot;type&quot;: &quot;STRING&quot;
+    },
+    {
+        &quot;name&quot;: &quot;GENERIC_CONTENT_HTML&quot;,
+        &quot;description&quot;: &quot;Contenido HTML genérico&quot;,
+        &quot;type&quot;: &quot;STRING&quot;
+    }
+]</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div></td>
+<td class="confluenceTd">Busca/Lista los Param que requiere la plantilla del contenido del Email cuyo nombre se especifica en la propia URL</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+## Email
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="header">
+<th class="confluenceTh">Método</th>
+<th class="confluenceTh">URL</th>
+<th class="confluenceTh">Parámetros</th>
+<th class="confluenceTh">Respuesta</th>
+<th class="confluenceTh">Descripción</th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd">POST</td>
+<td class="confluenceTd">/emails</td>
+<td class="confluenceTd"><div class="content-wrapper">
+<p>EmailInput</p>
+<div id="expander-1008628915" class="expand-container">
+<div id="expander-control-1008628915" class="expand-control">
+<span class="expand-icon aui-icon aui-icon-small aui-iconfont-chevron-down" aria-hidden="true"></span><span class="expand-control-text conf-macro-render">Ejemplo...</span>
+</div>
+<div id="expander-content-1008628915" class="expand-content" role="region" aria-labelledby="expand-button-1008628915">
+<div class="code panel pdl" style="border-width: 1px;">
+<div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: js; gutter: false"><code>{
+    &quot;template&quot;: &quot;GENERIC_EMAIL_TEXT&quot;,
+    &quot;recipients&quot;: [
+        {
+            &quot;name&quot;: &quot;Ruben Suarez&quot;,
+            &quot;address&quot;: &quot;ruben.suarez@treelogic.com&quot;
+        }
+    ],
+    &quot;attachments&quot;: [&quot;sample-pdf&quot;],
+    &quot;params&quot;: [
+        {
+            &quot;name&quot;: &quot;GENERIC_SUBJECT&quot;,
+            &quot;value&quot;: &quot;Subject&quot;
+        },
+        {
+            &quot;name&quot;: &quot;GENERIC_CONTENT_TEXT&quot;,
+            &quot;value&quot;: &quot;Content&quot;
+        }
+    ],
+    &quot;deferrableRecipients&quot;: {
+        &quot;type&quot;: &quot;USR&quot;,
+        &quot;url&quot;: &quot;/pruebas/recipients&quot;,
+        &quot;method&quot;: &quot;GET&quot;
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div></td>
+<td class="confluenceTd"><div class="content-wrapper">
+<p>EmailOutput</p>
+<div id="expander-1665462038" class="expand-container">
+<div id="expander-control-1665462038" class="expand-control">
+<span class="expand-icon aui-icon aui-icon-small aui-iconfont-chevron-down" aria-hidden="true"></span><span class="expand-control-text conf-macro-render">Ejemplo...</span>
+</div>
+<div id="expander-content-1665462038" class="expand-content" role="region" aria-labelledby="expand-button-1665462038">
+<div class="code panel pdl" style="border-width: 1px;">
+<div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: js; gutter: false"><code>{
+    &quot;template&quot;: &quot;GENERIC_EMAIL_TEXT&quot;,
+    &quot;recipients&quot;: [
+        {
+            &quot;name&quot;: &quot;Ruben Suarez&quot;,
+            &quot;address&quot;: &quot;ruben.suarez@treelogic.com&quot;
+        }
+    ],
+    &quot;attachments&quot;: [
+        &quot;sample-pdf&quot;
+    ],
+    &quot;params&quot;: [
+        {
+            &quot;name&quot;: &quot;GENERIC_SUBJECT&quot;,
+            &quot;value&quot;: &quot;Subject&quot;
+        },
+        {
+            &quot;name&quot;: &quot;GENERIC_CONTENT_TEXT&quot;,
+            &quot;value&quot;: &quot;Content&quot;
+        }
+    ],
+    &quot;deferrableRecipients&quot;: {
+        &quot;type&quot;: &quot;USR&quot;,
+        &quot;url&quot;: &quot;/pruebas/recipients&quot;,
+        &quot;method&quot;: &quot;GET&quot;
+    },
+    &quot;deferrableAttachments&quot;: null,
+    &quot;deferrableParams&quot;: null,
+    &quot;id&quot;: 2
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div></td>
+<td class="confluenceTd">Crea un Email</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">PUT</td>
+<td class="confluenceTd">/emails/{id}</td>
+<td class="confluenceTd"><div class="content-wrapper">
+EmailInput
+<p><br />
+</p>
+<div id="expander-1982944336" class="expand-container">
+<div id="expander-control-1982944336" class="expand-control">
+<span class="expand-icon aui-icon aui-icon-small aui-iconfont-chevron-down" aria-hidden="true"></span><span class="expand-control-text conf-macro-render">Ejemplo...</span>
+</div>
+<div id="expander-content-1982944336" class="expand-content" role="region" aria-labelledby="expand-button-1982944336">
+<div class="code panel pdl" style="border-width: 1px;">
+<div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: js; gutter: false"><code>{
+    &quot;template&quot;: &quot;GENERIC_EMAIL_TEXT&quot;,
+    &quot;recipients&quot;: [
+        {
+            &quot;name&quot;: &quot;Ruben Suarez&quot;,
+            &quot;address&quot;: &quot;ruben.suarez@treelogic.com&quot;
+        }
+    ],
+    &quot;attachments&quot;: [],
+    &quot;params&quot;: [
+        {
+            &quot;name&quot;: &quot;GENERIC_SUBJECT&quot;,
+            &quot;value&quot;: &quot;Subject2&quot;
+        },
+        {
+            &quot;name&quot;: &quot;GENERIC_CONTENT_TEXT&quot;,
+            &quot;value&quot;: &quot;Content2&quot;
+        }
+    ],
+    &quot;deferrableRecipients&quot;: {
+        &quot;type&quot;: &quot;USR&quot;,
+        &quot;url&quot;: &quot;/pruebas/recipients&quot;,
+        &quot;method&quot;: &quot;GET&quot;
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div></td>
+<td class="confluenceTd"><div class="content-wrapper">
+<p>EmailOutput</p>
+<div id="expander-574463131" class="expand-container">
+<div id="expander-control-574463131" class="expand-control">
+<span class="expand-icon aui-icon aui-icon-small aui-iconfont-chevron-down" aria-hidden="true"></span><span class="expand-control-text conf-macro-render">Ejemplo...</span>
+</div>
+<div id="expander-content-574463131" class="expand-content" role="region" aria-labelledby="expand-button-574463131">
+<div class="code panel pdl" style="border-width: 1px;">
+<div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: js; gutter: false"><code>{
+    &quot;template&quot;: &quot;GENERIC_EMAIL_TEXT&quot;,
+    &quot;recipients&quot;: [
+        {
+            &quot;name&quot;: &quot;Ruben Suarez&quot;,
+            &quot;address&quot;: &quot;ruben.suarez@treelogic.com&quot;
+        }
+    ],
+    &quot;attachments&quot;: [],
+    &quot;params&quot;: [
+        {
+            &quot;name&quot;: &quot;GENERIC_SUBJECT&quot;,
+            &quot;value&quot;: &quot;Subject2&quot;
+        },
+        {
+            &quot;name&quot;: &quot;GENERIC_CONTENT_TEXT&quot;,
+            &quot;value&quot;: &quot;Content2&quot;
+        }
+    ],
+    &quot;deferrableRecipients&quot;: {
+        &quot;type&quot;: &quot;USR&quot;,
+        &quot;url&quot;: &quot;/pruebas/recipients&quot;,
+        &quot;method&quot;: &quot;GET&quot;
+    },
+    &quot;deferrableAttachments&quot;: null,
+    &quot;deferrableParams&quot;: null,
+    &quot;id&quot;: 2
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div></td>
+<td class="confluenceTd">Actualiza el Email cuyo id se especifica en la propia URL</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">DELETE</td>
+<td class="confluenceTd">/emails/{id}</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Elimina el Email cuyo id se especifica en la propia URL</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">GET</td>
+<td class="confluenceTd">/emails/{id}</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><div class="content-wrapper">
+<p>EmailOutput</p>
+<div id="expander-1633719857" class="expand-container">
+<div id="expander-control-1633719857" class="expand-control">
+<span class="expand-icon aui-icon aui-icon-small aui-iconfont-chevron-down" aria-hidden="true"></span><span class="expand-control-text conf-macro-render">Ejemplo...</span>
+</div>
+<div id="expander-content-1633719857" class="expand-content" role="region" aria-labelledby="expand-button-1633719857">
+<div class="code panel pdl" style="border-width: 1px;">
+<div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: js; gutter: false"><code>{
+    &quot;template&quot;: &quot;GENERIC_EMAIL_TEXT&quot;,
+    &quot;recipients&quot;: [
+        {
+            &quot;name&quot;: &quot;Ruben Suarez&quot;,
+            &quot;address&quot;: &quot;ruben.suarez@treelogic.com&quot;
+        }
+    ],
+    &quot;attachments&quot;: [
+        &quot;sample-pdf&quot;
+    ],
+    &quot;params&quot;: [
+        {
+            &quot;name&quot;: &quot;GENERIC_SUBJECT&quot;,
+            &quot;value&quot;: &quot;Subject&quot;
+        },
+        {
+            &quot;name&quot;: &quot;GENERIC_CONTENT_TEXT&quot;,
+            &quot;value&quot;: &quot;Content&quot;
+        }
+    ],
+    &quot;deferrableRecipients&quot;: {
+        &quot;type&quot;: &quot;USR&quot;,
+        &quot;url&quot;: &quot;/pruebas/recipients&quot;,
+        &quot;method&quot;: &quot;GET&quot;
+    },
+    &quot;deferrableAttachments&quot;: null,
+    &quot;deferrableParams&quot;: null,
+    &quot;id&quot;: 2
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div></td>
+<td class="confluenceTd">Recupera el Email cuyo id se especifica en la propia URL</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">GET</td>
+<td class="confluenceTd">/emails</td>
+<td class="confluenceTd">q + s</td>
+<td class="confluenceTd"><div class="content-wrapper">
+<p>Lista[EmailOutput]</p>
+<div id="expander-1683004064" class="expand-container">
+<div id="expander-control-1683004064" class="expand-control">
+<span class="expand-icon aui-icon aui-icon-small aui-iconfont-chevron-down" aria-hidden="true"></span><span class="expand-control-text conf-macro-render">Ejemplo...</span>
+</div>
+<div id="expander-content-1683004064" class="expand-content" role="region" aria-labelledby="expand-button-1683004064">
+<div class="code panel pdl" style="border-width: 1px;">
+<div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: js; gutter: false"><code>[
+    {
+        &quot;template&quot;: &quot;GENERIC_EMAIL&quot;,
+        &quot;recipients&quot;: [
+            {
+                &quot;name&quot;: &quot;Hercules&quot;,
+                &quot;address&quot;: &quot;hercules@treelogic.info&quot;
+            }
+        ],
+        &quot;attachments&quot;: [
+            &quot;sample-pdf&quot;
+        ],
+        &quot;params&quot;: [
+            {
+                &quot;name&quot;: &quot;GENERIC_SUBJECT&quot;,
+                &quot;value&quot;: &quot;Subject&quot;
+            },
+            {
+                &quot;name&quot;: &quot;GENERIC_CONTENT_TEXT&quot;,
+                &quot;value&quot;: &quot;Content&quot;
+            },
+            {
+                &quot;name&quot;: &quot;GENERIC_CONTENT_HTML&quot;,
+                &quot;value&quot;: &quot;Content&quot;
+            }
+        ],
+        &quot;deferrableRecipients&quot;: null,
+        &quot;deferrableAttachments&quot;: null,
+        &quot;deferrableParams&quot;: null,
+        &quot;id&quot;: 1
+    },
+    {
+        &quot;template&quot;: &quot;GENERIC_EMAIL_TEXT&quot;,
+        &quot;recipients&quot;: [
+            {
+                &quot;name&quot;: &quot;Ruben Suarez&quot;,
+                &quot;address&quot;: &quot;ruben.suarez@treelogic.com&quot;
+            }
+        ],
+        &quot;attachments&quot;: [],
+        &quot;params&quot;: [
+            {
+                &quot;name&quot;: &quot;GENERIC_SUBJECT&quot;,
+                &quot;value&quot;: &quot;Subject2&quot;
+            },
+            {
+                &quot;name&quot;: &quot;GENERIC_CONTENT_TEXT&quot;,
+                &quot;value&quot;: &quot;Content2&quot;
+            }
+        ],
+        &quot;deferrableRecipients&quot;: {
+            &quot;type&quot;: &quot;USR&quot;,
+            &quot;url&quot;: &quot;/pruebas/recipients&quot;,
+            &quot;method&quot;: &quot;GET&quot;
+        },
+        &quot;deferrableAttachments&quot;: null,
+        &quot;deferrableParams&quot;: null,
+        &quot;id&quot;: 2
+    }
+]</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div></td>
+<td class="confluenceTd">Busca/Lista Email</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">GET</td>
+<td class="confluenceTd">/emails/{id}/send</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><div class="content-wrapper">
+<p>Status</p>
+<div id="expander-525246633" class="expand-container">
+<div id="expander-control-525246633" class="expand-control">
+<span class="expand-icon aui-icon aui-icon-small aui-iconfont-chevron-down" aria-hidden="true"></span><span class="expand-control-text conf-macro-render">Ejemplo...</span>
+</div>
+<div id="expander-content-525246633" class="expand-content" role="region" aria-labelledby="expand-button-525246633">
+<div class="code panel pdl" style="border-width: 1px;">
+<div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: js; gutter: false"><code>{
+    &quot;message&quot;: &quot;SENT&quot;
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div id="expander-1758878177" class="expand-container">
+<div id="expander-control-1758878177" class="expand-control">
+<span class="expand-icon aui-icon aui-icon-small aui-iconfont-chevron-down" aria-hidden="true"></span><span class="expand-control-text conf-macro-render">Ejemplo de error...</span>
+</div>
+<div id="expander-content-1758878177" class="expand-content" role="region" aria-labelledby="expand-button-1758878177">
+<div class="code panel pdl" style="border-width: 1px;">
+<div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: js; gutter: false"><code>{
+    &quot;error&quot;: &quot;RECIPIENT&quot;,
+    &quot;message&quot;: &quot;org.crue.hercules.sgi.com.exceptions.RecipientException: org.springframework.web.client.ResourceAccessException: I/O error on GET request for \&quot;http://sgi-usr-service.local.computer:4282/pruebas/recipients\&quot;: Connect to sgi-usr-service.local.computer:4282 [sgi-usr-service.local.computer/127.0.0.1] failed: Connection refused (Connection refused); nested exception is org.apache.http.conn.HttpHostConnectException: Connect to sgi-usr-service.local.computer:4282 [sgi-usr-service.local.computer/127.0.0.1] failed: Connection refused (Connection refused)\n\tat org.crue.hercules.sgi.com.service.EmailBuilderService.getRecipients(EmailBuilderService.java:142)\n\tat org.crue.hercules.sgi.com.service.EmailBuilderService.build(EmailBuilderService.java:110)\n\tat org.crue.hercules.sgi.com.service.EmailBuilderService$$FastClassBySpringCGLIB$$8547ac01.invoke(&lt;generated&gt;)\n\tat org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:771)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)\n\tat org.springframework.validation.beanvalidation.MethodValidationInterceptor.invoke(MethodValidationInterceptor.java:119)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)\n\tat org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:367)\n\tat org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:118)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)\n\tat org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:691)\n\tat org.crue.hercules.sgi.com.service.EmailBuilderService$$EnhancerBySpringCGLIB$$c1f0c029.build(&lt;generated&gt;)\n\tat org.crue.hercules.sgi.com.service.EmailService.send(EmailService.java:452)\n\tat org.crue.hercules.sgi.com.service.EmailService$$FastClassBySpringCGLIB$$cbb98b2e.invoke(&lt;generated&gt;)\n\tat org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:771)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)\n\tat org.springframework.validation.beanvalidation.MethodValidationInterceptor.invoke(MethodValidationInterceptor.java:119)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)\n\tat org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:367)\n\tat org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:118)\n\tat org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)\n\tat org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:749)\n\tat org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:691)\n\tat org.crue.hercules.sgi.com.service.EmailService$$EnhancerBySpringCGLIB$$9240c1d0.send(&lt;generated&gt;)\n\tat org.crue.hercules.sgi.com.controller.EmailController.send(EmailController.java:175)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.lang.reflect.Method.invoke(Method.java:498)\n\tat org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)\n\tat org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)\n\tat org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105)\n\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:878)\n\tat org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:792)\n\tat org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)\n\tat org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)\n\tat org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)\n\tat org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)\n\tat org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)\n\tat javax.servlet.http.HttpServlet.service(HttpServlet.java:645)\n\tat org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)\n\tat javax.servlet.http.HttpServlet.service(HttpServlet.java:750)\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\n\tat org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\n\tat org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320)\n\tat org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:126)\n\tat org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:90)\n\tat org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)\n\tat org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:118)\n\tat org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)\n\tat org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137)\n\tat org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)\n\tat org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111)\n\tat org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)\n\tat org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:158)\n\tat org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)\n\tat org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)\n\tat org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)\n\tat org.springframework.security.oauth2.server.resource.web.BearerTokenAuthenticationFilter.doFilterInternal(BearerTokenAuthenticationFilter.java:130)\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)\n\tat org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)\n\tat org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)\n\tat org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)\n\tat org.springframework.security.web.csrf.CsrfFilter.doFilterInternal(CsrfFilter.java:117)\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)\n\tat org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)\n\tat org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:92)\n\tat org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:77)\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)\n\tat org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)\n\tat org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)\n\tat org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)\n\tat org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)\n\tat org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)\n\tat org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)\n\tat org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)\n\tat org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)\n\tat org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\n\tat org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\n\tat org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\n\tat org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:93)\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\n\tat org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)\n\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)\n\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)\n\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)\n\tat org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)\n\tat org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)\n\tat org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)\n\tat org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)\n\tat org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)\n\tat org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)\n\tat org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346)\n\tat org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)\n\tat org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)\n\tat org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:887)\n\tat org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1684)\n\tat org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)\n\tat java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)\n\tat java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)\n\tat org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)\n\tat java.lang.Thread.run(Thread.java:750)\nCaused by: org.springframework.web.client.ResourceAccessException: I/O error on GET request for \&quot;http://sgi-usr-service.local.computer:4282/pruebas/recipients\&quot;: Connect to sgi-usr-service.local.computer:4282 [sgi-usr-service.local.computer/127.0.0.1] failed: Connection refused (Connection refused); nested exception is org.apache.http.conn.HttpHostConnectException: Connect to sgi-usr-service.local.computer:4282 [sgi-usr-service.local.computer/127.0.0.1] failed: Connection refused (Connection refused)\n\tat org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:746)\n\tat org.springframework.web.client.RestTemplate.execute(RestTemplate.java:672)\n\tat org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:610)\n\tat org.crue.hercules.sgi.com.service.sgi.SgiApiBaseService.callEndpoint(SgiApiBaseService.java:76)\n\tat org.crue.hercules.sgi.com.service.sgi.SgiApiBaseService.callEndpoint(SgiApiBaseService.java:66)\n\tat org.crue.hercules.sgi.com.service.sgi.SgiApiInternetAddressesService.call(SgiApiInternetAddressesService.java:29)\n\tat org.crue.hercules.sgi.com.service.EmailBuilderService.getRecipients(EmailBuilderService.java:137)\n\t... 122 more\nCaused by: org.apache.http.conn.HttpHostConnectException: Connect to sgi-usr-service.local.computer:4282 [sgi-usr-service.local.computer/127.0.0.1] failed: Connection refused (Connection refused)\n\tat org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:156)\n\tat org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376)\n\tat org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)\n\tat org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)\n\tat org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)\n\tat org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)\n\tat org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)\n\tat org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)\n\tat org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)\n\tat org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)\n\tat org.springframework.http.client.HttpComponentsClientHttpRequest.executeInternal(HttpComponentsClientHttpRequest.java:87)\n\tat org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)\n\tat org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:53)\n\tat org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:109)\n\tat org.crue.hercules.sgi.framework.problem.spring.boot.web.client.RestTemplateProblemInterceptor.intercept(RestTemplateProblemInterceptor.java:46)\n\tat org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:93)\n\tat org.springframework.boot.actuate.metrics.web.client.MetricsClientHttpRequestInterceptor.intercept(MetricsClientHttpRequestInterceptor.java:85)\n\tat org.springframework.http.client.InterceptingClientHttpRequest$InterceptingRequestExecution.execute(InterceptingClientHttpRequest.java:93)\n\tat org.springframework.http.client.InterceptingClientHttpRequest.executeInternal(InterceptingClientHttpRequest.java:77)\n\tat org.springframework.http.client.AbstractBufferingClientHttpRequest.executeInternal(AbstractBufferingClientHttpRequest.java:48)\n\tat org.springframework.http.client.AbstractClientHttpRequest.execute(AbstractClientHttpRequest.java:53)\n\tat org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:737)\n\t... 128 more\nCaused by: java.net.ConnectException: Connection refused (Connection refused)\n\tat java.net.PlainSocketImpl.socketConnect(Native Method)\n\tat java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)\n\tat java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)\n\tat java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)\n\tat java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)\n\tat java.net.Socket.connect(Socket.java:607)\n\tat org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:75)\n\tat org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:142)\n\t... 149 more\n&quot;
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<p><br />
+</p>
+<p><br />
+</p>
+</div></td>
+<td class="confluenceTd">Realiza el envía del Email cuyo id se especifica en la propia URL</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div id="footer" role="contentinfo">
+
+<div class="section footer-body">
+
+Document generated by Confluence on oct 27, 2025 08:53
+
+<div id="footer-logo">
+
+[Atlassian](https://www.atlassian.com/)
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 
 

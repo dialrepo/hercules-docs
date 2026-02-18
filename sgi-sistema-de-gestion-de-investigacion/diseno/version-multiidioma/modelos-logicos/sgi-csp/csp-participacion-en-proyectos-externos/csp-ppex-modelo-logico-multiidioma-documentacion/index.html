@@ -796,7 +796,1194 @@
 
   <h1>Csp ppex modelo logico multiidioma documentacion</h1>
 
+<div id="page">
 
+<div id="main" class="aui-page-panel">
+
+<div id="main-header">
+
+<div id="breadcrumb-section">
+
+1.  [Hércules](index.html)
+2.  [Hércules](/)
+3.  [SGI. Sistema de gestión de investigación](//sgi-sistema-de-gestion-de-investigacion)
+4.  [Diseño](//sgi-sistema-de-gestion-de-investigacion/diseno)
+5.  [Versión multiidioma](//sgi-sistema-de-gestion-de-investigacion/diseno/version-multiidioma)
+6.  [Modelos lógicos](//sgi-sistema-de-gestion-de-investigacion/diseno/version-multiidioma/modelos-logicos)
+7.  [SGI-CSP](//sgi-sistema-de-gestion-de-investigacion/diseno/version-multiidioma/modelos-logicos/sgi-csp)
+8.  [CSP-Participación en proyectos externos](//sgi-sistema-de-gestion-de-investigacion/diseno/version-multiidioma/modelos-logicos/sgi-csp/csp-participacion-en-proyectos-externos)
+
+</div>
+
+# <span id="title-text"> Hércules : CSP-PPEX - Modelo lógico multiidioma - Documentación </span>
+
+</div>
+
+<div id="content" class="view">
+
+<div class="page-metadata">
+
+Created by <span class="author"> Usuario genérico para HERCULES</span>, last updated on abr 03, 2025
+
+</div>
+
+<div id="main-content" class="wiki-content group">
+
+## Entidades del modelo Participación en proyectos externos
+
+### Entidad Solicitud de autorización de participación en proyecto externo: "Autorizacion"
+
+<span style="color: black;">Entidad que representa las solicitudes de autorización de participación en proyectos externos.</span>
+
+<div class="table-wrap">
+
+<table class="confluenceTable" style="">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th class="confluenceTd" style="text-align: left; vertical-align: top;"><p><strong>ATTRIBUTES</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>id : Long  Private</p>
+<p>Identificador único. Secuencial. Clave primaria.</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>convocatoria : Convocatoria  Private</p>
+<p>Si la convocatoria bajo la que se realizará el proyecto externo está registrada en el SGI se establecerá la relación a través de este campo (en caso contrario la convocatoria se recogerá a través del campo "datos convocatoria"). Es una FK a la tabla convocatoria.</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>entidadRef : String  Private</p>
+<p>Referencia de la entidad con la solicita participar en el proyecto externo. Es el identificador de la entidad en el sistema de gestión de empresas corporativo. Durante el ciclo de aprobación de la solicitud de participación la entidad externa podría no estar aún referenciada contra el sistema de gestión de empresas corporativo, en este caso los datos de la entidad de participación estarán recogidos en el campo "dato entidad" como un literal de texto.</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>responsableRef : String  Private</p>
+<p>Referencia de la persona que actuará como IP del proyecto externo para el que se solicita autorización. Es el identificador de la persona en el sistema de gestión de personas corporativo. Durante el ciclo de aprobación de la solicitud puede que la persona responsable aún no haya sido dada de alta en el sistema de gestión de personas corporativo, en este caso, los datos de la persona IP del proyecto estarán especificados como un literal de texto en en el campo "datos responsable".</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>horasDedicacion : int  Private</p>
+<p>Horas totales que la persona solicitante dedicará al proyecto externo.</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>datosEntidad : String  Private</p>
+<p>Datos de identificación, nombre y/o CIF, de la entidad/universidad en la que realizará el proyecto externo para el que se solicita autorización. La entidad externa podría estar dada de alta en el sistema de gestión de empresas corporativo en cuyo caso la referencia a la entidad de participación estaría recogida en el campo "entidad ref". Sin embargo, si la entidad aún no está registrada en el sistema de empresas, los datos se recogerán en este campo. La doble existencia de estos dos campos (datos entidad y entidad ref) se debe a que en primera instancia una solicitud de autorización de participación en proyecto externo es registrada en el SGI por el personal investigador (solicitante) que no tiene permisos para solicitar el alta de una nueva entidad en el sistema de gestión de empresas. Si en el momento de creación de la solicitud, la entidad de partipación aún no existe en el sistema de empresas corporativo, la persona solicitante podrá seguir registrando la solicitud indicando en modo texto los datos de la entidad. Será la unidad de gestión, en la fase de validación de la solicitud, quien podrá solicitar el alta de la entidad en el sistema de empresas.</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>datosResponsable : String  Private</p>
+<p>Datos personales, nombre y apellidos, de la persona que actuará como IP en el proyecto externo para el que se solicita la autorización de participación. La persona responsable podría estar dada de alta en el sistema de gestión de personas corporativo en cuyo caso la referencia a la persona responsable estaría recogida en el campo "reponsable ref". Sin embargo, si la persona responsable aún no está registrada en el sistema de personas, los datos personales se recogerán en este campo. La doble existencia de estos dos campos (datos responsable y resposable ref) se debe a que en primera instancia una solicitud de autorización de participación en proyecto externo es registrada en el SGI por el personal investigador (solicitante) que no tiene permisos para solicitar el alta de una nueva persona en el sistema de gestión de personas. Si en el momento de creación de la solicitud, la persona que se indica como IP del proyecto externo aún no existe en el SGP corporativo, la persona solicitante podrá seguir registrando la solicitud indicando en modo texto el nombre y apellidos de la persona IP. Será la unidad de gestión, en la fase de validación de la solicitud, quien podrá solicitar el alta de la persona IP en el SGP, pasando, en este caso a quedar cumplimentado el campo "responsable ref".</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>estado : EstadoAutorizacion  Private</p>
+<p>Estado actual de la solicitud de participación en proyecto externo. Es un FK a la entidad "estado autorización".</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>solicitanteRef : String  Private</p>
+<p>Referencia de la persona que solicita autorización para participar en proyecto externo. Se corresponde con el identificador de la persona en el sistema de gestión de personas corporativo.</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+<div class="table-wrap">
+
+<table class="confluenceTable" style="">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p><strong>ASSOCIATIONS</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Association (<span>direction:</span><span> </span>Unspecified) </p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) Autorizacion</p>
+<p><span>Cardinality:  </span>[0..*]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) Convocatoria</p>
+<p><span>Cardinality:  </span>[0..1]</p></td>
+</tr>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Association (<span>direction:</span><span> </span>Unspecified) </p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) Autorizacion</p>
+<p><span>Cardinality:  </span>[1]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) EstadoAutorizacion</p>
+<p><span>Cardinality:  </span>[0..*]</p></td>
+</tr>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Association (<span>direction:</span><span> </span>Unspecified) </p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) Autorizacion</p>
+<p><span>Cardinality:  </span>[0..*]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) Empresa</p>
+<p><span>Cardinality:  </span>[0..1]</p></td>
+</tr>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Association (<span>direction:</span><span> </span>Unspecified) </p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) Autorizacion</p>
+<p><span>Cardinality:  </span>[1]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) CertificadoAutorizacion</p>
+<p><span>Cardinality:  </span>[0..*]</p></td>
+</tr>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Association (<span>direction:</span><span> </span>Unspecified) </p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) Autorizacion</p>
+<p><span>Cardinality:  </span>[0..1]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) NotificacionProyectoExternoCVN</p>
+<p><span>Cardinality:  </span>[0..1]</p></td>
+</tr>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Association (<span>direction:</span><span> </span>Unspecified) </p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) Autorizacion</p>
+<p><span>Cardinality:  </span>[0..*]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) Persona</p>
+<p><span>Cardinality:  </span>[0..1]</p></td>
+</tr>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Association (<span>direction:</span><span> </span>Unspecified) </p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) AutorizacionTituloProyecto</p>
+<p><span>Cardinality:  </span>[1..*]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) Autorizacion</p>
+<p><span>Cardinality:  </span>[1]</p></td>
+</tr>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Association (<span>direction:</span><span> </span>Unspecified) </p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) AutorizacionObservaciones</p>
+<p><span>Cardinality:  </span>[0..*]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) Autorizacion</p>
+<p><span>Cardinality:  </span>[1]</p></td>
+</tr>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Association (<span>direction:</span><span> </span>Unspecified) </p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) AutorizacionDatosConvocatoria</p>
+<p><span>Cardinality:  </span>[0..*]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) Autorizacion</p>
+<p><span>Cardinality:  </span>[1]</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+### Entidad  Título de proyecto de una solicitud de autorización de participación en proyecto externo: "AutorizacionTituloProyecto"
+
+Entidad para almacenar, en cada uno de los idiomas soportados por la aplicación, el campo "título del proyecto" de una solicitud de autorización de participación en un proyecto externo. El campo "título" está disponible en la pantalla de Datos generales de la solicitud de Autorización y es un campo obligatorio. Debe de ser introducido en al menos uno de los idiomas habilitados.
+
+
+
+<div class="table-wrap">
+
+<table class="confluenceTable" style="">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th class="confluenceTd" style="text-align: left; vertical-align: top;"><p><strong>ATTRIBUTES</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>autorizacion : Autorizacion  Private</p>
+<p>Identificador de la solicitud de autorización de participación en proyecto externo a la que pertenece el título del proyecto. Es una FK a la tabla "autorización".</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>lang : String  Private</p>
+<p>Idioma en el que está almacenado el valor del campo "título de proyecto" de la solicitud de autorización de participación en un proyecto externo. Cada idioma se representa por un código de 2 caracteres:</p>
+<ul>
+<li>es</li>
+<li>en</li>
+<li>eu</li>
+</ul></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>value_ : String  Private</p>
+<p>Valor que toma el campo "título del proyecto" de una solicitud de participación en un proyecto externo. Está expresado en el idioma indicado por el campo "lang".</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+<div class="table-wrap">
+
+<table class="confluenceTable" style="">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p><strong>ASSOCIATIONS</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Association (<span>direction:</span><span> </span>Unspecified) </p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) AutorizacionTituloProyecto</p>
+<p><span>Cardinality:  </span>[1..*]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) Autorizacion</p>
+<p><span>Cardinality:  </span>[1]</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+### Entidad Datos de convocatoria de una solicitud de autorización de participación en proyecto externo: "AutorizacionDatosConvocatoria"
+
+Entidad para almacenar, en todos los idiomas soportados por la aplicación, el campo "datos convocatoria" de una solicitud de autorización de participación en proyecto externo. Este campo "datos convocatoria" hace referencia al nombre o título de la convocatoria bajo la que se realizará el proyecto externo para el que se solicita autorización de participación. Esta convocatoria podría estar dada de alta ya en el SGI en cuyo caso el identificador de la misma estaría recogido en el campo "convocatoria" de la entidad "autorización". Sin embargo, si la convocatoria no estuviese registrada en el SGI, el nombre de la misma se recogerá en un campo abierto "datos de convocatoria". La doble existencia de estos dos campos (datos convocatoria y convocatoria) se debe a que, en primera instancia, una solicitud de autorización de participación en proyecto externo es registrada en el SGI por el personal investigador (solicitante) que no tiene permisos para crear una convocatoria en el SGI. Si en el momento de creación de la solicitud, la convocatoria no existe en el SGI, la persona solicitante podrá seguir registrando la solicitud indicando en modo texto los datos de la convocatoria. Será la unidad de gestión, en la fase de validación de la solicitud, quien decidirá si registra la convocatoria en el SGI. El campo "datos de la convocatoria" es un campo opcional, ya que la solicitud de autorización se puede rellenar indicando o bien los datos de la convocatoria en modo texto o bien directamente la convocatoria a través del buscador de convocatorias registradas en el SGI.
+
+
+
+<div class="table-wrap">
+
+<table class="confluenceTable" style="">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th class="confluenceTd" style="text-align: left; vertical-align: top;"><p><strong>ATTRIBUTES</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>autorizacion : Autorizacion  Private</p>
+<p>Identificador de la solictud de autorización de participación en proyecto externo a la que pertenece el campo "datos de convocatoria". Es una FK a la tabla "autorización".</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>lang : String  Private</p>
+<p>Idioma en el que está almacenado el valor del campo "datos de convocatoria" de la solicitud de autorización de participación en un proyecto externo. Cada idioma se representa por un código de 2 caracteres:</p>
+<ul>
+<li>es</li>
+<li>en</li>
+<li>eu</li>
+</ul></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>value_ : String  Private</p>
+<p>Valor que toma el campo "datos de convocatoria" de una solicitud de participación en un proyecto externo. Está expresado en el idioma indicado por el campo "lang".</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p><strong>ASSOCIATIONS</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Association (<span>direction:</span><span> </span>Unspecified) </p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) AutorizacionDatosConvocatoria</p>
+<p><span>Cardinality:  </span>[0..*]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) Autorizacion</p>
+<p><span>Cardinality:  </span>[1]</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+### Entidad Observaciones de una solicitud de autorización de participación en proyecto externo: "AutorizacionObservaciones"
+
+Entidad para almacenar, en todos los idiomas soportados por la aplicación, el campo "observaciones" de una solicitud de participación en proyecto externo. Estas observaciones se introducen a través de un campo de texto y son opcionales. No es obligatorio que se cumplimenten en ningún idioma.
+
+<div class="table-wrap">
+
+<table class="confluenceTable" style="">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th class="confluenceTd" style="text-align: left; vertical-align: top;"><p><strong>ATTRIBUTES</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>autorizacion : Autorizacion  Private</p>
+<p>Identificador de la solicitud de autorización de participación en proyecto externo a la que pertenecen las observaciones. Es una FK a la tabla "autorización".</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>lang : String  Private</p>
+<p>Idioma en el que está almacenado el valor del campo "observaciones" de la solicitud de autorización de participación en un proyecto externo. Cada idioma se representa por un código de 2 caracteres:</p>
+<ul>
+<li>es</li>
+<li>en</li>
+<li>eu</li>
+</ul></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>value_ : String  Private</p>
+<p>Valor que toma el campo "observaciones" de una solicitud de participación en un proyecto externo. Está expresado en el idioma indicado por el campo "lang".</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p><strong>ASSOCIATIONS</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Association (<span>direction:</span><span> </span>Unspecified) </p>
+<p><br />
+</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) AutorizacionObservaciones</p>
+<p><span>Cardinality:  </span>[0..*]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) Autorizacion</p>
+<p><span>Cardinality:  </span>[1]</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+### Entidad Certificados de autorización de participación en proyecto externo: "CertificadoAutorización"
+
+<span style="color: black;">Documentos acreditativos (certificados) correspondientes a una solicitud de autorización de participación en proyecto externo. Para poder generar el certificado, la autorización ha de estar en estado "autorizada".</span>
+
+
+
+<div class="table-wrap">
+
+<table class="confluenceTable" style="">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th class="confluenceTd" style="text-align: left; vertical-align: top;"><p><strong>ATTRIBUTES</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>id : Long  Private</p>
+<p>Identificador único. Secuencial. Clave primaria.</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>visible : Boolean  Private</p>
+<p>Flag que indica si el certificado de autorización está disponible para la persona solicitante a través de su acceso al SGI.</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>autorizacion : Autorizacion  Private</p>
+<p>Registro de la tabla autorización al que pertenece el certificado. Es una FK a la tabla "autorización".</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+<div class="table-wrap">
+
+<table class="confluenceTable" style="">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p><strong>ASSOCIATIONS</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Association (<span>direction:</span><span> </span>Unspecified) </p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) CertificadoAutorizacion</p>
+<p><span>Cardinality:  </span>[1]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) Documento</p>
+<p><span>Cardinality:  </span>[1]</p></td>
+</tr>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Association (<span>direction:</span><span> </span>Unspecified) </p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) CertificadoAutorizacionNombre</p>
+<p><span>Cardinality:  </span>[0..*]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) CertificadoAutorizacion</p>
+<p><span>Cardinality:  </span>[1]</p></td>
+</tr>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Association (<span>direction:</span><span> </span>Unspecified) </p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) CeriticadoAutorizacionDocumentoRef</p>
+<p><span>Cardinality:  </span>[1..*]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) CertificadoAutorizacion</p>
+<p><span>Cardinality:  </span>[1]</p></td>
+</tr>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Association (<span>direction:</span><span> </span>Unspecified) </p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) Autorizacion</p>
+<p><span>Cardinality:  </span>[1]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) CertificadoAutorizacion</p>
+<p><span>Cardinality:  </span>[0..*]</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+### Entidad Nombre del documento para un certificado de autorización de participación en proyecto externo: "CertificadoAutorizacionNombre"
+
+Entidad para almacenar, en cada uno de los idiomas soportados por la aplicación, el nombre asociado al documento que contiene el informe de autorización (certificado) de participación en un proyecto externo. El nombre del documento es un literal identificativo del documento que contiene el informe de autorización. Es opcional, no siendo obligatorio introducirlo en ninguno de los idiomas.
+
+
+
+<div class="table-wrap">
+
+<table class="confluenceTable" style="">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th class="confluenceTd" style="text-align: left; vertical-align: top;"><p><strong>ATTRIBUTES</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>certificadoAutorizacion : CertificadoAutorizacion  Private</p>
+<p>Identificador del certificado de autorización de participación en proyecto externo a la que pertenece el nombre del documento. Es una FK a la tabla "Certificado Autorización".</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>lang : String  Private</p>
+<p>Idioma en el que está almacenado el valor del campo "nombre" del documento que contiene el informe de autorización de participación en un proyecto externo. Cada idioma se representa por un código de 2 caracteres:</p>
+<ul>
+<li>es</li>
+<li>en</li>
+<li>eu</li>
+</ul></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>value_ : String  Private</p>
+<p>Valor del nombre del documento que contiene el informe de autorización. Está expresado en el idioma indicado en el campo "lang"</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+<div class="table-wrap">
+
+<table class="confluenceTable" style="">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p><strong>ASSOCIATIONS</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Association (<span>direction:</span><span> </span>Unspecified) </p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) CertificadoAutorizacionNombre</p>
+<p><span>Cardinality:  </span>[0..*]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) CertificadoAutorizacion</p>
+<p><span>Cardinality:  </span>[1]</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+### Entidad Referencia del documento para un certificado de autorización de participación en proyecto externo: "CertificadoAutorizacionDocumentoRef"
+
+<span style="color: black;">Entidad para almacenar la referencia al archivo físico que contiene el informe de autorización (certificado) de participación en un proyecto externo. Los documentos estarán almacenados en el SGDOC. Cada certificado generado tendrá una referencia al archivo en el SGDOC. Para los certificados de participación generados automáticamente se generará un informe en cada uno de los idiomas habilitados. Cada informe en cada idioma será un documento independiente en el SGDOC, por tanto, cada uno con una referencia (documentoRef) diferente. Si el certificado se genera manualmente (el documento se crea de manera ajena al SGI y se sube a través de la aplicación) se asociará al idioma seleccionado en el momento de la acción de subida. Cada certificado de autorización creado tendrá al menos un documento asociado en el SGDOC. </span><span style="color: black;">La referencia es un identificador del sistema de archivos o sistema de gestión documental (SGDOC) a través del que el SGI implementa la gestión de documentos (según implantación).</span>
+
+
+
+<div class="table-wrap">
+
+<table class="confluenceTable" style="">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th class="confluenceTd" style="text-align: left; vertical-align: top;"><p><strong>ATTRIBUTES</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>certificadoAutorizacion : CertificadoAutorizacion  Private</p>
+<p>Identificador del certificado de autorización de participación en proyecto externo a la que pertenece el nombre del documento. Es una FK a la tabla "Certificado Autorización".</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>lang : String  Private</p>
+<p>Idioma en el que se genera el informe de autorización. Cada idioma se representa por un código de 2 caracteres:</p>
+<ul>
+<li>es</li>
+<li>en</li>
+<li>eu</li>
+</ul></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>value_ : String  Private</p>
+<p>Referencia al archivo almacenado en el SGDOC que contiene el informe de autorización.</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+<div class="table-wrap">
+
+<table class="confluenceTable" style="">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p><strong>ASSOCIATIONS</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Association (<span>direction:</span><span> </span>Unspecified) </p>
+<p><br />
+</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) CeriticadoAutorizacionDocumentoRef</p>
+<p><span>Cardinality:  </span>[1..*]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) CertificadoAutorizacion</p>
+<p><span>Cardinality:  </span>[1]</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+### Entidad Estados de una solicitud de autorización de participación en proyecto externo: "EstadoAutorizacion"
+
+<span style="color: black;">Estado actual e histórico de estados de una solicitud de autorización de participación en proyecto externo.</span>
+
+<div class="table-wrap">
+
+<table class="confluenceTable" style="">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th class="confluenceTd" style="text-align: left; vertical-align: top;"><p><strong>ATTRIBUTES</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>id : Long  Private</p>
+<p>Identificador único. Secuencial. Clave primaria</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>estado : TipoEstadoAutorizacion  Private</p>
+<p>Estado de la solicitud de autorizazión. Es un valor del enumerado "tipo estado autorización".</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>fecha : Timestamp  Private</p>
+<p>Fecha en la que la solicitud de autorización pasa al estado recogido en el campo "estado".</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>autorizacionId : Long  Private</p>
+<p>Identificador de la solicitud de autorización a la que pertenece el registro de Estado. Es una FK a la tabla "autorización".</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+<div class="table-wrap">
+
+<table class="confluenceTable" style="">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p><strong>ASSOCIATIONS</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Association (<span>direction:</span><span> </span>Unspecified) </p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) EstadoAutorizacion</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Enumeration) TipoEstadoAutorizacion</p></td>
+</tr>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Association (<span>direction:</span><span> </span>Unspecified) </p>
+<p><br />
+</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) EstadoAutorizacionComentario</p>
+<p><span>Cardinality:  </span>[0..*]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) EstadoAutorizacion</p>
+<p><span>Cardinality:  </span>[1]</p></td>
+</tr>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Association (<span>direction:</span><span> </span>Unspecified) </p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) Autorizacion</p>
+<p><span>Cardinality:  </span>[1]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) EstadoAutorizacion</p>
+<p><span>Cardinality:  </span>[0..*]</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+### Entidad Comentario del estado de una solicitud de autorización de participación en proyecto externo: "EstadoAutorizacionComentario"
+
+Entidad para almacenar, en cada uno de los idiomas soportados por la aplicación, el comentario asociado al cambio de estado de una solicitud de autorización de participación en un proyecto externo. El comentario está disponible desde la acción "cambiar estado" y permite recoger cualquier observación. Es introducido por el perfil de unidad de gestión. Es un campo opcional, no es obligatorio que se introduzca el comentario, en ninguno de los idiomas, para realizar un cambio de estado.
+
+
+
+<div class="table-wrap">
+
+<table class="confluenceTable" style="">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th class="confluenceTd" style="text-align: left; vertical-align: top;"><p><strong>ATTRIBUTES</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>estadoAutorizacion : EstadoAutorizacion  Private</p>
+<p>Identificador del estado de la solicitud de autorización de participación en proyecto externo a la que pertenece el comentario. Es una FK a la tabla "Estado Autorización".</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>lang : String  Private</p>
+<p>Idioma en el que está almacenado el valor el comentario del estado de la solicitud de autorización de participación en un proyecto externo. Cada idioma se representa por un código de 2 caracteres:</p>
+<ul>
+<li>es</li>
+<li>en</li>
+<li>eu</li>
+</ul></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>value_ : String  Private</p>
+<p>Valor del comentario asociado a un estado de una solicitud de participación en proyecto externo. Está expresado en el idioma indicado por el camp "lang".</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+<div class="table-wrap">
+
+<table class="confluenceTable" style="">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p><strong>ASSOCIATIONS</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Association (<span>direction:</span><span> </span>Unspecified) </p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) EstadoAutorizacionComentario</p>
+<p><span>Cardinality:  </span>[0..*]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) EstadoAutorizacion</p>
+<p><span>Cardinality:  </span>[1]</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+### Entidad Notificación de registro de proyecto/contrato de CVN: "NotificacionProyectoExternoCVN"
+
+Desde el sistema de gestión de CVN corporativo se notificarán al SGI los ítems aportados manualmente en el CVN en los apartados 050.020.010.000 Proyectos de I+D+i financiados en convocatorias competitivas de administraciones o entidades públicas y privadas y 050.020.020.000 Contratos, convenios o proyectos de I+D+i no competitivos con administraciones o entidades públicas y privadas. Esta entidad almacenará los datos de las notificaciones recibidas del sistema CVN
+
+
+
+<div class="table-wrap">
+
+<table class="confluenceTable" style="">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th class="confluenceTd" style="text-align: left; vertical-align: top;"><p><strong>ATTRIBUTES</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>id : Long  Private</p>
+<p>Identificador único. Secuencial. Clave primaria.</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>solicitanteRef : String  Private</p>
+<p>Referencia de la persona que registra el ítem proyecto/contrato en su CVN. Es el identificador de la persona en el sistema de gestión de personas corporativo.</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>responsableRef : String  Private</p>
+<p>Referencia o identificador en el sistema de gestión de personas corporativo asociado a la persona indicada como responsable (IP) del proyecto/contrato en el sistema de CVN. La correspondencia con la norma FECYT de CVN es: se corresponderá con el campo 050.020.010.140 Nombre del/de la investigador/a principal (IP, Co-IP,...), en el caso de que el proyecto se registre en el epígrafe 050.020.010.000 - Proyectos de I+D+i financiados en convocatorias competitivas de Administraciones o entidades públicas y privadas, o con el campo 050.020.020.250 Nombre del/de la investigador/a principal (IP, Co-IP,...), en el caso de que el proyecto se registre en el epígrafe 050.020.020.000 - Contratos, convenios o proyectos de I+D+i no competitivos con Administraciones o entidades públicas o privadas.</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>fechaInicio : Date  Private</p>
+<p>Fecha de inicio del proyecto/contrato recogida en el sistema de CVN. La correspondencia con la norma FECYT de CVN es: se corresponderá con el campo 050.020.010.270 - Fecha de inicio del proyecto, en el caso de que el proyecto se registre en el epígrafe 050.020.010.000 - Proyectos de I+D+i financiados en convocatorias competitivas de Administraciones o entidades públicas y privadas, o con el campo 050.020.020.180 - Fecha de inicio del proyecto, en el caso de que el proyecto se registre en el epígrafe 050.020.020.000 - Contratos, convenios o proyectos de I+D+i no competitivos con Administraciones o entidades públicas o privadas.</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>fechaFin : Date  Private</p>
+<p>Fecha de fin del proyecto o contrato recogida en el sistema de CVN. La correspondencia con la norma FECYT de CVN es: se corresponderá con el campo 050.020.010.410 - Fecha de finalización, en el caso de que el proyecto se registre en el epígrafe 050.020.010.000 - Proyectos de I+D+i financiados en convocatorias competitivas de Administraciones o entidades públicas y privadas. En el caso de que el proyecto se registre bajo el epígrafe 050.020.020.000 - Contratos, convenios o proyectos de I+D+i no competitivos con Administraciones o entidades públicas o privadas, este campo no estará disponible, al no estar contemplado en la norma CVN.</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>ambitoGeografico : String  Private</p>
+<p>Ámbito geográfico del proyecto/contrato recogido en el sistema de CVN. La correspondencia con la norma FECYT de CVN es: se corresponde con el campo 050.020.010.040 - Ámbito del proyecto, en el caso de que el proyecto se registre en el epígrafe 050.020.010.000 - Proyectos de I+D+i financiados en convocatorias competitivas de Administraciones o entidades públicas y privadas, o con el campo 050.020.020.040 Ámbito del proyecto, en el caso de que el proyecto se registre en el epígrafe 050.020.020.000 - Contratos, convenios o proyectos de I+D+i no competitivos con Administraciones o entidades públicas o privadas.</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>gradoContribucion : String  Private</p>
+<p>Tipo de participación en el proyecto/contrato recogido en el sistema de CVN. La correspondencia con la norma FECTY de CVN es: se corresponde con el campo 050.020.010.170 - Grado de contribución, en el caso de que el proyecto se registre en el epígrafe 050.020.010.000 - Proyectos de I+D+i financiados en convocatorias competitivas de Administraciones o entidades públicas y privadas y con el campo 050.020.020.280 - Grado de contribución, en el caso de que el proyecto se registre en el epígrafe 050.020.020.000 - Contratos, convenios o proyectos de I+D+i no competitivos con Administraciones o entidades públicas o privadas.</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>datosEntidadParticipacion : String  Private</p>
+<p>Nombre de la entidad de participación recogida sobre el campo "Entidad donde se desarrolla" en el sistema CVN. La correspondencia con la norma FECYT será: campo 050.020.010.100 Entidad donde se desarrolla, en el caso de que el proyecto se registre en el epígrafe 050.020.010.000 - Proyectos de I+D+i financiados en convocatorias competitivas de Administraciones o entidades públicas y privadas, o con el campo 050.020.020.370 Entidad donde se desarrolla, en el caso de que el proyecto se registre en el epígrafe 050.020.020.000 - Contratos, convenios o proyectos de I+D+i no competitivos con Administraciones o entidades públicas o privadas.</p>
+<p>En caso que el sistema de CVN no se pueda recoger la referencia correspondiente a la entidad de participación en el Sistema de gestión de empresas corporativo, se remitirán en este campo los datos de la entidad (nombre y/o CIF) como cadena de texto.</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>importeTotal : Bigdecimal  Private</p>
+<p>Importe total del proyecto/programa recogido en el sistema de CVN. Se corresponde con el campo 050.020.010.290 Financiación del proyecto, cuantía total, en el caso de que el proyecto se registre en el epígrafe 050.020.010.000 - Proyectos de I+D+i financiados en convocatorias competitivas de Administraciones o entidades públicas y privadas, o con el campo 050.020.020.200 Financiación del proyecto, cuantía total, en el caso de que el proyecto se registre en el epígrafe 050.020.020.000 - Contratos, convenios o proyectos de I+D+i no competitivos con Administraciones o entidades públicas o privadas.</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>porcentajeSubvencion : Bigdecimal  Private</p>
+<p>Porcentaje subvencionado recogido en el sistema de CVN. Se corresponde con el campo 050.020.010.310 Financiación del proyecto, porcentaje en subvención, en el caso de que el proyecto se registre en el epígrafe 050.020.010.000 - Proyectos de I+D+i financiados en convocatorias competitivas de Administraciones o entidades públicas y privadas, o con el campo 050.020.020.220 Financiación del proyecto, porcentaje en subvención, en el caso de que el proyecto se registre en el epígrafe 050.020.020.000 - Contratos, convenios o proyectos de I+D+i no competitivos con Administraciones o entidades públicas o privadas.</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>documentoRef : String  Private</p>
+<p>Documento que acredita la concesión/realización del proyecto/contrato. Es el identificador del documento en el sistema de archivos o SGDOC según implantación del SGI.</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>autorizacion : Autorizacion  Private</p>
+<p>Solicitud de autorización de participación en proyecto externo con la que se vincula el ítem de CVN. El sistema de CVN habrá consultado previamente al SGI las solicitudes de participación en proyectos externos autorizadas, de forma que al registrar un nuevo ítem proeycto/contrato en el sistema de CVN, pueda vincularse en este sistema con la solicitud de participación con la que se corresponde, Es una FK a la tabla "autorización".</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>proyecto : Proyecto  Private</p>
+<p>Proyecto del SGI con el que se asocia la notificación de CVN. Es una FK a la tabla "proyecto".</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>datosResponsable : String  Private</p>
+<p>Nombre de la persona que ocupa el cargo de IP del proyecto/contrato, recogida en el sistema de CVN. La correspondencia con la norma FECYT de CVN es: se corresponderá con el campo 050.020.010.140 Nombre del/de la investigador/a principal (IP, Co-IP,...), en el caso de que el proyecto se registre en el epígrafe 050.020.010.000 - Proyectos de I+D+i financiados en convocatorias competitivas de Administraciones o entidades públicas y privadas, o con el campo 050.020.020.250 Nombre del/de la investigador/a principal (IP, Co-IP,...), en el caso de que el proyecto se registre en el epígrafe 050.020.020.000 - Contratos, convenios o proyectos de I+D+i no competitivos con Administraciones o entidades públicas o privadas.</p>
+<p>En caso que desde el sistema de CVN no se pueda recoger la referencia correspondiente a la persona responsable (IP) del proyecto/contrato en el Sistema de gestión de personas corporativo, se remitirán en este campo los datos personales (nombre y apellidos) como cadena de texto.</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>entidadParticipacionRef : String  Private</p>
+<p>Referencia a la entidad dentro del Sistema de gestión de empresas corporativo asociada a la entidad recogida sobre el campo "Entidad donde se desarrolla" del sistema de CVN. La correspondencia con la norma FECYT será: campo 050.020.010.100 Entidad donde se desarrolla, en el caso de que el proyecto se registre en el epígrafe 050.020.010.000 - Proyectos de I+D+i financiados en convocatorias competitivas de Administraciones o entidades públicas y privadas, o con el campo 050.020.020.370 Entidad donde se desarrolla, en el caso de que el proyecto se registre en el epígrafe 050.020.020.000 - Contratos, convenios o proyectos de I+D+i no competitivos con Administraciones o entidades públicas o privadas.</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>codExterno : String  Private</p>
+<p>Referencia que se le ha dado el proyecto en la entidad convocante/financiadora recogida en el sistema de CVN. La correspondencia con la norma FECYT de CVN es: se corresponderá con el campo 050.020.010.260 - Código de proyecto según la entidad financiadora, en el caso de que el proyecto se registre en el epígrafe 050.020.010.000 - Proyectos de I+D+i financiados en convocatorias competitivas de Administraciones o entidades públicas y privadas, o con el campo 050.020.020.110 - Código de proyecto según la entidad financiadora, en el caso de que el proyecto se registre en el epígrafe 050.020.020.000 - Contratos, convenios o proyectos de I+D+i no competitivos con Administraciones o entidades públicas o privadas.</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>nombrePrograma : String  Private</p>
+<p>Nombre del programa de financiación recogido en el sistema de CVN. Se corresponde con el campo 050.020.010.250 Nombre del programa de financiación, en el caso de que el proyecto se registre en el epígrafe 050.020.010.000 - Proyectos de I+D+i financiados en convocatorias competitivas de Administraciones o entidades públicas y privadas, o con el campo 050.020.020.170 Nombre del programa asociado al proyecto, en el caso de que el proyecto se registre en el epígrafe 050.020.020.000 - Contratos, convenios o proyectos de I+D+i no competitivos con Administraciones o entidades públicas o privadas.</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>proyectoCVNId : String  Private</p>
+<p>Identificador del ítem (proyecto/contrato) en el sistema de CVN.</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>urlDocumentoAcreditacion : String  Private</p>
+<p>URL en la que está contenida la acreditación de la realización/concesión del proyecto/contrato.</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+<div class="table-wrap">
+
+<table class="confluenceTable" style="">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p><strong>ASSOCIATIONS</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Association (<span>direction:</span><span> </span>Unspecified) </p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) NotificacionProyectoExternoCVN</p>
+<p><span>Cardinality:  </span>[1]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) Documento</p>
+<p><span>Cardinality:  </span>[0..1]</p></td>
+</tr>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Association (<span>direction:</span><span> </span>Unspecified) </p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) NotificacionProyectoExternoCVN</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) Persona</p></td>
+</tr>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Association (<span>direction:</span><span> </span>Unspecified) </p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) NotificacionProyectoExternoCVN</p>
+<p><span>Cardinality:  </span>[1]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) NotificacionProyectoExternoCVNTitulo</p>
+<p><span>Cardinality:  </span>[0..*]</p></td>
+</tr>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Association (<span>direction:</span><span> </span>Unspecified) </p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) NotificacionProyectoExternoCVN</p>
+<p><span>Cardinality:  </span>[1]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) NotificacionCVNEntidadFinanciadora</p>
+<p><span>Cardinality:  </span>[0..*]</p></td>
+</tr>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Association (<span>direction:</span><span> </span>Unspecified) </p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) NotificacionProyectoExternoCVN</p>
+<p><span>Cardinality:  </span>[0..*]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) Proyecto</p>
+<p><span>Cardinality:  </span>[0..1]</p></td>
+</tr>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Association (<span>direction:</span><span> </span>Unspecified) </p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) Autorizacion</p>
+<p><span>Cardinality:  </span>[0..1]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) NotificacionProyectoExternoCVN</p>
+<p><span>Cardinality:  </span>[0..1]</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+### Entidad Título del proyecto/contrato registrado en CVN: "NotificacionProyectoExternoCVNTitulo"
+
+Entidad para almacenar, en todos los idiomas soportados por la aplicación, el campo título de proyecto de una notificación de proyecto de cvn. Las notificaciones de proyecto de cvn se recogen en el SGI a través de integración,  proceden de un sistema externo de gestión de CVN. Será este sistema el que se debe de encargar de remitir el título en los diferentes idiomas.  
+La  correspondencia del campo título con la norma FECYT de CVN se establece con  el campo 050.020.010.010 - Nombre del proyecto, en el caso de que el proyecto se registre en el epígrafe 050.020.010.000 - Proyectos de I+D+i financiados en convocatorias competitivas de Administraciones o entidades públicas y privadas, o con el campo 050.020.020.010 - Nombre del proyecto, en el caso de que el proyecto se registre en el epígrafe 050.020.020.000 - Contratos, convenios o proyectos de I+D+i no competitivos con Administraciones o entidades públicas o privadas.
+
+
+
+<div class="table-wrap">
+
+<table class="confluenceTable" style="">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th class="confluenceTd" style="text-align: left; vertical-align: top;"><p><strong>ATTRIBUTES</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>notificacionProyectoExternoCVN : NotificacionProyectoExternoCVN  Private</p>
+<p>Identificador de la notificación de proyecto externo a la que pertenece el título. Es una FK a la tabla "Notificación Proyecto Externo CVN".</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>lang : String  Private</p>
+<p>Idioma en el que está expresado el valor del campo título de la notificación de proyecto externo. Cada idioma se representa por un código de dos carecteres.</p>
+<ul>
+<li>es</li>
+<li>en</li>
+<li>eu</li>
+</ul></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>value_ : String  Private</p>
+<p>Valor del campo título de una notificación de proyecto externo. Está expresado en el idioma indicado por el campo "lang". LA disponibilidad del valor en los diferentes idiomas dependerá de la recepción del mismo desde el servicio de integración.</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+<div class="table-wrap">
+
+<table class="confluenceTable" style="">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p><strong>ASSOCIATIONS</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Association (<span>direction:</span><span> </span>Unspecified) </p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) NotificacionProyectoExternoCVN</p>
+<p><span>Cardinality:  </span>[1]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) NotificacionProyectoExternoCVNTitulo</p>
+<p><span>Cardinality:  </span>[0..*]</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+### Entidad Entidades financiadoras del proyecto/contrato registrado en CVN: "NotificaciónCVNEntidadFinanciadora"
+
+<span style="color: black;">Listado de entidades financiadoras incluidas en los datos del proyecto/contrato notificado desde el sistema de gestión de CVN corporativo.</span>
+
+<div class="table-wrap">
+
+<table class="confluenceTable" style="">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th class="confluenceTd" style="text-align: left; vertical-align: top;"><p><strong>ATTRIBUTES</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>id : Long  Private</p>
+<p>Identificador único de la tabla. Secuencial. Clave primaria.</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>entidadFinanciadoraRef : String  Private</p>
+<p>Referencia a la entidad dentro del Sistema de gestión de empresas corporativo correspondiente a la entidad financiadora recogida en el sistema de CVN. Se corresponde con el campo 050.020.010.190 Entidad/es financiadora/s, en el caso de que el proyecto se registre en el epígrafe 050.020.010.000 - Proyectos de I+D+i financiados en convocatorias competitivas de Administraciones o entidades públicas y privadas, o con el campo 050.020.020.120 Nombre/s entidad/es financiadora/s, en el caso de que el proyecto se registre en el epígrafe 050.020.020.000 - Contratos, convenios o proyectos de I+D+i no competitivos con Administraciones o entidades públicas o privadas.</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>datosEntidadFinanciadora : String  Private</p>
+<p>Nombre de la entidad financiadora recogida en el sistema CVN</p>
+<p>Se corresponde con el campo 050.020.010.190 Entidad/es financiadora/s, en el caso de que el proyecto se registre en el epígrafe 050.020.010.000 - Proyectos de I+D+i financiados en convocatorias competitivas de Administraciones o entidades públicas y privadas, o con el campo 050.020.020.120 Nombre/s entidad/es financiadora/s, en el caso de que el proyecto se registre en el epígrafe 050.020.020.000 - Contratos, convenios o proyectos de I+D+i no competitivos con Administraciones o entidades públicas o privadas.</p>
+<p>En caso que el sistema de CVN no se pueda recoger la referencia correspondiente a la entidad en el Sistema de gestión de empresas corporativo, se remitirán en este campo los datos de la entidad (nombre y/o CIF) como cadena de texto.</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>notificacionCVN : NotificacionProyectoExternoCVN  Private</p>
+<p>Notificación CVN a la que pertenece el registro. Es una FK a la tabla "notificación CVN".</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+<div class="table-wrap">
+
+<table class="confluenceTable" style="">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p><strong>ASSOCIATIONS</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Association (<span>direction:</span><span> </span>Unspecified) </p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) NotificacionCVNEntidadFinanciadora</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) Empresa</p></td>
+</tr>
+<tr class="odd">
+<td colspan="2" class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Association (<span>direction:</span><span> </span>Unspecified) </p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Source: Public (Class) NotificacionProyectoExternoCVN</p>
+<p><span>Cardinality:  </span>[1]</p></td>
+<td class="confluenceTd" style="text-align: left; vertical-align: top;"><p>Target: Public (Class) NotificacionCVNEntidadFinanciadora</p>
+<p><span>Cardinality:  </span>[0..*]</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+## Enumerados del modelo Participación en proyectos externos
+
+### Enumerado Estado de solicitud de autorización de participación en proyecto externo: "TipoEstadoAutorizacion"
+
+<span style="color: black;">Enumerado que contiene los posibles estados por los que puede pasar una solicitud de autorización de participación en proyecto externo. Los valores son:</span>
+
+- <span style="color: black;">Borrador (estado inicial, el que toma durante su creación).</span>
+- <span style="color: black;">Presentada (la persona solicitante pondrá la solicitud en este estado para que sea revisada por la unidad de gestión).</span>
+- <span style="color: black;">Revisión (la unidad de gestión indicará con este estado que la solicitud está en proceso de revisión).</span>
+- <span style="color: black;">Autorizada (estado final, será la unidad de gestión quien marque este estado).</span>
+
+
+
+<div class="table-wrap">
+
+| **ATTRIBUTES**        |
+|:----------------------|
+| Borrador :   Public   |
+| Presentada :   Public |
+| Autorizada :   Public |
+| Revisión :   Public   |
+
+</div>
+
+
+
+<div class="table-wrap">
+
+| **ASSOCIATIONS**                          |                                                     |
+|:------------------------------------------|:----------------------------------------------------|
+| Association (direction: Unspecified)      |                                                     |
+| Source: Public (Class) EstadoAutorizacion | Target: Public (Enumeration) TipoEstadoAutorizacion |
+
+</div>
+
+
+
+
+
+</div>
+
+</div>
+
+</div>
+
+<div id="footer" role="contentinfo">
+
+<div class="section footer-body">
+
+Document generated by Confluence on oct 27, 2025 08:54
+
+<div id="footer-logo">
+
+[Atlassian](https://www.atlassian.com/)
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 
 

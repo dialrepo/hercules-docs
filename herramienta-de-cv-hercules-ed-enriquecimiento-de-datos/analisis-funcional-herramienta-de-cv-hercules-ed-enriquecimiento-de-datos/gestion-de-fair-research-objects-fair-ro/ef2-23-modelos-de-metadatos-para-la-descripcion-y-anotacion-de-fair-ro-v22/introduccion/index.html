@@ -796,7 +796,66 @@
 
   <h1>Introduccion</h1>
 
+<div id="page">
 
+<div id="main" class="aui-page-panel">
+
+<div id="main-header">
+
+<div id="breadcrumb-section">
+
+1.  [Hércules](index.html)
+2.  [Hércules](/)
+3.  [Herramienta de CV. Hércules ED - Enriquecimiento de Datos](//herramienta-de-cv-hercules-ed-enriquecimiento-de-datos)
+4.  [Análisis funcional. Herramienta de CV. Hércules ED - Enriquecimiento de Datos](//herramienta-de-cv-hercules-ed-enriquecimiento-de-datos/analisis-funcional-herramienta-de-cv-hercules-ed-enriquecimiento-de-datos)
+5.  [Gestión de FAIR Research Objects. FAIR RO](//herramienta-de-cv-hercules-ed-enriquecimiento-de-datos/analisis-funcional-herramienta-de-cv-hercules-ed-enriquecimiento-de-datos/gestion-de-fair-research-objects-fair-ro)
+6.  [EF2-2.3. MODELOS DE METADATOS PARA LA DESCRIPCIÓN Y ANOTACIÓN DE FAIR RO v2.2](//herramienta-de-cv-hercules-ed-enriquecimiento-de-datos/analisis-funcional-herramienta-de-cv-hercules-ed-enriquecimiento-de-datos/gestion-de-fair-research-objects-fair-ro/ef2-23-modelos-de-metadatos-para-la-descripcion-y-anotacion-de-fair-ro-v22)
+
+</div>
+
+# <span id="title-text"> Hércules : Introducción </span>
+
+</div>
+
+<div id="content" class="view">
+
+<div class="page-metadata">
+
+Created by <span class="author"> Juan Tardón Martínez</span> on feb 08, 2022
+
+</div>
+
+<div id="main-content" class="wiki-content group">
+
+El objetivo de este entregable "Modelos de metadatos para la descripción y anotación de FAIR RO (EF2-2.3)" es documentar y listar los metadatos asociados a cada objeto de investigación individual contribuido por un autor. Esto nos permitirá determinar exactamente qué datos necesitamos extraer de los diversos repositorios en los que pueden estar almacenados dichos objetos de investigación, para así poder describirlos y modelarlos en el grado de conocimiento. También se expondrá la ampliación de la ontología ROH para la correcta descripción de los diversos resultados de investigación que podemos encontrarnos en la comunidad científica.  
+Este entregable corresponde al proyecto "Servicio De I+D Para El Desarrollo De Soluciones Innovadoras En Dos Lotes En Relación Con El Enriquecimiento De Datos Y Los Métodos De Análisis (EDMA) De La Iniciativa Hércules Lote 1: Enriquecimiento De Datos" cuya función es facilitar el enriquecimiento de la red de ontologías ROH mediante el uso de fuentes de información disponibles en Internet y que son de uso habitual por parte de la comunidad investigadora. Cuando hablamos de enriquecimiento nos referimos a la capacidad de HERCULES para hacer uso de datos que sean servidos u obtenidos por las aplicaciones externas a HERCULES. Este enriquecimiento será completamente configurable y orientado, idealmente, a consumir los datos de la(s) API(s) que se consideren útiles para agregar valor al grafo de conocimiento de HERCULES. Con este primer lote de trabajo se busca poder gestionar la información enriquecida que se pueda obtener para el concepto de Research Object  <span class="nobr"><a href="https://www.researchobject.org" class="external-link" rel="nofollow">https://www.researchobject.org<sup><img src="images/icons/linkext7.gif" class="rendericon" data-align="absmiddle" data-border="0" width="7" height="7" /></sup></a></span> (RO).  
+Por tanto, debemos tener en cuenta que los investigadores tienen sus Objetos de Investigación en varios repositorios, por ejemplo, FigShare <span class="nobr"><a href="https://figshare.com" class="external-link" rel="nofollow">https://figshare.com<sup><img src="images/icons/linkext7.gif" class="rendericon" data-align="absmiddle" data-border="0" width="7" height="7" /></sup></a></span>, SlideShare <span class="nobr"><a href="https://www.share-research.org" class="external-link" rel="nofollow">https://www.share-research.org<sup><img src="images/icons/linkext7.gif" class="rendericon" data-align="absmiddle" data-border="0" width="7" height="7" /></sup></a></span>, GitHub <span class="nobr"><a href="https://github.com" class="external-link" rel="nofollow">https://github.com<sup><img src="images/icons/linkext7.gif" class="rendericon" data-align="absmiddle" data-border="0" width="7" height="7" /></sup></a></span>, SHARE <span class="nobr"><a href="https://www.share-research.org" class="external-link" rel="nofollow">https://www.share-research.org<sup><img src="images/icons/linkext7.gif" class="rendericon" data-align="absmiddle" data-border="0" width="7" height="7" /></sup></a></span>, SGI HERCULES, etc. Esto implica que a la diversidad de ROs hay que añadirle la complejidad propia de manejar dichos ROs sobre diversas aplicaciones o repositorios. Por lo tanto, se requiere que HERCULES permita al investigador, idealmente, declarar y catalogar sus ROs independientemente de la aplicación en la que se encuentren, sin que esto signifique generar una infraestructura específica para cada RO o para cada repositorio en el que podemos encontrarnos un RO.  
+El objetivo fundamental es facilitar a los investigadores la gestión de sus ROs, sin que esto signifique generar una estructura específica o taxonomía explícita para cada tipo de RO. Por tanto, debemos ser capaces tanto de extraer los metadatos que definen los diferentes resultados de una investigación (ROs), como de almacenarlos posteriormente en el grafo de conocimiento ASIO-HERCULES.  
+Este documento está estructurado de la siguiente forma. En la <a href="/confluence/pages/createpage.action?spaceKey=TEMP001&amp;title=_heading%3Dh.1qoc8b1" class="createlink"><span style="color: rgb(0,0,255);"><span style="text-decoration: underline;">sección 3</span></span></a> encontramos la ampliación de la ontología detallada en la que se explica cómo se describirán los diferentes objetos de investigación. En la <a href="/confluence/pages/createpage.action?spaceKey=TEMP001&amp;title=_heading%3Dh.4anzqyu" class="createlink"><span style="color: rgb(0,0,255);"><span style="text-decoration: underline;">sección 4</span></span></a> se expondrán los metadatos asociados a los diferentes artefactos o módulos de la ontología que se utilizarán para representar dichos objetos de investigación, según su tipo. En la <a href="/confluence/pages/createpage.action?spaceKey=TEMP001&amp;title=_heading%3Dh.2pta16n" class="createlink"><span style="color: rgb(0,0,255);"><span style="text-decoration: underline;">sección 5</span></span></a> se expone la descripción detallada de cada una de las entidades introducidas en la ontología para la descripción de los objetos de investigación. En la <a href="/confluence/pages/createpage.action?spaceKey=TEMP001&amp;title=_heading%3Dh.14ykbeg" class="createlink"><span style="color: rgb(0,0,255);"><span style="text-decoration: underline;">sección 6</span></span></a> encontramos el listado de las propiedades introducidas para la descripción de los objetos de investigación.
+
+</div>
+
+</div>
+
+</div>
+
+<div id="footer" role="contentinfo">
+
+<div class="section footer-body">
+
+Document generated by Confluence on oct 27, 2025 09:27
+
+<div id="footer-logo">
+
+[Atlassian](https://www.atlassian.com/)
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 
 

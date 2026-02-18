@@ -796,7 +796,655 @@
 
   <h1>Com variables en textos y traducciones al modelo fisico</h1>
 
+<div id="page">
 
+<div id="main" class="aui-page-panel">
+
+<div id="main-header">
+
+<div id="breadcrumb-section">
+
+1.  [Hércules](index.html)
+2.  [Hércules](/)
+3.  [SGI. Sistema de gestión de investigación](//sgi-sistema-de-gestion-de-investigacion)
+4.  [Diseño](//sgi-sistema-de-gestion-de-investigacion/diseno)
+5.  [Componentes](//sgi-sistema-de-gestion-de-investigacion/diseno/componentes)
+6.  [SGI - COM](//sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-com)
+
+</div>
+
+# <span id="title-text"> Hércules : COM - Variables en textos y traducciones al modelo físico </span>
+
+</div>
+
+<div id="content" class="view">
+
+<div class="page-metadata">
+
+Created by <span class="author"> Usuario desconocido (alicia.alvarez)</span>, last updated by <span class="editor"> Usuario desconocido (lorena.alvarez)</span> on oct 10, 2022
+
+</div>
+
+<div id="main-content" class="wiki-content group">
+
+## Comunicados CSP
+
+### Variables
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="header">
+<th class="confluenceTh">Variable</th>
+<th class="confluenceTh">Traducción en el modelo</th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd"><strong>dd/MM/aaaa_HITO</strong></td>
+<td class="confluenceTd">Campo fecha tabla ProyectoHito/ConvocatoriaHito/SolicitudHito según el caso (solo fecha)</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><strong>hh:mm_HITO</strong></td>
+<td class="confluenceTd">Campo fecha tabla ProyectoHito/ConvocatoriaHito/SolicitudHito según el caso (solo horas y minutos)</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><strong>TIPO_DE_HITO</strong></td>
+<td class="confluenceTd">Campo "nombre" tabla TipoHito</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><strong>TITULO_CONVOCATORIA</strong></td>
+<td class="confluenceTd">Campo "titulo" tabla Convocatoria</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><span class="asset-title d-inline"><strong>TITULO_SOLICITUD</strong></span></td>
+<td class="confluenceTd">Campo "titulo" tabla Solicitud</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><strong>CONVOCATORIA_EXTERNA</strong></td>
+<td class="confluenceTd">Campo "convocatoriaExterna" de la tabla Solicitud</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><span class="asset-title d-inline"><strong>TITULO_CONVOCATORIA_SOLICITUD</strong></span></td>
+<td class="confluenceTd">Campo "titulo" tabla Convocatoria con la que la solicitud está relacionada, ya que para convocatorias que no se gestionan en el SGI no es posible crear hitos.</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><strong>TITULO_PROYECTO, TITULO_PROYECTO1, TITULO_PROYECTO2, ...<br />
+</strong></td>
+<td class="confluenceTd">Campo "titulo" tabla Proyecto</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><strong>dd/MM/aaaa_INICIO_FASE</strong></td>
+<td class="confluenceTd">Campo fechaInicio tabla ProyectoFase/ConvocatoriaFase según el caso (solo fecha)</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><strong>hh:mm_INICIO_FASE</strong></td>
+<td class="confluenceTd">Campo fechaInicio tabla ProyectoFase/ConvocatoriaFase según el caso (solo horas y minutos)</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><strong>dd/MM/aaaa_FIN_FASE</strong></td>
+<td class="confluenceTd">Campo fechaFin tabla ProyectoFase/ConvocatoriaFase según el caso (solo fecha)</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><strong>hh:mm_FIN_FASE</strong></td>
+<td class="confluenceTd">Campo fechaFin tabla ProyectoFase/ConvocatoriaFase según el caso (solo horas y minutos)</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><strong>TIPO_DE_FASE</strong></td>
+<td class="confluenceTd">Campo "nombre" tabla TipoFase</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><strong>CODIGO_SOLICITUD_EVAETI</strong></p></td>
+<td class="confluenceTd"><p>2 opciones:</p>
+<ol>
+<li>Campo codigo de tabla PeticionEvaluacion donde campo id de esa tabla = campo peticionEvaluacionRef de tabla Solicitud de la solicitud que se está tratando</li>
+<li>Campo codigo de tabla PeticionEvaluacion donde campo solicitudConvocatoriaRef de esa tabla = campo id de la solicitud que se está tratando</li>
+</ol></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><strong>CODIGO_SOLICITUD_CONVOCATORIA</strong></td>
+<td class="confluenceTd">Campo codigo de la tabla Convocatoria donde el campo idSolicitud sea el de la solicitud que se está tratando</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><strong>dd/MM/aaaa_ESTADO_SOL</strong></td>
+<td class="confluenceTd">Campo fechaEstado de tabla EstadoSolicitud donde solicitudId es igual al identificador de la solicitud que se está tratando y el estado coincide con el actual de la solicitud. Si hay varios estados iguales en el histórico, obtener siempre el más reciente.</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><strong>NOMBRE_APELLIDOS_SOLICITANTE</strong></td>
+<td class="confluenceTd">Concatenación de campos nombre + apellidos de la personaUM (personaRef) = solicitanteRef de la tabla Solicitud con el id que se está tratando</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><strong><span style="color:var(--ds-text-accent-teal-bolder,#164555);">FECHA_PUBLICACION<span style="color:var(--ds-text,#172b4d);">_CONVOCATORIA</span></span></strong></td>
+<td class="confluenceTd">Campo fechaPublicacion de la tabla Convocatoria donde el id de la Convocatoria = convocatoriaId de la tabla Solicitud con el id que se está tratando</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);"><strong>CODIGO_INTERNO_SOLICITUD</strong></span></td>
+<td class="confluenceTd">Campo codigoRegistroInterno de la tabla Solicitud que se está tratando</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);"><strong>FECHA_PROVISIONAL_CONVOCATORIA</strong></span></td>
+<td class="confluenceTd">Campo fechaProvisional de la tabla Convocatoria donde el id de la Convocatoria = convocatoriaId de la tabla Solicitud con el id que se está tratando</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><ul>
+<li><strong>TIPO_ENLACE1: DESCRIPCION_ENLACE1 (link a URL_ENLACE1)</strong></li>
+<li><strong>TIPO_ENLACE2: DESCRIPCION_ENLACE2 (link a URL_ENLACE2)</strong></li>
+<li><strong>...</strong></li>
+</ul></td>
+<td class="confluenceTd"><p>Listado de enlaces asociados a la convocatoria de la solicitud que se está tratanto.</p>
+<p>Para cada elemento de la tabla ConvocatoriaEnlace donde convocatoriaId sea el de la convocatoria con id = convocatoriaId de la tabla Solicitud con el id que se está tratando:</p>
+<ul>
+<li>DESCRIPCION_ENLACEX: campo descripcion de tabla ConvocatoriaEnlace</li>
+<li>TIPO_ENLACEX: campo nombre de tabla TipoEnlace donde id = idTipoEnlace de tabla ConvocatoriaEnlace</li>
+<li>URL_ENLACEX:  campo url de tabla ConvocatoriaEnlace</li>
+</ul></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><strong><span style="color:var(--ds-text,#172b4d);">FECHA_CONCESION_CONVOCATORIA</span></strong></td>
+<td class="confluenceTd">Campo fechaConcesion de la tabla Convocatoria donde el id de la Convocatoria = convocatoriaId de la tabla Solicitud con el id que se está tratando</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><strong>FECHA_PREVISTA_PAGO_A_SOCIO</strong></td>
+<td class="confluenceTd">Campo fechaPrevistaPago de tabla ProyectoSocioPeriodoPago</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><strong>NOMBRE_ENTIDAD_COLABORADORA</strong></td>
+<td class="confluenceTd"><p>Pasos para obtener el nombre de la entidad colaboradora:</p>
+<ol>
+<li>Campo proyectoSocio de la tabla ProyectoSocioPeriodoPago con la fechaPrevistaPago que cumpla las condiciones para enviar el aviso</li>
+<li>Campo nombre de la entidad Empresa con el empresaRef de la tabla ProyectoSocio donde id sea igual al id del proyectoSocio del punto 1</li>
+<li>Llamar al servicio de integración del SGEMP para a partir del empresaRef obtener el nombre de la empresa</li>
+</ol></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><strong>FECHA_INICIO_PRESJUST_SOCIO</strong></td>
+<td class="confluenceTd">Campo fechaInicioPresentacion de tabla ProyectoSocioPeriodoJustificacion que cumpla las condiciones para el envío del aviso y tenga el valor de docRecibida de esa misma tabla a "false".</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><strong>NUM_PERIODO_JUSTSOCIO</strong></td>
+<td class="confluenceTd">Campo numPeriodo de tabla ProyectoSocioPeriodoJustificacion del período de justificación cuya fechaInicioPresentacion cumpla las condiciones para el envío del primer o del segundo aviso respectivamente y tenga el valor de docRecibida de esa misma tabla a "false".</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><strong>FECHA_FIN_PRESJUST_SOCIO</strong></td>
+<td class="confluenceTd">Campo fechaFinPresentacion de tabla ProyectoSocioPeriodoJustificacion que cumpla las condiciones para el envío del aviso y tenga el valor de docRecibida de esa misma tabla a "false".</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><strong>NOMBRE_MES</strong></td>
+<td class="confluenceTd">enero, febrero, marzo ...</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><strong>AÑO</strong></td>
+<td class="confluenceTd">2022, 2023, ...</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><strong>FECHA_INICIO_PRESJUSTGASTO_PROYECTO1,</strong></p>
+<p><strong>FECHA_INICIO_PRESJUSTGASTO_PROYECTO2,</strong></p>
+<p><strong>FECHA_INICIO_PRESJUSTGASTO_PROYECTO3, ...</strong></p></td>
+<td class="confluenceTd">Campo fechaInicioPresentación de tabla ProyectoPeriodoJustificacion de cada uno de los proyectos que cumplan el criterio de que tienen períodos de justificación cuyo valor del campo fechaInicioPresentacion está dentro del mes para el que se está enviando el aviso.</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><strong>FECHA_FIN_PRESJUSTGASTO_PROYECTO1,</strong></p>
+<p><strong>FECHA_FIN_PRESJUSTGASTO_PROYECTO2,</strong></p>
+<p><strong>FECHA_FIN_PRESJUSTGASTO_PROYECTO3, ...<br />
+</strong></p></td>
+<td class="confluenceTd">Campo fechaFinPresentación de tabla ProyectoPeriodoJustificacion de cada uno de los proyectos que cumplan el criterio de que tienen períodos de justificación cuyo valor del campo fechaInicioPresentacion está dentro del mes para el que se está enviando el aviso.</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><strong>FECHA_FIN_PRESJUSTSEGCIEN,</strong></p>
+<p><strong>FECHA_FIN_PRESJUSTSEGCIEN_PROYECTO1</strong>,</p>
+<p><strong>FECHA_FIN_PRESJUSTSEGCIEN_PROYECTO2,</strong></p>
+<p><strong>FECHA_FIN_PRESJUSTSEGCIEN_PROYECTO3, ...</strong></p></td>
+<td class="confluenceTd">Campo fechaFinPresentación de tabla ProyectoPeriodoSeguimiento del proyecto o de cada uno de los proyectos, según el caso, que cumpla/n el criterio de que tiene/n períodos de seguimiento cuyo valor del campo fechaInicioPresentacion está dentro del mes para el que se está enviando el aviso.</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><strong>FECHA_INICIO_PRESJUSTSEGCIEN,</strong></p>
+<p><strong>FECHA_INICIO_PRESJUSTSEGCIEN_PROYECTO1,</strong></p>
+<p><strong>FECHA_INICIO_PRESJUSTSEGCIEN_PROYECTO2,</strong></p>
+<p><strong>FECHA_INICIO_PRESJUSTSEGCIEN_PROYECTO3, ...<br />
+</strong></p></td>
+<td class="confluenceTd">Campo fechaInicioPresentacion de tabla ProyectoPeriodoSeguimiento del proyecto o de cada uno de los proyectos, según el caso, que cumpla/n las condiciones para el envío del aviso.</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><strong>NUM_PERIODO_SEGCIEN</strong></td>
+<td class="confluenceTd">Campo numPeriodo de tabla ProyectoPeriodoSeguimiento del período de seguimiento cuya fechaInicioPresentacion o fechaFinPresentacion cumpla las condiciones para el envío del primer o del segundo aviso respectivamente.</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><strong>APELLIDOS_DESTINATARIO</strong></td>
+<td class="confluenceTd">Campo apellidos de la entidad Persona donde personaRef es uno de los destinatarios del email de aviso.</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><strong>LISTA_ENTIDADES_FINANCIADORAS</strong></td>
+<td class="confluenceTd"><p>Para cada elemento de la lista de entidadesRef de la tabla ProyectoEntidadFinanciadora asociadas al Proyecto (con idProyecto) que se está tratando, componer un texto del siguiente modo:</p>
+<p>Campo Nombre Empresa 1 + ", " Campo Nombre Empresa 2 ", "+...+" y "+ Campo Nombre Empresa N</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><span style="text-decoration: none;"><strong>LISTA_CODIGOS_SGE</strong></span></td>
+<td class="confluenceTd"><p>Para cada elemento de la lista de proyectosSGERef de la tabla ProyectoProyectoSGE asociados al Proyecto (con idProyecto) que se está tratando, componer un texto del siguiente modo:</p>
+<p>Campo proyectoSGERef1 + ", " proyectoSGERef2 ", "+...+" y "+ proyectoSGERefN</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><strong>TIPO_FACTURACION</strong></td>
+<td class="confluenceTd"><p>Campo nombre de la tabla TipoFacturacion asociado al item de facturación (registro de ProyectoFacturacion) que se está validando o rechazando.</p>
+<p><span style="color:var(--ds-background-accent-red-bolder,#c9372c);"><span style="color:var(--ds-text-accent-teal-bolder,#164555);">El campo tipocomunicado servirá para determinar qué plantilla de email usar entre el tipo de facturación "Sin requisito" y los demás tipos de facturación.</span><br />
+</span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><strong>NUM_PREV</strong></td>
+<td class="confluenceTd"><p>Campo numeroPrevision de la tabla ProyectoFacturacion con el id del item de facturación que se está validando o rechazando.</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><strong>PRORROGA</strong></td>
+<td class="confluenceTd">Texto "de la prórroga", en caso de ser una prórroga, o "" (vacío) si no es una prórroga.</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);"><strong>NOMBRE_APELLIDOS_VALIDADOR</strong></span></td>
+<td class="confluenceTd"><p>Concatenación de campos nombre + apellidos de la personaUM (personaRef) que está validando el item de facturación (registro de ProyectoFacturacion).</p>
+<p>personaRef = Campo usuarioModificacion de la auditoria</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);"><strong>NUM_PREVISION</strong></span></td>
+<td class="confluenceTd">Campo numeroPrevision de la tabla ProyectoFacturacion con el id del item de facturación que se está validando o rechazando.</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);"><strong>MOTIVO_RECHAZO_FACTURA</strong></span></td>
+<td class="confluenceTd">Campo comentario de la tabla EstadoValidacionIP asociado al item de facturación (registro de ProyectoFacturacion) que se está rechazando.</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><strong>dd/MM/aaaa_PRESENTACIÓN_SOLPEXT</strong></td>
+<td class="confluenceTd">Campo fecha de la tabla EstadoAutorizacion del registro de estado que se acaba de dar de alta por primera vez asociado a una Autorizacion (fecha de presentación de la solicitud de autorización).</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><strong>TITULO_PROYECTO_EXTERNO</strong></td>
+<td class="confluenceTd">Campo tituloProyecto de la tabla Autorizacion</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><strong>NOMBRE_APELLIDOS_SOLICITANTE_PEXT</strong></td>
+<td class="confluenceTd">Concatenación de campos nombre + apellidos de la personaUM que presenta la solicitud de autorización - Campo solicitanteRef de la tabla Autorizacion</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><strong><span style="color:var(--ds-text,#172b4d);">FECHA_ESTADO_SOLICITUD_PEXT</span></strong></td>
+<td class="confluenceTd">Campo fecha de la tabla EstadoAutorizacion del registro de estado al que se cambia una Autorizacion.</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);"><strong>ESTADO_SOLICITUD_PEXT</strong></span></td>
+<td class="confluenceTd">Texto que se resuelve con el enumerado a partir del valor del campo estado de la tabla EstadoAutorizacion del registro de estado al que se cambia una Autorizacion.</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);"><strong>ENLACE_APLICACION</strong></span></td>
+<td class="confluenceTd">URL de acceso al SGI en el entorno donde se encuentre desplegada la aplicación.</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><strong>dd/MM/aaaa_CREACIÓN_PEXTCVN</strong></td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Campo fechaCreacion de la tabla NotificacionProyectoExternoCVN</span></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><strong>TITULO_PROYECTO_EXTERNO_NOTIF</strong></td>
+<td class="confluenceTd">Campo titulo de la tabla <span style="color:var(--ds-text,#172b4d);">NotificacionProyectoExternoCVN</span></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><strong>NOMBRE_APELLIDOS_CREADOR_PEXT</strong></td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Campo solicitanteRef de la tabla NotificacionProyectoExternoCVN</span></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);"><strong>ENLACE_APLICACION_MENU_VALIDACION_TUTOR</strong></span></td>
+<td class="confluenceTd">URL de acceso al SGI en el entorno donde se encuentre desplegada la aplicación a la opción de menú de "Validación como tutor/a"</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+### Traducciones de modelo lógico / AF al modelo físico / Diseño-Implementación
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable" style="width: 100.0%;">
+<colgroup>
+<col style="width: 23%" />
+<col style="width: 76%" />
+</colgroup>
+<tbody>
+<tr class="header">
+<th class="confluenceTh">Comprobación a realizar</th>
+<th class="confluenceTh">Campos a comprobar</th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd">IPs de proyecto</td>
+<td class="confluenceTd">Personas en la tabla "proyectoEquipo" asociadas al proyecto en cuestión con un registro en "rolProyecto" con rolPrincipal=true donde la fecha actual sea mayor que la de fechaInicio y menor que la fechaFin (o bien que la fechaFin sea null). Pueden ser varias personas.</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">Responsable económico de proyecto</td>
+<td class="confluenceTd">Persona en la tabla "proyectoResponsableEconomico" donde la fecha actual sea mayor que la de fechaInicio y menor que la fechaFin (o bien que la fechaFin sea null). Aunque el modelo permite que haya varias personas que cumplan estos criterios, desde la aplicación solo se permite que haya una vigente en cada momento, por lo que en caso de existir, será siempre 1.</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><span style="color:var(--ds-text-accent-teal-bolder,#164555);">Investigador solicitante de la autorización de participación en proyecto externo</span></td>
+<td class="confluenceTd">Campo solicitanteRef de la tabla autorizacion del proyecto en cuestión.</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">Comprobación de que una convocatoria es propia</td>
+<td class="confluenceTd">Una convocatoria será propia si tiene activo el flag "Tramitar solicitudes SGI" = Sí (true)</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">Cálculo de días "hábiles"</td>
+<td class="confluenceTd"><p>Se entenderá como día hábil a efectos del SGI cualquier día de la semana de lunes a viernes. No se contempla gestionar festivos de ningún tipo.</p>
+<p>Para comprobar los comunicados a enviar con una antelación de <u>X días hábiles</u>, en el caso del SGI, siempre serán 3 días hábiles, a partir del día de la semana en el que estemos, se aplicará el siguiente algoritmo:</p>
+<ul>
+<li>Los lunes se comprobará si se cumplen las condiciones para enviar los comunicados de eventos que ocurran los jueves (lunes + 3 días naturales)</li>
+<li>Los martes se comprobará si se cumplen las condiciones para enviar los comunicados de eventos que ocurran los viernes, sábado y domingo (martes +3, +4 y +5 días naturales respectivamente)</li>
+<li>Los miércoles se comprobará si se cumplen las condiciones para enviar los comunicados de eventos que ocurran los lunes (miércoles +5 días naturales)</li>
+<li>Los jueves se comprobará si se cumplen las condiciones para enviar los comunicados de eventos que ocurran los martes (jueves +5 días naturales)</li>
+<li>Los viernes se comprobará si se cumplen las condiciones para enviar los comunicados de eventos que ocurran los miércoles (viernes +5 días naturales)</li>
+<li>El sábado y el domingo no es necesario comprobar si se cumplen las condiciones de cualquier otro día de la semana, ya estarían cubiertos con las comprobaciones anteriores.</li>
+</ul>
+<p>El lanzamiento de las comprobaciones se realizará a las 00:00:00 del día indicado, esto es, por ejemplo, en el caso del lunes, se comprobará en el cambio de día de domingo a lunes justo a las 00:00:00 de la noche.</p>
+<p>La comprobación de que en un día se den las condiciones para que se genere el comunicado de un evento que ocurre ese un día abarcará todo ese día, esto es, por ejemplo, cuando el lunes se comprueba si el jueves ocurre algún evento que precise enviar comunicado, comprobará desde las 00:00:00 del jueves hasta las 23:59:59 de dicho jueves, las 24 horas de ese día.</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+## Comunicados PII
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable" style="width: 100.0%;">
+<colgroup>
+<col style="width: 23%" />
+<col style="width: 76%" />
+</colgroup>
+<tbody>
+<tr class="header">
+<th class="confluenceTh">Variable</th>
+<th class="confluenceTh">Traducción en el modelo</th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd"><p><span><strong>NUMERO_MESES_HASTA_FIN_PRIORIDAD</strong></span></p>
+<p><span><strong>NUMERO_MESES_HASTA_FIN_EFNR</strong></span></p></td>
+<td class="confluenceTd">Diferencia en meses entre la fecha de fin de prioridad (No  PCT)/fecha de fin de entrada a fases nacionales regionales (PCT) y la fecha de envío del comunicado, esto es, entre campo fechaFinPriorPresFasNacRec de la tabla SolicitudProteccion y la fecha en la que se programa el envío para la solicitud que cumpla los criterios para enviarse el comunicado.</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><span><strong>FECHA_FIN_PRIORIDAD</strong></span></p>
+<p><span><strong>FECHA_FIN_EFNR</strong></span></p></td>
+<td class="confluenceTd">Campo fechaFinPriorPresFasNacRec de la tabla SolicitudProteccion de la solicitud que cumple los criterios para el envío de un comunicado.</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><span><strong>TITULO_SOLICITUD</strong></span></td>
+<td class="confluenceTd">Campo titulo de la tabla SolicitudProteccion cuya fechaFinPriorPresFasNacRec cumple los criterios para el envío de un comunicado.</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><strong>FECHA_LIMITE</strong></td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Campo fechaLimiteAccion de la tabla Procedimiento.</span></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><strong>TIPO_PROCEDIMIENTO</strong></td>
+<td class="confluenceTd">Campo descripcion de la tabla TipoProcedimiento asociado a un Procedimiento que cumple los criterios para el envío de un comunicado<span style="color:var(--ds-text,#172b4d);"> (cercanía de la fechaLimiteAccion).</span></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><strong>ACCIONES_A_TOMAR</strong></td>
+<td class="confluenceTd">Campo accionATomar <span style="color:var(--ds-text,#172b4d);">de la tabla Procedimiento.</span></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+### Traducciones de modelo lógico / AF al modelo físico / Diseño-Implementación
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable" style="width: 100.0%;">
+<colgroup>
+<col style="width: 28%" />
+<col style="width: 71%" />
+</colgroup>
+<tbody>
+<tr class="header">
+<th class="confluenceTh">Cálculos para programación de tareas</th>
+<th class="confluenceTh">Pasos</th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd">Cálculo de programación de avisos de fin de prioridad de solicitud NO PCT</td>
+<td class="confluenceTd"><ol>
+<li><span style="color:var(--ds-text-accent-teal-bolder,#164555);">Calcular la fecha en el que hay que programar cada tarea de envío de email yendo hacia atrás desde la fecha de fin de prioridad:</span>
+<ol>
+<li><span style="color:var(--ds-text-accent-teal-bolder,#164555);">Fecha/hora del primer aviso = <strong>(fecha/hora fin prioridad) - 6 meses</strong>.<br />
+</span></li>
+<li><span style="color:var(--ds-text-accent-teal-bolder,#164555);">Fecha/hora del segundo aviso = <strong>(fecha/hora fin prioridad) - 3 meses</strong>.</span></li>
+<li><span style="color:var(--ds-text-accent-teal-bolder,#164555);">Fecha/hora del tercer aviso = <strong>(fecha/hora fin prioridad) - 1 mes</strong>.</span></li>
+</ol></li>
+<li><span style="color:var(--ds-text-accent-teal-bolder,#164555);">En el caso extremo en el que en el cálculo de alguna de las fechas de aviso diese como resultado una fecha/hora pasada, no se programaría el envío de ese aviso ni se crearían el comunicado correspondiente.</span></li>
+<li><span style="color:var(--ds-text-accent-teal-bolder,#164555);">Programar las 3 tareas en el módulo de tareas programadas y preparar los comunicados asociados a las mismas en el módulo de comunicados.</span></li>
+</ol></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">Cálculo de programación de avisos de fin de plazo de presentación a fases nacionales/regionales de solicitud PCT</td>
+<td class="confluenceTd"><ol>
+<li><span style="color:var(--ds-text-accent-teal-bolder,#164555);">Calcular la fecha en el que hay que programar cada tarea de envío de email yendo hacia atrás desde la fecha de fin de plazo de presentación a fases nacionales/regionales:</span>
+<ol>
+<li><span style="color:var(--ds-text-accent-teal-bolder,#164555);">Fecha/hora del primer aviso = <strong>(fecha/hora fin de plazo de presentación a fases nacionales/regionales) - 12 meses</strong>.<br />
+</span></li>
+<li><span style="color:var(--ds-text-accent-teal-bolder,#164555);">Fecha/hora del segundo aviso = <strong>(fecha/hora fin de plazo de presentación a fases nacionales/regionales) - 6 meses</strong>.</span></li>
+<li><span style="color:var(--ds-text-accent-teal-bolder,#164555);">Fecha/hora del tercer aviso = <strong>(fecha/hora fin de plazo de presentación a fases nacionales/regionales) - 2 meses</strong>.</span></li>
+</ol></li>
+<li><span style="color:var(--ds-text-accent-teal-bolder,#164555);">En el caso extremo en el que en el cálculo de alguna de las fechas de aviso diese como resultado una fecha/hora pasada, no se programaría el envío de ese aviso ni se crearían el comunicado correspondiente.</span></li>
+<li><span style="color:var(--ds-text-accent-teal-bolder,#164555);">Programar las 3 tareas en el módulo de tareas programadas y preparar los comunicados asociados a las mismas en el módulo de comunicados.</span></li>
+</ol></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+## Comunicados ETI
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable" style="width: 100.0%;">
+<colgroup>
+<col style="width: 23%" />
+<col style="width: 76%" />
+</colgroup>
+<tbody>
+<tr class="header">
+<th class="confluenceTh">Variable</th>
+<th class="confluenceTh">Traducción en el modelo</th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);"><strong>(el/la o del/de la)</strong> <strong>NOMBRE_INVESTIGACION</strong></span></td>
+<td class="confluenceTd"><p>Campo nombreInvestigacion de la tabla Comite. Si en el mensaje concreto lleva el artículo delante, se deberá poner el correspondiente al género del comité, campo Genero de esa misma tabla Comite con uno de los valores del enumerado M (masculino) o F (femenino).</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);"><strong>(el/la o del/de la)</strong> <strong>COMITE</strong></span></td>
+<td class="confluenceTd">Campo comite de la tabla Comite. Si en el mensaje concreto lleva el artículo delante, se deberá poner el correspondiente al género del comité, campo Genero de esa misma tabla Comite con uno de los valores del enumerado M (masculino) o F (femenino).</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);"><strong>DIA_SEMANA</strong></span></td>
+<td class="confluenceTd">Día de la semana en texto (lunes, martes, miércoles ... ) de la fecha de convocatoria de reunión de evaluación. Campo fechaEvaluacion de tabla ConvocatoriaReunion.</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);"><strong>DIA_EVALUACION</strong></span></td>
+<td class="confluenceTd">Día (1, 2, 3,  ...) de la fecha de convocatoria de reunión de evaluación. Campo fechaEvaluacion de tabla ConvocatoriaReunion.</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);"><strong>MES_EVALUACION</strong></span></td>
+<td class="confluenceTd">Mes en texto (enero, febrero, marzo, ...) de la fecha de convocatoria de reunión de evaluación. Campo fechaEvaluacion de tabla ConvocatoriaReunion.</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);"><strong>hh:MM_INICIO_PRIMERA_CONVOCATORIA</strong></span></td>
+<td class="confluenceTd">Composición hecha de los campos horaInicio y minutoInicio de tabla ConvocatoriaReunion de la forma que se muestren con el caracter ":" enmedio, horainicio:minutoInicio.</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);"><strong>hh:MM_INICIO_SEGUNDA_CONVOCATORIA</strong></span></td>
+<td class="confluenceTd">Composición hecha de los campos horaInicioSegunda y minutoInicioSegunda de tabla ConvocatoriaReunion de la forma que se muestren con el caracter ":" enmedio, horainicioSegunda:minutoInicioSegunda.</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><strong><span style="color:var(--ds-text,#172b4d);">ORDEN_DEL_DIA</span></strong></td>
+<td class="confluenceTd">Campo ordenDia de la tabla ConvocatoriaReunion.</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><span><span class="markjo080ehes"><strong>REFERENCIA_MEMORIA</strong></span></span></td>
+<td class="confluenceTd">Campo numReferencia de la tabla Memoria.</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);"><strong>TIPO_ACTIVIDAD</strong> </span></td>
+<td class="confluenceTd"><p>Si el campo tipoActividad del TipoActividad asociado a la PeticionEvaluacion que se está tratando es DISTINTO DE "Investigación tutelada" (Valor del enumerado TipoActividad equivalente)</p>
+<p>Se resolverá con el valor del campo nombre de la tabla TipoActividad</p>
+<p>En otro caso ("Investigación tutelada") se deberá ir a buscar el valor de tipoInvestigacionTutelada asociada de la tabla PeticionEvaluacion y de él resolver al campo nombre de la tabla TipoInvestigacionTutelada</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><span style="color: red;"><span style="color:var(--ds-text,#172b4d);"><strong>TITULO_SOLICITUD_EVALUACION</strong></span></span></td>
+<td class="confluenceTd">Campo titulo de la tabla PeticionEvaluacion.</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);"><strong>ENLACE_APLICACION</strong></span></td>
+<td class="confluenceTd">URL de acceso al SGI en el entorno donde se encuentre desplegada la aplicación.</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><span class="markjo080ehes"><strong>CODIGO_ORGANO_COMPETENTE_MEMORIA</strong></span></td>
+<td class="confluenceTd">Campo codigoOrganoCompetente de tabla Memoria.</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><strong>DIAS_ARCHIVADA_PENDIENTE_CORRECCIONES</strong></td>
+<td class="confluenceTd">Valor del campo de tabla de Configuracion con la clave dias_archivada_pendiente_correcciones.</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><strong>DIAS_LIMITE_EVALUADOR</strong></td>
+<td class="confluenceTd">Valor del campo de tabla de Configuracion con la clave dias_limite_evaluador.</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><strong>MESES_ARCHIVADA_INACTIVO</strong></td>
+<td class="confluenceTd">Valor del campo de tabla de Configuracion con la clave meses_archivada_inactivo.</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><strong>DIAS_AVISO_RETROSPECTIVA</strong></p></td>
+<td class="confluenceTd">Valor del campo de tabla de Configuracion con la clave dias_aviso_retrospectiva.</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+### Traducciones de modelo lógico / AF al modelo físico / Diseño-Implementación
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable" style="width: 100.0%;">
+<colgroup>
+<col style="width: 23%" />
+<col style="width: 76%" />
+</colgroup>
+<tbody>
+<tr class="header">
+<th class="confluenceTh">Comprobación a realizar</th>
+<th class="confluenceTh">Campos a comprobar</th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd">Investigador solicitante de la petición de evaluación de ética</td>
+<td class="confluenceTd"><p>Campo personaRef de la tabla PeticionEvaluacion (<span style="color:var(--ds-text-accent-teal-bolder,#164555);">Evaluacion.memoria.peticionEval.personaRef).<br />
+</span></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><span style="color:var(--ds-text,#172b4d);">Ha pasado un año desde la fecha en la se ha dado un dictamen favorable a una evaluación de memoria de un investigador y éste no ha realizado aún el informe de seguimiento anual.</span></p></td>
+<td class="confluenceTd"><p><span style="color:var(--ds-text,#172b4d);">Memoria.evaluacion.dictamen.nombre = (MEMORIA) favorable (Enum) y Evaluacion.fechadictamen - 1 año&gt;0 y Memoria está en estado "Fin evaluación".<br />
+</span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p>Ha pasado un año desde la fecha de fin de la petición de evaluación del proyecto<span style="color:var(--ds-background-accent-red-bolder,#c9372c);"><span style="color:var(--ds-text,#172b4d);"> de un investigador, hay una evaluación de seguimiento anual favorable, y este no ha realizado el informe de seguimiento final</span></span><span style="color:var(--ds-text,#172b4d);">.</span></p></td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Memoria.evaluacion.dictamen.nombre = (SEG-ANUAL) favorable (Enum) y PeticionEvaluacion.fechaFin - 1 año &gt; 0 y la Memoria está en estado "Fin evaluación seguimiento anual".<br />
+</span></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">Memoria de tipo CEEA que tenga marcado que requiere retrospectiva, se acerca dicha fecha de retrospectiva <span style="color:var(--ds-text,#172b4d);">y no se ha presentando el informe de retrospectiva.</span></td>
+<td class="confluenceTd"><p>Memoria.comite.comite = CEEA y Memoria.requiereRetrospectiva = true y NO tiene asociado un y Memoria.retrospectiva.estadoRetrospectiva = Pendiente y Memoria.retrospectiva.fechaRetrospectiva - hoy = <strong>DIAS_AVISO_RETROSPECTIVA.</strong></p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+## Comunicados PRC
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable">
+<colgroup>
+<col style="width: 23%" />
+<col style="width: 76%" />
+</colgroup>
+<tbody>
+<tr class="header">
+<th class="confluenceTh">Variable</th>
+<th class="confluenceTh">Traducción en el modelo</th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd"><strong>NOMBRE_EPIGRAFE</strong></td>
+<td class="confluenceTd"><p>Campo epigrafeCVN de la tabla ProduccionCientifica (la traducción del enumerado)</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><span style="color: red;"><span style="color:var(--ds-text,#172b4d);"><strong>TITULO_ITEM</strong></span></span></td>
+<td class="confluenceTd"><p>Si el item tiene en el campo epigrafeCVN el valor "060.010.010.000" se mostrará el campo valor de orden 1 de la tabla ValorCampo del campoProduccionCientifica que tenga en el campo codigoCVN el valor "060.010.010.030"</p>
+<p>Si el item tiene en el campo epigrafeCVN el valor "060.010.020.000" se mostrará el campo valor de orden 1 de la tabla ValorCampo del campoProduccionCientifica que tenga en el campo codigoCVN el valor "060.010.020.030"</p>
+<p>Si el item tiene en el campo epigrafeCVN el valor "050.020.030.000" se mostrará el campo valor de orden 1 de la tabla ValorCampo del campoProduccionCientifica que tenga en el campo codigoCVN el valor "050.020.030.020"</p>
+<p>Si el item tiene en el campo epigrafeCVN el valor "060.030.030.000" se mostrará el campo valor de orden 1 de la tabla ValorCampo del campoProduccionCientifica que tenga en el campo codigoCVN el valor "060.030.030.010"</p>
+<p>Si el item tiene en el campo epigrafeCVN el valor "030.040.000.000" se mostrará el campo valor de orden 1 de la tabla ValorCampo del campoProduccionCientifica que tenga en el campo codigoCVN el valor "030.040.000.030"</p>
+<p>Si el item tiene en el campo epigrafeCVN el valor "060.020.030.000" se mostrará el campo valor de orden 1 de la tabla ValorCampo del campoProduccionCientifica que tenga en el campo codigoCVN el valor "060.020.030.010"</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><span style="color: red;"><span style="color:var(--ds-text,#172b4d);"><strong>FECHA_ITEM</strong></span></span></td>
+<td class="confluenceTd"><p>Si el item tiene en el campo epigrafeCVN el valor "060.010.010.000" se mostrará el campo valor de orden 1 de la tabla ValorCampo del campoProduccionCientifica que tenga en el campo codigoCVN el valor "060.010.010.140"</p>
+<p>Si el item tiene en el campo epigrafeCVN el valor "060.010.020.000" se mostrará el campo valor de orden 1 de la tabla ValorCampo del campoProduccionCientifica que tenga en el campo codigoCVN el valor "060.010.020.190"</p>
+<p>Si el item tiene en el campo epigrafeCVN el valor "050.020.030.000" se mostrará el campo valor de orden 1 de la tabla ValorCampo del campoProduccionCientifica que tenga en el campo codigoCVN el valor "050.020.030.120"</p>
+<p>Si el item tiene en el campo epigrafeCVN el valor "060.030.030.000" se mostrará el campo valor de orden 1 de la tabla ValorCampo del campoProduccionCientifica que tenga en el campo codigoCVN el valor "060.030.030.140"</p>
+<p>Si el item tiene en el campo epigrafeCVN el valor "030.040.000.000" se mostrará el campo valor de orden 1 de la tabla ValorCampo del campoProduccionCientifica que tenga en el campo codigoCVN el valor "030.040.000.140"</p>
+<p>Si el item tiene en el campo epigrafeCVN el valor "060.020.030.000" se mostrará el campo valor de orden 1 de la tabla ValorCampo del campoProduccionCientifica que tenga en el campo codigoCVN el valor "060.020.030.160"</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><strong>ANIO</strong></td>
+<td class="confluenceTd">Campo anio de la tabla ConvocatoriaBaremacion</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><strong>TEXTO_ERROR</strong></td>
+<td class="confluenceTd">Descripción de la excepción capturada en el proceso de baremación</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+### Traducciones de modelo lógico / AF al modelo físico / Diseño-Implementación
+
+<div class="table-wrap">
+
+|                                                                                                                          |                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+|--------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Comprobación a realizar                                                                                                  | Campos a comprobar                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| Investigadores principales y personas autorizadas de los grupos de investigación encargados de validar/rechazar el item. | Personas en la tabla "grupoEquipo" asociadas al grupo en cuestión con un registro en "rolProyecto" con rolPrincipal=true donde la fecha actual sea mayor que la de fechaInicio y menor que la fechaFin (o bien que la fechaFin sea null) y personas en la tabla "grupoPersonaAutorizada" donde la fecha actual sea mayor que la de fechaInicio y menor que la fechaFin (o bien que la fechaFin sea null). Pueden ser varias personas. |
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div id="footer" role="contentinfo">
+
+<div class="section footer-body">
+
+Document generated by Confluence on oct 27, 2025 08:53
+
+<div id="footer-logo">
+
+[Atlassian](https://www.atlassian.com/)
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 
 

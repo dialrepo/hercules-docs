@@ -796,7 +796,2442 @@
 
   <h1>Csp con servicios api</h1>
 
+<div id="page">
 
+<div id="main" class="aui-page-panel">
+
+<div id="main-header">
+
+<div id="breadcrumb-section">
+
+1.  [Hércules](index.html)
+2.  [Hércules](/)
+3.  [SGI. Sistema de gestión de investigación](//sgi-sistema-de-gestion-de-investigacion)
+4.  [Diseño](//sgi-sistema-de-gestion-de-investigacion/diseno)
+5.  [Componentes](//sgi-sistema-de-gestion-de-investigacion/diseno/componentes)
+6.  [SGI - CSP](//sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-csp)
+7.  [CSP-CON: Convocatorias](//sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-csp/csp-con-convocatorias)
+
+</div>
+
+# <span id="title-text"> Hércules : CSP-CON - Servicios API </span>
+
+</div>
+
+<div id="content" class="view">
+
+<div class="page-metadata">
+
+Created by <span class="author"> Usuario desconocido (pelayo.menendez)</span>, last updated by <span class="editor"> Usuario desconocido (covadonga.garcia)</span> on may 05, 2022
+
+</div>
+
+<div id="main-content" class="wiki-content group">
+
+------------------------------------------------------------------------
+
+<div class="toc-macro rbtoc1761551543511">
+
+- [TipoAmbitoGeografico](#CSPCONServiciosAPI-TipoAmbitoGeografico)
+- [TipoOrigenFuenteFinanciacion](#CSPCONServiciosAPI-TipoOrigenFuenteFinanciacion)
+- [FuenteFinanciacion](#CSPCONServiciosAPI-FuenteFinanciacion)
+- [TipoFinanciacion](#CSPCONServiciosAPI-TipoFinanciacion)
+- [TipoRegimenConcurrencia](#CSPCONServiciosAPI-TipoRegimenConcurrencia)
+- [ConvocatoriaEntidadGestora](#CSPCONServiciosAPI-ConvocatoriaEntidadGestora)
+- [ConceptoGasto](#CSPCONServiciosAPI-ConceptoGasto)
+- [Programa](#CSPCONServiciosAPI-Programa)
+- [AreaTematica](#CSPCONServiciosAPI-AreaTematica)
+- [ConvocatoriaAreaTematica](#CSPCONServiciosAPI-ConvocatoriaAreaTematica)
+- [ConvocatoriaEntidadConvocante](#CSPCONServiciosAPI-ConvocatoriaEntidadConvocante)
+- [ConvocatoriaEntidadFinanciadora](#CSPCONServiciosAPI-ConvocatoriaEntidadFinanciadora)
+- [ConvocatoriaEnlace](#CSPCONServiciosAPI-ConvocatoriaEnlace)
+- [ConvocatoriaFase](#CSPCONServiciosAPI-ConvocatoriaFase)
+- [ConvocatoriaPeriodoJustificacion](#CSPCONServiciosAPI-ConvocatoriaPeriodoJustificacion)
+- [ConvocatoriaPeriodoSeguimientoCientifico](#CSPCONServiciosAPI-ConvocatoriaPeriodoSeguimientoCientifico)
+- [ConvocatoriaHito](#CSPCONServiciosAPI-ConvocatoriaHito)
+- [ConvocatoriaDocumento](#CSPCONServiciosAPI-ConvocatoriaDocumento)
+- [RequisitoIp](#CSPCONServiciosAPI-RequisitoIp)
+- [RequisitoEquipo](#CSPCONServiciosAPI-RequisitoEquipo)
+- [ConvocatoriaConceptoGasto](#CSPCONServiciosAPI-ConvocatoriaConceptoGasto)
+- [ConvocatoriaConceptoGastoCodigoEc](#CSPCONServiciosAPI-ConvocatoriaConceptoGastoCodigoEc)
+- [DocumentoRequeridoSolicitud](#CSPCONServiciosAPI-DocumentoRequeridoSolicitud)
+- [ConfiguracionSolicitud](#CSPCONServiciosAPI-ConfiguracionSolicitud)
+- [Convocatoria](#CSPCONServiciosAPI-Convocatoria)
+
+</div>
+
+------------------------------------------------------------------------
+
+## TipoAmbitoGeografico 
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable" style="width: 87.5281%;">
+<tbody>
+<tr class="header">
+<th class="confluenceTh"><br />
+</th>
+<th class="confluenceTh">Método</th>
+<th class="confluenceTh">URL</th>
+<th class="confluenceTh">Parámetros</th>
+<th class="confluenceTh">Respuesta</th>
+<th class="confluenceTh">Permisos</th>
+<th class="confluenceTh">Descripción</th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">POST</td>
+<td class="confluenceTd"><p>/tipoambitogeograficos</p></td>
+<td class="confluenceTd">TipoAmbitoGeografico</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">CSP-TAMG-C</td>
+<td class="confluenceTd">Crea <span>TipoAmbitoGeografico</span></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">PUT</td>
+<td class="confluenceTd">/<span>tipoambitogeograficos</span>/{id}</td>
+<td class="confluenceTd"><span>TipoAmbitoGeografico</span></td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">CSP-<span>TAMG</span><span>-E</span></td>
+<td class="confluenceTd">Modifica <span>TipoAmbitoGeografico</span></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">DELETE</td>
+<td class="confluenceTd">/<span>tipoambitogeograficos</span>/{id}</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">CSP-<span>TAMG</span><span>-B</span></td>
+<td class="confluenceTd">Desactiva <span>TipoAmbitoGeografico</span></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><img src="images/icons/emoticons/error.svg" class="emoticon emoticon-cross" data-emoticon-name="cross" data-emoji-short-name=":cross:" alt="(error)" /></td>
+<td class="confluenceTd">HEAD</td>
+<td class="confluenceTd">/<span>tipoambitogeograficos</span>/{id}</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">HTTP 200 / HTTP 204</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Comprueba la existencia de la <span>TipoAmbitoGeografico</span> con el id indicado</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">GET</td>
+<td class="confluenceTd">/<span>tipoambitogeograficos</span>/{id}</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span>TipoAmbitoGeografico</span></td>
+<td class="confluenceTd">CSP-<span>TAMG</span><span>-V</span></td>
+<td class="confluenceTd">Detalle de <span>TipoAmbitoGeografico</span></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">GET</td>
+<td class="confluenceTd"><span>/</span><span>tipoambitogeograficos</span></td>
+<td class="confluenceTd">q+s</td>
+<td class="confluenceTd">Lista[<span>TipoAmbitoGeografico</span>]</td>
+<td class="confluenceTd"><span>CSP-</span><span>TAMG</span><span>-V</span></td>
+<td class="confluenceTd">Listado de <span>TipoAmbitoGeografico (sólo devuelve los activos)<br />
+</span></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">GET</span></td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">/tipoambitogeograficos/todos</span></td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">q+s</span></td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Lista[TipoAmbitoGeografico]</span></td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">CSP-TAMG-V</span></td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Listado de TipoAmbitoGeografico (devuelve todos)</span></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+## TipoOrigenFuenteFinanciacion 
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable" style="width: 87.5281%;">
+<tbody>
+<tr class="header">
+<th class="confluenceTh">Método</th>
+<th class="confluenceTh">URL</th>
+<th class="confluenceTh">Parámetros</th>
+<th class="confluenceTh">Respuesta</th>
+<th class="confluenceTh">Permisos</th>
+<th class="confluenceTh">Descripción</th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd">GET</td>
+<td class="confluenceTd"><span>/</span><span>tipoorigenfuentefinanciaciones</span></td>
+<td class="confluenceTd">q + s</td>
+<td class="confluenceTd">Lista[<span>TipoOrigenFuenteFinanciacion</span>]</td>
+<td class="confluenceTd"><span>CSP-</span><span>TFF</span><span>-E<br />
+<span>CSP-TFF-C</span></span></td>
+<td class="confluenceTd">Listado de <span>TipoOrigenFuenteFinanciacion <span>(sólo devuelve los activos)</span><br />
+</span></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+## FuenteFinanciacion 
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable" style="width: 87.5281%;">
+<tbody>
+<tr class="header">
+<th class="confluenceTh"><br />
+</th>
+<th class="confluenceTh">Método</th>
+<th class="confluenceTh">URL</th>
+<th class="confluenceTh">Parámetros</th>
+<th class="confluenceTh">Respuesta</th>
+<th class="confluenceTh">Permisos</th>
+<th class="confluenceTh">Descripción</th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">POST</td>
+<td class="confluenceTd"><p>/fuentefinanciaciones</p></td>
+<td class="confluenceTd">TipoFuenteFinanciacion</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">CSP-TFF-C</td>
+<td class="confluenceTd">Crea <span>TipoFuenteFinanciacion</span></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">PUT</td>
+<td class="confluenceTd">/<span>fuentefinanciaciones</span>/{id}</td>
+<td class="confluenceTd"><span>TipoFuenteFinanciacion</span></td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">CSP-<span>TFF</span>-E</td>
+<td class="confluenceTd">Modifica <span>TipoFuenteFinanciacion</span></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">PATCH</td>
+<td class="confluenceTd">/<span>fuentefinanciaciones</span>/{id}/desactivar</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">CSP-<span>TFF</span>-B</td>
+<td class="confluenceTd">Desactiva <span>TipoFuenteFinanciacion</span></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span>PATCH</span></td>
+<td class="confluenceTd"><span>/</span><span>fuentefinanciaciones</span><span>/{id}/reactivar</span></td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span>Reactiva </span><span>TipoFuenteFinanciacion</span></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><img src="images/icons/emoticons/error.svg" class="emoticon emoticon-cross" data-emoticon-name="cross" data-emoji-short-name=":cross:" alt="(error)" /></td>
+<td class="confluenceTd">HEAD</td>
+<td class="confluenceTd">/<span>fuentefinanciaciones</span>/{id}</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">HTTP 200 / HTTP 204</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Comprueba la existencia de la <span>TipoFuenteFinanciacion</span> con el id indicado</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">GET</td>
+<td class="confluenceTd">/<span>fuentefinanciaciones</span>/{id}</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span>TipoFuenteFinanciacion</span></td>
+<td class="confluenceTd">CSP-<span>TFF</span>-V</td>
+<td class="confluenceTd">Detalle de <span>TipoFuenteFinanciacion</span></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">GET</td>
+<td class="confluenceTd">/<span>fuentefinanciaciones</span></td>
+<td class="confluenceTd">q+s</td>
+<td class="confluenceTd">Lista[<span>TipoFuenteFinanciacion</span>]</td>
+<td class="confluenceTd"><span>CSP-</span><span>TFF</span><span>-V</span></td>
+<td class="confluenceTd">Listado de <span>TipoFuenteFinanciacion <span>(sólo devuelve los activos)</span><br />
+</span></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">GET</span></td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">/fuentefinanciaciones/todos</span></td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">q+s</span></td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Lista[TipoFuenteFinanciacion]</span></td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">CSP-TFF-V</span></td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Listado de TipoFuenteFinanciacion (devuelve todos)<br />
+</span></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+## TipoFinanciacion 
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable" style="width: 87.5281%;">
+<tbody>
+<tr class="header">
+<th class="confluenceTh"><br />
+</th>
+<th class="confluenceTh">Método</th>
+<th class="confluenceTh">URL</th>
+<th class="confluenceTh">Parámetros</th>
+<th class="confluenceTh">Respuesta</th>
+<th class="confluenceTh">Permisos</th>
+<th class="confluenceTh">Descripción</th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">POST</td>
+<td class="confluenceTd"><p>/tipofinanciaciones</p></td>
+<td class="confluenceTd">TipoFinanciacion</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">CSP-TFINAN-C</td>
+<td class="confluenceTd">Crea <span>TipoFinanciacion</span></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">PUT</td>
+<td class="confluenceTd">/tipofinanciaciones/{id}</td>
+<td class="confluenceTd"><span>TipoFinanciacion</span></td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">CSP-<span>TFINAN</span>-E</td>
+<td class="confluenceTd">Modifica <span>TipoFinanciacion</span></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span>PATCH</span></td>
+<td class="confluenceTd">/tipofinanciaciones/{id}<span>/desactivar</span></td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">CSP-<span>TFINAN</span>-B</td>
+<td class="confluenceTd">Desactiva <span>TipoFinanciacion</span></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span>PATCH</span></td>
+<td class="confluenceTd"><span>/tipofinanciaciones/{id}</span><span>/<span>reactivar</span></span></td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span>Reactiva </span><span>TipoFinanciacion</span></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><img src="images/icons/emoticons/error.svg" class="emoticon emoticon-cross" data-emoticon-name="cross" data-emoji-short-name=":cross:" alt="(error)" /></td>
+<td class="confluenceTd">HEAD</td>
+<td class="confluenceTd">/<span>tipofinanciaciones</span>/{id}</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">HTTP 200 / HTTP 204</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Comprueba la existencia de la <span>TipoFinanciacion</span> con el id indicado</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">GET</td>
+<td class="confluenceTd">/tipofinanciaciones/{id}</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span>TipoFinanciacion</span></td>
+<td class="confluenceTd">CSP-<span>TFINAN</span>-V</td>
+<td class="confluenceTd">Detalle de <span>TipoFinanciacion</span></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">GET</td>
+<td class="confluenceTd">/<span>tipofinanciaciones</span></td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span>CSP-</span><span>TFINAN</span><span>-V</span></td>
+<td class="confluenceTd"><span>Listado de TipoFinanciacion <span><span>(sólo devuelve los activos)</span></span><br />
+</span></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">GET</span></td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">/tipofinanciaciones/todos</span></td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">CSP-TFINAN-V</span></td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Listado de TipoFinanciacion (devuelve todos)<br />
+</span></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+## TipoRegimenConcurrencia 
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable" style="font-size: 14.0px;letter-spacing: 0.0px;width: 87.5281%;">
+<tbody>
+<tr class="header">
+<th class="confluenceTh"><br />
+</th>
+<th class="confluenceTh">Método</th>
+<th class="confluenceTh">URL</th>
+<th class="confluenceTh">Parámetros</th>
+<th class="confluenceTh">Respuesta</th>
+<th class="confluenceTh">Permisos</th>
+<th class="confluenceTh">Descripción</th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">POST</td>
+<td class="confluenceTd"><p>/tiporegimenconcurrencias</p></td>
+<td class="confluenceTd">TipoRegimenConcurrencia</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">CSP-TRCON-C</td>
+<td class="confluenceTd">Crea <span>TipoRegimenConcurrencia</span></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">PUT</td>
+<td class="confluenceTd">/<span>tiporegimenconcurrencias</span>/{id}</td>
+<td class="confluenceTd"><span>TipoRegimenConcurrencia</span></td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">CSP-<span>TRCON</span>-E</td>
+<td class="confluenceTd">Modifica <span>TipoRegimenConcurrencia</span></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">DELETE</td>
+<td class="confluenceTd">/<span>tiporegimenconcurrencias</span>/{id}</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">CSP-<span>TRCON</span>-B</td>
+<td class="confluenceTd">Desactiva <span>TipoRegimenConcurrencia</span></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><img src="images/icons/emoticons/error.svg" class="emoticon emoticon-cross" data-emoticon-name="cross" data-emoji-short-name=":cross:" alt="(error)" /></td>
+<td class="confluenceTd">HEAD</td>
+<td class="confluenceTd">/<span>tiporegimenconcurrencias</span>/{id}</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">HTTP 200 / HTTP 204</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Comprueba la existencia de la <span>TipoRegimenConcurrencia</span> con el id indicado</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">GET</td>
+<td class="confluenceTd">/<span>tiporegimenconcurrencias</span>/{id}</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span>TipoRegimenConcurrencia</span></td>
+<td class="confluenceTd">CSP-<span>TRCON</span>-V</td>
+<td class="confluenceTd">Detalle de <span>TipoRegimenConcurrencia</span></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">GET</td>
+<td class="confluenceTd">/<span>tiporegimenconcurrencias</span></td>
+<td class="confluenceTd">q+s</td>
+<td class="confluenceTd">Lista[<span>TipoRegimenConcurrencia</span>]</td>
+<td class="confluenceTd"><span>CSP-</span><span>TRCON</span><span>-V</span></td>
+<td class="confluenceTd">Listado de <span>TipoRegimenConcurrencia <span><span><span>(sólo devuelve los activos)</span></span></span><br />
+</span></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">GET</span></td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">/tiporegimenconcurrencias/todos</span></td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">q+s</span></td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Lista[TipoRegimenConcurrencia]</span></td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">CSP-TRCON-V</span></td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Listado de TipoRegimenConcurrencia (devuelve todos)<br />
+</span></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+## ConvocatoriaEntidadGestora 
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable" style="width: 87.5281%;">
+<tbody>
+<tr class="header">
+<th class="confluenceTh">Método</th>
+<th class="confluenceTh">URL</th>
+<th class="confluenceTh">Parámetros</th>
+<th class="confluenceTh">Respuesta</th>
+<th class="confluenceTh">Permisos</th>
+<th class="confluenceTh">Descripción</th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd">POST</td>
+<td class="confluenceTd"><p>/convocatoriaentidadgestoras</p></td>
+<td class="confluenceTd">ConvocatoriaEntidadGestora</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">CSP-CENTGES-C</td>
+<td class="confluenceTd">Crea ConvocatoriaEntidadGestora</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">PUT</td>
+<td class="confluenceTd">/convocatoriaentidadgestoras/{id}</td>
+<td class="confluenceTd">ConvocatoriaEntidadGestora</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">CSP-CENTGES-E</td>
+<td class="confluenceTd">Modifica ConvocatoriaEntidadGestora</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">DELETE</td>
+<td class="confluenceTd">/convocatoriaentidadgestoras/{id}</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">CSP-CENTGES-B</td>
+<td class="confluenceTd">Elimina ConvocatoriaEntidadGestora</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+## ConceptoGasto 
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable" style="width: 87.5281%;">
+<tbody>
+<tr class="header">
+<th class="confluenceTh"><br />
+</th>
+<th class="confluenceTh">Método</th>
+<th class="confluenceTh">URL</th>
+<th class="confluenceTh">Parámetros</th>
+<th class="confluenceTh">Respuesta</th>
+<th class="confluenceTh">Permisos</th>
+<th class="confluenceTh">Descripción</th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">POST</td>
+<td class="confluenceTd"><p>/conceptogastos</p></td>
+<td class="confluenceTd">ConceptoGasto</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">CSP-CONGAS-C</td>
+<td class="confluenceTd">Crea <span>ConceptoGasto</span></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">PUT</td>
+<td class="confluenceTd">/<span>conceptogastos</span>/{id}</td>
+<td class="confluenceTd"><span>ConceptoGasto</span></td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">CSP-<span>CONGAS</span>-E</td>
+<td class="confluenceTd">Modifica <span>ConceptoGasto</span></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span>PATCH</span></td>
+<td class="confluenceTd">/<span>conceptogastos</span>/{id}<span>/desactivar</span></td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">CSP-<span>CONGAS</span>-B</td>
+<td class="confluenceTd">Desactiva <span>ConceptoGasto</span></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span>PATCH</span></td>
+<td class="confluenceTd"><span>/</span><span>conceptogastos</span><span>/{id}<span>/</span><span>reactivar</span></span></td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span>Reactiva </span><span>ConceptoGasto</span></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><img src="images/icons/emoticons/error.svg" class="emoticon emoticon-cross" data-emoticon-name="cross" data-emoji-short-name=":cross:" alt="(error)" /></td>
+<td class="confluenceTd">HEAD</td>
+<td class="confluenceTd">/<span>conceptogastos</span>/{id}</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">HTTP 200 / HTTP 204</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Comprueba la existencia de la <span>ConceptoGasto</span> con el id indicado</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">GET</td>
+<td class="confluenceTd">/<span>conceptogastos</span>/{id}</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span>ConceptoGasto</span></td>
+<td class="confluenceTd">CSP-<span>CONGAS</span>-V</td>
+<td class="confluenceTd">Detalle de <span>ConceptoGasto</span></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">GET</td>
+<td class="confluenceTd">/<span><span>conceptogastos</span></span></td>
+<td class="confluenceTd">q+s</td>
+<td class="confluenceTd">Lista[<span>ConceptoGasto</span>]</td>
+<td class="confluenceTd"><span>CSP-</span><span><span>CONGAS</span>-V</span></td>
+<td class="confluenceTd">Listado de <span><span>ConceptoGasto <span><span><span><span>(sólo devuelve los activos)</span></span></span></span><br />
+</span></span></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">GET</span></td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">/conceptogastos/todos</span></td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">q+s</span></td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Lista[ConceptoGasto]</span></td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">CSP-CONGAS-V</span></td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Listado de ConceptoGasto (devuelve todos)<br />
+</span></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+## Programa 
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable" style="width: 87.5281%;">
+<tbody>
+<tr class="header">
+<th class="confluenceTh"><br />
+</th>
+<th class="confluenceTh">Método</th>
+<th class="confluenceTh">URL</th>
+<th class="confluenceTh">Parámetros</th>
+<th class="confluenceTh">Respuesta</th>
+<th class="confluenceTh">Permisos</th>
+<th class="confluenceTh">Descripción</th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">POST</td>
+<td class="confluenceTd"><p>/programas</p></td>
+<td class="confluenceTd">Programa</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">CSP-PROG-C</td>
+<td class="confluenceTd">Crea <span>Programa (un programa que no tiene padre se considera un Plan)</span></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">PUT</td>
+<td class="confluenceTd">/<span>programas</span>/{id}</td>
+<td class="confluenceTd"><span>Programa</span></td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">CSP-<span>PROG</span>-E</td>
+<td class="confluenceTd">Modifica <span>Programa</span></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span>PATCH</span></td>
+<td class="confluenceTd">/<span>programas</span>/{id}<span>/<span>desactivar</span></span></td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">CSP-<span>PROG</span>-B</td>
+<td class="confluenceTd">Desactiva <span>Programa</span></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span>PATCH</span></td>
+<td class="confluenceTd"><span>/</span><span>programas</span><span>/{id}</span><span>/</span><span>reactivar</span></td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span>Reactiva </span><span>Programa</span></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><img src="images/icons/emoticons/error.svg" class="emoticon emoticon-cross" data-emoticon-name="cross" data-emoji-short-name=":cross:" alt="(error)" /></td>
+<td class="confluenceTd">HEAD</td>
+<td class="confluenceTd">/<span>programas</span>/{id}</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">HTTP 200 / HTTP 204</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Comprueba la existencia de la <span>Programa</span> con el id indicado</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">GET</td>
+<td class="confluenceTd">/<span>programas</span>/{id}</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span>Programa</span></td>
+<td class="confluenceTd">CSP-<span>PROG</span>-V</td>
+<td class="confluenceTd">Detalle de <span>Programa</span></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span>GET</span></td>
+<td class="confluenceTd">/programas</td>
+<td class="confluenceTd">q+s</td>
+<td class="confluenceTd">Lista[Programa]</td>
+<td class="confluenceTd"><span>CSP-</span><span>PROG</span><span>-V</span></td>
+<td class="confluenceTd">Listado de Programa (sólo devuelve los activos)</td>
+</tr>
+<tr class="even">
+<td colspan="7" class="highlight-blue confluenceTd" data-highlight-colour="blue"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">GET</td>
+<td class="confluenceTd">/programas/plan</td>
+<td class="confluenceTd">q+s</td>
+<td class="confluenceTd">Lista[Programa]</td>
+<td class="confluenceTd"><span>CSP-</span><span>PROG</span><span>-V</span></td>
+<td class="confluenceTd">Listado de Programas cuyo padre es null (son los Planes) (sólo devuelve los activos)</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">GET</td>
+<td class="confluenceTd">/programas/plan/todos</td>
+<td class="confluenceTd">q+s</td>
+<td class="confluenceTd">Lista[Programa]</td>
+<td class="confluenceTd"><span>CSP-</span><span>PROG</span><span>-V</span></td>
+<td class="confluenceTd">Listado de Programas cuyo padre es null (son los Planes) (devuelve todos)</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">GET</td>
+<td class="confluenceTd">/<span>programas</span>/{id}/hijos</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Lista[Programa]</td>
+<td class="confluenceTd"><p><span>CSP-</span><span>PROG</span><span>-V</span></p></td>
+<td class="confluenceTd">Listado de Programas hijos directos del Programa cuyo id se indica (sólo devuelve los activos)</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+## AreaTematica 
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable" style="width: 87.5281%;">
+<tbody>
+<tr class="header">
+<th class="confluenceTh"><br />
+</th>
+<th class="confluenceTh">Método</th>
+<th class="confluenceTh">URL</th>
+<th class="confluenceTh">Parámetros</th>
+<th class="confluenceTh">Respuesta</th>
+<th class="confluenceTh">Permisos</th>
+<th class="confluenceTh">Descripción</th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">POST</td>
+<td class="confluenceTd"><p>/areatematicas</p></td>
+<td class="confluenceTd">AreaTematica</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">CSP-AREA-C</td>
+<td class="confluenceTd">Crea <span>AreaTematica (un area temática que no tiene padre se considera una Grupo de Areas Temáticas)</span></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">PUT</td>
+<td class="confluenceTd">/<span>areatematicas</span>/{id}</td>
+<td class="confluenceTd"><span>AreaTematica</span></td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">CSP-AREA-E</td>
+<td class="confluenceTd">Modifica <span>AreaTematica</span></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">PATCH</td>
+<td class="confluenceTd">/<span>areatematicas</span>/{id}/desactivar</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">CSP-AREA-B</td>
+<td class="confluenceTd">Desactiva <span>AreaTematica</span></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">PATCH</td>
+<td class="confluenceTd">/<span>areatematicas</span>/{id}/reactivar</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Reactiva <span>AreaTematica</span></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><img src="images/icons/emoticons/error.svg" class="emoticon emoticon-cross" data-emoticon-name="cross" data-emoji-short-name=":cross:" alt="(error)" /></td>
+<td class="confluenceTd">HEAD</td>
+<td class="confluenceTd">/<span>areatematicas</span>/{id}</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">HTTP 200 / HTTP 204</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Comprueba la existencia de la <span>AreaTematica</span> con el id indicado</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">GET</td>
+<td class="confluenceTd">/<span>areatematicas</span>/{id}</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span>AreaTematica</span></td>
+<td class="confluenceTd">CSP-AREA-V</td>
+<td class="confluenceTd">Detalle de <span>AreaTematica<br />
+</span></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">GET</td>
+<td class="confluenceTd">/<span><span><span><span>areatematicas</span></span></span></span></td>
+<td class="confluenceTd">q+s</td>
+<td class="confluenceTd">Lista[<span>AreaTematica</span>]</td>
+<td class="confluenceTd"><span>CSP-AREA</span><span>-V</span></td>
+<td class="confluenceTd">Listado de <span><span><span><span>AreaTematica</span>  <span><span><span><span><span><span>(sólo devuelve los activos)</span></span></span></span></span></span><br />
+</span></span></span></td>
+</tr>
+<tr class="even">
+<td colspan="7" class="highlight-blue confluenceTd" data-highlight-colour="blue"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">GET</td>
+<td class="confluenceTd">/<span>areatematicas</span>/grupo</td>
+<td class="confluenceTd">q+s</td>
+<td class="confluenceTd">Lista[<span>AreaTematica</span>]</td>
+<td class="confluenceTd"><p>CSP-AREA-V</p></td>
+<td class="confluenceTd">Listado de <span>AreaTematica</span> cuyo padre es null (son los Grupos de Areas Temáticas) (solo devuelve los activos)<span><br />
+</span></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">GET</td>
+<td class="confluenceTd">/<span>areatematicas</span>/grupo/todos</td>
+<td class="confluenceTd">q+s</td>
+<td class="confluenceTd">Lista[<span>AreaTematica</span>]</td>
+<td class="confluenceTd"><p>CSP-AREA-V</p></td>
+<td class="confluenceTd">Listado de <span>AreaTematica</span> cuyo padre es null (son los Grupos de Areas Temáticas) (devuelve todos)<span><br />
+</span></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">GET</span></td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">/areatematicas/{id}/hijos</span></td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Lista[AreaTematica]</span></td>
+<td class="confluenceTd"><p><span style="color:var(--ds-text,#172b4d);">CSP-AREA-V</span></p>
+<p><br />
+</p></td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Listado de AreaTematica hijos directos del AreaTematica cuyo id se indica (sólo devuelve los activos)<br />
+</span></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+## ConvocatoriaAreaTematica 
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable" style="width: 87.5281%;">
+<tbody>
+<tr class="header">
+<th class="confluenceTh"><br />
+</th>
+<th class="confluenceTh">Método</th>
+<th class="confluenceTh">URL</th>
+<th class="confluenceTh">Parámetros</th>
+<th class="confluenceTh">Respuesta</th>
+<th class="confluenceTh">Permisos</th>
+<th class="confluenceTh">Descripción</th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">POST</td>
+<td class="confluenceTd"><p>/convocatoriaareatematicas</p></td>
+<td class="confluenceTd">ConvocatoriaAreaTematica</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">CSP-CATEM-C</td>
+<td class="confluenceTd">Crea <span>ConvocatoriaAreaTematica</span></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">PUT</td>
+<td class="confluenceTd">/<span>convocatoriaareatematicas</span>/{id}</td>
+<td class="confluenceTd"><span>ConvocatoriaAreaTematica</span></td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">CSP-CATEM-E</td>
+<td class="confluenceTd">Modifica <span>ConvocatoriaAreaTematica</span></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">DELETE</td>
+<td class="confluenceTd">/<span>convocatoriaareatematicas</span>/{id}</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">CSP-CATEM-B</td>
+<td class="confluenceTd">Elimina <span>ConvocatoriaAreaTematica</span></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><img src="images/icons/emoticons/error.svg" class="emoticon emoticon-cross" data-emoticon-name="cross" data-emoji-short-name=":cross:" alt="(error)" /></td>
+<td class="confluenceTd">HEAD</td>
+<td class="confluenceTd">/<span>convocatoriaareatematicas</span>/{id}</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">HTTP 200 / HTTP 204</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Comprueba la existencia de la <span>ConvocatoriaAreaTematica</span> con el id indicado</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">GET</td>
+<td class="confluenceTd">/<span>convocatoriaareatematicas</span>/{id}</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span>ConvocatoriaAreaTematica</span></td>
+<td class="confluenceTd">CSP-CATEM-V</td>
+<td class="confluenceTd">Detalle de <span>ConvocatoriaAreaTematica</span></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+## ConvocatoriaEntidadConvocante 
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable" style="width: 87.5281%;">
+<tbody>
+<tr class="header">
+<th class="confluenceTh"><br />
+</th>
+<th class="confluenceTh">Método</th>
+<th class="confluenceTh">URL</th>
+<th class="confluenceTh">Parámetros</th>
+<th class="confluenceTh">Respuesta</th>
+<th class="confluenceTh">Permisos</th>
+<th class="confluenceTh">Descripción</th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">POST</td>
+<td class="confluenceTd"><p>/convocatoriaentidadconvocantes</p></td>
+<td class="confluenceTd">ConvocatoriaEntidadConvocante</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">CSP-CECON-C</td>
+<td class="confluenceTd">Crea <span>ConvocatoriaEntidadConvocante</span></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">PUT</td>
+<td class="confluenceTd">/convocatoriaentidadconvocantes/{id}</td>
+<td class="confluenceTd"><span>ConvocatoriaEntidadConvocante</span></td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">CSP-CECON-E</td>
+<td class="confluenceTd">Modifica <span>ConvocatoriaEntidadConvocante</span></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">DELETE</td>
+<td class="confluenceTd">/convocatoriaentidadconvocantes/{id}</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">CSP-CECON-B</td>
+<td class="confluenceTd">Elimina <span>ConvocatoriaEntidadConvocante</span></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><img src="images/icons/emoticons/error.svg" class="emoticon emoticon-cross" data-emoticon-name="cross" data-emoji-short-name=":cross:" alt="(error)" /></td>
+<td class="confluenceTd">HEAD</td>
+<td class="confluenceTd">/<span>convocatoriaentidadconvocantes</span>/{id}</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">HTTP 200 / HTTP 204</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Comprueba la existencia de la <span>ConvocatoriaEntidadConvocante</span> con el id indicado</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">GET</td>
+<td class="confluenceTd">/convocatoriaentidadconvocantes/{id}</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span>ConvocatoriaEntidadConvocante</span></td>
+<td class="confluenceTd">CSP-CECON-V</td>
+<td class="confluenceTd">Detalle de <span>ConvocatoriaEntidadConvocante</span></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+## ConvocatoriaEntidadFinanciadora 
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable" style="width: 87.5281%;">
+<tbody>
+<tr class="header">
+<th class="confluenceTh"><br />
+</th>
+<th class="confluenceTh">Método</th>
+<th class="confluenceTh">URL</th>
+<th class="confluenceTh">Parámetros</th>
+<th class="confluenceTh">Respuesta</th>
+<th class="confluenceTh">Permisos</th>
+<th class="confluenceTh">Descripción</th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">POST</td>
+<td class="confluenceTd"><p>/convocatoriaentidadfinanciadoras</p></td>
+<td class="confluenceTd">ConvocatoriaEntidadFinanciadora</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">CSP-CEFIN-C</td>
+<td class="confluenceTd">Crea <span>ConvocatoriaEntidadFinanciadora</span></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">PUT</td>
+<td class="confluenceTd">/convocatoriaentidadfinanciadoras/{id}</td>
+<td class="confluenceTd"><span>ConvocatoriaEntidadFinanciadora</span></td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">CSP-CEFIN-E</td>
+<td class="confluenceTd">Modifica <span>ConvocatoriaEntidadFinanciadora</span></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">DELETE</td>
+<td class="confluenceTd">/convocatoriaentidadfinanciadoras/{id}</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">CSP-CEFIN-B</td>
+<td class="confluenceTd">Elimina <span>ConvocatoriaEntidadFinanciadora</span></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><img src="images/icons/emoticons/error.svg" class="emoticon emoticon-cross" data-emoticon-name="cross" data-emoji-short-name=":cross:" alt="(error)" /></td>
+<td class="confluenceTd">HEAD</td>
+<td class="confluenceTd">/<span>convocatoriaentidadfinanciadoras</span>/{id}</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">HTTP 200 / HTTP 204</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Comprueba la existencia de la <span>ConvocatoriaEntidadFinanciadora</span> con el id indicado</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">GET</td>
+<td class="confluenceTd">/convocatoriaentidadfinanciadoras/{id}</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span>ConvocatoriaEntidadFinanciadora</span></td>
+<td class="confluenceTd">CSP-CEFIN-V</td>
+<td class="confluenceTd">Detalle de <span>ConvocatoriaEntidadFinanciadora</span></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+## ConvocatoriaEnlace 
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable" style="width: 87.5281%;">
+<tbody>
+<tr class="header">
+<th class="confluenceTh"><br />
+</th>
+<th class="confluenceTh">Método</th>
+<th class="confluenceTh">URL</th>
+<th class="confluenceTh">Parámetros</th>
+<th class="confluenceTh">Respuesta</th>
+<th class="confluenceTh">Permisos</th>
+<th class="confluenceTh">Descripción</th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">POST</td>
+<td class="confluenceTd"><p>/convocatoriaenlaces</p></td>
+<td class="confluenceTd">ConvocatoriaEnlace</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">CSP-CENL-C</td>
+<td class="confluenceTd">Crea <span>ConvocatoriaEnlace</span></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">PUT</td>
+<td class="confluenceTd">/convocatoriaenlaces/{id}</td>
+<td class="confluenceTd"><span>ConvocatoriaEnlace</span></td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">CSP-CENL-E</td>
+<td class="confluenceTd">Modifica <span>ConvocatoriaEnlace</span></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">DELETE</td>
+<td class="confluenceTd">/convocatoriaenlaces/{id}</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">CSP-CENL-B</td>
+<td class="confluenceTd">Elimina <span>ConvocatoriaEnlace</span></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><img src="images/icons/emoticons/error.svg" class="emoticon emoticon-cross" data-emoticon-name="cross" data-emoji-short-name=":cross:" alt="(error)" /></td>
+<td class="confluenceTd">HEAD</td>
+<td class="confluenceTd">/<span>convocatoriaenlaces</span>/{id}</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">HTTP 200 / HTTP 204</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Comprueba la existencia de la <span>ConvocatoriaEnlace</span> con el id indicado</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">GET</td>
+<td class="confluenceTd">/convocatoriaenlaces/{id}</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span>ConvocatoriaEnlace</span></td>
+<td class="confluenceTd">CSP-CENL-V</td>
+<td class="confluenceTd">Detalle de <span>ConvocatoriaEnlace</span></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+## ConvocatoriaFase 
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable" style="width: 87.5281%;">
+<tbody>
+<tr class="header">
+<th class="confluenceTh"><br />
+</th>
+<th class="confluenceTh">Método</th>
+<th class="confluenceTh">URL</th>
+<th class="confluenceTh">Parámetros</th>
+<th class="confluenceTh">Respuesta</th>
+<th class="confluenceTh">Permisos</th>
+<th class="confluenceTh">Descripción</th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">POST</td>
+<td class="confluenceTd"><p>/convocatoriafases</p></td>
+<td class="confluenceTd">ConvocatoriaFase</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">CSP-CFAS-C</td>
+<td class="confluenceTd">Crea <span>ConvocatoriaFase</span></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">PUT</td>
+<td class="confluenceTd">/convocatoriafases/{id}</td>
+<td class="confluenceTd"><span>ConvocatoriaFase</span></td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">CSP-CFAS-E</td>
+<td class="confluenceTd">Modifica <span>ConvocatoriaFase</span></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">DELETE</td>
+<td class="confluenceTd">/convocatoriafases/{id}</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">CSP-CFAS-B</td>
+<td class="confluenceTd">Elimina <span>ConvocatoriaFase</span></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><img src="images/icons/emoticons/error.svg" class="emoticon emoticon-cross" data-emoticon-name="cross" data-emoji-short-name=":cross:" alt="(error)" /></td>
+<td class="confluenceTd">HEAD</td>
+<td class="confluenceTd">/<span>convocatoriafases</span>/{id}</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">HTTP 200 / HTTP 204</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Comprueba la existencia de la <span>ConvocatoriaFase</span> con el id indicado</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">GET</td>
+<td class="confluenceTd">/convocatoriafases/{id}</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span>ConvocatoriaFase</span></td>
+<td class="confluenceTd">CSP-CFAS-V</td>
+<td class="confluenceTd">Detalle de <span>ConvocatoriaFase</span></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+## ConvocatoriaPeriodoJustificacion 
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable" style="width: 87.5281%;">
+<tbody>
+<tr class="header">
+<th class="confluenceTh"><br />
+</th>
+<th class="confluenceTh">Método</th>
+<th class="confluenceTh">URL</th>
+<th class="confluenceTh">Parámetros</th>
+<th class="confluenceTh">Respuesta</th>
+<th class="confluenceTh">Permisos</th>
+<th class="confluenceTh">Descripción</th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">PATCH</td>
+<td class="confluenceTd">/convocatoriaperiodojustificaciones/{idConvocatoria}</td>
+<td class="confluenceTd"><span>Lista[ConvocatoriaPeriodoJustificacion]</span></td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">CSP-CPJUS-E</td>
+<td class="confluenceTd">Actualiza la lista de <span>ConvocatoriaPeriodoJustificacion de la Convocatoria con la lista pasada como parámetro (crea, actualiza y/o elimina según corresponda).</span></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><img src="images/icons/emoticons/error.svg" class="emoticon emoticon-cross" data-emoticon-name="cross" data-emoji-short-name=":cross:" alt="(error)" /></td>
+<td class="confluenceTd">HEAD</td>
+<td class="confluenceTd">/<span>convocatoriaperiodojustificaciones</span>/{id}</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">HTTP 200 / HTTP 204</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Comprueba la existencia de la <span>ConvocatoriaPeriodoJustificacion</span> con el id indicado</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">GET</td>
+<td class="confluenceTd">/convocatoriaperiodojustificaciones/{id}</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span>ConvocatoriaPeriodoJustificacion</span></td>
+<td class="confluenceTd">CSP-CPJUS-V</td>
+<td class="confluenceTd">Detalle de <span>ConvocatoriaPeriodoJustificacion</span></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+## ConvocatoriaPeriodoSeguimientoCientifico 
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable" style="width: 87.5281%;">
+<tbody>
+<tr class="header">
+<th class="confluenceTh"><br />
+</th>
+<th class="confluenceTh">Método</th>
+<th class="confluenceTh">URL</th>
+<th class="confluenceTh">Parámetros</th>
+<th class="confluenceTh">Respuesta</th>
+<th class="confluenceTh">Permisos</th>
+<th class="confluenceTh">Descripción</th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">PATCH</td>
+<td class="confluenceTd">/convocatoriaperiodoseguimientocientificos/{idConvocatoria}</td>
+<td class="confluenceTd"><span>Lista[ConvocatoriaPeriodoSeguimientoCientifico]</span></td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">CSP-CPSCI-E</td>
+<td class="confluenceTd"><span>Actualiza la lista de <span>ConvocatoriaPeriodoSeguimientoCientifico </span></span><span>de la Convocatoria con la lista pasada como parámetro (crea, actualiza y/o elimina según corresponda).</span></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><img src="images/icons/emoticons/error.svg" class="emoticon emoticon-cross" data-emoticon-name="cross" data-emoji-short-name=":cross:" alt="(error)" /></td>
+<td class="confluenceTd">HEAD</td>
+<td class="confluenceTd">/<span>convocatoriaperiodoseguimientocientificos</span>/{id}</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">HTTP 200 / HTTP 204</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Comprueba la existencia de la <span>ConvocatoriaPeriodoSeguimientoCientifico</span> con el id indicado</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">GET</td>
+<td class="confluenceTd">/convocatoriaperiodoseguimientocientificos/{id}</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span>ConvocatoriaPeriodoSeguimientoCientifico</span></td>
+<td class="confluenceTd">CSP-CPSCI-V</td>
+<td class="confluenceTd">Detalle de <span>ConvocatoriaPeriodoSeguimientoCientifico</span></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+## ConvocatoriaHito 
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable" style="width: 87.5281%;">
+<tbody>
+<tr class="header">
+<th class="confluenceTh"><br />
+</th>
+<th class="confluenceTh">Método</th>
+<th class="confluenceTh">URL</th>
+<th class="confluenceTh">Parámetros</th>
+<th class="confluenceTh">Respuesta</th>
+<th class="confluenceTh">Permisos</th>
+<th class="confluenceTh">Descripción</th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">POST</td>
+<td class="confluenceTd"><p>/convocatoriahitos</p></td>
+<td class="confluenceTd">ConvocatoriaHito</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">CSP-CHIT-C</td>
+<td class="confluenceTd">Crea <span>ConvocatoriaHito</span></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">PUT</td>
+<td class="confluenceTd">/convocatoriahitos/{id}</td>
+<td class="confluenceTd"><span>ConvocatoriaHito</span></td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">CSP-CHIT-E</td>
+<td class="confluenceTd">Modifica <span>ConvocatoriaHito</span></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">DELETE</td>
+<td class="confluenceTd">/convocatoriahitos/{id}</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">CSP-CHIT-B</td>
+<td class="confluenceTd">Elimina <span>ConvocatoriaHito</span></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><img src="images/icons/emoticons/error.svg" class="emoticon emoticon-cross" data-emoticon-name="cross" data-emoji-short-name=":cross:" alt="(error)" /></td>
+<td class="confluenceTd">HEAD</td>
+<td class="confluenceTd">/<span>convocatoriahitos</span>/{id}</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">HTTP 200 / HTTP 204</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Comprueba la existencia de la <span>ConvocatoriaHito</span> con el id indicado</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">GET</td>
+<td class="confluenceTd">/convocatoriahitos/{id}</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span>ConvocatoriaHito</span></td>
+<td class="confluenceTd">CSP-CHIT-V</td>
+<td class="confluenceTd">Detalle de <span>ConvocatoriaHito</span></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+## ConvocatoriaDocumento 
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable">
+<tbody>
+<tr class="header">
+<th class="confluenceTh"><br />
+</th>
+<th class="confluenceTh">Método</th>
+<th class="confluenceTh">URL</th>
+<th class="confluenceTh">Parámetros</th>
+<th class="confluenceTh">Respuesta</th>
+<th class="confluenceTh">Permisos</th>
+<th class="confluenceTh">Descripción</th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">POST</td>
+<td class="confluenceTd"><p>/convocatoriadocumentos</p></td>
+<td class="confluenceTd">ConvocatoriaDocumento</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Crea <span>ConvocatoriaDocumento</span></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">PUT</td>
+<td class="confluenceTd">/convocatoriadocumentos/{id}</td>
+<td class="confluenceTd"><span>ConvocatoriaDocumento</span></td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Modifica <span>ConvocatoriaDocumento</span></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">DELETE</td>
+<td class="confluenceTd">/convocatoriadocumentos/{id}</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Elimina <span>ConvocatoriaDocumento</span></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><img src="images/icons/emoticons/error.svg" class="emoticon emoticon-cross" data-emoticon-name="cross" data-emoji-short-name=":cross:" alt="(error)" /></td>
+<td class="confluenceTd">HEAD</td>
+<td class="confluenceTd">/<span>convocatoriadocumentos</span>/{id}</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">HTTP 200 / HTTP 204</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Comprueba la existencia de la <span>ConvocatoriaDocumento</span> con el id indicado</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">GET</td>
+<td class="confluenceTd">/convocatoriadocumentos/{id}</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span>ConvocatoriaDocumento</span></td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Detalle de <span>ConvocatoriaDocumento</span></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+## RequisitoIp 
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable" style="width: 53.2682%;">
+<colgroup>
+<col />
+<col style="width: 9%" />
+<col style="width: 32%" />
+<col style="width: 13%" />
+<col style="width: 12%" />
+<col style="width: 11%" />
+<col style="width: 20%" />
+</colgroup>
+<tbody>
+<tr class="header">
+<th class="confluenceTh"><br />
+</th>
+<th class="confluenceTh">Método</th>
+<th class="confluenceTh">URL</th>
+<th class="confluenceTh">Parámetros</th>
+<th class="confluenceTh">Respuesta</th>
+<th class="confluenceTh">Permisos</th>
+<th class="confluenceTh">Descripción</th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">POST</td>
+<td class="confluenceTd"><p>/convocatoria-requisitoips</p></td>
+<td class="confluenceTd">RequisitoIp</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Crea <span>RequisitoIp</span></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">PUT</td>
+<td class="confluenceTd"><p>/convocatoria-requisitoips/{id}</p></td>
+<td class="confluenceTd"><span>Convocatoria</span></td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Modifica <span>RequisitoIp</span></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><img src="images/icons/emoticons/error.svg" class="emoticon emoticon-cross" data-emoticon-name="cross" data-emoji-short-name=":cross:" alt="(error)" /></td>
+<td class="confluenceTd">HEAD</td>
+<td class="confluenceTd">/<span>convocatoria-requisitoips</span>/{id}</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">HTTP 200 / HTTP 204</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Comprueba la existencia de la <span>RequisitoIp</span> con el id indicado</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">GET</td>
+<td class="confluenceTd"><p>/convocatoria-requisitoips/{id}</p></td>
+<td class="confluenceTd"><span>Convocatoria</span></td>
+<td class="confluenceTd"><span>RequisitoIp</span></td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Detalle <span>RequisitoIp</span></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+## RequisitoEquipo 
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable">
+<tbody>
+<tr class="header">
+<th class="confluenceTh"><br />
+</th>
+<th class="confluenceTh">Método</th>
+<th class="confluenceTh">URL</th>
+<th class="confluenceTh">Parámetros</th>
+<th class="confluenceTh">Respuesta</th>
+<th class="confluenceTh">Permisos</th>
+<th class="confluenceTh">Descripción</th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">POST</td>
+<td class="confluenceTd"><p>/convocatoria-requisitoequipos</p></td>
+<td class="confluenceTd">RequisitoEquipo</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Crea <span>RequisitoEquipo</span></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">PUT</td>
+<td class="confluenceTd">/convocatoria-requisitoequipos/{id}</td>
+<td class="confluenceTd"><span><span>Convocatoria</span></span></td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Modifica <span>RequisitoEquipo</span></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><img src="images/icons/emoticons/error.svg" class="emoticon emoticon-cross" data-emoticon-name="cross" data-emoji-short-name=":cross:" alt="(error)" /></td>
+<td class="confluenceTd">HEAD</td>
+<td class="confluenceTd">/<span>convocatoria-requisitoequipos</span>/{id}</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">HTTP 200 / HTTP 204</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Comprueba la existencia de la <span>RequisitoEquipo</span> con el id indicado</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">GET</td>
+<td class="confluenceTd"><p>/convocatoria-requisitoequipos/{id}</p></td>
+<td class="confluenceTd"><span>Convocatoria</span></td>
+<td class="confluenceTd"><span><span>RequisitoEquipo</span></span></td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Detalle <span><span>RequisitoEquipo</span></span></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+## ConvocatoriaConceptoGasto 
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable">
+<tbody>
+<tr class="header">
+<th class="confluenceTh"><br />
+</th>
+<th class="confluenceTh">Método</th>
+<th class="confluenceTh">URL</th>
+<th class="confluenceTh">Parámetros</th>
+<th class="confluenceTh">Respuesta</th>
+<th class="confluenceTh">Permisos</th>
+<th class="confluenceTh">Descripción</th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">POST</td>
+<td class="confluenceTd"><p>/convocatoriaconceptogastos</p></td>
+<td class="confluenceTd">ConvocatoriaConceptoGasto</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Crea <span>ConvocatoriaConceptoGasto</span></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">PUT</td>
+<td class="confluenceTd">/convocatoriaconceptogastos/{id}</td>
+<td class="confluenceTd"><span>ConvocatoriaConceptoGasto</span></td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Modifica <span>ConvocatoriaConceptoGasto</span></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">DELETE</td>
+<td class="confluenceTd">/convocatoriaconceptogastos/{id}</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Elimina <span>ConvocatoriaConceptoGasto</span></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><img src="images/icons/emoticons/error.svg" class="emoticon emoticon-cross" data-emoticon-name="cross" data-emoji-short-name=":cross:" alt="(error)" /></td>
+<td class="confluenceTd">HEAD</td>
+<td class="confluenceTd">/<span>convocatoriaconceptogastos</span>/{id}</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">HTTP 200 / HTTP 204</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Comprueba la existencia de la <span>ConvocatoriaConceptoGasto</span> con el id indicado</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">GET</td>
+<td class="confluenceTd">/convocatoriaconceptogastos/{id}</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span>ConvocatoriaConceptoGasto</span></td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Detalle de <span>ConvocatoriaConceptoGasto</span></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+## ConvocatoriaConceptoGastoCodigoEc 
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable">
+<tbody>
+<tr class="header">
+<th class="confluenceTh"><br />
+</th>
+<th class="confluenceTh">Método</th>
+<th class="confluenceTh">URL</th>
+<th class="confluenceTh">Parámetros</th>
+<th class="confluenceTh">Respuesta</th>
+<th class="confluenceTh">Permisos</th>
+<th class="confluenceTh">Descripción</th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">POST</td>
+<td class="confluenceTd"><p>/convocatoriaconceptogastocodigoecs</p></td>
+<td class="confluenceTd">ConvocatoriaConceptoGastoCodigoEc</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Crea <span>ConvocatoriaConceptoGastoCodigoEc</span></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">PUT</td>
+<td class="confluenceTd">/convocatoriaconceptogastocodigoecs/{id}</td>
+<td class="confluenceTd"><span>ConvocatoriaConceptoGastoCodigoEc</span></td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Modifica <span>ConvocatoriaConceptoGastoCodigoEc</span></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">DELETE</td>
+<td class="confluenceTd">/convocatoriaconceptogastocodigoecs/{id}</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Elimina <span>ConvocatoriaConceptoGastoCodigoEc</span></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><img src="images/icons/emoticons/error.svg" class="emoticon emoticon-cross" data-emoticon-name="cross" data-emoji-short-name=":cross:" alt="(error)" /></td>
+<td class="confluenceTd">HEAD</td>
+<td class="confluenceTd">/<span>convocatoriaconceptogastocodigoecs</span>/{id}</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">HTTP 200 / HTTP 204</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Comprueba la existencia de la <span>ConvocatoriaConceptoGastoCodigoEc</span> con el id indicado</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">GET</td>
+<td class="confluenceTd">/convocatoriaconceptogastocodigoecs/{id}</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span>ConvocatoriaConceptoGastoCodigoEc</span></td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Detalle de <span>ConvocatoriaConceptoGastoCodigoEc</span></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+## DocumentoRequeridoSolicitud 
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable">
+<tbody>
+<tr class="header">
+<th class="confluenceTh"><br />
+</th>
+<th class="confluenceTh">Método</th>
+<th class="confluenceTh">URL</th>
+<th class="confluenceTh">Parámetros</th>
+<th class="confluenceTh">Respuesta</th>
+<th class="confluenceTh">Permisos</th>
+<th class="confluenceTh">Descripción</th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">POST</td>
+<td class="confluenceTd">/documentorequiridosolicitudes</td>
+<td class="confluenceTd">DocumentoRequeridoSolicitud</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Crea <span>DocumentoRequeridoSolicitud</span></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">PUT</td>
+<td class="confluenceTd">/documentorequiridosolicitudes/{id}</td>
+<td class="confluenceTd"><span>DocumentoRequeridoSolicitud</span></td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Modifica <span>DocumentoRequeridoSolicitud</span></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">DELETE</td>
+<td class="confluenceTd">/documentorequiridosolicitudes/{id}</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Elimina <span>DocumentoRequeridoSolicitud</span></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><img src="images/icons/emoticons/error.svg" class="emoticon emoticon-cross" data-emoticon-name="cross" data-emoji-short-name=":cross:" alt="(error)" /></td>
+<td class="confluenceTd">HEAD</td>
+<td class="confluenceTd">/<span>documentorequiridosolicitudes</span>/{id}</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">HTTP 200 / HTTP 204</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Comprueba la existencia de la <span>DocumentoRequeridoSolicitud</span> con el id indicado</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">GET</td>
+<td class="confluenceTd">/documentorequiridosolicitudes/{id}</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span>DocumentoRequeridoSolicitud</span></td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Detalle de <span>DocumentoRequeridoSolicitud</span></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+## ConfiguracionSolicitud 
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable">
+<tbody>
+<tr class="header">
+<th class="confluenceTh"><br />
+</th>
+<th class="confluenceTh">Método</th>
+<th class="confluenceTh">URL</th>
+<th class="confluenceTh">Parámetros</th>
+<th class="confluenceTh">Respuesta</th>
+<th class="confluenceTh">Permisos</th>
+<th class="confluenceTh">Descripción</th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">POST</td>
+<td class="confluenceTd"><p>/convocatoria-configuracionsolicitudes</p></td>
+<td class="confluenceTd">ConfiguracionSolicitud</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Crea <span>ConfiguracionSolicitud</span></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">PUT</td>
+<td class="confluenceTd">/convocatoria-configuracionsolicitudes/{id}</td>
+<td class="confluenceTd"><span><span>Convocatoria</span></span></td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Modifica <span>ConfiguracionSolicitud</span></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><img src="images/icons/emoticons/error.svg" class="emoticon emoticon-cross" data-emoticon-name="cross" data-emoji-short-name=":cross:" alt="(error)" /></td>
+<td class="confluenceTd">HEAD</td>
+<td class="confluenceTd">/<span>convocatoria-configuracionsolicitudes</span>/{id}</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">HTTP 200 / HTTP 204</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Comprueba la existencia de la <span>ConfiguracionSolicitud</span> con el id indicado</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">GET</td>
+<td class="confluenceTd"><p>/convocatoria-configuracionsolicitudes/{id}</p></td>
+<td class="confluenceTd"><span>Convocatoria</span></td>
+<td class="confluenceTd"><span><span><span>ConfiguracionSolicitud</span></span></span></td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Detalle <span><span><span>ConfiguracionSolicitud</span></span></span></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">GET</td>
+<td class="confluenceTd">/convocatoria-configuracionsolicitudes/{id}/documentorequiridosolicitudes</td>
+<td class="confluenceTd"><span>Convocatoria</span></td>
+<td class="confluenceTd">Listado[DocumentoRequeridoSolicitud]</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Listado DocumentoRequeridoSolicitud de una ConfiguracionSolicitud</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+## Convocatoria 
+
+<span style="color:var(--ds-background-accent-red-bolder,#c9372c);">FALTA AÑADIR VALIDACIÓN DE QUE NO EXISTAN SOLICITUDES ASOCIADAS O PROYECTOS (update y delete)</span>
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable" style="width: 100.0%;">
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 29%" />
+<col style="width: 7%" />
+<col style="width: 25%" />
+<col style="width: 6%" />
+<col style="width: 25%" />
+</colgroup>
+<tbody>
+<tr class="header">
+<th class="confluenceTh">Método</th>
+<th class="confluenceTh">URL</th>
+<th class="confluenceTh">Parámetros</th>
+<th class="confluenceTh">Respuesta</th>
+<th class="confluenceTh">Permisos</th>
+<th class="confluenceTh">Descripción</th>
+</tr>
+&#10;<tr class="odd">
+<th class="confluenceTd">POST</th>
+<td class="confluenceTd"><p>/convocatorias</p></td>
+<td class="confluenceTd">Convocatoria</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">CSP-CONV-C</td>
+<td class="confluenceTd">Crea <span>Convocatoria</span></td>
+</tr>
+<tr class="even">
+<th class="confluenceTd">PUT</th>
+<td class="confluenceTd">/<span>convocatorias</span>/{id}</td>
+<td class="confluenceTd"><span>Convocatoria</span></td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">CSP-<span>CONV</span>-E</td>
+<td class="confluenceTd">Modifica <span>Convocatoria</span></td>
+</tr>
+<tr class="odd">
+<th class="confluenceTd">PATCH</th>
+<td class="confluenceTd">/<span>convocatorias</span>/{id}/desactivar</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Desactiva C<span>onvocatoria</span></td>
+</tr>
+<tr class="even">
+<th class="confluenceTd">PATCH</th>
+<td class="confluenceTd">/<span>convocatorias</span>/{id}/reactivar</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Reactiva C<span>onvocatoria</span></td>
+</tr>
+<tr class="odd">
+<th class="confluenceTd">HEAD</th>
+<td class="confluenceTd">/<span>convocatorias</span>/{id}</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">HTTP 200 / HTTP 204</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Comprueba la existencia de la <span>C</span><span>onvocatoria</span> con el id indicado</td>
+</tr>
+<tr class="even">
+<th class="confluenceTd">GET</th>
+<td class="confluenceTd">/<span>convocatorias</span>/{id}</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span>Convocatoria</span></td>
+<td class="confluenceTd">CSP-<span>CONV</span>-V</td>
+<td class="confluenceTd">Detalle de <span>Convocatoria</span></td>
+</tr>
+<tr class="odd">
+<th class="confluenceTd">GET</th>
+<td class="confluenceTd">/<span>convocatorias</span></td>
+<td class="confluenceTd"><span class="inline-comment-marker" data-ref="9f244e40-9c29-4a3c-9bf1-d1cf6b60aedc">q+s</span></td>
+<td class="confluenceTd">Lista[<span>Convocatoria</span>]</td>
+<td class="confluenceTd">CSP-<span>CONV</span>-V</td>
+<td class="confluenceTd">Listado de <span>Convocatoria <span>(sólo devuelve los activos)</span></span></td>
+</tr>
+<tr class="even">
+<th class="confluenceTd">GET</th>
+<td class="confluenceTd">/convocatorias/todos</td>
+<td class="confluenceTd">q+s</td>
+<td class="confluenceTd">Lista[Convocatoria]</td>
+<td class="confluenceTd">CSP-CONV-V</td>
+<td class="confluenceTd">Listado de Convocatoria (devuelve todos)</td>
+</tr>
+<tr class="odd">
+<th class="confluenceTd">GET</th>
+<td class="confluenceTd"><span>/convocatorias/restringidos</span></td>
+<td class="confluenceTd"><span>q+s</span></td>
+<td class="confluenceTd"><span>Lista[Convocatoria]</span></td>
+<td class="confluenceTd"><span>CSP-CONV-V</span></td>
+<td class="confluenceTd"><span>Listado de Convocatoria (devuelve <span>los activos</span> restringidos por las unidades de gestión del usuario logueado)</span></td>
+</tr>
+<tr class="even">
+<th class="confluenceTd"><span>GET</span></th>
+<td class="confluenceTd"><span>/convocatorias/todos/restringidos</span></td>
+<td class="confluenceTd"><span>q+s</span></td>
+<td class="confluenceTd"><span>Lista[Convocatoria]</span></td>
+<td class="confluenceTd"><span>CSP-CONV-V</span></td>
+<td class="confluenceTd"><span>Listado de Convocatoria (devuelve todos restringidos por las unidades de gestión del usuario logueado)</span></td>
+</tr>
+<tr class="odd">
+<th class="confluenceTd">PATCH</th>
+<td class="confluenceTd"><p><strong> </strong>/convocatorias/{id}/registrar</p></td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Registra la Convocatoria</td>
+</tr>
+<tr class="even">
+<th class="confluenceTd">HEAD</th>
+<td class="confluenceTd">/convocatorias/{id}/vinculaciones</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><div style="font-family: &quot;Segoe UI&quot; , system-ui , &quot;Apple Color Emoji&quot; , &quot;Segoe UI Emoji&quot; , sans-serif;white-space: normal;">
+HTTP 200 → si la convocatoria tiene enlaces, fases, hitos o documentos vinculados
+</div>
+<div style="font-family: &quot;Segoe UI&quot; , system-ui , &quot;Apple Color Emoji&quot; , &quot;Segoe UI Emoji&quot; , sans-serif;white-space: normal;">
+HTTP 204 → si la convocatoria no tiene enlaces, fases, hitos o documentos vinculados
+</div></td>
+<td class="confluenceTd">CSP-CONV-V</td>
+<td class="confluenceTd">Identificar si la convocatoria cuenta con enlaces, fases, hitos o documentos vinculados con el fin de permitir la edición de ciertos campos en los datos generales de la convocatoria.</td>
+</tr>
+<tr class="odd">
+<th class="confluenceTd">HEAD</th>
+<td class="confluenceTd">/convocatorias/{id}/modificable</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><p>HTTP 200 →Si tiene permisos (CSP-CONV-C o CSP-CONV-C_[unidadRef de laconvocatoria]) y la convocatoria no está registrada y si lo está no tiene Solicitudes o Proyectos por lo tanto SI es modificable.<br />
+HTTP 204 →Si no tiene permisos (CSP-CONV-C o CSP-CONV-C_[unidadRef de laconvocatoria]) o la convocatoria está registrada y tiene Solicitudes o Proyectos.</p></td>
+<td class="confluenceTd">CSP-CONV-V</td>
+<td class="confluenceTd">Identificar si la convocatoria es modificable comprobando los permisos y si existen solicitudes o proyectos vinculados a la convocatoria con el fin de permitir la creación, modificación o eliminación de ciertas entidades relacionadas con la propia convocatoria.</td>
+</tr>
+<tr class="even">
+<th class="confluenceTd">GET</th>
+<td class="confluenceTd"><span>/convocatorias/{id}/unidadgestion</span></td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">unidadGestionRef</td>
+<td class="confluenceTd"><span>CSP-CONV-V</span></td>
+<td class="confluenceTd"><span><span>UnidadGestionRef asignada a la </span></span><span>Convocatoria</span></td>
+</tr>
+<tr class="odd">
+<th class="confluenceTd">GET</th>
+<td class="confluenceTd"><span>/convocatorias/{id}/modeloejecucion</span></td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">ModeloEjecucion</td>
+<td class="confluenceTd"><span>CSP-CONV-V</span></td>
+<td class="confluenceTd"><span>ModeloEjecucion asignado a la </span><span>Convocatoria</span></td>
+</tr>
+<tr class="even">
+<th class="confluenceTd">HEAD</th>
+<td class="confluenceTd"><span>/convocatorias/{id}/registrable</span></td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><p>HTTP 200 → si la convocatoria cumple las condiciones para pasar a estado registrada.<br />
+HTTP 204 →si la convocatoria no cumple las condiciones para pasar a estado registrada.</p></td>
+<td class="confluenceTd"><span>CSP-CONV-V</span></td>
+<td class="confluenceTd">Identificar si la convocatoria cumple las condiciones para poder pasar a estado registrada.</td>
+</tr>
+<tr class="odd">
+<th class="highlight-blue confluenceTh" data-highlight-colour="blue"><br />
+</th>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<th class="confluenceTd">GET</th>
+<td class="confluenceTd">/convocatorias/{id}/convocatoriaentidadgestoras</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Listado[CovocatoriaEntidadGestora]</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Listado CovocatoriaEntidadGestora de una convocatoria </td>
+</tr>
+<tr class="odd">
+<th class="confluenceTd">GET</th>
+<td class="confluenceTd">/convocatorias/{id}/convocatoriaareatematicas</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Listado[ConvocatoriaAreatematica]</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Listado ConvocatoriaAreatematica de una convocatoria</td>
+</tr>
+<tr class="even">
+<th class="confluenceTd">GET</th>
+<td class="confluenceTd">/convocatorias/{id}/convocatoriaentidadconvocantes</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Listado[<span>ConvocatoriaEntidadConvocante</span>]</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Listado <span>ConvocatoriaEntidadConvocante</span> de una convocatoria</td>
+</tr>
+<tr class="odd">
+<th class="confluenceTd">GET</th>
+<td class="confluenceTd">/convocatorias/{id}/convocatoriaentidadfinanciadoras</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Listado[<span>ConvocatoriaEntidadFinanciadora</span>]</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Listado <span>ConvocatoriaEntidadFinanciadora</span> de una convocatoria</td>
+</tr>
+<tr class="even">
+<th class="confluenceTd">GET</th>
+<td class="confluenceTd">/convocatorias/{id}/convocatoriaenlaces</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Listado[<span>ConvocatoriaEnlace</span>]</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Listado <span>ConvocatoriaEnlace</span> de una convocatoria </td>
+</tr>
+<tr class="odd">
+<th class="confluenceTd">GET</th>
+<td class="confluenceTd">/convocatorias/{id}/convocatoriafases</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Listado[<span>ConvocatoriaFase</span>]</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Listado <span>ConvocatoriaFase</span> de una convocatori</td>
+</tr>
+<tr class="even">
+<th class="confluenceTd">GET</th>
+<td class="confluenceTd">/convocatorias/{id}/convocatoriaperiodojustificaciones</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Listado[<span>ConvocatoriaPeriodoJustificacion</span>]</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Listado <span>ConvocatoriaPeriodoJustificacion </span>de una convocatoria </td>
+</tr>
+<tr class="odd">
+<th class="confluenceTd">GET</th>
+<td class="confluenceTd">/convocatorias/{id}/convocatoriaperiodoseguimientocientificos</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Listado[<span>ConvocatoriaPeriodoSeguimientoCientifico</span>]</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Listado <span>ConvocatoriaPeriodoSeguimientoCientifico</span> de una convocatoria</td>
+</tr>
+<tr class="even">
+<th class="confluenceTd">GET</th>
+<td class="confluenceTd">/convocatorias/{id}/convocatoriahitos</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Listado[<span>ConvocatoriaHito</span>]</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Listado <span>ConvocatoriaHito</span> de una convocatoria </td>
+</tr>
+<tr class="odd">
+<th class="confluenceTd">GET</th>
+<td class="confluenceTd">/convocatorias/{id}/convocatoriadocumentos</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Listado[<span>ConvocatoriaDocumento</span>]</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Listado <span>ConvocatoriaDocumento</span> de una convocatoria</td>
+</tr>
+<tr class="even">
+<th class="confluenceTd">GET</th>
+<td class="confluenceTd">/convocatorias/{id}/convocatoriagastos/permitidos</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Listado[<span>ConvocatoriaGasto</span>]</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Listado <span>ConvocatoriaGasto permitidos</span> de una convocatoria</td>
+</tr>
+<tr class="odd">
+<th class="confluenceTd">GET</th>
+<td class="confluenceTd">/convocatorias/{id}/convocatoriagastos/nopermitidos</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Listado[<span>ConvocatoriaGasto</span>]</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Listado <span>ConvocatoriaGasto no permitidos</span> de una convocatoria</td>
+</tr>
+<tr class="even">
+<th class="confluenceTd">GET</th>
+<td class="confluenceTd">/convocatorias/{id}/convocatoriagastocodigoec/permitidos</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Listado[<span>ConvocatoriaGastoCodigoEc</span>]</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Listado <span><span>ConvocatoriaGastoCodigoEc</span> permitidos</span> de una convocatoria</td>
+</tr>
+<tr class="odd">
+<th class="confluenceTd">GET</th>
+<td class="confluenceTd">/convocatorias/{id}/convocatoriagastocodigoec/nopermitidos</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Listado[<span>ConvocatoriaGastoCodigoEc</span>]</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Listado <span><span>ConvocatoriaGastoCodigoEc</span> no permitidos</span> de una convocatoria</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+<div style="font-family: &quot;Segoe UI&quot; , system-ui , &quot;Apple Color Emoji&quot; , &quot;Segoe UI Emoji&quot; , sans-serif;">
+
+**HEAD /convocatorias/{id}/vinculados** --\> Devuevle **HTTP 200** si la convocatoria tiene **Enlaces**, **Plazos y fases**, **Hitos** o **Documentos** vinculados y **HTTP 204** si no tiene
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div id="footer" role="contentinfo">
+
+<div class="section footer-body">
+
+Document generated by Confluence on oct 27, 2025 08:52
+
+<div id="footer-logo">
+
+[Atlassian](https://www.atlassian.com/)
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 
 

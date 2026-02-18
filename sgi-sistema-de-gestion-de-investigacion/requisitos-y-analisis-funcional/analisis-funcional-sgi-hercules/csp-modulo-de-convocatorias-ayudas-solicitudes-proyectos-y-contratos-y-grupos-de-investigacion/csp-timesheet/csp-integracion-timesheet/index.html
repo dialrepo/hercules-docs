@@ -796,7 +796,506 @@
 
   <h1>Csp integracion timesheet</h1>
 
+<div id="page">
 
+<div id="main" class="aui-page-panel">
+
+<div id="main-header">
+
+<div id="breadcrumb-section">
+
+1.  [Hércules](index.html)
+2.  [Hércules](/)
+3.  [SGI. Sistema de gestión de investigación](//sgi-sistema-de-gestion-de-investigacion)
+4.  [Requisitos y análisis funcional](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional)
+5.  [Análisis Funcional SGI - Hércules](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules)
+6.  [CSP - Módulo de convocatorias, ayudas, solicitudes, proyectos y contratos y grupos de investigación](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion)
+7.  [CSP - Timesheet](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-timesheet)
+
+</div>
+
+# <span id="title-text"> Hércules : CSP - Integración Timesheet </span>
+
+</div>
+
+<div id="content" class="view">
+
+<div class="page-metadata">
+
+Created by <span class="author"> Usuario desconocido (lorena.alvarez)</span>, last updated on abr 22, 2022
+
+</div>
+
+<div id="main-content" class="wiki-content group">
+
+<div class="toc-macro rbtoc1761550793141">
+
+- [INTRODUCCIÓN](#CSPIntegraciónTimesheet-INTRODUCCIÓN)
+- [TS_PROYECTO_JUSTIFICABLE](#CSPIntegraciónTimesheet-TS_PROYECTO_JUSTIFICABLE)
+- [TS_PROYECTO_ENT_FIN](#CSPIntegraciónTimesheet-TS_PROYECTO_ENT_FIN)
+- [TS_PROYECTO_ENT_CONV](#CSPIntegraciónTimesheet-TS_PROYECTO_ENT_CONV)
+- [TS_PROYECTO_SGE](#CSPIntegraciónTimesheet-TS_PROYECTO_SGE)
+- [TS_PROYECTO_EQUIPO](#CSPIntegraciónTimesheet-TS_PROYECTO_EQUIPO)
+- [TS_PROYECTO_PAQUETE_TRABAJO](#CSPIntegraciónTimesheet-TS_PROYECTO_PAQUETE_TRABAJO)
+- [TS_GRUPO_JUSTIFICABLE](#CSPIntegraciónTimesheet-TS_GRUPO_JUSTIFICABLE)
+- [TS_GRUPO_EQUIPO](#CSPIntegraciónTimesheet-TS_GRUPO_EQUIPO)
+
+</div>
+
+# INTRODUCCIÓN
+
+Para poder externalizar la funcionalidad de "Timesheet" del SGI se necesitará que el sistema externo tenga información sobre los proyectos y grupos de investigación del SGI.
+
+En el SGI se van a crear una serie de vistas para proporcionar dicha información.
+
+A continuación  se detallan dichas vistas.
+
+# TS_PROYECTO_JUSTIFICABLE
+
+Listado de proyectos del SGI que cumplen las siguientes condiciones:
+
+- activos
+- estado que no sea BORRADOR
+- fecha fin mayor al año 2013
+- con identificador SGE
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="header">
+<th class="confluenceTh">Campo</th>
+<th class="confluenceTh">Comentario</th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd">ID</td>
+<td class="confluenceTd">Identificador único del proyecto. Clave primaria.</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">CONVOCATORIA</td>
+<td class="confluenceTd">Campo "identificación" de la convocatoria asociada al proyecto en caso de tenerla.</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">REFERENCIA</td>
+<td class="confluenceTd">Campo "referencia en entidad convocante" del proyecto.</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">TITULO</td>
+<td class="confluenceTd">Campo "título" del proyecto.</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">ACRONIMO</td>
+<td class="confluenceTd">Campo "acrónimo" del proyecto.</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">FECHA_INICIO</td>
+<td class="confluenceTd">Campo "fecha inicio" del proyecto.</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">FECHA_FIN</td>
+<td class="confluenceTd">Si esta informada "fecha fin definitiva" se enviará "fecha fin definitiva", sino la "fecha de fin" del proyecto.</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">ESTADO</td>
+<td class="confluenceTd"><p>Estado actual del proyecto. Se sacará el campo "estado" de la tabla ESTADO_PROYECTO del estado actual del proyecto.</p>
+<p>Posibles valores:</p>
+<ul>
+<li>CONCEDIDO</li>
+<li>RENUNCIADO</li>
+<li>RESCINDIDO</li>
+</ul></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p>MODELO_EJECUCION_ID</p></td>
+<td class="confluenceTd">Identificador único del modelo de ejecución asociado al proyecto. Los modelos de ejecución son configurables en el SGI.</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">MODELO_EJCUCION_NOMBRE</td>
+<td class="confluenceTd">Nombre del modelo de ejecución asociado al proyecto.</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">TIPO_FINALIDAD_ID</td>
+<td class="confluenceTd">Identificador único del tipo de finalidad asociado al proyecto. Los tipos de finalidad son configurables en el SGI.</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">TIPO_FINALIDAD_NOMBRE</td>
+<td class="confluenceTd">Nombre del tipo de finalidad asociado al proyecto.</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">AMBITO_ID</td>
+<td class="confluenceTd">Identificador único del tipo de ámbito geográfico asociado al proyecto. Los tipos  de ámbitos geográficos son configurables en el SGI.</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">AMBITO_NOMBRE</td>
+<td class="confluenceTd">Nombre del tipo de ámbito geográfico asociado al proyecto.</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p>FECHA_CONCESION</p></td>
+<td class="confluenceTd"><p>Fecha en la que la solicitud pase a estado CONCEDIDA. En el SGI se considera estado CONCEDIDA (cuando sale el botón de "Crear proyecto" a partir de la Solicitud, en uno de los siguientes estados "Concedida provisional", "Concedida provisional alegada", "Concedida provisional no alegada" o "Concedida"</p>
+<p>En el caso de que el proyecto tenga relacionada una solicitud, se irá a la tabla del histórico de estados y se buscará la fecha de estado mas antigua de los estados: </p>
+<ul>
+<li><p>CONCEDIDA</p></li>
+<li><p>CONCEDIDA_PROVISIONAL</p></li>
+<li><p>CONCEDIDA_PROVISIONAL_ALEGADA</p></li>
+<li><p>CONCEDIDA_PROVISIONAL_NO_ALEGADA</p></li>
+</ul></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>IMPORTE_SOLICITADO</p></td>
+<td class="confluenceTd">Si el campo "importe presupuesto" o "importe presupuesto costes indirectos" del proyecto están informados, será la suma de ellos, en caso de que no estén informados será la suma del campo "importe presupuesto" de todos los gastos del proyecto (tabla ANUALIDAD_GASTO).</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p>IMPORTE_CONCEDIDO</p></td>
+<td class="confluenceTd"><p>Si el campo "importe concedido" o "importe concedido costes indirectos" del proyecto están informados, será la suma de ellos, en caso de que no estén informados será la suma del campo "importe concedido" de todos los gastos del proyecto (tabla ANUALIDAD_GASTO).</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>COSTES_INDIRECTOS</p></td>
+<td class="confluenceTd"><p>Si el campo "importe concedido" o "importe concedido costes indirectos" del proyecto están informados, será la suma de ellos, en caso de que no estén informados será la suma del campo "importe concedido" de todos los gastos del proyecto (tabla ANUALIDAD_GASTO).</p>
+<p>Será el campo "importe concedido" esta informado, en caso contrario será la suma del campo "importe concedido" de todos los gastos del proyecto que se correspondan con conceptos de gastos configurados como costes indirectos (tabla ANUALIDAD_GASTO del proyecto cuyos CONCEPTO_GASTO tenga el flag de COSTES_INDIRECTOS a true).</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p>OBSERVACIONES</p></td>
+<td class="confluenceTd">Campo "observaciones" del proyecto.</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>UNIDAD_GESTION_REF</p></td>
+<td class="confluenceTd"><p>Identificador único de la unidad de gestión asociada al proyecto. Las unidades de gestión son configurables en el SGI por implantación.</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">UNIDAD_GESTION_NOMBRE</td>
+<td class="confluenceTd">Nombre de la unidad de gestión asociada al proyecto.</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+Ver diseño en [SGI - Vistas Timesheet#TS_PROYECTO_JUSTIFICABLE](//sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-interface-integracion/sgi-vistas/sgi-vistas-timesheet#SGIVistasTimesheet-TS_PROYECTO_JUSTIFICABLE)
+
+NOTAS:
+
+- ENTIDAD:
+  - Se enviará en la vista TS_PROYECTO_ENT_FIN porque un proyecto puede tener varias entidades financiadoras. Por cada entidad financiadora se enviará también la fuente de financiación.
+  - Se enviará en la vista TS_PROYECTO_ENT_CONV porque un proyecto puede tener varias entidades convocantes. Por cada entidad convocante se enviará también el programa (plan de investigación  o programa o subprograma o modadidad) que tenga asignada a nivel de convocatoria y a nivel de proyecto (id y nombre).
+- ID_GESTION_ECONOMICA
+  - Se enviará en la vista TS_PROYECTO_SGE porque un proyecto puede estar relacionado con más de un proyecto SGE, aunque no es el caso de Murcia.
+-  ID_INVESTIGADOR_PRINCIPAL
+  - Se enviará en la vista TS_PROYECTO_EQUIPO porque un proyecto puede tener mas de un investigador principal en el SGI. La vista sacará todos los miembros del equipo con sus rangos de participación y sus roles.
+
+# TS_PROYECTO_ENT_FIN
+
+Listado de entidades financiadores de los proyectos del SGI que cumplen las siguientes condiciones:
+
+- activos
+- estado que no sea BORRADOR
+- fecha fin mayor al año 2013
+- con identificador SGE
+
+Por cada proyecto se mostrarán los siguientes campos de una entidad financiadora:
+
+- identificador de la entidad (el SGI no almacena información de la entidad, únicamente su identificador)
+- fuente de financiación
+- tipo de financiación
+- ajena
+
+<div class="table-wrap">
+
+|                            |                                                                                                                                               |
+|----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
+| Campo                      | Comentario                                                                                                                                    |
+| ID                         | Identificador único del registro. Clave primaria.                                                                                             |
+| PROYECTO_ID                | Identificador del proyecto.                                                                                                                   |
+| ENTIDAD_REF                | Identificador de la entidad en el sistema de gestión de empresas de la Universidad.                                                           |
+| FUENTE_FINANCIACION_ID     | Identificador único de la fuente de financiación asociada a la entidad financiadora. Las fuentes de financiación son configurables en el SGI. |
+| FUENTE_FINANCIACION_NOMBRE | Nombre de la fuente de financiación asociada a la entidad financiadora.                                                                       |
+| TIPO_FINANCIACION_ID       | Identificador único del tipo de financiación asociada a la entidad financiadora. Los tipos de financiación son configurables en el SGI.       |
+| TIPO_FINANCIACION_NOMBRE   | Nombre del tipo de financiación asociado a la entidad financiadora.                                                                           |
+| AJENA                      | Indica si la entidad financiadora es ajena o no a la convocatoria                                                                             |
+
+</div>
+
+
+
+Ver diseño en [SGI - Vistas Timesheet#TS_PROYECTO_ENT_FIN](//sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-interface-integracion/sgi-vistas/sgi-vistas-timesheet#SGIVistasTimesheet-TS_PROYECTO_ENT_FIN)
+
+# TS_PROYECTO_ENT_CONV
+
+Listado de entidades convocantes de los proyectos del SGI que cumplen las siguientes condiciones:
+
+- activos
+- estado que no sea BORRADOR
+- fecha fin mayor al año 2013
+- con identificador SGE
+
+Por cada proyecto se mostrarán los siguientes campos de una entidad convocante:
+
+- identificador de la entidad (el SGI no almacena información de la entidad, únicamente su identificador)
+- programa de la convocatoria: puede ser el plan de investigación o el programa o el subprograma de la convocatoria asociada al proyecto
+- programa del proyecto: puede ser plan de investigación o el programa o el subprograma o la modalidad seleccionada en el proyecto
+
+<div class="table-wrap">
+
+|                              |                                                                                                                                                                                                                                                       |
+|------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Campo                        | Comentario                                                                                                                                                                                                                                            |
+| ID                           | Identificador único del registro. Clave primaria.                                                                                                                                                                                                     |
+| PROYECTO_ID                  | Identificador del proyecto.                                                                                                                                                                                                                           |
+| ENTIDAD_REF                  | Identificador de la entidad en el sistema de gestión de empresas de la Universidad.                                                                                                                                                                   |
+| PROGRAMA_CONVOCATORIA_ID     | Identificador único del plan o del programa o del subprograma definido en la convocatoria asociada al proyecto. Los planes de investigación junto con sus programa, subprograma y modalidades son configurables en el SGI en una estructura de árbol. |
+| PROGRAMA_CONVOCATORIA_NOMBRE | Nombre del plan o del programa o del subprograma definido en la convocatoria asociada al proyecto.                                                                                                                                                    |
+| PROGRAMA_ID                  | Identificador único del plan o del programa o del subprograma o de la modalidad seleccionada en el proyecto. Los planes de investigación junto con sus programa, subprograma y modalidades son configurables en el SGI en una estructura de árbol.    |
+| PROGRAMA_NOMBRE              | Nombre del plan o del programa o del subprograma o de la modalidad seleccionada en el proyecto.                                                                                                                                                       |
+
+</div>
+
+Ver diseño en [SGI - Vistas Timesheet#TS_PROYECTO_ENT_CONV](//sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-interface-integracion/sgi-vistas/sgi-vistas-timesheet#SGIVistasTimesheet-TS_PROYECTO_ENT_CONV)
+
+# TS_PROYECTO_SGE
+
+Listado de identificadores SGE (Sistema gestión económico) de los proyectos del SGI que cumplen las siguientes condiciones:
+
+- activos
+- estado que no sea BORRADOR
+- fecha fin mayor al año 2013
+- con identificador SGE
+
+Por cada proyecto se mostrará el identificador SGE (un proyecto SGI puede tener más de uno identificador SGE asociado, aunque la normal general es que sea único)
+
+<div class="table-wrap">
+
+|                  |                                                                                           |
+|------------------|-------------------------------------------------------------------------------------------|
+| Campo            | Comentario                                                                                |
+| ID               | Identificador único del registro. Clave primaria.                                         |
+| PROYECTO_ID      | Identificador del proyecto.                                                               |
+| PROYECTO_SGE_REF | Identificador del proyecto económico en el sistema de gestión económico de la Universidad |
+
+</div>
+
+Ver diseño en [SGI - Vistas Timesheet#TS_PROYECTO_SGE](//sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-interface-integracion/sgi-vistas/sgi-vistas-timesheet#SGIVistasTimesheet-TS_PROYECTO_SGE)
+
+# TS_PROYECTO_EQUIPO
+
+Listado con los investigadores que forman o han formado parte del equipo de investigación de los proyectos del SGI que cumplen las siguientes condiciones:
+
+- activos
+- estado que no sea BORRADOR
+- fecha fin mayor al año 2013
+- con identificador SGE
+
+Por cada proyecto se mostrarán los siguientes campos de un miembro del equipo:
+
+- identificador de la persona (el SGI no almacena información de la persona, únicamente su identificador)
+- fecha de inicio de la participación en el equipo
+- fecha de finalización de la participación en el equipo
+- rol con el que participa en el equipo
+- si el rol tiene marcado el flag de principal o no
+- en caso de que el rol tenga marcado el flag principal se indica si el orden es PRIMARIO o SECUNDARIO
+
+<div class="table-wrap">
+
+|                          |                                                                                                      |
+|--------------------------|------------------------------------------------------------------------------------------------------|
+| Campo                    | Comentario                                                                                           |
+| ID                       | Identificador único del registro. Clave primaria.                                                    |
+| PROYECTO_ID              | Identificador del proyecto.                                                                          |
+| PERSONA_REF              | Identificador de la persona en el sistema de personas de la Universidad                              |
+| FECHA_INICIO             | Fecha de inicio de la participación en el equipo.                                                    |
+| FECHA_FIN                | Fecha de finalización de la participación en el equipo.                                              |
+| ROL_PROYECTO_ID          | Identificador del rol del miembro en el equipo.                                                      |
+| ROL_PROYECTO_ABREVIATURA | Abreviatura o código identificativo del rol del miembro en el equipo.                                |
+| ROL_PRINCIPAL            | Si el rol es un rol principal o no.                                                                  |
+| ORDEN                    | En caso de que el rol tenga marcado el flag principal se indica si el orden es PRIMARIO o SECUNDARIO |
+
+</div>
+
+Ver diseño en [SGI - Vistas Timesheet#TS_PROYECTO_EQUIPO](//sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-interface-integracion/sgi-vistas/sgi-vistas-timesheet#SGIVistasTimesheet-TS_PROYECTO_EQUIPO)
+
+# TS_PROYECTO_PAQUETE_TRABAJO
+
+Listado de paquetes de trabajo de los proyectos del SGI que cumplen las siguientes condiciones:
+
+- activos
+- estado que no sea BORRADOR
+- fecha fin mayor al año 2013
+- con identificador SGE
+
+Por cada proyecto se mostrarán los siguientes campos de un paquete de trabajo:
+
+- nombre
+- fecha inicio
+- fecha fin
+- persona mes
+- descripción
+
+<div class="table-wrap">
+
+|              |                                                   |
+|--------------|---------------------------------------------------|
+| Campo        | Comentario                                        |
+| ID           | Identificador único del registro. Clave primaria. |
+| PROYECTO_ID  | Identificador del proyecto.                       |
+| NOMBRE       | Nombre del paquete de trabajo.                    |
+| FECHA_INICIO | Fecha de inicio del paquete de trabajo.           |
+| FECHA_FIN    | Fecha de fin del paquete de trabajo.              |
+| PERSONA_MES  | Persona mes del paquete de trabajo.               |
+| DESCRIPCION  | Descripción del paquete de trabajo.               |
+
+</div>
+
+
+
+Ver diseño en [SGI - Vistas Timesheet#TS_PROYECTO_PAQUETE_TRABAJO](//sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-interface-integracion/sgi-vistas/sgi-vistas-timesheet#SGIVistasTimesheet-TS_PROYECTO_PAQUETE_TRABAJO)
+
+# TS_GRUPO_JUSTIFICABLE
+
+Listado de grupos de investigación del SGI que cumplen las siguientes condiciones:
+
+- activos
+- fecha fin no tiene o mayor al año 2013
+- con identificador SGE
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="header">
+<th class="confluenceTh">Campo</th>
+<th class="confluenceTh">Comentario</th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd">ID</td>
+<td class="confluenceTd">Identificador único del grupo de investigación. Clave primaria.</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">CONVOCATORIA</td>
+<td class="confluenceTd">Campo "identificación" de la convocatoria asociada a la solicitud de constitución del grupos en caso de que se creara a partir de una solicitud el grupo.</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">REFERENCIA</td>
+<td class="confluenceTd">Campo "código" del grupo.</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">TITULO</td>
+<td class="confluenceTd">Campo "nombre" del grupo.</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">ID_GESTION_ECONOMICA</td>
+<td class="confluenceTd">Identificación SGE (sistema de gestión económico)</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">FECHA_INICIO</td>
+<td class="confluenceTd">Campo "fecha inicio" del grupo.</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">FECHA_FIN</td>
+<td class="confluenceTd">Campo "fecha fin" del grupo.</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>MODELO_EJECUCION_ID</p></td>
+<td class="confluenceTd">Identificador único del modelo de ejecución asociado a la convocatoria de constitución del grupo. Los modelos de ejecución son configurables en el SGI.</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">MODELO_EJCUCION_NOMBRE</td>
+<td class="confluenceTd">Nombre del modelo de ejecución asociado a la solicitud de constitución del grupo.</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">TIPO_FINALIDAD_ID</td>
+<td class="confluenceTd">Identificador único del tipo de finalidad asociado a la convocatoria de constitución del grupo. Los tipos de finalidad son configurables en el SGI.</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">TIPO_FINALIDAD_NOMBRE</td>
+<td class="confluenceTd">Nombre del tipo de finalidad asociado a la solicitud de constitución del grupo.</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>FECHA_CONCESION</p></td>
+<td class="confluenceTd"><p>Fecha en la que la solicitud pase a estado CONCEDIDA. En el SGI se considera estado CONCEDIDA (cuando sale el botón de "Crear grupo" a partir de la Solicitud, en uno de los siguientes estados "Concedida provisional", "Concedida provisional alegada", "Concedida provisional no alegada" o "Concedida"</p>
+<p>En el caso de que el grupo tenga relacionada una solicitud, se irá a la tabla del histórico de estados y se buscará la fecha de estado mas antigua de los estados: </p>
+<ul>
+<li><p>CONCEDIDA</p></li>
+<li><p>CONCEDIDA_PROVISIONAL</p></li>
+<li><p>CONCEDIDA_PROVISIONAL_ALEGADA</p></li>
+<li><p>CONCEDIDA_PROVISIONAL_NO_ALEGADA</p></li>
+</ul></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p>UNIDAD_GESTION_REF</p></td>
+<td class="confluenceTd"><p>Identificador único de la unidad de gestión asociada a la convocatoria de constitución del grupo. Las unidades de gestión son configurables en el SGI por implantación.</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">UNIDAD_GESTION_NOMBRE</td>
+<td class="confluenceTd">Nombre de la unidad de gestión asociada a la solicitud de constitución del grupo.</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+Ver diseño en [SGI - Vistas Timesheet#TS_GRUPO_JUSTIFICABLE](//sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-interface-integracion/sgi-vistas/sgi-vistas-timesheet#SGIVistasTimesheet-TS_GRUPO_JUSTIFICABLE)
+
+# TS_GRUPO_EQUIPO
+
+Listado con los investigadores que forman o han formado parte del equipo de investigación de los grupos del SGI que cumplen las siguientes condiciones:
+
+- activos
+- fecha fin no tiene o mayor al año 2013
+- con identificador SGE
+
+Por cada grupo se mostrarán los siguientes campos de un miembro del equipo:
+
+- identificador de la persona (el SGI no almacena información de la persona, únicamente su identificador)
+- fecha de inicio de la participación en el equipo
+- fecha de finalización de la participación en el equipo
+- rol con el que participa en el equipo
+- si el rol tiene marcado el flag de principal o no
+- en caso de que el rol tenga marcado el flag principal se indica si el orden es PRIMARIO o SECUNDARIO
+
+<div class="table-wrap">
+
+|                          |                                                                                                      |
+|--------------------------|------------------------------------------------------------------------------------------------------|
+| Campo                    | Comentario                                                                                           |
+| ID                       | Identificador único del registro. Clave primaria.                                                    |
+| GRUPO_ID                 | Identificador del grupo.                                                                             |
+| PERSONA_REF              | Identificador de la persona en el sistema de personas de la Universidad                              |
+| FECHA_INICIO             | Fecha de inicio de la participación en el equipo.                                                    |
+| FECHA_FIN                | Fecha de finalización de la participación en el equipo.                                              |
+| ROL_PROYECTO_ID          | Identificador del rol del miembro en el equipo.                                                      |
+| ROL_PROYECTO_ABREVIATURA | Abreviatura o código identificativo del rol del miembro en el equipo.                                |
+| ROL_PRINCIPAL            | Si el rol es un rol principal o no.                                                                  |
+| ORDEN                    | En caso de que el rol tenga marcado el flag principal se indica si el orden es PRIMARIO o SECUNDARIO |
+
+</div>
+
+Ver diseño en [SGI - Vistas Timesheet#TS_GRUPO_EQUIPO](//sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-interface-integracion/sgi-vistas/sgi-vistas-timesheet#SGIVistasTimesheet-TS_GRUPO_EQUIPO)
+
+
+
+</div>
+
+</div>
+
+</div>
+
+<div id="footer" role="contentinfo">
+
+<div class="section footer-body">
+
+Document generated by Confluence on oct 27, 2025 08:39
+
+<div id="footer-logo">
+
+[Atlassian](https://www.atlassian.com/)
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 
 

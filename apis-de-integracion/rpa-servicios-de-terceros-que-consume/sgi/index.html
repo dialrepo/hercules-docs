@@ -796,7 +796,183 @@
 
   <h1>Sgi</h1>
 
+<div id="page">
 
+<div id="main" class="aui-page-panel">
+
+<div id="main-header">
+
+<div id="breadcrumb-section">
+
+1.  [Hércules](index.html)
+2.  [Hércules](/)
+3.  [APIs de Integración](//apis-de-integracion)
+4.  [RPA: Servicios de terceros que consume](//apis-de-integracion/rpa-servicios-de-terceros-que-consume)
+
+</div>
+
+# <span id="title-text"> Hércules : SGI. </span>
+
+</div>
+
+<div id="content" class="view">
+
+<div class="page-metadata">
+
+Created by <span class="author"> Usuario genérico para HERCULES</span>, last updated by <span class="editor"> Reyes Hernández-Mora Martínez</span> on nov 10, 2022
+
+</div>
+
+<div id="main-content" class="wiki-content group">
+
+# [Proceso 1 : Segmentación y generación automática de boletines informativos](//rpa/modulo-de-automatizacion-y-gestion/analisis-y-procesos/proceso-1-segmentacion-y-generacion-automatica-de-boletines-informativos)
+
+## [Convocatorias](//apis-de-integracion/sgi-servicios-propios-que-expone/convocatorias)
+
+<div class="table-wrap">
+
+|     |                                        |
+|-----|:---------------------------------------|
+| GET | /sgicsp/convocatorias                  |
+| GET | /sgicsp/convocatoriaentidadconvocantes |
+
+</div>
+
+## [Gestión proyectos](//apis-de-integracion/sgi-servicios-propios-que-expone/gestion-proyectos)
+
+Para la obtención de proyectos y contratos, se utiliza el siguiente método:
+
+<div class="table-wrap">
+
+|     |                                                                                                               |
+|-----|:--------------------------------------------------------------------------------------------------------------|
+| GET | /sgicsp/proyectos                                                                                             |
+| GET | /sgicsp/proyectos/{id<span class="ILfuVd" lang="es"><span class="hgKElc">}</span></span>/presupuestos-totales |
+| GET | /sgicsp/proyectos/{id<span class="ILfuVd" lang="es"><span class="hgKElc">}</span></span>/equipos              |
+| GET | /sgicsp/proyectos/{id<span class="ILfuVd" lang="es"><span class="hgKElc">}</span></span>/entidadconvocantes   |
+| GET | /sgicsp/convocatorias/{id<span class="ILfuVd" lang="es"><span class="hgKElc">}</span></span>                  |
+
+</div>
+
+## Tesis
+
+Para la obtención de las tesis doctorales se utiliza el módulo SGP del SGI, en este servicio SGI realiza la función de proxy.
+
+<div class="table-wrap">
+
+|     |                      |
+|-----|----------------------|
+| GET | /sgp/direccion-tesis |
+
+</div>
+
+## [Sistema de gestión económica de protección industrial e intelectual](//apis-de-integracion/sgi-servicios-de-terceros-que-expone/sistema-de-gestion-economica-de-proteccion-industrial-e-intelectual)
+
+Para la obtención de las invenciones, definidas en SGI como protección industrial e intelectual, se utiliza el módulo SGIPII.
+
+<div class="table-wrap">
+
+|     |                                                                                                                  |
+|-----|------------------------------------------------------------------------------------------------------------------|
+| GET | /sgipii/invenciones                                                                                              |
+| GET | /sgipii/invenciones/{id<span class="ILfuVd" lang="es"><span class="hgKElc">}</span></span>/invencion-inventores  |
+| GET | /sgipii/periodostitularidad/{id<span class="ILfuVd" lang="es"><span class="hgKElc">}</span></span>/titulares     |
+| GET | /sgipii/invenciones/{id<span class="ILfuVd" lang="es"><span class="hgKElc">}</span></span>/solicitudesproteccion |
+
+</div>
+
+
+
+Además, también se utilizan los siguientes sistemas:
+
+- [Sistema de gestión de personas](//apis-de-integracion/sgi-servicios-de-terceros-que-expone/sistema-de-gestion-de-personas)
+- [Sistema de gestión de empresas](//apis-de-integracion/sgi-servicios-de-terceros-que-expone/sistema-de-gestion-de-empresas)
+
+Para obtener la información relacionada con personas y empresas.
+
+# [Proceso 3 : Automatización de procesos de gestiones documentales parametrizables](//rpa/modulo-de-automatizacion-y-gestion/analisis-y-procesos/proceso-3-automatizacion-de-procesos-de-gestiones-documentales-parametrizables)
+
+## [Convocatorias](//apis-de-integracion/sgi-servicios-propios-que-expone/convocatorias)
+
+Para la inyección de convocatorias en el SGI utilizamos los siguientes módulos <span style="color:var(--ds-text,#172b4d);">SGICSP y SGIEMP</span>:
+
+<div class="table-wrap">
+
+|      |                                                                                             |
+|------|---------------------------------------------------------------------------------------------|
+| POST | <span style="color:var(--ds-text,#172b4d);">/sgicsp/convocatorias</span>                    |
+| GET  | <span style="color:var(--ds-text,#172b4d);">/sgemp/empresas</span>                          |
+| POST | <span style="color:var(--ds-text,#172b4d);">/sgicsp/convocatoriaentidadconvocantes</span>   |
+| POST | <span style="color:var(--ds-text,#172b4d);">/sgicsp/convocatoriaentidadfinanciadoras</span> |
+
+</div>
+
+## <a href="https://confluence.um.es/confluence/display/HERCULES/Solicitudes" rel="nofollow">Solicitudes</a>
+
+Para la consulta y el filtrado de solicitudes utilizamos los siguientes módulos SGICSP y SGP:
+
+<div class="table-wrap">
+
+|     |                                                                        |
+|-----|------------------------------------------------------------------------|
+| GET | <span style="color:var(--ds-text,#172b4d);">/sgicsp/solicitudes</span> |
+| GET | <span style="color:var(--ds-text,#172b4d);">/sgp/personas/</span>      |
+
+</div>
+
+# [Proceso 4 : Sistemas Inteligentes de encaje entre convocatorias e investigadores](//rpa/modulo-de-automatizacion-y-gestion/analisis-y-procesos/proceso-4-sistemas-inteligentes-de-encaje-entre-convocatorias-e-investigadores)
+
+## [Convocatorias](//apis-de-integracion/sgi-servicios-propios-que-expone/convocatorias)
+
+<div class="table-wrap">
+
+|     |                                                                                                                                                                                                                                                             |
+|-----|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| GET | /sgicsp/convocatorias                                                                                                                                                                                                                                       |
+| GET | <span style="color:var(--ds-background-accent-red-subtle,#f87168);"><span style="color:var(--ds-text,#172b4d);">/sgicsp/convocatorias/{id<span class="ILfuVd" lang="es"><span class="hgKElc">}</span></span>/convocatoriaentidadconvocantes</span></span>   |
+| GET | /sgicsp/convocatorias/<span style="color:var(--ds-background-accent-red-subtle,#f87168);"><span style="color:var(--ds-text,#172b4d);">{id<span class="ILfuVd" lang="es"><span class="hgKElc">}</span></span>/convocatoriaentidadfinanciadoras</span></span> |
+| GET | <span style="color:var(--ds-background-accent-red-subtle,#f87168);"><span style="color:var(--ds-text,#172b4d);">/sgicsp/convocatorias/{id<span class="ILfuVd" lang="es"><span class="hgKElc">}</span></span>/</span></span>convocatoriaareastematicas       |
+
+</div>
+
+## <a href="https://confluence.um.es/confluence/display/HERCULES/Solicitudes" rel="nofollow">Solicitudes</a>
+
+<div class="table-wrap">
+
+|     |                                                                        |
+|-----|------------------------------------------------------------------------|
+| GET | <span style="color:var(--ds-text,#172b4d);">/sgicsp/solicitudes</span> |
+| GET | <span style="color:var(--ds-text,#172b4d);">/sgp/personas/</span>      |
+
+</div>
+
+
+
+
+
+</div>
+
+</div>
+
+</div>
+
+<div id="footer" role="contentinfo">
+
+<div class="section footer-body">
+
+Document generated by Confluence on oct 27, 2025 09:24
+
+<div id="footer-logo">
+
+[Atlassian](https://www.atlassian.com/)
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 
 

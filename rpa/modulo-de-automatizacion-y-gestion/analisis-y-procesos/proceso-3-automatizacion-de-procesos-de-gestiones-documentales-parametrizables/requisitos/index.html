@@ -796,7 +796,177 @@
 
   <h1>Requisitos</h1>
 
+<div id="page">
 
+<div id="main" class="aui-page-panel">
+
+<div id="main-header">
+
+<div id="breadcrumb-section">
+
+1.  [Hércules](index.html)
+2.  [Hércules](/)
+3.  [RPA](//rpa)
+4.  [Módulo de Automatización y Gestión](//rpa/modulo-de-automatizacion-y-gestion)
+5.  [Análisis y Procesos](//rpa/modulo-de-automatizacion-y-gestion/analisis-y-procesos)
+6.  [Proceso 3 : Automatización de procesos de gestiones documentales parametrizables](//rpa/modulo-de-automatizacion-y-gestion/analisis-y-procesos/proceso-3-automatizacion-de-procesos-de-gestiones-documentales-parametrizables)
+
+</div>
+
+# <span id="title-text"> Hércules : Requisitos </span>
+
+</div>
+
+<div id="content" class="view">
+
+<div class="page-metadata">
+
+Created by <span class="author"> Juan Tardón Martínez</span>, last updated by <span class="editor"> Usuario genérico para HERCULES</span> on nov 15, 2022
+
+</div>
+
+<div id="main-content" class="wiki-content group">
+
+## Obtención Bases Reguladoras.
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="header">
+<th class="confluenceTh"><strong>Fuente</strong></th>
+<th class="confluenceTh"><strong>Descripción/Características/Observaciones</strong></th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd">BOE</td>
+<td class="confluenceTd"><ul>
+<li>En el BOE se publican las bases reguladoras de las convocatorias.</li>
+<li>Las bases reguladoras se publican antes de la resolución de la convocatoria, con lo que no será necesario añadirlas al SGI.</li>
+<li>Se obtendrán y se enviarán por correo electrónico.</li>
+<li>Se podrán obtener de forma diaria o seleccionando un rango de fechas.</li>
+</ul>
+<ul>
+<li>Criterios de búsqueda:
+<ul>
+<li>El título contendrá los siguientes patrones:
+<ol>
+<li>"bases reguladoras" + "investigación / transferencia / I+D"</li>
+<li>"decreto" + "regula" + "investigación / transferencia / I+D"</li>
+</ol></li>
+</ul></li>
+<li>Las bases reguladoras relacionadas con "transferencia" se enviarán a la OTRI y las relacionadas con "investigación" a la UGI.</li>
+</ul></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+## Obtención de Convocatorias.
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="header">
+<th class="confluenceTh">Fuente</th>
+<th class="confluenceTh"><strong>Descripción/Características/Observaciones</strong></th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd"><p>Base de Datos Nacional de</p>
+<p>Subvenciones (BDNS)</p></td>
+<td class="confluenceTd"><ul>
+<li><p>Se debe filtrar la búsqueda de subvenciones a las orientadas a investigación a nivel nacional.</p></li>
+<li><p>El parámetro de "región impacto" debe ser informado como: ES-ESPAÑA, REGIÓN DE MURCIA y MURCIA.</p></li>
+<li><p>De esta base de datos se obtendrán las convocatorias y las bases reguladoras para, posteriormente, añadirlas al SGI.</p></li>
+<li>Se debe filtrar también la búsqueda de subvenciones con la palabra clave transferencia, donde la entidad gestora será la OTRI.</li>
+</ul></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>Funding &amp; tender opportunities</p>
+<p>(proyectos europeos)</p></td>
+<td class="confluenceTd" style="text-align: left;"><ul>
+<li>Se obtendrán accediendo a la web: <a href="https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/home" class="external-link" rel="nofollow">https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/home</a></li>
+<li>Se notificarán convocatorias nuevas aquellas que tengan el parámetro GRANTS.</li>
+<li>Se enviarán por correo electrónico.</li>
+</ul></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+Estructura general para enriquecer el SGI con una nueva convocatoria:
+
+- Título: el formato de este campo será: ROBOT + título extraído. 
+
+- Tipo solicitud SGI: PROYECTO.
+
+- Unidad de Gestión: si el título de la convocatoria contiene "investigación o I+D" será "UGI", si contiene "transferencia" será "OTRI". Si no cumple ninguno de estos criterios se creará una convocatoria por cada unidad de gestión disponible.
+
+- Modelo de Ejecución: \[subvención, préstamo, facturación\]. Para configurar este campo se buscará en el título de la convocatoria los siguientes patrones:
+
+  - Subvención: ayuda/subvención.
+  - Préstamo: préstamo.
+  - Facturación: presentación factura/facturación.
+
+A las convocatorias obtenidas utilizando la BDNS se le asignará "subvención".
+
+- Entidades convocantes.
+
+- Entidad gestora: es la entidad que se designa como gestora de los fondos en la convocatoria. Normalmente viene mencionado explícitamente en la convocatoria (entidad gestora o entidad que gestiona). Este campo se rellenará con los mismos datos que las entidades convocantes.
+
+- Lista de áreas temáticas: no se rellenará al no tener un patrón definido para la identificación de áreas.
+
+Cualquier campo que no pueda ser añadido se deberá indicar en observaciones.
+
+## Obtención de Concesiones.
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="header">
+<th class="confluenceTh">Fuente</th>
+<th class="confluenceTh">Descripción/Características/Observaciones</th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd"><p>Base de Datos Nacional de Subvenciones (BDNS)</p></td>
+<td class="confluenceTd"><ul>
+<li>Se deberá consultar BDNS para obtener los resultados de las concesiones (únicamente las de la Agencia Estatal de Investigación).</li>
+<li>Se deberán consultar aquellas concesiones cuyo estado en el SGI sea distinta de “borrador/concedida/denegada/desistida/excluida” dentro de un rango de fechas.</li>
+<li>Se enviarán por correo electrónico los resultados del estado de las concesiones, para que el personal de la UM pueda actualizar el estado de la concesión en el SGI.</li>
+<li>Se deberá rellenar el campo "código de registro en entidad convocante" con el identificador del proyecto al que se está asociado, p.e. PID2019-103993GB-I00</li>
+</ul></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div id="footer" role="contentinfo">
+
+<div class="section footer-body">
+
+Document generated by Confluence on oct 27, 2025 09:30
+
+<div id="footer-logo">
+
+[Atlassian](https://www.atlassian.com/)
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 
 

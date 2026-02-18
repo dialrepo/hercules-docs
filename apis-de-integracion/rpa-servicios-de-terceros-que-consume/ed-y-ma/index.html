@@ -796,7 +796,919 @@
 
   <h1>Ed y ma</h1>
 
+<div id="page">
 
+<div id="main" class="aui-page-panel">
+
+<div id="main-header">
+
+<div id="breadcrumb-section">
+
+1.  [Hércules](index.html)
+2.  [Hércules](/)
+3.  [APIs de Integración](//apis-de-integracion)
+4.  [RPA: Servicios de terceros que consume](//apis-de-integracion/rpa-servicios-de-terceros-que-consume)
+
+</div>
+
+# <span id="title-text"> Hércules : ED y MA </span>
+
+</div>
+
+<div id="content" class="view">
+
+<div class="page-metadata">
+
+Created by <span class="author"> Usuario genérico para HERCULES</span>, last updated on sep 22, 2022
+
+</div>
+
+<div id="main-content" class="wiki-content group">
+
+<span style="color:var(--ds-text,#172b4d);">Esta página contiene el inventario de servicios de integración consumidos por Hércules RPA para incorporar información desde Hércules-SGI y Hércules-ED. A continuación se detallarán que servicios y consultas que se utilizan por proceso.</span>
+
+
+
+<span class="plugin_pagetree_children_span"><a href="https://confluence.um.es/confluence/pages/viewpage.action?pageId=397534800&amp;src=contextnavpagetreemode" rel="nofollow">Proceso 1 : Segmentación y generación automática de boletines informativos</a></span>
+
+
+
+- <span class="plugin_pagetree_children_span">Obtención de artículos:</span>
+
+<div class="code panel pdl" style="border-width: 1px;">
+
+<div class="codeContent panelContent pdl">
+
+
+<pre><code class="language-syntaxhighlighter-pre">select ?s ?nombreDoc ?nombreRevista ?aniomesdia ?fecha group_concat(?nombreArea;separator=&quot;|&quot;) as ?nombreArea ?autor ?ORCID from &lt;http://gnoss.com/b836078b-78a0-4939-b809-3f2ccf4e5c01&gt;
+        where
+            {
+                ?s a 'document'.
+                ?s &lt;http://w3id.org/roh/title&gt; ?nombreDoc.
+                ?s &lt;http://purl.org/dc/terms/issued&gt; ?fecha.
+                BIND(?fecha/1000000 as ?aniomesdia).
+                ?s &lt;http://purl.org/ontology/bibo/authorList&gt; ?authorList.
+                OPTIONAL{
+                   ?s &lt;http://vivoweb.org/ontology/core#hasPublicationVenue&gt; ?revista.
+                  ?revista &lt;http://w3id.org/roh/title&gt; ?nombreRevista.
+                }
+
+                ?authorList &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#member&gt; ?persona.
+                ?persona &lt;http://xmlns.com/foaf/0.1/name&gt; ?autor.
+                OPTIONAL{
+                  ?persona &lt;http://w3id.org/roh/ORCID&gt; ?ORCID
+                }
+                OPTIONAL{
+                        ?s &lt;http://w3id.org/roh/hasKnowledgeArea&gt; ?area.
+                        ?area &lt;http://w3id.org/roh/categoryNode&gt; ?nodo.
+                        ?nodo &lt;http://www.w3.org/2008/05/skos#prefLabel&gt; ?nombreArea.
+                        MINUS{?nodo &lt;http://www.w3.org/2008/05/skos#narrower&gt; ?hijos}
+                }
+                FILTER(?aniomesdia&gt;=&quot; + start_date + &quot; AND ?aniomesdia&lt;=&quot; + end_date + &quot;)&quot;
+            }order by desc(?fecha) desc(?s) 
+</code></pre>
+
+
+</div>
+
+</div>
+
+
+
+- Obtención de Oferta Tecnológica (OTC):
+
+<div class="code panel pdl" style="border-width: 1px;">
+
+<div class="codeContent panelContent pdl">
+
+
+<pre><code class="language-syntaxhighlighter-pre">select * from &lt;http://gnoss.com/b836078b-78a0-4939-b809-3f2ccf4e5c01&gt;
+    where {
+            ?idOferta a 'offer'.
+            ?idOferta  &lt;http://www.schema.org/name&gt; ?titulo.
+            ?idOferta  &lt;http://www.schema.org/description&gt; ?description.
+            ?idOferta  &lt;http://www.schema.org/availability&gt; &lt;http://gnoss.com/items/offerstate_003&gt;.
+            ?idOferta  &lt;http://w3id.org/roh/researchers&gt; ?investigador.
+            ?investigador foaf:name ?nombre.
+            ?idOferta   &lt;http://purl.org/dc/terms/issued&gt; ?fecha
+    FILTER(?fecha&gt;=&quot;+start_date+&quot; &amp;&amp; ?fecha &lt;=&quot; +end_date+&quot;)&quot;
+    }order by desc(?fecha) desc(?s)
+</code></pre>
+
+
+</div>
+
+</div>
+
+
+
+
+
+<span class="plugin_pagetree_children_span"><a href="https://confluence.um.es/confluence/display/HERCULES/Proceso+2+%3A+Sexenios+y+acreditaciones?src=contextnavpagetreemode" rel="nofollow">Proceso 2 : Sexenios y acreditaciones</a></span>
+
+<span class="plugin_pagetree_children_span">En este proceso se utilizan los servicios de ED y MA para recuperar producción científica desde su servicio de datos enriquecidos, a continuación se detallan las consultas SPARQL que se llevan a cabo : </span>
+
+- <span class="plugin_pagetree_children_span">Obtener datos de investigador a partir de ORCID:  
+  </span>
+
+<div class="code panel pdl" style="border-width: 1px;">
+
+<div class="codeContent panelContent pdl">
+
+
+<pre><code class="language-syntaxhighlighter-pre">select ?person ?nombreCompleto ?email ?nombreDepartamento ?nombreUniversidad from &lt;http://gnoss.com/b836078b-78a0-4939-b809-3f2ccf4e5c01&gt;
+    where 
+    {
+        ?person a 'person'.
+        ?person &lt;http://xmlns.com/foaf/0.1/name&gt; ?nombreCompleto.
+        OPTIONAL{
+            ?person &lt;http://vivoweb.org/ontology/core#departmentOrSchool&gt; ?departamento.
+            ?departamento &lt;http://purl.org/dc/elements/1.1/title&gt; ?nombreDepartamento.
+        }
+        OPTIONAL{
+            ?person &lt;http://w3id.org/roh/hasRole&gt; ?org.
+            ?org &lt;http://w3id.org/roh/title&gt; ?nombreUniversidad .
+        }
+        OPTIONAL{
+    ?person &lt;https://www.w3.org/2006/vcard/ns#email&gt; ?email.
+    }
+
+        ?person &lt;http://w3id.org/roh/ORCID&gt; ?orcid.
+        FILTER(?orcid='&quot;&quot;&quot;+orcid+&quot;&quot;&quot;')
+    }
+</code></pre>
+
+
+</div>
+
+</div>
+
+
+
+- <span class="plugin_pagetree_children_span">Obtener datos de investigador a partir de PersonaRef:  
+  </span>
+
+<div class="code panel pdl" style="border-width: 1px;">
+
+<div class="codeContent panelContent pdl">
+
+
+<pre><code class="language-syntaxhighlighter-pre">select ?person ?nombreCompleto ?email ?nombreDepartamento ?nombreUniversidad from &lt;http://gnoss.com/b836078b-78a0-4939-b809-3f2ccf4e5c01&gt;
+        where 
+        {
+            ?person a 'person'.
+            ?person &lt;http://xmlns.com/foaf/0.1/name&gt; ?nombreCompleto.
+            OPTIONAL{
+                ?person &lt;http://vivoweb.org/ontology/core#departmentOrSchool&gt; ?departamento.
+                ?departamento &lt;http://purl.org/dc/elements/1.1/title&gt; ?nombreDepartamento.
+            }
+            OPTIONAL{
+                ?person &lt;http://w3id.org/roh/hasRole&gt; ?org.
+                ?org &lt;http://w3id.org/roh/title&gt; ?nombreUniversidad .
+            }
+            OPTIONAL{
+        ?person &lt;https://www.w3.org/2006/vcard/ns#email&gt; ?email.
+        }
+            ?person &lt;http://w3id.org/roh/crisIdentifier&gt; ?identifier.
+            FILTER(?identifier='&quot;&quot;&quot;+persona_ref+&quot;&quot;&quot;')
+        } 
+</code></pre>
+
+
+</div>
+
+</div>
+
+
+
+- <span class="plugin_pagetree_children_span">Obtener datos de investigador a partir del email del investigador:  
+  </span>
+
+<div class="code panel pdl" style="border-width: 1px;">
+
+<div class="codeContent panelContent pdl">
+
+
+<pre><code class="language-syntaxhighlighter-pre">select ?person ?nombreCompleto ?email ?nombreDepartamento ?nombreUniversidad from &lt;http://gnoss.com/b836078b-78a0-4939-b809-3f2ccf4e5c01&gt;
+        where 
+        {
+            ?person a 'person'.
+            ?person &lt;http://xmlns.com/foaf/0.1/name&gt; ?nombreCompleto.
+            OPTIONAL{
+                ?person &lt;http://vivoweb.org/ontology/core#departmentOrSchool&gt; ?departamento.
+                ?departamento &lt;http://purl.org/dc/elements/1.1/title&gt; ?nombreDepartamento.
+            }
+            OPTIONAL{
+                ?person &lt;http://w3id.org/roh/hasRole&gt; ?org.
+                ?org &lt;http://w3id.org/roh/title&gt; ?nombreUniversidad .
+            }
+            OPTIONAL{
+        ?person &lt;https://www.w3.org/2006/vcard/ns#email&gt; ?email.
+        }
+            ?person &lt;https://www.w3.org/2006/vcard/ns#email&gt; ?email.
+            FILTER(?email='&quot;&quot;&quot;+email+&quot;&quot;&quot;') 
+        }
+</code></pre>
+
+
+</div>
+
+</div>
+
+
+
+- Obtener producción científica a partir del ORCID de investigador:
+
+<div class="code panel pdl" style="border-width: 1px;">
+
+<div class="codeContent panelContent pdl">
+
+
+<pre><code class="language-syntaxhighlighter-pre">select distinct ?doc ?citasWos ?citasScopus ?citasSemanticScholar ?tipoProduccion ?title ?posicion ?autorUnico ?quartile from &lt;http://gnoss.com/b836078b-78a0-4939-b809-3f2ccf4e5c01&gt;
+    where 
+    {
+                        select distinct ?title ?citasWos ?citasScopus ?citasSemanticScholar ?tipoProduccion ?posicion ?doc min(?quartile) as ?quartile ?nombreFuenteIndiceImpacto !(max(?dif)) as ?autorUnico
+                        where
+                        {
+                            ?doc a 'document'.
+                            ?doc &lt;http://w3id.org/roh/title&gt; ?title.
+                            ?doc &lt;http://vivoweb.org/ontology/core#hasPublicationVenue&gt; ?revista.
+                            ?doc &lt;http://w3id.org/roh/isValidated&gt; 'true'.
+                            ?doc &lt;http://purl.org/ontology/bibo/authorList&gt; ?listAuthor.
+                            ?listAuthor &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#comment&gt; ?posicion.
+                            ?doc &lt;http://purl.org/dc/terms/issued&gt; ?fecha.  
+                            BIND(?fecha/10000000000 as ?anioFecha).
+                            ?listAuthor &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#member&gt; ?person.
+
+                            OPTIONAL{?doc &lt;http://w3id.org/roh/wosCitationCount&gt; ?citasWos.} 
+                            OPTIONAL{?doc &lt;http://w3id.org/roh/scopusCitationCount&gt; ?citasScopus.}      
+                            OPTIONAL{?doc &lt;http://w3id.org/roh/semanticScholarCitationCount&gt; ?citasSemanticScholar.}
+
+                            ?revista &lt;http://w3id.org/roh/impactIndex&gt; ?indiceImpacto.
+                            ?indiceImpacto &lt;http://w3id.org/roh/year&gt; ?anioIndiceImpacto.
+                            ?indiceImpacto &lt;http://w3id.org/roh/impactSource&gt; ?fuenteIndiceImpacto.
+                            ?fuenteIndiceImpacto &lt;http://purl.org/dc/elements/1.1/title&gt; ?nombreFuenteIndiceImpacto.
+                            ?indiceImpacto  &lt;http://w3id.org/roh/impactCategory&gt; ?categoriaIndiceImpacto.
+                            ?categoriaIndiceImpacto &lt;http://w3id.org/roh/quartile&gt; ?quartile.
+                            ?doc &lt;http://purl.org/dc/elements/1.1/type&gt; ?typeProduccion.
+                            ?typeProduccion &lt;http://purl.org/dc/elements/1.1/title&gt; ?tipoProduccion .
+                            FILTER(lang(?tipoProduccion )='es')
+                            FILTER(?anioIndiceImpacto=?anioFecha)
+                            FILTER(lang(?nombreFuenteIndiceImpacto)='es')
+
+
+                            ?person &lt;http://w3id.org/roh/ORCID&gt; ?orcid.
+                            FILTER(?orcid='&quot;&quot;&quot;+orcid+&quot;&quot;&quot;')
+                            FILTER(?anioFecha in (&quot;&quot;&quot;+periodo+&quot;&quot;&quot;))
+
+                            ?doc &lt;http://purl.org/ontology/bibo/authorList&gt; ?listAuthor2.
+                            ?listAuthor2 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#member&gt; ?person2.
+                            BIND(?person!=?person2 as ?dif)
+                        }
+    }
+
+</code></pre>
+
+
+</div>
+
+</div>
+
+
+
+
+
+- Obtener producción científica a partir del PersonaRef de investigador:
+
+<div class="code panel pdl" style="border-width: 1px;">
+
+<div class="codeContent panelContent pdl">
+
+
+<pre><code class="language-syntaxhighlighter-pre">select distinct ?doc ?citasWos ?citasScopus ?citasSemanticScholar ?tipoProduccion ?title ?posicion ?autorUnico ?quartile from &lt;http://gnoss.com/b836078b-78a0-4939-b809-3f2ccf4e5c01&gt;
+        where 
+        {
+                            select distinct ?title ?citasWos ?citasScopus ?citasSemanticScholar ?tipoProduccion ?posicion ?doc min(?quartile) as ?quartile ?nombreFuenteIndiceImpacto !(max(?dif)) as ?autorUnico
+                            where
+                            {
+                                ?doc a 'document'.
+                                ?doc &lt;http://w3id.org/roh/title&gt; ?title.
+                                ?doc &lt;http://vivoweb.org/ontology/core#hasPublicationVenue&gt; ?revista.
+                                ?doc &lt;http://w3id.org/roh/isValidated&gt; 'true'.
+                                ?doc &lt;http://purl.org/ontology/bibo/authorList&gt; ?listAuthor.
+                                ?listAuthor &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#comment&gt; ?posicion.
+                                ?doc &lt;http://purl.org/dc/terms/issued&gt; ?fecha.  
+                                BIND(?fecha/10000000000 as ?anioFecha).
+                                ?listAuthor &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#member&gt; ?person.
+
+                                OPTIONAL{?doc &lt;http://w3id.org/roh/wosCitationCount&gt; ?citasWos.} 
+                                OPTIONAL{?doc &lt;http://w3id.org/roh/scopusCitationCount&gt; ?citasScopus.}      
+                                OPTIONAL{?doc &lt;http://w3id.org/roh/semanticScholarCitationCount&gt; ?citasSemanticScholar.}
+
+                                ?revista &lt;http://w3id.org/roh/impactIndex&gt; ?indiceImpacto.
+                                ?indiceImpacto &lt;http://w3id.org/roh/year&gt; ?anioIndiceImpacto.
+                                ?indiceImpacto &lt;http://w3id.org/roh/impactSource&gt; ?fuenteIndiceImpacto.
+                                ?fuenteIndiceImpacto &lt;http://purl.org/dc/elements/1.1/title&gt; ?nombreFuenteIndiceImpacto.
+                                ?indiceImpacto  &lt;http://w3id.org/roh/impactCategory&gt; ?categoriaIndiceImpacto.
+                                ?categoriaIndiceImpacto &lt;http://w3id.org/roh/quartile&gt; ?quartile.
+                                ?doc &lt;http://purl.org/dc/elements/1.1/type&gt; ?typeProduccion.
+                                ?typeProduccion &lt;http://purl.org/dc/elements/1.1/title&gt; ?tipoProduccion .
+                                FILTER(lang(?tipoProduccion )='es')
+                                FILTER(?anioIndiceImpacto=?anioFecha)
+                                FILTER(lang(?nombreFuenteIndiceImpacto)='es')
+
+
+                                ?person &lt;http://w3id.org/roh/crisIdentifier&gt; ?identifier.
+                                FILTER(?identifier='&quot;&quot;&quot;+persona_ref+&quot;&quot;&quot;')
+
+                                ?doc &lt;http://purl.org/ontology/bibo/authorList&gt; ?listAuthor2.
+                                ?listAuthor2 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#member&gt; ?person2.
+                                BIND(?person!=?person2 as ?dif)
+                            }
+        }         
+</code></pre>
+
+
+</div>
+
+</div>
+
+
+
+- Obtener producción científica a partir del email de investigador:
+
+<div class="code panel pdl" style="border-width: 1px;">
+
+<div class="codeContent panelContent pdl">
+
+
+<pre><code class="language-syntaxhighlighter-pre">select distinct ?doc ?citasWos ?citasScopus ?citasSemanticScholar ?tipoProduccion ?title ?posicion ?autorUnico ?quartile from &lt;http://gnoss.com/b836078b-78a0-4939-b809-3f2ccf4e5c01&gt;
+            where 
+            {
+                                select distinct ?title ?citasWos ?citasScopus ?citasSemanticScholar ?tipoProduccion ?posicion ?doc min(?quartile) as ?quartile ?nombreFuenteIndiceImpacto !(max(?dif)) as ?autorUnico
+                                where
+                                {
+                                    ?doc a 'document'.
+                                    ?doc &lt;http://w3id.org/roh/title&gt; ?title.
+                                    ?doc &lt;http://vivoweb.org/ontology/core#hasPublicationVenue&gt; ?revista.
+                                    ?doc &lt;http://w3id.org/roh/isValidated&gt; 'true'.
+                                    ?doc &lt;http://purl.org/ontology/bibo/authorList&gt; ?listAuthor.
+                                    ?listAuthor &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#comment&gt; ?posicion.
+                                    ?doc &lt;http://purl.org/dc/terms/issued&gt; ?fecha.  
+                                    BIND(?fecha/10000000000 as ?anioFecha).
+                                    ?listAuthor &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#member&gt; ?person.
+
+                                    OPTIONAL{?doc &lt;http://w3id.org/roh/wosCitationCount&gt; ?citasWos.} 
+                                    OPTIONAL{?doc &lt;http://w3id.org/roh/scopusCitationCount&gt; ?citasScopus.}      
+                                    OPTIONAL{?doc &lt;http://w3id.org/roh/semanticScholarCitationCount&gt; ?citasSemanticScholar.}
+
+                                    ?revista &lt;http://w3id.org/roh/impactIndex&gt; ?indiceImpacto.
+                                    ?indiceImpacto &lt;http://w3id.org/roh/year&gt; ?anioIndiceImpacto.
+                                    ?indiceImpacto &lt;http://w3id.org/roh/impactSource&gt; ?fuenteIndiceImpacto.
+                                    ?fuenteIndiceImpacto &lt;http://purl.org/dc/elements/1.1/title&gt; ?nombreFuenteIndiceImpacto.
+                                    ?indiceImpacto  &lt;http://w3id.org/roh/impactCategory&gt; ?categoriaIndiceImpacto.
+                                    ?categoriaIndiceImpacto &lt;http://w3id.org/roh/quartile&gt; ?quartile.
+                                    ?doc &lt;http://purl.org/dc/elements/1.1/type&gt; ?typeProduccion.
+                                    ?typeProduccion &lt;http://purl.org/dc/elements/1.1/title&gt; ?tipoProduccion .
+                                    FILTER(lang(?tipoProduccion )='es')
+                                    FILTER(?anioIndiceImpacto=?anioFecha)
+                                    FILTER(lang(?nombreFuenteIndiceImpacto)='es')
+
+
+                                    ?person &lt;https://www.w3.org/2006/vcard/ns#email&gt; ?email.
+                                    FILTER(?email='&quot;&quot;&quot;+email+&quot;&quot;&quot;') 
+
+                                    ?doc &lt;http://purl.org/ontology/bibo/authorList&gt; ?listAuthor2.
+                                    ?listAuthor2 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#member&gt; ?person2.
+                                    BIND(?person!=?person2 as ?dif)
+                                }
+            }         
+</code></pre>
+
+
+</div>
+
+</div>
+
+
+
+- Obtención de capítulos de libros de investigador por ORCID:
+
+<div class="code panel pdl" style="border-width: 1px;">
+
+<div class="codeContent panelContent pdl">
+
+
+<pre><code class="language-syntaxhighlighter-pre">select ?doc ?titulo ?anioFecha ?tipoProduccion from &lt;http://gnoss.com/b836078b-78a0-4939-b809-3f2ccf4e5c01&gt;
+        where
+        {
+                        ?doc a 'document'.
+                        ?doc &lt;http://w3id.org/roh/title&gt; ?titulo .
+                        ?doc &lt;http://purl.org/dc/elements/1.1/type&gt; ?typeProduccion.
+                        ?typeProduccion &lt;http://purl.org/dc/elements/1.1/title&gt; ?tipoProduccion .
+                        FILTER(lang(?tipoProduccion)='es')
+                        ?doc &lt;http://w3id.org/roh/isValidated&gt; 'true'.
+                        ?doc &lt;http://purl.org/ontology/bibo/authorList&gt; ?listAuthor.
+                        ?doc &lt;http://purl.org/dc/terms/issued&gt; ?fecha. 
+                        BIND(?fecha/10000000000 as ?anioFecha).
+                        ?listAuthor &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#member&gt; ?person.
+
+                        ?person &lt;http://w3id.org/roh/ORCID&gt; ?orcid.
+                        FILTER(?orcid='&quot;&quot;&quot;+orcid+&quot;&quot;&quot;')
+                        FILTER(?typeProduccion=&lt;http://gnoss.com/items/publicationtype_004&gt;)
+        }
+</code></pre>
+
+
+</div>
+
+</div>
+
+
+
+- Obtención de capítulos de libros de investigador por PersonaRef:
+
+<div class="code panel pdl" style="border-width: 1px;">
+
+<div class="codeContent panelContent pdl">
+
+
+<pre><code class="language-syntaxhighlighter-pre">select ?doc ?titulo ?anioFecha ?tipoProduccion from &lt;http://gnoss.com/b836078b-78a0-4939-b809-3f2ccf4e5c01&gt;
+        where
+        {
+                        ?doc a 'document'.
+                        ?doc &lt;http://w3id.org/roh/title&gt; ?titulo .
+                        ?doc &lt;http://purl.org/dc/elements/1.1/type&gt; ?typeProduccion.
+                        ?typeProduccion &lt;http://purl.org/dc/elements/1.1/title&gt; ?tipoProduccion .
+                        FILTER(lang(?tipoProduccion)='es')
+                        ?doc &lt;http://w3id.org/roh/isValidated&gt; 'true'.
+                        ?doc &lt;http://purl.org/ontology/bibo/authorList&gt; ?listAuthor.
+                        ?doc &lt;http://purl.org/dc/terms/issued&gt; ?fecha. 
+                        BIND(?fecha/10000000000 as ?anioFecha).
+                        ?listAuthor &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#member&gt; ?person.
+
+                        ?person &lt;http://w3id.org/roh/crisIdentifier&gt; ?identifier.
+                        FILTER(?identifier='&quot;&quot;&quot;+persona_ref+&quot;&quot;&quot;')
+                        FILTER(?typeProduccion=&lt;http://gnoss.com/items/publicationtype_004&gt;)
+        }
+</code></pre>
+
+
+</div>
+
+</div>
+
+
+
+- Obtención de capítulos de libros de investigador por email:
+
+<div class="code panel pdl" style="border-width: 1px;">
+
+<div class="codeContent panelContent pdl">
+
+
+<pre><code class="language-syntaxhighlighter-pre">select ?doc ?titulo ?anioFecha ?tipoProduccion from &lt;http://gnoss.com/b836078b-78a0-4939-b809-3f2ccf4e5c01&gt;
+        where
+        {
+                        ?doc a 'document'.
+                        ?doc &lt;http://w3id.org/roh/title&gt; ?titulo .
+                        ?doc &lt;http://purl.org/dc/elements/1.1/type&gt; ?typeProduccion.
+                        ?typeProduccion &lt;http://purl.org/dc/elements/1.1/title&gt; ?tipoProduccion .
+                        FILTER(lang(?tipoProduccion)='es')
+                        ?doc &lt;http://w3id.org/roh/isValidated&gt; 'true'.
+                        ?doc &lt;http://purl.org/ontology/bibo/authorList&gt; ?listAuthor.
+                        ?doc &lt;http://purl.org/dc/terms/issued&gt; ?fecha. 
+                        BIND(?fecha/10000000000 as ?anioFecha).
+                        ?listAuthor &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#member&gt; ?person.
+
+                        ?person &lt;https://www.w3.org/2006/vcard/ns#email&gt; ?email.
+                        FILTER(?email='&quot;&quot;&quot;+email+&quot;&quot;&quot;')
+                        FILTER(?typeProduccion=&lt;http://gnoss.com/items/publicationtype_004&gt;)
+        }
+</code></pre>
+
+
+</div>
+
+</div>
+
+
+
+- Obtención de libros de investigador por ORCID:
+
+<div class="code panel pdl" style="border-width: 1px;">
+
+<div class="codeContent panelContent pdl">
+
+
+<pre><code class="language-syntaxhighlighter-pre">select ?doc ?titulo ?anioFecha ?tipoProduccion from &lt;http://gnoss.com/b836078b-78a0-4939-b809-3f2ccf4e5c01&gt;
+        where
+        {
+                        ?doc a 'document'.
+                        ?doc &lt;http://w3id.org/roh/title&gt; ?titulo .
+                        ?doc &lt;http://purl.org/dc/elements/1.1/type&gt; ?typeProduccion.
+                        ?typeProduccion &lt;http://purl.org/dc/elements/1.1/title&gt; ?tipoProduccion .
+                        FILTER(lang(?tipoProduccion)='es')
+                        ?doc &lt;http://w3id.org/roh/isValidated&gt; 'true'.
+                        ?doc &lt;http://purl.org/ontology/bibo/authorList&gt; ?listAuthor.
+                        ?doc &lt;http://purl.org/dc/terms/issued&gt; ?fecha. 
+                        BIND(?fecha/10000000000 as ?anioFecha).
+                        ?listAuthor &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#member&gt; ?person.
+
+                        ?person &lt;http://w3id.org/roh/ORCID&gt; ?orcid.
+                        FILTER(?orcid='&quot;&quot;&quot;+orcid+&quot;&quot;&quot;')
+                        FILTER(?typeProduccion=&lt;http://gnoss.com/items/publicationtype_032&gt;)
+        }
+</code></pre>
+
+
+</div>
+
+</div>
+
+
+
+- Obtención de libros de investigador por PersonaRef:
+
+<div class="code panel pdl" style="border-width: 1px;">
+
+<div class="codeContent panelContent pdl">
+
+
+<pre><code class="language-syntaxhighlighter-pre">select ?doc ?titulo ?anioFecha ?tipoProduccion from &lt;http://gnoss.com/b836078b-78a0-4939-b809-3f2ccf4e5c01&gt;
+        where
+        {
+                        ?doc a 'document'.
+                        ?doc &lt;http://w3id.org/roh/title&gt; ?titulo .
+                        ?doc &lt;http://purl.org/dc/elements/1.1/type&gt; ?typeProduccion.
+                        ?typeProduccion &lt;http://purl.org/dc/elements/1.1/title&gt; ?tipoProduccion .
+                        FILTER(lang(?tipoProduccion)='es')
+                        ?doc &lt;http://w3id.org/roh/isValidated&gt; 'true'.
+                        ?doc &lt;http://purl.org/ontology/bibo/authorList&gt; ?listAuthor.
+                        ?doc &lt;http://purl.org/dc/terms/issued&gt; ?fecha. 
+                        BIND(?fecha/10000000000 as ?anioFecha).
+                        ?listAuthor &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#member&gt; ?person.
+
+                        ?person &lt;http://w3id.org/roh/crisIdentifier&gt; ?identifier.
+                        FILTER(?identifier='&quot;&quot;&quot;+persona_ref+&quot;&quot;&quot;')
+                        FILTER(?typeProduccion=&lt;http://gnoss.com/items/publicationtype_032&gt;)
+        }
+</code></pre>
+
+
+</div>
+
+</div>
+
+
+
+- Obtención de libros de investigador por email:
+
+<div class="code panel pdl" style="border-width: 1px;">
+
+<div class="codeContent panelContent pdl">
+
+
+<pre><code class="language-syntaxhighlighter-pre">select ?doc ?titulo ?anioFecha ?tipoProduccion from &lt;http://gnoss.com/b836078b-78a0-4939-b809-3f2ccf4e5c01&gt;
+        where
+        {
+                        ?doc a 'document'.
+                        ?doc &lt;http://w3id.org/roh/title&gt; ?titulo .
+                        ?doc &lt;http://purl.org/dc/elements/1.1/type&gt; ?typeProduccion.
+                        ?typeProduccion &lt;http://purl.org/dc/elements/1.1/title&gt; ?tipoProduccion .
+                        FILTER(lang(?tipoProduccion)='es')
+                        ?doc &lt;http://w3id.org/roh/isValidated&gt; 'true'.
+                        ?doc &lt;http://purl.org/ontology/bibo/authorList&gt; ?listAuthor.
+                        ?doc &lt;http://purl.org/dc/terms/issued&gt; ?fecha. 
+                        BIND(?fecha/10000000000 as ?anioFecha).
+                        ?listAuthor &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#member&gt; ?person.
+
+                        ?person &lt;https://www.w3.org/2006/vcard/ns#email&gt; ?email.
+                        FILTER(?email='&quot;&quot;&quot;+email+&quot;&quot;&quot;')
+                        FILTER(?typeProduccion=&lt;http://gnoss.com/items/publicationtype_032&gt;)
+        }
+</code></pre>
+
+
+</div>
+
+</div>
+
+
+
+- Obtener información y parámetros de un artículo a partir de su ID:
+
+<div class="code panel pdl" style="border-width: 1px;">
+
+<div class="codeContent panelContent pdl">
+
+
+<pre><code class="language-syntaxhighlighter-pre">select ?titulo ?doi ?tipoProduccion ?fechaPublicacion ?citasWos ?citasScopus  ?citasSemanticScholar ?volumen ?numero ?paginaInicio ?paginaFin min(?journalNumberInCat) as ?journalNumberInCat min(?publicationPosition) as ?publicationPosition  ?issn ?revista ?editorial ?nombreRevista ?indiceImpacto  min(?cuartil)  as ?cuartil    from &lt;http://gnoss.com/b836078b-78a0-4939-b809-3f2ccf4e5c01&gt;
+    where
+    {
+                    ?doc a 'document'.
+                    ?doc &lt;http://purl.org/dc/terms/issued&gt; ?fecha.  
+                    OPTIONAL{?doc &lt;http://purl.org/ontology/bibo/volume&gt; ?volumen.}
+                    OPTIONAL{?doc &lt;http://purl.org/ontology/bibo/issue&gt; ?numero.}
+                    OPTIONAL{?doc &lt;http://purl.org/ontology/bibo/pageStart&gt; ?paginaInicio.}
+                    OPTIONAL{?doc &lt;http://purl.org/ontology/bibo/pageEnd&gt; ?paginaFin.}
+                    ?doc &lt;http://vivoweb.org/ontology/core#hasPublicationVenue&gt; ?revista.
+                    ?revista &lt;http://w3id.org/roh/title&gt; ?nombreRevista.
+                    OPTIONAL{?revista &lt;http://purl.org/ontology/bibo/issn&gt; ?issn.}
+                    BIND(?fecha/10000000000 as ?anioFecha).
+                    ?revista &lt;http://w3id.org/roh/impactIndex&gt; ?impactIndex.
+                    OPTIONAL{?revista &lt;http://purl.org/ontology/bibo/editor&gt; ?editorial.}
+                    ?impactIndex&lt;http://w3id.org/roh/year&gt; ?anioIndiceImpacto.
+                    ?impactIndex&lt;http://w3id.org/roh/impactIndexInYear&gt; ?indiceImpacto.
+                    ?impactIndex&lt;http://w3id.org/roh/impactSource&gt; ?fuenteIndiceImpacto.
+                    ?fuenteIndiceImpacto &lt;http://purl.org/dc/elements/1.1/title&gt; ?nombreFuenteIndiceImpacto.
+                    ?impactIndex&lt;http://w3id.org/roh/impactCategory&gt; ?categoriaIndiceImpacto.
+                    ?categoriaIndiceImpacto &lt;http://w3id.org/roh/quartile&gt; ?cuartil .
+                    ?categoriaIndiceImpacto &lt;http://w3id.org/roh/journalNumberInCat&gt; ?journalNumberInCat .
+                    ?categoriaIndiceImpacto &lt;http://w3id.org/roh/publicationPosition&gt; ?publicationPosition .
+                    ?doc &lt;http://w3id.org/roh/title&gt; ?titulo .
+                    ?doc &lt;http://purl.org/dc/terms/issued&gt; ?fecha.  
+                    OPTIONAL{?doc &lt;http://w3id.org/roh/wosCitationCount&gt; ?citasWos.} 
+                    OPTIONAL{?doc &lt;http://w3id.org/roh/scopusCitationCount&gt; ?citasScopus.}      
+                    OPTIONAL{?doc &lt;http://w3id.org/roh/semanticScholarCitationCount&gt; ?citasSemanticScholar.} 
+                    OPTIONAL{?doc &lt;http://purl.org/ontology/bibo/doi&gt; ?doi.}       
+                    BIND( concat(substr(str(?fecha),7,2),'-',substr(str(?fecha),5,2),'-',substr(str(?fecha),1,4)) as ?fechaPublicacion )
+                    ?doc &lt;http://purl.org/dc/elements/1.1/type&gt; ?typeProduccion.
+                    ?typeProduccion &lt;http://purl.org/dc/elements/1.1/title&gt; ?tipoProduccion .
+                    FILTER(lang(?tipoProduccion )='es')
+                    FILTER(?anioIndiceImpacto=?anioFecha)
+                    FILTER(?doc =&lt;&quot;&quot;&quot;+id_articulo+&quot;&quot;&quot;&gt;)
+    }
+
+</code></pre>
+
+
+</div>
+
+</div>
+
+
+
+- Obtención de los autores de un artículo en orden por posición del investigador :
+
+<div class="code panel pdl" style="border-width: 1px;">
+
+<div class="codeContent panelContent pdl">
+
+
+<pre><code class="language-syntaxhighlighter-pre">select ?posicion ?autor ?nombreAutor ?emailAutor ?orcidAutor from &lt;http://gnoss.com/b836078b-78a0-4939-b809-3f2ccf4e5c01&gt;
+    where
+    {
+                    ?doc a 'document'.
+                    ?doc &lt;http://purl.org/ontology/bibo/authorList&gt; ?listAuthor.
+                    ?listAuthor &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#member&gt; ?autor.
+                    ?listAuthor &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#comment&gt; ?posicion.
+                    ?autor &lt;http://xmlns.com/foaf/0.1/name&gt;  ?nombreAutor.
+                    OPTIONAL{?autor &lt;http://w3id.org/roh/ORCID&gt; ?orcidAutor .}
+                    OPTIONAL{?autor &lt;https://www.w3.org/2006/vcard/ns#email&gt; ?emailAutor .}
+                    FILTER(?doc =&lt;&quot;&quot;&quot;+id_articulo+&quot;&quot;&quot;&gt;)
+    }order by asc(?posicion)
+</code></pre>
+
+
+</div>
+
+</div>
+
+
+
+- Obtener trabajos presentados en congresos nacionales e internacionales de un investigador:
+
+<div class="code panel pdl" style="border-width: 1px;">
+
+<div class="codeContent panelContent pdl">
+
+
+<pre><code class="language-syntaxhighlighter-pre">select ?doc from &lt;http://gnoss.com/b836078b-78a0-4939-b809-3f2ccf4e5c01&gt;
+            where
+            {
+                ?doc a 'document'.
+                ?doc &lt;http://w3id.org/roh/scientificActivityDocument&gt; &lt;http://gnoss.com/items/scientificactivitydocument_SAD2&gt;.
+                ?doc &lt;http://w3id.org/roh/isValidated&gt; 'true'.
+                ?doc &lt;http://purl.org/ontology/bibo/authorList&gt; ?listAuthor.
+                ?doc &lt;http://purl.org/dc/terms/issued&gt; ?fecha. 
+                BIND(?fecha/10000000000 as ?anioFecha).
+                ?listAuthor &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#member&gt; ?person.
+                &quot;&quot;&quot;+filtro_investigador+&quot;&quot;&quot;
+                FILTER(?anioFecha in (&quot;&quot;&quot;+periodo+&quot;&quot;&quot;))
+            }
+</code></pre>
+
+
+</div>
+
+</div>
+
+
+
+- Obtener patentes de un investigador:
+
+<div class="code panel pdl" style="border-width: 1px;">
+
+<div class="codeContent panelContent pdl">
+
+
+<pre><code class="language-syntaxhighlighter-pre">select ?doc from &lt;http://gnoss.com/b836078b-78a0-4939-b809-3f2ccf4e5c01&gt;
+where
+{
+      ?doc a 'patent'.   
+      ?doc &lt;http://w3id.org/roh/isValidated&gt; 'true'.
+      ?doc &lt;http://purl.org/ontology/bibo/authorList&gt; ?listAuthor.
+      ?doc &lt;http://purl.org/dc/terms/issued&gt; ?fecha. 
+      BIND(?fecha/10000000000 as ?anioFecha).
+      ?listAuthor &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#member&gt; ?person. 
+      &quot;&quot;&quot;+filtro_investigador+&quot;&quot;&quot;
+      FILTER(?anioFecha in (2010,2011,2013,2015,2018,2020))
+} 
+</code></pre>
+
+
+</div>
+
+</div>
+
+
+
+- Obtener título y fecha de una patente utilizando su identificador:
+
+<div class="code panel pdl" style="border-width: 1px;">
+
+<div class="codeContent panelContent pdl">
+
+
+<pre><code class="language-syntaxhighlighter-pre">select ?titulo ?fechaPublicacion from &lt;http://gnoss.com/b836078b-78a0-4939-b809-3f2ccf4e5c01&gt;
+where
+{
+     ?doc a 'patent'.
+     ?doc &lt;http://w3id.org/roh/title&gt; ?titulo .
+     OPTIONAL{?doc &lt;http://purl.org/dc/terms/issued&gt; ?fecha. }
+     FILTER(?doc =&lt;&quot;&quot;&quot;+id+&quot;&quot;&quot;&gt;)
+}
+</code></pre>
+
+
+</div>
+
+</div>
+
+
+
+- Obtener lista de autores de una patente utilizando su identificador:
+
+<div class="code panel pdl" style="border-width: 1px;">
+
+<div class="codeContent panelContent pdl">
+
+
+<pre><code class="language-syntaxhighlighter-pre">select ?posicion ?autor ?nombreAutor ?emailAutor ?orcidAutor from &lt;http://gnoss.com/b836078b-78a0-4939-b809-3f2ccf4e5c01&gt;
+where
+{
+    ?doc a 'document'.
+    ?doc &lt;http://purl.org/ontology/bibo/authorList&gt; ?listAuthor.
+    ?listAuthor &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#member&gt; ?autor.
+    ?listAuthor &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#comment&gt; ?posicion.
+                ?autor &lt;http://xmlns.com/foaf/0.1/name&gt;  ?nombreAutor.
+    OPTIONAL{?autor &lt;http://w3id.org/roh/ORCID&gt; ?orcidAutor .}
+    OPTIONAL{?autor &lt;https://www.w3.org/2006/vcard/ns#email&gt; ?emailAutor .}
+    FILTER(?doc =&lt;&quot;&quot;&quot;+id+&quot;&quot;&quot;&gt;)
+}order by asc(?posicion)
+</code></pre>
+
+
+</div>
+
+</div>
+
+
+
+<span class="plugin_pagetree_children_span">donde, *filtro_investigador* es el filtro que indica el identificador del investigador, puede ser personaRef, email u ORCID, como se puede ver en las queries anteriores.</span>
+
+
+
+<span class="plugin_pagetree_children_span"><a href="https://confluence.um.es/confluence/display/HERCULES/Proceso+4+%3A++Sistemas+Inteligentes+de+encaje+entre+convocatorias+e+investigadores?src=contextnavpagetreemode" rel="nofollow">Proceso 4 : Sistemas Inteligentes de encaje entre convocatorias e investigadores</a></span>
+
+
+
+- <span class="plugin_pagetree_children_span">Obtención de grafo de colaboración:</span>
+
+<div class="code panel pdl" style="border-width: 1px;">
+
+<div class="codeContent panelContent pdl">
+
+
+<pre><code class="language-syntaxhighlighter-pre">SELECT ?person ?nombre ?email count(distinct ?documento) as ?colaboracionesDocumentos  count(distinct ?proy)  as ?colaboracionesProyectos
+count(distinct ?documento)  + count(distinct ?proy) as ?totalColaboraciones
+from &lt;http://gnoss.com/b836078b-78a0-4939-b809-3f2ccf4e5c01&gt;
+WHERE
+    {          
+        ?person a 'person'.
+        ?person foaf:name ?nombre.
+        ?person &lt;https://www.w3.org/2006/vcard/ns#email&gt; ?email
+        {
+            ?documento &lt;http://purl.org/ontology/bibo/authorList&gt; ?listaAutoresA.
+            ?listaAutoresA &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#member&gt; ?personaBuscar.
+            ?documento a 'document'.
+            ?documento &lt;http://purl.org/ontology/bibo/authorList&gt; ?listaAutores.
+            ?listaAutores &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#member&gt; ?person.                     
+        }
+        UNION
+        {       
+            ?proy &lt;http://w3id.org/roh/membersProject&gt; ?personaBuscar.
+            ?proy a 'project'.
+            ?proy &lt;http://w3id.org/roh/membersProject&gt; ?person.                
+        }          
+        FILTER(?person != ?personaBuscar)
+        ?personaBuscar a 'person'.
+        ?personaBuscar &lt;https://www.w3.org/2006/vcard/ns#email&gt; ?emailPersonaBuscar.
+        FILTER( ?emailPersonaBuscar=&quot;&quot;&quot;+&quot;'&quot;+investigador_email+&quot;'&quot;+&quot;&quot;&quot;)
+    }order by desc(?totalColaboraciones)
+</code></pre>
+
+
+</div>
+
+</div>
+
+
+
+- Obtención de la lista de investigadores:
+
+<div class="code panel pdl" style="border-width: 1px;">
+
+<div class="codeContent panelContent pdl">
+
+
+<pre><code class="language-syntaxhighlighter-pre">select ?person ?nombrePersona ?email from &lt;http://gnoss.com/document.owl&gt; from &lt;http://gnoss.com/person.owl&gt; from &lt;http://gnoss.com/taxonomy.owl&gt; 
+where { 
+            ?doc a &lt;http://purl.org/ontology/bibo/Document&gt;.
+            ?doc &lt;http://purl.org/ontology/bibo/authorList&gt; ?autor.
+            ?autor &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#member&gt; ?person.
+            ?person &lt;http://xmlns.com/foaf/0.1/name&gt; ?nombrePersona.
+            ?person &lt;https://www.w3.org/2006/vcard/ns#email&gt; ?email.
+}GROUP BY ?email 
+</code></pre>
+
+
+</div>
+
+</div>
+
+
+
+- Obtención de los datos de una persona dado su identificador "personaRef":
+
+<div class="code panel pdl" style="border-width: 1px;">
+
+<div class="codeContent panelContent pdl">
+
+
+<pre><code class="language-syntaxhighlighter-pre">select ?person ?identifier ?nombrePersona ?email from &lt;http://gnoss.com/document.owl&gt; from &lt;http://gnoss.com/person.owl&gt; from &lt;http://gnoss.com/taxonomy.owl&gt; 
+where { 
+            ?doc a &lt;http://purl.org/ontology/bibo/Document&gt;.
+            ?doc &lt;http://purl.org/ontology/bibo/authorList&gt; ?autor.
+            ?autor &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#member&gt; ?person.
+            ?person &lt;http://w3id.org/roh/crisIdentifier&gt; ?identifier.
+            ?person &lt;http://xmlns.com/foaf/0.1/name&gt; ?nombrePersona.
+            ?person &lt;https://www.w3.org/2006/vcard/ns#email&gt; ?email.
+            FILTER(?email='&quot;&quot;&quot;+email+&quot;&quot;&quot;')
+}GROUP BY ?email 
+</code></pre>
+
+
+</div>
+
+</div>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+<div id="footer" role="contentinfo">
+
+<div class="section footer-body">
+
+Document generated by Confluence on oct 27, 2025 09:24
+
+<div id="footer-logo">
+
+[Atlassian](https://www.atlassian.com/)
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 
 

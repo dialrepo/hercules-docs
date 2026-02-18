@@ -796,7 +796,351 @@
 
   <h1>Rep pii 0010 listado general de solicitudes de proteccion formato csv</h1>
 
+<div id="page">
 
+<div id="main" class="aui-page-panel">
+
+<div id="main-header">
+
+<div id="breadcrumb-section">
+
+1.  [Hércules](index.html)
+2.  [Hércules](/)
+3.  [SGI. Sistema de gestión de investigación](//sgi-sistema-de-gestion-de-investigacion)
+4.  [Requisitos y análisis funcional](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional)
+5.  [Análisis Funcional SGI - Hércules](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules)
+6.  [GEN - Aspectos generales](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales)
+7.  [INT - Requisitos de integración](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion)
+8.  [REQ-INT-0150-SGREP - Integración con Sistema de Generación de Reportes](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0150-sgrep-integracion-con-sistema-de-generacion-de-reportes)
+9.  [PII - Informes Predefinidos](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0150-sgrep-integracion-con-sistema-de-generacion-de-reportes/pii-informes-predefinidos)
+
+</div>
+
+# <span id="title-text"> Hércules : REP-PII-0010 - Listado general de solicitudes de protección - Formato csv </span>
+
+</div>
+
+<div id="content" class="view">
+
+<div class="page-metadata">
+
+Created by <span class="author"> Usuario desconocido (alicia.alvarez)</span>, last updated on jun 23, 2022
+
+</div>
+
+<div id="main-content" class="wiki-content group">
+
+<div class="contentLayout2">
+
+<div class="columnLayout single" layout="single">
+
+<div class="cell normal" data-type="normal">
+
+<div class="innerCell">
+
+<div class="plugin-tabmeta-details">
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="odd">
+<th class="confluenceTh">Cod. REP</th>
+<td class="confluenceTd"><p><strong>REP-PII-0010 - Listado general de solicitudes de protección - Formato csv</strong></p></td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Ver. Objetivo</th>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh">Ver. REP</th>
+<td class="confluenceTd">1.0.0</td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Estado</th>
+<td class="confluenceTd"><div class="content-wrapper">
+<span class="status-macro aui-lozenge conf-macro output-inline">PENDIENTE</span>
+</div></td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh">Fec. Aprobación</th>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Épica, historia</th>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh">Frecuencia</th>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+## Diseño Informe 
+
+<span style="letter-spacing: 0.0px;">Se debe de generar un informe en formato csv que reciba como parámetro de entrada la lista de bloques de datos a incluir. A continuación se indica el mapeo de los nombres de columnas del fichero csv de salida con la tabla y campo del SGI desde el que deben ser recuperadas. Se indica también el bloque de datos al que pertenece cada columna. Las columnas que disponen de un bloque de datos sólo se mostrarán en el informe si el bloque de datos está incluido en la lista recibida como parámetro de entrada. Las columnas que no disponen de un bloque de datos se incluirán siempre en el informe.</span>
+
+Los nombres de las columnas en el fichero csv que formen parte de un bloque que se repita, deberán llevar en su nombre un número cardinal representativo del número de repetición, de forma que se permita la distinción del título de la columna. En la siguiente tabla se identifican también los bloques de datos susceptibles de repetirse. El fichero resultante contendrá las columnas necesarias, sobre cada bloque de repetición, de acuerdo a la solicitud de protección que más elementos contenga para ese bloque. Para las solicitudes de protección que no contengan tantos elementos sobre cada bloque como marque el máximo, se mostrarán las columnas sin contenido.
+
+El fichero csv resultante utilizará un carácter predefinido como separador de cada columna.
+
+Ejemplo: <a href="attachments/597852844/597858700.csv" data-linked-resource-id="597858700" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="solicitudes_proteccion_with_columns_repeated.csv" data-linked-resource-content-type="text/csv" data-linked-resource-container-id="597852844" data-linked-resource-container-version="6">solicitudes_proteccion_with_columns_repeated.csv</a>
+
+
+
+<div class="table-wrap">
+
+<table class="wrapped relative-table confluenceTable">
+<tbody>
+<tr class="header">
+<th class="confluenceTh">Bloque de datos</th>
+<th class="confluenceTh">Columna informe</th>
+<th class="confluenceTh">Campo SGI</th>
+<th class="confluenceTh">Repetición</th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Fecha Solicitud</td>
+<td class="confluenceTd"><p>Campo "fechaPrioridadSolicitud" de la tabla "SolicitudProteccion".</p></td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Vía Protección</td>
+<td class="confluenceTd">Campo "nombre" de la tabla "ViaProteccion" asociada a la solicitud de protección a través del campo "viaProteccion" de la tabla "SolicitudProteccion".</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">País</td>
+<td class="confluenceTd">Campo "nombre" recuperado a través de <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0030-sgo-integracion-con-sistema-de-gestion-de-la-estructura-organica/req-int-0030-sgo-0061-consultar-pais">REQ-INT-0030-SGO-0061 - Consultar país</a> para la referencia indicada en el campo "paisProteccionRef" de la tabla "SolicitudProteccion".</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Número Solicitud</td>
+<td class="confluenceTd">Campo "numeroSolicitud" de la tabla "SolicitudProteccion".</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Título Invención</td>
+<td class="confluenceTd">Campo "titulo" de la tabla "Invencion" asociada a la solicitud de protección a través del campo "invencionId" de la tabla "SolicitudProteccion".</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Tipo Protección</td>
+<td class="confluenceTd">Campo "nombre" de la tabla "TipoProteccion" asociada a la invención través del campo "tipoProteccion" de la tabla "Invencion" de la invención asociada a la solicitud de protección a través del campo "invencionId" de la tabla "SolicitudProteccion".</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Estado</td>
+<td class="confluenceTd">Valor textual asociado al enumerado que se indique en el campo "estado" de la tabla "SolicitudProteccion".</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Prioritaria</td>
+<td class="confluenceTd"><p>Valor booleano que se representará con un carácter, teniendo dos valores posibles:</p>
+<ul>
+<li>"S" : representa que la solicitud de protección es la prioritaria de la invención. Esto ocurrirá si tiene un valor informado en el campo "fechaFinPriorPresFasNacRec" de la tabla "SolicitudProteccion".</li>
+<li>"N": representa que la solicitud de protección NO es la prioritaria de la invención. Esto ocurrirá si NO tiene un valor informado en el campo "fechaFinPriorPresFasNacRec" de la tabla "SolicitudProteccion".</li>
+</ul></td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Fecha Fin Prioridad/Plazo Present. Fases Nac./Reg.</td>
+<td class="confluenceTd">Campo "fechaFinPriorPresFasNacRec" de la tabla "SolicitudProteccion".</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Fecha Concesión</td>
+<td class="confluenceTd">Campo "fechaConcesion" de la tabla "SolicitudProteccion".</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Número Concesión</td>
+<td class="confluenceTd">Campo "numeroConcesion" de la tabla "SolicitudProteccion".</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Número Registro</td>
+<td class="confluenceTd">Campo "numeroRegistro" de la tabla "SolicitudProteccion".</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="columnLayout two-equal" layout="two-equal">
+
+<div class="cell normal" data-type="normal">
+
+<div class="innerCell">
+
+## <span style="letter-spacing: -0.008em;">Interfaces de usuario relacionados</span>
+
+<img src="plugins/servlet/confluence/placeholder/unknown-macro" class="wysiwyg-unknown-macro" />
+
+</div>
+
+</div>
+
+<div class="cell normal" data-type="normal">
+
+<div class="innerCell">
+
+## Casos de uso relacionados
+
+<img src="plugins/servlet/confluence/placeholder/unknown-macro" class="wysiwyg-unknown-macro" />
+
+
+
+</div>
+
+</div>
+
+</div>
+
+<div class="columnLayout single" layout="single">
+
+<div class="cell normal" data-type="normal">
+
+<div class="innerCell">
+
+## Permisos de acceso al informe
+
+### Por actor
+
+<div class="plugin-tabmeta-details">
+
+<div class="table-wrap">
+
+|                    |                      |
+|--------------------|----------------------|
+| ACT-PII-001-Gestor | PII-INV-C, PII-INV-E |
+
+</div>
+
+</div>
+
+### Todos los permisos de acceso
+
+<div class="plugin-tabmeta-details">
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable" style="width: 84.4498%;">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 79%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<th class="confluenceTh">Permisos</th>
+<td class="confluenceTd"><p><span>PII-INV-V, PII-INV-C, PII-INV-E</span><span><br />
+</span></p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="pageSection group">
+
+<div class="pageSectionHeader">
+
+## Attachments:
+
+</div>
+
+<div class="greybox" align="left">
+
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [solicitudes_proteccion_with_columns_repeated.csv](/attachments/597852844/597858700.csv) (text/csv)  
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div id="footer" role="contentinfo">
+
+<div class="section footer-body">
+
+Document generated by Confluence on oct 27, 2025 08:38
+
+<div id="footer-logo">
+
+[Atlassian](https://www.atlassian.com/)
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 
 

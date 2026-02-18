@@ -796,7 +796,582 @@
 
   <h1>Iu eti 0030 003 modificar acta</h1>
 
+<div id="page">
 
+<div id="main" class="aui-page-panel">
+
+<div id="main-header">
+
+<div id="breadcrumb-section">
+
+1.  [Hércules](index.html)
+2.  [Hércules](/)
+3.  [SGI. Sistema de gestión de investigación](//sgi-sistema-de-gestion-de-investigacion)
+4.  [Requisitos y análisis funcional](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional)
+5.  [Análisis Funcional SGI - Hércules](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules)
+6.  [ETI - Módulo de ética](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica)
+7.  [ETI - Interfaz de Usuario](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario)
+8.  [IU-ETI-0030- Gestión de Actas](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario/iu-eti-0030-gestion-de-actas)
+
+</div>
+
+# <span id="title-text"> Hércules : IU-ETI-0030-003 Modificar acta </span>
+
+</div>
+
+<div id="content" class="view">
+
+<div class="page-metadata">
+
+Created by <span class="author"> Usuario desconocido (lorena.alvarez)</span>, last updated on oct 08, 2021
+
+</div>
+
+<div id="main-content" class="wiki-content group">
+
+<div class="plugin-tabmeta-details">
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable" style="width: 75.1988%;">
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 84%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<th class="confluenceTh">Cod. IU</th>
+<td class="confluenceTd"><p><strong><strong><strong><strong>IU-ETI-0030-002 Modificar acta<br />
+</strong></strong></strong></strong></p></td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Ver. objetivo</th>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh">Ver. CU</th>
+<td class="confluenceTd">1.0.0</td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Estado</th>
+<td class="confluenceTd"><div class="content-wrapper">
+<p> <span class="status-macro aui-lozenge aui-lozenge-current">LIBERADO_</span></p>
+</div></td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh">Fec. Aprobación</th>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Épica, historia</th>
+<td class="confluenceTd"><div class="content-wrapper">
+<p><br />
+</p>
+</div></td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh">Actores</th>
+<td class="confluenceTd"><p>ACT-ETI-001-Gestor</p>
+<p>ACT-ETI-004-Evaluador</p>
+<p>ACT-ETI-005-Técnico</p></td>
+</tr>
+<tr class="even">
+<th class="confluenceTh"><p>Frecuencia</p></th>
+<td class="confluenceTd">Media</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+# Formulario de Modificar acta
+
+Compuesto por cuatro formularios:
+
+- Datos generales
+- Memorias
+- Asistentes
+- Comentarios
+
+## Datos generales
+
+Son los datos generales del acta. Un acta siempre estará asociada a un única convocatoria de reunión. Para identificar la convocatoria de reunión se hace a través de la fecha de la evaluación y del comité.
+
+Los evaluadores verán esta pantalla en modo consulta siempre (aunque el estado este en estado En elaboración)
+
+<div class="table-wrap">
+
+<table class="wrapped relative-table confluenceTable" style="width: 75.1422%;">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 8%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<th colspan="3" class="confluenceTd"><div class="content-wrapper">
+<p><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597853799/597868966.png" class="confluence-embedded-image" draggable="false" data-image-src="attachments/597853799/597868966.png" data-unresolved-comment-count="0" data-linked-resource-id="597868966" data-linked-resource-version="3" data-linked-resource-type="attachment" data-linked-resource-default-alias="edicin_acta_datos_generales.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597853799" data-linked-resource-container-version="20" tabindex="0" width="650" /></span></p>
+</div></th>
+</tr>
+<tr class="even">
+<th class="confluenceTh"><div class="content-wrapper">
+<p>Nombre</p>
+</div></th>
+<th class="confluenceTh">Tipo</th>
+<th class="confluenceTh"><div class="content-wrapper">
+<p>Características / Notas</p>
+</div></th>
+</tr>
+<tr class="odd">
+<th class="confluenceTd">Reunión de evaluación</th>
+<th class="confluenceTd"><p>Desplegable</p>
+<p>referencias</p>
+<p>Obligatorio</p></th>
+<th class="confluenceTd"><div class="content-wrapper">
+<p>Desplegable indicando el código convocatoria.</p>
+<p>Modo consulta</p>
+</div></th>
+</tr>
+<tr class="even">
+<th class="confluenceTd"><p>Hora de inicio</p></th>
+<th class="confluenceTd"><p>fecha y hora</p>
+<p><span>Obligatorio</span></p></th>
+<th class="confluenceTd"><p>Hora y minutos del inicio del acta</p>
+<p><br />
+</p></th>
+</tr>
+<tr class="odd">
+<th class="confluenceTd">Hora fin</th>
+<th class="confluenceTd"><p><span>fecha y hora</span></p>
+<p>Obligatorio</p></th>
+<th class="confluenceTd">Hora y minutos del fin del acta</th>
+</tr>
+<tr class="even">
+<th class="confluenceTd">Resumen</th>
+<th class="confluenceTd"><p>Texto largo</p>
+<p>Obligatorio</p></th>
+<th class="confluenceTd">Contenido del acta</th>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+## Memorias
+
+Listado de las memorias evaluadas en la convocatoria de reunión.
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable" style="width: 75.1641%;">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 8%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<th colspan="3" class="confluenceTd"><div class="content-wrapper">
+<p><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597853799/597869094.png" class="confluence-embedded-image" draggable="false" data-image-src="attachments/597853799/597869094.png" data-unresolved-comment-count="0" data-linked-resource-id="597869094" data-linked-resource-version="4" data-linked-resource-type="attachment" data-linked-resource-default-alias="nuevaedicin_acta_memorias.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597853799" data-linked-resource-container-version="20" tabindex="0" width="650" /></span></p>
+</div></th>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Nombre</th>
+<th class="confluenceTh">Tipo</th>
+<th class="confluenceTh"><div class="content-wrapper">
+<p>Características / Notas</p>
+</div></th>
+</tr>
+<tr class="odd">
+<th colspan="3" class="highlight-blue confluenceTd" data-highlight-colour="blue">Listado de memorias a evaluar en la convocatoria de reunión asociada al acta.</th>
+</tr>
+<tr class="even">
+<th class="confluenceTd">Referencia memoria</th>
+<th class="confluenceTd"><p>referencias</p></th>
+<th class="confluenceTd">Referencia de la memoria.</th>
+</tr>
+<tr class="odd">
+<th class="confluenceTd">Versión</th>
+<th class="confluenceTd"><span>Numérico entero genérico</span></th>
+<th class="confluenceTd">Versión de la memoria.</th>
+</tr>
+<tr class="even">
+<th class="confluenceTd">Dictamen</th>
+<th class="confluenceTd">Texto corto</th>
+<th class="confluenceTd">Dictamen de la memoria.</th>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="table-wrap">
+
+<table class="wrapped relative-table confluenceTable" style="width: 75.1641%;">
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 63%" />
+<col style="width: 12%" />
+<col style="width: 12%" />
+</colgroup>
+<tbody>
+<tr class="header">
+<th class="confluenceTh">Acciones</th>
+<th class="confluenceTh">Descripción</th>
+<th class="confluenceTh"> Enlace CU.</th>
+<th class="confluenceTh">Permisos</th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd">Ver informe</td>
+<td class="confluenceTd">Se genera automáticamente un informe pdf dependiendo del valor del dictamen:
+<ul>
+<li>Si el dictamen es "Favorable pendiente de revisión mínima" o "Pendiente de correcciones", se genera el informe de evaluación (comentarios).</li>
+<li>Si el dictamen es "Favorable", se genera a partir de una plantilla de informe favorable de la Universidad.</li>
+</ul></td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><p>ETI-ACT-DES</p>
+<p>ETI-ACT-INV-DESR</p>
+<p>ETI-ACT-DESR</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+## Asistentes
+
+Listado con los evaluadores activos del comité.
+
+Los evaluadores verán esta pantalla en modo consulta siempre (aunque el estado este en estado En elaboración)
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable" style="width: 75.1641%;">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 8%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<th colspan="3" class="confluenceTd"><div class="content-wrapper">
+<p><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597853799/597869051.png" class="confluence-embedded-image" draggable="false" data-image-src="attachments/597853799/597869051.png" data-unresolved-comment-count="0" data-linked-resource-id="597869051" data-linked-resource-version="3" data-linked-resource-type="attachment" data-linked-resource-default-alias="edicin_acta_asistentes.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597853799" data-linked-resource-container-version="20" tabindex="0" width="650" /></span></p>
+</div></th>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Nombre</th>
+<th class="confluenceTh">Tipo</th>
+<th class="confluenceTh"><div class="content-wrapper">
+<p>Características / Notas</p>
+</div></th>
+</tr>
+<tr class="odd">
+<th colspan="3" class="highlight-blue confluenceTd" data-highlight-colour="blue"><div class="content-wrapper">
+<p>Listado asistentes</p>
+</div></th>
+</tr>
+<tr class="even">
+<th class="confluenceTd"><p>NIF/NIE</p></th>
+<th class="confluenceTd">Alfanumérico</th>
+<th class="confluenceTd"><div class="content-wrapper">
+<p>NIF/NIE del evaluador del comité, recuperado por medio de <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0020-sgp-integracion-con-sistema-de-gestion-de-personas/req-int-0020-sgp-0030-consultar-datos-generales-de-persona">REQ-INT-0020-SGP-0030 - Consultar datos generales de persona</a><span class="confluence-link">.</span></p>
+</div></th>
+</tr>
+<tr class="odd">
+<th class="confluenceTd">Nombre y apellidos</th>
+<th class="confluenceTd">Texto corto</th>
+<th class="confluenceTd">Nombre y apellidos del evaluador del comité, recuperado por medio de <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0020-sgp-integracion-con-sistema-de-gestion-de-personas/req-int-0020-sgp-0030-consultar-datos-generales-de-persona">REQ-INT-0020-SGP-0030 - Consultar datos generales de persona</a><span class="confluence-link">.</span></th>
+</tr>
+<tr class="even">
+<th class="confluenceTd">Asistencia</th>
+<th class="confluenceTd"><p>Boolean</p>
+<p>Valores: Sí/No</p></th>
+<th class="confluenceTd">Si ha podido asistir o no a la reunión de convocatoria.</th>
+</tr>
+<tr class="odd">
+<th class="confluenceTd">Motivo no asistencia</th>
+<th class="confluenceTd">Texto</th>
+<th class="confluenceTd">En caso de no asistir el motivo de la causa.</th>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="table-wrap">
+
+|          |                                                  |                                                                                                     |           |
+|----------|--------------------------------------------------|-----------------------------------------------------------------------------------------------------|-----------|
+| Acciones | Descripción                                      |  Enlace CU.                                                                                         | Permisos  |
+| Editar   | Se muestra la pantalla de edición de asistencia. | [CU-ETI-0030-005 - Asistentes - Modificar](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-casos-de-uso/cu-eti-0030-gestion-de-actas/cu-eti-0030-005-asistentes-modificar) | ETI-ACT-E |
+
+</div>
+
+## Comentarios
+
+Pantalla que muestra el listado de comentarios de tipoComentario = ACTA añadidos a las evaluaciones de la convocatoria de reunión relacionada con el acta.
+
+Se irá mostrando una lista con los comentarios dados de alta. Se podrá crear, eliminar y modificar los comentarios (siempre de tipoComentario = ACTA)
+
+Hasta pulsar el botón de Guardar no se harán efectivos los cambios.
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable" style="width: 75.2137%;">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 9%" />
+<col style="width: 79%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<th colspan="3" class="confluenceTd"><div class="content-wrapper">
+<p><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><br />
+</span></p>
+</div>
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597853799/597857146.png" class="confluence-embedded-image" draggable="false" data-image-src="attachments/597853799/597857146.png" data-unresolved-comment-count="0" data-linked-resource-id="597857146" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="actas_comentarios.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597853799" data-linked-resource-container-version="20" tabindex="0" height="250" /></span></th>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Nombre</th>
+<th class="confluenceTh"><div class="content-wrapper">
+<p>Tipo</p>
+</div></th>
+<th class="confluenceTh">Características / Notas</th>
+</tr>
+<tr class="odd">
+<th colspan="3" class="highlight-blue confluenceTd" data-highlight-colour="blue">Listado de comentarios</th>
+</tr>
+<tr class="even">
+<th class="confluenceTd">Evaluador</th>
+<th class="confluenceTd">Texto</th>
+<th class="confluenceTd"><p>Nombre y apellidos del evaluador que ha creado o modificado el comentario, recuperado por medio de <a href="https://confluence.um.es/confluence/display/HERCULES/REQ-INT-0020-SGP-0030+-+Consultar+datos+generales+de+persona" rel="nofollow">REQ-INT-0020-SGP-0030 - Consultar datos generales de persona</a></p>
+<p>En caso de que no exista usuario de modificacion, se saca el usuario de creación (created_by), en caso de que el comentario se haya modificado se saca el usuario de modificación (last_modified_by)</p></th>
+</tr>
+<tr class="odd">
+<th class="confluenceTd">Memoria</th>
+<th class="confluenceTd">Texto</th>
+<th class="confluenceTd">Referencia de la memoria sobre el que esta creado el comentario</th>
+</tr>
+<tr class="even">
+<th class="confluenceTd">Bloque</th>
+<th class="confluenceTd">Texto corto</th>
+<th class="confluenceTd"><div class="content-wrapper">
+<p>Bloque del formulario</p>
+</div></th>
+</tr>
+<tr class="odd">
+<th class="confluenceTd"><p>Apartado</p></th>
+<th class="confluenceTd"><span>Texto corto</span></th>
+<th class="confluenceTd">Apartado del formulario</th>
+</tr>
+<tr class="even">
+<th class="confluenceTd">Subapartado</th>
+<th class="confluenceTd"><span>Texto corto</span></th>
+<th class="confluenceTd">Subapartado del formulario</th>
+</tr>
+<tr class="odd">
+<th class="confluenceTd">Comentario</th>
+<th class="confluenceTd"><span>Texto corto</span></th>
+<th class="confluenceTd">Texto del comentario</th>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable" style="width: 75.2188%;">
+<tbody>
+<tr class="odd">
+<td class="highlight-grey confluenceTd" title="Color de fondo: Gris" data-highlight-colour="grey"><strong>Acciones</strong></td>
+<td class="highlight-grey confluenceTd" title="Color de fondo: Gris" data-highlight-colour="grey"><strong>Descripción</strong></td>
+<td class="highlight-grey confluenceTd" title="Color de fondo: Gris" data-highlight-colour="grey"><strong> Enlace CU.</strong></td>
+<td class="highlight-grey confluenceTd" title="Color de fondo: Gris" data-highlight-colour="grey"><strong>Permisos</strong></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">Añadir</td>
+<td class="confluenceTd">Muestra la pantalla de Nuevo comentario</td>
+<td class="confluenceTd"><p>Sólo se podrá empezar a añadir comentarios cuando todas la memorias ya estén evaluadas en la convocatoria de reunión.</p>
+<p><a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario/iu-eti-0030-gestion-de-actas/iu-eti-0030-005-modificar-acta-comentarios-anadirmodificar">IU-ETI-0030-005 Modificar acta - Comentarios - Añadir/modificar</a></p></td>
+<td class="confluenceTd"><p>ETI-ACT-E</p>
+<p>ETI-ACT-INV-ER</p>
+<p>ETI-ACT-ER</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">Editar</td>
+<td class="confluenceTd">Muestra la pantalla de Modificación comentario</td>
+<td class="confluenceTd"><a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario/iu-eti-0030-gestion-de-actas/iu-eti-0030-005-modificar-acta-comentarios-anadirmodificar">IU-ETI-0030-005 Modificar acta - Comentarios - Añadir/modificar</a></td>
+<td class="confluenceTd"><p>ETI-ACT-E</p>
+<p>ETI-ACT-INV-ER</p>
+<p>ETI-ACT-ER</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">Eliminar</td>
+<td class="confluenceTd">Elimina el comentario del listado</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><p>ETI-ACT-E</p>
+<p>ETI-ACT-INV-ER</p>
+<p>ETI-ACT-ER</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+## Botones generales a la pantalla
+
+<div class="table-wrap">
+
+<table class="wrapped relative-table confluenceTable" style="width: 75.0547%;">
+<colgroup>
+<col style="width: 7%" />
+<col style="width: 45%" />
+<col style="width: 31%" />
+<col style="width: 15%" />
+</colgroup>
+<tbody>
+<tr class="header">
+<th class="confluenceTh">Acciones</th>
+<th class="confluenceTh">Descripción</th>
+<th class="confluenceTh"> Enlace CU.</th>
+<th class="confluenceTh">Permisos</th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd">Guardar</td>
+<td class="confluenceTd">Modifica la convocatoria con la información introducida en el formulario.</td>
+<td class="confluenceTd"><p><a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-casos-de-uso/cu-eti-0030-gestion-de-actas/cu-eti-0030-003-modificar-acta-datos-generales-guardar">CU-ETI-0030-003 - Modificar Acta - Datos generales - Guardar</a></p>
+<p><a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-casos-de-uso/cu-eti-0030-gestion-de-actas/cu-eti-0030-004-modificar-acta-asistentes-guardar">CU-ETI-0030-004 - Modificar Acta - Asistentes - Guardar</a></p></td>
+<td class="confluenceTd"><p>ETI-ACT-E</p>
+<p>ETI-ACT-INV-ER</p>
+<p>ETI-ACT-ER</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">Cancelar</td>
+<td class="confluenceTd">Retorna al listado de Actas sin salvar los posibles cambios.</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+## Acciones
+
+### Por actor
+
+<div class="plugin-tabmeta-details">
+
+<div class="table-wrap">
+
+<table class="wrapped relative-table confluenceTable" style="width: 76.3363%;">
+<colgroup>
+<col style="width: 17%" />
+<col style="width: 60%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<th class="confluenceTh">ACT-ETI-001-Gestor</th>
+<td class="confluenceTd"><span><span>ETI-ACT-E, ETI-ACT-DES<br />
+</span></span></td>
+</tr>
+<tr class="even">
+<th class="highlight-grey confluenceTd" title="Color de fondo: Gris" data-highlight-colour="grey"><p><strong>ACT-ETI-004-Evaluador</strong></p></th>
+<td class="confluenceTd">ETI-<span>ACT</span>-INV-ER,ETI-<span>ACT</span>-INV-<span>DES</span>R</td>
+</tr>
+<tr class="odd">
+<th class="highlight-grey confluenceTd" title="Color de fondo: Gris" data-highlight-colour="grey"><strong>ACT-ETI-005-Técnico</strong></th>
+<td class="confluenceTd"><span>ETI-ACT-ER,ETI-ACT-DESR</span></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+### Todos los permisos de acceso
+
+<div class="plugin-tabmeta-details">
+
+<div class="table-wrap">
+
+|          |                                                                                            |
+|----------|--------------------------------------------------------------------------------------------|
+| Permisos | ETI-ACT-V, ETI-ACT-E, ETI-ACT-DES,ETI-ACT-INV-ER, ETI-ACT-ER,ETI-ACT-INV-DESR,ETI-ACT-DESR |
+
+</div>
+
+</div>
+
+</div>
+
+<div class="pageSection group">
+
+<div class="pageSectionHeader">
+
+## Attachments:
+
+</div>
+
+<div class="greybox" align="left">
+
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [nueva_acta_asistentes.png](/attachments/597853799/597869086.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [listadoconvocatorias.png](/attachments/597853799/597869099.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [nuevaconvocatoria.png](/attachments/597853799/597869098.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [nuevaedicin_acta_memorias.png](/attachments/597853799/597869097.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [nuevaedicin_acta_datos_descriptivos.png](/attachments/597853799/597869096.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [nuevaedicin_acta_asistentes_editar.png](/attachments/597853799/597869093.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [nuevaconvocatoria_datos_generales.png](/attachments/597853799/597869092.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [nuevaedicin_acta_asistentes.png](/attachments/597853799/597869087.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [nuevaedicin_acta_datos_descriptivos.png](/attachments/597853799/597869090.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [nuevaedicin_acta_memorias.png](/attachments/597853799/597868964.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [edicin_acta_asistentes.png](/attachments/597853799/597868965.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [edicin_acta_datos_descriptivos.png](/attachments/597853799/597868971.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [edicin_acta_datos_generales.png](/attachments/597853799/597880811.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [nuevaedicin_acta_memorias.png](/attachments/597853799/597857139.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [edicin_acta_asistentes.png](/attachments/597853799/597857141.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [edicin_acta_datos_generales.png](/attachments/597853799/597857375.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [edicin_acta_datos_generales.png](/attachments/597853799/597868966.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [nuevaedicin_acta_memorias.png](/attachments/597853799/597869094.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [edicin_acta_asistentes.png](/attachments/597853799/597869051.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [evaluar_comentarios_evaluador.png](/attachments/597853799/597857143.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [actas_comentarios.png](/attachments/597853799/597857146.png) (image/png)  
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div id="footer" role="contentinfo">
+
+<div class="section footer-body">
+
+Document generated by Confluence on oct 27, 2025 08:47
+
+<div id="footer-logo">
+
+[Atlassian](https://www.atlassian.com/)
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 
 

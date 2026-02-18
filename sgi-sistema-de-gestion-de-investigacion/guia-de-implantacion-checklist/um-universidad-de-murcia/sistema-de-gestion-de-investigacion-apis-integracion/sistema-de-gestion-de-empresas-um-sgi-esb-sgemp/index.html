@@ -796,7 +796,1188 @@
 
   <h1>Sistema de gestion de empresas um sgi esb sgemp</h1>
 
+<div id="page">
 
+<div id="main" class="aui-page-panel">
+
+<div id="main-header">
+
+<div id="breadcrumb-section">
+
+1.  [Hércules](index.html)
+2.  [Hércules](/)
+3.  [SGI. Sistema de gestión de investigación](//sgi-sistema-de-gestion-de-investigacion)
+4.  [Guia de Implantación - Checklist](//sgi-sistema-de-gestion-de-investigacion/guia-de-implantacion-checklist)
+5.  [UM - Universidad de Murcia](//sgi-sistema-de-gestion-de-investigacion/guia-de-implantacion-checklist/um-universidad-de-murcia)
+6.  [Sistema de Gestión de Investigación - APIs Integración](//sgi-sistema-de-gestion-de-investigacion/guia-de-implantacion-checklist/um-universidad-de-murcia/sistema-de-gestion-de-investigacion-apis-integracion)
+
+</div>
+
+# <span id="title-text"> Hércules : Sistema de Gestión de Empresas (UM - SGI - ESB - SGEMP) </span>
+
+</div>
+
+<div id="content" class="view">
+
+<div class="page-metadata">
+
+Created by <span class="author"> Usuario desconocido (alicia.alvarez)</span>, last updated on mar 25, 2022
+
+</div>
+
+<div id="main-content" class="wiki-content group">
+
+
+
+------------------------------------------------------------------------
+
+<div class="toc-macro rbtoc1761553349827">
+
+- [Sistema de gestión de empresas](#SistemadeGestióndeEmpresas(UMSGIESBSGEMP)-Sistemadegestióndeempresas)
+  - [Entidades](#SistemadeGestióndeEmpresas(UMSGIESBSGEMP)-Entidades)
+  - [Modelo lógico](#SistemadeGestióndeEmpresas(UMSGIESBSGEMP)-Modelológico)
+  - [](#SistemadeGestióndeEmpresas(UMSGIESBSGEMP)-)
+  - [API](#SistemadeGestióndeEmpresas(UMSGIESBSGEMP)-API)
+    - [Definición de los objetos](#SistemadeGestióndeEmpresas(UMSGIESBSGEMP)-Definicióndelosobjetos)
+      - [Empresa](#SistemadeGestióndeEmpresas(UMSGIESBSGEMP)-Empresa)
+      - [TipoIdentificador](#SistemadeGestióndeEmpresas(UMSGIESBSGEMP)-TipoIdentificador)
+      - [DatosTipoEmpresa](#SistemadeGestióndeEmpresas(UMSGIESBSGEMP)-DatosTipoEmpresa)
+      - [TipoTercero](#SistemadeGestióndeEmpresas(UMSGIESBSGEMP)-TipoTercero)
+      - [TipoEmpresa](#SistemadeGestióndeEmpresas(UMSGIESBSGEMP)-TipoEmpresa)
+      - [TipoEmpresaContabilidad](#SistemadeGestióndeEmpresas(UMSGIESBSGEMP)-TipoEmpresaContabilidad)
+      - [TipoTerceroReinoUnido](#SistemadeGestióndeEmpresas(UMSGIESBSGEMP)-TipoTerceroReinoUnido)
+      - [EmpresaClasificacion](#SistemadeGestióndeEmpresas(UMSGIESBSGEMP)-EmpresaClasificacion)
+      - [DatosContacto](#SistemadeGestióndeEmpresas(UMSGIESBSGEMP)-DatosContacto)
+    - [Servicios](#SistemadeGestióndeEmpresas(UMSGIESBSGEMP)-Servicios)
+
+</div>
+
+------------------------------------------------------------------------
+
+<div class="confluence-information-macro confluence-information-macro-information" role="region" aria-label="Info">
+
+Control de cambios
+
+<span class="aui-icon aui-icon-small aui-iconfont-info-filled confluence-information-macro-icon" role="presentation"></span>
+
+<div class="confluence-information-macro-body">
+
+
+
+**Leyenda  
+**
+
+<div class="table-wrap">
+
+|       |            |           |
+|-------|------------|-----------|
+| Nuevo | Modificado | Eliminado |
+
+</div>
+
+
+
+**Historial de cambios  
+**
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable" style="width: 71.6138%;">
+<colgroup>
+<col style="width: 18%" />
+<col style="width: 81%" />
+</colgroup>
+<tbody>
+<tr class="header">
+<th class="confluenceTh">Fecha</th>
+<th class="confluenceTh">Cambios</th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd"><div class="content-wrapper">
+<p>03-may-2021 </p>
+</div></td>
+<td class="confluenceTd">Adaptaciones a los cambios de operativa y campos para el alta de empresas con y sin datos económicos y a la nueva solicitud de modificación de las mismas.</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><div class="content-wrapper">
+<p>17-may-2021 </p>
+</div></td>
+<td class="confluenceTd">Adaptaciones a la fusión de los campos nombre y razón social en un único campo, a los nuevos campos de datos de contacto, a la nueva asociación con sectores industriales, códigos CNAE o clasificaciones de tipo sector industrial (llamado indistintamente de las tres formas) y al nuevo campo de "Tipo de tercero Reino Unido" para entidades con datos económicos con dirección en Reino Unido.</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><div class="content-wrapper">
+<p>08-jun-2021</p>
+</div></td>
+<td class="confluenceTd"><div class="content-wrapper">
+<p> Se actualizan los siguientes servicios del API de empresas:</p>
+<ul>
+<li>POST: Se cambia la definición a /empresas/formly.</li>
+<li>PUT: Se cambia la definición a /empresas/formly/{id} y se añade en el JSON el campo empresaId para facilitar su identificación.</li>
+</ul>
+</div></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><div class="content-wrapper">
+<p>18-jun-2021 </p>
+</div></td>
+<td class="confluenceTd">Eliminar de los servicios de este API el método para obtener el listado de tipos de vía y su entidad relacionada por trasladarse al API del SGO.</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><div class="content-wrapper">
+<p>28-jun-2021 </p>
+</div></td>
+<td class="confluenceTd">Modificar definición del objeto Empresa para separar los campos nombre y razón social y de la búsqueda para que pueda filtrar por ambos campos.</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><div class="content-wrapper">
+<p>18-oct-2021 </p>
+</div></td>
+<td class="confluenceTd">Se modificar el servicio del alta de empresa para que en el caso de que el servicio sea síncrono devuelva el id de la empresa creada.</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><div class="content-wrapper">
+<p>28-oct-2021 </p>
+</div></td>
+<td class="confluenceTd"><span class="date-autocomplete"><span>Nuevo servicio para obtener las empresas modificadas o nuevas a partir de una fecha</span></span></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
+------------------------------------------------------------------------
+
+# Sistema de gestión de empresas
+
+## Entidades
+
+<div class="confluence-information-macro confluence-information-macro-information" role="region" aria-label="Info">
+
+Cambios
+
+<span class="aui-icon aui-icon-small aui-iconfont-info-filled confluence-information-macro-icon" role="presentation"></span>
+
+<div class="confluence-information-macro-body">
+
+03-may-2021 Se actualiza lista de entidades para:
+
+- Modificar la definición de las entidades DatosContacto y DatosTipoEmpresa para añadir nuevos campos.
+- Añadir las entidades TipoTercero y TipoEmpresaContabilidad.
+- Modificar el uso de la entidad TipoEmpresa para pasar a ser información de empresas con datos económicos.
+
+17-may-2021 Se actualiza lista de entidades para:
+
+- Añadir las entidades TipoTerceroReinoUnido, TipoVia y EmpresaClasificacion.
+- Traducir nombrado de entidades por separación entre entidades internas al SGI y específicas de UM (Empresa, DatosContacto y EmpresaClasificacion).
+
+<span class="date-autocomplete">18-jun-2021 Se actualiza la lista de entidades para:</span>
+
+- <span class="date-autocomplete">Eliminar la entidad "TipoVia".</span>
+
+</div>
+
+</div>
+
+<div class="table-wrap">
+
+|                                               |                                                                                                                                                                                                                                                                       |
+|-----------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Entidad                                       | Descripción                                                                                                                                                                                                                                                           |
+| Empresa (EmpresaUM)                           | Contiene los datos básicos de una empresa.                                                                                                                                                                                                                            |
+| DatosContacto (DatosContactoUM)               | Contiene los datos de contacto de la empresa.                                                                                                                                                                                                                         |
+| DatosTipoEmpresa                              | Contiene los datos relativos a la tipología de la empresa, estando esta tipología basada en criterios diversos (los que se establezcan por parte de la universidad o sistema externo).                                                                                |
+| TipoIdentificador                             | Listado con los tipos de identificador fiscal (CIF, VAT, ...).                                                                                                                                                                                                        |
+| TipoTercero                                   | Listado con los tipos de tercero (necesario para las empresas con datos económicos).                                                                                                                                                                                  |
+| TipoEmpresa                                   | Listado con los tipos de empresa (necesario para las empresas con datos económicos).                                                                                                                                                                                  |
+| TipoEmpresaContabilidad                       | Listado con los tipos de empresa para contabilidad (necesario para las empresas con datos económicos).                                                                                                                                                                |
+| TipoTerceroReinoUnido                         | Listado con los tipos de tercero para Reino Unido (necesario para las empresas con datos económicos cuyo país es el Reino Unido).                                                                                                                                     |
+| EmpresaClasificacion (EmpresaUMClasificacion) | Listado de relaciones entre empresas y clasificaciones. En principio, únicamente con las del tipo "Código CNAE" también llamado "Sector Industrial". Ver definición de clasificaciones en [Sistema Gestión de Organizaciones (UM - SGI - ESB - SGO)](//sgi-sistema-de-gestion-de-investigacion/guia-de-implantacion-checklist/um-universidad-de-murcia/sistema-de-gestion-de-investigacion-apis-integracion/sistema-gestion-de-organizaciones-um-sgi-esb-sgo). |
+
+</div>
+
+## Modelo lógico
+
+<div class="confluence-information-macro confluence-information-macro-information" role="region" aria-label="Info">
+
+Cambios
+
+<span class="aui-icon aui-icon-small aui-iconfont-info-filled confluence-information-macro-icon" role="presentation"></span>
+
+<div class="confluence-information-macro-body">
+
+03-may-2021 Se actualiza el modelo para:
+
+- Añadir las entidades TipoTercero, TipoEmpresaContabilidad, Pais, ComunidadAutonoma y Provincia.
+- Modificar entidad DatosTipoEmpresa para incluir nuevos campos, tipoTercero y tipoEmpresaContabilidad, como referencia a las entidades TipoTercero y TipoEmpresaContabilidad.
+- Modificar el uso de la entidad TipoEmpresa para pasar a ser información de empresas con datos económicos.
+- Modificar entidad DatosContacto para incluir nuevos campos, paisContacto, comunidadContacto, provinciaContacto como referencia a entidades Pais, ComunidadAutonoma y Provincia y los campos ciudadContacto y direccionWeb.
+- Modificar entidad Empresa para:
+  - Incluir el nuevo campo padreId que hace referencia a la empresa que hace de entidad principal en el caso de empresas que son subentidad de otra.
+  - Incluir el nuevo campo datosEconomicos para indicar si se trata de una empresa con datos económicos (está dada de alta en GENTE y en JUSTO) o sin datos económicos (está dada de alta solo en GENTE).
+
+17-may-2021 Se actualiza el modelo para:
+
+- Añadir las entidades TipoTerceroReinoUnido, TipoVia y EmpresaClasificacionUM.
+- Renombrar entidades Empresa y DatosContacto por separación entre entidades internas al SGI y específicas de UM.
+- Modificar Empresa para usar un único campo entidadRazonSocial para gestionar el nombre y/o la razón social de la empresa.
+- Modificar DatosTipoEmpresa para incluir el nuevo campo tipoTerceroReinoUnido que hace referencia al tipo de tercero a seleccionar cuando el país es Reino Unido.
+- Modificar DatosContacto para:
+  - Añadir los siguientes campos:
+    - codigoPostal.
+    - tipoVia como referencia a la entidad TipoVia.
+    - nombreVia, sustituye a direccionContacto.
+    - numero.
+    - ampliacion.
+    - email.
+    - fax.
+    - telefono.
+  - Renombrar los campos paisContacto, comAutonomaContacto, provinciaContacto y ciudadContacto eliminando la palabra "Contacto".
+- Modificar TipoTercero para incluir la clase de tercero.
+
+18-jun-2021 Se actualiza el modelo para:
+
+- Reflejar el cambio de la entidad TipoVia al modelo del SGO.
+
+<span class="date-autocomplete">28-jun-2021 Modificar definición de la entidad Empresa para separar los campos nombre y razón social.</span>
+
+</div>
+
+</div>
+
+## <span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597853493/597860050.png" class="confluence-embedded-image confluence-content-image-border" draggable="false" data-image-src="attachments/597853493/597860050.png" data-unresolved-comment-count="0" data-linked-resource-id="597860050" data-linked-resource-version="5" data-linked-resource-type="attachment" data-linked-resource-default-alias="ESB SGEMP-UM Logical Model.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597853493" data-linked-resource-container-version="49" tabindex="0" width="1200" /></span>
+
+## API
+
+Características generales que todas las API REST deben de cumplir:
+
+- <a href="https://confluence.um.es/confluence/display/HERCULES/Consultas+filtradas+y+paginadas" rel="nofollow">Consultas filtradas y paginadas</a>
+- [Formatos de datos API](//sgi-sistema-de-gestion-de-investigacion/desarrollo-y-configuracion/estandares-de-desarrollo/formatos-de-datos-api)
+
+### Definición de los objetos
+
+<div class="confluence-information-macro confluence-information-macro-information" role="region" aria-label="Info">
+
+Cambios
+
+<span class="aui-icon aui-icon-small aui-iconfont-info-filled confluence-information-macro-icon" role="presentation"></span>
+
+<div class="confluence-information-macro-body">
+
+03-may-2021 Se actualiza la definición de objetos para:
+
+- Añadir los objetos TipoTercero, TipoEmpresa, TipoEmpresaContabilidad y las referencias a los objetos del SGO Pais, ComunidadAutonoma y Provincia.
+- Modificar objeto DatosTipoEmpresa para incluir nuevos campos, tipoTercero y tipoEmpresaContabilidad, como referencia a los objetos TipoTercero y TipoEmpresaContabilidad.
+- Modificar el uso del objeto TipoEmpresa para pasar a ser información de empresas con datos económicos.
+- Modificar objeto DatosContacto para incluir nuevos campos, paisContacto, comunidadContacto, provinciaContacto, como referencia a los objetos Pais, ComunidadAutonoma y Provincia y los campos ciudadContacto y direccionWeb.
+- Modificar objeto Empresa para:
+  - Incluir el nuevo campo padreId que hace referencia a la empresa que hace de entidad principal en el caso de empresas que son subentidad de otra.
+  - Incluir el nuevo campo datosEconomicos para indicar si se trata de una empresa con datos económicos (está dada de alta en GENTE y en JUSTO) o sin datos económicos (está dada de alta solo en GENTE).
+
+17-may-2021 
+
+- Añadir los objetos TipoTerceroReinoUnido, TipoVia y EmpresaClasificacion.
+- Modificar Empresa para usar un único campo entidadRazonSocial para gestionar el nombre y/o la razón social de la empresa.
+- Modificar DatosTipoEmpresa para incluir el nuevo campo tipoTerceroReinoUnido que hace referencia al tipo de tercero a seleccionar cuando el país es Reino Unido.
+- Modificar DatosContacto para:
+  - Añadir los siguientes campos:
+    - codigoPostal.
+    - tipoVia como referencia a la entidad TipoVia.
+    - nombreVia, sustituye a direccionContacto.
+    - numero.
+    - ampliacion.
+    - email.
+    - fax.
+    - telefono.
+  - Renombrar los campos paisContacto, comAutonomaContacto, provinciaContacto y ciudadContacto eliminando la palabra "Contacto".
+- Modificar TipoTercero para incluir la clase de tercero.
+
+21-jun-2021 Se actualiza la definición de objetos para:
+
+- Eliminar el objeto TipoVia del modelo propio e indicar cómo obtenerlo del SGO en DatosContacto.
+
+<span class="date-autocomplete">28-jun-2021 Se actualiza la definición de objetos para:</span>
+
+- <span class="date-autocomplete">Modificar el objeto Empresa para separar los campos nombre y razón social.</span>
+
+</div>
+
+</div>
+
+#### Empresa
+
+<div class="content-wrapper">
+
+
+
+<div class="table-wrap">
+
+|                      |                   |                                                                                                                                                                |
+|----------------------|-------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Nombre               | Tipo              | Descripción                                                                                                                                                    |
+| id                   | String            | Identificador de la empresa.                                                                                                                                   |
+| nombre               | String            | Nombre de la empresa. Se devolverá lo mismo que en el campo "razonSocial".                                                                                     |
+| razonSocial          | String            | Razón social de la empresa. Se devolverá lo mismo que en el campo "nombre".                                                                                    |
+| tipoIdentificador    | TipoIdentificador | Tipo de identificador fiscal de la empresa. Se devuelve la entidad TipoIdentificador con todos sus campos.                                                     |
+| numeroIdentificacion | String            | Número de identificación fiscal de la empresa del tipo indicado en "tipoIdentificador".                                                                        |
+| datosEconomicos      | Boolean           | Indicador de si se trata de una empresa con datos económicos (está dada de alta en GENTE y en JUSTO) o sin datos económicos (está dada de alta solo en GENTE). |
+| padreId              | String            | Identificador de la empresa padre o entidad principal. Estará informado en el caso de empresas que son subentidad de otra.                                     |
+
+</div>
+
+<div class="code panel pdl" style="border-width: 1px;">
+
+<div class="codeHeader panelHeader pdl hide-border-bottom" style="border-bottom-width: 1px;">
+
+**Empresa**<span class="collapse-source expand-control" style="display:none;"><span class="expand-control-icon icon"> </span><span class="expand-control-text">Ampliar origen</span></span><span class="collapse-spinner-wrapper"></span>
+
+</div>
+
+<div class="codeContent panelContent pdl hide-toolbar">
+
+
+<pre><code class="language-syntaxhighlighter-pre">{
+    &quot;id&quot;: &quot;ent-002&quot;,
+    &quot;nombre&quot;: &quot;Empresa de Prueba&quot;,
+    &quot;razonSocial&quot;: &quot;Empresa de Prueba&quot;,
+    &quot;tipoIdentificador&quot;: {
+          &quot;id&quot;:&quot;tp-1&quot;,
+          &quot;nombre&quot;:&quot;CIF&quot;
+     },
+    &quot;numeroIdentificacion&quot;: &quot;H11111111&quot;,
+    &quot;datosEconomicos&quot;: false,
+    &quot;padreId&quot;: &quot;ent-001&quot;
+}
+</code></pre>
+
+
+</div>
+
+</div>
+
+#### TipoIdentificador
+
+<div class="table-wrap">
+
+|        |        |                                                |
+|--------|--------|------------------------------------------------|
+| Nombre | Tipo   | Descripción                                    |
+| id     | String | Identificador de la entidad TipoIdentificador. |
+| nombre | String | Nombre (Posibles valores: CIF, VAT, ...).      |
+
+</div>
+
+<div class="code panel pdl" style="border-width: 1px;">
+
+<div class="codeHeader panelHeader pdl hide-border-bottom" style="border-bottom-width: 1px;">
+
+**TipoIdentificador**<span class="collapse-source expand-control" style="display:none;"><span class="expand-control-icon icon"> </span><span class="expand-control-text">Ampliar origen</span></span><span class="collapse-spinner-wrapper"></span>
+
+</div>
+
+<div class="codeContent panelContent pdl hide-toolbar">
+
+
+<pre><code class="language-syntaxhighlighter-pre">{ 
+    &quot;id&quot;:&quot;tp-1&quot;,
+    &quot;nombre&quot;: &quot;CIF&quot;   
+}
+</code></pre>
+
+
+</div>
+
+</div>
+
+<div class="content-wrapper">
+
+#### DatosTipoEmpresa
+
+</div>
+
+<div class="table-wrap">
+
+|                         |                         |                                                                                                                                                                             |
+|-------------------------|-------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Nombre                  | Tipo                    | Descripción                                                                                                                                                                 |
+| tipoTercero             | TipoTercero             | Tipo de tercero. Se devuelve la entidad TipoTercero con todos sus campos.                                                                                                   |
+| tipoEmpresa             | TipoEmpresa             | Tipo de empresa. Se devuelve la entidad TipoEmpresa con todos sus campos.                                                                                                   |
+| tipoEmpresaContabilidad | TipoEmpresaContabilidad | Tipo de tercero. Se devuelve la entidad TipoEmpresaContabilidad con todos sus campos.                                                                                       |
+| tipoTerceroReinoUnido   | TipoTerceroReinoUnido   | Tipo de tercero para personas físicas (personas actuando como empresas) con dirección en el Reino Unido. Se devuelve la entidad TipoTerceroReinoUnido con todos sus campos. |
+
+</div>
+
+<div class="code panel pdl" style="border-width: 1px;">
+
+<div class="codeHeader panelHeader pdl hide-border-bottom" style="border-bottom-width: 1px;">
+
+**DatosTipoEmpresa**<span class="collapse-source expand-control" style="display:none;"><span class="expand-control-icon icon"> </span><span class="expand-control-text">Ampliar origen</span></span><span class="collapse-spinner-wrapper"></span>
+
+</div>
+
+<div class="codeContent panelContent pdl hide-toolbar">
+
+
+<pre><code class="language-syntaxhighlighter-pre">{ 
+    &quot;tipoTercero&quot;: {
+        &quot;id&quot;:&quot;tt-1&quot;,
+        &quot;nombre&quot;: &quot;Personas jurídicas españolas&quot;   
+    },
+    &quot;tipoEmpresa&quot;: {
+        &quot;id&quot;:&quot;te-1&quot;,
+        &quot;nombre&quot;: &quot;Empr. extranjeras&quot;   
+    },  
+    &quot;tipoEmpresaContabilidad&quot;: {
+        &quot;id&quot;:&quot;tec-1&quot;,
+        &quot;nombre&quot;: &quot;Otros entes del sector público, empresa o institución privada&quot;   
+    },
+    &quot;tipoTerceroReinoUnido&quot;: {
+        &quot;id&quot;:&quot;IN&quot;,
+        &quot;nombre&quot;: &quot;Tercero de Irlanda del Norte&quot; 
+    }
+}
+</code></pre>
+
+
+</div>
+
+</div>
+
+#### <span style="color:var(--ds-text,#172b4d);">TipoTercero</span>
+
+<div class="table-wrap">
+
+|                                                                   |                                                                    |                                                                                                                                                       |
+|-------------------------------------------------------------------|--------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
+| <span style="color:var(--ds-text,#172b4d);">Nombre</span>         | <span style="color:var(--ds-text,#172b4d);">Tipo</span>            | <span style="color:var(--ds-text,#172b4d);">Descripción</span>                                                                                        |
+| <span style="color:var(--ds-text,#172b4d);">id</span>             | <span style="color:var(--ds-text,#172b4d);">String</span>          | <span style="color:var(--ds-text,#172b4d);">Identificador de la entidad TipoTercero.</span>                                                           |
+| <span style="color:var(--ds-text,#172b4d);">nombre</span>         | <span style="color:var(--ds-text,#172b4d);">String</span>          | <span style="color:var(--ds-text,#172b4d);">Nombre.</span>                                                                                            |
+| <span style="color:var(--ds-text,#172b4d);" title="">clase</span> | <span style="color:var(--ds-text,#172b4d);" title="">String</span> | <span style="color:var(--ds-text,#172b4d);" title="">Clase de tercero Reino Unido. Posibles valores: F (Persona física), J (Persona jurídica).</span> |
+
+</div>
+
+<div class="code panel pdl" style="border-width: 1px;">
+
+<div class="codeHeader panelHeader pdl hide-border-bottom" style="border-bottom-width: 1px;">
+
+**TipoTercero**<span class="collapse-source expand-control" style="display:none;"><span class="expand-control-icon icon"> </span><span class="expand-control-text">Ampliar origen</span></span><span class="collapse-spinner-wrapper"></span>
+
+</div>
+
+<div class="codeContent panelContent pdl hide-toolbar">
+
+
+<pre><code class="language-syntaxhighlighter-pre">{ 
+    &quot;id&quot;:&quot;tt-1&quot;,
+    &quot;nombre&quot;: &quot;Personas jurídicas: españolas&quot;,
+    &quot;clase&quot;: &quot;J&quot;
+}
+</code></pre>
+
+
+</div>
+
+</div>
+
+#### <span style="color:var(--ds-text,#172b4d);">TipoEmpresa</span>
+
+<div class="table-wrap">
+
+|                                                                    |                                                                    |                                                                                             |
+|--------------------------------------------------------------------|--------------------------------------------------------------------|---------------------------------------------------------------------------------------------|
+| <span style="color:var(--ds-text,#172b4d);">Nombre</span>          | <span style="color:var(--ds-text,#172b4d);">Tipo</span>            | <span style="color:var(--ds-text,#172b4d);">Descripción</span>                              |
+| <span style="color:var(--ds-text,#172b4d);">id</span>              | <span style="color:var(--ds-text,#172b4d);">String</span>          | <span style="color:var(--ds-text,#172b4d);">Identificador de la entidad TipoEmpresa.</span> |
+| <span style="color:var(--ds-text,#172b4d);" title="">nombre</span> | <span style="color:var(--ds-text,#172b4d);" title="">String</span> | <span style="color:var(--ds-text,#172b4d);" title="">Nombre. </span>                        |
+
+</div>
+
+<div class="code panel pdl" style="border-width: 1px;">
+
+<div class="codeHeader panelHeader pdl hide-border-bottom" style="border-bottom-width: 1px;">
+
+**TipoEmpresa**<span class="collapse-source expand-control" style="display:none;"><span class="expand-control-icon icon"> </span><span class="expand-control-text">Ampliar origen</span></span><span class="collapse-spinner-wrapper"></span>
+
+</div>
+
+<div class="codeContent panelContent pdl hide-toolbar">
+
+
+<pre><code class="language-syntaxhighlighter-pre">{ 
+    &quot;id&quot;:&quot;te-1&quot;,
+    &quot;nombre&quot;: &quot;Empr. extranjeras&quot;   
+}
+</code></pre>
+
+
+</div>
+
+</div>
+
+#### <span style="color:var(--ds-text,#172b4d);">TipoEmpresaContabilidad</span>
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable" style="width: 39.7346%;">
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 10%" />
+<col style="width: 76%" />
+</colgroup>
+<tbody>
+<tr class="header">
+<th class="confluenceTh"><span style="color:var(--ds-text,#172b4d);">Nombre</span></th>
+<th class="confluenceTh"><span style="color:var(--ds-text,#172b4d);">Tipo</span></th>
+<th class="confluenceTh"><span style="color:var(--ds-text,#172b4d);">Descripción</span></th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">id</span></td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">String</span></td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Identificador de la entidad TipoEmpresaContabilidad.</span></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">nombre</span></td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">String</span></td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Nombre.<br />
+</span></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="code panel pdl" style="border-width: 1px;">
+
+<div class="codeHeader panelHeader pdl hide-border-bottom" style="border-bottom-width: 1px;">
+
+**TipoEmpresaContabilidad**<span class="collapse-source expand-control" style="display:none;"><span class="expand-control-icon icon"> </span><span class="expand-control-text">Ampliar origen</span></span><span class="collapse-spinner-wrapper"></span>
+
+</div>
+
+<div class="codeContent panelContent pdl hide-toolbar">
+
+
+<pre><code class="language-syntaxhighlighter-pre">{ 
+    &quot;id&quot;:&quot;tec-1&quot;,
+    &quot;nombre&quot;: &quot;Otros entes del sector público, empresa o institución privada&quot;   
+}
+</code></pre>
+
+
+</div>
+
+</div>
+
+#### <span style="color:var(--ds-text,#172b4d);">TipoTerceroReinoUnido</span>
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable" style="width: 59.7374%;">
+<colgroup>
+<col style="width: 8%" />
+<col style="width: 6%" />
+<col style="width: 84%" />
+</colgroup>
+<tbody>
+<tr class="header">
+<th class="confluenceTh"><span style="color:var(--ds-text,#172b4d);">Nombre</span></th>
+<th class="confluenceTh"><span style="color:var(--ds-text,#172b4d);">Tipo</span></th>
+<th class="confluenceTh"><span style="color:var(--ds-text,#172b4d);">Descripción</span></th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">id</span></td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">String</span></td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Identificador de la entidad TipoTerceroReinoUnido. Posibles valores: S (Tercero normal), IN (Tercero de Irlanda del Norte).<br />
+</span></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">nombre</span></td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">String</span></td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Nombre. Posibles valores: Tercero normal (S), Tercero de Irlanda del Norte (IN).<br />
+</span></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="code panel pdl" style="border-width: 1px;">
+
+<div class="codeHeader panelHeader pdl hide-border-bottom" style="border-bottom-width: 1px;">
+
+**TipoTerceroReinoUnido**<span class="collapse-source expand-control" style="display:none;"><span class="expand-control-icon icon"> </span><span class="expand-control-text">Ampliar origen</span></span><span class="collapse-spinner-wrapper"></span>
+
+</div>
+
+<div class="codeContent panelContent pdl hide-toolbar">
+
+
+<pre><code class="language-syntaxhighlighter-pre">{ 
+    &quot;id&quot;:&quot;IN&quot;,
+    &quot;nombre&quot;: &quot;Tercero de Irlanda del Norte&quot;
+}
+</code></pre>
+
+
+</div>
+
+</div>
+
+#### <span style="color:var(--ds-text,#172b4d);">EmpresaClasificacion</span>
+
+<div class="table-wrap">
+
+|                                                            |                                                           |                                                                                                           |
+|------------------------------------------------------------|-----------------------------------------------------------|-----------------------------------------------------------------------------------------------------------|
+| <span style="color:var(--ds-text,#172b4d);">Nombre</span>  | <span style="color:var(--ds-text,#172b4d);">Tipo</span>   | <span style="color:var(--ds-text,#172b4d);">Descripción</span>                                            |
+| <span style="color:var(--ds-text,#172b4d);">id</span>      | <span style="color:var(--ds-text,#172b4d);">String</span> | <span style="color:var(--ds-text,#172b4d);">Identificador de la clasificación.</span>                     |
+| <span style="color:var(--ds-text,#172b4d);">codigo</span>  | <span style="color:var(--ds-text,#172b4d);">String</span> | <span style="color:var(--ds-text,#172b4d);">Código de la clasificación.</span>                            |
+| <span style="color:var(--ds-text,#172b4d);">nombre</span>  | <span style="color:var(--ds-text,#172b4d);">String</span> | <span style="color:var(--ds-text,#172b4d);">Nombre de la clasificación.</span>                            |
+| <span style="color:var(--ds-text,#172b4d);">padreId</span> | <span style="color:var(--ds-text,#172b4d);">String</span> | <span style="color:var(--ds-text,#172b4d);">Identificador de la entidad padre de la clasificación.</span> |
+
+</div>
+
+<div class="code panel pdl" style="border-width: 1px;">
+
+<div class="codeHeader panelHeader pdl hide-border-bottom" style="border-bottom-width: 1px;">
+
+**Empresa-Clasificación padre**<span class="collapse-source expand-control" style="display:none;"><span class="expand-control-icon icon"> </span><span class="expand-control-text">Ampliar origen</span></span><span class="collapse-spinner-wrapper"></span>
+
+</div>
+
+<div class="codeContent panelContent pdl hide-toolbar">
+
+
+<pre><code class="language-syntaxhighlighter-pre">   {
+        &quot;id&quot;: &quot;1&quot;,
+        &quot;codigo&quot;: &quot;01&quot;
+        &quot;nombre&quot;:&quot;Cultivos no perennes&quot;,
+        &quot;padreId&quot;: null
+    }
+</code></pre>
+
+
+</div>
+
+</div>
+
+<div class="code panel pdl" style="border-width: 1px;">
+
+<div class="codeHeader panelHeader pdl hide-border-bottom" style="border-bottom-width: 1px;">
+
+**Empresa-Clasificación hija de primer nivel**<span class="collapse-source expand-control" style="display:none;"><span class="expand-control-icon icon"> </span><span class="expand-control-text">Ampliar origen</span></span><span class="collapse-spinner-wrapper"></span>
+
+</div>
+
+<div class="codeContent panelContent pdl hide-toolbar">
+
+
+<pre><code class="language-syntaxhighlighter-pre">   {
+        &quot;id&quot;: &quot;2&quot;,
+        &quot;codigo&quot;: &quot;0112&quot;
+        &quot;nombre&quot;:&quot;Cultivo de arroz&quot;, 
+        &quot;padreId&quot;: &quot;1&quot;
+    }
+</code></pre>
+
+
+</div>
+
+</div>
+
+
+
+#### DatosContacto
+
+</div>
+
+<div class="content-wrapper">
+
+
+
+<div class="table-wrap">
+
+|                     |                   |                                                                                                                                                                                                                                                |
+|---------------------|-------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Nombre              | Tipo              | Descripción                                                                                                                                                                                                                                    |
+| paisContacto        | Pais              | Se devuelve la entidad Pais con todos sus campos. Ver definición en [Sistema Gestión de Organizaciones (UM - SGI - ESB - SGO)](//sgi-sistema-de-gestion-de-investigacion/guia-de-implantacion-checklist/um-universidad-de-murcia/sistema-de-gestion-de-investigacion-apis-integracion/sistema-gestion-de-organizaciones-um-sgi-esb-sgo)<span class="confluence-link">.</span>                                                           |
+| comAutonomaContacto | ComunidadAutonoma | Se devuelve la entidad ComunidadAutonoma con todos sus campos. Ver definición en [Sistema Gestión de Organizaciones (UM - SGI - ESB - SGO)](//sgi-sistema-de-gestion-de-investigacion/guia-de-implantacion-checklist/um-universidad-de-murcia/sistema-de-gestion-de-investigacion-apis-integracion/sistema-gestion-de-organizaciones-um-sgi-esb-sgo)<span class="confluence-link">.</span>                                              |
+| provinciaContacto   | Provincia         | Se devuelve la entidad Provincia con todos sus campos. Ver definición en [Sistema Gestión de Organizaciones (UM - SGI - ESB - SGO)](//sgi-sistema-de-gestion-de-investigacion/guia-de-implantacion-checklist/um-universidad-de-murcia/sistema-de-gestion-de-investigacion-apis-integracion/sistema-gestion-de-organizaciones-um-sgi-esb-sgo)<span class="confluence-link">.</span>                                                      |
+| ciudadContacto      | String            | Ciudad de contacto de la empresa.                                                                                                                                                                                                              |
+| codigoPostal        | String            | Código postal de la empresa.                                                                                                                                                                                                                   |
+| tipoVia             | TipoVia           | Tipo de vía de la dirección de contacto de la empersa. Se devuelve la entidad TipoVia con todos sus campos. Ver definición en [Sistema Gestión de Organizaciones (UM - SGI - ESB - SGO)](//sgi-sistema-de-gestion-de-investigacion/guia-de-implantacion-checklist/um-universidad-de-murcia/sistema-de-gestion-de-investigacion-apis-integracion/sistema-gestion-de-organizaciones-um-sgi-esb-sgo)<span class="confluence-link">.</span> |
+| nombreVia           | String            | Nombre de la vía de la dirección de contacto de la empresa.                                                                                                                                                                                    |
+| numero              | String            | Número de la vía de la dirección de contacto de la empresa.                                                                                                                                                                                    |
+| ampliacion          | String            | Campo para ampliar la informaicón de la dirección de contacto de la empresa.                                                                                                                                                                   |
+| email               | String            | Email de contacto de la empresa.                                                                                                                                                                                                               |
+| fax                 | String            | Fax de contacto de la empresa.                                                                                                                                                                                                                 |
+| telefono            | String            | Teléfono de contacto de la empresa.                                                                                                                                                                                                            |
+| direccionWeb        | String            | Dirección web de la empresa.                                                                                                                                                                                                                   |
+
+</div>
+
+
+
+</div>
+
+<div class="content-wrapper">
+
+
+
+<div class="code panel pdl" style="border-width: 1px;">
+
+<div class="codeHeader panelHeader pdl hide-border-bottom" style="border-bottom-width: 1px;">
+
+**DatosContacto**<span class="collapse-source expand-control" style="display:none;"><span class="expand-control-icon icon"> </span><span class="expand-control-text">Ampliar origen</span></span><span class="collapse-spinner-wrapper"></span>
+
+</div>
+
+<div class="codeContent panelContent pdl hide-toolbar">
+
+
+<pre><code class="language-syntaxhighlighter-pre">{
+    &quot;paisContacto&quot;: {
+       &quot;id&quot;:&quot;33&quot;,
+       &quot;nombre&quot;:&quot;España&quot;
+     },
+    &quot;comAutonomaContacto&quot;: {
+       &quot;id&quot;:&quot;ca-3&quot;,
+       &quot;nombre&quot;:&quot;Asturias&quot;
+     }, 
+    &quot;provinciaContacto&quot;: {
+       &quot;id&quot;:&quot;pro-1&quot;,
+       &quot;nombre&quot;:&quot;Asturias&quot;
+     }, 
+    &quot;ciudadContacto&quot;: &quot;Oviedo&quot;,
+    &quot;codigoPostal&quot;: &quot;33002&quot;,
+    &quot;tipoVia&quot;: {
+       &quot;id&quot;:&quot;tv-1&quot;,
+       &quot;nombre&quot;:&quot;Calle&quot;
+     },
+    &quot;nombreVia&quot;: &quot;Uría&quot;,
+    &quot;numero&quot;: &quot;4&quot;,
+    &quot;ampliacion&quot;: &quot;puerta A&quot;,
+    &quot;email&quot;: &quot;email@empresadeprueba.es&quot;,
+    &quot;fax&quot;: &quot;985798765&quot;,
+    &quot;telefono&quot;: &quot;985798766&quot;,
+    &quot;direccionWeb&quot;: &quot;www.empresadeprueba.es&quot;
+}
+</code></pre>
+
+
+</div>
+
+</div>
+
+### Servicios
+
+<div class="confluence-information-macro confluence-information-macro-information" role="region" aria-label="Info">
+
+Cambios
+
+<span class="aui-icon aui-icon-small aui-iconfont-info-filled confluence-information-macro-icon" role="presentation"></span>
+
+<div class="confluence-information-macro-body">
+
+03-may-2021 Se actualizan los servicios API para:
+
+- Modificar el funcionamiento del método POST de alta de empresa, ahora recibirá más información, toda la indicada por la UM para el alta (recogida en la pantalla de Alta de Empresa).
+- Crear 4 nuevos métodos:
+  - Solicitar la modificación de los datos de Empresa.
+  - Obtener todos los datos de una empresa en JSON para pintar tanto en la pantalla de Modificación como en el Ver Detalle.
+  - Obtener listado de tipos de terceros.
+  - Obtener listado de tipos de empresa para contabilidad.
+- Eliminar todos los métodos de alta parcial de datos de Empresa por secciones.
+
+17-may-2021 Se actualizan los servicios API para:
+
+- Modificar el funcionamiento del método GET de búsqueda y filtrado de empresas para fundir en un solo campo el filtro por nombre y/o razón social.
+- Añadir 3 métodos:
+  - Obtener el listado de clasificaciones de códigos CNAE asociados a una empresa.
+  - Obtener el listado de tipos de vía para seleccionar en la dirección de una empresa.
+  - Obtener el listado de tipos de terceros para Reino Unido para asociar a empresas con datos económicos
+
+08-jun-2021 Se actualizan los siguientes servicios del API de empresas:
+
+- POST: Se cambia la definición a /empresas/formly.
+- PUT: Se cambia la definición a /empresas/formly/{id} y se añade en el JSON el campo empresaId para facilitar su identificación.
+
+18-jun-2021 Se actualiza la lista de servicios del API para:
+
+- Eliminar el servicio /tipos-via
+
+28-jun-2021 Se actualiza la lista de servicios del API para:
+
+- Modificar el funcionamiento del método GET de búsqueda y filtrado de empresas para separar en dos campos el filtro por nombre y/o razón social y que sean por nombre y razón social independientes.
+
+18-oct-2021 Se modificar el servicio del alta de empresa para que en el caso de que el servicio sea síncrono devuelva el id de la empresa creada.
+
+- POST /empresas/formly
+
+28-oct-2021 <span class="date-autocomplete">Nuevo servicio para obtener las empresas modificadas o nuevas a partir de una fecha</span>
+
+- <span class="date-autocomplete">GET /empresas/modificadas-ids</span>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable" style="width: 1826.0px;">
+<thead>
+<tr class="header">
+<th class="confluenceTh" style="width: 128.0px"><p>Método</p></th>
+<th class="confluenceTh" style="width: 255.001px"><p>URL</p></th>
+<th class="confluenceTh" style="width: 338.001px"><p>Parámetros</p></th>
+<th class="confluenceTh" style="width: 312.999px"><p>Respuesta</p></th>
+<th class="confluenceTh" style="width: 791.999px"><p>Descripción</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td class="confluenceTd" style="width: 128.0px">GET</td>
+<td class="confluenceTd" style="width: 255.001px">/empresas</td>
+<td class="confluenceTd" style="width: 338.001px"><p>q+s (query + sort)</p>
+<p>La query estará formada por:</p>
+<ul>
+<li>id</li>
+<li><span style="color:var(--ds-text,#172b4d);">nombre</span></li>
+<li><span style="color:var(--ds-text,#172b4d);">razonSocial</span></li>
+<li>numeroIdentificacion</li>
+</ul></td>
+<td class="confluenceTd" style="width: 312.999px"><p>Lista[Empresa]</p></td>
+<td class="confluenceTd" style="width: 791.999px"><p>Listado de Empresa.</p>
+<p><em>Ejemplo</em>:</p>
+<p><span style="color:var(--ds-text,#172b4d);">nombre=like=SL, razonSocial=like=SL</span></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="width: 128.0px">GET</td>
+<td class="confluenceTd" style="width: 255.001px">/empresas/{id}</td>
+<td class="confluenceTd" style="width: 338.001px"><br />
+</td>
+<td class="confluenceTd" style="width: 312.999px">Empresa</td>
+<td class="confluenceTd" style="width: 791.999px"><p>Detalle de los datos generales de una empresa.</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="width: 128.0px">POST</td>
+<td class="confluenceTd" style="width: 255.001px">/empresas/formly</td>
+<td class="confluenceTd" style="width: 338.001px">JSON</td>
+<td class="confluenceTd" style="width: 312.999px"><p>id</p>
+<p>Vendrá relleno si la creación es síncrona y no vendrá si es asíncrona.</p></td>
+<td class="confluenceTd" style="width: 791.999px"><div class="content-wrapper" title="">
+<p>Recibe como parámetro la respuesta del usuario del formulario de datos de alta (formly) con los campos necesarios para crear una empresa.</p>
+<div class="code panel pdl" style="border-width: 1px;">
+<div class="codeHeader panelHeader pdl hide-border-bottom" style="border-bottom-width: 1px;">
+<strong>Ejemplo de JSON</strong><span class="collapse-source expand-control" style="display:none;"><span class="expand-control-icon icon"> </span><span class="expand-control-text">Ampliar origen</span></span><span class="collapse-spinner-wrapper"></span>
+</div>
+<div class="codeContent panelContent pdl hide-toolbar">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; collapse: true"><code>{
+  &quot;tipoSedeId&quot;: &quot;1&quot;,
+  &quot;datosEconomicos&quot;: false,
+  &quot;entidadRazonSocial&quot;: &quot;Entidad&quot;,
+  &quot;tipoIdentificadorFiscalId&quot;: &quot;2&quot;,
+  &quot;numeroIdentificadorFiscal&quot;: &quot;12312312&quot;,
+  &quot;sectoresIndustriales&quot;: [
+    &quot;4&quot;,
+    &quot;5&quot;
+  ],
+  &quot;paisContactoId&quot;: &quot;1&quot;,
+  &quot;codigoPostalContacto&quot;: &quot;48152&quot;,
+  &quot;ciudadContacto&quot;: &quot;Madrid&quot;,
+  &quot;tipoViaContactoId&quot;: &quot;1&quot;,
+  &quot;nombreViaContacto&quot;: &quot;Gran vía&quot;,
+  &quot;numeroViaContacto&quot;: &quot;234&quot;,
+  &quot;ampliacion&quot;: &quot;ampliación&quot;,
+  &quot;email&quot;: &quot;email@prueba.com&quot;,
+  &quot;telefonoContacto&quot;: &quot;66612345&quot;,
+  &quot;faxContacto&quot;: &quot;915551234&quot;,
+  &quot;direccionWeb&quot;: &quot;http://www.prueba.com&quot;,
+  &quot;tipoTerceroId&quot;: &quot;F&quot;,
+  &quot;tipoEmpresaId&quot;: &quot;1&quot;,
+  &quot;tipoEmpresaContabilidadId&quot;: &quot;1&quot;,
+  &quot;tipoTerceroReinoUnidoId&quot;: &quot;S&quot;
+}</code></pre>
+</div>
+</div>
+<div id="expander-2066066616" class="expand-container">
+<div id="expander-control-2066066616" class="expand-control">
+<span class="expand-icon aui-icon aui-icon-small aui-iconfont-chevron-down" aria-hidden="true"></span><span class="expand-control-text conf-macro-render">Descripción de campos JSON (pulsa para expandir)...</span>
+</div>
+<div id="expander-content-2066066616" class="expand-content" role="region" aria-labelledby="expand-button-2066066616">
+<ul>
+<li><strong>tipoSedeId</strong><span style="letter-spacing: 0.0px;">: </span><span style="letter-spacing: 0.0px;">0 para tipo 'Entidad' y 1 para tipo 'Subentidad'</span></li>
+<li><strong>datosEconomicos</strong><span style="letter-spacing: 0.0px;">: </span>true | false</li>
+<li><strong>entidadRazonSocial</strong><span style="letter-spacing: 0.0px;">: </span>Descripción de la entidad o razón social</li>
+<li><strong>tipoIdentificadorFiscalId</strong><span style="letter-spacing: 0.0px;">: I</span>d de tipo de identificador fiscal procedente del endpoint /tipos-identificador</li>
+<li><strong>numeroIdentificadorFiscal</strong><span style="letter-spacing: 0.0px;">: </span>Nº de identificador fiscal</li>
+<li><strong>sectoresIndustriales</strong><span style="letter-spacing: 0.0px;">:  </span>Array de ids de clasificaciones CNAE procedentes de /empresas-clasificaciones/empresa/{id}</li>
+<li><strong>paisContactoId</strong><span style="letter-spacing: 0.0px;">: </span>Id de pais de contacto procedente de endpoint /paises. Ver definición en <a href="//sgi-sistema-de-gestion-de-investigacion/guia-de-implantacion-checklist/um-universidad-de-murcia/sistema-de-gestion-de-investigacion-apis-integracion/sistema-gestion-de-organizaciones-um-sgi-esb-sgo">Sistema Gestión de Organizaciones (UM - SGI - ESB - SGO)</a></li>
+<li><strong>codigoPostalContacto</strong><span style="letter-spacing: 0.0px;">: </span>Código postal de dirección de contacto</li>
+<li><strong>ciudadContacto</strong><span style="letter-spacing: 0.0px;">: </span>Ciudad de contacto</li>
+<li><strong>tipoViaContactoId</strong><span style="letter-spacing: 0.0px;">: </span>Id de tipo de vía de contacto procedente de endpoint /tipos-via</li>
+<li><strong>nombreViaContacto</strong><span style="letter-spacing: 0.0px;">: </span>Nombre de vía de contacto</li>
+<li><strong>numeroViaContacto</strong><span style="letter-spacing: 0.0px;">: </span>Número de dirección de contacto</li>
+<li><strong>ampliacion</strong><span style="letter-spacing: 0.0px;">: </span>Descripción de ampliación</li>
+<li><strong>email</strong><span style="letter-spacing: 0.0px;">: </span>Email de contacto</li>
+<li><strong>telefonoContacto</strong><span style="letter-spacing: 0.0px;">: </span>Teléfono de contacto</li>
+<li><strong>faxContacto</strong><span style="letter-spacing: 0.0px;">: </span>Fax de contacto</li>
+<li><strong>direccionWeb</strong><span style="letter-spacing: 0.0px;">: </span>Web de contacto</li>
+<li><strong>tipoTerceroId</strong><span style="letter-spacing: 0.0px;">: </span>Id de tipo de tercero procedente de endpoint /tipos-tercero</li>
+<li><strong>tipoEmpresaId</strong><span style="letter-spacing: 0.0px;">: </span>Id de tipo de empresa procedente de endpoint /tipos-empresa</li>
+<li><strong>tipoEmpresaContabilidadId</strong><span style="letter-spacing: 0.0px;">: </span>Id de tipo de empresa contabilidad procedente de endpoint /tipos-empresa-contabilidad</li>
+<li><strong>tipoTerceroReinoUnidoId</strong><span style="letter-spacing: 0.0px;">: I</span>d de tipo de tercero reino unido procedente de endpoint /tipos-tercero-reino-unido</li>
+</ul>
+</div>
+</div>
+</div></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="width: 128.0px">PUT</td>
+<td class="confluenceTd" style="width: 255.001px">/empresas/formly/{id}</td>
+<td class="confluenceTd" style="width: 338.001px">JSON</td>
+<td class="confluenceTd" style="width: 312.999px"><br />
+</td>
+<td class="confluenceTd" style="width: 791.999px"><div class="content-wrapper" title="">
+<p>Recibe como parámetro la respuesta del usuario del formulario de datos de modificación (formly) con los campos necesarios para actualizar una empresa.</p>
+<p><br />
+</p>
+<div class="code panel pdl" style="border-width: 1px;">
+<div class="codeHeader panelHeader pdl hide-border-bottom" style="border-bottom-width: 1px;">
+<strong>Ejemplo de JSON</strong><span class="collapse-source expand-control" style="display:none;"><span class="expand-control-icon icon"> </span><span class="expand-control-text">Ampliar origen</span></span><span class="collapse-spinner-wrapper"></span>
+</div>
+<div class="codeContent panelContent pdl hide-toolbar">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; collapse: true"><code>{
+  &quot;empresaId&quot;: &quot;1&quot;,
+  &quot;tipoSedeId&quot;: &quot;1&quot;,
+  &quot;datosEconomicos&quot;: false,
+  &quot;entidadRazonSocial&quot;: &quot;Entidad&quot;,
+  &quot;tipoIdentificadorFiscalId&quot;: &quot;2&quot;,
+  &quot;numeroIdentificadorFiscal&quot;: &quot;12312312&quot;,
+  &quot;entidadPrincipal&quot;: &quot;entidad principal&quot;,
+  &quot;sectoresIndustriales&quot;: [
+    &quot;4&quot;,
+    &quot;5&quot;
+  ],
+  &quot;paisContactoId&quot;: &quot;1&quot;,
+  &quot;codigoPostalContacto&quot;: &quot;48152&quot;,
+  &quot;ciudadContacto&quot;: &quot;Madrid&quot;,
+  &quot;tipoViaContactoId&quot;: &quot;1&quot;,
+  &quot;nombreViaContacto&quot;: &quot;Gran vía&quot;,
+  &quot;numeroViaContacto&quot;: &quot;234&quot;,
+  &quot;ampliacion&quot;: &quot;ampliación&quot;,
+  &quot;email&quot;: &quot;email@prueba.com&quot;,
+  &quot;telefonoContacto&quot;: &quot;66612345&quot;,
+  &quot;faxContacto&quot;: &quot;915551234&quot;,
+  &quot;direccionWeb&quot;: &quot;http://www.prueba.com&quot;,
+  &quot;tipoTerceroId&quot;: &quot;1&quot;,
+  &quot;tipoEmpresaId&quot;: &quot;1&quot;,
+  &quot;tipoEmpresaContabilidadId&quot;: &quot;1&quot;,
+  &quot;tipoTerceroReinoUnidoId&quot;: &quot;S&quot;
+}</code></pre>
+</div>
+</div>
+<div id="expander-1060386281" class="expand-container">
+<div id="expander-control-1060386281" class="expand-control">
+<span class="expand-icon aui-icon aui-icon-small aui-iconfont-chevron-down" aria-hidden="true"></span><span class="expand-control-text conf-macro-render">Descripción de campos JSON (pulsa para expandir)...</span>
+</div>
+<div id="expander-content-1060386281" class="expand-content" role="region" aria-labelledby="expand-button-1060386281">
+<ul>
+<li><strong>empresaId:</strong> Id de la empresa</li>
+<li><strong>tipoSedeId</strong><span>: </span><span>0 para tipo 'Entidad' y 1 para tipo 'Subentidad'</span></li>
+<li><strong>datosEconomicos</strong><span>: </span>true | false</li>
+<li><strong>entidadRazonSocial</strong><span>: </span>Descripción de la entidad o razón social</li>
+<li><strong>tipoIdentificadorFiscalId</strong><span>: I</span>d de tipo de identificador fiscal procedente del endpoint /tipos-identificador</li>
+<li><strong>numeroIdentificadorFiscal</strong><span>: </span>Nº de identificador fiscal</li>
+<li><strong>entidadPrincipal</strong><span>: </span>Nombre de entidad principal</li>
+<li><strong>sectoresIndustriales</strong><span>:  </span>Array de ids de clasificaciones CNAE procedentes de /empresas-clasificaciones/empresa/{id}</li>
+<li><strong>paisContactoId</strong><span>: </span>Id de pais de contacto procedente de endpoint /paises. Ver definición en <a href="//sgi-sistema-de-gestion-de-investigacion/guia-de-implantacion-checklist/um-universidad-de-murcia/sistema-de-gestion-de-investigacion-apis-integracion/sistema-gestion-de-organizaciones-um-sgi-esb-sgo">Sistema Gestión de Organizaciones (UM - SGI - ESB - SGO)</a></li>
+<li><strong>codigoPostalContacto</strong><span>: </span>Código postal de dirección de contacto</li>
+<li><strong>ciudadContacto</strong><span>: </span>Ciudad de contacto</li>
+<li><strong>tipoViaContactoId</strong><span>: </span>Id de tipo de vía de contacto procedente de endpoint /tipos-via</li>
+<li><strong>nombreViaContacto</strong><span>: </span>Nombre de vía de contacto</li>
+<li><strong>numeroViaContacto</strong><span>: </span>Número de dirección de contacto</li>
+<li><strong>ampliacion</strong><span>: </span>Descripción de ampliación</li>
+<li><strong>email</strong><span>: </span>Email de contacto</li>
+<li><strong>telefonoContacto</strong><span>: </span>Teléfono de contacto</li>
+<li><strong>faxContacto</strong><span>: </span>Fax de contacto</li>
+<li><strong>direccionWeb</strong><span>: </span>Web de contacto</li>
+<li><strong>tipoTerceroId</strong><span>: </span>Id de tipo de tercero procedente de endpoint /tipos-tercero</li>
+<li><strong>tipoEmpresaId</strong><span>: </span>Id de tipo de empresa procedente de endpoint /tipos-empresa</li>
+<li><strong>tipoEmpresaContabilidadId</strong><span>: </span>Id de tipo de empresa contabilidad procedente de endpoint /tipos-empresa-contabilidad</li>
+<li><strong>tipoTerceroReinoUnidoId</strong><span>: I</span>d de tipo de tercero reino unido procedente de endpoint /tipos-tercero-reino-unido</li>
+</ul>
+</div>
+</div>
+</div></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left; width: 128.0px;">GET</td>
+<td class="confluenceTd" style="text-align: left; width: 255.001px;">/empresas/formly/{id}</td>
+<td class="confluenceTd" style="text-align: left; width: 338.001px;"><br />
+</td>
+<td class="confluenceTd" style="text-align: left; width: 312.999px;">JSON</td>
+<td class="confluenceTd" style="text-align: left; width: 791.999px;"><p>Devuelve los datos a pintar en el formulario de Ver Detalle/Actualizar en el SGI (formly). Se recibirá el mismo json que en la solicitud de modificación de empresa (/empresas PUT)</p></td>
+</tr>
+<tr class="even">
+<td colspan="5" class="highlight-grey confluenceTd" style="width: 1826.0px" title="Color de fondo: Gris" data-highlight-colour="grey"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="width: 128.0px">GET</td>
+<td class="confluenceTd" style="width: 255.001px">/datos-contacto/empresa/{id}</td>
+<td class="confluenceTd" style="width: 338.001px"><br />
+</td>
+<td class="confluenceTd" style="width: 312.999px">DatosContacto</td>
+<td class="confluenceTd" style="width: 791.999px"><p>Contiene los datos de contacto de una empresa. </p>
+<p>Ver <a href="/confluence/pages/createpage.action?spaceKey=HERCULES&amp;title=UM+-+SGI+-+ESB+-+SGEMP+-+Adaptaciones+integraci%C3%B3n&amp;linkCreation=true&amp;fromPageId=597853493" class="createlink">UM - SGI - ESB - SGEMP - Adaptaciones integración</a> para su implementación en el SGI.</p></td>
+</tr>
+<tr class="even">
+<td colspan="5" class="highlight-grey confluenceTd" style="width: 1826.0px" title="Color de fondo: Gris" data-highlight-colour="grey"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="width: 128.0px">GET</td>
+<td class="confluenceTd" style="width: 255.001px">/empresas-clasificaciones/empresa/{id}</td>
+<td class="confluenceTd" style="width: 338.001px"><br />
+</td>
+<td class="confluenceTd" style="width: 312.999px">EmpresaClasificacion</td>
+<td class="confluenceTd" style="width: 791.999px">Listado de las clasificaciones de tipo códigos CNAE o sectores industriales asociados a una empresa. </td>
+</tr>
+<tr class="even">
+<td colspan="5" class="highlight-grey confluenceTd" style="width: 1826.0px" title="Color de fondo: Gris" data-highlight-colour="grey"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="width: 128.0px">GET</td>
+<td class="confluenceTd" style="width: 255.001px">/datos-tipo-empresa/empresa/{id}</td>
+<td class="confluenceTd" style="width: 338.001px"><br />
+</td>
+<td class="confluenceTd" style="width: 312.999px">DatosTipoEmpresa</td>
+<td class="confluenceTd" style="width: 791.999px">Detalle de los datos de tipo de empresa de una empresa.</td>
+</tr>
+<tr class="even">
+<td colspan="5" class="highlight-grey confluenceTd" style="width: 1826.0px" title="Color de fondo: Gris" data-highlight-colour="grey"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="width: 128.0px">GET</td>
+<td class="confluenceTd" style="width: 255.001px">/tipos-identificador</td>
+<td class="confluenceTd" style="width: 338.001px"><br />
+</td>
+<td class="confluenceTd" style="width: 312.999px">Lista[TipoIdentificador]</td>
+<td class="confluenceTd" style="width: 791.999px">Listado de tipos de identificador fiscal para las empresas ordenados alfabéticamente de forma ascendente.</td>
+</tr>
+<tr class="even">
+<td colspan="5" class="highlight-grey confluenceTd" style="width: 1826.0px" title="Color de fondo: Gris" data-highlight-colour="grey"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="width: 128.0px">GET</td>
+<td class="confluenceTd" style="width: 255.001px">/tipos-tercero</td>
+<td class="confluenceTd" style="width: 338.001px"><br />
+</td>
+<td class="confluenceTd" style="width: 312.999px">Lista[TipoTercero]</td>
+<td class="confluenceTd" style="width: 791.999px">Listado de tipos de tercero ordenados alfabéticamente de forma ascendente.</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="width: 128.0px">GET</td>
+<td class="confluenceTd" style="width: 255.001px">/tipos-empresa</td>
+<td class="confluenceTd" style="width: 338.001px"><br />
+</td>
+<td class="confluenceTd" style="width: 312.999px">Lista[TipoEmpresa]</td>
+<td class="confluenceTd" style="width: 791.999px">Listado de tipos de empresa ordenados alfabéticamente de forma ascendente.</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="width: 128.0px">GET</td>
+<td class="confluenceTd" style="width: 255.001px">/tipos-empresa-contabilidad</td>
+<td class="confluenceTd" style="width: 338.001px"><br />
+</td>
+<td class="confluenceTd" style="width: 312.999px">Lista[TipoEmpresaContabilidad]</td>
+<td class="confluenceTd" style="width: 791.999px">Listado de tipos de empresa para contabilidad ordenados alfabéticamente de forma ascendente.</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="width: 128.0px">GET</td>
+<td class="confluenceTd" style="width: 255.001px">/tipos-tercero-reino-unido</td>
+<td class="confluenceTd" style="width: 338.001px"><br />
+</td>
+<td class="confluenceTd" style="width: 312.999px">Lista[TipoTerceroReinoUnido]</td>
+<td class="confluenceTd" style="width: 791.999px">Listado de tipos de tercero, en caso de que el país sea Reino Unido, ordenados alfabéticamente de forma ascendente.</td>
+</tr>
+<tr class="odd">
+<td colspan="5" class="highlight-#f4f5f7 confluenceTd" title="Color de fondo: 100 % gris claro" data-highlight-colour="#f4f5f7"><br />
+</td>
+</tr>
+<tr class="even">
+<td colspan="5" class="highlight-#eae6ff confluenceTd" title="Color de fondo: 35 % morado claro" data-highlight-colour="#eae6ff"><strong>Métodos donde el SGI solo hace de pasarela entre Universidad y CVN</strong></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">GET</td>
+<td class="confluenceTd">/empresas/modificadas-ids</td>
+<td class="confluenceTd"><p>q+s</p>
+<p>La query estará formada por:</p>
+<ul>
+<li>fechaModificacion</li>
+</ul></td>
+<td class="confluenceTd">Lista[String]</td>
+<td class="confluenceTd">Listado de los identificadores de empresas que han sufrido cambios en los datos de identificativos de la empresa o en sus datos de contacto (entidad Empresa y entidad DatosContacto)</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+<div class="pageSection group">
+
+<div class="pageSectionHeader">
+
+## Attachments:
+
+</div>
+
+<div class="greybox" align="left">
+
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [ESB SGEMP Logical Model.png](/attachments/597853493/597858593.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [ESB SGEMP Logical Model.png](/attachments/597853493/597858591.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [ESB SGEMP Logical Model.png](/attachments/597853493/597858546.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [ESB SGEMP Logical Model.png](/attachments/597853493/597884630.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [ESB SGEMP-UM Logical Model.png](/attachments/597853493/597859895.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [ESB SGEMP-UM Logical Model.png](/attachments/597853493/597866099.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [ESB SGEMP-UM Logical Model.png](/attachments/597853493/597866056.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [ESB SGEMP-UM Logical Model.png](/attachments/597853493/597856284.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [ESB SGEMP-UM Logical Model.png](/attachments/597853493/597860050.png) (image/png)  
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div id="footer" role="contentinfo">
+
+<div class="section footer-body">
+
+Document generated by Confluence on oct 27, 2025 09:22
+
+<div id="footer-logo">
+
+[Atlassian](https://www.atlassian.com/)
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 
 

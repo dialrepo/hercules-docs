@@ -796,7 +796,200 @@
 
   <h1>Index</h1>
 
+<div id="page">
 
+<div id="main" class="aui-page-panel">
+
+<div id="main-header">
+
+<div id="breadcrumb-section">
+
+1.  [Hércules](index.html)
+2.  [Hércules](/)
+3.  [APIs de Integración](//apis-de-integracion)
+
+</div>
+
+# <span id="title-text"> Hércules : SGI: Servicios de terceros que expone </span>
+
+</div>
+
+<div id="content" class="view">
+
+<div class="page-metadata">
+
+Created by <span class="author"> Isabel Martinez Hernandez</span>, last updated by <span class="editor"> Usuario genérico para HERCULES</span> on mar 28, 2022
+
+</div>
+
+<div id="main-content" class="wiki-content group">
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/598147615/598148444.png" class="confluence-embedded-image" draggable="false" data-image-src="attachments/598147615/598148444.png" data-unresolved-comment-count="0" data-linked-resource-id="598148444" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="Diagrama APIs Integración.ServicosTerceros.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="598147615" data-linked-resource-container-version="13" tabindex="0" height="400" /></span>
+
+Dentro del Sistema de Gestión de la Investigación **se gestiona un Bus de Integración que permite centralizar las comunicaciones**, el objetivo es que a través de este bus otras aplicaciones de la Universidad o de terceros puedan exponer sus métodos y centralizar de esta forma todas las comunicaciones en un único punto.
+
+En las siguientes páginas se describen funcionalmente los requisitos de integración del SGI: <a href="/confluence/pages/createpage.action?spaceKey=TEMP001&amp;title=INT+-+Requisitos+de+integraci%C3%B3n" class="createlink">Requisitos de integración</a>
+
+A continuación se detalla la relación de métodos implementados en el bus de integración del SGI y agrupados por módulos/funcionalidades, en este apartado se muestran los métodos sobre los que el SGI hace de pasarela a través de su Bus de Integración y que exponen otras aplicaciones:
+
+
+
+- [Sistema de gestión económica](https://confluence.um.es/confluence/spaces/HERCULES/pages/598147545/Sistema+de+gesti%C3%B3n+econ%C3%B3mica)
+- [Sistema de gestión económica de protección industrial e intelectual](https://confluence.um.es/confluence/spaces/HERCULES/pages/598147544/Sistema+de+gesti%C3%B3n+econ%C3%B3mica+de+protecci%C3%B3n+industrial+e+intelectual)
+- [Sistema de gestión de personas](https://confluence.um.es/confluence/spaces/HERCULES/pages/598147539/Sistema+de+gesti%C3%B3n+de+personas)
+- [Sistema de gestión de empresas](https://confluence.um.es/confluence/spaces/HERCULES/pages/598147536/Sistema+de+gesti%C3%B3n+de+empresas)
+- [Sistema de la gestión de la estructura orgánica](https://confluence.um.es/confluence/spaces/HERCULES/pages/598147533/Sistema+de+la+gesti%C3%B3n+de+la+estructura+org%C3%A1nica)
+
+
+
+Además de estos métodos que se podrían denominar de terceros, el SGI expone una serie de métodos propios que se encuentran detallados en [estas páginas](//apis-de-integracion/sgi-servicios-propios-que-expone).
+
+# Introducción al ESB
+
+## WSO2 Enterprise Integrator
+
+WSO2 Enterprise Integrator (WSO2 EI) es una solución de integración que permite la comunicación entre varias aplicaciones dispares. Evita que las aplicaciones se comuniquen directamente entre sí en todos sus diversos formatos, cada aplicación simplemente se comunica con WSO2 EI, que actúa principalmente como un ESB para manejar las transformaciones de los mensajes, y encamina los mensajes a sus destinos apropiados. WSO2 EI  puede utilizarse para gestionar flujos de integración sin estado a corto plazo (utilizando el perfil ESB), así como procesos empresariales con estado a largo plazo (utilizando el perfil Business Process).  Además incluye un perfil de Análisis separado para supervisar las estadísticas del ESB, un perfil de Broker de Mensajes (WSO2 MB ) que puede utilizarse para una mensajería fiable.
+
+El perfil ESB proporciona sus servicios fundamentales a través de un motor de mensajería basado en eventos y estándares (el bus), que permite a los arquitectos de integración explotar el valor de la mensajería sin necesidad de escribir código. Este perfil ESB proporciona capacidades de integración de datos dentro del mismo tiempo de ejecución. Esto elimina la necesidad de usar un servidor de servicios de datos separado para sus procesos de integración.
+
+## Requisitos
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="odd">
+<th class="confluenceTh">Memoria</th>
+<td class="confluenceTd"><p>~ 2 GB mínimo<br />
+~ 1 GB tamaño heap. Por lo general, esto es suficiente para procesar los típicos mensajes SOAP, pero los requisitos varían con los tamaños de los mensajes más grandes y el número de mensajes procesados</p></td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Disco</th>
+<td class="confluenceTd">~ 1 GB  excluyendo el espacio asignado para los archivos de registro y las bases de datos.</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+### Compatibilidad del entorno
+
+- Todos los productos basados en el WSO2 Carbon  son aplicaciones Java que se pueden ejecutar en cualquier plataforma que sea compatible con Oracle JDK 1.8.\*.
+- Todos los productos basados en WSO2 Carbon son generalmente compatibles con la mayoría de los SGBD comunes. La base de datos H2 incorporada es adecuada para el desarrollo, las pruebas y algunos entornos de producción. Sin embargo, para la mayoría de los entornos de producción de las empresas, se utilizar un SGBD estándar de la industria como Oracle, PostgreSQL, MySQL, MS SQL, etc. 
+- No se recomienda utilizar el Apache DS en un entorno de producción debido a problemas de escalabilidad. En su lugar, utilice un LDAP como OpenLDAP para la gestión de usuarios.
+
+#### JDK
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="header">
+<th class="confluenceTh">Producto</th>
+<th class="confluenceTh">Versión</th>
+<th class="confluenceTh">JDK</th>
+<th class="confluenceTh">S.O.</th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd"><p>WSO2 Enterprise Integrator (EI)<br />
+<br />
+<br />
+</p></td>
+<td class="confluenceTd"><span>6.6.0 </span></td>
+<td class="confluenceTd"><span>CorrettoJDK 8</span><br />
+<span>AdoptOpenJDK 8</span><br />
+<span>AdoptOpenJDK 11</span><br />
+<span>OpenJDK 8</span><br />
+<span>Oracle JDK 8</span><br />
+<span>Oracle JDK 11</span></td>
+<td class="confluenceTd"><span>Ubuntu 18.04</span><br />
+<span>CentOS 7.4, 7.5</span><br />
+<span>Red Hat Enterprise Linux 7.0</span><br />
+<span>SUSE Linux 12</span><br />
+<span>Windows Server 2016</span></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+**SGBD**
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="header">
+<th class="confluenceTh">Producto</th>
+<th class="confluenceTh">Versión</th>
+<th class="confluenceTh">JDK</th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd"><p>WSO2 Enterprise Integrator (EI)<br />
+<br />
+<br />
+</p></td>
+<td class="confluenceTd"><p>6.6.0</p>
+<p>6.5.0</p>
+<p>6.4.0</p></td>
+<td class="confluenceTd"><p>Oracle 12c<br />
+MySQL 5.7<br />
+Microsoft SQL Server 2016</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><span>WSO2 Enterprise Integrator (EI) </span></td>
+<td class="confluenceTd"><span>6.3.0</span></td>
+<td class="confluenceTd"><p>Oracle 11g/12c</p>
+<p>MySQL 5.6/5.7</p>
+<p>Microsoft SQL Server 2014</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<a href="https://docs.wso2.com/display/EI600/Installation+Prerequisites" class="external-link" rel="nofollow"><br />
+https://docs.wso2.com/display/EI600/Installation+Prerequisites</a>
+
+</div>
+
+<div class="pageSection group">
+
+<div class="pageSectionHeader">
+
+## Attachments:
+
+</div>
+
+<div class="greybox" align="left">
+
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [Diagrama APIs Integración.ServicosTerceros.png](/attachments/598147615/598148444.png) (image/png)  
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div id="footer" role="contentinfo">
+
+<div class="section footer-body">
+
+Document generated by Confluence on oct 27, 2025 09:23
+
+<div id="footer-logo">
+
+[Atlassian](https://www.atlassian.com/)
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 
 

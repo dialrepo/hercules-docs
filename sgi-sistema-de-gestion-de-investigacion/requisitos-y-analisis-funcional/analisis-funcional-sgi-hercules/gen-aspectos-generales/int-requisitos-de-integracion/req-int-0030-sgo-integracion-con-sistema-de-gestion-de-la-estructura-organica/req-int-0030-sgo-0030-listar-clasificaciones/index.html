@@ -796,7 +796,226 @@
 
   <h1>Req int 0030 sgo 0030 listar clasificaciones</h1>
 
+<div id="page">
 
+<div id="main" class="aui-page-panel">
+
+<div id="main-header">
+
+<div id="breadcrumb-section">
+
+1.  [Hércules](index.html)
+2.  [Hércules](/)
+3.  [SGI. Sistema de gestión de investigación](//sgi-sistema-de-gestion-de-investigacion)
+4.  [Requisitos y análisis funcional](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional)
+5.  [Análisis Funcional SGI - Hércules](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules)
+6.  [GEN - Aspectos generales](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales)
+7.  [INT - Requisitos de integración](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion)
+8.  [REQ-INT-0030-SGO - Integración con Sistema de gestión de la estructura orgánica](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0030-sgo-integracion-con-sistema-de-gestion-de-la-estructura-organica)
+
+</div>
+
+# <span id="title-text"> Hércules : REQ-INT-0030-SGO-0030 - Listar clasificaciones </span>
+
+</div>
+
+<div id="content" class="view">
+
+<div class="page-metadata">
+
+Created by <span class="author"> Usuario desconocido (alicia.alvarez)</span>, last updated on jun 23, 2022
+
+</div>
+
+<div id="main-content" class="wiki-content group">
+
+<div class="contentLayout2">
+
+<div class="columnLayout single" layout="single">
+
+<div class="cell normal" data-type="normal">
+
+<div class="innerCell">
+
+<div class="plugin-tabmeta-details">
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="odd">
+<th class="confluenceTh">Cod. REQ</th>
+<td class="confluenceTd"><p><strong>REQ-INT-0030-SGO-0030</strong> <strong>- Listar clasificaciones</strong></p></td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Ver. Objetivo</th>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh">Ver. REQ</th>
+<td class="confluenceTd">1.0.0</td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Estado</th>
+<td class="confluenceTd"><div class="content-wrapper">
+ <span class="status-macro aui-lozenge aui-lozenge-current conf-macro output-inline">IN PROGRESS</span> 
+</div></td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh">Fec. Aprobación</th>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Épica, historia</th>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh">Frecuencia</th>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Características</th>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh"><span>M. Consumidor</span></th>
+<td class="confluenceTd">CSP, PII</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="columnLayout single" layout="single">
+
+<div class="cell normal" data-type="normal">
+
+<div class="innerCell">
+
+## Definición y objetivos
+
+El ESB debe proporcionar al SGI el listado de clasificaciones vigentes en la Universidad con su estructura jerárquica. Será el ESB el encargado de redirigir esta petición al sistema universitario de gestión correspondiente.
+
+Si no existe ningún sistema externo que proporcione este listado, se configurará el listado en tiempo de implantación de forma que éste resida de forma independiente en el ESB, tomando como fuente para cada una de las tres clasificaciones identificadas en el SGI las siguientes:
+
+- Para la clasificación UNESCO: <a href="https://www.ciencia.gob.es/portal/site/MICINN/menuitem.8ce192e94ba842bea3bc811001432ea0/?vgnextoid=363ac9487fb02210VgnVCM1000001d04140aRCRD" class="external-link" rel="nofollow">https://www.ciencia.gob.es/portal/site/MICINN/menuitem.8ce192e94ba842bea3bc811001432ea0/?vgnextoid=363ac9487fb02210VgnVCM1000001d04140aRCRD</a>
+- Para la clasificación CNAE: <a href="https://www.ine.es/daco/daco42/clasificaciones/cnae09/estructura_cnae2009.xls" class="external-link" rel="nofollow">https://www.ine.es/daco/daco42/clasificaciones/cnae09/estructura_cnae2009.xls</a>
+- Para la clasificación NABS: <a href="https://www.ciencia.gob.es/stfls/MICINN/Ayudas/PN_2008_2011/LIA_Infraestructuras_CCyTec/FICHERO/FEDER_2010/Nueva_clasificacion_NABS-2007.pdf" class="external-link" rel="nofollow">https://www.ciencia.gob.es/stfls/MICINN/Ayudas/PN_2008_2011/LIA_Infraestructuras_CCyTec/FICHERO/FEDER_2010/Nueva_clasificacion_NABS-2007.pdf</a>
+
+Esta lista de clasificaciones podrá ser extendida por parte de la Universidad con otras adicionales en tiempo de implantación.
+
+## Descripción técnica
+
+Parámetros de entrada:
+
+- Tipo de clasificación
+- <span style="color:var(--ds-text,#172b4d);">Identificador del nivel padre  
+  </span>
+
+<span style="color:var(--ds-text,#172b4d);">El SGI proveerá de un interface gráfico donde permitir al usuario seleccionar uno o varios elementos de clasificación para asociarlos a una entidad [IU-GEN-0120 - Selección de clasificaciones](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/sha-buscadores-y-listados-comunes/iu-gen-0120-seleccion-de-clasificaciones). Las clasificaciones entre las que poder elegir elementos a asociar podrán ser potencialmente todas las del árbol. Si adicionalmente se quisiera restringir la lista de clasificaciones a las que tengan un padre concreto, que no tengan padre (que sean de nivel raíz) o las pertenecientes a uno o varios tipos de clasificación concretos, estos filtros han de venir informados desde el formulario que invoque al formulario de selección de clasificaciones, por lo que estos parámetros irán implícitos de acuerdo al caso de uso que provoque la invocación del mismo. Estos filtros no serán visibles por pantalla.</span>
+
+<span style="color:var(--ds-text,#172b4d);">Parámetros de salida: listado de clasificaciones del tipo y con el identificador de nivel padre indicado. Si se especifica que el nivel padre sea nulo o vacío, se devolverán las áreas de conocimiento de nivel raíz, esto es, que no tienen padre, y que además cumplan el criterio de filtrado indicado en el parámetro Tipo de clasificación (en caso de venir informado).  
+</span>
+
+<span style="color:var(--ds-text,#172b4d);">Para cada elemento se devolverá:</span>
+
+- <span style="color:var(--ds-text,#172b4d);">Identificador</span>
+- <span style="color:var(--ds-text,#172b4d);">Código</span>
+- <span style="color:var(--ds-text,#172b4d);">Nombre</span>
+- <span style="color:var(--ds-text,#172b4d);">Identificador del elemento padre. Para los elementos raíz tomará valor nulo.</span>
+
+## Diseño técnico
+
+En el siguiente enlace se muestra el diseño del modelo lógico y el diseño de la API del Sistema de Gestión de la estructura Orgánica <a href="https://confluence.um.es/confluence/display/HERCULES/SGI+-+ESB+-+SGO" rel="nofollow">SGI - ESB - SGO</a>.
+
+El servicio concreto del API que cubre este requisito es [SGI - ESB - SGO - Clasificaciones - Buscar](//sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sgo/sgi-esb-sgo-clasificaciones-buscar).
+
+
+
+</div>
+
+</div>
+
+</div>
+
+<div class="columnLayout three-equal" layout="three-equal">
+
+<div class="cell normal" data-type="normal">
+
+<div class="innerCell">
+
+## Interfaces de usuario relacionados
+
+<img src="plugins/servlet/confluence/placeholder/unknown-macro" class="wysiwyg-unknown-macro" />
+
+</div>
+
+</div>
+
+<div class="cell normal" data-type="normal">
+
+<div class="innerCell">
+
+## Informes relacionados
+
+<img src="plugins/servlet/confluence/placeholder/unknown-macro" class="wysiwyg-unknown-macro" />
+
+</div>
+
+</div>
+
+<div class="cell normal" data-type="normal">
+
+<div class="innerCell">
+
+## Casos de uso relacionados
+
+<img src="plugins/servlet/confluence/placeholder/unknown-macro" class="wysiwyg-unknown-macro" />
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div id="footer" role="contentinfo">
+
+<div class="section footer-body">
+
+Document generated by Confluence on oct 27, 2025 08:38
+
+<div id="footer-logo">
+
+[Atlassian](https://www.atlassian.com/)
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 
 

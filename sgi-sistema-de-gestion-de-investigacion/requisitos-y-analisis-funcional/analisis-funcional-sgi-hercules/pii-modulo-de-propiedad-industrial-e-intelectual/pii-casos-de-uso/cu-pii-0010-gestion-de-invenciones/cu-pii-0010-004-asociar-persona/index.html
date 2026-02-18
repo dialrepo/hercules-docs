@@ -796,7 +796,225 @@
 
   <h1>Cu pii 0010 004 asociar persona</h1>
 
+<div id="page">
 
+<div id="main" class="aui-page-panel">
+
+<div id="main-header">
+
+<div id="breadcrumb-section">
+
+1.  [Hércules](index.html)
+2.  [Hércules](/)
+3.  [SGI. Sistema de gestión de investigación](//sgi-sistema-de-gestion-de-investigacion)
+4.  [Requisitos y análisis funcional](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional)
+5.  [Análisis Funcional SGI - Hércules](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules)
+6.  [PII - Módulo de Propiedad industrial e intelectual](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/pii-modulo-de-propiedad-industrial-e-intelectual)
+7.  [PII - Casos de Uso](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/pii-modulo-de-propiedad-industrial-e-intelectual/pii-casos-de-uso)
+8.  [CU-PII-0010-Gestión de Invenciones](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/pii-modulo-de-propiedad-industrial-e-intelectual/pii-casos-de-uso/cu-pii-0010-gestion-de-invenciones)
+
+</div>
+
+# <span id="title-text"> Hércules : CU-PII-0010-004 - Asociar persona </span>
+
+</div>
+
+<div id="content" class="view">
+
+<div class="page-metadata">
+
+Created by <span class="author"> Usuario desconocido (juan.garcia)</span>, last updated by <span class="editor"> Usuario desconocido (alicia.alvarez)</span> on nov 22, 2021
+
+</div>
+
+<div id="main-content" class="wiki-content group">
+
+<div class="contentLayout2">
+
+<div class="columnLayout single" layout="single">
+
+<div class="cell normal" data-type="normal">
+
+<div class="innerCell">
+
+<div class="plugin-tabmeta-details">
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable" style="width: 75.1988%;">
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 84%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<th class="confluenceTh">Cod. CU</th>
+<td class="confluenceTd"><p><strong><strong><strong><strong>CU-PII-0010-004 - Asociar persona</strong></strong></strong></strong></p></td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Ver. objetivo</th>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh">Ver. CU</th>
+<td class="confluenceTd">1.0.0</td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Estado</th>
+<td class="confluenceTd"><div class="content-wrapper">
+<p><span class="status-macro aui-lozenge aui-lozenge-current">LIBERADO_</span></p>
+</div></td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh">Fec. Aprobación</th>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Épica, historia</th>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh">Actores</th>
+<td class="confluenceTd">ACT-PII-001-Gestor</td>
+</tr>
+<tr class="even">
+<th class="confluenceTh"><p>Frecuencia</p></th>
+<td class="confluenceTd">Media</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+## Descripción
+
+El usuario necesita asociar una persona a la entidad. Puede ser un investigador de la Universidad, un alumno o un trabajador de la misma, pero también puede ser una persona externa a la Universidad.
+
+Se presenta un diálogo para la búsqueda de esta persona en los sistemas de la Universidad.
+
+## Actores
+
+### Actor principal
+
+ACT-PII-001-Gestor
+
+## Precondiciones
+
+Usuario logueado en el sistema con el rol adecuado dentro del módulo PII.
+
+Haber accedido a la gestión de la entidad que necesita asociar a la persona.
+
+## Garantías de éxito (postcondiciones)
+
+El usuario asocia una persona a la entidad donde necesita.
+
+## Escenario principal (flujo básico) - ACT-PII-001-Gestor
+
+1.  Se presenta la pantalla donde se pide asociar a la persona.
+2.  El usuario pulsa el botón del formulario para la asociación.
+3.  <span class="inline-comment-marker" ref="4244b2dd-a9e3-4fa0-ba46-78d431fa5b73">Busca la persona (IU-GEN-0060 - Búsqueda de persona - REQ-INT-0020-SGP-0020 - Buscar persona en un listado de colectivos) y la selecciona.</span>
+4.  Pulsa el botón de asociar.
+
+## Extensiones (flujos alternativos)
+
+N/A
+
+## Requisitos especiales
+
+N/A
+
+## Lista de tecnología y variaciones de datos
+
+N/A
+
+## Acciones
+
+<div class="plugin-tabmeta-details">
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="odd">
+<th class="confluenceTh"><p>ACT-PII-001-Gestor</p></th>
+<td class="confluenceTd"><p><span><span>PII-INVENCION-ASOCIARPERSONA<br />
+</span></span></p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+
+
+
+
+</div>
+
+</div>
+
+</div>
+
+<div class="columnLayout two-equal" layout="two-equal">
+
+<div class="cell normal" data-type="normal">
+
+<div class="innerCell">
+
+## Casos de uso relacionados
+
+<img src="plugins/servlet/confluence/placeholder/unknown-macro" class="wysiwyg-unknown-macro" />
+
+</div>
+
+</div>
+
+<div class="cell normal" data-type="normal">
+
+<div class="innerCell">
+
+## Interfaces relacionados
+
+<img src="plugins/servlet/confluence/placeholder/unknown-macro" class="wysiwyg-unknown-macro" />
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div id="footer" role="contentinfo">
+
+<div class="section footer-body">
+
+Document generated by Confluence on oct 27, 2025 08:46
+
+<div id="footer-logo">
+
+[Atlassian](https://www.atlassian.com/)
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 
 

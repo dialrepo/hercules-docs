@@ -796,7 +796,237 @@
 
   <h1>Convocatorias</h1>
 
+<div id="page">
 
+<div id="main" class="aui-page-panel">
+
+<div id="main-header">
+
+<div id="breadcrumb-section">
+
+1.  [Hércules](index.html)
+2.  [Hércules](/)
+3.  [APIs de Integración](//apis-de-integracion)
+4.  [SGI: Servicios propios que expone](//apis-de-integracion/sgi-servicios-propios-que-expone)
+
+</div>
+
+# <span id="title-text"> Hércules : Convocatorias </span>
+
+</div>
+
+<div id="content" class="view">
+
+<div class="page-metadata">
+
+Created by <span class="author"> Usuario genérico para HERCULES</span>, last updated on nov 20, 2024
+
+</div>
+
+<div id="main-content" class="wiki-content group">
+
+------------------------------------------------------------------------
+
+<div class="toc-macro rbtoc1761553423877">
+
+- [Sistema de Gestión Investigación](#Convocatorias-SistemadeGestiónInvestigación)
+  - [Entidades](#Convocatorias-Entidades)
+  - [API](#Convocatorias-API)
+    - [Definición de los objetos](#Convocatorias-Definicióndelosobjetos)
+      - [AreaTematica](#Convocatorias-AreaTematica)
+    - [Servicios](#Convocatorias-Servicios)
+
+</div>
+
+------------------------------------------------------------------------
+
+# Sistema de Gestión Investigación
+
+## Entidades
+
+<div class="table-wrap">
+
+|              |                                                                                                     |
+|--------------|-----------------------------------------------------------------------------------------------------|
+| Entidad      | Descripción                                                                                         |
+| AreaTematica | Contiene los datos generales de las áreas temáticas que se pueden relacionar con las convocatorias. |
+
+</div>
+
+
+
+## API
+
+Características generales que todas las API REST deben de cumplir:
+
+- <a href="/confluence/pages/createpage.action?spaceKey=TEMP001&amp;title=Consultas+filtradas+y+paginadas" class="createlink">Consultas filtradas y paginadas</a>
+- <a href="/confluence/pages/createpage.action?spaceKey=TEMP001&amp;title=Formatos+de+datos+API" class="createlink">Formatos de datos API</a>
+
+### Definición de los objetos
+
+#### AreaTematica
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="header">
+<th class="confluenceTh">Nombre</th>
+<th class="confluenceTh">Tipo</th>
+<th class="confluenceTh">Descripción</th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd">id</td>
+<td class="confluenceTd">Long</td>
+<td class="confluenceTd">Identificador único del área temática.</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">nombre</td>
+<td class="confluenceTd">String</td>
+<td class="confluenceTd">Nombre del área temática a presentar por pantalla en los componentes visuales árbol o selector.</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">descripcion</td>
+<td class="confluenceTd">String</td>
+<td class="confluenceTd">Descripción del área temática.</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">padre</td>
+<td class="confluenceTd">Long</td>
+<td class="confluenceTd">Identificador del área temática de la que depende jerárquicamente, del padre. Si está nulo, se entiende que el área temática es raíz o de primer nivel, no tiene área temática padre.</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">activo</td>
+<td class="confluenceTd">Boolean</td>
+<td class="confluenceTd"><span>Indica si el área temática está activa o no.<br />
+</span></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+### Servicios
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable" style="width: 99.8801%;">
+<colgroup>
+<col style="width: 7%" />
+<col style="width: 18%" />
+<col style="width: 13%" />
+<col style="width: 16%" />
+<col style="width: 43%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th class="confluenceTh"><p>Método</p></th>
+<th class="confluenceTh"><p>URL</p></th>
+<th class="confluenceTh"><p>Parámetros</p></th>
+<th class="confluenceTh"><p>Respuesta</p></th>
+<th class="confluenceTh"><p>Descripción</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td class="confluenceTd">GET</td>
+<td class="confluenceTd"><span>/areatematicas</span></td>
+<td class="confluenceTd"><p>q+s (query + sort)</p>
+<p>La query estará formada por:</p>
+<ul>
+<li>padreId</li>
+</ul></td>
+<td class="confluenceTd">List[AreasTematica]</td>
+<td class="confluenceTd"><p>Listado de AreaTematica  (sólo devuelve los registros activos).</p>
+<p>Nota: en el caso de no recibirse un padreId en la query, se devolverán todas las áreas temáticas y en caso de indicarse en la query que se quieren solo las que tengan un padreId con valor "null" se devolverán únicamente las de primer nivel o nivel raíz.</p>
+<p><em>Ejemplo de query para obtener solo áreas de conocimiento raíz (su padre es null)</em>:</p>
+<p>padreId=na=</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">GET</td>
+<td class="confluenceTd"><span><span class="url-filename">/areatematicas/{id}</span></span></td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">AreasTematica</td>
+<td class="confluenceTd">Datos de un área temática específica.</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">GET</td>
+<td class="confluenceTd">/convocatorias/eliminadas-ids</td>
+<td class="confluenceTd"><p>q+s</p>
+<p>La query estará formada por:</p>
+<ul>
+<li>fechaEliminacion</li>
+</ul></td>
+<td class="confluenceTd">Lista[Long]</td>
+<td class="confluenceTd"><p>Listado de Identificadores de Convocatoria que han sido eliminadas (campo activo = false) a partir de una fecha.</p>
+<p>Se utilizará el siguiente parámetro en la llamada al servicio:</p>
+<ul>
+<li>fechaEliminacion: se le pasará la fecha a partir de la cual se quieren ver las convocatorias eliminadas o bien un rango entre las que se quiere buscar</li>
+</ul>
+<p>Ejemplo1:</p>
+<ul>
+<li>fechaEliminacion=ge=<span>"2024-01-01T22:00:00Z"</span>;</li>
+</ul>
+<p>Ejemplo2:</p>
+<ul>
+<li>fechaEliminacion=ge=<span>"2024-01-01T22:00:00Z"</span>;fechaEliminacion=le=<span>"2024-12-31T22:00:00Z"</span></li>
+</ul></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">GET</td>
+<td class="confluenceTd">/convocatorias/modificados-ids</td>
+<td class="confluenceTd"><p>q+s</p>
+<p>La query estará formada por:</p>
+<ul>
+<li>fechaModificacion</li>
+</ul></td>
+<td class="confluenceTd">Lista[Long]</td>
+<td class="confluenceTd"><p><span style="color:var(--ds-text,#172b4d);">Listado de identificadores de convocatorias activas que han sido modificadas (tanto la entidad CONVOCATORIA) como las siguientes entidades relacionadas: </span></p>
+<ul>
+<li>CONVOCATORIA_ENTIDAD_CONVOCANTE</li>
+<li>CONVOCATORIA_ENTIDAD_FINANCIADORA</li>
+<li>CONVOCATORIA_ENTIDAD_GESTORA</li>
+<li>CONVOCATORIA_CONCEPTO_GASTO</li>
+<li>CONVOCATORIA_CONCEPTO_GASTO_CODIGO_EC</li>
+<li>CONVOCATORIA_DOCUMENTO</li>
+<li>CONVOCATORIA_FASE</li>
+<li>CONVOCATORIA_HITO</li>
+<li>CONVOCATORIA_PARTIDA</li>
+</ul>
+<p><span style="color:var(--ds-text,#172b4d);">Ejemplo:</span></p>
+<ul>
+<li><span style="color:var(--ds-text,#172b4d);">fechaModificacion=ge="2021-08-18T22:00:00Z"</span></li>
+</ul></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div id="footer" role="contentinfo">
+
+<div class="section footer-body">
+
+Document generated by Confluence on oct 27, 2025 09:23
+
+<div id="footer-logo">
+
+[Atlassian](https://www.atlassian.com/)
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 
 

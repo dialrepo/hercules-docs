@@ -796,7 +796,670 @@
 
   <h1>Index</h1>
 
+<div id="page">
 
+<div id="main" class="aui-page-panel">
+
+<div id="main-header">
+
+<div id="breadcrumb-section">
+
+1.  [Hércules](index.html)
+2.  [Hércules](/)
+3.  [SGI. Sistema de gestión de investigación](//sgi-sistema-de-gestion-de-investigacion)
+4.  [Diseño](//sgi-sistema-de-gestion-de-investigacion/diseno)
+5.  [Componentes](//sgi-sistema-de-gestion-de-investigacion/diseno/componentes)
+6.  [SGI - ESB](//sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb)
+7.  [ESB - SGI](//sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/esb-sgi)
+
+</div>
+
+# <span id="title-text"> Hércules : ESB - SGI - Grupos de investigación </span>
+
+</div>
+
+<div id="content" class="view">
+
+<div class="page-metadata">
+
+Created by <span class="author"> Usuario desconocido (lorena.alvarez)</span>, last updated by <span class="editor"> Usuario desconocido (alicia.alvarez)</span> on jun 23, 2022
+
+</div>
+
+<div id="main-content" class="wiki-content group">
+
+------------------------------------------------------------------------
+
+<div class="toc-macro rbtoc1761551585666">
+
+- [Sistema de Gestión Investigación](#ESBSGIGruposdeinvestigación-SistemadeGestiónInvestigación)
+  - [Entidades](#ESBSGIGruposdeinvestigación-Entidades)
+  - [Modelo lógico](#ESBSGIGruposdeinvestigación-Modelológico)
+  - [API](#ESBSGIGruposdeinvestigación-API)
+    - [Definición de los objetos](#ESBSGIGruposdeinvestigación-Definicióndelosobjetos)
+      - [Grupo](#ESBSGIGruposdeinvestigación-Grupo)
+      - [GrupoEquipo](#ESBSGIGruposdeinvestigación-GrupoEquipo)
+      - [RolProyecto](#ESBSGIGruposdeinvestigación-RolProyecto)
+      - [GrupoPalabraClave](#ESBSGIGruposdeinvestigación-GrupoPalabraClave)
+      - [GrupoLineaInvestigacion](#ESBSGIGruposdeinvestigación-GrupoLineaInvestigacion)
+      - [LineaInvestigacion](#ESBSGIGruposdeinvestigación-LineaInvestigacion)
+      - [GrupoLineaClasificacion](#ESBSGIGruposdeinvestigación-GrupoLineaClasificacion)
+    - [Servicios](#ESBSGIGruposdeinvestigación-Servicios)
+
+</div>
+
+------------------------------------------------------------------------
+
+# Sistema de Gestión Investigación
+
+## Entidades
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="header">
+<th class="confluenceTh">Entidad</th>
+<th class="confluenceTh">Descripción</th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd">Grupo</td>
+<td class="confluenceTd"><p>Contiene los datos generales de un grupo de investigación. De esta entidad se pueden obtener los campos:</p>
+<ul>
+<li>Nombre del grupo</li>
+<li>Fecha de inicio</li>
+<li>Fecha de finalización</li>
+<li>Código</li>
+<li>Tipo</li>
+</ul></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">GrupoEquipo</td>
+<td class="confluenceTd"><p>Contiene la información de las personas que forman parte del equipo del grupo de investigación. De esta entidad de puede obtener los campos:</p>
+<ul>
+<li>Nombre del miembro</li>
+<li>Apellidos del miembro</li>
+<li>Fecha inicio de la participación</li>
+<li>Fecha fin de la participación</li>
+<li>Rol con el que participa</li>
+<li>Nº de componentes grupo (contando los distintos miembros del equipo)</li>
+<li>Nombre del investigador/a principal (personaRef con un rol que tenga el flag de "principal" a true y el "orden" igual a "PRIMARIO")</li>
+</ul></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">RolProyecto</td>
+<td class="confluenceTd">Entidad que tiene la información sobre el rol que tiene el miembro en el equipo.</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">GrupoPalabraClave</td>
+<td class="confluenceTd">Contiene las palabras claves del grupo de investigación</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+## Modelo lógico
+
+[CSP - GIN - Diseño lógico](//sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-csp/csp-gin-grupos-de-investigacion/csp-gin-diseno-logico-diagrama)
+
+## API
+
+Características generales que todas las API REST deben de cumplir:
+
+- [Consultas filtradas y paginadas](//sgi-sistema-de-gestion-de-investigacion/desarrollo-y-configuracion/estandares-de-desarrollo/consultas-filtradas-y-paginadas)
+- [Formatos de datos API](//sgi-sistema-de-gestion-de-investigacion/desarrollo-y-configuracion/estandares-de-desarrollo/formatos-de-datos-api)
+
+### Definición de los objetos
+
+#### Grupo
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="header">
+<th class="confluenceTh">Nombre</th>
+<th class="confluenceTh">Tipo</th>
+<th class="confluenceTh">Descripción</th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd"><span class="inline-comment-marker" data-ref="b8687e66-1890-4031-bce6-464da52d1f1c">id</span></td>
+<td class="confluenceTd">Long</td>
+<td class="confluenceTd">Identificador del grupo.</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">nombre</td>
+<td class="confluenceTd">String</td>
+<td class="confluenceTd">Nombre del grupo.</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">fechaInicio</td>
+<td class="confluenceTd">String</td>
+<td class="confluenceTd">Fecha de inicio del grupo.</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">fechaFin</td>
+<td class="confluenceTd">String</td>
+<td class="confluenceTd">Fecha de finalización del grupo.</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">proyectoSgeRef</td>
+<td class="confluenceTd">String</td>
+<td class="confluenceTd">Identificador del proyecto económico asociado en el sistema de gestión económico.</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">solicitudId</td>
+<td class="confluenceTd">Long</td>
+<td class="confluenceTd">Identificador de la solicitud de convocatoria que originó el grupo.</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">codigo</td>
+<td class="confluenceTd">String</td>
+<td class="confluenceTd">Código del grupo.</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">tipo</td>
+<td class="confluenceTd">String</td>
+<td class="confluenceTd"><p>Tipo del grupo. Posibles valores:</p>
+<ul>
+<li>EMERGENTE</li>
+<li>CONSOLIDADO</li>
+<li>PRECOMPETITIVO</li>
+<li>ALTO_RENDIMIENTO</li>
+</ul></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">especialInvestigación</td>
+<td class="confluenceTd">Boolean</td>
+<td class="confluenceTd">Indica si el grupo es un grupo especial de investigación o no.</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">activo</td>
+<td class="confluenceTd">Boolean</td>
+<td class="confluenceTd"><span>Indica si esta activo o no. En caso de no estar activo se </span><span>considera</span><span> como un grupo eliminado del sistema. Se realizan borrados lógicos por si el gestor o administrador desean recuperar un grupo eliminado.</span></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="code panel pdl" style="border-width: 1px;">
+
+<div class="codeHeader panelHeader pdl hide-border-bottom" style="border-bottom-width: 1px;">
+
+**Grupo**<span class="collapse-source expand-control" style="display:none;"><span class="expand-control-icon icon"> </span><span class="expand-control-text">Ampliar origen</span></span><span class="collapse-spinner-wrapper"></span>
+
+</div>
+
+<div class="codeContent panelContent pdl hide-toolbar">
+
+
+<pre><code class="language-syntaxhighlighter-pre">{  
+    &quot;id&quot;: 2,
+    &quot;nombre&quot;: &quot;Grupo investigación 2&quot;,
+    &quot;fechaInicio&quot;: &quot;2022-02-14T23:00:00Z&quot;,
+    &quot;fechaFin&quot;: &quot;2022-11-01T22:59:59Z&quot;,
+    &quot;proyectoSgeRef&quot;: &quot;33939&quot;,
+    &quot;solicitudId&quot;: null,
+    &quot;codigo&quot;: &quot;E0B9-1&quot;,
+    &quot;tipo&quot;: &quot;ALTO_RENDIMIENTO&quot;,
+    &quot;especialInvestigacion&quot;: false,
+    &quot;activo&quot;: true
+}
+</code></pre>
+
+
+</div>
+
+</div>
+
+#### GrupoEquipo
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="header">
+<th class="confluenceTh">Nombre</th>
+<th class="confluenceTh">Tipo</th>
+<th class="confluenceTh">Descripción</th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd">id</td>
+<td class="confluenceTd">Long</td>
+<td class="confluenceTd">Identificador de la entidad grupo equipo.</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">personaRef</td>
+<td class="confluenceTd">String</td>
+<td class="confluenceTd">Identificador o Referencia de la persona miembro del equipo de grupo. Es el identificador de la persona en el sistema de personas de la Universidad.</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">rol</td>
+<td class="confluenceTd">RolProyecto</td>
+<td class="confluenceTd"><p>Entidad que representa el rol. Son los roles que puede tener el equipo de grupo.</p>
+<p>Ejemplos:</p>
+<ul>
+<li>Investigador/a principal</li>
+<li>Co-Investigador/a PrincipalColaborador</li>
+<li>Asesor científico</li>
+<li>Colaborador E.I.</li>
+</ul></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">fechaInicio</td>
+<td class="confluenceTd">String</td>
+<td class="confluenceTd">Fecha de inicio para la participación del miembro del equipo de grupo con el rol seleccionado.</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">fechaFin</td>
+<td class="confluenceTd">String</td>
+<td class="confluenceTd">Fecha de inicio para la participación del miembro del equipo de grupo con el rol seleccionado.</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">dedicacion</td>
+<td class="confluenceTd">String</td>
+<td class="confluenceTd"><p>Dedicación del miembro del equipo de grupo. Posibles valores:</p>
+<ul>
+<li>PARCIAL</li>
+<li>COMPLETA</li>
+</ul></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">participacion</td>
+<td class="confluenceTd">Numérico</td>
+<td class="confluenceTd">Porcentaje de dedicación al grupo.</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+#### RolProyecto
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="header">
+<th class="confluenceTh">Nombre</th>
+<th class="confluenceTh">Tipo</th>
+<th class="confluenceTh">Descripción</th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd">id</td>
+<td class="confluenceTd">Long</td>
+<td class="confluenceTd">Identificador del rol proyecto.</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">abreviatura</td>
+<td class="confluenceTd">String</td>
+<td class="confluenceTd">Abreviatura identificativa del rol.</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">nombre</td>
+<td class="confluenceTd">String</td>
+<td class="confluenceTd">Nombre del rol.</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">rolPrincipal</td>
+<td class="confluenceTd">Boolean</td>
+<td class="confluenceTd">Indica si el rol es el rol principal. No se limita el número de roles para los que se marque el indicador de rol principal, pudiendo estar mas de un rol con el indicador marcado.</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">equipo</td>
+<td class="confluenceTd">String</td>
+<td class="confluenceTd">Tipo Equipo Proyecto. Tiene los siguientes valores:
+<ul>
+<li>INVESTIGACION</li>
+<li>TRABAJO</li>
+</ul></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">orden</td>
+<td class="confluenceTd">String</td>
+<td class="confluenceTd">Tipo de Orden. El orden sólo se indica para aquellos roles que tengan marcado el flag de investigador principal, para indicar si es de orden 1 o de orden 2. Tiene los siguientes valores:
+<ul>
+<li>PRIMARIO</li>
+<li>SECUNDARIO</li>
+</ul></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">activo</td>
+<td class="confluenceTd">Boolean</td>
+<td class="confluenceTd">Indica si esta activo o no. En caso de no estar activo no se podrá asignar a ningún miembro del equipo de una solicitud ni a los miembros del equipo de los socios de una solicitud.</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="code panel pdl" style="border-width: 1px;">
+
+<div class="codeHeader panelHeader pdl hide-border-bottom" style="border-bottom-width: 1px;">
+
+**GrupoEquipo**<span class="collapse-source expand-control" style="display:none;"><span class="expand-control-icon icon"> </span><span class="expand-control-text">Ampliar origen</span></span><span class="collapse-spinner-wrapper"></span>
+
+</div>
+
+<div class="codeContent panelContent pdl hide-toolbar">
+
+
+<pre><code class="language-syntaxhighlighter-pre">    {
+        &quot;id&quot;: 35,
+        &quot;grupoId&quot;: 1,
+        &quot;personaRef&quot;: &quot;27477512&quot;,
+        &quot;fechaInicio&quot;: &quot;2022-02-14T23:00:00Z&quot;,
+        &quot;fechaFin&quot;: null,
+        &quot;rolProyecto&quot;: {
+            &quot;id&quot;: 1,
+            &quot;abreviatura&quot;: &quot;IP&quot;,
+            &quot;nombre&quot;: &quot;Investigador/a principal&quot;,
+            &quot;rolPrincipal&quot;: true,
+            &quot;orden&quot;: &quot;PRIMARIO&quot;,
+            &quot;equipo&quot;: &quot;INVESTIGACION&quot;,
+            &quot;activo&quot;: true
+        },
+
+        &quot;dedicacion&quot;: &quot;COMPLETA&quot;,
+        &quot;participacion&quot;:100
+    }
+</code></pre>
+
+
+</div>
+
+</div>
+
+#### GrupoPalabraClave
+
+<div class="table-wrap">
+
+|                 |        |                                                           |
+|-----------------|--------|-----------------------------------------------------------|
+| Nombre          | Tipo   | Descripción                                               |
+| id              | Long   | Identificador de la entidad grupo palabra clave.          |
+| palabraClaveRef | String | Palabra o conjunto de palabras clave definido en el grupo |
+
+</div>
+
+<div class="code panel pdl" style="border-width: 1px;">
+
+<div class="codeHeader panelHeader pdl hide-border-bottom" style="border-bottom-width: 1px;">
+
+**GrupoPalabraClave**<span class="collapse-source expand-control" style="display:none;"><span class="expand-control-icon icon"> </span><span class="expand-control-text">Ampliar origen</span></span><span class="collapse-spinner-wrapper"></span>
+
+</div>
+
+<div class="codeContent panelContent pdl hide-toolbar">
+
+
+<pre><code class="language-syntaxhighlighter-pre">{
+     &quot;id&quot;: 35,
+     &quot;palabraClaveRef&quot;: &quot;ciencias sociales&quot;
+}
+</code></pre>
+
+
+</div>
+
+</div>
+
+#### GrupoLineaInvestigacion
+
+<div class="table-wrap">
+
+|                      |              |                                                                                           |
+|----------------------|--------------|-------------------------------------------------------------------------------------------|
+| Nombre               | Tipo         | Descripción                                                                               |
+| id                   | Long         | Identificador único de la entidad que relaciona un grupo con una línea de investigación . |
+| lineaInvestigacionId | Long         | Referencia a la línea de investigación asociada al grupo.                                 |
+| fechaInicio          | Fecha + hora | Fecha de inicio de la línea en el grupo.                                                  |
+| fechaFin             | Fecha + hora | Fecha de fin de la línea en el grupo.                                                     |
+
+</div>
+
+<div class="code panel pdl" style="border-width: 1px;">
+
+<div class="codeHeader panelHeader pdl hide-border-bottom" style="border-bottom-width: 1px;">
+
+**GrupoLineaInvestigacion**<span class="collapse-source expand-control" style="display:none;"><span class="expand-control-icon icon"> </span><span class="expand-control-text">Ampliar origen</span></span><span class="collapse-spinner-wrapper"></span>
+
+</div>
+
+<div class="codeContent panelContent pdl hide-toolbar">
+
+
+<pre><code class="language-syntaxhighlighter-pre">{
+    &quot;id&quot;: 1,
+    &quot;lineaInvestigacionId&quot;: 1,
+    &quot;fechaInicio&quot;: &quot;2021-11-07T23:00:00Z&quot;,
+    &quot;fechaFin&quot;: &quot;2021-12-30T22:59:59Z&quot;
+} 
+</code></pre>
+
+
+</div>
+
+</div>
+
+#### LineaInvestigacion
+
+<div class="table-wrap">
+
+|        |         |                                                    |
+|--------|---------|----------------------------------------------------|
+| Nombre | Tipo    | Descripción                                        |
+| id     | Long    | Identificador único de la línea de investigación . |
+| nombre | String  | Nombre de la línea de investigación.               |
+| activo | Boolean | Indicador de si la línea está activa o no.         |
+
+</div>
+
+<div class="code panel pdl" style="border-width: 1px;">
+
+<div class="codeHeader panelHeader pdl hide-border-bottom" style="border-bottom-width: 1px;">
+
+**GrupoLineaInvestigacion**<span class="collapse-source expand-control" style="display:none;"><span class="expand-control-icon icon"> </span><span class="expand-control-text">Ampliar origen</span></span><span class="collapse-spinner-wrapper"></span>
+
+</div>
+
+<div class="codeContent panelContent pdl hide-toolbar">
+
+
+<pre><code class="language-syntaxhighlighter-pre">{
+    &quot;id&quot;: 1,
+    &quot;nombre&quot;: &quot;Psicología Laboral u Organizacional&quot;,
+    &quot;activo&quot;: true
+}
+</code></pre>
+
+
+</div>
+
+</div>
+
+#### GrupoLineaClasificacion
+
+<div class="table-wrap">
+
+|                     |        |                                                                                                        |
+|---------------------|--------|--------------------------------------------------------------------------------------------------------|
+| Nombre              | Tipo   | Descripción                                                                                            |
+| id                  | Long   | Identificador único de la entidad que relaciona un grupo línea de investigación con una clasificación. |
+| codClasificacionRef | String | Referencia a la línea de investigación asociada al grupo.                                              |
+
+</div>
+
+<div class="code panel pdl" style="border-width: 1px;">
+
+<div class="codeHeader panelHeader pdl hide-border-bottom" style="border-bottom-width: 1px;">
+
+**GrupoLineaInvestigacion**<span class="collapse-source expand-control" style="display:none;"><span class="expand-control-icon icon"> </span><span class="expand-control-text">Ampliar origen</span></span><span class="collapse-spinner-wrapper"></span>
+
+</div>
+
+<div class="codeContent panelContent pdl hide-toolbar">
+
+
+<pre><code class="language-syntaxhighlighter-pre">{
+    &quot;id&quot;: 1,
+    &quot;codClasificacionRef&quot;: &quot;1234&quot;
+} 
+</code></pre>
+
+
+</div>
+
+</div>
+
+### Servicios
+
+<div class="confluence-information-macro confluence-information-macro-information" role="region" aria-label="Info">
+
+<span class="aui-icon aui-icon-small aui-iconfont-info-filled confluence-information-macro-icon" role="presentation"></span>
+
+<div class="confluence-information-macro-body">
+
+Para componer la URL llamada completa, se debe anteponer a lo indicado en la columna URL lo siguiente: **{HOST}/api/sgicsp**, donde **{HOST}** de deberá sustituir el dominio correspondiente al entorno al que se está accediendo y dicho acceso será por http o https según el caso.
+
+</div>
+
+</div>
+
+<div class="table-wrap">
+
+<table class="aui metadata-summary-macro null" style="width:100%;" data-cql="label = &quot;servicios&quot; and space = currentSpace() and ancestor = currentContent()" data-details-space-key="HERCULES" data-details-content-id="597852609" data-headings="Método, URL, Parámetros, Respuesta, Descripción" data-first-column-heading="Servicio" data-count-comments="false" data-count-likes="false" data-total-pages="1" data-page-size="1000" data-sort-by="null" data-reverse-sort="false" data-blueprint-present="false">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th class="sorter-text">Servicio</th>
+<th>Método</th>
+<th>URL</th>
+<th>Parámetros</th>
+<th>Respuesta</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td class="title" data-content-id="597853372"><a href="/confluence/spaces/HERCULES/pages/597853372/ESB+-+SGI+-+Grupos+de+investigaci%C3%B3n+-+Consultar+grupos+de+investigaci%C3%B3n+modificados">ESB - SGI - Grupos de investigación - Consultar grupos de investigación modificados</a></td>
+<td>GET</td>
+<td>/grupos/modificados-ids</td>
+<td><p>q+s</p>
+<p>La query estará formada por:</p>
+<ul>
+<li>fechaModificacion: fecha a partir de la cual se quieren ver los cambios</li>
+</ul></td>
+<td>Lista[String]</td>
+<td><p>Listado de Identificadores de Grupo activos que han sido modificados en los datos generales (tabla GRUPO) o en algunas de las siguientes tablas con las que se relaciona:</p>
+<ul>
+<li>GRUPO_EQUIPO</li>
+<li>GRUPO_PALABRA_CLAVE</li>
+<li>GRUPO_ENLACE</li>
+<li>GRUPO_RESPONSABLE_ECONOMICO</li>
+<li>GRUPO_EQUIPO_INSTRUMENTAL</li>
+<li>GRUPO_LINEA_INVESTIGACION</li>
+<li>GRUPO_LINEA_INVESTIGADOR</li>
+<li>GRUPO_LINEA_CLASIFICACION</li>
+</ul>
+<p>Ejemplo:</p>
+<ul>
+<li>fechaModificacion=ge=<span>"2021-08-18T22:00:00Z"</span></li>
+</ul></td>
+</tr>
+<tr class="even">
+<td class="title" data-content-id="597853375"><a href="/confluence/spaces/HERCULES/pages/597853375/ESB+-+SGI+-+Grupos+de+investigaci%C3%B3n+-+L%C3%ADneas+de+investigaci%C3%B3n+-+Listar+clasificaciones">ESB - SGI - Grupos de investigación - Líneas de investigación - Listar clasificaciones</a></td>
+<td>GET</td>
+<td>/gruposlineasinvestigacion/{id}/clasificaciones</td>
+<td><p><br />
+</p></td>
+<td>Lista[<a href="https://confluence.um.es/confluence/pages/viewpage.action?pageId=134292538#ESBSGIGruposdeinvestigaci%C3%B3n-GrupoLineaClasificacion" rel="nofollow">GrupoLineaClasificacion</a>]</td>
+<td><p>Listado de clasificaciones de una línea de investigación dentro de un grupo de investigación.</p></td>
+</tr>
+<tr class="odd">
+<td class="title" data-content-id="597853378"><a href="/confluence/spaces/HERCULES/pages/597853378/ESB+-+SGI+-+Grupos+de+investigaci%C3%B3n+-+L%C3%ADneas+de+investigaci%C3%B3n+-+Consultar+detalle">ESB - SGI - Grupos de investigación - Líneas de investigación - Consultar detalle</a></td>
+<td>GET</td>
+<td>/lineasinvestigacion/{id}</td>
+<td><p><br />
+</p></td>
+<td><a href="https://confluence.um.es/confluence/pages/viewpage.action?pageId=134292538#ESBSGIGruposdeinvestigaci%C3%B3n-LineaInvestigacion" rel="nofollow">LineaInvestigacion</a></td>
+<td><p>Detalle de una línea de investigación.</p></td>
+</tr>
+<tr class="even">
+<td class="title" data-content-id="597853373"><a href="/confluence/spaces/HERCULES/pages/597853373/ESB+-+SGI+-+Grupos+de+investigaci%C3%B3n+-+Listar+l%C3%ADneas+de+investigaci%C3%B3n">ESB - SGI - Grupos de investigación - Listar líneas de investigación</a></td>
+<td>GET</td>
+<td>/grupos/{id}/lineas-investigacion</td>
+<td><p><br />
+</p></td>
+<td>Lista[<a href="https://confluence.um.es/confluence/pages/viewpage.action?pageId=134292538#ESBSGIGruposdeinvestigaci%C3%B3n-GrupoLineaInvestigacion" rel="nofollow">GrupoLineaInvestigacion</a>]</td>
+<td><p>Listado de líneas de investigación de un Grupo.</p></td>
+</tr>
+<tr class="odd">
+<td class="title" data-content-id="597853374"><a href="/confluence/spaces/HERCULES/pages/597853374/ESB+-+SGI+-+Grupos+de+investigaci%C3%B3n+-+Listar+palabras+clave">ESB - SGI - Grupos de investigación - Listar palabras clave</a></td>
+<td>GET</td>
+<td><span><span class="url-filename">/grupos/{id}</span></span>/palabrasclave</td>
+<td><p><br />
+</p></td>
+<td>Lista[<a href="https://confluence.um.es/confluence/pages/viewpage.action?pageId=134292538#ESBSGIGruposdeinvestigaci%C3%B3n-GrupoPalabraClave" rel="nofollow">GrupoPalabraClave</a>]</td>
+<td><p>Listado de palabras clave de un Grupo.</p></td>
+</tr>
+<tr class="even">
+<td class="title" data-content-id="597853371"><a href="/confluence/spaces/HERCULES/pages/597853371/ESB+-+SGI+-+Grupos+de+investigaci%C3%B3n+-+Consultar+miembros+equipo">ESB - SGI - Grupos de investigación - Consultar miembros equipo</a></td>
+<td>GET</td>
+<td><span><span class="url-filename">/grupos/{id}</span></span>/<span>miembrosequipo</span></td>
+<td><p><br />
+</p></td>
+<td>Lista[<a href="https://confluence.um.es/confluence/pages/viewpage.action?pageId=134292538#ESBSGIGruposdeinvestigaci%C3%B3n-GrupoEquipo" rel="nofollow">GrupoEquipo</a>]</td>
+<td><p>Listado de miembros del equipo de un Grupo.</p></td>
+</tr>
+<tr class="odd">
+<td class="title" data-content-id="597853370"><a href="/confluence/spaces/HERCULES/pages/597853370/ESB+-+SGI+-+Grupos+de+investigaci%C3%B3n+-+Consultar+detalle">ESB - SGI - Grupos de investigación - Consultar detalle</a></td>
+<td>GET</td>
+<td><span>/grupos/<span class="url-filename">{id}</span></span></td>
+<td><p><br />
+</p></td>
+<td><a href="https://confluence.um.es/confluence/pages/viewpage.action?pageId=134292538#ESBSGIGruposdeinvestigaci%C3%B3n-Grupo" rel="nofollow">Grupo</a></td>
+<td><p>Datos generales de un Grupo.</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+<div id="footer" role="contentinfo">
+
+<div class="section footer-body">
+
+Document generated by Confluence on oct 27, 2025 08:53
+
+<div id="footer-logo">
+
+[Atlassian](https://www.atlassian.com/)
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 
 

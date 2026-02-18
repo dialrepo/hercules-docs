@@ -796,7 +796,559 @@
 
   <h1>Index</h1>
 
+<div id="page">
 
+<div id="main" class="aui-page-panel">
+
+<div id="main-header">
+
+<div id="breadcrumb-section">
+
+1.  [Hércules](index.html)
+2.  [Hércules](/)
+3.  [SGI. Sistema de gestión de investigación](//sgi-sistema-de-gestion-de-investigacion)
+4.  [Requisitos y análisis funcional](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional)
+5.  [Análisis Funcional SGI - Hércules](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules)
+6.  [CSP - Módulo de convocatorias, ayudas, solicitudes, proyectos y contratos y grupos de investigación](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion)
+7.  [CSP - Interfaz de usuario](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-interfaz-de-usuario)
+8.  [IU-CSP-0500 - Ejecución económica](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-interfaz-de-usuario/iu-csp-0500-ejecucion-economica)
+9.  [IU-CSP-0540 - Facturas y justificantes](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-interfaz-de-usuario/iu-csp-0500-ejecucion-economica/iu-csp-0540-facturas-y-justificantes)
+
+</div>
+
+# <span id="title-text"> Hércules : IU-CSP-0540-003 - Facturas y justificantes - Personal contratado </span>
+
+</div>
+
+<div id="content" class="view">
+
+<div class="page-metadata">
+
+Created by <span class="author"> Usuario desconocido (carmen.gonzalez)</span>, last updated by <span class="editor"> Usuario genérico para HERCULES</span> on jul 17, 2023
+
+</div>
+
+<div id="main-content" class="wiki-content group">
+
+<div class="plugin-tabmeta-details">
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable" style="width: 75.1988%;">
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 84%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<th class="confluenceTh">Cod. IU</th>
+<td class="confluenceTd"><p><strong><strong><strong><strong>IU-CSP-0540-003 - Facturas y justificantes - Personal contratado<br />
+</strong></strong></strong></strong></p></td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Ver. objetivo</th>
+<td class="confluenceTd">0.4.0</td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh">Ver. IU</th>
+<td class="confluenceTd">1.0.0</td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Estado</th>
+<td class="confluenceTd"><span class="status-macro aui-lozenge aui-lozenge-current conf-macro output-inline">IN PROGRESS</span></td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh">Fec. Aprobación</th>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Épica, historia</th>
+<td class="confluenceTd"><div class="content-wrapper">
+<p><br />
+</p>
+</div></td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh">Actores</th>
+<td class="confluenceTd">ACT-CSP-003-Gestor, ACT-CSP-004-Administrador</td>
+</tr>
+<tr class="even">
+<th class="confluenceTh"><p>Frecuencia</p></th>
+<td class="confluenceTd">Media</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+# Formulario Ejecución económica - Facturas y justificantes - Personal contratado
+
+Formulario que muestra los gastos asociados a las nóminas de personal. El detalle disponible de las nóminas será recuperado en el SGI una vez se hubiera realizado la imputación correspondiente desde el SGRRHH al SGE, es decir, el SGI recuperará esta información desde el SGE y no directamente del SGRRHH. El SGI realizará la extracción de esta información de la misma forma que el resto de datos económicos: consultando al SGE por medio de la aplicación presupuestaria. Por tanto, si un proyecto requiere la justificación del coste de personal se deben haber incluido todos los conceptos de gasto correspondientes (coste laboral, seguridad social, etc.) junto con las aplicaciones presupuestarias asociadas.  La integración entre los sistemas de gestión de RRHH y de gestión económica será independiente al SGI. Se parte del supuesto que el Sistema de RRHH  va a vincular la nómina con el identificador del proyecto SGE correspondiente, desglosando la nómina en las partidas de forma que estén asociadas a la aplicación presupuestaria correspondiente. El SGI extraerá el detalle que haya sido imputado a las aplicaciones presupuestarias del proyecto por medio de los mecanismos de integración con el SGE.
+
+Toda la información económica del proyecto se presentará agrupada por anualidad (siempre que en el proyecto se hubiera recogido el desglose por anualidad), de forma que  se podrán seleccionar una o varias anualidades para las que recuperar el detalle de los gastos asociados a las nóminas de personal.
+
+El detalle de campos a recoger de cada justificante/factura será común a todos ellos y deberá ser configurado en tiempo de implantación, pues esta información debe ser recuperada desde el SGE por medio de los mecanismos de integración disponibles.
+
+El listado de gastos asociados a las nóminas de personal será exportable a formato .csv.
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable" style="width: 100.0%;">
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 13%" />
+<col style="width: 75%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<th colspan="3" class="confluenceTd" style="width: 99.9026%"><div class="content-wrapper">
+<p><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597853657/597884755.png" class="confluence-embedded-image" draggable="false" data-image-src="attachments/597853657/597884755.png" data-unresolved-comment-count="0" data-linked-resource-id="597884755" data-linked-resource-version="3" data-linked-resource-type="attachment" data-linked-resource-default-alias="71_10_EjecucionEc_GastosJustif_Gastos_Nominas.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597853657" data-linked-resource-container-version="41" tabindex="0" width="1200" /></span></p>
+<p><br />
+</p>
+</div></th>
+</tr>
+<tr class="even">
+<th class="confluenceTh" style="width: 11.1111%">Nombre</th>
+<th class="confluenceTh" style="width: 13.2554%">Tipo</th>
+<th class="confluenceTh" style="width: 75.5361%"><p>Características / Notas</p></th>
+</tr>
+<tr class="odd">
+<th colspan="3" class="highlight-blue confluenceTd" data-highlight-colour="blue" style="width: 99.9026%"><span style="color:var(--ds-text,#172b4d);">Listado de proyectos o grupos del SGI vinculados al  identificador SGE. Listado recuperado de las tablas "proyecto proyecto SGE" y/o "grupo" para el identificador SGE (campo "proyecto SGE Ref" de la tabla "proyecto proyecto SGE" o de la tabal "grupo") desde el que se accede a esta pantalla.</span></th>
+</tr>
+<tr class="even">
+<th class="confluenceTd">Identificador interno SGI</th>
+<th class="confluenceTd">Numérico entero</th>
+<th class="confluenceTd"><p>Identificador interno creado por el SGI para identificar al proyecto o grupo.</p>
+<p>Se corresponde con el campo "id" de la tabla "proyecto" (asociado al campo "proyecto" de la tabla "proyecto proyecto SGE") o con el campo "id" de la tabla "grupo" en función de que se esté representando un proyecto o un grupo.</p></th>
+</tr>
+<tr class="odd">
+<th class="confluenceTd" style="width: 11.1111%">Código SGE</th>
+<th class="confluenceTd" style="width: 13.2554%">Texto</th>
+<th class="confluenceTd" style="width: 75.5361%"><p>Código de identificación del proyecto en el SGE.</p>
+<p>Se corresponde con el campo "proyecto ref SGE" de la tabla "proyecto proyecto SGE" en caso que se esté representado un proyecto y con el campo "proyecto ref SGE" de la tabla "grupo" en caso que se esté representado un grupo.</p></th>
+</tr>
+<tr class="even">
+<th class="confluenceTd" style="width: 11.1111%">Referencia en entidad convocante</th>
+<th class="confluenceTd" style="width: 13.2554%"><div class="content-wrapper">
+<p>Texto </p>
+</div></th>
+<th class="confluenceTd" style="width: 75.5361%"><p>Solo se mostrará en caso que la fila mostrada se corresponda con  un proyecto.</p>
+<p>Se corresponde con el campo "código externo" de la tabla "proyecto" (<span style="color:var(--ds-text,#172b4d);">a partir de la referencia establecida por el campo "proyecto" de la tabla "proyecto proyecto SGE".</span></p></th>
+</tr>
+<tr class="odd">
+<th class="confluenceTd" style="width: 11.1111%"><span style="color:var(--ds-text,#172b4d);">Título proyecto/Nombre grupo</span></th>
+<th class="confluenceTd" style="width: 13.2554%">Texto</th>
+<th class="confluenceTd" style="width: 75.5361%"><p>Título del proyecto o nombre del grupo.</p>
+<p>Si en la fila se representa un proyecto se corresponderá con el campo "título" de la tabla "proyecto" (a partir del campo "proyecto" de la tabla "proyecto proyecto SGE").</p>
+<p>Si en la fila se representa un grupo se corresponderá con el campo "nombre" de la tabla "grupo".</p></th>
+</tr>
+<tr class="even">
+<th class="confluenceTd">Responsable</th>
+<th class="confluenceTd">Texto</th>
+<th class="confluenceTd"><p>Nombre y apellidos del responsable del proyecto/grupo.</p>
+<p>Si en la fila se representa un proyecto, se mostrarán el nombre y apellidos obtenidos a través del requisito de integración <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0020-sgp-integracion-con-sistema-de-gestion-de-personas/req-int-0020-sgp-0030-consultar-datos-generales-de-persona">REQ-INT-0020-SGP-0030 - Consultar datos generales de persona</a><span>  p</span>ara la "persona ref" de la tabla "proyecto equipo" que tenga el rol principal (registro de la tabla "rol proyecto" con campo "principal" a "true") para la fecha actual (la fecha actual debe estar comprendida entre los campos "fecha inicio" y "fecha fin" de la tabla "proyecto equipo", considerando el valor null sobre fecha fin como periodo vigente). Podría darse el caso que existan varias personas con un rol "principal", en este caso se deben mostrar todos ellos separados por el carácter "," y en caso de que la cadena supere el espacio reservado para la columna se mostrarán "..." al final y se mostrará el contenido completo sobre componente tooltip.</p>
+<p>Si en la fila se representa un grupo, se mostrarán el nombre y apellidos obtenidos a través del requisito de integración<span> <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0020-sgp-integracion-con-sistema-de-gestion-de-personas/req-int-0020-sgp-0030-consultar-datos-generales-de-persona">REQ-INT-0020-SGP-0030 - Consultar datos generales de persona</a> </span>para la "persona ref" de la tabla "grupo equipo" que tenga el rol principal (registro de la tabla "rol proyecto" con campo "principal" a "true") para la fecha actual (la fecha actual debe estar comprendida entre los campos "fecha inicio" y "fecha fin" de la tabla "grupo equipo", considerando el valor null sobre fecha fin como periodo vigente). Podría darse el caso que existan varias personas con un rol "principal", en este caso se deben mostrar todos ellos separados por el carácter "," y en caso de que la cadena supere el espacio reservado para la columna se mostrarán "..." al final y se mostrará el contenido completo sobre componente tooltip.</p></th>
+</tr>
+<tr class="odd">
+<th class="confluenceTd" style="width: 11.1111%">Fecha inicio</th>
+<th class="confluenceTd" style="width: 13.2554%">Fecha</th>
+<th class="confluenceTd" style="width: 75.5361%"><p>Fecha de inicio del proyecto o grupo.</p>
+<p>Si en la fila se representa un proyecto se mostrará el valor del campo "fecha inicio" de la tabla "proyecto" a partir de la referencia establecida por el campo "proyecto" de la tabla "proyecto proyecto SGE".</p>
+<p>Si en la fila se representa un grupo se mostrará el valor del campo "fecha inicio" de la tabla "grupo".</p></th>
+</tr>
+<tr class="even">
+<th class="confluenceTd" style="width: 11.1111%">Fecha fin</th>
+<th class="confluenceTd" style="width: 13.2554%">Fecha</th>
+<th class="confluenceTd" style="width: 75.5361%"><p>Fecha de fin del proyecto o grupo.</p>
+<p>Si en la fila se representa un proyecto se mostrará el valor del campo "fecha fin" de la tabla "proyecto" a partir de la referencia establecida por el campo "proyecto" de la tabla "proyecto proyecto SGE".</p>
+<p>Si en la fila se representa un grupo se mostrará el valor del campo "fecha fin" de la tabla "grupo".</p></th>
+</tr>
+<tr class="odd">
+<th colspan="3" class="highlight-blue confluenceTd" data-highlight-colour="blue" style="width: 99.9026%">Formulario de filtrado</th>
+</tr>
+<tr class="even">
+<th class="confluenceTd" style="width: 11.1111%">Anualidades configuradas</th>
+<th class="confluenceTd" style="width: 13.2554%"><p>Selector</p>
+<p>Numérico entero genérico</p></th>
+<th class="confluenceTd" style="width: 75.5361%">Listado de todas anualidades del/de los proyecto/s que tengan vinculado el identificador del SGE para el que se está viendo la ejecución económica. Se mostrará el campo "año" recuperado de la tabla "Proyecto anualidad" para todos los proyectos relacionados con el identificador SGE en el tabla "Proyecto identificador SGE". Como varios proyectos pueden estar asociados al mismo identificador SGE nada impediría que pudieran existir anualidades repetidas. Se deberán filtrar para que en el componente de selección de Anualidades solo se muestren una vez una misma anualidad.</th>
+</tr>
+<tr class="odd">
+<th class="confluenceTd" style="width: 11.1111%">Anualidades seleccionadas</th>
+<th class="confluenceTd" style="width: 13.2554%"><p>Selector</p>
+<p>Numérico entero genérico</p>
+<p><br />
+</p></th>
+<th class="confluenceTd" style="width: 75.5361%"><p>Listado de las anualidades seleccionadas a partir de las disponibles en Anualidades configuradas. Si el componente gráfico utilizado finalmente en esta pantalla no es una lista doble, este bloque podría no ser necesario.</p>
+<p>Por defecto deben de estar todas las anualidades seleccionadas.</p>
+<p>Es un dato de filtrado para enviar al sistema de gestión económica</p></th>
+</tr>
+<tr class="even">
+<th class="confluenceTd" style="width: 11.1111%">Fecha devengo - entre - y -</th>
+<th class="confluenceTd" style="width: 13.2554%"><p>Fecha</p>
+<p>Opcional</p></th>
+<th class="confluenceTd" style="width: 75.5361%"><p>Rango de fechas a aplicar sobre el campo "fecha devengo" del justificante del gasto en el sistema de gestión económica. Será obligatorio que el rango de búsqueda se establezca con los dos límites ("entre" e "y") informados. Si se rellena el campo "fecha de devengo entre", se rellenará automáticamente el rango final (campo "fecha de devengo y") con la fecha actual.</p>
+<p>Es un dato de filtrado para enviar al sistema de gestión económica</p></th>
+</tr>
+<tr class="odd">
+<th class="confluenceTd" style="width: 11.1111%">Fecha de contabilización - entre - y -</th>
+<th class="confluenceTd" style="width: 13.2554%"><p>Fecha</p>
+<p>Opcional</p></th>
+<th class="confluenceTd" style="width: 75.5361%"><p>Rango de fechas a aplicar sobre el campo "fecha contabilización" del justificante del gasto en el sistema de gestión económica. Será obligatorio que el rango de búsqueda se establezca con los dos límites ("entre" e "y") informados. Si se rellena el campo "fecha de contabilización entre", se rellenará automáticamente el rango final (campo "fecha de contabilización y") con la fecha actual.</p>
+<p>Es un dato de filtrado para enviar al sistema de gestión económica</p></th>
+</tr>
+<tr class="even">
+<th class="confluenceTd" style="width: 11.1111%">Fecha de pago - entre - y -</th>
+<th class="confluenceTd" style="width: 13.2554%"><p>Fecha</p>
+<p>Opcional</p></th>
+<th class="confluenceTd" style="width: 75.5361%"><p>Rango de fechas a aplicar sobre el campo "fecha pago" del justificante del gasto en el sistema de gestión económica. Será obligatorio que el rango de búsqueda se establezca con los dos límites ("entre" e "y") informados. Si se rellena el campo "fecha de pago entre", se rellenará automáticamente el rango final (campo "fecha de pago y") con la fecha actual.</p>
+<p>Es un dato de filtrado para enviar al sistema de gestión económica</p></th>
+</tr>
+<tr class="odd">
+<th class="confluenceTd" style="width: 11.1111%">Mostrar</th>
+<th class="confluenceTd" style="width: 13.2554%">Botón</th>
+<th class="confluenceTd" style="width: 75.5361%">Acción "Mostrar"</th>
+</tr>
+<tr class="even">
+<th colspan="3" class="highlight-blue confluenceTd" data-highlight-colour="blue" style="width: 99.9026%"><p>Listado. El listado se mostrará atendiendo a los siguientes criterios de  ordenación:</p>
+<ul>
+<li>Orden 1: Anualidad (de más a menos reciente)</li>
+<li>Orden 2: Proyecto (orden alfabético)</li>
+<li>Orden 3: Concepto gasto (orden alfabético)</li>
+<li>Orden 4: Clasificación  SGE (orden alfabético)</li>
+<li>Orden 5: Aplicación presupuestaria  (orden alfabético)</li>
+<li>Orden 6: Código económico (orden alfabético)</li>
+<li>Orden 7: Fecha de devengo (de más a menos reciente)</li>
+</ul></th>
+</tr>
+<tr class="odd">
+<th class="confluenceTd" style="width: 11.1111%">+-</th>
+<th class="confluenceTd" style="width: 13.2554%"><p>Elemento gráfico para expandir o plegar</p></th>
+<th class="confluenceTd" style="width: 75.5361%"><p>Componente para expandir o plegar las filas de:</p>
+<ul>
+<li>anualidad</li>
+<li>agrupación de gastos</li>
+<li>concepto de gasto</li>
+</ul>
+<p>Permite plegar o expandir las filas de detalle de anualidad, agrupación de gastos y concepto de gastos</p></th>
+</tr>
+<tr class="even">
+<th class="confluenceTd" style="width: 11.1111%">Anualidad</th>
+<th class="confluenceTd" style="width: 13.2554%">Numérico entero genérico</th>
+<th class="confluenceTd" style="width: 75.5361%"><p>Año de la anualidad.</p>
+<p>Será una columna de agrupación.</p>
+<p>Se recupera del SGE, a través de <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0010-sge-integracion-con-sistema-de-gestion-economica/req-int-0010-sge-0136-buscar-justificantes-y-facturas-personal-contratado">REQ-INT-0010-SGE-0136 - Buscar justificantes y facturas - Personal contratado</a></p></th>
+</tr>
+<tr class="odd">
+<th class="confluenceTd" style="width: 11.1111%">Proyecto</th>
+<th class="confluenceTd" style="width: 13.2554%">Texto</th>
+<th class="confluenceTd" style="width: 75.5361%"><p>Título del proyecto. </p>
+<p>Será una columna de agrupación.</p>
+<p>Es una columna recuperada a partir de la información almacenada en el SGI. El mecanismo para recuperar el valor a mostrar dependerá de que la validación de gastos esté o no operativa.</p>
+<p>Si el campo "validación gastos" de la tabla "Configuración toma valor "true":</p>
+<ul>
+<li>Se deberá recuperar el gasto de la tabla "gasto proyecto" (modelo lógico de "validación de gastos"), a partir del campo "gasto ref". Para el proyecto referenciado  por el campo "proyecto id" se recuperará el campo "título" en la tabla "proyecto".</li>
+<li>Si el gasto no existe en la tabla "gasto proyecto" se mostrará en la columna "proyecto" la cadena "Sin clasificar"</li>
+</ul>
+<p><br />
+</p>
+<p>Si el campo "validación gastos" de la tabla "Configuración toma valor "false":<span> </span>Se debe buscar la correspondencia entre el código económico del gasto recogido del SGE (<a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0010-sge-integracion-con-sistema-de-gestion-economica/req-int-0010-sge-0136-buscar-justificantes-y-facturas-personal-contratado">REQ-INT-0010-SGE-0136 - Buscar justificantes y facturas - Personal contratado</a>) y la configuración de Elegibilidad del proyecto (SGI), teniendo en cuenta la fecha del gasto (fecha devengo) recuperada del SGE (<a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0010-sge-integracion-con-sistema-de-gestion-economica/req-int-0010-sge-0136-buscar-justificantes-y-facturas-personal-contratado">REQ-INT-0010-SGE-0136 - Buscar justificantes y facturas - Personal contratado</a>):</p>
+<ul>
+<li>Se deben obtener los proyectos SGI vinculados al proyectos SGE, para ello se deberán recuperar de la tabla "proyecto proyecto SGE" todos los proyectos SGI (campo "proyecto") relacionados con el proyecto SGE (campo "proyecto SGE ref") cuyo detalle se está consultando en esta ventana.</li>
+<li>Para todos los proyectos SGI recuperados:
+<ul>
+<li>Se buscará en la tabla  "proyecto concepto gasto código económico" los registros que cumplan:
+<ul>
+<li>que el campo "código económico ref" se corresponda con el código económico del gasto mostrado</li>
+<li>que la "fecha de devengo" del gasto mostrado esté comprendida en el rango establecido por los campo "fecha inicio" (mayor o igual)  y "fecha fin" (menor o igual) de la tabla "proyecto concepto gasto código económico". Si el campo "fecha inicio" está informado y el campo "fecha fin" no está informado solo se deberá cumplir que la "fecha de devengo" sea mayor o igual que la "fecha de inicio". Si tanto "fecha de inicio" como "fecha de fin" no están informados se considerará que se cumple la condición (es decir, se considera que el código económico está vigente)</li>
+<li>Se obtendrá el concepto de gasto correspondiente a través del campo "proyecto concepto gasto" de la tabla "proyecto concepto gasto código económico" que cumpla:
+<ul>
+<li>Si los campos "fecha inicio" y "fecha fin" de la tabla "proyecto concepto gasto" están informados, la "fecha devengo" debe quedar dentro del rango establecido por "fecha inicio" (mayor o igual) y "fecha fin" (menor o igual).</li>
+<li>Si el campo "fecha inicio" está informado y el campo "fecha fin" no está informado solo se deberá cumplir que la "fecha de devengo" sea mayor o igual que la "fecha de inicio".</li>
+<li>Si tanto "fecha de inicio" como "fecha de fin" no están informados se considerará que se cumple la condición </li>
+</ul></li>
+</ul></li>
+<li>Si existe más de un concepto de gasto dentro de un único proyecto SGI o teniendo en cuenta todos los proyectos SGI relacionados con el proyecto SGE, se mostrará en la pantalla, bajo la columna "proyecto", la etiqueta "Sin clasificar".</li>
+<li>Si no existe ningún concepto de gasto para ninguno de los proyectos SGI relacionados se mostrará en la pantalla, bajo la columna "proyecto", la etiqueta "Sin clasificar".</li>
+<li>Si existe un único concepto de gasto que cumpla las condiciones:
+<ul>
+<li>Se recuperará el campo "título" de la tabla "proyecto" para la referencia establecida por el campo "proyecto" de la tabla "proyecto concepto gasto"</li>
+</ul></li>
+</ul></li>
+</ul></th>
+</tr>
+<tr class="even">
+<th class="confluenceTd" style="width: 11.1111%">Concepto de gasto</th>
+<th class="confluenceTd" style="width: 13.2554%">Texto corto</th>
+<th class="confluenceTd" style="width: 75.5361%"><p>Concepto de gasto asociado al gasto.</p>
+<p>Será una columna de agrupación.</p>
+<p>Es una columna recuperada a partir de la información almacenada en el SGI. El mecanismo para recuperar el valor a mostrar dependerá de que la validación de gastos esté o no operativa.</p>
+<p>Si el campo "validación gastos" de la tabla "Configuración toma valor "true":</p>
+<ul>
+<li>Se deberá recuperar el concepto de gasto de la tabla "gasto proyecto" (modelo lógico de "validación de gastos"), a partir del campo "gasto ref". Se mostrará el campo "nombre" de la tabla "concepto gasto" a partir de la referencia establecida por el campo "concepto gasto" de la tabla "gasto proyecto".</li>
+<li>Si el gasto no existe en la tabla "gasto proyecto" se mostrará en la columna "concepto gasto" la cadena "Sin clasificar".</li>
+</ul>
+<p><br />
+</p>
+<p>Si el campo "validación gastos" de la tabla "Configuración toma valor "false": <span style="letter-spacing: 0.0px;">Se debe buscar la correspondencia entre el código económico del gasto recogido del SGE (</span><a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0010-sge-integracion-con-sistema-de-gestion-economica/req-int-0010-sge-0136-buscar-justificantes-y-facturas-personal-contratado">REQ-INT-0010-SGE-0136 - Buscar justificantes y facturas - Personal contratado</a><span style="letter-spacing: 0.0px;">) y la configuración de Elegibilidad del proyecto (SGI), teniendo en cuenta la fecha del gasto (fecha devengo) recuperada del SGE (</span><a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0010-sge-integracion-con-sistema-de-gestion-economica/req-int-0010-sge-0136-buscar-justificantes-y-facturas-personal-contratado">REQ-INT-0010-SGE-0136 - Buscar justificantes y facturas - Personal contratado</a><span style="letter-spacing: 0.0px;">):</span></p>
+<ul>
+<li>Se deben obtener los proyectos SGI vinculados al proyectos SGE, para ello se deberán recuperar de la tabla "proyecto proyecto SGE" todos los proyectos SGI (campo "proyecto") relacionados con el proyecto SGE (campo "proyecto SGE ref") cuyo detalle se está consultando en esta ventana.</li>
+<li>Para todos los proyectos SGI recuperados:
+<ul>
+<li>Se buscará en la tabla  "proyecto concepto gasto código económico" los registros que cumplan:
+<ul>
+<li>que el campo "código económico ref" se corresponda con el código económico del gasto mostrado</li>
+<li>que la "fecha de devengo" del gasto mostrado esté comprendida en el rango establecido por los campo "fecha inicio" (mayor o igual)  y "fecha fin" (menor o igual) de la tabla "proyecto concepto gasto código económico". Si el campo "fecha inicio" está informado y el campo "fecha fin" no está informado solo se deberá cumplir que la "fecha de devengo" sea mayor o igual que la "fecha de inicio". Si tanto "fecha de inicio" como "fecha de fin" no están informados se considerará que se cumple la condición (es decir, se considera que el código económico está vigente)</li>
+<li>Se obtendrá el concepto de gasto correspondiente a través del campo "proyecto concepto gasto" de la tabla "proyecto concepto gasto código económico" que cumpla:
+<ul>
+<li>Si los campos "fecha inicio" y "fecha fin" de la tabla "proyecto concepto gasto" están informados, la "fecha devengo" debe quedar dentro del rango establecido por "fecha inicio" (mayor o igual) y "fecha fin" (menor o igual).</li>
+<li>Si el campo "fecha inicio" está informado y el campo "fecha fin" no está informado solo se deberá cumplir que la "fecha de devengo" sea mayor o igual que la "fecha de inicio".</li>
+<li>Si tanto "fecha de inicio" como "fecha de fin" no están informados se considerará que se cumple la condición </li>
+</ul></li>
+</ul></li>
+<li>Si existe más de un concepto de gasto dentro de un único proyecto SGI o teniendo en cuenta todos los proyectos SGI relacionados con el proyecto SGE, se mostrará en la pantalla bajo la columna "concepto de gasto" la etiqueta "Sin clasificar".</li>
+<li>Si no existe ningún concepto de gasto para ninguno de los proyectos SGI relacionados se mostrará en la pantalla bajo la columna "concepto de gasto" la etiqueta "Sin clasificar".</li>
+<li>Si existe un único concepto de gasto que cumpla las condiciones:
+<ul>
+<li>Se recuperará su nombre en la tabla "concepto gasto" a partir el campo "concepto gasto" de la tabla "proyecto concepto gasto" mostrándolo bajo la columna "concepto de gasto"</li>
+<li>Si el campo "permitido" de la tabla "concepto gasto" es false se mostrará un icono de advertencia (rojo) a la izquierda del nombre del concepto de gasto con un tooltip con el texto "Concepto de gasto no permitido de acuerdo a la configuración de Elegibilidad del proyecto".</li>
+</ul></li>
+</ul></li>
+</ul></th>
+</tr>
+<tr class="odd">
+<th class="confluenceTd">Clasificación SGE</th>
+<th class="confluenceTd">Texto corto</th>
+<th class="confluenceTd"><p>Clasificación el gasto de acuerdo al SGE. Dato recuperado a partir de <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0010-sge-integracion-con-sistema-de-gestion-economica/req-int-0010-sge-0136-buscar-justificantes-y-facturas-personal-contratado">REQ-INT-0010-SGE-0136 - Buscar justificantes y facturas - Personal contratado</a></p>
+<p>Será una columna de agrupación</p></th>
+</tr>
+<tr class="even">
+<th class="confluenceTd" style="width: 11.1111%">Aplicación presupuestaria</th>
+<th class="confluenceTd" style="width: 13.2554%">Texto corto</th>
+<th class="confluenceTd" style="width: 75.5361%">Aplicación presupuestaria asociado al gasto. Se recupera del SGE(<a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0010-sge-integracion-con-sistema-de-gestion-economica/req-int-0010-sge-0136-buscar-justificantes-y-facturas-personal-contratado">REQ-INT-0010-SGE-0136 - Buscar justificantes y facturas - Personal contratado</a>) .</th>
+</tr>
+<tr class="odd">
+<th class="confluenceTd" style="width: 11.1111%">Código económico</th>
+<th class="confluenceTd" style="width: 13.2554%">Texto corto</th>
+<th class="confluenceTd" style="width: 75.5361%">Código económico asociado al gasto. Se recupera del SGE <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0010-sge-integracion-con-sistema-de-gestion-economica/req-int-0010-sge-0136-buscar-justificantes-y-facturas-personal-contratado">REQ-INT-0010-SGE-0136 - Buscar justificantes y facturas - Personal contratado</a>. Se mostrará la concatenación de los campos identificador (referencia) y nombre del código económico recuperados desde el SGE.</th>
+</tr>
+<tr class="even">
+<th class="confluenceTd">Fecha devengo</th>
+<th class="confluenceTd">Fecha</th>
+<th class="confluenceTd">Fecha de devengo del gasto.  Se recupera del SGE a través de <a href="https://confluence.um.es/confluence/display/HERCULES/REQ-INT-0010-SGE-0134+-+Buscar++justificantes+y+facturas+-+Facturas+y+gastos" rel="nofollow">REQ-INT-0010-SGE-0134 - Buscar justificantes y facturas - Facturas y gastos</a>.</th>
+</tr>
+<tr class="odd">
+<th class="confluenceTd" style="width: 11.1111%">Columna X</th>
+<th class="confluenceTd" style="width: 13.2554%">Texto corto</th>
+<th class="confluenceTd" style="width: 75.5361%"><p>Columnas configuradas en la implantación de acuerdo a lo devuelto por la integración con el sistema de gestión económico. Se recuperan del SGE <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0010-sge-integracion-con-sistema-de-gestion-economica/req-int-0010-sge-0136-buscar-justificantes-y-facturas-personal-contratado">REQ-INT-0010-SGE-0136 - Buscar justificantes y facturas - Personal contratado</a></p>
+<p>Ejemplos de ellas serían (vista reducida):</p>
+<ul>
+<li>Nº documento identificación (de la persona contratada)</li>
+<li>Nombre y apellidos (del contratado)</li>
+<li>Concepto (seguridad social o retribuciones)</li>
+<li>Fecha pago</li>
+<li>Importe</li>
+</ul></th>
+</tr>
+<tr class="even">
+<th class="confluenceTd" style="width: 11.1111%">Detalle</th>
+<th class="confluenceTd" style="width: 13.2554%">Icono de acción</th>
+<th class="confluenceTd" style="width: 75.5361%">Acción "Ver detalle"</th>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="table-wrap">
+
+<table class="wrapped relative-table confluenceTable" style="width: 79.0234%;">
+<colgroup>
+<col style="width: 6%" />
+<col style="width: 22%" />
+<col style="width: 47%" />
+<col style="width: 23%" />
+</colgroup>
+<tbody>
+<tr class="header">
+<th class="confluenceTh">Acciones</th>
+<th class="confluenceTh">Descripción</th>
+<th class="confluenceTh"> Enlace CU.</th>
+<th class="confluenceTh">Permisos</th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd">Ver detalle</td>
+<td class="confluenceTd">Invocación al SGE para mostrar el detalle del gasto</td>
+<td class="confluenceTd"><p>Se muestra la pantalla <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-interfaz-de-usuario/iu-csp-0500-ejecucion-economica/iu-csp-0540-facturas-y-justificantes/iu-csp-0540-003-facturas-y-justificantes-personal-contratado/iu-csp-0540-003-001-facturas-y-justificantes-personal-contratado-detalle">IU-CSP-0540-003-001 - Facturas y justificantes - Personal contratado - Detalle</a> cargando el detalle recuperado a partir de la integración con el SGE pasando el identificador del gasto/factura</p></td>
+<td class="confluenceTd"><p>CSP-EJEC-E</p>
+<p>CSP-EJEC-E_UO</p>
+<p>CSP-EJEC-V</p>
+<p>CSP-EJEC-V_UO</p>
+<p>CSP-EJEC-INV-VR</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">Mostrar</td>
+<td class="confluenceTd">Invocación al SGE para cargar el listado de gastos</td>
+<td class="confluenceTd"><p>Carga la tabla de detalle recuperado a partir de la integración con el SGE pasando el identificador SGE y la/s anualidad/es indicadas en "anualidades seleccionadas", y los rangos de fechas.</p>
+<p>Se obtiene del SGE a través de <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0010-sge-integracion-con-sistema-de-gestion-economica/req-int-0010-sge-0136-buscar-justificantes-y-facturas-personal-contratado">REQ-INT-0010-SGE-0136 - Buscar justificantes y facturas - Personal contratado</a></p></td>
+<td class="confluenceTd"><p>CSP-EJEC-E</p>
+<p>CSP-EJEC-E_UO</p>
+<p>CSP-EJEC-V</p>
+<p>CSP-EJEC-V_UO</p>
+<p>CSP-EJEC-INV-VR</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">+-</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">Exportar</td>
+<td class="confluenceTd">Exporta la información mostrada en la tabla de gastos asociados a las nóminas de personal del proyecto</td>
+<td class="confluenceTd"><p>Se mostrará el formulario <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-interfaz-de-usuario/iu-csp-0500-ejecucion-economica/iu-csp-0501-005-exportacion-listados-ejecucion-economica">IU-CSP-0501-005 - Exportación listados ejecución económica</a> que generará el informe de exportación correspondiente de acuerdo al formato seleccionado:</p>
+<ul>
+<li>XSLX: <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0150-sgrep-integracion-con-sistema-de-generacion-de-reportes/csp-informes-predefinidos/rep-csp-0082-exportacion-facturas-y-justificantes-personal-contratado-formato-xlsx">REP-CSP-0082 - Exportación Facturas y justificantes - Personal contratado - Formato xlsx</a></li>
+<li>CSV: <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0150-sgrep-integracion-con-sistema-de-generacion-de-reportes/csp-informes-predefinidos/rep-csp-0083-exportacion-facturas-y-justificantes-personal-contratado-formato-csv">REP-CSP-0083 - Exportación Facturas y justificantes - Personal contratado - Formato csv</a></li>
+</ul>
+<p><br />
+</p></td>
+<td class="confluenceTd"><p>CSP-EJEC-E</p>
+<p>CSP-EJEC-E_UO</p>
+<p>CSP-EJEC-V</p>
+<p>CSP-EJEC-V_UO</p>
+<p>CSP-EJEC-INV-VR</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+## Permisos de acceso a la pantalla
+
+### Por actor
+
+<div class="plugin-tabmeta-details">
+
+<div class="table-wrap">
+
+<table class="wrapped relative-table confluenceTable" style="width: 74.2762%;">
+<colgroup>
+<col style="width: 17%" />
+<col style="width: 44%" />
+<col style="width: 37%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<th class="confluenceTh"><p>ACT-CSP-003-Gestor</p></th>
+<td class="confluenceTd">CSP-EJEC-E, CSP-EJEC-E_UO</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<th class="highlight-grey confluenceTd" data-highlight-colour="grey" title="Background colour : Grey"><p><strong>ACT-CSP-004-Administrador</strong></p></th>
+<td class="confluenceTd">CSP-EJEC-E, CSP-EJEC-E_UO</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<th class="highlight-grey confluenceTd" data-highlight-colour="grey" title="Background colour : Grey"><strong>ACT-CSP-005-Visor</strong></th>
+<td class="confluenceTd">CSP-EJEC-V, CSP-EJEC-V_UO</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<th class="highlight-grey confluenceTd" data-highlight-colour="grey" title="Background colour : Grey"><strong>ACT-CSP-001-Investigador</strong></th>
+<td class="confluenceTd">CSP-EJEC-INV-VR</td>
+<td class="confluenceTd">Ver documentación en <a href="https://confluence.um.es/confluence/pages/viewpage.action?pageId=108593237" rel="nofollow">CU-CSP-1200-007 - Ver ejecución económica - Investigador (rol principal)</a> y <a href="https://confluence.um.es/confluence/pages/viewpage.action?pageId=108593251" rel="nofollow">CU-CSP-1200-008 - Ver ejecución económica - Investigador (rol responsable económico)</a></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+### Todos los permisos de acceso
+
+<div class="plugin-tabmeta-details">
+
+<div class="table-wrap">
+
+|          |                                                                       |
+|----------|-----------------------------------------------------------------------|
+| Permisos | CSP-EJEC-E, CSP-EJEC-E_UO, CSP-EJEC-V, CSP-EJEC-V_UO, CSP-EJEC-INV-VR |
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="pageSection group">
+
+<div class="pageSectionHeader">
+
+## Attachments:
+
+</div>
+
+<div class="greybox" align="left">
+
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [7110ejecucionecgastosjustifgastosnominas.png](/attachments/597853657/597869494.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [7110ejecucionecgastosjustifgastosnominas.png](/attachments/597853657/597869934.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [7110ejecucionecgastosjustifgastosnominas.png](/attachments/597853657/597866490.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [7110ejecucionecgastosjustifgastosnominas.png](/attachments/597853657/597858610.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [7110ejecucionecgastosjustifgastosnominas.png](/attachments/597853657/597858605.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [7110ejecucionecgastosjustifgastosnominas.png](/attachments/597853657/597859981.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [71_10_EjecucionEc_GastosJustif_Gastos_Nominas.png](/attachments/597853657/597868463.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [7110ejecucionecgastosjustifgastosnominas.png](/attachments/597853657/597867105.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [71_10_EjecucionEc_GastosJustif_Gastos_Nominas.png](/attachments/597853657/597876748.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [71_10_EjecucionEc_GastosJustif_Gastos_Nominas.png](/attachments/597853657/597884755.png) (image/png)  
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div id="footer" role="contentinfo">
+
+<div class="section footer-body">
+
+Document generated by Confluence on oct 27, 2025 08:43
+
+<div id="footer-logo">
+
+[Atlassian](https://www.atlassian.com/)
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 
 

@@ -796,7 +796,157 @@
 
   <h1>Index</h1>
 
+<div id="page">
 
+<div id="main" class="aui-page-panel">
+
+<div id="main-header">
+
+<div id="breadcrumb-section">
+
+1.  [Hércules](index.html)
+2.  [Hércules](/)
+3.  [SGI. Sistema de gestión de investigación](//sgi-sistema-de-gestion-de-investigacion)
+4.  [Diseño](//sgi-sistema-de-gestion-de-investigacion/diseno)
+5.  [Componentes](//sgi-sistema-de-gestion-de-investigacion/diseno/componentes)
+6.  [SGI - ESB](//sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb)
+7.  [SGI - ESB - SGE](//sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sge)
+8.  [SGI - ESB - SGE - Proyecto SGE y presupuesto](//sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sge/sgi-esb-sge-proyecto-sge-y-presupuesto)
+
+</div>
+
+# <span id="title-text"> Hércules : SGI - ESB - SGE - Proyecto SGE y presupuesto - Servicios básicos </span>
+
+</div>
+
+<div id="content" class="view">
+
+<div class="page-metadata">
+
+Created by <span class="author"> Usuario desconocido (alicia.alvarez)</span>, last updated on jun 22, 2022
+
+</div>
+
+<div id="main-content" class="wiki-content group">
+
+#### Métodos imprescindibles para el funcionamiento de proyectos SGE y presupuestos
+
+------------------------------------------------------------------------
+
+<div class="table-wrap">
+
+<table class="aui metadata-summary-macro null" style="width:100%;" data-cql="label = &quot;servicios&quot; and space = currentSpace() and ancestor = currentContent()" data-details-space-key="HERCULES" data-details-content-id="597853026" data-headings="Método, URL, Parámetros, Respuesta, Descripción" data-first-column-heading="Servicio" data-count-comments="false" data-count-likes="false" data-total-pages="1" data-page-size="1000" data-sort-by="null" data-reverse-sort="false" data-blueprint-present="false">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th class="sorter-text">Servicio</th>
+<th>Método</th>
+<th>URL</th>
+<th>Parámetros</th>
+<th>Respuesta</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td class="title" data-content-id="597852977"><a href="/confluence/spaces/HERCULES/pages/597852977/SGI+-+ESB+-+SGE+-+Proyecto+SGE+y+presupuesto+-+Buscar+proyectos">SGI - ESB - SGE - Proyecto SGE y presupuesto - Buscar proyectos</a></td>
+<td>GET</td>
+<td>/proyectos</td>
+<td><p>q+s (query + sort)</p>
+<p>La query estará formada por:</p>
+<ul>
+<li>id</li>
+<li>titulo</li>
+<li>fechaInicio</li>
+<li>fechaFin</li>
+</ul></td>
+<td>Lista[<a href="https://confluence.um.es/confluence/display/HERCULES/SGI+-+ESB+-+SGE+-+Proyecto+SGE+y+presupuesto#SGIESBSGEProyectoSGEypresupuesto-Proyecto" rel="nofollow">Proyecto</a>]</td>
+<td><p>Búsqueda de proyectos económicos, se puede buscar por el identificador del proyecto económico, por el título (o parte del título), entre un rango de fechas en las que se incluye la fecha de inicio o entre un rango de fechas entras lasque se incluye la fecha de fin del proyecto. Devuelve un listado de Proyectos económicos que cumplen los criterios de búsqueda.</p>
+<p>Los parámetros q y s están explicados en:</p>
+<ul>
+<li><a href="https://confluence.um.es/confluence/display/HERCULES/Consultas+filtradas+y+paginadas" rel="nofollow">Consultas filtradas y paginadas</a></li>
+</ul></td>
+</tr>
+<tr class="even">
+<td class="title" data-content-id="597852969"><a href="/confluence/spaces/HERCULES/pages/597852969/SGI+-+ESB+-+SGE+-+Proyecto+SGE+y+presupuesto+-+Consultar+detalle+de+c%C3%B3digo+econ%C3%B3mico+de+ingreso">SGI - ESB - SGE - Proyecto SGE y presupuesto - Consultar detalle de código económico de ingreso</a></td>
+<td>GET</td>
+<td>/codigos-economicos-ingresos/{id}</td>
+<td><p><br />
+</p></td>
+<td><p><span><a href="https://confluence.um.es/confluence/display/HERCULES/SGI+-+ESB+-+SGE+-+Proyecto+SGE+y+presupuesto#SGIESBSGEProyectoSGEypresupuesto-CodigoEconomicoIngreso" rel="nofollow">CodigoEconomicoIngreso</a></span></p></td>
+<td><p>Detalle de un código económico de tipo ingreso.</p></td>
+</tr>
+<tr class="odd">
+<td class="title" data-content-id="597852966"><a href="/confluence/spaces/HERCULES/pages/597852966/SGI+-+ESB+-+SGE+-+Proyecto+SGE+y+presupuesto+-+Listar+c%C3%B3digos+econ%C3%B3micos+de+gastos">SGI - ESB - SGE - Proyecto SGE y presupuesto - Listar códigos económicos de gastos</a></td>
+<td>GET</td>
+<td>/codigos-economicos-gastos</td>
+<td><p><br />
+</p></td>
+<td><p>Lista[<a href="https://confluence.um.es/confluence/display/HERCULES/SGI+-+ESB+-+SGE+-+Proyecto+SGE+y+presupuesto#SGIESBSGEProyectoSGEypresupuesto-CodigoEconomicoGasto" rel="nofollow">CodigoEconomicoGasto</a>]</p></td>
+<td><p>Listado de códigos económicos de tipo gasto.</p></td>
+</tr>
+<tr class="even">
+<td class="title" data-content-id="597852968"><a href="/confluence/spaces/HERCULES/pages/597852968/SGI+-+ESB+-+SGE+-+Proyecto+SGE+y+presupuesto+-+Listar+c%C3%B3digos+econ%C3%B3micos+de+ingresos">SGI - ESB - SGE - Proyecto SGE y presupuesto - Listar códigos económicos de ingresos</a></td>
+<td>GET</td>
+<td>/codigos-economicos-ingresos</td>
+<td><p><br />
+</p></td>
+<td><p><span>Lista[<a href="https://confluence.um.es/confluence/display/HERCULES/SGI+-+ESB+-+SGE+-+Proyecto+SGE+y+presupuesto#SGIESBSGEProyectoSGEypresupuesto-CodigoEconomicoIngreso" rel="nofollow">CodigoEconomicoIngreso</a>]</span></p></td>
+<td><p>Listado de códigos económicos de tipo ingreso.</p></td>
+</tr>
+<tr class="odd">
+<td class="title" data-content-id="597852967"><a href="/confluence/spaces/HERCULES/pages/597852967/SGI+-+ESB+-+SGE+-+Proyecto+SGE+y+presupuesto+-+Consultar+detalle+de+c%C3%B3digo+econ%C3%B3mico+de+gasto">SGI - ESB - SGE - Proyecto SGE y presupuesto - Consultar detalle de código económico de gasto</a></td>
+<td>GET</td>
+<td>/codigos-economicos-gastos/{id}</td>
+<td><p><br />
+</p></td>
+<td><p><span><a href="https://confluence.um.es/confluence/display/HERCULES/SGI+-+ESB+-+SGE+-+Proyecto+SGE+y+presupuesto#SGIESBSGEProyectoSGEypresupuesto-CodigoEconomicoGasto" rel="nofollow">CodigoEconomicoGasto</a></span></p></td>
+<td><p>Detalle de un código económico de tipo gasto.</p></td>
+</tr>
+<tr class="even">
+<td class="title" data-content-id="597852978"><a href="/confluence/spaces/HERCULES/pages/597852978/SGI+-+ESB+-+SGE+-+Proyecto+SGE+y+presupuesto+-+Consultar+detalle+de+proyecto">SGI - ESB - SGE - Proyecto SGE y presupuesto - Consultar detalle de proyecto</a></td>
+<td>GET</td>
+<td>/proyectos/{id}</td>
+<td><p><br />
+</p></td>
+<td><a href="https://confluence.um.es/confluence/display/HERCULES/SGI+-+ESB+-+SGE+-+Proyecto+SGE+y+presupuesto#SGIESBSGEProyectoSGEypresupuesto-Proyecto" rel="nofollow">Proyecto</a></td>
+<td><p>Detalle de los datos generales de un proyecto económico.</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div id="footer" role="contentinfo">
+
+<div class="section footer-body">
+
+Document generated by Confluence on oct 27, 2025 08:52
+
+<div id="footer-logo">
+
+[Atlassian](https://www.atlassian.com/)
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 
 

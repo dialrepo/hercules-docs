@@ -796,7 +796,1218 @@
 
   <h1>Proteccion industrial e intelectual patentes</h1>
 
+<div id="page">
 
+<div id="main" class="aui-page-panel">
+
+<div id="main-header">
+
+<div id="breadcrumb-section">
+
+1.  [Hércules](index.html)
+2.  [Hércules](/)
+3.  [APIs de Integración](//apis-de-integracion)
+4.  [SGI: Servicios propios que expone](//apis-de-integracion/sgi-servicios-propios-que-expone)
+
+</div>
+
+# <span id="title-text"> Hércules : Protección Industrial e Intelectual (Patentes) </span>
+
+</div>
+
+<div id="content" class="view">
+
+<div class="page-metadata">
+
+Created by <span class="author"> Isabel Martinez Hernandez</span>, last updated by <span class="editor"> Usuario genérico para HERCULES</span> on nov 13, 2024
+
+</div>
+
+<div id="main-content" class="wiki-content group">
+
+<div class="toc-macro rbtoc1761553428483">
+
+- [Sistema de Gestión Investigación](#ProtecciónIndustrialeIntelectual(Patentes)-SistemadeGestiónInvestigación)
+  - [Entidades](#ProtecciónIndustrialeIntelectual(Patentes)-Entidades)
+  - [Enumerados](#ProtecciónIndustrialeIntelectual(Patentes)-Enumerados)
+  - [Modelo lógico](#ProtecciónIndustrialeIntelectual(Patentes)-Modelológico)
+    - [Definición de los objetos](#ProtecciónIndustrialeIntelectual(Patentes)-Definicióndelosobjetos)
+      - [Invencion](#ProtecciónIndustrialeIntelectual(Patentes)-Invencion)
+      - [TipoProteccion](#ProtecciónIndustrialeIntelectual(Patentes)-TipoProteccion)
+      - [SectorAplicacion](#ProtecciónIndustrialeIntelectual(Patentes)-SectorAplicacion)
+      - [AreaConocimiento](#ProtecciónIndustrialeIntelectual(Patentes)-AreaConocimiento)
+      - [PalabraClave](#ProtecciónIndustrialeIntelectual(Patentes)-PalabraClave)
+      - [Inventor](#ProtecciónIndustrialeIntelectual(Patentes)-Inventor)
+      - [PeriodoTitularidad](#ProtecciónIndustrialeIntelectual(Patentes)-PeriodoTitularidad)
+      - [Titular](#ProtecciónIndustrialeIntelectual(Patentes)-Titular)
+      - [ViaProteccion](#ProtecciónIndustrialeIntelectual(Patentes)-ViaProteccion)
+      - [SolicitudProteccion](#ProtecciónIndustrialeIntelectual(Patentes)-SolicitudProteccion)
+    - [Servicios](#ProtecciónIndustrialeIntelectual(Patentes)-Servicios)
+
+</div>
+
+# Sistema de Gestión Investigación
+
+## Entidades
+
+<div class="table-wrap">
+
+|                     |                                                                                                                                                                            |
+|---------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Entidad             | Descripción                                                                                                                                                                |
+| Invencion           | Entidad que representa a la invención cara a poder ser presentada en listas de valores con su título.                                                                      |
+| TipoProteccion      | Entidad que representa a uno de los posibles tipos de protección con los que se puede proteger una invención.                                                              |
+| SectorAplicacion    | Entidad que representa a uno de los sectores de aplicación que se pueden asociar a una invención o para el que se puede licenciar a través de una solicitud de protección. |
+| AreaConocimiento    | Entidad que representa a una de las áreas de conocimiento (áreas temáticas cara al usuario funcional) que se pueden asociar a una invención.                               |
+| PalabraClave        | Entidad que representa cada una de las relaciones entre una palabra clave y una invención.                                                                                 |
+| Inventor            | Entidad que representa a uno de los miembros del equipo inventor de una invención.                                                                                         |
+| PeriodoTitularidad  | Entidad que representa a uno de los periodos de titularidad asociados a una invención.                                                                                     |
+| Titular             | Entidad que representa a uno de los titulares asociados a una invención.                                                                                                   |
+| ViaProteccion       | Entidad que representa a una de las posibles vías de protección que estarán asociadas las solicitudes de protección.                                                       |
+| SolicitudProteccion | Entidad que representa a una solicitud de protección que estará asociada a una invención.                                                                                  |
+
+</div>
+
+## Enumerados
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable" style="width: 100.0%;">
+<colgroup>
+<col style="width: 8%" />
+<col style="width: 91%" />
+</colgroup>
+<tbody>
+<tr class="header">
+<th class="confluenceTh">Entidad</th>
+<th class="confluenceTh">Descripción</th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd">TipoPropiedad</td>
+<td class="confluenceTd"><p>Puede tomar los siguientes valores:</p>
+<ul>
+<li>INDUSTRIAL (Propiedad industrial)</li>
+<li>INTELECTUAL (Propiedad intelectual)</li>
+</ul></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+## Modelo lógico
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/598147614/598148968.png" class="confluence-embedded-image" draggable="false" data-image-src="attachments/598147614/598148968.png" data-unresolved-comment-count="0" data-linked-resource-id="598148968" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="SGI PII Logical Model (1).png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="598147614" data-linked-resource-container-version="13" tabindex="0" height="400" /></span>
+
+
+
+### Definición de los objetos
+
+#### Invencion
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable" style="width: 86.3239%;">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 7%" />
+<col style="width: 81%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td class="highlight-grey confluenceTd" data-highlight-colour="grey"><strong>Nombre</strong></td>
+<td class="highlight-grey confluenceTd" data-highlight-colour="grey"><strong>Tipo</strong></td>
+<td class="highlight-grey confluenceTd" data-highlight-colour="grey"><strong>Descripción</strong></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">id</td>
+<td class="confluenceTd">String</td>
+<td class="confluenceTd">Identificador único de la invención.</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">titulo</td>
+<td class="confluenceTd">String</td>
+<td class="confluenceTd"><p>Título de la invención.</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">fechaComunicacion</td>
+<td class="confluenceTd">Fecha + hora</td>
+<td class="confluenceTd"><p>Fecha de comunicación de la invención.</p>
+<p>Formato UTC.</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">descripcion</td>
+<td class="confluenceTd">String</td>
+<td class="confluenceTd">Descripción de la invención.</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">tipoProteccion</td>
+<td class="confluenceTd">TipoProteccion</td>
+<td class="confluenceTd"><p>Tipo de protección de la invención.</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">proyectoRef</td>
+<td class="confluenceTd"><p>Texto</p></td>
+<td class="confluenceTd"><p>Identificador de proyecto de investigación del SGI asociado a la invención.</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">comentarios</td>
+<td class="confluenceTd">Texto largo</td>
+<td class="confluenceTd">Comentarios a añadir acerca de la invención.</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">activo</td>
+<td class="confluenceTd">Boolean</td>
+<td class="confluenceTd">Indicador de si la invención está activa o no en el SGI.</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="code panel pdl" style="border-width: 1px;">
+
+<div class="codeHeader panelHeader pdl hide-border-bottom" style="border-bottom-width: 1px;">
+
+**Invencion**<span class="collapse-source expand-control" style="display:none;"><span class="expand-control-icon icon"> </span><span class="expand-control-text">Ampliar origen</span></span><span class="collapse-spinner-wrapper"></span>
+
+</div>
+
+<div class="codeContent panelContent pdl hide-toolbar">
+
+
+<pre><code class="language-syntaxhighlighter-pre">{
+    &quot;id&quot;: 114,
+    &quot;titulo&quot;: &quot;Patente de un sistema de captura de insectos&quot;,
+    &quot;fechaComunicacion&quot;: &quot;2022-03-09T23:00:00Z&quot;,
+    &quot;descripcion&quot;: &quot;Un ejemplo&quot;,
+    &quot;comentarios&quot;: &quot;comentarios&quot;,
+    &quot;proyectoRef&quot;: null,
+    &quot;tipoProteccion&quot;: {
+        &quot;id&quot;: 1,
+        &quot;nombre&quot;: &quot;Patente&quot;,
+        &quot;padre&quot;: null,
+        &quot;tipoPropiedad&quot;: &quot;INDUSTRIAL&quot;
+    },
+    &quot;activo&quot;: true
+}
+</code></pre>
+
+
+</div>
+
+</div>
+
+#### TipoProteccion
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable" style="width: 86.3239%;">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 7%" />
+<col style="width: 81%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td class="highlight-grey confluenceTd" data-highlight-colour="grey"><strong>Nombre</strong></td>
+<td class="highlight-grey confluenceTd" data-highlight-colour="grey"><strong>Tipo</strong></td>
+<td class="highlight-grey confluenceTd" data-highlight-colour="grey"><strong>Descripción</strong></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">id</td>
+<td class="confluenceTd">Long</td>
+<td class="confluenceTd">Identificador único del tipo de protección.</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">nombre</td>
+<td class="confluenceTd">String</td>
+<td class="confluenceTd"><p>Nombre del tipo de protección.</p>
+<p>Puede tomar uno de los siguientes valores que van predefinidos en el SGI, si bien pueden variar al ser configurables:</p>
+<ul>
+<li><ul>
+<li><span style="color:var(--ds-text,#172b4d);">Patente</span></li>
+<li><span style="color:var(--ds-text,#172b4d);">Modelo de utilidad</span></li>
+<li><span style="color:var(--ds-text,#172b4d);">Diseño industrial</span></li>
+<li><span style="color:var(--ds-text,#172b4d);">Marca</span></li>
+<li><span style="color:var(--ds-text,#172b4d);">Secreto industrial</span></li>
+</ul>
+<ul>
+<li><span style="color:var(--ds-text,#172b4d);">Software</span></li>
+<li><span style="color:var(--ds-text,#172b4d);">Know-how</span></li>
+</ul></li>
+</ul></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">descripcion</td>
+<td class="confluenceTd">String</td>
+<td class="confluenceTd">Descripción del tipo de protección.</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">padreId</td>
+<td class="confluenceTd">Long</td>
+<td class="confluenceTd"><p>Identificador del tipo padre. Estará informado cuando el tipo de protección es un subtipo.</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">tipoPropiedad</td>
+<td class="confluenceTd">String</td>
+<td class="confluenceTd"><p>Tipo de propiedad del tipo de protección.</p>
+<p>Puede tomar uno de los siguientes valores que son fijos en el SGI:</p>
+<ul>
+<li>INDUSTRIAL (Propiedad industrial)</li>
+<li>INTELECTUAL (Propiedad intelectual)</li>
+</ul></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">activo</td>
+<td class="confluenceTd">Boolean</td>
+<td class="confluenceTd">Indicador de si el tipo de protección está activa o no en el SGI.</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="code panel pdl" style="border-width: 1px;">
+
+<div class="codeHeader panelHeader pdl hide-border-bottom" style="border-bottom-width: 1px;">
+
+**TipoProteccion**<span class="collapse-source expand-control" style="display:none;"><span class="expand-control-icon icon"> </span><span class="expand-control-text">Ampliar origen</span></span><span class="collapse-spinner-wrapper"></span>
+
+</div>
+
+<div class="codeContent panelContent pdl hide-toolbar">
+
+
+<pre><code class="language-syntaxhighlighter-pre">{
+    &quot;id&quot;: 1,
+    &quot;nombre&quot;: &quot;Patente&quot;,
+    &quot;descripcion&quot;: &quot;Derecho de impedir temporalmente a otros la fabricación, venta o utilización comercial en España de la invención protegida.&quot;,
+    &quot;padreId&quot;: null,
+    &quot;tipoPropiedad&quot;: &quot;INDUSTRIAL&quot;,
+    &quot;activo&quot;: true
+}
+</code></pre>
+
+
+</div>
+
+</div>
+
+#### SectorAplicacion
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable" style="width: 61.8162%;">
+<colgroup>
+<col style="width: 18%" />
+<col style="width: 16%" />
+<col style="width: 64%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td class="highlight-grey confluenceTd" data-highlight-colour="grey"><strong>Nombre</strong></td>
+<td class="highlight-grey confluenceTd" data-highlight-colour="grey"><strong>Tipo</strong></td>
+<td class="highlight-grey confluenceTd" data-highlight-colour="grey"><strong>Descripción</strong></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">id</td>
+<td class="confluenceTd">Long</td>
+<td class="confluenceTd">Identificador único del sector de aplicación.</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">invencionId</span></td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Long</span></td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Identificador de la invención a la que se asocia el sector de aplicación.</span></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">sectorAplicacion</span></td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">SectorAplicacion</span></td>
+<td class="confluenceTd"><p><span style="color:var(--ds-text,#172b4d);">Sector de aplicación de la invención.<br />
+</span></p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="code panel pdl" style="border-width: 1px;">
+
+<div class="codeHeader panelHeader pdl hide-border-bottom" style="border-bottom-width: 1px;">
+
+**SectorAplicacion**<span class="collapse-source expand-control" style="display:none;"><span class="expand-control-icon icon"> </span><span class="expand-control-text">Ampliar origen</span></span><span class="collapse-spinner-wrapper"></span>
+
+</div>
+
+<div class="codeContent panelContent pdl hide-toolbar">
+
+
+<pre><code class="language-syntaxhighlighter-pre">{
+    &quot;id&quot;: 1,
+    &quot;invencionId&quot;: 111,
+    &quot;sectorAplicacion&quot;: {
+        &quot;id&quot;: 1,
+        &quot;nombre&quot;: &quot;Energía y medio ambiente&quot;,
+        &quot;descripcion&quot;: &quot;Aplicación en energía y medio ambiente&quot;,
+        &quot;activo&quot;: true
+    }
+}
+</code></pre>
+
+
+</div>
+
+</div>
+
+#### AreaConocimiento
+
+<div class="table-wrap">
+
+|                                                                |          |                                                                           |
+|----------------------------------------------------------------|----------|---------------------------------------------------------------------------|
+| **Nombre**                                                     | **Tipo** | **Descripción**                                                           |
+| id                                                             | Long     | Identificador único del área de conocimiento en el SGI.                   |
+| <span style="color:var(--ds-text,#172b4d);">invencionId</span> | Long     | Identificador de la invención a la que se asocia el área de conocimiento. |
+| areaConocimientoRef                                            | String   | Identificador del área de conocimiento en los sistemas de la Universidad. |
+
+</div>
+
+<div class="code panel pdl" style="border-width: 1px;">
+
+<div class="codeHeader panelHeader pdl hide-border-bottom" style="border-bottom-width: 1px;">
+
+**AreaConocimiento**<span class="collapse-source expand-control" style="display:none;"><span class="expand-control-icon icon"> </span><span class="expand-control-text">Ampliar origen</span></span><span class="collapse-spinner-wrapper"></span>
+
+</div>
+
+<div class="codeContent panelContent pdl hide-toolbar">
+
+
+<pre><code class="language-syntaxhighlighter-pre">{
+    &quot;id&quot;: 7,
+    &quot;invencionId&quot;: 1,
+    &quot;areaConocimientoRef&quot;: &quot;123&quot;
+}
+</code></pre>
+
+
+</div>
+
+</div>
+
+#### PalabraClave
+
+<div class="table-wrap">
+
+|                                                                |          |                                                                                                                          |
+|----------------------------------------------------------------|----------|--------------------------------------------------------------------------------------------------------------------------|
+| **Nombre**                                                     | **Tipo** | **Descripción**                                                                                                          |
+| id                                                             | Long     | Identificador único autogenerado de la palabra clave.                                                                    |
+| <span style="color:var(--ds-text,#172b4d);">invencionId</span> | Long     | Identificador de la invención a la que se asocia la palabra clave.                                                       |
+| palabraClaveRef                                                | String   | Referencia a la palabra clave. Coincide con el texto de la palabra clave por ser único en el diccionario de todo el SGI. |
+
+</div>
+
+<div class="code panel pdl" style="border-width: 1px;">
+
+<div class="codeHeader panelHeader pdl hide-border-bottom" style="border-bottom-width: 1px;">
+
+**PalabraClave**<span class="collapse-source expand-control" style="display:none;"><span class="expand-control-icon icon"> </span><span class="expand-control-text">Ampliar origen</span></span><span class="collapse-spinner-wrapper"></span>
+
+</div>
+
+<div class="codeContent panelContent pdl hide-toolbar">
+
+
+<pre><code class="language-syntaxhighlighter-pre">{
+    &quot;id&quot;: 12,   
+    &quot;invencionId&quot;: 1,
+    &quot;palabraClaveRef&quot;: &quot;Tratamiento experimental&quot;
+}
+</code></pre>
+
+
+</div>
+
+</div>
+
+#### Inventor
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable" style="width: 99.5624%;">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 18%" />
+<col style="width: 71%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td class="highlight-grey confluenceTd" data-highlight-colour="grey"><strong>Nombre</strong></td>
+<td class="highlight-grey confluenceTd" data-highlight-colour="grey"><strong>Tipo</strong></td>
+<td class="highlight-grey confluenceTd" data-highlight-colour="grey"><strong>Descripción</strong></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">id</td>
+<td class="confluenceTd">Long</td>
+<td class="confluenceTd">Identificador único del inventor.</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">invencionId</span></td>
+<td class="confluenceTd">Long</td>
+<td class="confluenceTd">Identificador de la invención a la que se asocia el inventor.</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">inventorRef</td>
+<td class="confluenceTd">String</td>
+<td class="confluenceTd">Identificador del inventor en los sistemas de la Universidad.</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">participacion</td>
+<td class="confluenceTd">Numérico decimal</td>
+<td class="confluenceTd"><p>Porcentaje de participación del inventor en la invención.</p>
+<p>Decimal con dos decimales.</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">repartoUniversidad</td>
+<td class="confluenceTd">Booleano</td>
+<td class="confluenceTd"><p>Indicador de si al miembro del equipo inventor se le hará el reparto de resultados por parte de la Universidad o no.</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">activo</td>
+<td class="confluenceTd">Booleano</td>
+<td class="confluenceTd">Indicador de si el inventor está activo o no en el SGI.</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="code panel pdl" style="border-width: 1px;">
+
+<div class="codeHeader panelHeader pdl hide-border-bottom" style="border-bottom-width: 1px;">
+
+**Inventor**<span class="collapse-source expand-control" style="display:none;"><span class="expand-control-icon icon"> </span><span class="expand-control-text">Ampliar origen</span></span><span class="collapse-spinner-wrapper"></span>
+
+</div>
+
+<div class="codeContent panelContent pdl hide-toolbar">
+
+
+<pre><code class="language-syntaxhighlighter-pre">{
+    &quot;id&quot;: 7,
+    &quot;invencionId&quot;: 1,
+    &quot;inventorRef&quot;: &quot;48128840&quot;,
+    &quot;participacion&quot;: 50,
+    &quot;repartoUniversidad&quot;: false,
+    &quot;activo&quot;: true
+}
+</code></pre>
+
+
+</div>
+
+</div>
+
+#### PeriodoTitularidad
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable" style="width: 100.0%;">
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 18%" />
+<col style="width: 70%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td class="highlight-grey confluenceTd" data-highlight-colour="grey"><strong>Nombre</strong></td>
+<td class="highlight-grey confluenceTd" data-highlight-colour="grey"><strong>Tipo</strong></td>
+<td class="highlight-grey confluenceTd" data-highlight-colour="grey"><strong>Descripción</strong></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">id</td>
+<td class="confluenceTd">Long</td>
+<td class="confluenceTd">Identificador único del periodo de titularidad.</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">invencionId</span></td>
+<td class="confluenceTd">Long</td>
+<td class="confluenceTd">Identificador de la invención a la que se asocia el periodo de titularidad.</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">fechaInicio</td>
+<td class="confluenceTd">Fecha + hora</td>
+<td class="confluenceTd"><p>Fecha de inicio del periodo de titularidad del titular.</p>
+<p>Formato UTC.</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">fechaFin</td>
+<td class="confluenceTd">Fecha + hora</td>
+<td class="confluenceTd"><p>Fecha de fin del periodo de titularidad del titular.</p>
+<p>Formato UTC.</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="code panel pdl" style="border-width: 1px;">
+
+<div class="codeHeader panelHeader pdl hide-border-bottom" style="border-bottom-width: 1px;">
+
+**PeriodoTitularidad**<span class="collapse-source expand-control" style="display:none;"><span class="expand-control-icon icon"> </span><span class="expand-control-text">Ampliar origen</span></span><span class="collapse-spinner-wrapper"></span>
+
+</div>
+
+<div class="codeContent panelContent pdl hide-toolbar">
+
+
+<pre><code class="language-syntaxhighlighter-pre">{
+    &quot;id&quot;: 7,
+    &quot;invencionId&quot;: 1,
+    &quot;fechaInicio&quot;: &quot;2022-03-30T15:55:37.846Z&quot;,
+    &quot;fechaFin&quot;: &quot;2022-04-30T21:59:59Z&quot;
+}
+</code></pre>
+
+
+</div>
+
+</div>
+
+#### Titular
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 18%" />
+<col style="width: 71%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td class="highlight-grey confluenceTd" data-highlight-colour="grey"><strong>Nombre</strong></td>
+<td class="highlight-grey confluenceTd" data-highlight-colour="grey"><strong>Tipo</strong></td>
+<td class="highlight-grey confluenceTd" data-highlight-colour="grey"><strong>Descripción</strong></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">id</td>
+<td class="confluenceTd">Long</td>
+<td class="confluenceTd">Identificador único del titular.</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">periodoTitularidadId</span></td>
+<td class="confluenceTd">Long</td>
+<td class="confluenceTd">Identificador del periodo de titularidad al que se asocia el titular.</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">titularRef</td>
+<td class="confluenceTd">String</td>
+<td class="confluenceTd">Identificador de la entidad/empresa titular de la invención en los sistemas de la Universidad.</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">participacion</td>
+<td class="confluenceTd">Numérico decimal</td>
+<td class="confluenceTd"><p>Porcentaje de participación del titular en la invención.</p>
+<p>Decimal con dos decimales.</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="code panel pdl" style="border-width: 1px;">
+
+<div class="codeHeader panelHeader pdl hide-border-bottom" style="border-bottom-width: 1px;">
+
+**Titular**<span class="collapse-source expand-control" style="display:none;"><span class="expand-control-icon icon"> </span><span class="expand-control-text">Ampliar origen</span></span><span class="collapse-spinner-wrapper"></span>
+
+</div>
+
+<div class="codeContent panelContent pdl hide-toolbar">
+
+
+<pre><code class="language-syntaxhighlighter-pre">{
+    &quot;id&quot;: 15,
+    &quot;periodoTitularidadId&quot;: 7,
+    &quot;titularRef&quot;: &quot;00158046&quot;,
+    &quot;participacion&quot;: 25
+}
+</code></pre>
+
+
+</div>
+
+</div>
+
+#### ViaProteccion
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 18%" />
+<col style="width: 71%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td class="highlight-grey confluenceTd" data-highlight-colour="grey"><strong>Nombre</strong></td>
+<td class="highlight-grey confluenceTd" data-highlight-colour="grey"><strong>Tipo</strong></td>
+<td class="highlight-grey confluenceTd" data-highlight-colour="grey"><strong>Descripción</strong></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">id</td>
+<td class="confluenceTd">Long</td>
+<td class="confluenceTd">Identificador único de la vía de protección.</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">nombre</td>
+<td class="confluenceTd">String</td>
+<td class="confluenceTd">Nombre identificativo de la vía de protección, con el que se listará en todos los desplegables.</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">descripcion</td>
+<td class="confluenceTd">String</td>
+<td class="confluenceTd">Campo de texto de introducción libre para descripción ampliada de la vía de protección.</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">tipoPropiedad</td>
+<td class="confluenceTd">String</td>
+<td class="confluenceTd"><p>Tipo de propiedad a la que se asocia la vía de protección.</p>
+<p>Puede tomar los siguientes valores:</p>
+<ul>
+<li>INDUSTRIAL (Propiedad industrial)</li>
+<li>INTELECTUAL (Propiedad intelectual)</li>
+</ul></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">paisEspecifico</td>
+<td class="confluenceTd">Booleano</td>
+<td class="confluenceTd">Indicador de si la vía de protección exige seleccionar un país concreto.</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">mesesPrioridad</td>
+<td class="confluenceTd">Numérico entero</td>
+<td class="confluenceTd"><p>Meses de prioridad a aplicar cuando la solicitud es la primera de una invención o de plazo para la entrada a las fases nacionales / regionales en el caso concreto de solicitudes que sean extensión internacional (p.ej. vía PCT).</p>
+<p>Este campo solo estará informado en el caso de Tipos de propiedad "Propiedad industrial".</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">extensionInternacional</td>
+<td class="confluenceTd">Booleano</td>
+<td class="confluenceTd">Indicador de si la vía de protección es una extensión internacional.</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">variosPaises</td>
+<td class="confluenceTd">Booleano</td>
+<td class="confluenceTd">Indicador de si la vía de protección permite indicar un listado de países en los que se ha validado la invención a través de la solicitud de protección.</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="code panel pdl" style="border-width: 1px;">
+
+<div class="codeHeader panelHeader pdl hide-border-bottom" style="border-bottom-width: 1px;">
+
+**ViaProteccion**<span class="collapse-source expand-control" style="display:none;"><span class="expand-control-icon icon"> </span><span class="expand-control-text">Ampliar origen</span></span><span class="collapse-spinner-wrapper"></span>
+
+</div>
+
+<div class="codeContent panelContent pdl hide-toolbar">
+
+
+<pre><code class="language-syntaxhighlighter-pre">{
+    &quot;id&quot;: 3,
+    &quot;nombre&quot;: &quot;Europea&quot;,
+    &quot;descripcion&quot;: &quot;Tipo de vía de protección en Europa&quot;,
+    &quot;tipoPropiedad&quot;: &quot;INDUSTRIAL&quot;,
+    &quot;paisEspecifico&quot;: false,
+    &quot;mesesPrioridad&quot;: 1,
+    &quot;extensionInternacional&quot;: false,
+    &quot;variosPaises&quot;: true
+}
+</code></pre>
+
+
+</div>
+
+</div>
+
+#### SolicitudProteccion
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 18%" />
+<col style="width: 71%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td class="highlight-grey confluenceTd" data-highlight-colour="grey"><strong>Nombre</strong></td>
+<td class="highlight-grey confluenceTd" data-highlight-colour="grey"><strong>Tipo</strong></td>
+<td class="highlight-grey confluenceTd" data-highlight-colour="grey"><strong>Descripción</strong></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">id</td>
+<td class="confluenceTd">Long</td>
+<td class="confluenceTd">Identificador único de la solicitud de protección.</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">invencion</span></td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Invencion (Reducida)</span></td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Invención a la que pertenece la solicitud de protección.</span></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">titulo</td>
+<td class="confluenceTd">String</td>
+<td class="confluenceTd">Título de la solicitud de protección.</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">fechaPrioridadSolicitud</td>
+<td class="confluenceTd">Fecha + hora</td>
+<td class="confluenceTd"><p>Fecha de la solicitud o fecha de prioridad.</p>
+<p>Formato UTC.</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">fechaFinPriorPresFasNacRec</td>
+<td class="confluenceTd">Fecha + hora</td>
+<td class="confluenceTd"><p><span>Fecha de finalización de la prioridad de la solicitud o de <span style="color:var(--ds-text,#172b4d);">fin del plazo de presentación de solicitudes en fases nacionales/regionales</span>.</span></p>
+<p>Formato UTC.</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">fechaPublicacion</td>
+<td class="confluenceTd">Fecha + hora</td>
+<td class="confluenceTd"><p>Fecha de publicación de la solicitud de invención.</p>
+<p>Formato UTC.</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">fechaConcesion</td>
+<td class="confluenceTd">Fecha + hora</td>
+<td class="confluenceTd"><p>Porcentaje de participación del titular en la invención.</p>
+<p>Formato UTC.</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">fechaCaducidad</td>
+<td class="confluenceTd">Fecha + hora</td>
+<td class="confluenceTd"><p>Porcentaje de participación del titular en la invención.</p>
+<p>Formato UTC.</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">viaProteccion</td>
+<td class="confluenceTd">ViaProteccion</td>
+<td class="confluenceTd"><p><span>A priori esta lista tendrá los siguientes valores:</span></p>
+<ul>
+<li>Protecciones de tipo "Propiedad industrial":
+<ul>
+<li>España</li>
+<li>PCT</li>
+<li>Europea</li>
+<li>País específico</li>
+</ul></li>
+<li>Protecciones de tipo "Propiedad intelectual":
+<ul>
+<li>Registro autonómico</li>
+<li>Acta notarial</li>
+<li>Registro interno</li>
+</ul></li>
+</ul></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">numeroSolicitud</td>
+<td class="confluenceTd"><p>String</p></td>
+<td class="confluenceTd"><span>Número de la solicitud que es comunicada por el organismo donde se solicita.</span></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">numeroRegistro</td>
+<td class="confluenceTd">String</td>
+<td class="confluenceTd"><span>Número del registro que es comunicada por el organismo que concede la protección.</span></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">numeroPublicacion</td>
+<td class="confluenceTd"><p>String</p></td>
+<td class="confluenceTd"><span>Número de la publicación que es comunicada por el organismo donde se publica.</span></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">numeroConcesion</td>
+<td class="confluenceTd"><p>String</p></td>
+<td class="confluenceTd">Número de la concesión que es comunicada por el organismo que concede la protección.</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">estado</td>
+<td class="confluenceTd">String</td>
+<td class="confluenceTd"><p>Estado de la solicitud.</p>
+<p>Las solicitudes podrán tener los siguientes estados:</p>
+<ul>
+<li>Solicitada</li>
+<li>Publicada</li>
+<li>Concedida</li>
+<li>Caducada</li>
+</ul></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">tipoCaducidad</td>
+<td class="confluenceTd">String</td>
+<td class="confluenceTd"><p>Tipo de caducidad <span> de la solicitud de invención. </span></p>
+<p>Tendrá un valor de los siguientes:</p>
+<ul>
+<li>Abandono</li>
+<li>Retirada</li>
+<li>Denegación</li>
+</ul></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">agentePropiedadRef</td>
+<td class="confluenceTd">String</td>
+<td class="confluenceTd">Identificador en los sistemas de la Universidad de la entidad/empresa que actúa como agente de la propiedad asociado a la solicitud de protección.</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">paisProteccionRef</td>
+<td class="confluenceTd"><p>String</p>
+<p><br />
+</p>
+<p><br />
+</p>
+<p><br />
+</p>
+<p><br />
+</p>
+<p><br />
+</p>
+<p><br />
+</p>
+<p><br />
+</p>
+<p><br />
+</p></td>
+<td class="confluenceTd">Este campo estará informado en las vías de protección con países asociados (País específico p.ej.).</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">comentarios</td>
+<td class="confluenceTd">String</td>
+<td class="confluenceTd"><p>Comentarios a la solicitud de protección.</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">activo</td>
+<td class="confluenceTd">Booleano</td>
+<td class="confluenceTd">Indicador de si la solicitud de protección está activa o no en el SGI.</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="code panel pdl" style="border-width: 1px;">
+
+<div class="codeHeader panelHeader pdl hide-border-bottom" style="border-bottom-width: 1px;">
+
+**SolicitudProteccion**<span class="collapse-source expand-control" style="display:none;"><span class="expand-control-icon icon"> </span><span class="expand-control-text">Ampliar origen</span></span><span class="collapse-spinner-wrapper"></span>
+
+</div>
+
+<div class="codeContent panelContent pdl hide-toolbar">
+
+
+<pre><code class="language-syntaxhighlighter-pre">{
+    &quot;id&quot;: 5,
+    &quot;invencion&quot;: {
+        &quot;id&quot;: 114,
+        &quot;tipoProteccion&quot;: {
+            &quot;id&quot;: 1,
+            &quot;tipoPropiedad&quot;: &quot;INDUSTRIAL&quot;
+        },
+        &quot;activo&quot;: true
+     },
+    &quot;titulo&quot;: &quot;Solicitud de protección Europea de la Patente de un sistema de captura de insectos&quot;,
+    &quot;fechaPrioridadSolicitud&quot;: &quot;2022-02-28T23:00:00Z&quot;,
+    &quot;fechaFinPriorPresFasNacRec&quot;: &quot;2022-03-31T22:00:00Z&quot;,
+    &quot;fechaPublicacion&quot;: null,
+    &quot;fechaConcesion&quot;: null,
+    &quot;fechaCaducidad&quot;: null,
+    &quot;viaProteccion&quot;: {
+        &quot;id&quot;: 3,
+        &quot;nombre&quot;: &quot;Europea&quot;,
+        &quot;descripcion&quot;: &quot;Tipo de vía de protección en Europa&quot;,
+        &quot;tipoPropiedad&quot;: &quot;INDUSTRIAL&quot;,
+        &quot;paisEspecifico&quot;: false,
+        &quot;mesesPrioridad&quot;: 1,
+        &quot;extensionInternacional&quot;: false,
+        &quot;variosPaises&quot;: true
+    },
+    &quot;numeroSolicitud&quot;: &quot;123XTP&quot;,
+    &quot;numeroPublicacion&quot;: &quot;&quot;,
+    &quot;numeroConcesion&quot;: &quot;&quot;,
+    &quot;numeroRegistro&quot;: &quot;&quot;,
+    &quot;estado&quot;: &quot;SOLICITADA&quot;,
+    &quot;tipoCaducidad&quot;: null,
+    &quot;agentePropiedadRef&quot;: &quot;00065350&quot;,
+    &quot;paisProteccionRef&quot;: null,
+    &quot;comentarios&quot;: &quot;&quot;,
+    &quot;activo&quot;: true
+}
+</code></pre>
+
+
+</div>
+
+</div>
+
+### Servicios
+
+<div class="confluence-information-macro confluence-information-macro-information" role="region" aria-label="Info">
+
+<span class="aui-icon aui-icon-small aui-iconfont-info-filled confluence-information-macro-icon" role="presentation"></span>
+
+<div class="confluence-information-macro-body">
+
+Para componer la URL llamada completa, se debe anteponer a lo indicado en la columna URL lo siguiente: **{HOST}/api/sgipii**, donde **{HOST}** de deberá sustituir el dominio correspondiente al entorno al que se está accediendo y dicho acceso será por http o https según el caso.
+
+</div>
+
+</div>
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<thead>
+<tr class="header">
+<th class="confluenceTh" style="text-align: left;"><p>Servicio</p></th>
+<th class="confluenceTh" style="text-align: left;"><p>Método</p></th>
+<th class="confluenceTh" style="text-align: left;"><p>URL</p></th>
+<th class="confluenceTh" style="text-align: left;"><p>Parámetros</p></th>
+<th class="confluenceTh" style="text-align: left;"><p>Respuesta</p></th>
+<th class="confluenceTh" style="text-align: left;"><p>Descripción</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left;">ESB - SGI - Invenciones - Sectores de aplicación - Listar</td>
+<td class="confluenceTd" style="text-align: left;">GET</td>
+<td class="confluenceTd" style="text-align: left;"><span style="color:var(--ds-text,#172b4d);" title="">/sectoresaplicacion</span></td>
+<td class="confluenceTd" style="text-align: left;"><p><span style="color:var(--ds-text,#172b4d);">q+s (query + sort)</span></p>
+<p><span style="color:var(--ds-text,#172b4d);">La query estará formada por:</span></p>
+<ul>
+<li><span style="color:var(--ds-text,#172b4d);">cualquiera de los campos del objeto<span> </span>SectorAplicacion</span></li>
+</ul></td>
+<td class="confluenceTd" style="text-align: left;"><span style="color:var(--ds-text,#172b4d);" title="">Lista[SectorAplicacion]</span></td>
+<td class="confluenceTd" style="text-align: left;"><p><span style="color:var(--ds-text,#172b4d);" title="">Listado de sectores de aplicación.</span></p>
+<p><span style="color:var(--ds-text,#172b4d);"><em>Ejemplo</em>:</span></p>
+<p><span style="color:var(--ds-text,#172b4d);">id=ik=1</span></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left;">ESB - SGI - Invenciones - Vías de protección - Listar</td>
+<td class="confluenceTd" style="text-align: left;">GET</td>
+<td class="confluenceTd" style="text-align: left;"><span style="color:var(--ds-text,#172b4d);" title="">/viasproteccion</span></td>
+<td class="confluenceTd" style="text-align: left;"><p><span style="color:var(--ds-text,#172b4d);">q+s (query + sort)</span></p>
+<p><span style="color:var(--ds-text,#172b4d);">La query estará formada por:</span></p>
+<ul>
+<li><span style="color:var(--ds-text,#172b4d);">cualquiera de los campos del objeto<span> </span>ViaProteccion</span></li>
+</ul></td>
+<td class="confluenceTd" style="text-align: left;"><span style="color:var(--ds-text,#172b4d);" title="">Lista[ViaProteccion]</span></td>
+<td class="confluenceTd" style="text-align: left;"><p><span style="color:var(--ds-text,#172b4d);">Listado de vías de protección.</span></p>
+<p><span style="color:var(--ds-text,#172b4d);"><em>Ejemplo</em>:</span></p>
+<p><span style="color:var(--ds-text,#172b4d);">nombre=ik=europea</span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left;">ESB - SGI - Invenciones - Tipos de protección - Listar</td>
+<td class="confluenceTd" style="text-align: left;">GET</td>
+<td class="confluenceTd" style="text-align: left;"><span style="color:var(--ds-text,#172b4d);">/tiposproteccion</span></td>
+<td class="confluenceTd" style="text-align: left;"><p><span style="color:var(--ds-text,#172b4d);">q+s (query + sort)</span></p>
+<p><span style="color:var(--ds-text,#172b4d);">La query estará formada por:</span></p>
+<ul>
+<li><span style="color:var(--ds-text,#172b4d);">cualquiera de los campos del objeto<span> </span>TipoProteccion</span></li>
+</ul></td>
+<td class="confluenceTd" style="text-align: left;"><span style="color:var(--ds-text,#172b4d);">Lista[TipoProteccion]</span></td>
+<td class="confluenceTd" style="text-align: left;"><p><span style="color:var(--ds-text,#172b4d);">Listado de tipos de protección.</span></p>
+<p><span style="color:var(--ds-text,#172b4d);"><em>Ejemplo</em>:</span></p>
+<p><span style="color:var(--ds-text,#172b4d);">nombre=ik=patente</span></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left;">ESB - SGI - Invenciones - Listar solicitudes de protección</td>
+<td class="confluenceTd" style="text-align: left;">GET</td>
+<td class="confluenceTd" style="text-align: left;"><span style="color:var(--ds-text,#172b4d);">/invenciones/{id}/solicitudesproteccion</span></td>
+<td class="confluenceTd" style="text-align: left;"><p><br />
+</p></td>
+<td class="confluenceTd" style="text-align: left;"><span style="color:var(--ds-text,#172b4d);">Lista[SolicitudProteccion]</span></td>
+<td class="confluenceTd" style="text-align: left;"><p><span style="color:var(--ds-text,#172b4d);">Listado de solicitudes de protección de una invención.</span></p>
+<p><span style="color:var(--ds-text,#172b4d);"><em>Ejemplo</em>:</span></p>
+<p><span style="color:var(--ds-text,#172b4d);">/invenciones/114/solicitudesproteccion</span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left;">ESB - SGI - Invenciones - Periodo titularidad - Listar titulares</td>
+<td class="confluenceTd" style="text-align: left;">GET</td>
+<td class="confluenceTd" style="text-align: left;"><span style="color:var(--ds-text,#172b4d);">/periodostitularidad/{id}/titulares</span></td>
+<td class="confluenceTd" style="text-align: left;"><p><br />
+</p></td>
+<td class="confluenceTd" style="text-align: left;"><span style="color:var(--ds-text,#172b4d);">Lista[Titular]</span></td>
+<td class="confluenceTd" style="text-align: left;"><p><span style="color:var(--ds-text,#172b4d);">Listado de titulares de un periodo de titularidad de una invención.</span></p>
+<p><span style="color:var(--ds-text,#172b4d);"><em>Ejemplo</em>:</span></p>
+<p><span style="color:var(--ds-text,#172b4d);">/periodostitularidad/8/titulares</span></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left;">ESB - SGI - Invenciones - Listar periodos titularidad</td>
+<td class="confluenceTd" style="text-align: left;">GET</td>
+<td class="confluenceTd" style="text-align: left;"><span style="color:var(--ds-text,#172b4d);">/invenciones/{id}/periodostitularidad</span></td>
+<td class="confluenceTd" style="text-align: left;"><p><br />
+</p></td>
+<td class="confluenceTd" style="text-align: left;"><span style="color:var(--ds-text,#172b4d);">Lista[PeriodoTitularidad]</span></td>
+<td class="confluenceTd" style="text-align: left;"><p><span style="color:var(--ds-text,#172b4d);">Listado de periodos de titularidad de una invención.</span></p>
+<p><span style="color:var(--ds-text,#172b4d);"><em>Ejemplo</em>:</span></p>
+<p><span style="color:var(--ds-text,#172b4d);">/invenciones/114/periodostitularidad</span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left;">ESB - SGI - Invenciones - Listar inventores</td>
+<td class="confluenceTd" style="text-align: left;">GET</td>
+<td class="confluenceTd" style="text-align: left;"><span style="color:var(--ds-text,#172b4d);">/invenciones/{id}/invencion-inventores</span></td>
+<td class="confluenceTd" style="text-align: left;"><p><br />
+</p></td>
+<td class="confluenceTd" style="text-align: left;"><span style="color:var(--ds-text,#172b4d);">Lista[Inventor]</span></td>
+<td class="confluenceTd" style="text-align: left;"><p><span style="color:var(--ds-text,#172b4d);">Listado de inventores de una invención.</span></p>
+<p><span style="color:var(--ds-text,#172b4d);"><em>Ejemplo</em>:</span></p>
+<p><span style="color:var(--ds-text,#172b4d);">/invenciones/114/invencion-inventores</span></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left;">ESB - SGI - Invenciones - Listar palabras clave</td>
+<td class="confluenceTd" style="text-align: left;">GET</td>
+<td class="confluenceTd" style="text-align: left;"><span style="color:var(--ds-text,#172b4d);">/invenciones/{id}/palabrasclave</span></td>
+<td class="confluenceTd" style="text-align: left;"><p><br />
+</p></td>
+<td class="confluenceTd" style="text-align: left;"><span style="color:var(--ds-text,#172b4d);">Lista[PalabraClave]</span></td>
+<td class="confluenceTd" style="text-align: left;"><p><span style="color:var(--ds-text,#172b4d);">Listado de palabras clave asociadas a la invención.</span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left;">ESB - SGI - Invenciones - Listar áreas de conocimiento</td>
+<td class="confluenceTd" style="text-align: left;">GET</td>
+<td class="confluenceTd" style="text-align: left;"><span style="color:var(--ds-text,#172b4d);">/invenciones/{id}/areasconocimiento</span></td>
+<td class="confluenceTd" style="text-align: left;"><p><br />
+</p></td>
+<td class="confluenceTd" style="text-align: left;"><span style="color:var(--ds-text,#172b4d);">Lista[AreaConocimiento]</span></td>
+<td class="confluenceTd" style="text-align: left;"><p><span style="color:var(--ds-text,#172b4d);">Listado de áreas de conocimiento asociadas a la invención.</span></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left;">ESB - SGI - Invenciones - Listar sectores de aplicación</td>
+<td class="confluenceTd" style="text-align: left;">GET</td>
+<td class="confluenceTd" style="text-align: left;"><span style="color:var(--ds-text,#172b4d);">/invenciones/{id}/sectoresaplicacion</span></td>
+<td class="confluenceTd" style="text-align: left;"><p><br />
+</p></td>
+<td class="confluenceTd" style="text-align: left;"><span style="color:var(--ds-text,#172b4d);">Lista[SectorAplicacion]</span></td>
+<td class="confluenceTd" style="text-align: left;"><p><span style="color:var(--ds-text,#172b4d);">Listado de sectores de aplicación asociados a la invención.</span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left;">ESB - SGI - Invenciones - Consultar detalle</td>
+<td class="confluenceTd" style="text-align: left;">GET</td>
+<td class="confluenceTd" style="text-align: left;"><span style="color:var(--ds-text,#172b4d);">/invenciones/{id}</span></td>
+<td class="confluenceTd" style="text-align: left;"><p><br />
+</p></td>
+<td class="confluenceTd" style="text-align: left;"><span style="color:var(--ds-text,#172b4d);">Invencion</span></td>
+<td class="confluenceTd" style="text-align: left;"><p><span style="color:var(--ds-text,#172b4d);">Devuelve el detalle de la invención solicitada.</span></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left;">ESB - SGI - Invenciones - Buscar</td>
+<td class="confluenceTd" style="text-align: left;">GET</td>
+<td class="confluenceTd" style="text-align: left;"><span style="color:var(--ds-text,#172b4d);">/invenciones</span></td>
+<td class="confluenceTd" style="text-align: left;"><p><span style="color:var(--ds-text,#172b4d);">q+s (query + sort)</span></p>
+<p><span style="color:var(--ds-text,#172b4d);">La query estará formada por:</span></p>
+<ul>
+<li><span style="color:var(--ds-text,#172b4d);">Cualquiera de los campos del objeto Invencion</span></li>
+</ul></td>
+<td class="confluenceTd" style="text-align: left;"><span style="color:var(--ds-text,#172b4d);">Lista[Invencion]</span></td>
+<td class="confluenceTd" style="text-align: left;"><p><span style="color:var(--ds-text,#172b4d);">Listado de invenciones. Solo se devuelven las activas.<br />
+</span></p>
+<p><span style="color:var(--ds-text,#172b4d);"><em>Ejemplo</em>:</span></p>
+<p><span style="color:var(--ds-text,#172b4d);">tipoProteccion==1</span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd" style="text-align: left;">ESB - SGI - Invenciones - Consultar invenciones modificadas</td>
+<td class="confluenceTd" style="text-align: left;">GET</td>
+<td class="confluenceTd" style="text-align: left;"><span style="color:var(--ds-text,#172b4d);" title="">/invenciones/modificados-ids</span></td>
+<td class="confluenceTd" style="text-align: left;"><p>q+s<span> </span><span style="color:var(--ds-text,#172b4d);">(query + sort)</span></p>
+<p>La query estará formada por:</p>
+<ul>
+<li>fechaModificacion:<span> </span><span style="color:var(--ds-text,#172b4d);">fecha a partir de la cual se quieren ver los cambios.</span></li>
+</ul></td>
+<td class="confluenceTd" style="text-align: left;">Lista[Long]</td>
+<td class="confluenceTd" style="text-align: left;"><p><span style="color:var(--ds-text,#172b4d);">Listado de identificadores de invenciones que han sido modificadas (tanto la entidad Invencion como las entidades relacionadas: sectores de aplicación, áreas de conocimiento, palabras clave,  inventores, periodos de titularidad, titulares, solicitudes de protección</span><span style="color:var(--ds-text,#172b4d);">)</span></p>
+<p><span style="color:var(--ds-text,#172b4d);">Ejemplo:</span></p>
+<ul>
+<li><span style="color:var(--ds-text,#172b4d);">fechaModificacion=ge="2021-08-18T22:00:00Z"</span></li>
+</ul></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd" style="text-align: left;">ESB - SGI - Invenciones - Consultar invenciones eliminadas</td>
+<td class="confluenceTd" style="text-align: left;">GET</td>
+<td class="confluenceTd" style="text-align: left;"><span style="color:var(--ds-text,#172b4d);" title=""><span style="color:var(--ds-text,#172b4d);" title="">/invenciones/eliminadas-ids</span></span></td>
+<td class="confluenceTd" style="text-align: left;"><p>q+s <span style="color:var(--ds-text,#172b4d);">(query + sort)</span></p>
+<p>La query estará formada por:</p>
+<ul>
+<li>fechaEliminacion: <span style="color:var(--ds-text,#172b4d);">fecha a partir de la cual se quieren ver las eliminaciones.</span></li>
+</ul></td>
+<td class="confluenceTd" style="text-align: left;">Lista[Long]</td>
+<td class="confluenceTd" style="text-align: left;"><p>Listado de Identificadores de Invención que han sido eliminados (campo activo = false) a partir de una fecha.</p>
+<p>Se utilizará el siguiente parámetro en la llamada al servicio:</p>
+<ul>
+<li>fechaEliminacion: se le pasará la fecha a partir de la cual se quieren ver las invenciones eliminadas o bien un rango entre las que se quiere buscar</li>
+</ul>
+<p>Ejemplo1:</p>
+<ul>
+<li>fechaEliminacion=ge=<span>"2024-01-01T22:00:00Z"</span>;</li>
+</ul>
+<p>Ejemplo2:</p>
+<ul>
+<li>fechaEliminacion=ge=<span>"2024-01-01T22:00:00Z"</span>;fechaEliminacion=le=<span>"2024-12-31T22:00:00Z"</span></li>
+</ul>
+<p><span style="color:var(--ds-text,#172b4d);"> </span></p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+<div class="pageSection group">
+
+<div class="pageSectionHeader">
+
+## Attachments:
+
+</div>
+
+<div class="greybox" align="left">
+
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [SGI PII Logical Model.png](/attachments/598147614/598148527.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [SGI PII Logical Model (1).png](/attachments/598147614/598148968.png) (image/png)  
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div id="footer" role="contentinfo">
+
+<div class="section footer-body">
+
+Document generated by Confluence on oct 27, 2025 09:23
+
+<div id="footer-logo">
+
+[Atlassian](https://www.atlassian.com/)
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 
 

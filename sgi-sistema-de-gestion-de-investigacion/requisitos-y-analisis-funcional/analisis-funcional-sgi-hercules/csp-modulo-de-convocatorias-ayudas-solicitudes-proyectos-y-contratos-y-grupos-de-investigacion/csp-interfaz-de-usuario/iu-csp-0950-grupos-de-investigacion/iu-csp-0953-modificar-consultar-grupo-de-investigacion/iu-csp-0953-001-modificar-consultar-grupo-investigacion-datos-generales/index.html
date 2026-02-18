@@ -796,7 +796,453 @@
 
   <h1>Iu csp 0953 001 modificar consultar grupo investigacion datos generales</h1>
 
+<div id="page">
 
+<div id="main" class="aui-page-panel">
+
+<div id="main-header">
+
+<div id="breadcrumb-section">
+
+1.  [Hércules](index.html)
+2.  [Hércules](/)
+3.  [SGI. Sistema de gestión de investigación](//sgi-sistema-de-gestion-de-investigacion)
+4.  [Requisitos y análisis funcional](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional)
+5.  [Análisis Funcional SGI - Hércules](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules)
+6.  [CSP - Módulo de convocatorias, ayudas, solicitudes, proyectos y contratos y grupos de investigación](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion)
+7.  [CSP - Interfaz de usuario](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-interfaz-de-usuario)
+8.  [IU-CSP-0950 - Grupos de investigación](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-interfaz-de-usuario/iu-csp-0950-grupos-de-investigacion)
+9.  [IU-CSP-0953- Modificar-consultar grupo de investigación](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-interfaz-de-usuario/iu-csp-0950-grupos-de-investigacion/iu-csp-0953-modificar-consultar-grupo-de-investigacion)
+
+</div>
+
+# <span id="title-text"> Hércules : IU-CSP-0953-001 - Modificar-consultar grupo investigación - Datos generales </span>
+
+</div>
+
+<div id="content" class="view">
+
+<div class="page-metadata">
+
+Created by <span class="author"> Usuario desconocido (lorena.alvarez)</span>, last updated by <span class="editor"> Usuario desconocido (covadonga.garcia)</span> on nov 03, 2022
+
+</div>
+
+<div id="main-content" class="wiki-content group">
+
+<div class="plugin-tabmeta-details">
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable" style="width: 75.1988%;">
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 84%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<th class="confluenceTh">Cod. IU</th>
+<td class="confluenceTd"><p><strong><strong><strong><strong>IU-CSP-0953-001 - Modificar-consultar grupo investigación - Datos generales<br />
+</strong></strong></strong></strong></p></td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Ver. objetivo</th>
+<td class="confluenceTd">0.4.0</td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh">Ver. IU</th>
+<td class="confluenceTd">1.0.0</td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Estado</th>
+<td class="confluenceTd"> <span class="status-macro aui-lozenge aui-lozenge-current conf-macro output-inline">IN PROGRESS</span></td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh">Fec. Aprobación</th>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Épica, historia</th>
+<td class="confluenceTd"><div class="content-wrapper">
+<p><br />
+</p>
+</div></td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh">Actores</th>
+<td class="confluenceTd">ACT-CSP-003-Gestor, ACT-CSP-004-Administrador, ACT-CSP-005-Visor, ACT-CSP-001-Investigador</td>
+</tr>
+<tr class="even">
+<th class="confluenceTh"><p>Frecuencia</p></th>
+<td class="confluenceTd">Media</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+# Formulario Modificar/consultar grupo investigación - Datos generales
+
+Formulario de modificación/consulta de un grupo de investigación, apartado de Datos generales. Los usuarios ACT-CSP-003-Gestor y ACT-CSP-004-Administrador podrán realizar cambios.
+
+Si el usuario es un ACT-CSP-005-Visor se mostrarán todos los campos en modo consulta y no podrá realizar modificaciones. El botón Guardar estará deshabilitado.
+
+Si el usuario es un ACT-CSP-001-Investigador únicamente podrá consultar el grupo si es uno de los miembros del equipo o ha sido un miembro (existe en la tabla "grupo equipo") o  sea una persona autorizada (existe en la tabla "grupo persona autorizada" en la fecha actual) o es el responsable económico (existe en la tabla "grupo responsable económico" en la fecha actual). No podrá realizar modificaciones. El botón Guardar estará deshabilitado.
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable" style="width: 100.0%;">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 13%" />
+<col style="width: 76%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<th colspan="3" class="confluenceTd" style="width: 100.0%"><div class="content-wrapper">
+<p><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852293/597876644.png" class="confluence-embedded-image" draggable="false" data-image-src="attachments/597852293/597876644.png" data-unresolved-comment-count="0" data-linked-resource-id="597876644" data-linked-resource-version="2" data-linked-resource-type="attachment" data-linked-resource-default-alias="edicingrupo.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852293" data-linked-resource-container-version="18" tabindex="0" width="850" /></span></p>
+</div></th>
+</tr>
+<tr class="even">
+<th class="confluenceTh" style="width: 10.3709%">Nombre</th>
+<th class="confluenceTh" style="width: 13.3232%"><div class="content-wrapper">
+<p>Tipo</p>
+</div></th>
+<th class="confluenceTh" style="width: 76.3058%"><div class="content-wrapper">
+<p>Características / Notas</p>
+</div></th>
+</tr>
+<tr class="odd">
+<th colspan="3" class="highlight-blue confluenceTd" data-highlight-colour="blue" style="width: 100.0%"><div class="content-wrapper">
+<p>Formulario de datos generales.</p>
+</div></th>
+</tr>
+<tr class="even">
+<th class="confluenceTd" style="width: 10.3709%">Nombre</th>
+<th class="confluenceTd" style="width: 13.3232%"><p>Texto largo</p>
+<p>Obligatorio</p></th>
+<th class="confluenceTd" style="width: 76.3058%"><p>Nombre por el que se conoce al grupo de investigación.</p>
+<p>Campo "nombre" de la tabla "grupo".</p>
+<p>Será un campo obligatorio.</p></th>
+</tr>
+<tr class="odd">
+<th class="confluenceTd">Solicitud</th>
+<th class="confluenceTd"><p>Texto corto</p>
+<p><br />
+</p>
+Modo consulta</th>
+<th class="confluenceTd"><p>En caso que el grupo se cree a partir de la concesión de una Solicitud registrada en el SGI, se muestra el campo "código registro interno" de la tabla "solicitud".</p>
+<p>Se mostrará en modo consulta.</p></th>
+</tr>
+<tr class="even">
+<th class="confluenceTd">Código</th>
+<th class="confluenceTd"><p>Texto corto</p>
+<p>Obligatorio</p></th>
+<th class="confluenceTd"><p>Campo "código" de la tabla "grupo" (en la edición se muestra lo que este almacenado en la base de datos y no se re calcula)</p>
+<p>Será un campo obligatorio y podrá ser modificado por el ACT-CSP-004-Administrador y/o ACT-CSP-003-Gestor.</p></th>
+</tr>
+<tr class="odd">
+<th class="confluenceTd">Código de identificación SGE</th>
+<th class="confluenceTd"><p>Buscador</p>
+<p>Texto</p>
+<p>Opcional</p></th>
+<th class="confluenceTd"><p>Muestra la pantalla <a href="https://confluence.um.es/confluence/pages/viewpage.action?pageId=103898287" rel="nofollow">IU-CSP-0406-019-001 - Búsqueda de proyectos económicos</a> que permitirá la búsqueda de proyecto económicos del SGE. Desde esa misma pantalla también se podrá solicitar el alta del proyecto económico en caso de no existir <a href="//sgi-sistema-de-gestion-de-investigacion/guia-de-implantacion-checklist/um-universidad-de-murcia/um-formularios-especificos/um-formularios-de-gestion-economica-sge/iu-csp-0406-021-003-solicitar-alta-de-proyecto-economico-desde-grupo-de-investigacion-sgi">IU-CSP-0406-021-003- Solicitar alta de proyecto económico desde Grupo de investigación SGI</a></p>
+<p>Campo "<span style="color:var(--ds-text,#172b4d);">proyecto SGE ref</span>" de la tabla "grupo".</p></th>
+</tr>
+<tr class="even">
+<th class="confluenceTd">Fecha inicio</th>
+<th class="confluenceTd"><p>Fecha</p>
+<p>Obligatorio</p></th>
+<th class="confluenceTd"><p>Fecha de inicio del grupo de investigación.</p>
+<p>Campo "fecha inicio" de la tabla "grupo".</p>
+<p>Será un campo obligatorio.</p></th>
+</tr>
+<tr class="odd">
+<th class="confluenceTd">Fecha fin</th>
+<th class="confluenceTd"><p>Fecha</p>
+<p>Opcional</p></th>
+<th class="confluenceTd"><p>Fecha de fin del grupo de investigación.</p>
+<p>Campo "fecha fin" de la tabla "grupo".</p>
+<p>Será un campo opcional.</p></th>
+</tr>
+<tr class="even">
+<th class="confluenceTd" style="width: 10.3709%">Palabras clave</th>
+<th class="confluenceTd" style="width: 13.3232%"><p>Componente a medida</p>
+<p>Opcional</p></th>
+<th class="confluenceTd" style="width: 76.3058%"><p>Lista de palabras clave asociadas al grupo.</p>
+<p>Se recuperan de la tabla "grupo palabra clave"</p>
+<p>El comportamiento del componente será el descrito de manera general en <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/plcl-palabras-clave/gen-palabras-clave-interfaz-de-usuario/iu-gen-0200-gestion-de-palabras-clave">IU-GEN-0200 - Gestión de palabras clave</a>.</p></th>
+</tr>
+<tr class="odd">
+<th class="confluenceTd">Tipo grupo</th>
+<th class="confluenceTd"><p>Selector</p>
+<p>Texto corto</p>
+<p>Opcional</p></th>
+<th class="confluenceTd"><p>Indica el grado de madurez del grupo de investigación.</p>
+<p>Desplegable con los valores del enumerado "Tipo grupo":</p>
+<ul>
+<li>Emergente</li>
+<li>Consolidado</li>
+<li>Precompetitivo</li>
+<li>Grupo de alto rendimiento</li>
+</ul>
+<p>Campo "tipo" de la tabla "grupo".</p></th>
+</tr>
+<tr class="even">
+<th colspan="3" class="highlight-#deebff confluenceTd" data-highlight-colour="#deebff" title="Color de fondo: 35 % azul claro">Histórico Tipo grupo: Esta tabla solo se mostrará en caso de existir más de un registro en la tabla "grupo tipo" asociados al grupo. Los registros se mostrarán ordenados por el campo fecha inicio, de más a menos reciente.</th>
+</tr>
+<tr class="odd">
+<th class="confluenceTd">Tipo grupo</th>
+<th class="confluenceTd">Texto corto</th>
+<th class="confluenceTd">Se corresponde con el campo "tipo grupo" de la tabla "grupo tipo".</th>
+</tr>
+<tr class="even">
+<th class="confluenceTd">Fecha inicio</th>
+<th class="confluenceTd">Fecha</th>
+<th class="confluenceTd">Se corresponde con el campo "fecha inicio" de la tabla "grupo tipo".</th>
+</tr>
+<tr class="odd">
+<th class="confluenceTd">Fecha fin</th>
+<th class="confluenceTd">Fecha</th>
+<th class="confluenceTd">Se corresponde con el campo "fecha fin" de la tabla "grupo tipo".</th>
+</tr>
+<tr class="even">
+<th colspan="3" class="highlight-#deebff confluenceTd" data-highlight-colour="#deebff" title="Color de fondo: 35 % azul claro"><br />
+</th>
+</tr>
+<tr class="odd">
+<th class="confluenceTd">Grupo especial de investigación</th>
+<th class="confluenceTd"><p>Selector</p>
+<p>Booleano</p>
+<p>Opcional</p></th>
+<th class="confluenceTd"><p>Indica si el grupo de investigación en un "Grupo especial de investigación".</p>
+<p>Podrá tomar los valores: Si o No.</p>
+<p>Campo "especial investigación" de la tabla "grupo".</p></th>
+</tr>
+<tr class="even">
+<th colspan="3" class="highlight-#deebff confluenceTd" data-highlight-colour="#deebff" title="Color de fondo: 35 % azul claro">Histórico Grupo especial de investigación: Esta tabla solo se mostrará en caso de existir más de un registro en la tabla "grupo especial investigación" asociados al grupo. Los registros se mostrarán ordenados por el campo fecha inicio, de más a menos reciente.</th>
+</tr>
+<tr class="odd">
+<th class="confluenceTd">Grupo especial de investigación</th>
+<th class="confluenceTd">Texto corto</th>
+<th class="confluenceTd">Se corresponde con el campo "especial investigación" de la tabla "grupo especial investigación". Si el valor es false se mostrará en la pantalla "No" y si el valor es true se mostrará en la pantalla "Sí"</th>
+</tr>
+<tr class="even">
+<th class="confluenceTd">Fecha inicio</th>
+<th class="confluenceTd">Fecha</th>
+<th class="confluenceTd">Se corresponde con el campo "fecha inicio" de la tabla "grupo especial investigación".</th>
+</tr>
+<tr class="odd">
+<th class="confluenceTd">Fecha fin</th>
+<th class="confluenceTd">Fecha</th>
+<th class="confluenceTd">Se corresponde con el campo "fecha fin" de la tabla "grupo especial investigación".</th>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="table-wrap">
+
+<table class="wrapped relative-table confluenceTable" style="width: 79.3764%;">
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 16%" />
+<col style="width: 54%" />
+<col style="width: 15%" />
+</colgroup>
+<tbody>
+<tr class="header">
+<th class="confluenceTh">Acciones</th>
+<th class="confluenceTh">Descripción</th>
+<th class="confluenceTh"> Enlace CU.</th>
+<th class="confluenceTh">Permisos</th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd">Buscar (proyecto económico)</td>
+<td class="confluenceTd"><p>Muestra la pantalla de búsqueda de proyecto económicos</p>
+<p><br />
+</p></td>
+<td class="confluenceTd"><p>Muestra la pantalla <a href="https://confluence.um.es/confluence/pages/viewpage.action?pageId=103898287" rel="nofollow">IU-CSP-0406-019-001 - Búsqueda de proyectos económicos</a> que permitirá la búsqueda de proyecto económicos del SGE. Desde esa misma pantalla también se podrá solicitar el alta del proyecto económico en caso de no existir <a href="//sgi-sistema-de-gestion-de-investigacion/guia-de-implantacion-checklist/um-universidad-de-murcia/um-formularios-especificos/um-formularios-de-gestion-economica-sge/iu-csp-0406-021-003-solicitar-alta-de-proyecto-economico-desde-grupo-de-investigacion-sgi">IU-CSP-0406-021-003- Solicitar alta de proyecto económico desde Grupo de investigación SGI</a></p></td>
+<td class="confluenceTd">No se necesita permiso para buscar proyectos económicos</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+## Botones generales a la pantalla
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable" style="width: 91.4044%;">
+<colgroup>
+<col style="width: 8%" />
+<col style="width: 39%" />
+<col style="width: 38%" />
+<col style="width: 13%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th class="confluenceTh"><p>Acciones</p></th>
+<th class="confluenceTh"><p>Descripción</p></th>
+<th class="confluenceTh"><p> Enlace CU.</p></th>
+<th class="confluenceTh">Permisos</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td class="confluenceTd">Guardar</td>
+<td class="confluenceTd"><p>Modificar el Grupo con la información introducida en el formulario.</p>
+<p>Al guardar un grupo se guardar la información de todos los apartados de definición del grupo (ver resto de pantallas para ver que se guarda en cada una, en esta pantalla se describe lo que hay que guardar en relación a los Datos generales)</p>
+<p><br />
+</p></td>
+<td class="confluenceTd"><p>Se modifican las siguientes tablas:</p>
+<ul>
+<li>La tabla "grupo" con los datos "nombre", "fecha inicio", "fecha fin", "<span style="color:var(--ds-text,#172b4d);">proyecto SGE ref</span>" y "código". Se comprobará que el campo "código" sea único en la tabla "grupo" entre los grupos activos.</li>
+<li>Si se modifica el valor del campo "fecha inicio" 
+<ul>
+<li>Se deberán buscar todos los miembros del grupo (tabla "grupo equipo") que tengan una fecha de inicio de participación en el grupo (campo "fecha inicio" de la tabla  "grupo equipo") menor que la nueva fecha de inicio del grupo. Si existen miembros que cumplan esta condición no se permitirá el cambio de la fecha de inicio del grupo, mostrando un mensaje de validación "La fecha de inicio del grupo provoca inconsistencias en las fechas de participación de los miembros" (es decir, no se debe permitir que queden miembros del grupo fuera del periodo de vigencia del grupo)</li>
+</ul></li>
+<li>Si se modifica el valor del campo "fecha fin" ya sea pasando a estar informado si no lo estaba previamente o modificando su valor previo:
+<ul>
+<li>Se deberán buscar todos los miembros del grupo (tabla "grupo equipo") que tengan una fecha de fin de participación en el grupo (campo "fecha fin" de la tabla  "grupo equipo") mayor que la nueva fecha fin del grupo. Si existen miembros que cumplan esta condición no se permitirá el cambio de la fecha de fin del grupo, mostrando un mensaje de validación "La fecha de fin del grupo provoca inconsistencias en las fechas de participación de los miembros" (es decir, no se debe permitir que queden miembros del grupo fuera del periodo de vigencia del grupo)</li>
+</ul></li>
+<li>si se modifica el valor del campo "Grupo especial de investigación":
+<ul>
+<li>si la fecha actual es mayor al campo "fecha inicio" del campo "especial investigación" se creará un registro en la tabla "grupo especial investigación" con la "fecha inicio" igual a la fecha actual, "fecha fin" a null, el campo "especial investigación" el seleccionado por el usuario y "grupo id" el identificador del grupo. Con el identificador devuelto en esta creación se actualizará el grupo para añadirle el campo "especial investigación" creado. Se actualizará el que habría para ponerle la "fecha fin" un día antes al día actual</li>
+<li>si la fecha actual es igual a la del campo "fecha inicio" del campo "especial investigación" se actualizará el registro en la tabla "grupo especial investigación" para actualizar el valor del campo "especial investigación" (No se creará un nuevo histórico de estado, sino que se actualizará el valor del campo en el estado actual, este caso se da cuando en el mismo día cambian el valor mas de una vez).</li>
+</ul></li>
+<li>si se modifica el valor del campo "Tipo grupo":
+<ul>
+<li> si la fecha actual es mayor al campo "fecha inicio" del campo "tipo" se creará un registro en la tabla "grupo tipo" con la "fecha inicio" igual a la fecha actual, "fecha fin" a null, el campo "tipo grupo" el seleccionado por el usuario y "grupo id" el identificador del grupo. Con el identificador devuelto en esta creación se actualizará el grupo para añadirle el campo "tipo" creado. Se actualizará el que habría para ponerle la "fecha fin" un día antes al día actual</li>
+<li>si la fecha actual es igual a la del campo "fecha inicio" del campo "tipo" se actualizará el registro en la tabla "grupo tipo" para actualizar el valor del campo "tipo grupo" (No se creará un nuevo histórico del campo, sino que se actualizará el valor del campo en el estado actual, este caso se da cuando en el mismo día cambian el valor mas de una vez).</li>
+</ul></li>
+<li>por cada palabra clave añadida/eliminada se creará/eliminará de la tabla "grupo palabra clave". En caso de ser un nueva palabra clave, se creará primero la palabra clave en el diccionario de palabras clave del SGI invocando al método definido dentro del Diseño <a href="https://confluence.um.es/confluence/display/HERCULES/SGI+-+ESB+-+SGO" rel="nofollow">SGI - ESB - SGO</a> (POST /palabras-clave).</li>
+</ul>
+<p><br />
+</p></td>
+<td class="confluenceTd"><p>CSP-GIN-E</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">Cancelar</td>
+<td class="confluenceTd"><p>Retorna al listado de Grupos sin salvar los posibles cambios.</p>
+<p><span>Al cancelar un grupo se cancela la información de todas las pestañas de la pantalla, </span>sin salvar los posibles cambios.</p></td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+## Permisos de acceso a la pantalla
+
+### Por actor
+
+<div class="plugin-tabmeta-details">
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable" style="width: 80.2339%;">
+<colgroup>
+<col style="width: 32%" />
+<col style="width: 67%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<th class="confluenceTh"><p>ACT-CSP-004-Administrador</p></th>
+<td class="confluenceTd"><span>CSP-GIN-E</span></td>
+</tr>
+<tr class="even">
+<th class="confluenceTh"><p>ACT-CSP-003-Gestor</p></th>
+<td class="confluenceTd"><span>CSP-GIN-E<br />
+</span></td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh">ACT-CSP-005-Visor</th>
+<td class="confluenceTd"><span>CSP-GIN-V</span></td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">ACT-CSP-001-Investigador</th>
+<td class="confluenceTd">CSP-GIN-INV-VR</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+### Todos los permisos de acceso
+
+<div class="plugin-tabmeta-details">
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable" style="width: 80.4566%;">
+<colgroup>
+<col style="width: 31%" />
+<col style="width: 68%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<th class="confluenceTh">Permisos</th>
+<td class="confluenceTd"><span>CSP-GIN-E, CSP-GIN-V, CSP-GIN-INV-VR<br />
+</span></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="pageSection group">
+
+<div class="pageSectionHeader">
+
+## Attachments:
+
+</div>
+
+<div class="greybox" align="left">
+
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [edicingrupo.png](/attachments/597852293/597865937.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [edicingrupo.png](/attachments/597852293/597876644.png) (image/png)  
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div id="footer" role="contentinfo">
+
+<div class="section footer-body">
+
+Document generated by Confluence on oct 27, 2025 08:44
+
+<div id="footer-logo">
+
+[Atlassian](https://www.atlassian.com/)
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 
 

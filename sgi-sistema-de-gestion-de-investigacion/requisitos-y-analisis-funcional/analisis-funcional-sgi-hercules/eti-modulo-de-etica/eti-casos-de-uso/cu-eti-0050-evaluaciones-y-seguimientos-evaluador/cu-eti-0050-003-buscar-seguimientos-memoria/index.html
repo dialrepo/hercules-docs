@@ -796,7 +796,166 @@
 
   <h1>Cu eti 0050 003 buscar seguimientos memoria</h1>
 
+<div id="page">
 
+<div id="main" class="aui-page-panel">
+
+<div id="main-header">
+
+<div id="breadcrumb-section">
+
+1.  [Hércules](index.html)
+2.  [Hércules](/)
+3.  [SGI. Sistema de gestión de investigación](//sgi-sistema-de-gestion-de-investigacion)
+4.  [Requisitos y análisis funcional](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional)
+5.  [Análisis Funcional SGI - Hércules](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules)
+6.  [ETI - Módulo de ética](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica)
+7.  [ETI - Casos de Uso](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-casos-de-uso)
+8.  [CU-ETI-0050 - Evaluaciones y Seguimientos evaluador](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-casos-de-uso/cu-eti-0050-evaluaciones-y-seguimientos-evaluador)
+
+</div>
+
+# <span id="title-text"> Hércules : CU-ETI-0050-003 - Buscar Seguimientos memoria </span>
+
+</div>
+
+<div id="content" class="view">
+
+<div class="page-metadata">
+
+Created by <span class="author"> Usuario desconocido (lorena.alvarez)</span>, last updated by <span class="editor"> Usuario desconocido (alicia.alvarez)</span> on may 12, 2021
+
+</div>
+
+<div id="main-content" class="wiki-content group">
+
+<div class="plugin-tabmeta-details">
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable" style="width: 75.1988%;">
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 84%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<th class="confluenceTh">Cod. CU</th>
+<td class="confluenceTd"><p><strong><strong><strong><strong>CU-ETI-0050-003 - Buscar Seguimientos memoria<br />
+</strong></strong></strong></strong></p></td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Ver. objetivo</th>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh">Ver. CU</th>
+<td class="confluenceTd">1.0.0</td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Estado</th>
+<td class="confluenceTd"><div class="content-wrapper">
+<span class="status-macro aui-lozenge aui-lozenge-complete conf-macro output-inline">LIBERADO_</span><span> </span>
+</div></td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh">Fec. Aprobación</th>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Épica, historia</th>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh">Actores</th>
+<td class="confluenceTd"><p>ACT-ETI-004-Evaluador</p>
+<p>ACT-ETI-005-Técnico</p></td>
+</tr>
+<tr class="even">
+<th class="confluenceTh"><p>Frecuencia</p></th>
+<td class="confluenceTd">Media</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+## Descripción
+
+Listado de evaluaciones asociadas a memorias de seguimiento en estado "En evaluación seguimiento anual" "En evaluación seguimiento final" o "En secretaría seguimiento final aclaraciones"  y asignadas al evaluador que esta entrando en la aplicación. Tiene que estar asignado como evaluador 1 o evaluador 2 de la evaluación.
+
+Se muestra un buscador para poder filtrar por lo campos:
+
+- Comité
+- Fecha de evaluación
+- Referencia de la memoria
+- Convocatoria
+
+El resultado serán todas las memorias que cumplan con los criterios seleccionados. Las columnas a mostrar son:
+
+- Comité
+- Fecha evaluación
+- Referencia de la memoria
+- Solicitante
+- Versión
+- Acciones: Evaluar
+
+
+
+## Actores
+
+### Actor principal
+
+ACT-ETI-004-Evaluador
+
+ACT-ETI-005-Técnico
+
+## Precondiciones
+
+Usuario logado en el sistema con el rol adecuado dentro del módulo ETI.
+
+Haber accedido a la opción de  menú "Seguimientos".
+
+Tiene que estar asignado como evaluador1 o como evaluador2 de las evaluaciones a mostrar.
+
+## Garantías de éxito (postcondiciones)
+
+Se listan las evaluaciones de memorias en estado "En evaluación seguimiento anual" "En evaluación seguimiento final" o "En secretaría seguimiento final aclaraciones" dadas de alta en el sistema, asignadas al evaluador que esta entrando en la aplicación y que cumplan con los criterios del filtrado.
+
+## Escenario principal (flujo básico)
+
+1.  Se presenta la pantalla Seguimientos con el listado de las evaluaciones de  seguimientos de memoria en estado "En evaluación seguimiento anual" "En evaluación seguimiento final" o "En secretaría seguimiento final aclaraciones" dadas de alta en el sistema y asignadas al evaluador que esta entrando en la aplicación.
+2.  El gestor introduce la información de los filtros y realiza la acción de buscar para poder filtrar un subconjunto de  memorias para evaluar.
+3.  Se presenta la pantalla Seguimientos con el subconjunto de memorias que cumplen las condiciones del filtro.
+
+</div>
+
+</div>
+
+</div>
+
+<div id="footer" role="contentinfo">
+
+<div class="section footer-body">
+
+Document generated by Confluence on oct 27, 2025 08:51
+
+<div id="footer-logo">
+
+[Atlassian](https://www.atlassian.com/)
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 
 

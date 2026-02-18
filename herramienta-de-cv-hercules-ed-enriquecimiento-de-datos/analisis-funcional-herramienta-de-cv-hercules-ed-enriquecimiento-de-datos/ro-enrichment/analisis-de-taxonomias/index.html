@@ -796,7 +796,388 @@
 
   <h1>Analisis de taxonomias</h1>
 
+<div id="page">
 
+<div id="main" class="aui-page-panel">
+
+<div id="main-header">
+
+<div id="breadcrumb-section">
+
+1.  [Hércules](index.html)
+2.  [Hércules](/)
+3.  [Herramienta de CV. Hércules ED - Enriquecimiento de Datos](//herramienta-de-cv-hercules-ed-enriquecimiento-de-datos)
+4.  [Análisis funcional. Herramienta de CV. Hércules ED - Enriquecimiento de Datos](//herramienta-de-cv-hercules-ed-enriquecimiento-de-datos/analisis-funcional-herramienta-de-cv-hercules-ed-enriquecimiento-de-datos)
+5.  [RO Enrichment](//herramienta-de-cv-hercules-ed-enriquecimiento-de-datos/analisis-funcional-herramienta-de-cv-hercules-ed-enriquecimiento-de-datos/ro-enrichment)
+
+</div>
+
+# <span id="title-text"> Hércules : Análisis de taxonomías </span>
+
+</div>
+
+<div id="content" class="view">
+
+<div class="page-metadata">
+
+Created by <span class="author"> Juan Tardón Martínez</span> on feb 08, 2022
+
+</div>
+
+<div id="main-content" class="wiki-content group">
+
+En esta sección se presentan y describen brevemente las iniciativas más relevantes identificadas durante el proceso de análisis de taxonomías existentes para la representación de áreas de conocimiento en el dominio de la investigación, haciendo mención igualmente a las posibilidades de obtener un dataset de entrenamiento ya etiquetado con la taxonomía en cuestión.
+
+Además, se hará una breve comparación de las diferentes taxonomías analizadas de manera que se pueda determinar cómo se podrían reutilizar en la tarea de extracción de descriptores temáticos de los diferentes Research Objects (ROs) para estandarizar el espacio de salida de estos y poder integrarlos posteriormente dentro de la ontología unificada del proyecto HERCULES.
+
+<div class="toc-macro rbtoc1761553695525">
+
+- [1.1 Publicaciones o artículos científicos](#Análisisdetaxonomías-1.1Publicacionesoartículoscientíficos)
+  - [1.1.1 ASJC de Scopus](#Análisisdetaxonomías-1.1.1ASJCdeScopus)
+    - [Dataset de entrenamiento](#Análisisdetaxonomías-Datasetdeentrenamiento)
+  - [1.1.2 LCC de DOAJ](#Análisisdetaxonomías-1.1.2LCCdeDOAJ)
+    - [Dataset de entrenamiento](#Análisisdetaxonomías-Datasetdeentrenamiento.1)
+  - [1.1.3 Clasificación de la plataforma de datos de la BNE](#Análisisdetaxonomías-1.1.3ClasificacióndelaplataformadedatosdelaBNE)
+    - [Dataset de entrenamiento](#Análisisdetaxonomías-Datasetdeentrenamiento.2)
+  - [1.1.4 Nomenclatura de Ciencia y Tecnología de la UNESCO](#Análisisdetaxonomías-1.1.4NomenclaturadeCienciayTecnologíadelaUNESCO)
+    - [Dataset de entrenamiento](#Análisisdetaxonomías-Datasetdeentrenamiento.3)
+  - [1.1.5 Clasificaciones de la Web of Science](#Análisisdetaxonomías-1.1.5ClasificacionesdelaWebofScience)
+    - [Dataset de entrenamiento](#Análisisdetaxonomías-Datasetdeentrenamiento.4)
+- [1.2 Taxonomías para protocolos](#Análisisdetaxonomías-1.2Taxonomíasparaprotocolos)
+  - [Dataset de entrenamiento](#Análisisdetaxonomías-Datasetdeentrenamiento.5)
+- [1.3 Taxonomías para proyectos de código](#Análisisdetaxonomías-1.3Taxonomíasparaproyectosdecódigo)
+  - [Dataset de entrenamiento](#Análisisdetaxonomías-Datasetdeentrenamiento.6)
+- [1.4 Comparación de taxonomías](#Análisisdetaxonomías-1.4Comparacióndetaxonomías)
+- [1.5 Conclusiones sobre la comparación de taxonomías](#Análisisdetaxonomías-1.5Conclusionessobrelacomparacióndetaxonomías)
+- [1.6 Actualización de las conclusiones sobre la comparación de taxonomías](#Análisisdetaxonomías-1.6Actualizacióndelasconclusionessobrelacomparacióndetaxonomías)
+
+</div>
+
+# 1.1 Publicaciones o artículos científicos
+
+A continuación, se describen las taxonomías encontradas para Research Objects (ROs) de tipo publicación o artículo científico.
+
+## 1.1.1 ASJC de Scopus
+
+La base de datos bibliográfica Scopus utiliza ASJC (All Science Journal Classification) como taxonomía para clasificar sus registros.
+
+Dispone de una taxonomía basada en 5 áreas temáticas (Physical Sciences, Health Sciences, Social Sciences, Life Sciences y Multidisciplinary) con una clasificación de primer nivel de 27 entradas<a href="#_ftn1" id="_ftnref1" rel="nofollow"><span>[1]</span></a> y un segundo nivel de 307 entradas<a href="#_ftn2" id="_ftnref2" rel="nofollow"><span>[2]</span></a>.
+
+### Dataset de entrenamiento
+
+Ya disponemos de un dataset basado en esta taxonomía porque es el que se ha utilizadó en el *challenge* en la tarea de extracción de descriptores temáticos. Se podría utilizar ya para realizar una categorización automática de ROs, siempre que se tuviera acceso a su contenido.
+
+## 1.1.2 LCC de DOAJ
+
+La iniciativa Directory of Open Access Journals (DOAJ) utiliza tanto palabras clave de texto libre como términos de clasificaciones formales para representar las áreas de conocimiento sobre cualquier registro de su base de datos.
+
+La clasificación LCC tiene 21 categorías de primer nivel<a href="#_ftn3" id="_ftnref3" rel="nofollow"><span>[3]</span></a> y 228 de segundo nivel<a href="#_ftn4" id="_ftnref4" rel="nofollow"><span>[4]</span></a>. Cada categoría LLC tiene categorías muy generales hasta el nivel 2. Por ejemplo, a segundo nivel tenemos 1 clase referente a Mathematics (QA Mathematics), pero en Scopus-ASJC hay 5: Computational Theory and Mathematics, Applied Mathematics, Computational Mathematics, Discrete Mathematics and Combinatorics, Mathematical Physics.
+
+La fuente de datos de DOAJ devuelve etiquetas \<dc:subject\> (del vocabulario Dublin Core) cuyo contenido tiene como prefijo el esquema formal utilizado para clasificar la publicación en cuestión, excepto en el caso de la Clasificación de la Biblioteca del Congreso o LCC, en la que se indica dicha clasificación mediante un atributo adicional en la etiqueta:
+
+\<dc:subject\>SOME_NONLCC_FORMAL_CLASSIFICATION:term\</dc:subject\>
+
+\<<span style="color:var(--ds-text-accent-blue,#0055cc);">dc:subject</span> xsi:type="<span style="color:var(--ds-background-accent-red-bolder,#c9372c);">dcterms:LCC</span>"\>Term\</<span style="color:var(--ds-text-accent-blue,#0055cc);">dc:subject</span>\>
+
+### Dataset de entrenamiento
+
+DOAJ permite descargar un dataset de registros con metadatos sobre las publicaciones que tiene en su base de datos, pero no el texto completo de la publicación. Para descargar el texto de cada artículo habría que implementar un crawler o herramienta de web scraping.
+
+## 1.1.3 Clasificación de la plataforma de datos de la BNE
+
+Las clasificaciones temáticas de la BNE (Biblioteca Nacional Española) son genéricas y planas, ya que por ejemplo hay:
+
+- 676 categorías en “materia_simple” y 30.480 de ellas no tienen una categoría madre,
+- 040 categorías en “subencabezado general” y 4.023 categorías están sin categoría madre,
+- 368 categorías en “subencabezamientos” con 353 categorías sin categoría madre.
+
+### Dataset de entrenamiento
+
+No disponible, aunque se puede descargar un dataset de registros con metadatos sobre las publicaciones que tiene en su base de datos, pero no el texto completo de la publicación. Para descargar el texto de cada artículo habría que implementar un crawler o herramienta de web scrapping.
+
+## 1.1.4 Nomenclatura de Ciencia y Tecnología de la UNESCO
+
+Existen dos clasificaciones: la Nomenclatura de Ciencia y Tecnología de la UNESCO<a href="#_ftn5" id="_ftnref5" rel="nofollow"><span>[5]</span></a> y el Tesauro de la UNESCO<a href="#_ftn6" id="_ftnref6" rel="nofollow"><span>[6]</span></a>, ambas con 3 niveles.
+
+La primera clasificación es la que se suele utilizar en la universidad española y contiene 2.505 categorías (24 de ellas a primer nivel y 248 a segundo):
+
+1.  CAMPOS (24). Se refieren a las áreas más generales y están identificados por los 2 primeros dígitos del código. Cada campo comprende varias disciplinas.
+2.  DISCIPLINAS (248). Suponen una descripción general de grupos de especialidades en Ciencia y Tecnología. Se identifican con los 4 primeros dígitos del código (coincidiendo los dos primeros con los del campo al que pertenecen).
+3.  SUBDISCIPLINAS (2505). Son las entradas más específicas de la nomenclatura y representan las actividades que se realizan dentro de una disciplina. Están codificadas con 6 dígitos (coincidiendo los cuatro primeros con la disciplina a la que pertenecen).
+
+Parece ser que hay muchas categorías que están obsoletas, ya que la comunidad científica suele tener dificultad para encuadrar sus áreas de investigación actuales en las disciplinas de segundo nivel y las subdisciplinas de tercer nivel.
+
+### Dataset de entrenamiento
+
+Tal vez podríamos conseguir un dataset anotado de algún repositorio de la universidad española, pero sería difícil que llegase con una cantidad suficiente de ejemplos para todas las categorías de nivel 3.
+
+## 1.1.5 Clasificaciones de la Web of Science
+
+Web of Science (WoS) es una plataforma on-line de Clarivate Analytics que contiene bases de datos de información bibliográfica<a href="#_ftn7" id="_ftnref7" rel="nofollow"><span>[7]</span></a> y recursos de análisis de la información que permiten evaluar y analizar el rendimiento de la investigación. Su finalidad no es proporcionar el texto completo de los documentos, sino proporcionar herramientas de análisis que permitan valorar su calidad científica.
+
+Dispone de 16 esquemas de clasificación<a href="#_ftn8" id="_ftnref8" rel="nofollow"><span>[8]</span></a> en áreas de investigación, de los cuales 12 se basan en la asignación de datos a sistemas externos de clasificación. Los esquemas externos se desarrollan en asociación con los organismos de evaluación de la investigación en una determinada región y suelen basarse en clasificaciones de revistas o en el mapeo de categorías ya existentes en WoS. Además, existen otros 4 esquemas de clasificación exclusivos de WoS:
+
+- Citation Topics<a href="#_ftn9" id="_ftnref9" rel="nofollow"><span>[9]</span></a> (WoS-CT). Posee 3 niveles (macro, meso y micro) con diferente número de categorías: 10 (macro), 326 (meso) y 2.444 (micro). Con WoS-CT los documentos se etiquetan manualmente en categorías macro y meso según su contenido. Los micro se asignan algorítmicamente con el descriptor más significativo para el documento obtenido con un algoritmo (desarrollado por CWTS Leiden<a href="#_ftn10" id="_ftnref10" rel="nofollow"><span>[10]</span></a>) que se basa en procesar las citas de los documentos y no su contenido.
+- WoS Research Areas<a href="#_ftn11" id="_ftnref11" rel="nofollow"><span>[11]</span></a> (WoS-RA). Contiene un primer nivel de 252 áreas temáticas para ciencias, ciencias sociales y artes y humanidades. Áreas muy amplias como física y ciencia de los materiales están representadas por subáreas más pequeñas de segundo nivel, pero no hemos encontrado cuántas categorías hay en dicho nivel. WoS-RA se utiliza en Science Citation Index Expanded Journals, Social Sciences Citation Index Journals y Arts & Humanities Citation Index Journals.
+- Essential Science Indicators<a href="#_ftn12" id="_ftnref12" rel="nofollow"><span>[12]</span></a> (WoS-ESI). Contiene un primer nivel de 22 áreas temáticas. Se utiliza para clasificar 11.728 revistas de Web of Science Core Collection (solamente Science Citation Index Expanded y Social Sciences Citation Index). Con WoS-ESI cada revista solamente se puede asignar a una de las 22 áreas de investigación. Revistas como Science y Nature se clasifican excepcionalmente como multidisciplinares, ya que publican investigaciones en muchos campos diferentes. Los artículos publicados en estas revistas multidisciplinares se asignan a un área temática u otra en función de la representación de las revistas citadas.
+- Institutional Profiles Research Areas<a href="#_ftn13" id="_ftnref13" rel="nofollow"><span>[13]</span></a> (WoS-IPRA). Contiene un primer nivel de 6 áreas temáticas y un segundo nivel con 267 subáreas. WoS-IPRA es utilizada por Clarivate Analytics para elaborar perfiles institucionales de las principales universidades e instituciones de investigación del mundo.
+
+### Dataset de entrenamiento
+
+Hemos comprobado que en el contexto del proyecto HERCULES tenemos acceso a alguna de las APIs de Web of Science<a href="#_ftn14" id="_ftnref14" rel="nofollow"><span>[14]</span></a>. Haciendo llamadas a la API se podría generar un dataset de registros con metadatos sobre las publicaciones, pero no el texto completo de la publicación. Sin embargo, se podría utilizar el abstract para la extracción de descriptores temáticos. 
+
+# 1.2 Taxonomías para protocolos
+
+Dos de los repositorios de protocolos experimentales más utilizados por la comunidad científica y que son mencionados en el pliego de HERCULES son <a href="http://Bio-protocol.org" class="external-link" rel="nofollow">Bio-protocol.org</a> y Protocol-exchange.
+
+<a href="http://Bio-protocol.org" class="external-link" rel="nofollow">Bio-protocol.org</a><a href="#_ftn15" id="_ftnref15" rel="nofollow"><span>[15]</span></a> usa descriptores específicos de texto libre y dispone de una categorización de hasta 3 niveles.
+
+Por su parte, Protocol-exchange<a href="#_ftn16" id="_ftnref16" rel="nofollow"><span>[16]</span></a> sí dispone de una categorización de un único nivel con unos 107 términos<a href="#_ftn17" id="_ftnref17" rel="nofollow"><span>[17]</span></a>. Cada protocolo está asignado al menos a uno de sus “subject terms”. Si algún autor no encuentra una categoría adecuada a su protocolo en el formulario de registro correspondiente, puede ponerse en contacto con <a href="mailto:protocol.exchange@nature.com" class="external-link" rel="nofollow">protocol.exchange@nature.com</a> para estudiar la posibilidad de ampliar la lista existente.
+
+Existen otras iniciativas como <a href="http://Protocols.io" class="external-link" rel="nofollow">Protocols.io</a><a href="#_ftn18" id="_ftnref18" rel="nofollow"><span>[18]</span></a> que ofrece una API<a href="#_ftn19" id="_ftnref19" rel="nofollow"><span>[19]</span></a> para consultar su repositorio de protocolos, pero aparentemente no dispone de ninguna clasificación para los mismos ni almacena ningún metadato sobre áreas de conocimiento.
+
+## Dataset de entrenamiento
+
+Se podría implementar un crawler o herramienta de web scraping para generar un dataset a partir de la web de Protocol-exchange (con algo más de variedad temática) o desde la web de Bio-protocols (bio-ciencias).
+
+# 1.3 Taxonomías para proyectos de código
+
+Dos de los repositorios de código más utilizados por la comunidad científica y que son mencionados en el pliego de HERCULES son GitHub<a href="#_ftn20" id="_ftnref20" rel="nofollow"><span>[20]</span></a> y Bitbucket<a href="#_ftn21" id="_ftnref21" rel="nofollow"><span>[21]</span></a>.
+
+GitHub solamente usa descriptores específicos de texto libre que denomina “topics”<a href="#_ftn22" id="_ftnref22" rel="nofollow"><span>[22]</span></a> para clasificar y realizar búsquedas de repositorios de código. Este metadato y otros pueden ser recuperados a través de su API<a href="#_ftn23" id="_ftnref23" rel="nofollow"><span>[23]</span></a>.
+
+Bitbucket parece que no utiliza ninguna clasificación. En la descripción de su API<a href="#_ftn24" id="_ftnref24" rel="nofollow"><span>[24]</span></a> tampoco aparece ningún metadato sobre un repositorio que se pueda interpretar como elemento de clasificación.
+
+Sin embargo, en SourceForge<a href="#_ftn25" id="_ftnref25" rel="nofollow"><span>[25]</span></a> sí parece que se utiliza una clasificación de varios niveles para el catálogo de aplicaciones que ofrece, dado que en su directorio permite realizar búsquedas por categorías<a href="#_ftn26" id="_ftnref26" rel="nofollow"><span>[26]</span></a>. No hemos encontrado documentación sobre el número de niveles ni sobre el número de categorías en cada nivel.
+
+## Dataset de entrenamiento
+
+Se podría implementar un crawler o herramienta de web scraping para generar un dataset basado en el catálogo de SourceForge.
+
+# 1.4 Comparación de taxonomías
+
+En la siguiente tabla se comparan las diferentes taxonomías analizadas teniendo en cuenta sus características principales en cuanto a la calidad de sus términos y la posibilidad de obtener un dataset de entrenamiento, el número de niveles que posee, el número de categorías por cada nivel, fechas asociadas (tiempo de vida) y uso que se está haciendo de las mismas.  
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="odd">
+<td class="confluenceTd"><p><strong>Taxonomía</strong></p></td>
+<td class="confluenceTd"><p><strong>Características</strong></p></td>
+<td class="confluenceTd"><p><strong># Niveles</strong></p></td>
+<td class="confluenceTd"><p><strong># Categorías</strong></p></td>
+<td class="confluenceTd"><p><strong>Fechas</strong></p></td>
+<td class="confluenceTd"><p><strong>Uso en apps</strong></p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>ASJC - Scopus</p></td>
+<td class="confluenceTd"><p>·      Clasificación significativa de categorías.</p>
+<p>·      Dataset disponible para publicaciones y protocolos.</p></td>
+<td class="confluenceTd"><p>2</p></td>
+<td class="confluenceTd"><p>Nivel 1: 27</p>
+<p>Nivel 2: 307</p></td>
+<td class="confluenceTd"><p>2020</p></td>
+<td class="confluenceTd"><p>Scopus y otras aplicaciones de Elsevier</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p>LCC - DOAJ</p></td>
+<td class="confluenceTd"><p>·      Categorías muy generales hasta el nivel 2.</p>
+<p>·      Dataset de publicaciones a elaborar mediante web scrapping.</p></td>
+<td class="confluenceTd"><p>5</p></td>
+<td class="confluenceTd"><p>Nivel 1: 21<br />
+Nivel 2: 228</p></td>
+<td class="confluenceTd"><p>2021</p></td>
+<td class="confluenceTd"><p>DOAJ</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>Clasificación de la plataforma de datos de la BNE</p></td>
+<td class="confluenceTd"><p>·      Categorías muy genéricas y planas.</p>
+<p>·      Dataset de publicaciones a elaborar y quizá de baja calidad.</p></td>
+<td class="confluenceTd"><p>¿3?</p></td>
+<td class="confluenceTd"><p>Difícil de saber en concreto.</p></td>
+<td class="confluenceTd"><p>¿?</p></td>
+<td class="confluenceTd"><p><a href="http://datos.bne.es" class="external-link" rel="nofollow">datos.bne.es</a></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p>Nomenclatura de Ciencia y Tecnología de la UNESCO</p></td>
+<td class="confluenceTd"><p>·      Categorías obsoletas.</p>
+<p>·      Tradición en la universidad española.</p>
+<p>·      Dataset de publicaciones anotado quizá de algún repositorio de la universidad española.</p></td>
+<td class="confluenceTd"><p>3</p></td>
+<td class="confluenceTd"><p>Nivel 1: 24</p>
+<p>Nivel 2: 248</p></td>
+<td class="confluenceTd"><p>1973-1988-2021</p></td>
+<td class="confluenceTd"><p>CVN-FECYT</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>WoS-CT</p></td>
+<td class="confluenceTd"><p>·      Categorización completa y actualizada.</p>
+<p>·      Dataset de publicaciones con abstract y metadatos de categorías si se solicita acceso a InCites API.</p></td>
+<td class="confluenceTd"><p>3</p></td>
+<td class="confluenceTd"><p>Nivel 1: 10</p>
+<p>Nivel 2: 326</p></td>
+<td class="confluenceTd"><p>2019-2021</p></td>
+<td class="confluenceTd"><p>WoS y otras de Clarivate Analytics</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p>WoS-RA</p></td>
+<td class="confluenceTd"><p>·      Categorización completa y actualizada de un nivel.</p>
+<p>·      Dataset de publicaciones con abstract y metadatos de categorías.</p></td>
+<td class="confluenceTd"><p>1</p></td>
+<td class="confluenceTd"><p>Nivel 1: 252</p></td>
+<td class="confluenceTd"><p>?-2021</p></td>
+<td class="confluenceTd"><p>WoS y otras de Clarivate Analytics</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>WoS-ESI</p></td>
+<td class="confluenceTd"><p>·      Categorización actualizada, pero con pocos términos.</p>
+<p>·      Dataset de publicaciones con abstract y metadatos de categorías.</p></td>
+<td class="confluenceTd"><p>1</p></td>
+<td class="confluenceTd"><p>Nivel 1: 22</p></td>
+<td class="confluenceTd"><p>2010-2021</p></td>
+<td class="confluenceTd"><p>WoS y otras de Clarivate Analytics</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p>WoS-IPRA</p></td>
+<td class="confluenceTd"><p>·      Categorización completa y actualizada.</p>
+<p>·      Dataset de publicaciones con abstract y metadatos de categorías.</p></td>
+<td class="confluenceTd"><p>2</p></td>
+<td class="confluenceTd"><p>Nivel 1: 6</p>
+<p>Nivel 2: 267</p></td>
+<td class="confluenceTd"><p>2009-2021</p></td>
+<td class="confluenceTd"><p>WoS y otras de Clarivate Analytics</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>Clasificación Protocol-exchange</p></td>
+<td class="confluenceTd"><p>·      Categorización abierta de un nivel, muy centrada en ciertos dominios científicos.</p>
+<p>·      Dataset de protocolos a elaborar mediante web scraping.</p></td>
+<td class="confluenceTd"><p>1</p></td>
+<td class="confluenceTd"><p>Nivel 1: 107</p></td>
+<td class="confluenceTd"><p>2019-2021</p></td>
+<td class="confluenceTd"><p>Protocol Exchange (repositorio abierto de Nature)</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p>Clasificación SourceForge</p></td>
+<td class="confluenceTd"><p>·      Categorización muy extensa de la que se desconoce su estructura.</p>
+<p>·      Dataset de protocolos a elaborar mediante web scraping.</p></td>
+<td class="confluenceTd"><p>?</p></td>
+<td class="confluenceTd"><p>?</p></td>
+<td class="confluenceTd"><p>1999-2021</p></td>
+<td class="confluenceTd"><p>SourceForge</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+# 1.5 Conclusiones sobre la comparación de taxonomías
+
+De todas las taxonomías analizadas y comparadas, las más apropiadas serían las que tienen una buena cobertura, es decir, un número significativo no muy elevado de categorías en al menos dos niveles, para todas las áreas de investigación y para todos los tipos de ROs descritos en el proyecto HERCULES.
+
+Tal y como se plantea en el proyecto, lo habitual es que los distintos tipos de RO estén relacionados entre sí formando un RO compuesto, por lo que también sería apropiado que se utilizara una misma taxonomía para todos ellos.
+
+Por número no muy elevado entendemos aquél que ronde los 200-300 términos, de manera que sea abordable su utilización con un clasificador supervisado, uno de los enfoques que se plantean en el proceso de extracción de descriptores temáticos de ROs.
+
+Y por significativo entendemos aquél que cubra con cierta concreción un número suficiente de categorías de segundo nivel para cada una de las áreas de investigación de primer nivel.
+
+Dicho lo anterior, las candidatas más apropiadas serían la ASJC de Scopus, la LCC de DOAJ, la Nomenclatura de Ciencia y Tecnología de la UNESCO y la clasificación IPRA de WoS.
+
+La ASJC de Scopus tiene la ventaja de que ha sido utilizada en el Challenge del proyecto HERCULES y ya disponemos, por tanto, de un dataset anotado para su utilización. Sin embargo, se generaron dudas respecto a su cobertura para todas las áreas de investigación, dando lugar al análisis que se presenta en este documento.
+
+La Nomenclatura de Ciencia y Tecnología de la UNESCO parece que genera problemas respecto a la actualidad de sus términos, dado que la comunidad científica así lo ha expresado de manera informal en diferentes foros.
+
+Por último, si además tenemos en cuenta el volumen de ROs existentes en las fuentes de datos y la cantidad de bases de datos de diferentes dominios científicos, la fuente de datos de WoS es mayor que el de DOAJ.
+
+Todo ello permite concluir que la clasificación IPRA de WoS podría ser la opción más interesante para estandarizar el espacio de salida de descriptores temáticos de las áreas de conocimiento de los ROs y sería la que se integraría en la ROH (Red de Ontologías de HERCULES).
+
+# 1.6 Actualización de las conclusiones sobre la comparación de taxonomías
+
+Dada la imposibilidad de obtener un *dataset* de entrenamiento ya etiquetado con las clasificaciones más interesante identificadas, así como el resto de problemas legales y restricciones en el uso de varias fuentes de datos relacionadas con dichas taxonomías, finalmente se propone desarrollar una taxonomía unificada para el proyecto Hércules a partir de las **fuentes de datos** que sí están **disponibles** y que han permitido elaborar los *datasets* etiquetados necesarios para implementar la propuesta o estrategia híbrida descrita en la sección de <a href="https://confluence.um.es/confluence/pages/viewpage.action?pageId=222822824" style="text-decoration: none;" rel="nofollow">Enfoques para extracción de descriptores temáticos de ROs</a>:
+
+- Dataset interno creado en el marco de un proyecto del Plan de Impulso de la Lengua y utilizado en el *Challenge.*
+- Dataset <a href="https://arxiv.org/" class="external-link" style="text-decoration: none;" rel="nofollow">arXiv</a> con pre-publicaciones de artículos científicos en el campo de las matemáticas, física, ciencias de la computación y biología cuantitativa. En muchos campos de las matemáticas y la física, casi todos los artículos científicos se colocan en arXiv.
+- Dataset <a href="https://pubmed.ncbi.nlm.nih.gov/" class="external-link" style="text-decoration: none;" rel="nofollow">PubMed</a> de publicaciones de investigación biomédica almacenadas en la base de datos MEDLINE. También posee entradas sobre publicaciones de revistas científicas de similar calidad, pero que no son parte de MEDLINE.
+- Dataset <a href="https://sourceforge.net/" class="external-link" style="text-decoration: none;" rel="nofollow">SourceForge</a> de repositorios de código clasificados por temas.
+- Dataset <a href="https://bio-protocol.org/" class="external-link" style="text-decoration: none;" rel="nofollow">Bio-Protocol</a> de protocolos experimentales en el área de ciencias de la vida (*Life Sciences*).
+
+
+
+<a href="#_ftnref1" id="_ftn1" rel="nofollow"><span>[1]</span></a> <a href="https://service.elsevier.com/app/answers/detail/a_id/12007/supporthub/scopus/related/1/" class="external-link" rel="nofollow">https://service.elsevier.com/app/answers/detail/a_id/12007/supporthub/scopus/related/1/</a>
+
+<a href="#_ftnref2" id="_ftn2" rel="nofollow"><span>[2]</span></a> <a href="https://service.elsevier.com/app/answers/detail/a_id/15181/supporthub/scopus/" class="external-link" rel="nofollow">https://service.elsevier.com/app/answers/detail/a_id/15181/supporthub/scopus/</a>
+
+<a href="#_ftnref3" id="_ftn3" rel="nofollow"><span>[3]</span></a> <a href="https://www.loc.gov/catdir/cpso/lcc.html" class="external-link" rel="nofollow">https://www.loc.gov/catdir/cpso/lcc.html</a>
+
+<a href="#_ftnref4" id="_ftn4" rel="nofollow"><span>[4]</span></a> <a href="https://en.wikipedia.org/wiki/Library_of_Congress_Classification" class="external-link" rel="nofollow">https://en.wikipedia.org/wiki/Library_of_Congress_Classification</a>
+
+<a href="#_ftnref5" id="_ftn5" rel="nofollow"><span>[5]</span></a> <a href="https://skos.um.es/unesco6/view.php?fmt=1" class="external-link" rel="nofollow">https://skos.um.es/unesco6/view.php?fmt=1</a>
+
+<a href="#_ftnref6" id="_ftn6" rel="nofollow"><span>[6]</span></a> <a href="https://skos.um.es/unescothes/view.php?fmt=1" class="external-link" rel="nofollow">https://skos.um.es/unescothes/view.php?fmt=1</a>
+
+<a href="#_ftnref7" id="_ftn7" rel="nofollow"><span>[7]</span></a> <a href="https://biblioguias.biblioteca.deusto.es/c.php?g=149255&amp;p=4751722" class="external-link" rel="nofollow">https://biblioguias.biblioteca.deusto.es/c.php?g=149255&amp;p=4751722</a>
+
+<a href="#_ftnref8" id="_ftn8" rel="nofollow"><span>[8]</span></a> <a href="https://incites.help.clarivate.com/Content/Research-Areas/research-areas.htm" class="external-link" rel="nofollow">https://incites.help.clarivate.com/Content/Research-Areas/research-areas.htm</a>
+
+<a href="#_ftnref9" id="_ftn9" rel="nofollow"><span>[9]</span></a> <a href="https://incites.help.clarivate.com/Content/Research-Areas/citation-topics.htm" class="external-link" rel="nofollow">https://incites.help.clarivate.com/Content/Research-Areas/citation-topics.htm</a>
+
+<a href="#_ftnref10" id="_ftn10" rel="nofollow"><span>[10]</span></a> <a href="https://www.leidenranking.com/" class="external-link" rel="nofollow">https://www.leidenranking.com/</a>
+
+<a href="#_ftnref11" id="_ftn11" rel="nofollow"><span>[11]</span></a> <a href="https://incites.help.clarivate.com/Content/Research-Areas/wos-research-areas.htm" class="external-link" rel="nofollow">https://incites.help.clarivate.com/Content/Research-Areas/wos-research-areas.htm</a>
+
+<a href="#_ftnref12" id="_ftn12" rel="nofollow"><span>[12]</span></a> <a href="https://incites.help.clarivate.com/Content/Research-Areas/essential-science-indicators.htm" class="external-link" rel="nofollow">https://incites.help.clarivate.com/Content/Research-Areas/essential-science-indicators.htm</a>
+
+<a href="#_ftnref13" id="_ftn13" rel="nofollow"><span>[13]</span></a> <a href="https://incites.help.clarivate.com/Content/Research-Areas/ip-research-areas.htm" class="external-link" rel="nofollow">https://incites.help.clarivate.com/Content/Research-Areas/ip-research-areas.htm</a>
+
+<a href="#_ftnref14" id="_ftn14" rel="nofollow"><span>[14]</span></a> <a href="https://clarivate.com/webofsciencegroup/solutions/xml-and-apis/" class="external-link" rel="nofollow">https://clarivate.com/webofsciencegroup/solutions/xml-and-apis/</a>
+
+<a href="#_ftnref15" id="_ftn15" rel="nofollow"><span>[15]</span></a> <a href="https://bio-protocol.org" class="external-link" rel="nofollow">https://bio-protocol.org</a>
+
+<a href="#_ftnref16" id="_ftn16" rel="nofollow"><span>[16]</span></a> <a href="https://protocolexchange.researchsquare.com/" class="external-link" rel="nofollow">https://protocolexchange.researchsquare.com/</a>
+
+<a href="#_ftnref17" id="_ftn17" rel="nofollow"><span>[17]</span></a> <a href="https://protocolexchange.researchsquare.com/browse" class="external-link" rel="nofollow">https://protocolexchange.researchsquare.com/browse</a>
+
+<a href="#_ftnref18" id="_ftn18" rel="nofollow"><span>[18]</span></a> <a href="https://www.protocols.io/" class="external-link" rel="nofollow">https://www.protocols.io/</a>
+
+<a href="#_ftnref19" id="_ftn19" rel="nofollow"><span>[19]</span></a> <a href="https://apidoc.protocols.io/#protocol-object" class="external-link" rel="nofollow">https://apidoc.protocols.io/#protocol-object</a>
+
+<a href="#_ftnref20" id="_ftn20" rel="nofollow"><span>[20]</span></a> <a href="https://github.com/" class="external-link" rel="nofollow">https://github.com/</a>
+
+<a href="#_ftnref21" id="_ftn21" rel="nofollow"><span>[21]</span></a> <a href="https://bitbucket.org/" class="external-link" rel="nofollow">https://bitbucket.org/</a>
+
+<a href="#_ftnref22" id="_ftn22" rel="nofollow"><span>[22]</span></a> <a href="https://docs.github.com/en/github/administering-a-repository/classifying-your-repository-with-topics" class="external-link" rel="nofollow">https://docs.github.com/en/github/administering-a-repository/classifying-your-repository-with-topics</a>
+
+<a href="#_ftnref23" id="_ftn23" rel="nofollow"><span>[23]</span></a> <a href="https://docs.github.com/en/rest/reference/repos#get-all-repository-topics" class="external-link" rel="nofollow">https://docs.github.com/en/rest/reference/repos#get-all-repository-topics</a>
+
+<a href="#_ftnref24" id="_ftn24" rel="nofollow"><span>[24]</span></a> <a href="https://developer.atlassian.com/bitbucket/api/2/reference/resource/repositories" class="external-link" rel="nofollow">https://developer.atlassian.com/bitbucket/api/2/reference/resource/repositories</a>
+
+<a href="#_ftnref25" id="_ftn25" rel="nofollow"><span>[25]</span></a> <a href="https://sourceforge.net/" class="external-link" rel="nofollow">https://sourceforge.net/</a>
+
+<a href="#_ftnref26" id="_ftn26" rel="nofollow"><span>[26]</span></a> <a href="https://sourceforge.net/directory/?clear" class="external-link" rel="nofollow">https://sourceforge.net/directory/?clear</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div id="footer" role="contentinfo">
+
+<div class="section footer-body">
+
+Document generated by Confluence on oct 27, 2025 09:28
+
+<div id="footer-logo">
+
+[Atlassian](https://www.atlassian.com/)
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 
 

@@ -796,7 +796,820 @@
 
   <h1>Rep prc 0040 informe detalle grupo</h1>
 
+<div id="page">
 
+<div id="main" class="aui-page-panel">
+
+<div id="main-header">
+
+<div id="breadcrumb-section">
+
+1.  [Hércules](index.html)
+2.  [Hércules](/)
+3.  [SGI. Sistema de gestión de investigación](//sgi-sistema-de-gestion-de-investigacion)
+4.  [Requisitos y análisis funcional](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional)
+5.  [Análisis Funcional SGI - Hércules](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules)
+6.  [GEN - Aspectos generales](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales)
+7.  [INT - Requisitos de integración](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion)
+8.  [REQ-INT-0150-SGREP - Integración con Sistema de Generación de Reportes](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0150-sgrep-integracion-con-sistema-de-generacion-de-reportes)
+9.  [PRC - Informes Predefinidos](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0150-sgrep-integracion-con-sistema-de-generacion-de-reportes/prc-informes-predefinidos)
+
+</div>
+
+# <span id="title-text"> Hércules : REP-PRC-0040 - Informe Detalle grupo </span>
+
+</div>
+
+<div id="content" class="view">
+
+<div class="page-metadata">
+
+Created by <span class="author"> Usuario desconocido (lorena.alvarez)</span>, last updated on may 12, 2022
+
+</div>
+
+<div id="main-content" class="wiki-content group">
+
+<div class="contentLayout2">
+
+<div class="columnLayout single" layout="single">
+
+<div class="cell normal" data-type="normal">
+
+<div class="innerCell">
+
+<div class="plugin-tabmeta-details">
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="odd">
+<th class="confluenceTh">Cod. REP</th>
+<td class="confluenceTd"><p><strong>REP-PRC-0040 - Informe Detalle grupo<br />
+</strong></p></td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Ver. Objetivo</th>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh">Ver. REP</th>
+<td class="confluenceTd">1.0.0</td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Estado</th>
+<td class="confluenceTd"><div class="content-wrapper">
+<span class="status-macro aui-lozenge conf-macro output-inline">PENDIENTE</span>
+</div></td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh">Fec. Aprobación</th>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Épica, historia</th>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh">Frecuencia</th>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+## Diseño Informe 
+
+Se debe de generar un informe en formato PDF con el detalle del reparto de la baremación de una convocatoria de un grupo de investigación. Se muestra el listado de investigadores que forman parte del grupo y los puntos Sexenios, de Costes indirectos y de cada baremo de producción (libros, artículos, trabajos presentados en congresos, dirección de tesis, obras artísticas, comités editoriales, organización de actividades I+D+i, proyectos de investigación, contratos e invenciones).  
+
+El ACT-PRC-001-Investigador únicamente tendrá acceso al informe si pertenece o ha pertenecido al grupo (existe en la tabla "grupo equipo" para el identificador del grupo pasado por parámetro)
+
+El informe recibirá por parámetro el año de la convocatoria y el identificador del grupo de investigación  
+
+El formato del fichero es el siguiente:
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852494/597874022.png" class="confluence-embedded-image confluence-content-image-border" draggable="false" data-image-src="attachments/597852494/597874022.png" data-unresolved-comment-count="0" data-linked-resource-id="597874022" data-linked-resource-version="2" data-linked-resource-type="attachment" data-linked-resource-default-alias="informesrepartoacigrupoinforme.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852494" data-linked-resource-container-version="18" tabindex="0" width="650" /></span>  
+
+
+
+En la siguiente tabla se especifica de donde sacar la información:  
+
+
+
+<div class="table-wrap">
+
+<table class="wrapped relative-table confluenceTable" style="width: 80.813%;">
+<colgroup>
+<col style="width: 24%" />
+<col style="width: 16%" />
+<col style="width: 59%" />
+</colgroup>
+<tbody>
+<tr class="header">
+<th class="confluenceTh">Nombre</th>
+<th class="confluenceTh">Formato</th>
+<th class="confluenceTh">Campo SGI</th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd">GRUPO</td>
+<td class="confluenceTd">Texto</td>
+<td class="confluenceTd"><p>Nombre del grupo de investigación.</p>
+<p>A partir del identificador pasado por parámetro se irá a recuperar los datos generales del grupo.</p>
+<p>Campo "nombre" de la tabla "grupo" (Módulo CSP - GIN).</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">Convocatoria</td>
+<td class="confluenceTd">Número entero</td>
+<td class="confluenceTd">Año pasado por parámetro. Es el año de la convocatoria de baremación</td>
+</tr>
+<tr class="odd">
+<td colspan="3" class="highlight-#deebff confluenceTd" title="Color de fondo: 35 % azul claro" data-highlight-colour="#deebff"><p>INVESTIGADORES: Listado de investigadores que formaron parte del grupo de investigación en los años que se baremaron en la convocatoria de baremación cuyo "anio" corresponde con el año pasado por parámetro.</p>
+<p>Se obtiene de la tabla "puntuación item investigador" (para obtener el campo "persona ref)", que pertenecen al grupo (tabla "puntuación grupo investigador") y que cumple que   "grupo ref" es el pasado por parámetro y "convocatoria baremación id" es el identificador de la convocatoria cuyo "anio" corresponde con el año pasado por parámetro (tabla "puntuación grupo").</p>
+<p>Por cada persona distinta del grupo se mostrará una fila con las siguientes columnas (un mismo investigador puede estar en la tabla "puntuación grupo investigador" mas de una vez, porque puede tener una puntuación del item para cada año de baremación, como es el caso de items de proyectos)</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">NOMBRE</td>
+<td class="confluenceTd">Texto</td>
+<td class="confluenceTd"><p>Se recuperarán el Nombre y apellidos por medio de <a href="https://confluence.um.es/confluence/display/HERCULES/REQ-INT-0020-SGP-0030+-+Consultar+datos+generales+de+persona" rel="nofollow">REQ-INT-0020-SGP-0030 - Consultar datos generales de persona</a> a partir del campo "persona ref" de la tabla "puntuación item investigador"</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">PUNTOS PROD.</td>
+<td class="confluenceTd">Número decimal con dos decimales</td>
+<td class="confluenceTd"><p>Se suma el campo "puntos" de la tabla "puntuación grupo investigador" de todas las puntuaciones que corresponden con el grupo pasado por parámetro (campo "grupo ref" de la tabla "puntuación grupo" tiene el valor del identificador de grupo pasado por parámetro y que en el campo "convocatoria baremación id" tenga el identificador de la convocatoria cuyo "anio" corresponde con el año pasado por parámetro), son de la "persona ref" que corresponde con el identificador del investigador que se esta mostrando en al tabla y son de tipo puntuación igual a LIBROS, o ARTICULOS o COMITES_EDITORIALES o CONCRESOS o DIRECCION_TESIS o OBRAS_ARTISTICAS o ORGANZACION_ACTIVIDADES o CONTRATOS o PROYECTOS_INVESTIGACION o INVENCIONES (entidad "puntuación item investigador" tiene el campo "tipo puntuación")</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">PUNTOS C.I.</td>
+<td class="confluenceTd">Número decimal con dos decimales</td>
+<td class="confluenceTd"><p>Se suma el campo "puntos" de la tabla "puntuación grupo investigador" de todas las puntuaciones que corresponden con el grupo pasado por parámetro (campo "grupo ref" de la tabla "puntuación grupo" tiene el valor del identificador de grupo pasado por parámetro y que en el campo "convocatoria baremación id" tenga el identificador de la convocatoria cuyo "anio" corresponde con el año pasado por parámetro), son de la "persona ref" que corresponde con el identificador del investigador que se esta mostrando en al tabla y son de tipo puntuación igual a COSTE_INDIRECTO (entidad "puntuación item investigador" tiene el campo "tipo puntuación")</p></td>
+</tr>
+<tr class="odd">
+<td colspan="3" class="highlight-#deebff confluenceTd" title="Color de fondo: 35 % azul claro" data-highlight-colour="#deebff"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">EL PRECIO POR PUNTO DE PRODUCCIÓN ES x euros</td>
+<td class="confluenceTd">Número decimal con dos decimales</td>
+<td class="confluenceTd">El valor de "x" se obtiene del campo "punto producción" de la tabla "convocatoria baremación" de la convocatoria cuyo "anio" corresponde con el año pasado por parámetro.</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">EL PRECIO POR PUNTO DE SEXENIO ES x euros</td>
+<td class="confluenceTd">Número decimal con dos decimales</td>
+<td class="confluenceTd">El valor de "x" se obtiene del campo "punto sexenio" de la tabla "convocatoria baremación" de la convocatoria cuyo "anio" corresponde con el año pasado por parámetro.</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">EL PRECIO POR PUNTO DE COSTES INDIRECTOS ES x euros</td>
+<td class="confluenceTd">Número decimal con dos decimales</td>
+<td class="confluenceTd">El valor de "x" se obtiene del campo "punto costes indirectos" de la tabla "convocatoria baremación" de la convocatoria cuyo "anio" corresponde con el año pasado por parámetro.</td>
+</tr>
+<tr class="odd">
+<td colspan="3" class="highlight-#deebff confluenceTd" title="Color de fondo: 35 % azul claro" data-highlight-colour="#deebff"><p>SEXENIOS: Fila resumen con el número de sexenios de los investigadores del grupo</p>
+<p>Se obtiene los puntos del baremo "Sexenio" de la convocatoria que corresponde con el año pasado por parámetro: Se obtiene el campo "puntos" de la tabla "baremo" cuyo campo "configuración baremo" sea el de "tipo baremo" igual a SEXENIO y el baremo corresponde con la "convocatoria baremación" de la convocatoria cuyo "anio" corresponde con el año pasado por parámetro.</p>
+<p>Sino existe dicho baremo (no se ha seleccionado el baremo en la configuración de la convocatoria) los tres campos serán 0. Sino se calculan de la forma explicada en cada uno de los campos.</p>
+<p>(Módulo PRC)</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">Nº SEXENIOS</td>
+<td class="confluenceTd">Número entero</td>
+<td class="confluenceTd"><p>Se suma el campo "puntos" de la tabla "puntuación item investigador" de todas las puntuaciones que corresponden con el grupo pasado por parámetro (campo "grupo ref" de la tabla "puntuación grupo" tiene el valor del identificador de grupo pasado por parámetro y que en el campo "convocatoria baremación id" tenga el identificador de la convocatoria cuyo "anio" corresponde con el año pasado por parámetro) y son de tipo puntuación igual a SEXENIO (entidad "puntuación item investigador" tiene el campo "tipo puntuación" igual a SEXENIO) y se divide por por los puntos del baremo "Sexenio" (explicado en el encabezado)</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">PUNTOS</td>
+<td class="confluenceTd">Número decimal con dos decimales</td>
+<td class="confluenceTd"><p>Campo "puntos sexenios" de la tabla "puntuación grupo". Se irá a la tabla "puntuación grupo" para buscar el "grupo ref" que corresponde con el identificador del grupo que se esta pasando por parámetro y que en el campo "convocatoria baremación id" tenga el identificador de la convocatoria cuyo "anio" corresponde con el año pasado por parámetro.</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">IMPORTE</td>
+<td class="confluenceTd">Número decimal con dos decimales</td>
+<td class="confluenceTd">Se multiplica la columna PUNTOS por el valor del punto de sexenio, es decir, por el campo "punto sexenio" de la tabla "convocatoria baremación" de la convocatoria cuyo "anio" corresponde con el año pasado por parámetro.</td>
+</tr>
+<tr class="odd">
+<td colspan="3" class="highlight-#deebff confluenceTd" title="Color de fondo: 35 % azul claro" data-highlight-colour="#deebff"><p>PRODUCCIÓN: Se dibujará una fila por cada Tipo de producción.</p></td>
+</tr>
+<tr class="even">
+<td colspan="3" class="highlight-#deebff confluenceTd" title="Color de fondo: 35 % azul claro" data-highlight-colour="#deebff">LIBROS</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Texto</td>
+<td class="confluenceTd"><p>LIBROS</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">NÚMERO</td>
+<td class="confluenceTd">Número entero</td>
+<td class="confluenceTd"><p>Se cuentan los items de producción científica de tipo Publicaciones y dentro de ellos los que son de tipo Libro, Capítulos de libro, Edición o Comentario sistemático a normas, que tuvieron puntuación:</p>
+<ul>
+<li>Se contabilizarán los registros de la tabla "producción científica" que tengan en el campo "convocatoria baremación id" el identificador de la convocatoria cuyo "anio" corresponde con el año pasado por parámetro y el campo "epigrafe CVN" tenga el valor "060.010.010.00" y exista en la tabla "campo producción científica" un registro con el "código CVN" igual a "060.010.010.010" y en su lista de  valores (tabla "valor campo") tenga en el campo "valor" uno de los siguientes valores: "032" o "004" o "208" o "<span class="placeholder-inline-tasks"><span style="color:var(--ds-text,#172b4d);">COMENTARIO_SISTEMATICO_NORMAS</span></span>"</li>
+</ul></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">PUNTOS</td>
+<td class="confluenceTd">Número decimal con dos decimales</td>
+<td class="confluenceTd">Se suma el campo "puntos" de la tabla "puntuación grupo investigador" de todas las puntuaciones que corresponden con el grupo pasado por parámetro (campo "grupo ref" de la tabla "puntuación grupo" tiene el valor del identificador de grupo pasado por parámetro y que en el campo "convocatoria baremación id" tenga el identificador de la convocatoria cuyo "anio" corresponde con el año pasado por parámetro) y son de tipo puntuación igual a LIBROS (entidad "puntuación item investigador" tiene el campo "tipo puntuación" igual a LIBROS)</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">IMPORTE</td>
+<td class="confluenceTd">Número decimal con dos decimales</td>
+<td class="confluenceTd">Se multiplica la columna PUNTOS por el valor del punto de producción, es decir, por el campo "punto producción" de la tabla "convocatoria baremación" de la convocatoria cuyo "anio" corresponde con el año pasado por parámetro.</td>
+</tr>
+<tr class="odd">
+<td colspan="3" class="highlight-#deebff confluenceTd" title="Color de fondo: 35 % azul claro" data-highlight-colour="#deebff"><p>ARTÍCULOS</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">ARTÍCULOS</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">NÚMERO</td>
+<td class="confluenceTd">Número entero</td>
+<td class="confluenceTd"><p>Se cuentan los items de producción científica de tipo Publicaciones y dentro de ellos los que son de tipo Artículo científico, que tuvieron puntuación:</p>
+<ul>
+<li>Se contabilizarán los registros de la tabla "producción científica" que tengan en el campo "convocatoria baremación id" el identificador de la convocatoria cuyo "anio" corresponde con el año pasado por parámetro y el campo "epigrafe CVN" tenga el valor "060.010.010.00" y exista en la tabla "campo producción científica" un registro con el "código CVN" igual a "060.010.010.010" y en su lista de  valores (tabla "valor campo") tenga en el campo "valor" el valor "020"</li>
+</ul></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">PUNTOS</td>
+<td class="confluenceTd">Número decimal con dos decimales</td>
+<td class="confluenceTd">Se suma el campo "puntos" de la tabla "puntuación grupo investigador" de todas las puntuaciones que corresponden con el grupo pasado por parámetro (campo "grupo ref" de la tabla "puntuación grupo" tiene el valor del identificador de grupo pasado por parámetro y que en el campo "convocatoria baremación id" tenga el identificador de la convocatoria cuyo "anio" corresponde con el año pasado por parámetro) y son de tipo puntuación igual a ARTICULOS (entidad "puntuación item investigador" tiene el campo "tipo puntuación" igual a ARTICULOS)</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">IMPORTE</td>
+<td class="confluenceTd">Número decimal con dos decimales</td>
+<td class="confluenceTd">Se multiplica la columna PUNTOS por el valor del punto de producción, es decir, por el campo "punto producción" de la tabla "convocatoria baremación" de la convocatoria cuyo "anio" corresponde con el año pasado por parámetro.</td>
+</tr>
+<tr class="even">
+<td colspan="3" class="highlight-#deebff confluenceTd" title="Color de fondo: 35 % azul claro" data-highlight-colour="#deebff"><p>TRABAJOS PRESENTADOS EN CONGRESOS </p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">TRABAJOS PRESENTADOS EN CONGRESOS </td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">NÚMERO</td>
+<td class="confluenceTd">Número entero</td>
+<td class="confluenceTd"><p>Se cuentan los items de producción científica de tipo Trabajos presentados en congresos que tuvieron puntuación:</p>
+<ul>
+<li>Se contabilizarán los registros de la tabla "producción científica" que tengan en el campo "convocatoria baremación id" el identificador de la convocatoria cuyo "anio" corresponde con el año pasado por parámetro y el campo "epigrafe CVN" tenga el valor "060.010.020.00"</li>
+</ul></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">PUNTOS</td>
+<td class="confluenceTd">Número decimal con dos decimales</td>
+<td class="confluenceTd">Se suma el campo "puntos" de la tabla "puntuación grupo investigador" de todas las puntuaciones que corresponden con el grupo pasado por parámetro (campo "grupo ref" de la tabla "puntuación grupo" tiene el valor del identificador de grupo pasado por parámetro y que en el campo "convocatoria baremación id" tenga el identificador de la convocatoria cuyo "anio" corresponde con el año pasado por parámetro) y son de tipo puntuación igual a CONGRESOS (entidad "puntuación item investigador" tiene el campo "tipo puntuación" igual a CONGRESOS)</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">IMPORTE</td>
+<td class="confluenceTd">Número decimal con dos decimales</td>
+<td class="confluenceTd">Se multiplica la columna PUNTOS por el valor del punto de producción, es decir, por el campo "punto producción" de la tabla "convocatoria baremación" de la convocatoria cuyo "anio" corresponde con el año pasado por parámetro.</td>
+</tr>
+<tr class="odd">
+<td colspan="3" class="highlight-#deebff confluenceTd" title="Color de fondo: 35 % azul claro" data-highlight-colour="#deebff"><p>DIRECCIÓN DE TESIS/TFM/TFG</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">DIRECCIÓN DE TESIS/TFM/TFG</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">NÚMERO</td>
+<td class="confluenceTd">Número entero</td>
+<td class="confluenceTd"><p>Se cuentan los items de producción científica de tipo Dirección de tesis que tuvieron puntuación:</p>
+<ul>
+<li>Se contabilizarán los registros de la tabla "producción científica" que tengan en el campo "convocatoria baremación id" el identificador de la convocatoria cuyo "anio" corresponde con el año pasado por parámetro y el campo "epigrafe CVN" tenga el valor "030.040.000.00"</li>
+</ul></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">PUNTOS</td>
+<td class="confluenceTd">Número decimal con dos decimales</td>
+<td class="confluenceTd">Se suma el campo "puntos" de la tabla "puntuación grupo investigador" de todas las puntuaciones que corresponden con el grupo pasado por parámetro (campo "grupo ref" de la tabla "puntuación grupo" tiene el valor del identificador de grupo pasado por parámetro y que en el campo "convocatoria baremación id" tenga el identificador de la convocatoria cuyo "anio" corresponde con el año pasado por parámetro) y son de tipo puntuación igual a DIRECCION_TESIS (entidad "puntuación item investigador" tiene el campo "tipo puntuación" igual a DIRECCION_TESIS)</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">IMPORTE</td>
+<td class="confluenceTd">Número decimal con dos decimales</td>
+<td class="confluenceTd">Se multiplica la columna PUNTOS por el valor del punto de producción, es decir, por el campo "punto producción" de la tabla "convocatoria baremación" de la convocatoria cuyo "anio" corresponde con el año pasado por parámetro.</td>
+</tr>
+<tr class="even">
+<td colspan="3" class="highlight-#deebff confluenceTd" title="Color de fondo: 35 % azul claro" data-highlight-colour="#deebff"><p>OBRAS ARTÍSTICAS</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">OBRAS ARTÍSTICAS</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">NÚMERO</td>
+<td class="confluenceTd">Número entero</td>
+<td class="confluenceTd"><p>Se cuentan los items de producción científica de tipo Obras artísticas que tuvieron puntuación:</p>
+<ul>
+<li>Se contabilizarán los registros de la tabla "producción científica" que tengan en el campo "convocatoria baremación id" el identificador de la convocatoria cuyo "anio" corresponde con el año pasado por parámetro y el campo "epigrafe CVN" tenga el valor "050.020.030.00"</li>
+</ul></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">PUNTOS</td>
+<td class="confluenceTd">Número decimal con dos decimales</td>
+<td class="confluenceTd">Se suma el campo "puntos" de la tabla "puntuación grupo investigador" de todas las puntuaciones que corresponden con el grupo pasado por parámetro (campo "grupo ref" de la tabla "puntuación grupo" tiene el valor del identificador de grupo pasado por parámetro y que en el campo "convocatoria baremación id" tenga el identificador de la convocatoria cuyo "anio" corresponde con el año pasado por parámetro) y son de tipo puntuación igual a OBRAS_ARTISTICAS (entidad "puntuación item investigador" tiene el campo "tipo puntuación" igual a OBRAS_ARTISTICAS)</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">IMPORTE</td>
+<td class="confluenceTd">Número decimal con dos decimales</td>
+<td class="confluenceTd">Se multiplica la columna PUNTOS por el valor del punto de producción, es decir, por el campo "punto producción" de la tabla "convocatoria baremación" de la convocatoria cuyo "anio" corresponde con el año pasado por parámetro.</td>
+</tr>
+<tr class="odd">
+<td colspan="3" class="highlight-#deebff confluenceTd" title="Color de fondo: 35 % azul claro" data-highlight-colour="#deebff"><p>COMITÉS EDITORIALES</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">COMITÉS EDITORIALES</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">NÚMERO</td>
+<td class="confluenceTd">Número entero</td>
+<td class="confluenceTd"><p>Se cuentan los items de producción científica de tipo Comités editoriales que tuvieron puntuación:</p>
+<ul>
+<li>Se contabilizarán los registros de la tabla "producción científica" que tengan en el campo "convocatoria baremación id" el identificador de la convocatoria cuyo "anio" corresponde con el año pasado por parámetro y el campo "epigrafe CVN" tenga el valor "060.030.030.00"</li>
+</ul></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">PUNTOS</td>
+<td class="confluenceTd">Número decimal con dos decimales</td>
+<td class="confluenceTd">Se suma el campo "puntos" de la tabla "puntuación grupo investigador" de todas las puntuaciones que corresponden con el grupo pasado por parámetro (campo "grupo ref" de la tabla "puntuación grupo" tiene el valor del identificador de grupo pasado por parámetro y que en el campo "convocatoria baremación id" tenga el identificador de la convocatoria cuyo "anio" corresponde con el año pasado por parámetro) y son de tipo puntuación igual a COMITES_EDITORIALES (entidad "puntuación item investigador" tiene el campo "tipo puntuación" igual a COMITES_EDITORIALES)</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">IMPORTE</td>
+<td class="confluenceTd">Número decimal con dos decimales</td>
+<td class="confluenceTd">Se multiplica la columna PUNTOS por el valor del punto de producción, es decir, por el campo "punto producción" de la tabla "convocatoria baremación" de la convocatoria cuyo "anio" corresponde con el año pasado por parámetro.</td>
+</tr>
+<tr class="even">
+<td colspan="3" class="highlight-#deebff confluenceTd" title="Color de fondo: 35 % azul claro" data-highlight-colour="#deebff"><p>ORGANIZACIÓN DE ACTIVIDADES I+D+I </p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">ORGANIZACIÓN DE ACTIVIDADES I+D+I </td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">NÚMERO</td>
+<td class="confluenceTd">Número entero</td>
+<td class="confluenceTd"><p>Se cuentan los items de producción científica de tipo Comités Organización de actividades que tuvieron puntuación:</p>
+<ul>
+<li>Se contabilizarán los registros de la tabla "producción científica" que tengan en el campo "convocatoria baremación id" el identificador de la convocatoria cuyo "anio" corresponde con el año pasado por parámetro y el campo "epigrafe CVN" tenga el valor "060.020.030.00"</li>
+</ul></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">PUNTOS</td>
+<td class="confluenceTd">Número decimal con dos decimales</td>
+<td class="confluenceTd">Se suma el campo "puntos" de la tabla "puntuación grupo investigador" de todas las puntuaciones que corresponden con el grupo pasado por parámetro (campo "grupo ref" de la tabla "puntuación grupo" tiene el valor del identificador de grupo pasado por parámetro y que en el campo "convocatoria baremación id" tenga el identificador de la convocatoria cuyo "anio" corresponde con el año pasado por parámetro) y son de tipo puntuación igual a ORGANIZACION_ACTIVIDADES (entidad "puntuación item investigador" tiene el campo "tipo puntuación" igual a ORGANIZACION_ACTIVIDADES)</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">IMPORTE</td>
+<td class="confluenceTd">Número decimal con dos decimales</td>
+<td class="confluenceTd">Se multiplica la columna PUNTOS por el valor del punto de producción, es decir, por el campo "punto producción" de la tabla "convocatoria baremación" de la convocatoria cuyo "anio" corresponde con el año pasado por parámetro.</td>
+</tr>
+<tr class="odd">
+<td colspan="3" class="highlight-#deebff confluenceTd" title="Color de fondo: 35 % azul claro" data-highlight-colour="#deebff"><p>PROYECTOS DE INVESTIGACIÓN</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">PROYECTOS DE INVESTIGACIÓN</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">NÚMERO</td>
+<td class="confluenceTd">Número entero</td>
+<td class="confluenceTd"><p>Se cuentan los items de producción científica de tipo Proyectos de investigación que tuvieron puntuación:</p>
+<ul>
+<li>Se contabilizarán los registros de la tabla "producción científica" que tengan en el campo "convocatoria baremación id" el identificador de la convocatoria cuyo "anio" corresponde con el año pasado por parámetro y el campo "epigrafe CVN" tenga el valor "050.020.010.00"</li>
+</ul></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">PUNTOS</td>
+<td class="confluenceTd">Número decimal con dos decimales</td>
+<td class="confluenceTd">Se suma el campo "puntos" de la tabla "puntuación grupo investigador" de todas las puntuaciones que corresponden con el grupo pasado por parámetro (campo "grupo ref" de la tabla "puntuación grupo" tiene el valor del identificador de grupo pasado por parámetro y que en el campo "convocatoria baremación id" tenga el identificador de la convocatoria cuyo "anio" corresponde con el año pasado por parámetro) y son de tipo puntuación igual a PROYECTOS_INVESTIGACION (entidad "puntuación item investigador" tiene el campo "tipo puntuación" igual a PROYECTOS_INVESTIGACION)</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">IMPORTE</td>
+<td class="confluenceTd">Número decimal con dos decimales</td>
+<td class="confluenceTd">Se multiplica la columna PUNTOS por el valor del punto de producción, es decir, por el campo "punto producción" de la tabla "convocatoria baremación" de la convocatoria cuyo "anio" corresponde con el año pasado por parámetro.</td>
+</tr>
+<tr class="even">
+<td colspan="3" class="highlight-#deebff confluenceTd" title="Color de fondo: 35 % azul claro" data-highlight-colour="#deebff"><p>CONTRATOS</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">CONTRATOS</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">NÚMERO</td>
+<td class="confluenceTd">Número entero</td>
+<td class="confluenceTd"><p>Se cuentan los items de producción científica de tipo Contratos que tuvieron puntuación:</p>
+<ul>
+<li>Se contabilizarán los registros de la tabla "producción científica" que tengan en el campo "convocatoria baremación id" el identificador de la convocatoria cuyo "anio" corresponde con el año pasado por parámetro y el campo "epigrafe CVN" tenga el valor "050.020.020.00"</li>
+</ul></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">PUNTOS</td>
+<td class="confluenceTd">Número decimal con dos decimales</td>
+<td class="confluenceTd">Se suma el campo "puntos" de la tabla "puntuación grupo investigador" de todas las puntuaciones que corresponden con el grupo pasado por parámetro (campo "grupo ref" de la tabla "puntuación grupo" tiene el valor del identificador de grupo pasado por parámetro y que en el campo "convocatoria baremación id" tenga el identificador de la convocatoria cuyo "anio" corresponde con el año pasado por parámetro) y son de tipo puntuación igual a CONTRATOS (entidad "puntuación item investigador" tiene el campo "tipo puntuación" igual a CONTRATOS)</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">IMPORTE</td>
+<td class="confluenceTd">Número decimal con dos decimales</td>
+<td class="confluenceTd">Se multiplica la columna PUNTOS por el valor del punto de producción, es decir, por el campo "punto producción" de la tabla "convocatoria baremación" de la convocatoria cuyo "anio" corresponde con el año pasado por parámetro.</td>
+</tr>
+<tr class="odd">
+<td colspan="3" class="highlight-#deebff confluenceTd" title="Color de fondo: 35 % azul claro" data-highlight-colour="#deebff"><p>INVENCIONES</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">INVENCIONES</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">NÚMERO</td>
+<td class="confluenceTd">Número entero</td>
+<td class="confluenceTd"><p>Se cuentan los items de producción científica de tipo Invenciones que tuvieron puntuación:</p>
+<ul>
+<li>Se contabilizarán los registros de la tabla "producción científica" que tengan en el campo "convocatoria baremación id" el identificador de la convocatoria cuyo "anio" corresponde con el año pasado por parámetro y el campo "epigrafe CVN" tenga el valor "050.030.010.00"</li>
+</ul></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">PUNTOS</td>
+<td class="confluenceTd">Número decimal con dos decimales</td>
+<td class="confluenceTd">Se suma el campo "puntos" de la tabla "puntuación grupo investigador" de todas las puntuaciones que corresponden con el grupo pasado por parámetro (campo "grupo ref" de la tabla "puntuación grupo" tiene el valor del identificador de grupo pasado por parámetro y que en el campo "convocatoria baremación id" tenga el identificador de la convocatoria cuyo "anio" corresponde con el año pasado por parámetro) y son de tipo puntuación igual a INVENCIONES (entidad "puntuación item investigador" tiene el campo "tipo puntuación" igual a INVENCIONES)</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">IMPORTE</td>
+<td class="confluenceTd">Número decimal con dos decimales</td>
+<td class="confluenceTd">Se multiplica la columna PUNTOS por el valor del punto de producción, es decir, por el campo "punto producción" de la tabla "convocatoria baremación" de la convocatoria cuyo "anio" corresponde con el año pasado por parámetro.</td>
+</tr>
+<tr class="even">
+<td colspan="3" class="highlight-#deebff confluenceTd" title="Color de fondo: 35 % azul claro" data-highlight-colour="#deebff">COSTES INDIRECTOS: Fila resumen con la puntuación de los costes indirectos  del grupo</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">Nº PROYECTOS/CONTRATOS</td>
+<td class="confluenceTd">Número entero</td>
+<td class="confluenceTd"><p>Se cuentan los items de producción científica de tipo Proyectos y de tipo Contratos que tuvieron puntuación:</p>
+<ul>
+<li>Se contabilizarán los registros de la tabla "producción científica" que tengan en el campo "convocatoria baremación id" el identificador de la convocatoria cuyo "anio" corresponde con el año pasado por parámetro y el campo "epigrafe CVN" tenga uno de los siguientes valores "050.020.010.00" o "050.020.020.00"</li>
+</ul></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">PUNTOS</td>
+<td class="confluenceTd">Número decimal con dos decimales</td>
+<td class="confluenceTd">Campo "puntos costes indirectos" de la tabla "puntuación grupo". Se irá a la tabla "puntuación grupo"  para buscar el "grupo ref" que corresponde con el identificador del grupo que se esta pasando por parámetro y que en el campo "convocatoria baremación id" tenga el identificador de la convocatoria cuyo "anio" corresponde con el año pasado por parámetro.</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">IMPORTE</td>
+<td class="confluenceTd">Número decimal con dos decimales</td>
+<td class="confluenceTd">Se multiplica la columna PUNTOS por el valor del punto de coste indirecto, es decir, por el campo "punto costes indirectos" de la tabla "convocatoria baremación" de la convocatoria cuyo "anio" corresponde con el año pasado por parámetro.</td>
+</tr>
+<tr class="even">
+<td colspan="3" class="highlight-#deebff confluenceTd" title="Color de fondo: 35 % azul claro" data-highlight-colour="#deebff">DINERO TOTAL: Se dibujará una fila por cada Tipo de producción.</td>
+</tr>
+<tr class="odd">
+<td colspan="3" class="highlight-#deebff confluenceTd" title="Color de fondo: 35 % azul claro" data-highlight-colour="#deebff">LIBROS</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">LIBROS</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">IMPORTE</td>
+<td class="confluenceTd">Número decimal con dos decimales</td>
+<td class="confluenceTd">Valor ya calculado en el propio informe para el campo IMPORTE de la fila de PRODUCCIÓN que corresponde con el tipo LIBROS</td>
+</tr>
+<tr class="even">
+<td colspan="3" class="highlight-#deebff confluenceTd" title="Color de fondo: 35 % azul claro" data-highlight-colour="#deebff">ARTÍCULOS</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">ARTÍCULOS</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">IMPORTE</td>
+<td class="confluenceTd">Número decimal con dos decimales</td>
+<td class="confluenceTd">Valor ya calculado en el propio informe para el campo IMPORTE de la fila de PRODUCCIÓN que corresponde con el tipo ARTÍCULOS</td>
+</tr>
+<tr class="odd">
+<td colspan="3" class="highlight-#deebff confluenceTd" title="Color de fondo: 35 % azul claro" data-highlight-colour="#deebff"><p>TRABAJOS PRESENTADOS EN CONGRESOS </p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><p>TRABAJOS PRESENTADOS EN CONGRESOS </p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">IMPORTE</td>
+<td class="confluenceTd">Número decimal con dos decimales</td>
+<td class="confluenceTd">Valor ya calculado en el propio informe para el campo IMPORTE de la fila de PRODUCCIÓN que corresponde con el tipo TRABAJOS PRESENTADOS EN CONGRESOS </td>
+</tr>
+<tr class="even">
+<td colspan="3" class="highlight-#deebff confluenceTd" title="Color de fondo: 35 % azul claro" data-highlight-colour="#deebff"><p>DIRECCIÓN DE TESIS/TFM/TFG</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><p>DIRECCIÓN DE TESIS/TFM/TFG</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">IMPORTE</td>
+<td class="confluenceTd">Número decimal con dos decimales</td>
+<td class="confluenceTd">Valor ya calculado en el propio informe para el campo IMPORTE de la fila de PRODUCCIÓN que corresponde con el tipo DIRECCIÓN DE TESIS/TFM/TFG</td>
+</tr>
+<tr class="odd">
+<td colspan="3" class="highlight-#deebff confluenceTd" title="Color de fondo: 35 % azul claro" data-highlight-colour="#deebff">OBRAS ARTÍSTICAS</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">OBRAS ARTÍSTICAS</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">IMPORTE</td>
+<td class="confluenceTd">Número decimal con dos decimales</td>
+<td class="confluenceTd">Valor ya calculado en el propio informe para el campo IMPORTE de la fila de PRODUCCIÓN que corresponde con el tipo OBRAS ARTÍSTICAS</td>
+</tr>
+<tr class="even">
+<td colspan="3" class="highlight-#deebff confluenceTd" title="Color de fondo: 35 % azul claro" data-highlight-colour="#deebff">COMITÉS EDITORIALES</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">COMITÉS EDITORIALES</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">IMPORTE</td>
+<td class="confluenceTd">Número decimal con dos decimales</td>
+<td class="confluenceTd">Valor ya calculado en el propio informe para el campo IMPORTE de la fila de PRODUCCIÓN que corresponde con el tipo COMITÉS EDITORIALES</td>
+</tr>
+<tr class="odd">
+<td colspan="3" class="highlight-#deebff confluenceTd" title="Color de fondo: 35 % azul claro" data-highlight-colour="#deebff"><p>ORGANIZACIÓN DE ACTIVIDADES I+D+I </p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><p>ORGANIZACIÓN DE ACTIVIDADES I+D+I </p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">IMPORTE</td>
+<td class="confluenceTd">Número decimal con dos decimales</td>
+<td class="confluenceTd">Valor ya calculado en el propio informe para el campo IMPORTE de la fila de PRODUCCIÓN que corresponde con el tipo ORGANIZACIÓN DE ACTIVIDADES I+D+I </td>
+</tr>
+<tr class="even">
+<td colspan="3" class="highlight-#deebff confluenceTd" title="Color de fondo: 35 % azul claro" data-highlight-colour="#deebff"><p>PROYECTOS DE INVESTIGACIÓN</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><p>PROYECTOS DE INVESTIGACIÓN</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">IMPORTE</td>
+<td class="confluenceTd">Número decimal con dos decimales</td>
+<td class="confluenceTd">Valor ya calculado en el propio informe para el campo IMPORTE de la fila de PRODUCCIÓN que corresponde con el tipo PROYECTOS DE INVESTIGACIÓN</td>
+</tr>
+<tr class="odd">
+<td colspan="3" class="highlight-#deebff confluenceTd" title="Color de fondo: 35 % azul claro" data-highlight-colour="#deebff">CONTRATOS</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">CONTRATOS</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">IMPORTE</td>
+<td class="confluenceTd">Número decimal con dos decimales</td>
+<td class="confluenceTd">Valor ya calculado en el propio informe para el campo IMPORTE de la fila de PRODUCCIÓN que corresponde con el tipo CONTRATOS</td>
+</tr>
+<tr class="even">
+<td colspan="3" class="highlight-#deebff confluenceTd" title="Color de fondo: 35 % azul claro" data-highlight-colour="#deebff">INVENCIONES</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">INVENCIONES</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">IMPORTE</td>
+<td class="confluenceTd">Número decimal con dos decimales</td>
+<td class="confluenceTd">Valor ya calculado en el propio informe para el campo IMPORTE de la fila de PRODUCCIÓN que corresponde con el tipo INVENCIONES</td>
+</tr>
+<tr class="odd">
+<td colspan="3" class="highlight-#deebff confluenceTd" title="Color de fondo: 35 % azul claro" data-highlight-colour="#deebff"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">TOTAL PRODUCCIÓN</td>
+<td class="confluenceTd">Número decimal con dos decimales</td>
+<td class="confluenceTd"><p>Se multiplica "puntos producción" por el valor del "punto producción". Dichos campos se obtienen de:</p>
+<p>Campo "puntos producción" de la tabla "puntuación grupo". Se irá a la tabla "puntuación grupo" para buscar el "grupo ref" que corresponde con el identificador del grupo que se esta pasando por parámetro y que en el campo "convocatoria baremación id" tenga el identificador de la convocatoria cuyo "anio" corresponde con el año pasado por parámetro.</p>
+<p>Campo "punto producción" de la tabla "convocatoria baremación" de la convocatoria cuyo "anio" corresponde con el año pasado por parámetro.</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">TOTAL SEXENIOS</td>
+<td class="confluenceTd">Número decimal con dos decimales</td>
+<td class="confluenceTd"><p>Se multiplica "puntos sexenios" por el valor del "punto sexenio". Ya calculado en el informe para dibujar la fila de SEXENIOS. Dichos campos se obtienen de:</p>
+<p>Campo "puntos sexenios" de la tabla "puntuación grupo". Se irá a la tabla "puntuación grupo" para buscar el "grupo ref" que corresponde con el identificador del grupo que se esta pasando por parámetro y que en el campo "convocatoria baremación id" tenga el identificador de la convocatoria cuyo "anio" corresponde con el año pasado por parámetro. Ya calculado en el informe para dibujar la fila de SEXENIOS.</p>
+<p>Campo "punto sexenio" de la tabla "convocatoria baremación" de la convocatoria cuyo "anio" corresponde con el año pasado por parámetro. Ya calculado en el informe para dibujar la fila de SEXENIOS.</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">TOTAL COSTES INDIRECTOS</td>
+<td class="confluenceTd">Número decimal con dos decimales</td>
+<td class="confluenceTd"><p>Se multiplica "puntos costes indirectos" por el valor del "punto costes indirectos". Ya calculado en el informe para dibujar la fila de COSTES INDIRECTOS. Dichos campos se obtienen de:</p>
+<p>Campo "puntos costes indirectos" de la tabla "puntuación grupo". Se irá a la tabla "puntuación grupo" para buscar el "grupo ref" que corresponde con el identificador del grupo que se esta pasando por parámetro y que en el campo "convocatoria baremación id" tenga el identificador de la convocatoria cuyo "anio" corresponde con el año pasado por parámetro. Ya calculado en el informe para dibujar la fila de COSTES INDIRECTOS.</p>
+<p>Campo "punto costes indirectos" de la tabla "convocatoria baremación" de la convocatoria cuyo "anio" corresponde con el año pasado por parámetro. Ya calculado en el informe para dibujar la fila de COSTES INDIRECTOS.</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">TOTAL</td>
+<td class="confluenceTd">Número decimal con dos decimales</td>
+<td class="confluenceTd">Suma de las filas TOTAL PRODUCCIÓN, TOTAL SEXENIOS Y TOTAL COSTES INDIRECTOS</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<span style="letter-spacing: 0.0px;">  
+
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="columnLayout two-equal" layout="two-equal">
+
+<div class="cell normal" data-type="normal">
+
+<div class="innerCell">
+
+## <span style="letter-spacing: -0.008em;">Interfaces de usuario relacionados</span>
+
+<img src="plugins/servlet/confluence/placeholder/unknown-macro" class="wysiwyg-unknown-macro" />
+
+</div>
+
+</div>
+
+<div class="cell normal" data-type="normal">
+
+<div class="innerCell">
+
+## Casos de uso relacionados
+
+<img src="plugins/servlet/confluence/placeholder/unknown-macro" class="wysiwyg-unknown-macro" />
+
+
+
+</div>
+
+</div>
+
+</div>
+
+<div class="columnLayout single" layout="single">
+
+<div class="cell normal" data-type="normal">
+
+<div class="innerCell">
+
+<div class="plugin-tabmeta-details">
+
+<div class="table-wrap">
+
+<table class="wrapped relative-table confluenceTable" style="width: 28.5136%;">
+<colgroup>
+<col style="width: 52%" />
+<col style="width: 47%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<th class="confluenceTh">ACT-PRC-003-Gestor</th>
+<td class="confluenceTd"><div class="content-wrapper">
+<span><span style="color:var(--ds-text-accent-lime-bolder,#37471f);">PRC-INF-G</span></span>
+</div></td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">ACT-PRC-004-Visor</th>
+<td class="confluenceTd"><div class="content-wrapper">
+<span><span style="color:var(--ds-text-accent-lime-bolder,#37471f);">PRC-INF-G</span></span>
+</div></td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh">ACT-PRC-001-Investigador</th>
+<td class="confluenceTd"><div class="content-wrapper">
+<span><span style="color:var(--ds-text-accent-lime-bolder,#37471f);">PRC-INF-INV-GR</span></span>
+</div></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="pageSection group">
+
+<div class="pageSectionHeader">
+
+## Attachments:
+
+</div>
+
+<div class="greybox" align="left">
+
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [informesrepartoacigrupoinforme.png](/attachments/597852494/597874059.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [informesrepartoacigrupoinforme.png](/attachments/597852494/597874022.png) (image/png)  
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div id="footer" role="contentinfo">
+
+<div class="section footer-body">
+
+Document generated by Confluence on oct 27, 2025 08:38
+
+<div id="footer-logo">
+
+[Atlassian](https://www.atlassian.com/)
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 
 

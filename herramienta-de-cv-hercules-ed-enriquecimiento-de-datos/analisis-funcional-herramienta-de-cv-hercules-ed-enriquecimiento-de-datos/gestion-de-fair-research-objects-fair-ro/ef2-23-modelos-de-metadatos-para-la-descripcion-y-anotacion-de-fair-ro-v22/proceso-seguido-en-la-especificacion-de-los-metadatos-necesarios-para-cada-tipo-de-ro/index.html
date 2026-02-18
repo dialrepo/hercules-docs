@@ -796,7 +796,807 @@
 
   <h1>Proceso seguido en la especificacion de los metadatos necesarios para cada tipo de ro</h1>
 
+<div id="page">
 
+<div id="main" class="aui-page-panel">
+
+<div id="main-header">
+
+<div id="breadcrumb-section">
+
+1.  [Hércules](index.html)
+2.  [Hércules](/)
+3.  [Herramienta de CV. Hércules ED - Enriquecimiento de Datos](//herramienta-de-cv-hercules-ed-enriquecimiento-de-datos)
+4.  [Análisis funcional. Herramienta de CV. Hércules ED - Enriquecimiento de Datos](//herramienta-de-cv-hercules-ed-enriquecimiento-de-datos/analisis-funcional-herramienta-de-cv-hercules-ed-enriquecimiento-de-datos)
+5.  [Gestión de FAIR Research Objects. FAIR RO](//herramienta-de-cv-hercules-ed-enriquecimiento-de-datos/analisis-funcional-herramienta-de-cv-hercules-ed-enriquecimiento-de-datos/gestion-de-fair-research-objects-fair-ro)
+6.  [EF2-2.3. MODELOS DE METADATOS PARA LA DESCRIPCIÓN Y ANOTACIÓN DE FAIR RO v2.2](//herramienta-de-cv-hercules-ed-enriquecimiento-de-datos/analisis-funcional-herramienta-de-cv-hercules-ed-enriquecimiento-de-datos/gestion-de-fair-research-objects-fair-ro/ef2-23-modelos-de-metadatos-para-la-descripcion-y-anotacion-de-fair-ro-v22)
+
+</div>
+
+# <span id="title-text"> Hércules : Proceso seguido en la especificación de los metadatos necesarios para cada tipo de RO </span>
+
+</div>
+
+<div id="content" class="view">
+
+<div class="page-metadata">
+
+Created by <span class="author"> Juan Tardón Martínez</span> on feb 08, 2022
+
+</div>
+
+<div id="main-content" class="wiki-content group">
+
+Los ROs pueden entenderse como elementos básicos o resultados concretos de una investigación, pero también como agregaciones de diversos ROs. Por lo tanto, es necesario representar tanto un RO de un solo elemento como un RO compuesto por varios ROs básicos junto con las propiedades que los relacionan. Existen ROs de muy diferentes tipos. El manejo de cada tipo específico de RO en cuanto a registro, enriquecimiento (manual y automático), exportación, importación, establecimiento de relaciones automáticas, etcétera, no es del todo genérico. Existen matices propios de cada RO. Algunos tipos específicos de RO sobre los cuales HERCULES, como plataforma de Open Science, tiene interés son: código, referencias bibliográficas, anotaciones manuales y protocolos experimentales. Estos serán los llamados ROs básicos.  
+Una vez organizados los tipos de RO por módulos (código, referencias bibliográficas, anotaciones manuales, protocolos experimentales y publicaciones) debemos definir y listar los metadatos extraíbles de los repositorios externos en los que se puedan encontrar los diferentes tipos de RO, de manera que se puedan seleccionar los necesarios para cada módulo a nivel global y abordar con esta información la ampliación de la ontología ROH. De este modo, deberá quedar predeterminado qué datos se deben extraer para cada RO, según el módulo al que pertenezcan, así como qué relaciones y entidades son necesarias incluir en la ontología para representar dichos metadatos.  
+Para especificar estos metadatos, los ROs han sido separados en dos categorías: los básicos o simples, y los que están compuestos por varios ROs. A continuación, expondremos los artefactos o módulos que representan ROs simples y, posteriormente, los ROs que no tienen sentido en sí mismos sin involucrar a otros ROs y sus metadatos asociados, dando lugar a ROs compuestos.
+
+# <span id="ProcesoseguidoenlaespecificacióndelosmetadatosnecesariosparacadatipodeRO-_Toc74326188" class="confluence-anchor-link"></span> <span style="color:var(--ds-text-accent-magenta,#943d73);">Metadatos de los RO simples</span>
+
+En esta sección se describen los ROs simples, los más relevantes, ya que son los elementos básicos resultantes de cualquier investigación. Estos tipos de RO se describirán como módulos de código, protocolos experimentales, referencias bibliográficas, anotaciones y publicaciones. De estos, las referencias bibliográficas y las anotaciones solamente tendrán sentido con relaciones a otros ROs, dando lugar a ROs compuestos como resultado de la agregación de ROs. En primer lugar, explicaremos los metadatos de cada módulo o RO simple y en la sección de "Metadatos de los RO compuestos" se describirá la naturaleza de los metadatos o propiedades que serán necesarios para representar las relaciones entre diferentes ROs simples.
+
+## <span id="ProcesoseguidoenlaespecificacióndelosmetadatosnecesariosparacadatipodeRO-_Toc74326189" class="confluence-anchor-link"></span><span style="color:var(--ds-text-accent-magenta,#943d73);">Módulo de código</span>
+
+Este módulo debe estar integrado en la ontología como una subclase de obo-iao:IAO_0000030 (Information Content Entity) que es de tipo (rdf:type) roh:ReseachObject.  
+Dentro de este módulo tenemos diversos ROs que deben poder ser modelados de una forma más o menos genérica, para lo cual necesitamos saber tanto qué objetos de investigación diferentes pueden clasificarse dentro de este módulo como los metadatos que tienen todos ellos. Con este fin hemos revisado diferentes conceptos o entidades que pueden ser parte de este módulo y que exponemos a continuación:  
+
+- **Repositorios de código:** Estructuras propias del almacenamiento de código fuente de software de una manera estructurada y propia del repositorio en cuestión. Es imprescindible que estos estén en la nube. De este modo, se nos permitirá almacenar repositorios de un modo general sin necesidad de que sean solamente los que vamos a mencionar a continuación y que se representarán en la ROH por tener un mayor interés en el contexto del proyecto HERCULES:
+  - **Repositorio de GitHub y Repositorio de BitBucket**: Estos dos repositorios en concreto son muy relevantes debido a su amplia adopción en numerosos campos de investigación.
+- **Archivos ejecutables:** En ocasiones nuestro resultado de investigación o RO se basa en archivos ejecutables en un lenguaje de programación especifico y para una o varias plataformas que desempeñan una función especial en nuestro resultado, por lo que debemos ser capaces de definir los tipos de archivos de código que forman parte de nuestro RO y que puede estar en un repositorio.
+
+
+Los metadatos de estos ROs se exponen en la tabla que veremos más adelante.
+
+## <span id="ProcesoseguidoenlaespecificacióndelosmetadatosnecesariosparacadatipodeRO-_Toc74326190" class="confluence-anchor-link"></span>Módulo de publicaciones
+
+En este caso la ontología ya está preparada para soportar estos resultados de investigación o ROs. Tenemos muchos tipos de documentos diferentes, desde facturas hasta artículos de publicación que están dentro de esta categoría. Actualmente un resultado de investigación es de este módulo y va a ser una instancia de cualquiera de las entidades que hay en la entidad obo-iao:IAO_0000030 (Information Content Entity).  
+En este caso, para listar los metadatos se van a agrupar las entidades que tengan los mismos metadatos y se expondrá una lista de los metadatos de estas entidades. Los metadatos de estos ROs se exponen en la tabla que veremos más adelante.
+
+## <span id="ProcesoseguidoenlaespecificacióndelosmetadatosnecesariosparacadatipodeRO-_Toc74326191" class="confluence-anchor-link"></span>Módulo de referencias bibliográficas
+
+Este módulo realiza únicamente una conexión entre una instancia de la entidad obo-iao:IAO_0000030 (Information Content Entity) y un listado de elementos de esta misma entidad o de la entidad Wfdesc:Workflow (después hablaremos de ella) que serán aquellos que se han referenciado. Hay que tener en cuenta que en esta entidad junto con la entidad Wfdesc:Workflow estarán todas las instancias que se pueden considerar ROs. Por tanto, no es un RO sino una propiedad intrínseca, de cualquier RO. Esta propiedad llevara a una lista (rdf:List) en la que cada ítem será el identificador de cada uno de los ROs que se han referenciando, pero únicamente se incorporarán los identificadores no sus metadatos. En caso de que un usuario quiera saber más sobre los metadatos de dichos ROs referenciados únicamente tendrá que preguntar al grafo de conocimiento por ellos.  
+Este módulo, por tanto, efectúa una conexión entre ROs ya sean de código o de cualquier otro módulo. Sin embargo, es importante tenerlo en cuenta ya que en una referencia bibliográfica aparecen unos datos concretos que deben ser extraídos para la correcta representación de dicho RO referenciado en nuestro grafo de conocimiento. Lógicamente estos datos extraídos serán un subconjunto de los metadatos correspondientes al RO que está siendo referenciado, debido a que al extraer información de la referencia puede que no se pueda obtener todos los metadatos que definen el RO.  
+Hay que tener en cuenta que dentro del concepto de referencia bibliográfica también pueden entrar las citas, cuya diferencia fundamental es que será una relación uno a uno y no de uno a una lista. Sin embargo, a pesar de que exista esta diferenciación, el razonamiento es el mismo: lo único que cambia es el significado de la propiedad que une los ROs. Dependiendo del grado de precisión que se quiera tener en el tipo de cita, se tendrán que incorporar a la ontología una o varias propiedades de dichas citas, para lo que se utilizará la ontología ***CiTO*** <span class="nobr"><a href="https://sparontologies.github.io/cito/current/cito.html" class="external-link" rel="nofollow">https://sparontologies.github.io/cito/current/cito.html<sup><img src="images/icons/linkext7.gif" class="rendericon" data-align="absmiddle" data-border="0" width="7" height="7" /></sup></a></span>.  
+Por lo tanto, cabe destacar también que hay un tipo de cita especial que no está dentro de esta categoría, pero que no deja de ser una cita. Estas citas estarán caracterizadas por la incorporación de más información del contexto en el que se ha realizado la cita, como por ejemplo el autor o un texto (anotación) añadido a la cita. Sin embargo, esta información de contexto se representará como un RO del módulo de anotaciones en el que se incluirá la motivación y demás contexto de la cita.
+
+## <span id="ProcesoseguidoenlaespecificacióndelosmetadatosnecesariosparacadatipodeRO-_Toc74326192" class="confluence-anchor-link"></span>Módulo de anotaciones
+
+Este módulo debe permitir a un usuario comentar un RO, ponerle una etiqueta (texto libre o de un vocabulario semántico) así como refutar y responder a otras anotaciones. Las anotaciones tienen sentido siempre que se indique la URI del *target* o RO sobre el que el usuario ha decidido realizar la anotación.  
+La ontología o vocabulario sobre la que vamos a basar la representación de las anotaciones es ***Web Annotation Data Model*** <span class="nobr"><a href="https://www.w3.org/TR/annotation-model" class="external-link" rel="nofollow">https://www.w3.org/TR/annotation-model<sup><img src="images/icons/linkext7.gif" class="rendericon" data-align="absmiddle" data-border="0" width="7" height="7" /></sup></a></span>. Hay que tener en cuenta que se intentarán representar las anotaciones del modo más sencillo posible.  
+Toda anotación tiene un *body* y un *target*. Hay tres tipos esenciales de anotaciones: Las anotaciones realizadas sobre un RO, las anotaciones realizadas sobre una cita y las anotaciones sobre una anotación. En la primera, el *target* siempre será la URI que define dicho RO; y en la segunda, el target es la tripleta en la que se define que un tipo de RO cita/referencia a otro RO. En el primer caso, el target pertenece a la entidad obo-iao:IAO_0000030 (Information Content Entity); y en el segundo, pertenece a la entidad cito:Citation. Lógicamente, el tipo de *target* sobre el que queremos realizar la anotación será un metadato necesario de la misma. El último tipo de anotación es aquel que crea hilos en las anotaciones, en cuyo caso, el *target* será la URI de la anotación a la que se contesta. Para diferenciar estos tipos de anotaciones se utilizará el metadato "motivación", que nos proporcionará una idea de cuáles han sido los motivos que han llevado al usuario a realizar tal anotación. El primer caso tendrá la motivación que se elija; en el segundo caso, la motivación será citar; y en el último, responder o comentar, dependiendo de lo que elija el usuario, teniendo en cuenta las instancias de la clase oa:Motivation existentes y que se deseen poner a disposición del usuario, como por ejemplo *commenting*, *describing*, *editing*, *tagging* y muchas otras. Un caso especial se produce cuando la motivación es etiquetar (*tagging)*, asignada a anotaciones que pueden ser semánticas (cuyo *body* pertenezca a oa:SemantigTag) o anotaciones tipo *keywords* (cuyo *body* debe ser del tipo oa:Tag).  
+Los metadatos de estos ROs se exponen en la tabla que veremos más adelante.
+
+## <span id="ProcesoseguidoenlaespecificacióndelosmetadatosnecesariosparacadatipodeRO-_Toc74326193" class="confluence-anchor-link"></span>Módulo de procedimientos experimentales
+
+Los protocolos experimentales describen el flujo de trabajo a llevar a cabo cuando se realiza un experimento. Estos flujos son de muy diversos tipos, siendo los más conocidos aquellos relativos a life sciences y denominados experimental protocols. Dependiendo del ámbito académico en el que nos encontremos, los protocolos experimentales pueden ser muy diferentes a la vez que pueden expresarse de un modo distinto.  
+Respecto al grafo de conocimiento hay que tener en cuenta que no se puede almacenar todos los flujos de trabajo particulares realizados en cada experimento que se quiere almacenar, ya que estos experimentos pueden ser muy largos y tener muchos datos involucrados, lo cual conllevaría realizar un almacenamiento excesivo. Lo que sí se puede almacenar es el esquema de dicho procedimiento o *workflow* seguido. Además, almacenar solo la estructura básica de los procesos experimentales nos permitirá obtener los elementos básicos que todos los protocolos, sean del área que sean, tienen en común. Esto es un factor clave en este proyecto ya que hay que tener en cuenta que los protocolos experimentales de cada área del conocimiento pueden presentarse en formas muy distintas y deben ser almacenadas únicamente las características básicas comunes de todos ellos.  
+Para la modelización de las estructuras básicas se va a usar la ontología ***Workflow* definition (wfdesc)** <a href="https://wf4ever.github.io/ro/2016-01-28/wfdesc/" class="external-link" rel="nofollow"><span style="text-decoration: underline;">https://wf4ever.github.io/ro/2016-01-28/wfdesc/</span></a> que nos permitirá almacenar los procesos básicos de los que se componen los procesos experimentales, los cuales serán definidos como **procesos**. Estos procesos pueden ser ejecutables, cálculos, etcétera.  
+Por tanto, dado un *workflow* vamos a almacenar los procesos que componen dicho protocolo junto con los input, outputs y materiales que necesitan dichos procesos para ser efectuados. Antes de exponer los metadatos vamos a comentar algunas características respecto al modelado y metadatos de las diversas entidades que se necesitan:  
+
+- **Proceso**: Cualquier instancia de obo-iao:IAO_0000030 (Information Content Entity) puede ser un proceso. Esta entidad debe ser una subclase de la entidad wfdes:Workflow. Los metadatos que definen el proceso deben ser los necesarios para que quede claro que es lo que se está realizando. Sin embargo, si este proceso es un RO en sí mismo no se deberá incluir todos sus metadatos para definir este proceso. Los metadatos deben ser los mínimos para saber qué se está realizando con los inputs y los materiales para obtener los outputs. Sin embargo, muchas veces los procesos, sobre todo en ramas médicas, involucran no solo input y output sino unos materiales necesarios en dicho proceso. Por tanto, un proceso puede ir asociado con un input, con un output y con unos materiales, aunque puede no tener alguno de estos elementos. A continuación, vamos a hablar más de estos tres elementos:
+  - **Input/Oputput:** Debe ser un elemento de obo-iao:IAO_0000030 (Information Content Entity). Lo más normal es que sea un Dataset (vivo:Dataset), es decir un conjunto de datos. Aunque estos elementos sean ROs en sí, sus metadatos no irán incluidos en los metadatos de este RO de proceso experimental.
+  - **Materiales**: Esto será un string en él que se especificarán los materiales que se necesitan, ya sean agentes biológicos, materiales químicos, probetas, etc. También pueden ser reservables, sobre todo si dentro de esta entidad se crea una clase que defina materiales tipo a los que se están mencionando aquí (se necesita estudiar esta posibilidad para que tenga coherencia con ROH). Sus metadatos no irán tampoco con los metadatos del RO del *workflow*.
+
+Tal y como hemos mencionado no es muy viable almacenar cada proceso realizado con unos datos concretos (el flujo de los datos), por tanto, hay que generar una entidad que permita almacenar o representar el documento que almacena esta información y asociarlo al esquema de flujo de trabajo que se podrá guardar en nuestro grafo de conocimiento. De este modo tendremos una URI enlazada al documento donde se exponen los procedimientos seguidos y que en nuestro grafo de conocimiento estará enlazado al esquema general de flujo de trabajo que se ha seguido.  
+Los metadatos de estos ROs se exponen en la tabla que veremos a continuación.  
+
+<div class="table-wrap">
+
+<table class="confluenceTable">
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td class="confluenceTd"><p><span style="color:var(--ds-text-inverse,#ffffff);"><strong>MODULO DE CODIGO</strong></span></p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><span style="color:var(--ds-text-inverse,#ffffff);"><strong>Entidades</strong></span></p></td>
+<td class="confluenceTd"><p><span style="color:var(--ds-text-inverse,#ffffff);"><strong>Metadatos</strong></span> Las entidades que falta por modelar se pueden ver en la segunda columna resaltadas en negrita.</p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p><span style="color:var(--ds-text-inverse,#ffffff);"><strong>Explicación relacionada con la modelización.</strong></span></p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p><span style="color:var(--ds-text-inverse,#ffffff);"><strong>Actualmente en ROH</strong></span></p></td>
+<td class="confluenceTd"><p> </p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><strong>Repositorio</strong></p></td>
+<td class="confluenceTd"><p><strong>Listado de lenguajes humanos del repo.</strong><br />
+<strong>Listado del lenguaje máquina del repo.</strong><br />
+<strong>Listado de lenguaje maquina mayoritario del repo.</strong><br />
+Listado de autores. <br />
+Fecha de última actualización<br />
+Nombre del repositorio <br />
+Enlace al repositorio<br />
+<strong>Licencia</strong><br />
+Status del repositorio (privado o no)<br />
+<strong>La estructura del repositorio</strong>.<br />
+Área de conocimiento <br />
+Keywords<br />
+Autor principal.<br />
+Abstract</p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p>Esta entidad debe ser una subclase de obo-iao:IAO_0000030 (Information Content Entity) que es de tipo roh:ResearchObject.<br />
+</p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p>No está presente la entidad, pero las relaciones que sí existen en ROH nos permiten definir los siguientes metadatos:<br />
+<br />
+Listado de autores. <br />
+Fecha de última actualización<br />
+Nombre del repositorio<br />
+Enlace al repositorio<br />
+Status del repositorio (privado o no)<br />
+Área de conocimiento <br />
+Keywords<br />
+Autor principal.<br />
+Abstract.</p></td>
+<td class="confluenceTd"><p> </p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><strong>Repositorio GitHub y</strong><br />
+<strong>Repositorio BitBucket</strong></p></td>
+<td class="confluenceTd"><p><strong>Listado de lenguajes utilizados en el repositorio.</strong><br />
+<strong>Listado de lenguaje maquina mayoritario del repo.</strong><br />
+Listado de autores.<br />
+<strong>Tipo de participación de cada usuario.</strong><br />
+<strong>Número de <em>commits</em> de cada usuario.</strong><br />
+<strong>Número de <em>additions</em> de cada usuario.</strong><br />
+<strong>Número de <em>deletions</em> de cada usuario. </strong><br />
+Fecha de última actualización<br />
+Nombre del repositorio <br />
+Enlace al repositorio<br />
+<strong>Ramas activas.</strong><br />
+<strong><em>Releases</em>.</strong><br />
+<strong>Fecha de la última release.</strong><br />
+<strong>Issues / issues abiertos. </strong><br />
+<strong>Licencia </strong><br />
+Status del repositorio (privado o no)<br />
+<strong>README</strong><br />
+<strong>Información del repositorio del que este es un <em>fork</em> en caso de haberlo.</strong><br />
+<strong>Cantidad de <em>forks</em> del repositorio. </strong><br />
+<strong>Obtención de diferencias si es un fork.</strong><br />
+<strong>La estructura del repositorio.</strong><br />
+<strong>Componentes de la rama master del proyecto de código. </strong><br />
+Área de conocimiento<br />
+Keywords<br />
+Autor principal.<br />
+Producto del código.<br />
+<strong>Lenguaje del README.</strong><br />
+</p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p>Esta entidad debe ser una subclase de la entidad de repositorio.<br />
+<br />
+</p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p>No está presente la entidad, pero las relaciones que sí existen en ROH nos permiten definir los siguientes metadatos:<br />
+<br />
+Listado de autores.<br />
+Fecha de última actualización<br />
+Nombre del repositorio <br />
+Enlace al repositorio<br />
+Licencia <br />
+Status del repositorio (privado o no)<br />
+Área de conocimiento<br />
+Keywords<br />
+Autor principal.<br />
+Producto del código.</p></td>
+<td class="confluenceTd"><p> </p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><strong>Archivos ejecutables</strong></p></td>
+<td class="confluenceTd"><p><strong>Lenguaje de programación y plataforma para la que ha sido desarrollado.</strong><br />
+Listado de autores. <br />
+Fecha de ultimo modificación.<br />
+Nombre del archivo.<br />
+Status del código (local o en un repo)<br />
+<strong>Link al repositorio donde este almacenado dicho programa.</strong><br />
+Área de conocimiento <br />
+Keywords<br />
+Autor principal</p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p>Se debe modelar la entidad en la ontología.<br />
+<br />
+</p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p>No está presente la entidad, pero las relaciones que sí existen en ROH nos permiten definir los siguientes metadatos:<br />
+Listado de autores. <br />
+Fecha de última actualización.<br />
+Nombre del repositorio<br />
+Área de conocimiento <br />
+Keywords<br />
+Autor principal</p></td>
+<td class="confluenceTd"><p> </p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><span style="color:var(--ds-text-inverse,#ffffff);"><strong>Tipo de RO de protocolo experimental</strong></span></p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span style="color:var(--ds-text-inverse,#ffffff);"><strong>Entidades</strong></span></p></td>
+<td class="confluenceTd"><p><span style="color:var(--ds-text-inverse,#ffffff);"><strong>Metadatos</strong></span> Las propiedades o entidades que falta por modelar se pueden ver en negrita en esta columna.</p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p><span style="color:var(--ds-text-inverse,#ffffff);"><strong>Explicación relacionada con la modelización.</strong></span></p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p><span style="color:var(--ds-text-inverse,#ffffff);"><strong>Actualmente en ROH</strong></span></p></td>
+<td class="confluenceTd"><p> </p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><strong>Procesos experimentales</strong><br />
+(wfdesc:Workflow)</p></td>
+<td class="confluenceTd"><p>Título o nombre<br />
+Lista de autores,<br />
+Abstract – Objetivo.<br />
+Keyword<br />
+<strong>Lista con los procesos que componen este workflow.</strong><br />
+Autor u organización de contacto.<br />
+<strong>Si está basado en otros workflow existentes, que son en realidad procesos de este mismo estos deberán estar listados como procesos (sus metadatos no irán incluidos en los metadatos de este RO).</strong><br />
+<strong>Página web.</strong><br />
+<strong>Documento de descripción del modelo paso a paso.</strong><br />
+Área de conocimiento.</p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p>Cada <em>workflow</em> este compuesto de procesos y relaciones entre los procesos (flujo de los datos). En esta entidad se define únicamente lo rangos o propiedades generales de todo el flujo de trabajo, visto como conjunto. Y con otra entidad se definirán los procesos que contiene.</p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p>No está presente la entidad, pero las relaciones que sí existen en ROH que están asociados a esta entidad son los siguientes:<br />
+<br />
+Título,<br />
+Lista de autores,<br />
+Abstract<br />
+Keyword<br />
+Autor u organización de contacto.<br />
+Área de conocimiento.</p></td>
+<td class="confluenceTd"><p> </p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><strong>Procesos</strong><br />
+(Wfdesc:Proceso)</p></td>
+<td class="confluenceTd"><p><strong>Lista con los Inputs (URI que lo define)</strong><br />
+<strong>Lista con los Outputs (URI que lo define)</strong><br />
+<strong>Materiales necesarios.</strong><br />
+<strong>El propio proceso (URI)</strong><br />
+Descripción/Abstract.<br />
+Tiempo de ejecución de ese proceso.<br />
+Tiempo de inicio.<br />
+<strong>Outputs que serán utilizados como input de otro proceso.</strong></p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p>Cualquier instancia de obo-iao:IAO_0000030 (Information Content Entity) puede ser un proceso.</p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p>Esta entidad no está modelada en nuestra ontología, como se ha comentado es una subclase de Workflow. Las propiedades que salen de esta entidad y que sí que están modeladas en ROH son las siguientes:<br />
+Descripción/Abstract.<br />
+Tiempo de ejecución de ese proceso.<br />
+Tiempo de inicio.</p></td>
+<td class="confluenceTd"><p> </p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><strong>Documento de flujo de trabajo</strong></p></td>
+<td class="confluenceTd"><p>Título o nombre<br />
+Lista de autores,<br />
+Abstract – Objetivo.<br />
+Keyword<br />
+Autor u organización de contacto.<br />
+Página web.<br />
+<strong>Workflow que ha dado como resultado dicho procedimiento.</strong><br />
+</p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p>Va siempre asociado un workflow y tendrá la información donde se describe cómo se van ido ejecutando los diferentes procesos del flujo de trabajo paso a paso con los inputs que nos interesan.</p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p>Esto es una entidad en sí y no está integrada en ROH. Sería una subclase de bibo:Document.<br />
+En nuestra ontología sí que tenemos algunas propiedades modeladas que estarán asociadas a esta entidad como son:<br />
+Título o nombre<br />
+Página web.<br />
+Lista de autores,<br />
+Abstract – Objetivo.<br />
+Keyword<br />
+Autor u organización de contacto.</p></td>
+<td class="confluenceTd"><p> </p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span style="color:var(--ds-text-inverse,#ffffff);"><strong>Módulo de anotaciones</strong></span></p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p><span style="color:var(--ds-text-inverse,#ffffff);"><strong>Metadatos</strong></span> Las propiedades o entidades que falta por modelar se pueden ver en negrita en esta columna.</p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p><span style="color:var(--ds-text-inverse,#ffffff);"><strong>Explicación relacionada con la modelización.</strong></span></p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p><span style="color:var(--ds-text-inverse,#ffffff);"><strong>Actualmente en ROH</strong></span></p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><strong>Metadatos asociados a la anotación.</strong> (oa:Annotation)</p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p><strong>Motivación de la anotación.</strong><br />
+Fecha de realización<br />
+Autor<br />
+<strong>Referencia al Taget (URI que lo identifica)</strong><br />
+<strong>Metadatos asociados a su body o bodys</strong><br />
+</p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p>Una anotación debe tener una propiedad que sea hasbody y otra hastarget.<br />
+</p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p>No presenta presente la entidad que nos permite realizar anotaciones, pero las propiedades que necesita esta entidad que sí están modeladas en nuestra otología son:<br />
+Fecha de realización<br />
+Autor</p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><strong>Metadatos asociados al body string</strong></p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p><strong>Tipo de formato.</strong><br />
+<strong>lenguaje,</strong><br />
+<strong>contenido</strong><br />
+<strong>Idioma</strong><br />
+Fecha de realización.<br />
+Agente que lo realiza.<br />
+</p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p>Debe ser un nodo en blando de tipo (dctypes:Text) el cual tenga diferentes propiedades saliendo de él, entre ellas el contenido que será un string, el idioma y todas las nombradas en la segunda columna.</p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p>Nos falta introducir la ontología dctype</p>
+<span class="nobr"><a href="https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/" class="external-link" rel="nofollow">https://www.dublincore.org/specifications/dublin-core/dcmi-type-vocabulary/<sup><img src="images/icons/linkext7.gif" class="rendericon" data-align="absmiddle" data-border="0" width="7" height="7" /></sup></a></span>
+<p>de modo que podamos decir que ese nodo en blanco es del tipo Texto.<br />
+Hay ciertas propiedades que salen de este nodo en blanco que sí tenemos modelizadas y son:<br />
+Fecha de realización.<br />
+Agente que lo realiza.</p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><strong>Metadatos asociados al body de tipo tagging</strong></p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p>Fecha de realización.<br />
+Agente que lo realiza.<br />
+String con las palabras claves.<br />
+</p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p>En caso de ser un string estamos poniendo palabras claves que definan aquello que designa el target. En este caso la Motivación debe ser tagging (que es una instancia de la oa:Motivacion). En este caso el body debe ser una instancia especial de la entidad como oa:Tag.</p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p>Nos falta la presencia de la entidad oa:Tag con su subclase oa:SemanticTag que nos permite realizar esta motivación especifica.</p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p>URI<br />
+</p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p>En caso de que sea una URI, estamos haciendo un etiquetado semántico. Por lo tanto estamos realizando una anotación con motivación oa:SemanticTag, lo cual es una subclase de oa:Tag.</p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><span style="color:var(--ds-text-inverse,#ffffff);"><strong>Módulo de publicaciones</strong></span></p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p><span style="color:var(--ds-text-inverse,#ffffff);"><strong>Metadatos</strong></span> Las propiedades o entidades que falta por modelar se pueden ver en negrita en esta columna.</p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p><span style="color:var(--ds-text-inverse,#ffffff);"><strong>Explicación relacionada con la modelización.</strong></span></p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p><span style="color:var(--ds-text-inverse,#ffffff);"><strong>Actualmente en ROH</strong></span></p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><strong>Obo-iao:iao_000027 (DataItem), obo-iao:IAO_0000109 (Measurement Datum),</strong><br />
+<strong>Obo-iao:IAO_0000582 (Time Stamped Mesurement Datum)</strong></p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p>Organización correspondiente.</p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><strong>bibo:Collection</strong></p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p>Organización correspondiente<br />
+oclcnum</p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><strong>bibo:Periodical, bibo:Magazine</strong></p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p>Metadatos de bibo:Collection<br />
+Eiss<br />
+Issn<br />
+Organización que lo publica</p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><strong>bibo:Journal</strong></p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p>Metadatos de bibo:Periodical<br />
+Abreviación</p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><strong>roh:Dossier</strong></p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p>Metadatos de bibo:Collection<br />
+Fecha<br />
+Titulo<br />
+Descrpcion<br />
+Identificador<br />
+El (roh:FundingPrgram o roh:ProjectContract o bibo:Report o vivo:Project) con el que está relacionado.</p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><strong>bibo:Document, vivo:Abstract, bibo:AudioVisualDocument, roh:CaseStudy, roh:Catalog, vivo:ConferencePoster, roh:EditedPublication, foaf:Imagen, roh:Invoice, bibo:Manual, roh:ProformaInvoice, bibo:Webpage</strong></p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p>Lista de autores<br />
+Página inicio<br />
+Página fin<br />
+Autor de referencia<br />
+Organización a la que corresponde<br />
+Fecha<br />
+Referencia al bibo:Book o bibo:Collection en la que se ha publicado<br />
+Abstract<br />
+Doi<br />
+Estatus (aceptado o denegado)<br />
+Titulo<br />
+Keyword</p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><strong>bibo:Article, vivo:EditorialArticle, roh:BlogPost, roh:PressArticle, roh:PeerReviewedArticle</strong></p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p>Metadatos de bibo:Document<br />
+Página de inicio<br />
+Página fin<br />
+doi</p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><strong>bibo:AcademicArticle, roh:PeerReviewdArticle,</strong></p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p>Metadatos de bibo:Article<br />
+Eanucc13<br />
+bibo:Journal en la que ha sido publicado.</p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><strong>obo-iao:IAO_0000013 (JournalArticle)</strong></p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p>Metadatos de bibo:AcademicArticle<br />
+La métrica de publicación que tuene<br />
+Fecha de publicación.</p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><strong>vivo:ConferencePaper, roh:WorkshopPaper</strong></p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p>Metadatos de bibo:Article.<br />
+Conferencia en la que se ha presentado.</p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><strong>bibo:Book, bibo:Preoceedings</strong></p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p>Metadatos de bibo:Document<br />
+Lugar de publicación<br />
+Editorial iccn<br />
+Isbn<br />
+foaf:Organización que lo publica.</p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><strong>vivo:Dataset</strong></p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p>El bibo:Document que lo ha citado como dataset usado.<br />
+Metadatos de bibo:Document.</p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><strong>bibo:DocumentPart</strong></p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p>Organización que lo publica<br />
+Metadatos de bibo:Document<br />
+<strong>Lugar de publicación</strong></p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><strong>bibo:BookSection, bibo:Chapter</strong></p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p>Metadatos de bibo:DocumentPart.<br />
+Página final<br />
+Página inicial<br />
+Editorial</p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><strong>bibo:Patent</strong></p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p>Metadatos de bibo:Document<br />
+Modalidad<br />
+Identificador<br />
+Organización que lo publica.<br />
+Fecha de expedición<br />
+KnowledgeArea<br />
+Organización propietaria<br />
+Localización<br />
+Fecha de publicación</p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><strong>bibo:Report, roh:EthicalReport, roh:EthicalAudit, roh:TecnicalReport</strong></p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p>Metadatos de bibo:Document<br />
+Organización que distribuye.<br />
+Organización que publica.<br />
+Tiempo/Hora</p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><strong>roh:EthicalValidation.</strong></p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p>Metadatos de roh:EthicalReport<br />
+Estatus.</p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><strong>roh:EvaluationSummary</strong></p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p>Metadatos de bibo:Report.<br />
+Estado de la evaluación.</p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><strong>roh:Justification</strong></p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p>Metadatos de bibo:Report.<br />
+Project con el que está relacionado.</p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><strong>vivo:ResearchProposal</strong></p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p>Metadatos de bibo:Report<strong>.</strong><br />
+El (roh:Justification o roh:ProjectContract vivo:Project o vivo:ResearchProposal) con la que está relacionado.</p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><strong>bibo:Thesis, roh:DegreeThesis, roh:MastersThesis, roh:PhDThesis</strong></p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p>Metadatos bibo:Document<br />
+Lugar en el que se publicó.<br />
+Abreviación<br />
+<strong>Nota</strong></p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><strong>bibo:CollectedDocument, roh:Database, bibo:EditedBook,</strong></p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p>Metadatos de bibo:Document<br />
+Relación con el bibo:Document del que es parte (mínimo 1)</p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p><strong>bibo:Issue</strong></p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p>Metadatos de bibo:collectedDocument.<br />
+Relación con el bibo:Article del que es parte. (mínimo 1)</p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p><strong>roh:CurriculumVitae</strong></p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p>Tiene los mismos metadatos de vivo:Document.<br />
+Resumen</p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+<td class="confluenceTd"><p> </p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+# <span id="ProcesoseguidoenlaespecificacióndelosmetadatosnecesariosparacadatipodeRO-_Toc74326194" class="confluence-anchor-link"></span><span style="color:var(--ds-text-accent-magenta,#943d73);">Metadatos de los RO compuestos</span>
+
+Este módulo designa resultados de investigación o ROs enlazados ya sea porque son del mismo proyecto o porque uno se basa en otro. Estas dos relaciones nos permitirán obtener tanto todos los ROs en los que se basa o inspira un RO como los ROs que componen el resultado de una investigación concreta. Son dos relaciones distintas y en la ontología deben ser dos relaciones distintas que se deben definir por separado. Los metadatos de estos ROs están compuestos por la unión de los metadatos de ambos ROs y por la relación que los une.  
+
+
+</div>
+
+</div>
+
+</div>
+
+<div id="footer" role="contentinfo">
+
+<div class="section footer-body">
+
+Document generated by Confluence on oct 27, 2025 09:27
+
+<div id="footer-logo">
+
+[Atlassian](https://www.atlassian.com/)
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 
 

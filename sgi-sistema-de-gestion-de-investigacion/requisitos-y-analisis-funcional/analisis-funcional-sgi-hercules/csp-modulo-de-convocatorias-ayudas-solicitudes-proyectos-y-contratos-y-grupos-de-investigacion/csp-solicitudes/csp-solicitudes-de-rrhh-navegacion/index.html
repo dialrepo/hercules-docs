@@ -796,7 +796,469 @@
 
   <h1>Csp solicitudes de rrhh navegacion</h1>
 
+<div id="page">
 
+<div id="main" class="aui-page-panel">
+
+<div id="main-header">
+
+<div id="breadcrumb-section">
+
+1.  [Hércules](index.html)
+2.  [Hércules](/)
+3.  [SGI. Sistema de gestión de investigación](//sgi-sistema-de-gestion-de-investigacion)
+4.  [Requisitos y análisis funcional](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional)
+5.  [Análisis Funcional SGI - Hércules](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules)
+6.  [CSP - Módulo de convocatorias, ayudas, solicitudes, proyectos y contratos y grupos de investigación](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion)
+7.  [CSP - Solicitudes](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-solicitudes)
+
+</div>
+
+# <span id="title-text"> Hércules : CSP - Solicitudes de RRHH - Navegación </span>
+
+</div>
+
+<div id="content" class="view">
+
+<div class="page-metadata">
+
+Created by <span class="author"> Usuario desconocido (covadonga.garcia)</span>, last updated by <span class="editor"> Usuario desconocido (lorena.alvarez)</span> on jul 19, 2022
+
+</div>
+
+<div id="main-content" class="wiki-content group">
+
+Las solicitudes asociadas a las convocatorias de RRHH del plan propio (predoctorales, postdoctorales e iniciación) se tratarán de forma genérica. En el SGI se identificarán  como solicitudes de RRHH (campo "tipo solicitud SGI" de convocatoria). No se realizará ninguna particularización para las solicitudes predoctorales, postdoctorales o de iniciación, y el SGI no cubrirá el proceso de baremación de ninguna de ellas.
+
+A grandes rasgos el flujo de las solicitudes de RRHH implementado en el SGI consta de los siguientes pasos:
+
+- Registro de la convocatoria por parte de la unidad de gestión correspondiente.
+- Registro de la solicitud asociada a la convocatoria por parte del personal investigador solicitante (perteneciente o no a la Universidad).
+- Validación de la solicitud por parte de la persona propuesta como tutor/a (personal investigador perteneciente a la Universidad).
+- Gestión de la solicitud por parte de la unidad de gestión correspondiente hasta la concesión/denegación final de la misma.
+- Creación del proyecto, si procede (solicitud concedida), asociado a la solicitud.
+
+## Unidad de gestión - Registro de convocatoria en el SGI
+
+El flujo de una solicitud de RRHH en el SGI comienza con la creación y registro de la correspondiente convocatoria por parte de la unidad de gestión. Los datos con los que se registran las convocatorias en el SGI son comunes, es decir, no existe ninguna particularización concreta para las convocatorias de ayudas postdoctorales. Las consideraciones a tener en cuenta en la creación de la convocatoria para que de ella deriven solicitudes postdoctorales son
+
+- Tipo solicitud SGI = RRHH. La convocatoria se deberá crear indicando en el campo "tipo solicitud  SGI" el valor "RRHH".
+- Se asignarán a la convocatoria el modelo de ejecución, tipo de finalidad y unidad de gestión correspondientes de acuerdo a los datos de configuración del SGI.
+- Para permitir que el registro de las solicitudes sea realizado por el propio personal investigador a través del propio SGI se deberá añadir a la convocatoria la siguiente información:
+  - Apartado fases:
+    - Añadir al menos una fase y las fechas asociadas a la misma.
+  - Apartado "Configuración de solicitudes":
+    - El campo "Habilitar tramitación de solicitudes en el SGI" debe tomar valor "sí".
+    - Se debe especificar la fase, de las indicadas en el apartado fases, que va a delimitar el plazo de presentación de las solicitudes.
+    - Se podrá indicar uno o varios tipos de documentos que deberán ser adjuntados por el personal investigador en la solicitud. Los tipos de documento que se deseen especificar deben haber sido configurados en el modelo de ejecución correspondiente (subvención, recursos propios, etc. el que aplique en cada momento de acuerdo a la convocatoria).
+  - Apartado requisitos IP
+    - Especificación de las restricciones correspondientes en cuanto a nivel académico y/o categoría profesional y las fechas de obtención del mismo
+  - Apartado requisitos Equipo
+    - Especificación de las restricciones correspondientes en cuanto a nivel académico y/o categoría profesional y las fechas de obtención del mismo del tutor/a
+
+
+
+
+
+A continuación se adjuntan a modo de muestra una serie de capturas del módulo de Convocatorias con alguno de los apartados mencionados anteriormente
+
+- Apartado de fases
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852455/597876683.png" class="confluence-embedded-image confluence-content-image-border" draggable="false" data-image-src="attachments/597852455/597876683.png" data-unresolved-comment-count="0" data-linked-resource-id="597876683" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="csp_conv_fases.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852455" data-linked-resource-container-version="21" tabindex="0" width="1000" /></span>
+
+
+
+- Apartado de requisitos IP
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852455/597876685.png" class="confluence-embedded-image confluence-content-image-border" draggable="false" data-image-src="attachments/597852455/597876685.png" data-unresolved-comment-count="0" data-linked-resource-id="597876685" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="csp_conv_requisitosIP.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852455" data-linked-resource-container-version="21" tabindex="0" width="1000" /></span>
+
+
+
+- Apartado configuración solicitudes
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852455/597876682.png" class="confluence-embedded-image confluence-content-image-border" draggable="false" data-image-src="attachments/597852455/597876682.png" data-unresolved-comment-count="0" data-linked-resource-id="597876682" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="csp_conv_configsolicitudes.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852455" data-linked-resource-container-version="21" tabindex="0" width="1000" /></span>
+
+
+
+
+
+## Personal investigador propio - Registro de la solicitud
+
+El personal investigador con su acceso al SGI tendrá disponible la opción CSP - Convocatorias, a través de la que tendrá disponible el listado de las convocatorias que se encuentren en estado "registrada" y para las que se haya habilitado la tramitación de solicitudes a través del SGI:
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852455/597876681.png" class="confluence-embedded-image confluence-content-image-border" draggable="false" data-image-src="attachments/597852455/597876681.png" data-unresolved-comment-count="0" data-linked-resource-id="597876681" data-linked-resource-version="3" data-linked-resource-type="attachment" data-linked-resource-default-alias="csp_inv_convocatoria_tramitar.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852455" data-linked-resource-container-version="21" tabindex="0" width="1000" /></span>
+
+### Detalle convocatoria
+
+Desde el listado de convocatorias, el personal investigador podrá acceder al detalle de la convocatoria:
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852455/597876719.png" class="confluence-embedded-image confluence-content-image-border" draggable="false" data-image-src="attachments/597852455/597876719.png" data-unresolved-comment-count="0" data-linked-resource-id="597876719" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="csp_inv_convocatoria_ver_select.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852455" data-linked-resource-container-version="21" tabindex="0" width="1000" /></span>
+
+
+
+Desde el detalle de la convocatoria tendrá disponible, entre otra, la información relativa a:
+
+- Datos generales
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852455/597876731.png" class="confluence-embedded-image confluence-content-image-border" draggable="false" data-image-src="attachments/597852455/597876731.png" data-unresolved-comment-count="0" data-linked-resource-id="597876731" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="csp_inv_con_datosgenerales.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852455" data-linked-resource-container-version="21" tabindex="0" width="1000" /></span>
+
+- Fases
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852455/597876734.png" class="confluence-embedded-image confluence-content-image-border" draggable="false" data-image-src="attachments/597852455/597876734.png" data-unresolved-comment-count="0" data-linked-resource-id="597876734" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="csp_inv_con_fases.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852455" data-linked-resource-container-version="21" tabindex="0" width="1000" /></span>
+
+- Documentos
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852455/597876679.png" class="confluence-embedded-image confluence-content-image-border" draggable="false" data-image-src="attachments/597852455/597876679.png" data-unresolved-comment-count="0" data-linked-resource-id="597876679" data-linked-resource-version="2" data-linked-resource-type="attachment" data-linked-resource-default-alias="csp_inv_convocatoria_doc_plantrabaoj.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852455" data-linked-resource-container-version="21" tabindex="0" width="1000" /></span>
+
+- Requisitos exigidos 
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852455/597876732.png" class="confluence-embedded-image confluence-content-image-border" draggable="false" data-image-src="attachments/597852455/597876732.png" data-unresolved-comment-count="0" data-linked-resource-id="597876732" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="csp_inv_con_requisitosIP.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852455" data-linked-resource-container-version="21" tabindex="0" width="1000" /></span>
+
+
+
+### Tramitar convocatoria - Registrar solicitud
+
+Desde el listado de convocatorias, siempre que la convocatoria se encuentre dentro del plazo de presentación de solicitudes configurado por la unidad de gestión, estará disponible la opción "Tramitar convocatoria", que va a permitir al personal investigador registrar una solicitud sobre la convocatoria.
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852455/597876726.png" class="confluence-embedded-image confluence-content-image-border" draggable="false" data-image-src="attachments/597852455/597876726.png" data-unresolved-comment-count="0" data-linked-resource-id="597876726" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="csp_inv_convocatoria_tramitar_select.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852455" data-linked-resource-container-version="21" tabindex="0" width="1000" /></span>
+
+
+
+Al pulsar el botón tramitar se inicia el registro de la solicitud. Inicialmente solo se introducirán los datos generales de la solicitud, apartado común a todos los tipos de solicitud (proyectos, grupo y RRHH).
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852455/597876721.png" class="confluence-embedded-image confluence-content-image-border" draggable="false" data-image-src="attachments/597852455/597876721.png" data-unresolved-comment-count="0" data-linked-resource-id="597876721" data-linked-resource-version="2" data-linked-resource-type="attachment" data-linked-resource-default-alias="csp_inv_solicitud_datosgerales.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852455" data-linked-resource-container-version="21" tabindex="0" width="1000" /></span>
+
+
+
+En esta pantalla inicial el personal investigador podría indicar la modalidad a la que se acoge. No será un dato obligatorio y la disponibilidad del detalle de modalidades dependerá tanto de la naturaleza de la convocatoria como del detalle con el que la unidad de gestión hubiera registrado la convocatoria.
+
+Al guardar esta pantalla inicial, el SGI comprobará el cumplimiento de los requisitos establecidos en el apartado "requisitos IP" de la convocatoria a partir de los datos recuperados del sistema de gestión de RRHH para la persona solicitante. En caso de no cumplirse se mostrará un mensaje informativo pero no se impedirá continuar con el registro de la solicitud.
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852455/597876739.png" class="confluence-embedded-image confluence-content-image-border" draggable="false" data-image-src="attachments/597852455/597876739.png" data-unresolved-comment-count="0" data-linked-resource-id="597876739" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="csp_inv_solicitud_advertencia_requisitosIP.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852455" data-linked-resource-container-version="21" tabindex="0" width="1000" /></span>
+
+
+
+Introducidos los datos generales de la solicitud estarán disponibles los apartados propios de la solicitud RRHH.
+
+#### Solicitud RRHH - Datos del solicitante
+
+El prototipo de pantalla es el siguiente:
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852455/597859545.png" class="confluence-embedded-image" draggable="false" data-image-src="attachments/597852455/597859545.png" data-unresolved-comment-count="0" data-linked-resource-id="597859545" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="50solicitudrrhhinvsolicitantepersonalpropio.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852455" data-linked-resource-container-version="21" tabindex="0" width="1000" /></span>
+
+
+
+Los campos marcados en tono gris, se mostrarán en modo lectura, es decir, no podrán ser modificados por la persona solicitante. Serán recuperados, a través de la correspondiente de la integración, del sistema de gestión de personas o sistema de gestión de recursos humanos. En esta pantalla la persona solicitante solo podrá cumplimentar los campos:
+
+- Universidad de origen.
+- Área ANEP. No será obligatorio indicar un área ANEP. Solo se podrá seleccionar un área.
+
+La cobertura a las áreas ANEP se dará a través de la estructura genérica del SGI "clasificación". 
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852455/597876709.png" class="confluence-embedded-image" draggable="false" data-image-src="attachments/597852455/597876709.png" data-unresolved-comment-count="0" data-linked-resource-id="597876709" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="02_Clasificaciones_SelectorPopup_ConDatos_EjANEP.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852455" data-linked-resource-container-version="21" tabindex="0" width="500" /></span>
+
+
+
+Se limitará la selección a un solo elemento, es decir, una solicitud RRHH se podrá vincular a una única área.
+
+
+
+#### Solicitud RRHH - Datos tutor/a
+
+Será obligatorio indicar la persona propuesta como tutor/a de la ayuda de RRHH. 
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852455/597859546.png" class="confluence-embedded-image" draggable="false" data-image-src="attachments/597852455/597859546.png" data-unresolved-comment-count="0" data-linked-resource-id="597859546" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="52solicitudrrhhinvtutor.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852455" data-linked-resource-container-version="21" tabindex="0" width="1000" /></span>
+
+La introducción del nombre de la persona que actuará como tutor/a se deberá realizar obligatoriamente a través del buscador de personas, componente horizontal a todo el SGI e integrado con el sistema de gestión de personas de la Universidad. De manera automática y a modo informativo se recuperará una determinada información de la persona seleccionada:
+
+- Nombre y apellidos
+- Categoría
+- Departamento
+- Centro
+- Teléfono 
+- Email
+
+No será posible introducir ningún tipo de modificación sobre estos campos.
+
+
+
+#### Solicitud RRHH - Requisitos convocatoria
+
+Esta pantalla se alimentará a partir de los requisitos establecidos en la convocatoria (apartados "requisitos IP" y "requisitos Equipo"). Para el caso del personal propio se realiza la comprobación automáticamente a partir de la información recuperada del sistema de gestión de personas / recursos humanos  mostrándose el aviso correspondiente. Para el caso de usuarios externo no se podrá realizar dicha comprobación al no tener datos de los mismos.
+
+El personal de investigación podrá adjuntar un único documento acreditativo sobre cada requisito (no se limita el número de niveles académicos o categorías que pudieran haberse especificado en la convocatoria). Si surgiese la necesidad de tener que acreditar el requisitos con más de un documento, podrán ser introducidos en la  pestaña documentos.
+
+No será obligatorio la aportación de los documentos acreditativos ni para el caso de personal propio ni para el caso de usuarios externos.
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852455/597859547.png" class="confluence-embedded-image" draggable="false" data-image-src="attachments/597852455/597859547.png" data-unresolved-comment-count="0" data-linked-resource-id="597859547" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="53solicitudrrhhrequisitos.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852455" data-linked-resource-container-version="21" tabindex="0" width="1000" /></span>
+
+
+
+#### Solicitud RRHH - Memoria
+
+El último apartado de una solicitud de RRHH será la memoria. 
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852455/597876792.png" class="confluence-embedded-image" draggable="false" data-image-src="attachments/597852455/597876792.png" data-unresolved-comment-count="0" data-linked-resource-id="597876792" data-linked-resource-version="3" data-linked-resource-type="attachment" data-linked-resource-default-alias="54_Solicitud_Posdoctoral_Memoria.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852455" data-linked-resource-container-version="21" tabindex="0" width="1000" /></span>
+
+
+
+Serán de obligada cumplimentación los campos:
+
+- Título del trabajo
+- Resumen
+
+Adicionalmente se proporcionará un campo abierto de Observaciones para que la persona solicitante pueda indicar cualquier otro comentario.
+
+
+
+### Solicitud - Documentos
+
+El apartado documentos es un apartado genérico común a todos los tipos de solicitud (proyectos, grupos, rrhh). Tiene como punto de partida el apartado Listado de documentos requeridos del apartado "Configuración solicitud" de la convocatoria, de forma que si la unidad de gestión especifica uno o varios documentos obligatorios sobre la convocatoria, éstos se mostrarán en el apartado documentos de la solicitud. Será obligatorio adjuntar los documentos establecidos por la convocatoria para que la persona solicitante pueda marcar la solicitud como "solicitada" (botón "cambiar estado solicitud").
+
+El ejemplo adjunto muestra la visualización inicial del apartado documentos de una solicitud en el caso que en la convocatoria se hayan establecido como obligatorios los documentos de tipo CVA y Plan de trabajo.
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852455/597876789.png" class="confluence-embedded-image confluence-content-image-border" draggable="false" data-image-src="attachments/597852455/597876789.png" data-unresolved-comment-count="0" data-linked-resource-id="597876789" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="csp_inv_documentos_requeridos.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852455" data-linked-resource-container-version="21" tabindex="0" width="1000" /></span>
+
+
+
+La opción "añadir documento" permitirá adjuntar un documento.
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852455/597876791.png" class="confluence-embedded-image confluence-content-image-border" draggable="false" data-image-src="attachments/597852455/597876791.png" data-unresolved-comment-count="0" data-linked-resource-id="597876791" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="csp_inv_aniadirdoc.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852455" data-linked-resource-container-version="21" tabindex="0" width="1000" /></span>
+
+
+
+Al adjuntar un documento se podrá especificar el Tipo de documento. Será el valor indicado en este tipo (y no el formato ni en ningún caso comprobación del contenido) el que permita al SGI realizar la comprobación de la obligatoriedad sobre los tipos de documento establecidos por la convocatoria.
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852455/597876790.png" class="confluence-embedded-image confluence-content-image-border" draggable="false" data-image-src="attachments/597852455/597876790.png" data-unresolved-comment-count="0" data-linked-resource-id="597876790" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="csp_inv_aniadirdoc_tipodoc.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852455" data-linked-resource-container-version="21" tabindex="0" width="1000" /></span>
+
+
+
+Se recuerda que los tipos de documento disponibles en el desplegado "Tipo documento" del apartado Documentos de solicitudes serán los configurados en el modelo de ejecución al que pertenece la convocatoria que desencadena la solicitud. Los tipos de documento deben estar vinculados a la fase especificada como fase de presentación de solicitudes de la convocatoria (configurable en el apartado "Configuración de solicitudes" de la convocatoria).
+
+
+
+Una vez adjuntados los documentos la vista del árbol de documentos de la solicitud tendría el siguiente aspecto:
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852455/597876804.png" class="confluence-embedded-image confluence-content-image-border" draggable="false" data-image-src="attachments/597852455/597876804.png" data-unresolved-comment-count="0" data-linked-resource-id="597876804" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="csp_inv_documentos_requeridos_cumplimentados.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852455" data-linked-resource-container-version="21" tabindex="0" width="1000" /></span>
+
+
+
+No existe ningún límite para adjuntar documentos, la persona solicitante podría adjuntarse más documentos de los requeridos, indicando o no el tipo. Es decir, se podría adjuntar cualquier documento deseado se corresponda o no con uno de los tipos de documento configurados por la unidad de gestión para la fase de presentación de solicitudes.
+
+
+
+En caso que fuese necesario establecer alguna plantilla sobre algún tipo de documento, la unidad de gestión pueden especificarlo en la sección "Documentos" de la convocatoria. Para cada documento incluido en la convocatoria la unidad de gestión tiene la libertad de indicar si es o no "público", es este parámetro el que marcará la visibilidad del documento por parte del personal investigador. Como se ha indicado en apartados previos el personal investigador tiene acceso al apartado de documentos de la convocatoria.  Se muestra a continuación, a modo de ejemplo, como el personal  investigador tendría disponible una plantilla para la elaboración del plan de trabajo.
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852455/597876806.png" class="confluence-embedded-image confluence-content-image-border" draggable="false" data-image-src="attachments/597852455/597876806.png" data-unresolved-comment-count="0" data-linked-resource-id="597876806" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="csp_inv_con_documentos.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852455" data-linked-resource-container-version="21" tabindex="0" width="1000" /></span>
+
+
+
+### Solicitud - Cambiar estado
+
+Cualquier solicitud se creará siempre en el estado inicial "borrador". La solicitud podrá permanecer en este estado hasta que la persona solicitante lo decida. Mientras la solicitud permanezca en este estado "borrador" la persona solicitante puede introducir cualquier cambio. El estado en el que se encuentra la solicitud en cada momento está disponible en el apartado Datos generales de la solicitud. También se mostrará como tooltip sobre el botón "Cambiar estado solicitud".
+
+
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852455/597876799.png" class="confluence-embedded-image confluence-content-image-border" draggable="false" data-image-src="attachments/597852455/597876799.png" data-unresolved-comment-count="0" data-linked-resource-id="597876799" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="csp_inv_cambiar_estado_estadoanterior_select.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852455" data-linked-resource-container-version="21" tabindex="0" width="1000" /></span>
+
+
+
+El ciclo de estados disponible para el personal investigador es común para cualquier tipo de solicitud (proyecto, grupo, rrhh), así como la forma de realizar ese cambio de estado. El cambio de estado se realizará haciendo uso del botón "Cambiar estado solicitud" que mostrará una ventana emergente con los cambios de estado posible en cada momento de la solicitud. En esta ventana se vuelve a mostrar el estado actual de la solicitud:
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852455/597876803.png" class="confluence-embedded-image confluence-content-image-border" draggable="false" data-image-src="attachments/597852455/597876803.png" data-unresolved-comment-count="0" data-linked-resource-id="597876803" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="csp_inv_cambiar_estado.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852455" data-linked-resource-container-version="21" tabindex="0" width="1000" /></span>
+
+
+
+Sobre una solicitud en estado "borrador" el personal investigador solamente podrá pasar la solicitud a estado "solicitada" o "desistida":
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852455/597876802.png" class="confluence-embedded-image confluence-content-image-border" draggable="false" data-image-src="attachments/597852455/597876802.png" data-unresolved-comment-count="0" data-linked-resource-id="597876802" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="csp_inv_cambiar_estado_desplegable.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852455" data-linked-resource-container-version="21" tabindex="0" width="300" /></span>
+
+
+
+Con el cambio de estado "solicitado" se realiza la comprobación de la disponibilidad de los documentos requeridos especificados en la convocatoria. En caso de no cumplirse se mostrará un mensaje de error y no será posible marcar la solicitud como "solicitada":
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852455/597876805.png" class="confluence-embedded-image confluence-content-image-border" draggable="false" data-image-src="attachments/597852455/597876805.png" data-unresolved-comment-count="0" data-linked-resource-id="597876805" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="csp_inv_cambiar_estado_errordoc.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852455" data-linked-resource-container-version="21" tabindex="0" width="1000" /></span>
+
+
+
+
+
+Cuando una solicitud pasa a estado "solicitada", el personal investigador no puede realizar modificaciones sobre la misma. De esta forma desde el listado de solicitudes la persona solicitante solo tendría opción a ver la solicitud en modo consulta
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852455/597876798.png" class="confluence-embedded-image confluence-content-image-border" draggable="false" data-image-src="attachments/597852455/597876798.png" data-unresolved-comment-count="0" data-linked-resource-id="597876798" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="csp_inv_listadosolicitudes_select.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852455" data-linked-resource-container-version="21" tabindex="0" width="1000" /></span>
+
+
+
+A partir del momento en que la solicitud de RRHH pasa a estado "solicitada" estará disponible para la persona indicada como tutor/a, que deberá validarla o rechazarla.
+
+
+
+## Tutor/a del trabajo - Validación de la solicitud
+
+La persona indica como tutor/a de la ayuda de RRHH accederá con perfil de investigación al SGI. Tendrá disponible la opción de menú "Validación como tutor/a", desde la que podrá obtener el listado de solicitudes (RRHH) en las que fue incluido como tutor/a.
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852455/597876813.png" class="confluence-embedded-image" draggable="false" data-image-src="attachments/597852455/597876813.png" data-unresolved-comment-count="0" data-linked-resource-id="597876813" data-linked-resource-version="2" data-linked-resource-type="attachment" data-linked-resource-default-alias="55_Solicitud_Posdoctoral_IP_ListadoPosdoctorales.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852455" data-linked-resource-container-version="21" tabindex="0" width="1000" /></span>
+
+
+
+El check "pendientes", marcada por defecto, permitirá listar solamente las solicitudes que deben ser validadas. Serán las únicas solicitudes sobre las que se pueda modificar el estado. 
+
+
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852455/597876747.png" class="confluence-embedded-image" draggable="false" data-image-src="attachments/597852455/597876747.png" data-unresolved-comment-count="0" data-linked-resource-id="597876747" data-linked-resource-version="2" data-linked-resource-type="attachment" data-linked-resource-default-alias="55_02_Solicitud_Posdoctoral_IP_ListadoPosdoctorales_NoPendientes.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852455" data-linked-resource-container-version="21" tabindex="0" width="1000" /></span>
+
+
+
+La persona indicada como a tutor/a del trabajo asociado a la ayuda de RRHH solamente podrá realizar el cambio de estado de la solicitud, no podrá modificar ningún dato de la misma, por lo que todos los campos se mostrarán en modo "solo lectura": 
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852455/597876810.png" class="confluence-embedded-image" draggable="false" data-image-src="attachments/597852455/597876810.png" data-unresolved-comment-count="0" data-linked-resource-id="597876810" data-linked-resource-version="3" data-linked-resource-type="attachment" data-linked-resource-default-alias="56_Solicitud_Posdoctoral_IP_ ModificarEstado.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852455" data-linked-resource-container-version="21" tabindex="0" width="1000" /></span>
+
+
+
+La pantalla de cambio de estado será la común al personal investigador, limitando en este caso que los únicos estados posibles serán:
+
+- Validada (valorar si el nombre del estado sería mejor que fuese validada responsable)
+- Rechazada (valorar si el nombre del estado sería mejor que fuese rechazada responsable)
+
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852455/597876760.png" class="confluence-embedded-image confluence-content-image-border" draggable="false" data-image-src="attachments/597852455/597876760.png" data-unresolved-comment-count="0" data-linked-resource-id="597876760" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="csp_inv_cambiar_estado2.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852455" data-linked-resource-container-version="21" tabindex="0" width="300" /></span>
+
+
+
+
+
+
+
+Una vez que el/la tutor/a ha validado la solicitud los siguientes cambios de estado de la misma han de ser realizados por la unidad de gestión.
+
+Si el/la tutor/a ha rechazado la solicitud, el/la solicitante podrá modificar las solicitud para introducir los cambios necesarios y de esta forma volver a solicitarla (pudiendo haber cambiado a la persona propuesta como tutor/a).
+
+## Unidad de gestión - Gestión de la solicitud y creación del proyecto
+
+La unidad de gestión podrá actuar sobre la solicitud de RRHH al igual que sobre el resto de solicitudes. Es decir, tendrá visibilidad de la misma desde la creación de la solicitud en estado Borrador, pudiendo modificar cualquier dato de la misma y pudiendo realizar cualquier cambio de estado.
+
+Cuando la solicitud figure en uno de los siguientes estados:
+
+- Concedida provisional
+- Concedida provisional alegada
+- Concedida provisional no alegada
+- Concedida
+
+La unidad de gestión podrá crear un proyecto vinculado a la solicitud. Para ello, desde el listado de solicitudes, se dispondrá del botón "Crear proyecto". El proyecto se creará componiendo de la siguiente forma sus datos básicos
+
+- Título del proyecto: se propondrá como título la concatenación (por el carácter "-") de los siguientes valores:
+  - Título de la convocatoria 
+  - Año de la convocatoria (extraído del campo "fecha publicación" de la convocatoria"
+  - Nombre y apellidos del solicitante
+
+<!-- -->
+
+- Fecha inicio: deberá ser introducida manualmente
+- Fecha fin: se propondrá la fecha de inicio más la duración establecida en la convocatoria
+- No se creará de manera automática ningún miembro del equipo
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="pageSection group">
+
+<div class="pageSectionHeader">
+
+## Attachments:
+
+</div>
+
+<div class="greybox" align="left">
+
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [csp_conv_requisitosIP.png](/attachments/597852455/597876685.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [csp_inv_convocatoria_tramitar.png](/attachments/597852455/597876727.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [csp_inv_convocatoria_tramitar_LI.jpg](/attachments/597852455/597876680.jpg) (image/jpeg)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [csp_inv_convocatoria_doc_plantrabaoj.png](/attachments/597852455/597876718.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [csp_conv_fases.png](/attachments/597852455/597876683.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [csp_conv_configsolicitudes.png](/attachments/597852455/597876682.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [csp_inv_convocatoria_tramitar.png](/attachments/597852455/597876725.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [csp_inv_convocatoria_tramitar_select.png](/attachments/597852455/597876726.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [csp_inv_convocatoria_tramitar.png](/attachments/597852455/597876681.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [csp_inv_convocatoria_ver_select.png](/attachments/597852455/597876719.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [csp_inv_convocatoria_doc_plantrabaoj.png](/attachments/597852455/597876679.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [csp_inv_solicitud_datosgerales.png](/attachments/597852455/597876729.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [csp_inv_con_datosgenerales.png](/attachments/597852455/597876731.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [csp_inv_con_fases.png](/attachments/597852455/597876734.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [csp_inv_con_requisitosIP.png](/attachments/597852455/597876732.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [csp_inv_solicitud_datosgerales.png](/attachments/597852455/597876721.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [csp_inv_solicitud_advertencia_requisitosIP.png](/attachments/597852455/597876739.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [50_Solicitud_Posdoctoral_INV_Solicitante_PersonalPropio.png](/attachments/597852455/597876788.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [02_Clasificaciones_SelectorPopup_ConDatos_EjANEP.png](/attachments/597852455/597876709.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [52_Solicitud_Posdoctoral_Director.png](/attachments/597852455/597876713.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [52_Solicitud_Posdoctoral_Director.png](/attachments/597852455/597876796.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [50_Solicitud_Posdoctoral_INV_Solicitante_PersonalPropio.png](/attachments/597852455/597876793.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [53_Solicitud_Posdoctoral_Requisitos.png](/attachments/597852455/597876779.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [53_Solicitud_Posdoctoral_Requisitos.png](/attachments/597852455/597876795.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [54_Solicitud_Posdoctoral_Memoria.png](/attachments/597852455/597876794.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [50_Solicitud_Posdoctoral_INV_Solicitante_PersonalPropio.png](/attachments/597852455/597858007.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [52_Solicitud_Posdoctoral_Director.png](/attachments/597852455/597857998.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [53_Solicitud_Posdoctoral_Requisitos.png](/attachments/597852455/597857999.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [54_Solicitud_Posdoctoral_Memoria.png](/attachments/597852455/597858000.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [csp_inv_documentos_requeridos.png](/attachments/597852455/597876789.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [csp_inv_aniadirdoc.png](/attachments/597852455/597876791.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [csp_inv_aniadirdoc_tipodoc.png](/attachments/597852455/597876790.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [csp_inv_cambiar_estado_estadoanterior.png](/attachments/597852455/597876800.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [csp_inv_cambiar_estado.png](/attachments/597852455/597876803.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [csp_inv_cambiar_estado_desplegable.png](/attachments/597852455/597876802.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [csp_inv_cambiar_estado_errordoc.png](/attachments/597852455/597876805.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [csp_inv_documentos_requeridos_cumplimentados.png](/attachments/597852455/597876804.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [csp_inv_con_documentos.png](/attachments/597852455/597876806.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [image2022-2-17_15-19-36.png](/attachments/597852455/597876797.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [csp_inv_cambiar_estado_estadoanterior.png](/attachments/597852455/597876801.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [csp_inv_cambiar_estado_estadoanterior_select.png](/attachments/597852455/597876799.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [csp_inv_listadosolicitudes_select.png](/attachments/597852455/597876798.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [55_Solicitud_Posdoctoral_IP_ListadoPosdoctorales.png](/attachments/597852455/597858001.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [56_Solicitud_Posdoctoral_IP\_ ModificarEstado.png](/attachments/597852455/597858003.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [55_02_Solicitud_Posdoctoral_IP_ListadoPosdoctorales_NoPendientes.png](/attachments/597852455/597858002.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [csp_inv_cambiar_estado2.png](/attachments/597852455/597876760.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [50_Solicitud_Posdoctoral_INV_Solicitante_PersonalPropio.png](/attachments/597852455/597876703.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [52_Solicitud_Posdoctoral_Director.png](/attachments/597852455/597876712.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [53_Solicitud_Posdoctoral_Requisitos.png](/attachments/597852455/597876772.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [54_Solicitud_Posdoctoral_Memoria.png](/attachments/597852455/597876792.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [55_Solicitud_Posdoctoral_IP_ListadoPosdoctorales.png](/attachments/597852455/597876813.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [55_02_Solicitud_Posdoctoral_IP_ListadoPosdoctorales_NoPendientes.png](/attachments/597852455/597876747.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [56_Solicitud_Posdoctoral_IP\_ ModificarEstado.png](/attachments/597852455/597858366.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [56_Solicitud_Posdoctoral_IP\_ ModificarEstado.png](/attachments/597852455/597876810.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [50solicitudrrhhinvsolicitantepersonalpropio.png](/attachments/597852455/597859545.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [52solicitudrrhhinvtutor.png](/attachments/597852455/597859546.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [53solicitudrrhhrequisitos.png](/attachments/597852455/597859547.png) (image/png)  
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div id="footer" role="contentinfo">
+
+<div class="section footer-body">
+
+Document generated by Confluence on oct 27, 2025 08:39
+
+<div id="footer-logo">
+
+[Atlassian](https://www.atlassian.com/)
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 
 

@@ -796,7 +796,428 @@
 
   <h1>Eti catalogo de permisos</h1>
 
+<div id="page">
 
+<div id="main" class="aui-page-panel">
+
+<div id="main-header">
+
+<div id="breadcrumb-section">
+
+1.  [Hércules](index.html)
+2.  [Hércules](/)
+3.  [SGI. Sistema de gestión de investigación](//sgi-sistema-de-gestion-de-investigacion)
+4.  [Diseño](//sgi-sistema-de-gestion-de-investigacion/diseno)
+5.  [Componentes](//sgi-sistema-de-gestion-de-investigacion/diseno/componentes)
+6.  [SGI - ETI](//sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-eti)
+7.  [ETI - Permisos - Actores](//sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-eti/eti-permisos-actores)
+
+</div>
+
+# <span id="title-text"> Hércules : ETI - Catálogo de permisos </span>
+
+</div>
+
+<div id="content" class="view">
+
+<div class="page-metadata">
+
+Created by <span class="author"> Usuario desconocido (alicia.alvarez)</span>, last updated by <span class="editor"> Usuario desconocido (lorena.alvarez)</span> on feb 18, 2022
+
+</div>
+
+<div id="main-content" class="wiki-content group">
+
+# Diseño de permisos
+
+<span class="confluence-link">Se siguen los criterios generales descritos en </span><a href="/confluence/pages/createpage.action?spaceKey=HERCULES&amp;title=Permisos&amp;linkCreation=true&amp;fromPageId=597852683" class="createlink">Permisos</a><span class="confluence-link">.</span>
+
+------------------------------------------------------------------------
+
+<div id="expander-1372984498" class="expand-container">
+
+<div id="expander-control-1372984498" class="expand-control">
+
+<span class="expand-icon aui-icon aui-icon-small aui-iconfont-chevron-down" aria-hidden="true"></span><span class="expand-control-text conf-macro-render">Ver detalle de criterios de diseño de permisos</span>
+
+</div>
+
+<div id="expander-content-1372984498" class="expand-content" role="region" aria-labelledby="expand-button-1372984498">
+
+<div class="aui-message aui-message-error">
+
+**Error al renderizar el macro 'excerpt-include'**
+
+No link could be created for 'Permisos'.
+
+</div>
+
+</div>
+
+</div>
+
+------------------------------------------------------------------------
+
+# Abreviaturas
+
+## Entidades
+
+<div class="table-wrap">
+
+|             |                        |
+|-------------|------------------------|
+| Abreviatura | Nombre                 |
+| ETI         | Ética                  |
+| CNV         | Convocatoria           |
+| EVC         | Evaluación             |
+| ACT         | Acta                   |
+| EVR         | Evaluadores            |
+| PEV         | Petición de evaluación |
+| INV         | Investigador           |
+| MEM         | Memoria                |
+| CHK         | Checklist              |
+| CNF         | Configuración          |
+| PER         | Persona                |
+| EMP         | Empresa                |
+
+</div>
+
+## Acciones particularizadas
+
+<div class="table-wrap">
+
+|             |                                    |
+|-------------|------------------------------------|
+| Abreviatura | Nombre                             |
+| ENV         | Enviar                             |
+| EVAL        | Evaluar                            |
+| FIN         | Finalizar                          |
+| DES         | Descargar                          |
+| ESCR        | Enviar a secretaría                |
+| ERTR        | Enviar retrospectiva a secretaría. |
+| CEST        | Cambiar de estado.                 |
+
+</div>
+
+# Catálogo de permisos
+
+<div class="table-wrap">
+
+<table class="wrapped relative-table confluenceTable" style="width: 100.0%;">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 60%" />
+</colgroup>
+<tbody>
+<tr class="header">
+<th class="confluenceTh">Nombre abreviado</th>
+<th class="confluenceTh">Descripción</th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd"><p>ETI-CNV-V</p>
+<p><br />
+</p></td>
+<td class="confluenceTd"><p>Visualización.</p>
+<p>Acceso al listado y utilización de su filtro.</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">ETI-CNV-C</td>
+<td class="confluenceTd"><p>Creación.</p>
+<p>Habilita el botón de creación.</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p>ETI-CNV-E</p>
+<p><br />
+</p></td>
+<td class="confluenceTd"><p>Edición.</p>
+<p>Habilita el botón de acceso al detalle en modo edición.</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>ETI-CNV-B</p>
+<p><br />
+</p></td>
+<td class="confluenceTd"><p>Borrado.</p>
+<p>Habilita el botón de borrado (lógico).</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">ETI-CNV-ENV</td>
+<td class="confluenceTd"><p>Enviar convocatoria.</p>
+<p>Habilita el botón de envío de la convocatoria.</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>ETI-EVC-V</p>
+<p><br />
+</p></td>
+<td class="confluenceTd"><p>Visualización.</p>
+<p>Acceso al listado y utilización de su filtro.</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p>ETI-EVC-EVAL</p>
+<p><br />
+</p></td>
+<td class="confluenceTd"><p>Evaluar.</p>
+<p>Habilita el botón de acceso a la evaluación.</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>ETI-ACT-V</p>
+<p><br />
+</p></td>
+<td class="confluenceTd"><p>Visualización.</p>
+<p>Acceso al listado y utilización de su filtro.</p>
+<p>Habilita el botón de acceso al detalle en modo consulta.</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">ETI-ACT-C</td>
+<td class="confluenceTd"><p>Creación.</p>
+<p>Habilita el botón de creación.</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>ETI-ACT-E</p>
+<p><br />
+</p></td>
+<td class="confluenceTd"><p>Edición.</p>
+<p>Habilita el botón de acceso al detalle en modo edición.</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p>ETI-ACT-FIN</p>
+<p><br />
+</p></td>
+<td class="confluenceTd"><p>Finalizar.</p>
+<p>Habilita el botón de finalizar el acta.</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">ETI-ACT-DES</td>
+<td class="confluenceTd"><p>Descargar.</p>
+<p>Habilita el acceso a ver el informe del acta (la descarga del documento).</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p>ETI-EVR-V</p>
+<p><br />
+</p></td>
+<td class="confluenceTd"><p>Visualización.</p>
+<p>Acceso al listado y utilización de su filtro.</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">ETI-EVR-C</td>
+<td class="confluenceTd"><p>Creación.</p>
+<p>Habilita el botón de creación.</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p>ETI-EVR-E</p>
+<p><br />
+</p></td>
+<td class="confluenceTd"><p>Edición.</p>
+<p>Habilita el botón de acceso al detalle en modo edición.</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">ETI-EVR-B</td>
+<td class="confluenceTd"><p>Borrado.</p>
+<p>Habilita el botón de borrado (lógico).</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p>ETI-EVC-INV-VR</p></td>
+<td class="confluenceTd"><p>Visualización restringida (investigador).</p>
+<p>Acceso al listado y utilización de su filtro.</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">ETI-EVC-INV-EVALR</td>
+<td class="confluenceTd"><p>Evaluar restringido (investigador).</p>
+<p>Acceso a evaluar la memoria (añadir comentarios).</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">ETI-EVC-VR</td>
+<td class="confluenceTd"><p>Visualización restringida (técnico).</p>
+<p>Acceso al listado y utilización de su filtro.</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">ETI-EVC-EVALR</td>
+<td class="confluenceTd"><p>Evaluar restringido (técnico).</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p>ETI-EVC-V</p>
+<p><br />
+</p></td>
+<td class="confluenceTd"><p>Visualización.</p>
+<p>Acceso al listado y utilización de su filtro.</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>ETI-EVC-EVAL</p>
+<p><br />
+</p></td>
+<td class="confluenceTd"><p>Evaluar.</p>
+<p>Habilita el botón de acceso a la evaluación.</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">ETI-PEV-INV-VR</td>
+<td class="confluenceTd"><p>Visualización restringida</p>
+<p>Acceso al listado y utilización de su filtro.</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">ETI-PEV-INV-C</td>
+<td class="confluenceTd"><p>Creación</p>
+<p>Habilita el botón de creación.</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">ETI-PEV-INV-ER</td>
+<td class="confluenceTd"><p>Edición restringida.</p>
+<p>Habilita el botón de acceso al detalle en modo edición.</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">ETI-PEV-INV-BR</td>
+<td class="confluenceTd"><p>Borrado restringido.</p>
+<p>Habilita el botón de borrado (lógico).</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><p>ETI-PEV-V</p>
+<p><br />
+</p></td>
+<td class="confluenceTd"><p>Visualización.</p>
+<p>Acceso al listado y utilización de su filtro.</p>
+<p>Habilita el botón de acceso al detalle en modo consulta.</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><span>ETI-MEM-INV-CR</span></td>
+<td class="confluenceTd"><p><span>Creación restringida.</span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><span>ETI-MEM-INV-ER</span></td>
+<td class="confluenceTd"><p><span>Edición restringida.</span></p>
+<p>Habilita el botón de acceso al detalle en modo edición.</p>
+<p>Tanto el creador como el responsable de memoria puede modificar la memoria.</p>
+<p>Siempre se podrá editar, luego serán los propias pantallas las que dependiendo del estado de la memoria se puede o no hacer algo en la pantalla.</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><span>ETI-MEM-INV-BR</span></td>
+<td class="confluenceTd"><p><span>Borrado restringido.</span></p>
+<p><span>Solo para el creador de la petición de evaluación. El responsable de memoria no puede eliminar memorias.</span></p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">ETI-MEM-INV-VR</td>
+<td class="confluenceTd"><p>Visualización restringida</p>
+<p>Acceso al listado y utilización de su filtro.</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">ETI-MEM-INV-ESCR</td>
+<td class="confluenceTd"><p>Enviar a secretaría.</p>
+<p>Solo para el creador de la petición de evaluación. El responsable de memoria no puede enviar a secretaría.</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">ETI-MEM-INV-ERTR</td>
+<td class="confluenceTd"><p>Enviar retrospectiva a secretaría.</p>
+<p>Solo para el creador de la petición de evaluación. El responsable de memoria no puede enviar retrospectiva a secretaría.</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><p>ETI-MEM-V</p>
+<p><br />
+</p></td>
+<td class="confluenceTd"><p>Visualización.</p>
+<p>Habilita el botón de acceso al detalle en modo consulta.</p>
+<p>Permite ver los informes.</p>
+<p>Todos los campos estarán en modo consulta y los botones de acción deshabilitados.</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">ETI-MEM-CEST</td>
+<td class="confluenceTd"><p>Cambio de estado.</p>
+<p>Permite volver a un estado anterior dependiendo que que estado se encuentre.</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">ETI-MEM-EDOC</td>
+<td class="confluenceTd"><p>Edición documentación.</p>
+<p>Habilita el botón de acceso al detalle en modo edición de la pantalla de Documentación de la memoria.</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><span>ETI-CHK-INV-E</span></td>
+<td class="confluenceTd">Completar checklist de autoevaluación por un investigador.</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">ETI-CNF-E</td>
+<td class="confluenceTd">Edición de configuración.</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">ETI-ACT-INV-ER</td>
+<td class="confluenceTd"><p>Edición restringida (evaluador - investigador)</p>
+<p>Habilita el botón de acceso al detalle en modo edición.</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">ETI-ACT-INV-DESR</td>
+<td class="confluenceTd"><p>Descarga restringida (evaluador - investigador)</p>
+<p>Habilita el acceso a ver el informe del acta (la descarga del documento).</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">ETI-ACT-ER</td>
+<td class="confluenceTd"><p>Edición restringida (evaluador - técnico)</p>
+<p>Habilita el botón de acceso al detalle en modo edición.</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">ETI-ACT-DESR</td>
+<td class="confluenceTd"><p>Descarga restringida (evaluador - técnico)</p>
+<p>Habilita el acceso a ver el informe del acta (la descarga del documento).</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">ESB-PER-V</td>
+<td class="confluenceTd"><p>Visualización del detalle.</p>
+<p>Habilita el botón de acceso al detalle en modo consulta.</p>
+<p>El acceso al listado y utilización de su filtro estará determinado por los permisos de acceso a la pantalla que abre la ventana emergente del buscador, esto es, el buscador y listado en sí no se restringirá por ningún permiso específico.</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">ESB-PER-E</td>
+<td class="confluenceTd"><p>Solicitud de modificación.</p>
+<p>Habilita el botón de acceso al detalle en modo solicitud de edición.</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">ESB-PER-C</td>
+<td class="confluenceTd"><p>Solicitud de creación.</p>
+<p>Habilita el botón de solicitud de creación.</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">ESB-EMP-V</td>
+<td class="confluenceTd"><p>Visualización del detalle.</p>
+<p>Habilita el botón de acceso al detalle en modo consulta.</p>
+<p>El acceso al listado y utilización de su filtro estará determinado por los permisos de acceso a la pantalla que abre la ventana emergente del buscador, esto es, el buscador y listado en sí no se restringirá por ningún permiso específico.</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">ESB-EMP-E</td>
+<td class="confluenceTd"><p>Solicitud de modificación.</p>
+<p>Habilita el botón de acceso al detalle en modo solicitud de edición.</p></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">ESB-EMP-C</td>
+<td class="confluenceTd"><p>Solicitud de creación.</p>
+<p>Habilita el botón de solicitud de creación.</p></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">CSP-SOL-ETI-V</td>
+<td class="confluenceTd"><p>Visualización datos solicitud desde Ética</p>
+<p>Permite acceso a la consulta del código interno de las solicitudes desde el módulo de ética</p></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div id="footer" role="contentinfo">
+
+<div class="section footer-body">
+
+Document generated by Confluence on oct 27, 2025 08:53
+
+<div id="footer-logo">
+
+[Atlassian](https://www.atlassian.com/)
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 
 

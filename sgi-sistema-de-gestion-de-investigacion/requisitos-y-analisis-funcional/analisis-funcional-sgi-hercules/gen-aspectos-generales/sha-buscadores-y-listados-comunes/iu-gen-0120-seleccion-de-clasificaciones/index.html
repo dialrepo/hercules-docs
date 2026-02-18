@@ -796,7 +796,433 @@
 
   <h1>Iu gen 0120 seleccion de clasificaciones</h1>
 
+<div id="page">
 
+<div id="main" class="aui-page-panel">
+
+<div id="main-header">
+
+<div id="breadcrumb-section">
+
+1.  [Hércules](index.html)
+2.  [Hércules](/)
+3.  [SGI. Sistema de gestión de investigación](//sgi-sistema-de-gestion-de-investigacion)
+4.  [Requisitos y análisis funcional](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional)
+5.  [Análisis Funcional SGI - Hércules](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules)
+6.  [GEN - Aspectos generales](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales)
+7.  [SHA - Buscadores y listados comunes](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/sha-buscadores-y-listados-comunes)
+
+</div>
+
+# <span id="title-text"> Hércules : IU-GEN-0120 - Selección de clasificaciones </span>
+
+</div>
+
+<div id="content" class="view">
+
+<div class="page-metadata">
+
+Created by <span class="author"> Usuario desconocido (alicia.alvarez)</span>, last updated on abr 19, 2021
+
+</div>
+
+<div id="main-content" class="wiki-content group">
+
+<div class="contentLayout2">
+
+<div class="columnLayout single" layout="single">
+
+<div class="cell normal" data-type="normal">
+
+<div class="innerCell">
+
+<div class="plugin-tabmeta-details">
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable" style="width: 75.1988%;">
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 84%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<th class="confluenceTh">Cod. IU</th>
+<td class="confluenceTd"><p><strong><strong><strong><strong>IU-GEN-0120 - Selección de clasificaciones<br />
+</strong></strong></strong></strong></p></td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Ver. objetivo</th>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh">Ver. IU</th>
+<td class="confluenceTd">1.0.0</td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Estado</th>
+<td class="confluenceTd"><div class="content-wrapper">
+<div class="content-wrapper">
+ <span class="status-macro aui-lozenge aui-lozenge-current conf-macro output-inline">IN PROGRESS</span> 
+</div>
+</div></td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh">Fec. Aprobación</th>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Épica, historia</th>
+<td class="confluenceTd"><div class="content-wrapper">
+<p><br />
+</p>
+</div></td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh">Actores</th>
+<td class="confluenceTd">ACT-CSP-001-Investigador, ACT-CSP-003-Gestor, ACT-CSP-004-Administrador </td>
+</tr>
+<tr class="even">
+<th class="confluenceTh"><p>Frecuencia</p></th>
+<td class="confluenceTd">Media</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+# Formulario de selección de clasificaciones
+
+Pantalla que implementa el formulario común a todo el SGI para la selección de clasificaciones a asociar a una entidad.
+
+Se <span class="inline-comment-marker" ref="2da3d6f1-6b8b-4f02-bf32-5b9d9356fc26">abrirá</span> en una ventana emergente o popup desde las gestiones que necesiten utilizarlo al pulsar sobre un botón "Añadir clasificación" (o similar).
+
+Una clasificación se entenderá como una organización jerárquica conformada por un conjunto de códigos a los que diferentes entidades dentro del SGI (solicitudes, proyectos, invenciones, ...) se podrán asociar.
+
+Inicialmente se identifican en el SGI tres clasificaciones distintas: UNESCO, NABS y CNAE, si bien la lista de clasificaciones podrá ser extendida por parte de la Universidad con otras adicionales en tiempo de implantación, tal y como se describe en mayor detalle en el requisito de integración [REQ-INT-0030-SGO-0030 - Listar clasificaciones](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0030-sgo-integracion-con-sistema-de-gestion-de-la-estructura-organica/req-int-0030-sgo-0030-listar-clasificaciones).
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable" style="width: 82.4668%;">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 16%" />
+<col style="width: 73%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<th colspan="3" class="confluenceTd"><div class="content-wrapper">
+<p><em><strong>Vista antes de seleccionar una clasificación de la que mostrar su organización jerárquica<br />
+</strong></em></p>
+<p><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597853500/597884615.png" class="confluence-embedded-image" draggable="false" data-image-src="attachments/597853500/597884615.png" data-unresolved-comment-count="0" data-linked-resource-id="597884615" data-linked-resource-version="3" data-linked-resource-type="attachment" data-linked-resource-default-alias="02clasificacionesselectorpopupseleccione.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597853500" data-linked-resource-container-version="23" tabindex="0" width="700" /></span></p>
+<p><em><strong>Vista después de seleccionar la clasificación UNESCO y sin seleccionar ningún elemento de clasificación, se muestra el primer nivel de la jerarquía asociada a la clasificación UNESCO y se pueden ir desplegando categorías por niveles<br />
+</strong></em></p>
+<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597853500/597884614.png" class="confluence-embedded-image" draggable="false" data-image-src="attachments/597853500/597884614.png" data-unresolved-comment-count="0" data-linked-resource-id="597884614" data-linked-resource-version="4" data-linked-resource-type="attachment" data-linked-resource-default-alias="02clasificacionesselectorpopup.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597853500" data-linked-resource-container-version="23" tabindex="0" width="700" /></span><br />
+&#10;<p><em><strong>Vista al momento de seleccionar clasificaciones en este ejemplo, 2, "Electromagnetismo" y "Vibraciones"</strong></em></p>
+<p><em><strong><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597853500/598835348.png" class="confluence-embedded-image" draggable="false" data-image-src="attachments/597853500/598835348.png" data-unresolved-comment-count="0" data-linked-resource-id="598835348" data-linked-resource-version="2" data-linked-resource-type="attachment" data-linked-resource-default-alias="02clasificacionesselectorpopupcondatos.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597853500" data-linked-resource-container-version="23" tabindex="0" width="700" /></span></strong></em></p>
+<p><em><strong>Vista después de haber seleccionado las clasificaciones "Electromagnetismo" y "Vibraciones" previamente, pulsado el botón "Seleccionar" y a continuación "Añadir clasificación" de nuevo desde la gestión de la entidad llamante por querer asociar una clasificación nueva, "Física", a la entidad</strong></em></p>
+<p><em><strong><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597853500/598835351.png" class="confluence-embedded-image" draggable="false" data-image-src="attachments/597853500/598835351.png" data-unresolved-comment-count="0" data-linked-resource-id="598835351" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="02clasificacionesselectorpopupcondatosnuevo.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597853500" data-linked-resource-container-version="23" tabindex="0" width="700" /></span></strong></em></p>
+</div></th>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Nombre</th>
+<th class="confluenceTh"><div class="content-wrapper">
+<p>Tipo</p>
+</div></th>
+<th class="confluenceTh"><div class="content-wrapper">
+<p>Características / Notas</p>
+</div></th>
+</tr>
+<tr class="odd">
+<th class="confluenceTd">Clasificación</th>
+<th class="confluenceTd"><p>Selector</p>
+<p>Obligatorio</p></th>
+<th class="confluenceTd"><p>Listado de clasificaciones (padre).</p>
+<p>Se considerarán elementos de la lista de clasificaciones a los efectos de cargar este combo los elementos que, dentro de la estructura jerárquica de clasificaciones, no tienen padre, esto es, que son nodos raíz.</p>
+<p>Si, adicionalmente, se quisiera restringir más la lista de clasificaciones a las pertenecientes a uno o varios tipos de clasificación concretos, estos tipos de clasificación por los que filtrar las clasificaciones han de venir informados desde el formulario que invoca a este formulario de selección de clasificaciones. Este filtro no será visible por pantalla.</p>
+<p>Este listado se obtendrán a través del requisito de integración <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0030-sgo-integracion-con-sistema-de-gestion-de-la-estructura-organica/req-int-0030-sgo-0030-listar-clasificaciones">REQ-INT-0030-SGO-0030 - Listar clasificaciones</a>.</p>
+<p><span style="color:var(--ds-background-accent-red-bolder,#c9372c);"><span style="color:var(--ds-text,#172b4d);">Si cambia el valor de este selector de Clasificación y hay cambios sin guardar en el árbol de clasificaciones, esto es, se ha seleccionado alguna clasificación dentro del árbol, se almacenarán los cambios en memoria hasta que el usuario decida terminar la selección en el resto de clasificaciones y pulse el botón "Seleccionar" o bien descarte las selecciones y pulse "Cancelar". Por tanto, se podrán añadir varias clasificaciones hijas de las de primer nivel (UNESCO, NABS o CNAE) a la vez.</span><br />
+</span></p></th>
+</tr>
+<tr class="even">
+<th class="confluenceTd">Selección de clasificaciones</th>
+<th class="confluenceTd"><div class="content-wrapper">
+<p>Componente gráfico de árbol</p>
+<p>Obligatorio</p>
+</div></th>
+<th class="confluenceTd"><p>Inicialmente no se mostrará cargada ninguna clasificación. Se mostrará el árbol de clasificación del tipo seleccionado en el campo "Clasificación" una vez se escoja uno. </p>
+<p>Al cargar una clasificación, en un primer momento se mostrarán únicamente los elementos de primer nivel, según se vaya abriendo el árbol, se mostrará el nivel descendiente de la rama desplegada y así sucesivamente.</p>
+<p>Si ya existen clasificaciones asociadas a la entidad, una vez se seleccione una clasificación padre en el campo Clasificación, en el árbol se mostrarán igualmente las clasificaciones hijas de la seleccionada, únicamente las de primer nivel y, según se vaya abriendo el árbol, se mostrará el nivel descendiente de la rama desplegada y así sucesivamente, presentándose las clasificaciones que ya estén asociadas a la entidad a modo informativo en modo solo lectura. Sobre ese árbol, se podrán seleccionar nuevas clasificaciones, pero no deseleccionar las que se presentan marcadas de antemano. Esta operativa para deshacer la relación entre la entidad y una clasificación se ha de llevar a cabo con la opción de eliminar (icono "papelera") en la pantalla donde se presente el listado de clasificaciones actualmente asociadas con la entidad (Ver <a href="#IUGEN0120Seleccióndeclasificaciones-ejemplo">Ejemplo de formulario de listado de clasificaciones asociadas a una entidad</a>).</p>
+<p><span class="confluence-link">El listado de clasificaciones será recuperado a través de llamadas sucesivas a <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0030-sgo-integracion-con-sistema-de-gestion-de-la-estructura-organica/req-int-0030-sgo-0030-listar-clasificaciones">REQ-INT-0030-SGO-0030 - Listar clasificaciones</a>.<br />
+</span></p>
+<p>Se pueden seleccionar uno o varios elementos de clasificación en función de lo que en cada gestión desde donde se llame se determine.</p></th>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="table-wrap">
+
+<table class="wrapped relative-table confluenceTable" style="width: 82.4115%;">
+<colgroup>
+<col style="width: 5%" />
+<col style="width: 70%" />
+<col style="width: 10%" />
+<col style="width: 12%" />
+</colgroup>
+<tbody>
+<tr class="header">
+<th class="confluenceTh">Acciones</th>
+<th class="confluenceTh">Descripción</th>
+<th class="confluenceTh"> Enlace CU.</th>
+<th class="confluenceTh">Permisos</th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd">Seleccionar</td>
+<td class="confluenceTd"><p>Se añaden al listado de clasificaciones de la entidad las clasificaciones seleccionados y se cierra la ventana popup.</p>
+<p>Se validará que se haya seleccionado al menos un elemento del árbol de clasificaciones.</p>
+<p>Por cada elemento de clasificación seleccionado se creará un registro en el listado de clasificaciones asociadas a la entidad de la gestión desde la que se la llame.</p></td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">No se necesita permiso, cualquier usuario que haya podido acceder puede realizar la asociación.</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">Cancelar</td>
+<td class="confluenceTd"><p>Retorna al listado de clasificaciones de la gestión desde la que se haya abierto el formulario de selección sin salvar los posibles cambios.</p></td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+# <span id="IUGEN0120Seleccióndeclasificaciones-ejemplo" class="confluence-anchor-link"></span>Ejemplo de formulario de listado de clasificaciones asociadas a una entidad
+
+Pantalla de ejemplo de formulario de listado de clasificaciones asociadas a una entidad. Se describe para evitar que ante una nueva necesidad de asociación de una o varias clasificaciones, que no requiera más información a mostrar que la aquí descrita, se plantee una solución totalmente distinta, si bien, siempre cabe la posibilidad de que la gestión precise mostrar una vista de la asociación particularizada y distinta. En ambos casos, el formulario de listado de clasificaciones asociadas ha de ser incluido y describirse como corresponda en cada análisis/gestión específica.
+
+Se incluyen menús, cabeceras y botones "Guardar" y "Cancelar" para mostrar el contexto del formulario, pero no se describirán aquí ya que su función corresponderá a la gestión concreta en la que se incluyan.
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable" style="width: 82.6881%;">
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 23%" />
+<col style="width: 61%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<th colspan="3" class="confluenceTd"><div class="content-wrapper">
+<p><em><strong>Vista con celda de Niveles con y sin superar número de caracteres máximo para la celda<br />
+</strong></em></p>
+<p><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597853500/597884618.png" class="confluence-embedded-image confluence-content-image-border" draggable="false" data-image-src="attachments/597853500/597884618.png" data-unresolved-comment-count="0" data-linked-resource-id="597884618" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="02clasificacioneslistadoasociadas.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597853500" data-linked-resource-container-version="23" tabindex="0" width="700" /></span></p>
+<p><em><strong>Vista de popup de celda Niveles cuando el contenido supera número de caracteres máximo<br />
+</strong></em></p>
+<p><em><strong><span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597853500/597884617.png" class="confluence-embedded-image confluence-content-image-border" draggable="false" data-image-src="attachments/597853500/597884617.png" data-unresolved-comment-count="0" data-linked-resource-id="597884617" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="02clasificacioneslistadoasociadaspopupniveles.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597853500" data-linked-resource-container-version="23" tabindex="0" width="700" height="320" /></span></strong></em></p>
+</div></th>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Nombre</th>
+<th class="confluenceTh"><div class="content-wrapper">
+<p>Tipo</p>
+</div></th>
+<th class="confluenceTh"><div class="content-wrapper">
+<p>Características / Notas</p>
+</div></th>
+</tr>
+<tr class="odd">
+<th colspan="3" class="highlight-blue confluenceTd" data-highlight-colour="blue">Listado de clasificaciones</th>
+</tr>
+<tr class="even">
+<th class="confluenceTd">Clasificación</th>
+<th class="confluenceTd">Texto</th>
+<th class="confluenceTd"><p>Nombre de la clasificación.</p>
+<p>Será el nombre de la raíz del árbol de la que cuelga el elemento final, esto es, el nivel seleccionado.</p>
+<p>Se obtendrá a partir del requisito de integración <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0030-sgo-integracion-con-sistema-de-gestion-de-la-estructura-organica/req-int-0030-sgo-0031-consultar-clasificacion">REQ-INT-0030-SGO-0031 - Consultar clasificación</a>.</p>
+<p>Nota: en el caso del escenario en el que se acaban de seleccionar una o varias clasificaciones en el popup, puede que para estas clasificaciones esta información ya esté disponible en la respuesta devuelta tras la selección y no sea necesario realizar nuevas llamadas para presentarla en pantalla.</p></th>
+</tr>
+<tr class="odd">
+<th class="confluenceTd">Niveles</th>
+<th class="confluenceTd"><p>Texto</p></th>
+<th class="confluenceTd"><p>Concatenación de los nombres de los elementos de clasificación que ocupan niveles superiores al elemento con el que se vincula la entidad.</p>
+<p>La cadena de texto a mostrar se compondrá a la hora de hacer la presentación por pantalla, obteniendo para ello la información necesaria a través de sucesivas peticiones del detalle de cada clasificación a partir de <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0030-sgo-integracion-con-sistema-de-gestion-de-la-estructura-organica/req-int-0030-sgo-0031-consultar-clasificacion">REQ-INT-0030-SGO-0031 - Consultar clasificación</a><span class="confluence-link">. La concatenación de nombres habría de hacerse utilizando algún tipo de separador (ej: "-") y sería de los nombres de los niveles jerárquicamente superiores al de la clasificación seleccionada, ordenados desde la raíz hasta el inmediatamente superior a esa clasificación, esto es, sin incluir el nombre de la clasificación seleccionada.</span></p>
+<p>Si la cadena de texto a mostrar es muy larga se cortará con "...". Se acompañará de un componente tipo "tooltip" que mostrará la cadena completa al pasar sobre el texto. </p>
+<p>Nota: en el caso del escenario en el que se acaban de seleccionar una o varias clasificaciones en el popup, puede que para estas clasificaciones esta información ya esté disponible en la respuesta devuelta tras la selección y no sea necesario realizar nuevas llamadas para presentarla en pantalla.</p></th>
+</tr>
+<tr class="even">
+<th class="confluenceTd">Nivel seleccionado</th>
+<th class="confluenceTd"><p>Texto</p></th>
+<th class="confluenceTd"><p><span style="color:var(--ds-text,#172b4d);">Nombre del elemento de clasificación seleccionado. Es el nombre del elemento de clasificación con el que se relaciona directamente la entidad que corresponda. </span></p>
+<p><span style="color:var(--ds-text,#172b4d);">El nombre a mostrar se obtendrá a partir del requisito de integración <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0030-sgo-integracion-con-sistema-de-gestion-de-la-estructura-organica/req-int-0030-sgo-0031-consultar-clasificacion">REQ-INT-0030-SGO-0031 - Consultar clasificación</a>. </span></p>
+<p><span style="color:var(--ds-text,#172b4d);"><span class="confluence-link">Nota: en el caso del escenario en el que se acaban de seleccionar una o varias clasificaciones en el popup, puede que para estas clasificaciones esta información ya esté disponible en la respuesta devuelta tras la selección y no sea necesario realizar nuevas llamadas para presentarla en pantalla.</span></span></p></th>
+</tr>
+<tr class="odd">
+<th class="confluenceTd">Eliminar</th>
+<th class="confluenceTd">Icono de acción</th>
+<th class="confluenceTd">Acción "Eliminar".</th>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable" style="width: 82.7987%;">
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 46%" />
+<col style="width: 15%" />
+<col style="width: 25%" />
+</colgroup>
+<tbody>
+<tr class="header">
+<th class="confluenceTh">Acciones</th>
+<th class="confluenceTh">Descripción</th>
+<th class="confluenceTh"> Enlace CU.</th>
+<th class="confluenceTh">Permisos</th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd">Eliminar</td>
+<td class="confluenceTd">Elimina la asociación entre el elemento de clasificación y la entidad que corresponda.</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Los que correspondan en cada gestión específica.</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+## Interfaces de usuario y casos de uso relacionados
+
+</div>
+
+</div>
+
+</div>
+
+<div class="columnLayout two-equal" layout="two-equal">
+
+<div class="cell normal" data-type="normal">
+
+<div class="innerCell">
+
+<img src="plugins/servlet/confluence/placeholder/unknown-macro" class="wysiwyg-unknown-macro" />
+
+</div>
+
+</div>
+
+<div class="cell normal" data-type="normal">
+
+<div class="innerCell">
+
+<img src="plugins/servlet/confluence/placeholder/unknown-macro" class="wysiwyg-unknown-macro" />
+
+</div>
+
+</div>
+
+</div>
+
+<div class="columnLayout single" layout="single">
+
+<div class="cell normal" data-type="normal">
+
+<div class="innerCell">
+
+## Permisos
+
+<div class="plugin-tabmeta-details">
+
+<div class="table-wrap">
+
+<table class="wrapped relative-table confluenceTable" style="width: 21.6428%;">
+<colgroup>
+<col style="width: 100%" />
+</colgroup>
+<tbody>
+<tr class="header">
+<th class="confluenceTh"><p><span>Permiso de acceso a la pantalla<br />
+</span></p></th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd">Los que correspondan en cada gestión específica.</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="pageSection group">
+
+<div class="pageSectionHeader">
+
+## Attachments:
+
+</div>
+
+<div class="greybox" align="left">
+
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [02clasificacionesselectorpopup.png](/attachments/597853500/597884616.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [02clasificacionesselectorpopup.png](/attachments/597853500/598835349.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [02clasificacionesselectorpopupseleccione.png](/attachments/597853500/598835380.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [02clasificacioneslistadoasociadas.png](/attachments/597853500/597884618.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [02clasificacioneslistadoasociadaspopupniveles.png](/attachments/597853500/597884617.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [02clasificacionesselectorpopupseleccione.png](/attachments/597853500/598835339.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [02clasificacionesselectorpopup.png](/attachments/597853500/598835340.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [02clasificacionesselectorpopupcondatos.png](/attachments/597853500/598835350.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [02clasificacionesselectorpopupcondatos.png](/attachments/597853500/598835348.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [02clasificacionesselectorpopupcondatosnuevo.png](/attachments/597853500/598835351.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [02clasificacionesselectorpopup.png](/attachments/597853500/597884614.png) (image/png)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [02clasificacionesselectorpopupseleccione.png](/attachments/597853500/597884615.png) (image/png)  
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div id="footer" role="contentinfo">
+
+<div class="section footer-body">
+
+Document generated by Confluence on oct 27, 2025 08:39
+
+<div id="footer-logo">
+
+[Atlassian](https://www.atlassian.com/)
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 
 

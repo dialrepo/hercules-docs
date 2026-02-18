@@ -796,7 +796,1140 @@
 
   <h1>Rep csp 0032 listado general de convocatorias formato rtf</h1>
 
+<div id="page">
 
+<div id="main" class="aui-page-panel">
+
+<div id="main-header">
+
+<div id="breadcrumb-section">
+
+1.  [Hércules](index.html)
+2.  [Hércules](/)
+3.  [SGI. Sistema de gestión de investigación](//sgi-sistema-de-gestion-de-investigacion)
+4.  [Requisitos y análisis funcional](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional)
+5.  [Análisis Funcional SGI - Hércules](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules)
+6.  [GEN - Aspectos generales](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales)
+7.  [INT - Requisitos de integración](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion)
+8.  [REQ-INT-0150-SGREP - Integración con Sistema de Generación de Reportes](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0150-sgrep-integracion-con-sistema-de-generacion-de-reportes)
+9.  [CSP - Informes predefinidos](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0150-sgrep-integracion-con-sistema-de-generacion-de-reportes/csp-informes-predefinidos)
+10. [\_deprecated](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0150-sgrep-integracion-con-sistema-de-generacion-de-reportes/csp-informes-predefinidos/deprecated)
+
+</div>
+
+# <span id="title-text"> Hércules : REP-CSP-0032 - Listado general de convocatorias - Formato rtf </span>
+
+</div>
+
+<div id="content" class="view">
+
+<div class="page-metadata">
+
+Created by <span class="author"> Usuario desconocido (covadonga.garcia)</span>, last updated on mar 21, 2022
+
+</div>
+
+<div id="main-content" class="wiki-content group">
+
+<div class="contentLayout2">
+
+<div class="columnLayout single" layout="single">
+
+<div class="cell normal" data-type="normal">
+
+<div class="innerCell">
+
+<div class="plugin-tabmeta-details">
+
+<div class="table-wrap">
+
+<table class="wrapped confluenceTable">
+<tbody>
+<tr class="odd">
+<th class="confluenceTh">Cod. REP</th>
+<td class="confluenceTd"><p><strong>REP-CSP-0032 - Listado general de convocatorias - Formato rtf</strong></p></td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Ver. Objetivo</th>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh">Ver. REP</th>
+<td class="confluenceTd">1.0.0</td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Estado</th>
+<td class="confluenceTd"><div class="content-wrapper">
+<span class="status-macro aui-lozenge conf-macro output-inline">PENDIENTE</span>
+</div></td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh">Fec. Aprobación</th>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<th class="confluenceTh">Épica, historia</th>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh">Frecuencia</th>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+## Diseño Informe 
+
+<span style="letter-spacing: 0.0px;">Se debe de generar un informe en formato RTF compatible con DOCX que reciba como parámetros de entrada el título del informe y la lista de bloques de datos a incluir. El informe contendrá la información detallada de proyectos. Se listarán todas las convocatorias recuperadas con su detalle.  Se incluirá el parámetro de entrada "título" como título del informe.</span>
+
+<span style="letter-spacing: 0.0px;">El listado se mostrará agrupado por convocatoria. Cada vez que se cambie de convocatoria se resaltará la línea de texto en el informe y a continuación comenzará a listarse su detalle.</span>
+
+<span style="letter-spacing: 0.0px;">El detalle se visualizará en función del bloque de datos:</span>
+
+- <span style="letter-spacing: 0.0px;">A dos columnas. Si</span>endo la primera columna la etiqueta de la misma y la segunda columna el contenido recuperado con los datos de la convocatoria.
+- En varias filas, pero también a dos columnas, de forma que varias filas compartan una misma columna de título. La primera columna será el título y en la segunda columna, saltando de fila, se mostrará el contenido.  ejemplo <span class="confluence-embedded-file-wrapper confluence-embedded-manual-size"><img src="attachments/597852256/597865719.png" class="confluence-embedded-image confluence-content-image-border" draggable="false" data-image-src="attachments/597852256/597865719.png" data-unresolved-comment-count="0" data-linked-resource-id="597865719" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="export-proyectos_equipo.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="597852256" data-linked-resource-container-version="10" tabindex="0" width="386" height="63" /></span>
+
+<span style="letter-spacing: 0.0px;">Habrá bloques de datos que se repitan, en este caso la etiqueta será representativa del bloque de datos, e incluirá entre paréntesis el nombre de las columnas que se mostrarán para cada elemento. Cada elemento repetido se mostrará de alguna de las formas indicadas previamente (dependiendo de cada bloque de datos).</span>
+
+<span style="letter-spacing: 0.0px;">A continuación se indica el mapeo de los nombres de columnas del fichero de salida con la tabla y campo del SGI desde el que deben ser recuperadas. Se indica también el bloque de datos al que pertenece cada columna, así como el modo en el que se visualizará (a dos columnas o repeticiones de filas).</span>
+
+
+
+<span style="letter-spacing: 0.0px;">Ejemplo de formato de datos:  </span><a href="attachments/597852256/597865714.rtf" data-linked-resource-id="597865714" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="proyectos_with_list.rtf" data-nice-type="Word Document" data-linked-resource-content-type="application/msword" data-linked-resource-container-id="597852256" data-linked-resource-container-version="10">proyectos_with_list.rtf</a> al que se de debe de incorporar la visualización en varias filas, de manera semejante a la imagen mostrada previamente.
+
+
+
+
+
+<div class="table-wrap">
+
+<table class="wrapped relative-table confluenceTable" style="width: 80.1997%;">
+<colgroup>
+<col style="width: 12%" />
+<col style="width: 26%" />
+<col style="width: 10%" />
+<col style="width: 41%" />
+<col style="width: 9%" />
+</colgroup>
+<tbody>
+<tr class="header">
+<th class="confluenceTh">Bloque de datos</th>
+<th class="confluenceTh">Columna informe</th>
+<th class="confluenceTh">Formato</th>
+<th class="confluenceTh">Campo SGI</th>
+<th class="confluenceTh">Repetición</th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Título</td>
+<td class="confluenceTd">Dos columnas</td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Campo "título" de la tabla "convocatoria".</span></td>
+<td class="confluenceTd">No</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Estado</span></td>
+<td class="confluenceTd">Dos columnas</td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Valor del enumerado "tipo estado convocatoria" referenciado desde el campo "estado" de la tabla "convocatoria".</span></td>
+<td class="confluenceTd">No</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Tipo solicitud SGI</span></td>
+<td class="confluenceTd">Dos columnas</td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Valor del enumerado "tipo formulario solicitud" especificado por el campo "tipo formulario solicitud" de la tabla "convocatoria".</span></td>
+<td class="confluenceTd">No</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Unidad de gestión</span></td>
+<td class="confluenceTd">Dos columnas</td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Campo "nombre" de la tabla "unidad gestión" referenciado desde el campo "unidad gestión" de la tabla "convocatoria".</span></td>
+<td class="confluenceTd">No</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Modelo de ejecución</td>
+<td class="confluenceTd">Dos columnas</td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Campo "nombre" de la tabla "modelo ejecución" referenciado desde el campo "modelo ejecución" de la tabla "convocatoria".</span></td>
+<td class="confluenceTd">No</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Finalidad</td>
+<td class="confluenceTd">Dos columnas</td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Campo "nombre" de la tabla "finalidad" referenciado desde el campo "finalidad" de la tabla "convocatoria".</span></td>
+<td class="confluenceTd">No</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Identificación</span></td>
+<td class="confluenceTd">Dos columnas</td>
+<td class="confluenceTd"><p><span style="color:var(--ds-text,#172b4d);">Campo "código" de la tabla "convocatoria".</span></p></td>
+<td class="confluenceTd">No</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Fecha publicación</span></td>
+<td class="confluenceTd">Dos columnas</td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Campo "fecha publicación" de la tabla "convocatoria".</span></td>
+<td class="confluenceTd">No</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Fecha provisional</span></td>
+<td class="confluenceTd">Dos columnas</td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Campo "fecha provisional" de la tabla "convocatoria".</span></td>
+<td class="confluenceTd">No</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Fecha concesión</span></td>
+<td class="confluenceTd">Dos columnas</td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Campo "fecha concesión" de la tabla "convocatoria".</span></td>
+<td class="confluenceTd">No</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Duración actividad (meses)</span></td>
+<td class="confluenceTd">Dos columnas</td>
+<td class="confluenceTd"><p><span style="color:var(--ds-text,#172b4d);">Campo "duración" de la tabla "convocatoria".</span></p></td>
+<td class="confluenceTd">No</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Ámbito geográfico</span></td>
+<td class="confluenceTd">Dos columnas</td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Campo "nombre" de la tabla "tipo ámbito geográfico" referenciado desde el campo "ámbito geográfico" de la tabla "convocatoria".</span></td>
+<td class="confluenceTd">No</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Régimen concurrencia</span></td>
+<td class="confluenceTd">Dos columnas</td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Campo "nombre" de la tabla "tipo régimen concurrencia" referenciado desde el campo "régimen concurrencia" de la tabla "convocatoria".</span></td>
+<td class="confluenceTd">No</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Entidad gestora (nombre - número identificación)</span></td>
+<td class="confluenceTd">Dos columnas</td>
+<td class="confluenceTd"><p>Se mostrarán el nombre y el número de identificación, separados por el carácter "-".</p>
+<p>Nombre: Campo "nombre" recuperado a través de <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0015-sgemp-integracion-con-sistema-de-gestion-de-empresas/req-int-0015-sgemp-0030-consultar-datos-generales-de-empresa">REQ-INT-0015-SGEMP-0030 - Consultar datos generales de empresa</a> para la entidad indicada por el campo "entidad ref" de la tabla "convocatoria entidad gestora".</p>
+<p>Número de identificación: Campo "número de identificación fiscal" recuperado a través de <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0015-sgemp-integracion-con-sistema-de-gestion-de-empresas/req-int-0015-sgemp-0030-consultar-datos-generales-de-empresa">REQ-INT-0015-SGEMP-0030 - Consultar datos generales de empresa</a> para la entidad indicada por el campo "entidad ref" de la tabla "convocatoria entidad gestora"</p></td>
+<td class="confluenceTd">No</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">Áreas temáticas</td>
+<td class="confluenceTd">Áreas temáticas</td>
+<td class="confluenceTd">Varias filas</td>
+<td class="confluenceTd"><p>Cada área temática vinculada a la convocatoria se mostrará en una fila. En cada fila se mostrará el nombre del listado de áreas temáticas concatenado (carácter ':') con el área temática.</p>
+<p>Se recuperarán las áreas temáticas de la convocatoria de la tabla "convocatoria área temática". Para cada área se mostrará su nombre (campo "nombre" de la tabla "área temática"), precedido del nombre del listado y concatenado éste con carácter ":". <span style="letter-spacing: 0.0px;">El nombre del listado de áreas será el campo "nombre" del elemento raíz (aquel cuyo campo "padre" tome valor "null") obtenido de la tabla "área temática", para recuperarlo se "ascenderá" través del campo "padre" a partir del  "área temática" especificada en la relación "convocatoria área temática".</span></p></td>
+<td class="confluenceTd">Sí</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">Entidades convocantes</td>
+<td class="confluenceTd">Entidades convocantes  (nombre - número identificación - plan - modalidad)</td>
+<td class="confluenceTd">Varias filas</td>
+<td class="confluenceTd">Se recuperarán todas las entidades convocantes de la tabla "convocatoria entidad convocante"</td>
+<td class="confluenceTd">Sí</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Entidad convocante X</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><p>Campo "nombre" recuperado a través de <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0015-sgemp-integracion-con-sistema-de-gestion-de-empresas/req-int-0015-sgemp-0030-consultar-datos-generales-de-empresa">REQ-INT-0015-SGEMP-0030 - Consultar datos generales de empresa</a> para la entidad indicada por el campo "entidad ref" de la tabla "convocatoria entidad convocante".</p></td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><p>Campo "número de identificación fiscal" recuperado a través de <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0015-sgemp-integracion-con-sistema-de-gestion-de-empresas/req-int-0015-sgemp-0030-consultar-datos-generales-de-empresa">REQ-INT-0015-SGEMP-0030 - Consultar datos generales de empresa</a> para la entidad indicada por el campo "entidad ref" de la tabla "convocatoria entidad convocante".</p></td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><p><span style="color:var(--ds-text,#172b4d);">Plan: Se mostrará el nombre del plan correspondiente al programa con el que se relaciona la entidad convocante. El nombre del plan es el nodo raíz al que pertenece el programa asociado a la entidad convocante.<span> </span></span><span style="color:var(--ds-text,#172b4d);">Se mostrará el campo "nombre" de la tabla "programa" correspondiente al nodo raíz del elemento indicado por el campo "programa" de la tabla "convocatoria entidad convocante". Para alcanzar el nodo raíz se "ascenderá" en la tabla "programa" desde el elemento de partida (campo "programa" de<span> </span><span>"convocatoria entidad convocante"</span>), a través del campo "padre" hasta alcanzar el elemento cuyo campo "padre" tome valor "null". Éste será el nombre del plan a mostrar en esta columna.</span></p></td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Modalidad: Se mostrará el valor del campo "nombre" de la tabla "programa" para el elemento referenciado desde el campo "programa" de la tabla "convocatoria entidad convocante".</span></td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">Entidades financiadoras</td>
+<td class="confluenceTd">Entidades financiadora (nombre - número identificación - fuente financiación - ámbito fuente financiación - tipo financiación - importe financiación - porcentaje financiación)</td>
+<td class="confluenceTd">Varias filas</td>
+<td class="confluenceTd">Se recuperarán todas las entidades financiadoras de la tabla "convocatoria entidad financiadora"</td>
+<td class="confluenceTd">Sí</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Entidad financiadora X</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><p>Nombre: Campo "nombre" recuperado a través de <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0015-sgemp-integracion-con-sistema-de-gestion-de-empresas/req-int-0015-sgemp-0030-consultar-datos-generales-de-empresa">REQ-INT-0015-SGEMP-0030 - Consultar datos generales de empresa</a> para la entidad indicada por el campo "entidad ref" de la tabla "convocatoria entidad financiadora".</p></td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Número identificación: Campo "número de identificación fiscal" recuperado a través de <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0015-sgemp-integracion-con-sistema-de-gestion-de-empresas/req-int-0015-sgemp-0030-consultar-datos-generales-de-empresa">REQ-INT-0015-SGEMP-0030 - Consultar datos generales de empresa</a> para la entidad indicada por el campo "entidad ref" de la tabla "convocatoria entidad financiadora".</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Fuente financiación: Campo "nombre" de la tabla "fuente financiación" para el elemento referenciado por el campo "fuente financiación" de la tabla "convocatoria entidad financiadora".</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Tipo financiación: Campo "nombre" de la tabla "tipo financiación" para el elemento referenciado por el campo "tipo financiación" de la tabla "convocatoria entidad financiadora".</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Importe financiación: Campo "importe financiación" de la tabla "convocatoria entidad financiadora".</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Porcentaje financiación: Campo "porcentaje financiación" de la tabla "convocatoria entidad financiadora".</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">Enlaces</td>
+<td class="confluenceTd">Enlaces (URL-tipo enlace)</td>
+<td class="confluenceTd">Varias filas</td>
+<td class="confluenceTd">Se recuperarán todos los enlaces de la convocatoria de la tabla "convocatoria enlace". <span style="color:var(--ds-text,#172b4d);"><span> </span>Para cada enlace se mostrará su url y su tipo.</span></td>
+<td class="confluenceTd">Sí</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Enlace X</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><p><span style="letter-spacing: 0.0px;">Campo "url" de la tabla "convocatoria enlace".</span></p></td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Campo "nombre" recuperado de la tabla "tipo enlace" para la referencia establecida por el campo "tipo enlace" de la tabla "convocatoria enlace".</span></td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">Fases</td>
+<td class="confluenceTd">Fases (fecha inicio - fecha fin - tipo fase)</td>
+<td class="confluenceTd">Varias filas</td>
+<td class="confluenceTd">Se recuperarán todas las fases de la convocatoria, tabla "convocatoria fase", se mostrarán el tipo de fase,  la fecha de inicio, la fecha de fin.</td>
+<td class="confluenceTd">Sí</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Fase X</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Campo "nombre" recuperado de la tabla "tipo fase" para la referencia establecida por el campo "tipo fase" de la tabla "convocatoria fase".</span></td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Campo "fecha inicio" de la tabla "convocatoria fase".</span></td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Campo "fecha fin" de la tabla "convocatoria fase".</span></td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">Calendario justificación</td>
+<td class="confluenceTd">Calendario justificación (número periodo - tipo - mes inicial - mes final - fecha inicio presentación - fecha fin presentación)</td>
+<td class="confluenceTd">Varias filas</td>
+<td class="confluenceTd">Se recuperarán todos los periodos de justificación asociados a la convocatoria recuperados de la tabla "convocatoria periodo justificación" ordenados por número periodo. Para cada periodo se mostrarán los campos número de periodo, tipo periodo, mes inicial, mes final, fecha inicio presentación, fecha fin presentación.</td>
+<td class="confluenceTd">Sí</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Periodo justificación X</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Número periodo: Campo "número periodo" de la tabla "convocatoria periodo justificación".</span></td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Tipo periodo: Valor recuperado del enumerado "tipo justificación" para el campo "tipo justificación" de la tabla "convocatoria periodo justificación".</span></td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Mes inicial: Campo "mes inicial" de la tabla "convocatoria periodo justificación".</span></td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Mes final: Campo "mes final" de la tabla "convocatoria periodo justificación".</span></td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Fecha inicio presentación: Campo "fecha inicio presentación" de la tabla "convocatoria periodo justificación".</span></td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Fecha fin presentación: <span style="color:var(--ds-text,#172b4d);">Campo "fecha fin presentación" de la tabla "convocatoria periodo justificación".</span></td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">Seguimiento científico</td>
+<td class="confluenceTd">Seguimiento científico (número periodo- tipo - mes inicial - mes final - fecha inicio presentación - fecha fin presentación)</td>
+<td class="confluenceTd">Varias filas</td>
+<td class="confluenceTd">Se recuperarán todos los periodos de seguimiento científico asociados a la convocatoria recuperados de la tabla "convocatoria periodo seguimiento científico" ordenados por número periodo. Para cada periodo se mostrarán los campos número de periodo, tipo periodo, mes inicial, mes final, fecha inicio presentación, fecha fin presentación.</td>
+<td class="confluenceTd">Sí</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Periodo seguimiento X</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Número periodo: Campo "número periodo" de la tabla "convocatoria periodo seguimiento científico".</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Tipo periodo: <span style="color:var(--ds-text,#172b4d);">Valor correspondiente dentro del enumerado "Tipo seguimiento"  al campo "tipo seguimiento" de la tabla "convocatoria periodo seguimiento científico".</span></td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Mes inicial: <span style="color:var(--ds-text,#172b4d);">Campo "mes inicial" de la tabla "convocatoria periodo seguimiento científico".</span></td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Mes final: <span style="color:var(--ds-text,#172b4d);">Campo "mes final" de la tabla "convocatoria periodo seguimiento científico".</span></td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Fecha inicio presentación: <span style="color:var(--ds-text,#172b4d);">Campo "fecha inicio presentación" de la tabla "convocatoria periodo seguimiento científico".</span></td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Fecha fin presentación: <span style="color:var(--ds-text,#172b4d);">Campo "fecha fin presentación" de la tabla "convocatoria periodo seguimiento científico".</span></td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">Hitos</td>
+<td class="confluenceTd">Hitos (tipo hito - fecha)</td>
+<td class="confluenceTd">Varias filas</td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Se recuperarán todos los hitos de la convocatoria, tabla "convocatoria hito".  Para cada hito se mostrará su tipo y su fecha.</span></td>
+<td class="confluenceTd">Sí</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Hito X</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Tipo hito: <span style="color:var(--ds-text,#172b4d);">Campo "nombre" de la tabla "tipo hito" para la referencia establecida por el campo "tipo hito" de la tabla "convocatoria hito".</span></td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Fecha: <span style="color:var(--ds-text,#172b4d);">Campo "fecha" de la tabla "convocatoria hito".</span></td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">Requisitos IP</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">No</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Req. IP - Número máximo IPs</span></td>
+<td class="confluenceTd">Dos columnas</td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Campo "número máximo IP" de la tabla "requisito IP"</span></td>
+<td class="confluenceTd">No</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Req. IP - Edad máxima</span></td>
+<td class="confluenceTd">Dos columnas</td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Campo "edad máxima" de la tabla "requisito IP"</span></td>
+<td class="confluenceTd">No</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Req. IP - Sexo</span></td>
+<td class="confluenceTd">Dos columnas</td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Se mostrará el nombre del sexo recuperado a través del requisito de integración<span> <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0020-sgp-integracion-con-sistema-de-gestion-de-personas/req-int-0020-sgp-0014-listar-sexos">REQ-INT-0020-SGP-0014 - Listar sexos</a> </span></span><span style="color:var(--ds-text,#172b4d);">para la referencia establecida por el campo "sexo ref" de la tabla "requisito IP".</span></td>
+<td class="confluenceTd">No</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Req. IP - Nivel académico X</span></td>
+<td class="confluenceTd">Varias filas</td>
+<td class="confluenceTd"><p>Se mostrará una fila para cada nivel académico asociado a las restricciones IP de la convocatoria, tabla "requisito IP nivel académico".</p>
+<p>Se mostrará el nombre del nivel académico recuperado a través del requisito de integración<span> <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0020-sgp-integracion-con-sistema-de-gestion-de-personas/req-int-0020-sgp-0019-consultar-detalle-de-nivel-academico">REQ-INT-0020-SGP-0019 - Consultar detalle de nivel académico</a></span><span> </span>para la referencia establecida por el campo "nivel académico ref" de la tabla "requisito IP nivel académico".</p></td>
+<td class="confluenceTd">Sí</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Req. IP - Nivel académico posterior a </span></td>
+<td class="confluenceTd">Dos columnas</td>
+<td class="confluenceTd">Se mostrará el campo "fecha mínima nivel académico" de la tabla "requisito IP".</td>
+<td class="confluenceTd">No</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Req. IP - Nivel académico anterior a </span></td>
+<td class="confluenceTd">Dos columnas</td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Se mostrará el campo "fecha máxima nivel académico" de la tabla "requisito IP".</span></td>
+<td class="confluenceTd">No</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Req. IP - Vinculación universidad</span></td>
+<td class="confluenceTd">Dos columnas</td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Se mostrará el campo "vinculación universidad" de la tabla "requisito IP".</span></td>
+<td class="confluenceTd">No</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Req. IP - Categoría profesional X</span></td>
+<td class="confluenceTd">Varias filas</td>
+<td class="confluenceTd"><p>Se mostrará una fila para cada categoría profesional asociada a las restricciones IP de la convocatoria, tabla "requisito IP categoría".</p>
+<p><span style="color:var(--ds-text,#172b4d);">Se mostrará el nombre de la categoría profesional recuperado a través del requisito de  integración <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0020-sgp-integracion-con-sistema-de-gestion-de-personas/req-int-0020-sgp-0017-consultar-detalle-de-categoria-profesional">REQ-INT-0020-SGP-0017 - Consultar detalle de categoría profesional</a> </span><span style="color:var(--ds-background-accent-red-bolder,#c9372c);"><span style="color:var(--ds-text,#172b4d);"><span style="color:var(--ds-text,#172b4d);">para la referencia establecida por el campo "categoría profesional ref." de la tabla "requisito IP categoría"</span></span></span></p></td>
+<td class="confluenceTd">Sí</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Req. IP - Categoría profesional posterior a</span></td>
+<td class="confluenceTd">Dos columnas</td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Se mostrará el campo "fecha mínima categoría profesional" de la tabla "requisito IP".</span></td>
+<td class="confluenceTd">No</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Req. IP - Categoría profesional anterior a</span></td>
+<td class="confluenceTd">Dos columnas</td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Se mostrará el campo "fecha máxima categoría profesional" de la tabla "requisito IP".</span></td>
+<td class="confluenceTd">No</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Núm. mínimo competitivos</span></td>
+<td class="confluenceTd">Dos columnas</td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Se mostrará el campo "núm. mínimo competitivos" de la tabla "requisito IP".</span></td>
+<td class="confluenceTd">No</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Núm. mínimo no competitivos</span></td>
+<td class="confluenceTd">Dos columnas</td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Se mostrará el campo "núm. mínimo no competitivos" de la tabla "requisito IP".</span></td>
+<td class="confluenceTd">No</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Núm. máximo competitivos</span></td>
+<td class="confluenceTd">Dos columnas</td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Se mostrará el campo "núm.  máximo competitivos" de la tabla "requisito IP".</span></td>
+<td class="confluenceTd">No</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Núm. máximo no competitivos</span></td>
+<td class="confluenceTd">Dos columnas</td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Se mostrará el campo "núm.  máximo no competitivos" de la tabla "requisito IP".</span></td>
+<td class="confluenceTd">No</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">Requisitos equipo</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">No</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Req. equipo - Edad máxima</span></td>
+<td class="confluenceTd">Dos columnas</td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Campo "edad máxima" de la tabla "requisito equipo"</span></td>
+<td class="confluenceTd">No</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Req. equipo - Sexo</span></td>
+<td class="confluenceTd">Dos columnas</td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Se mostrará el nombre del sexo recuperado a través del requisito de integración <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0020-sgp-integracion-con-sistema-de-gestion-de-personas/req-int-0020-sgp-0014-listar-sexos">REQ-INT-0020-SGP-0014 - Listar sexos</a></span><span style="color:var(--ds-text,#172b4d);"><span> </span>para la referencia establecida por el campo "sexo ref" de la tabla "requisito equipo".</span></td>
+<td class="confluenceTd">No</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Req. equipo - Ratio mínimo sexo</span></td>
+<td class="confluenceTd">Dos columnas</td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Campo "ratio sexo" de la tabla "requisito equipo"</span></td>
+<td class="confluenceTd">No</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Req. equipo - Nivel académico X</span></td>
+<td class="confluenceTd">Varias filas</td>
+<td class="confluenceTd"><p>Se mostrará una fila para cada nivel académico asociado a las restricciones aplicadas por la convocatoria sobre el equipo, tabla "requisito equipo nivel académico".</p>
+<p>Se mostrará el nombre del nivel académico recuperado a través del requisito de integración <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0020-sgp-integracion-con-sistema-de-gestion-de-personas/req-int-0020-sgp-0019-consultar-detalle-de-nivel-academico">REQ-INT-0020-SGP-0019 - Consultar detalle de nivel académico</a> para la referencia establecida por el campo "nivel académico ref" de la tabla "requisito equipo nivel académico".</p></td>
+<td class="confluenceTd">Sí</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Req. equipo - Nivel académico posterior a </span></td>
+<td class="confluenceTd">Dos columnas</td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Se mostrará el campo "fecha mínima nivel académico" de la tabla "requisito equipo".</span></td>
+<td class="confluenceTd">No</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Req. equipo - Nivel académico anterior a </span></td>
+<td class="confluenceTd">Dos columnas</td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Se mostrará el campo "fecha máxima nivel académico" de la tabla "requisito equipo".</span></td>
+<td class="confluenceTd">No</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Req. equipo - Vinculación universidad</span></td>
+<td class="confluenceTd">Dos columnas</td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Se mostrará el campo "vinculación universidad" de la tabla "requisito equipo".</span></td>
+<td class="confluenceTd">No</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Req. equipo - Categoría profesional X</span></td>
+<td class="confluenceTd">Varias filas</td>
+<td class="confluenceTd"><p>Se mostrará una fila para cada categoría profesional asociada a las restricciones aplicadas por la convocatoria sobre el equipo, tabla "requisito equipo categoría".</p>
+<p><span style="color:var(--ds-text,#172b4d);">Se mostrará el nombre de la categoría profesional recuperado a través del requisito de integración <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0020-sgp-integracion-con-sistema-de-gestion-de-personas/req-int-0020-sgp-0017-consultar-detalle-de-categoria-profesional">REQ-INT-0020-SGP-0017 - Consultar detalle de categoría profesional</a> </span><span style="color:var(--ds-background-accent-red-bolder,#c9372c);"><span style="color:var(--ds-text,#172b4d);"><span style="color:var(--ds-text,#172b4d);">para la referencia establecida por el campo "categoría profesional ref." de la tabla "requisito equipo categoría".</span></span></span></p></td>
+<td class="confluenceTd">Sí</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Req. equipo - Categoría profesional posterior a</span></td>
+<td class="confluenceTd">Dos columnas</td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Se mostrará el campo "fecha mínima categoría profesional" de la tabla "requisito equipo".</span></td>
+<td class="confluenceTd">No</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Req. equipo - Categoría profesional anterior a</span></td>
+<td class="confluenceTd">Dos columnas</td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Se mostrará el campo "fecha máxima categoría profesional" de la tabla "requisito equipo".</span></td>
+<td class="confluenceTd">No</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Núm. mínimo competitivos</span></td>
+<td class="confluenceTd">Dos columnas</td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Se mostrará el campo "núm. mínimo competitivos" de la tabla "requisito equipo".</span></td>
+<td class="confluenceTd">No</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Núm. mínimo no competitivos</span></td>
+<td class="confluenceTd">Dos columnas</td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Se mostrará el campo "núm. mínimo no competitivos" de la tabla "requisito equipo".</span></td>
+<td class="confluenceTd">No</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Núm. máximo competitivos</span></td>
+<td class="confluenceTd">Dos columnas</td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Se mostrará el campo "núm. máximo competitivos" de la tabla "requisito equipo".</span></td>
+<td class="confluenceTd">No</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Núm. máximo no competitivos</span></td>
+<td class="confluenceTd">Dos columnas</td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Se mostrará el campo "núm. máximo no competitivos" de la tabla "requisito equipo".</span></td>
+<td class="confluenceTd">No</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">Elegibilidad</td>
+<td class="confluenceTd">Conceptos gasto (nombre - importe máximo - mes inicial - mes final - códigos económicos - permitido)</td>
+<td class="confluenceTd"><p>Varias filas </p>
+<p><br />
+</p></td>
+<td class="confluenceTd"><p>Se recuperarán  los conceptos de gasto de la tabla "convocatoria concepto gasto". se recuperarán en orden, primero los permitidos (campo "permitido" valor "true") y después los no permitidos (campo "permitido" valor "false"). Para cada concepto de gasto se deberán recuperar los códigos económicos relacionados, obtenidos de la tabla "convocatoria concepto gasto código económico".</p></td>
+<td class="confluenceTd">Sí</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Concepto gasto X</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><p>Nombre: Campo "nombre" de la tabla "concepto gasto" correspondiente al campo "concepto gasto" de la tabla "convocatoria concepto gasto".</p></td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><p>Importe máximo: <span style="color:var(--ds-text,#172b4d);">Campo "importe máximo" de la tabla "convocatoria concepto gasto".</span></p></td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><p>Mes inicial: <span style="color:var(--ds-text,#172b4d);">Campo "mes inicial" de la tabla "convocatoria concepto gasto".</span></p></td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><p>Mes final: <span style="color:var(--ds-text,#172b4d);">Campo "mes final" de la tabla "convocatoria concepto gasto".</span></p></td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><p>Códigos económicos: <span style="color:var(--ds-text,#172b4d);">Los códigos económicos serán una repetición pero se mostrarán en la misma línea, separados por el carácter ",". </span><span style="color:var(--ds-text,#172b4d);">Se mostrará el identificador concatenado con el nombre del código económico recuperados a través de<span> <a href="//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0010-sge-integracion-con-sistema-de-gestion-economica/req-int-0010-sge-0072-detalle-codigo-economico-gasto">REQ-INT-0010-SGE-0072 - Detalle código económico gasto</a></span><span> </span>p</span><span style="color:var(--ds-text,#172b4d);">ara el "código económico ref" de la tabla "convocatoria concepto gasto código económico".</span></p></td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><p>Permitido: <span>Según el valor del campo "permitido" de la tabla "convocatoria concepto gasto":</span></p>
+<ul>
+<li>Si toma valor "true" se mostrará el texto "permitido"</li>
+<li>Si toma valor "false" se mostrará el texto "no permitido"</li>
+</ul></td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">Partidas presupuestarias</td>
+<td class="confluenceTd">Partidas presupuestarias (partida - tipo)</td>
+<td class="confluenceTd">Varias filas</td>
+<td class="confluenceTd"><p>Se recuperarán todos los registros de la tabla "convocatoria partida" para la convocatoria listada.  Se mostrarán la partida y su tipo.</p></td>
+<td class="confluenceTd">Sí</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Partida X</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Campo "código" de la tabla "convocatoria partida".</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Valor correspondiente sobre el enumerado "tipo partida" del campo "tipo partida" de la tabla "convocatoria partida".</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">Configuración solicitudes</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Presentación solicitudes SGI</span></td>
+<td class="confluenceTd">Dos columnas</td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Campo "tramitación SGI" de la tabla  "configuración solicitud".</span></td>
+<td class="confluenceTd">No</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Inicio presentación solicitudes</span></td>
+<td class="confluenceTd">Dos columnas</td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Campo "fecha inicio" de la tabla "convocatoria fase" para la fase referenciada por el campo "fase presentación solicitudes" de la tabla "configuración solicitud".</span></td>
+<td class="confluenceTd">No</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Fin presentación solicitudes</span></td>
+<td class="confluenceTd">Dos columnas</td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Campo "fecha fin" de la tabla "convocatoria fase" para la fase referenciada por el campo "fase presentación solicitudes" de la tabla "configuración solicitud".</span></td>
+<td class="confluenceTd">No</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Importe máximo solicitudes</span></td>
+<td class="confluenceTd">Dos columnas</td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Campo "importe máximo" de la tabla "configuración solicitud".</span></td>
+<td class="confluenceTd">No</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd"><span style="color:var(--ds-text,#172b4d);">Documentos requeridos </span></td>
+<td class="confluenceTd">Varias filas</td>
+<td class="confluenceTd">Se mostrará una fila para cada documento requerido. En cada fila se mostrará el tipo de documento. Se mostrará el campo "nombre" de la tabla "tipo documento" para la referencia establecida por el campo "tipo documento" de la tabla ""documento requerido solicitud".</td>
+<td class="confluenceTd">Sí</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+<span style="letter-spacing: 0.0px;">  
+
+</span>
+
+
+
+</div>
+
+</div>
+
+</div>
+
+<div class="columnLayout two-equal" layout="two-equal">
+
+<div class="cell normal" data-type="normal">
+
+<div class="innerCell">
+
+## <span style="letter-spacing: -0.008em;">Interfaces de usuario relacionados</span>
+
+<img src="plugins/servlet/confluence/placeholder/unknown-macro" class="wysiwyg-unknown-macro" />
+
+</div>
+
+</div>
+
+<div class="cell normal" data-type="normal">
+
+<div class="innerCell">
+
+## Casos de uso relacionados
+
+<img src="plugins/servlet/confluence/placeholder/unknown-macro" class="wysiwyg-unknown-macro" />
+
+
+
+</div>
+
+</div>
+
+</div>
+
+<div class="columnLayout single" layout="single">
+
+<div class="cell normal" data-type="normal">
+
+<div class="innerCell">
+
+<div class="plugin-tabmeta-details">
+
+<div class="table-wrap">
+
+|                           |              |
+|---------------------------|--------------|
+| ACT-CPS-003-Gestor        | CSP-CON-E_UO |
+| ACT-CSP-004-Administrador | CSP-CON-E_UO |
+| ACT-CSP-005-Visor         | CSP-CON-V_UO |
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="pageSection group">
+
+<div class="pageSectionHeader">
+
+## Attachments:
+
+</div>
+
+<div class="greybox" align="left">
+
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [proyectos_with_list.rtf](/attachments/597852256/597865714.rtf) (application/msword)  
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [export-proyectos_equipo.png](/attachments/597852256/597865719.png) (image/png)  
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div id="footer" role="contentinfo">
+
+<div class="section footer-body">
+
+Document generated by Confluence on oct 27, 2025 08:38
+
+<div id="footer-logo">
+
+[Atlassian](https://www.atlassian.com/)
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 
 

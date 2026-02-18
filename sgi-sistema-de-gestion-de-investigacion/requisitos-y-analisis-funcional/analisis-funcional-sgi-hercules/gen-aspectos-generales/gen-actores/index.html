@@ -796,7 +796,153 @@
 
   <h1>Gen actores</h1>
 
+<div id="page">
 
+<div id="main" class="aui-page-panel">
+
+<div id="main-header">
+
+<div id="breadcrumb-section">
+
+1.  [Hércules](index.html)
+2.  [Hércules](/)
+3.  [SGI. Sistema de gestión de investigación](//sgi-sistema-de-gestion-de-investigacion)
+4.  [Requisitos y análisis funcional](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional)
+5.  [Análisis Funcional SGI - Hércules](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules)
+6.  [GEN - Aspectos generales](//sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales)
+
+</div>
+
+# <span id="title-text"> Hércules : GEN - Actores </span>
+
+</div>
+
+<div id="content" class="view">
+
+<div class="page-metadata">
+
+Created by <span class="author"> Usuario desconocido (hector.suarez)</span>, last updated by <span class="editor"> Usuario desconocido (alicia.alvarez)</span> on ene 18, 2021
+
+</div>
+
+<div id="main-content" class="wiki-content group">
+
+Los diferentes perfiles de usuario de carácter general que actuarán con el sistema son los que se enumeran a continuación.
+
+<div class="table-wrap">
+
+<table class="wrapped relative-table confluenceTable" style="width: 81.6034%;">
+<colgroup>
+<col style="width: 39%" />
+<col style="width: 42%" />
+<col style="width: 18%" />
+</colgroup>
+<tbody>
+<tr class="header">
+<th class="confluenceTh">Nombre</th>
+<th class="confluenceTh">Descripción</th>
+<th class="confluenceTh">Observaciones</th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd">ACT-001-Investigador</td>
+<td class="confluenceTd"><p>Personal investigador. Accederá a diferentes módulos del SGI, para gestionar, solicitar o ver determinadas entidades, de forma que su actuación sobre las mismas se limitará a las instancias de esas entidades que sean de su propiedad o de las que sea partícipe (ejemplo gestión de su CVN, gestión o visión de los datos de su Grupo de investigación o de sus proyectos).</p>
+<p>Un investigador tendrá distintos roles de participación sobre esas entidades (ejemplo investigador principal de un proyecto o miembro investigador en otro)</p></td>
+<td class="confluenceTd">Un usuario podrá ser investigador y a la vez gestor, administrador o visor de una oficina o unidad de gestión.</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><span>ACT-002-InvestigadorExterno</span></td>
+<td class="confluenceTd">Personal investigador, externo a la Universidad. Aunque el uso del SGI será el mismo que el de ACT-001-Investigador, podrá tener ciertas restricciones en su acceso.</td>
+<td class="confluenceTd">Los usuarios podrán pertenecer a más de una oficina y ser gestores, administradores de datos o acceder en modo consulta indistintamente sobre los módulos asociados a cada una de ellas.</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">ACT-003-Gestor</td>
+<td class="confluenceTd"><p>Personal de gestión. Un gestor pertenecerá una unidad, oficina o servicio. Se entiende por unidad u oficina, por ejemplo, UGI, OTRI, OPE o SAI.</p>
+<p>Un gestor tendrá permisos de creación, edición y borrado sobre las entidades pertenecientes a su módulo (ejemplo convocatorias o servicios ofrecidos por SAI) pero no sobre la configuración de tipos de datos.</p></td>
+<td class="confluenceTd">Los usuarios podrán pertenecer a más de una oficina y ser gestores, administradores de datos o acceder en modo consulta indistintamente sobre los módulos asociados a cada una de ellas.</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">ACT-004-Administrador</td>
+<td class="confluenceTd"><p>Personal de gestión que puede realizar la gestión de datos maestros asociados a un determinado módulo del SGI.</p>
+<p>Un administrador pertenecerá una unidad u oficina. Se entiende por unidad u oficina, por ejemplo, UGI, OTRI, OPE o SAI.</p>
+<p>Un administrador tendrá permisos para realizar la configuración (creación, edición y borrado) de los tipo de datos que afecten a las entidades pertenecientes a su módulo (ejemplo tipos de proyectos o tipo de unidades de medida de los productos de SAI)</p></td>
+<td class="confluenceTd"><span><span>Los usuarios podrán pertenecer a más de una oficina y ser gestores, administradores de datos o acceder en modo consulta indistintamente sobre los módulos asociados a cada una de ellas.</span><br />
+</span></td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd"><span>ACT-005-Visor</span></td>
+<td class="confluenceTd"><span>Personal de gestión que solamente puede acceder en modo lectura a los datos asociados a un determinado módulo.</span></td>
+<td class="confluenceTd"><span><span>Los usuarios podrán pertenecer a más de una oficina y ser gestores, administradores de datos o acceder en modo consulta indistintamente sobre los módulos asociados a cada una de ellas.</span><br />
+</span></td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">ACT-006-Técnico</td>
+<td class="confluenceTd">Personal técnico que accede a un módulo y entidades concretas para participar en un flujo concreto de las mismas.</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">ACT-007-Solicitante</td>
+<td class="confluenceTd">Personal interno o externo a la Universidad, ajeno a la gestión del SGI, que accede a un módulo y entidades concretas del mismo para realizar una solicitud concreta. (Ejemplo solicitante del uso de los servicios SAI)</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">ACT-008-Sysadm</td>
+<td class="confluenceTd">Personal técnico de administración del sistema</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">ACT-009-GestorEconómico</td>
+<td class="confluenceTd">Personal de gestión económica que accede a determinadas funcionalidades de módulos concretos del SGI.</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">ACT-010-Agente externo</td>
+<td class="confluenceTd">Persona externa a la institución y ajena al colectivo universitario que accede a un módulo y proceso concreto del SGI</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">ACT-011-Público</td>
+<td class="confluenceTd">Público general que visualiza el contenido del Portal público de investigación y que no accede a ninguna sección del SGI de manera autenticada.</td>
+<td class="confluenceTd"><br />
+</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd"><span style="color:var(--ds-text-accent-teal-bolder,#164555);">ACT-012-Sistema</span></td>
+<td class="confluenceTd">El propio sistema SGI.</td>
+<td class="confluenceTd">Se utilizará en general para los procesos programados o para cualquier otra tarea que lleva a cabo el propio SGI de forma autónoma sin intervención de un usuario de aplicación.</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div id="footer" role="contentinfo">
+
+<div class="section footer-body">
+
+Document generated by Confluence on oct 27, 2025 08:38
+
+<div id="footer-logo">
+
+[Atlassian](https://www.atlassian.com/)
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 
 

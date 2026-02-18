@@ -796,7 +796,428 @@
 
   <h1>Sistema de gestion de empresas</h1>
 
+<div id="page">
 
+<div id="main" class="aui-page-panel">
+
+<div id="main-header">
+
+<div id="breadcrumb-section">
+
+1.  [Hércules](index.html)
+2.  [Hércules](/)
+3.  [APIs de Integración](//apis-de-integracion)
+4.  [SGI: Servicios de terceros que expone](//apis-de-integracion/sgi-servicios-de-terceros-que-expone)
+
+</div>
+
+# <span id="title-text"> Hércules : Sistema de gestión de empresas </span>
+
+</div>
+
+<div id="content" class="view">
+
+<div class="page-metadata">
+
+Created by <span class="author"> Usuario genérico para HERCULES</span>, last updated by <span class="editor"> Isabel Martinez Hernandez</span> on oct 27, 2022
+
+</div>
+
+<div id="main-content" class="wiki-content group">
+
+------------------------------------------------------------------------
+
+<div class="toc-macro rbtoc1761553446626">
+
+- [Sistema de gestión de empresas](#Sistemadegestióndeempresas-Sistemadegestióndeempresas)
+  - [Entidades](#Sistemadegestióndeempresas-Entidades)
+  - [Modelo lógico](#Sistemadegestióndeempresas-Modelológico)
+  - [API](#Sistemadegestióndeempresas-API)
+    - [Definición de los objetos](#Sistemadegestióndeempresas-Definicióndelosobjetos)
+      - [Empresa](#Sistemadegestióndeempresas-Empresa)
+      - [TipoIdentificador](#Sistemadegestióndeempresas-TipoIdentificador)
+      - [](#Sistemadegestióndeempresas-)
+      - [DatosContacto](#Sistemadegestióndeempresas-DatosContacto)
+    - [Servicios](#Sistemadegestióndeempresas-Servicios)
+
+</div>
+
+------------------------------------------------------------------------
+
+# Sistema de gestión de empresas
+
+## Entidades
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable" style="width: 76.4223%;">
+<colgroup>
+<col style="width: 23%" />
+<col style="width: 76%" />
+</colgroup>
+<tbody>
+<tr class="header">
+<th class="confluenceTh">Entidad</th>
+<th class="confluenceTh">Descripción</th>
+</tr>
+&#10;<tr class="odd">
+<td class="confluenceTd">Empresa</td>
+<td class="confluenceTd">Contiene los datos básicos de una empresa.</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">DatosContacto</td>
+<td class="confluenceTd">Contiene los datos de contacto de la empresa.</td>
+</tr>
+<tr class="odd">
+<td class="confluenceTd">TipoIdentificador</td>
+<td class="confluenceTd">Listado con los tipos de identificador fiscal (CIF, VAT, ...).</td>
+</tr>
+<tr class="even">
+<td class="confluenceTd">EmpresaClasificacion</td>
+<td class="confluenceTd"><div class="content-wrapper">
+<p>Listado de relaciones entre empresas y clasificaciones. Las empresas se relacionarán únicamente con las clasificaciones del tipo "Sector Industrial". Ver definición de clasificaciones en <a href="/confluence/pages/createpage.action?spaceKey=TEMP001&amp;title=SGI+-+ESB+-+SGO" class="createlink">SGI - ESB - SGO</a>.</p>
+<div class="confluence-information-macro confluence-information-macro-information" role="region" aria-label="Info">
+<p>IMPORTANTE</p>
+<span class="aui-icon aui-icon-small aui-iconfont-info-filled confluence-information-macro-icon" role="presentation"></span>
+<div class="confluence-information-macro-body">
+<p>La relación entre empresas y clasificaciones de tipo "Sector industrial" se considera algo que puede generalizarse a cualquier empresa y no algo específico de las empresas con las que se relaciona UM, es por ello que se ha modelado a nivel lógico en el diagrama.</p>
+<p>Al no haberse identificado por el momento necesidad de gestionar en ningún punto del SGI como producto, sino solamente en los formularios específicos de UM, la clasificación de una empresa no se ha modelado a nivel de objetos de transferencia del API ni tiene servicios específicos para su gestión.</p>
+</div>
+</div>
+</div></td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+## Modelo lógico
+
+<span class="confluence-embedded-file-wrapper"><img src="attachments/598147536/598148462.png" class="confluence-embedded-image" draggable="false" data-image-src="attachments/598147536/598148462.png" data-unresolved-comment-count="0" data-linked-resource-id="598148462" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="ESB SGEMP Logical Model.png" data-base-url="https://confluence.um.es/confluence" data-linked-resource-content-type="image/png" data-linked-resource-container-id="598147536" data-linked-resource-container-version="7" tabindex="0" /></span>
+
+## API
+
+Características generales que todas las API REST deben de cumplir:
+
+- <a href="/confluence/pages/createpage.action?spaceKey=TEMP001&amp;title=Consultas+filtradas+y+paginadas" class="createlink">Consultas filtradas y paginadas</a>
+- <a href="/confluence/pages/createpage.action?spaceKey=TEMP001&amp;title=Formatos+de+datos+API" class="createlink">Formatos de datos API</a>
+
+### Definición de los objetos
+
+#### Empresa
+
+<div class="content-wrapper">
+
+
+
+<div class="table-wrap">
+
+|                      |                   |                                                                                                                                                                |
+|----------------------|-------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Nombre               | Tipo              | Descripción                                                                                                                                                    |
+| id                   | String            | Identificador de la empresa.                                                                                                                                   |
+| nombre               | String            | Nombre de la empresa.                                                                                                                                          |
+| tipoIdentificador    | TipoIdentificador | Tipo de identificador fiscal de la empresa. Se devuelve la entidad TipoIdentificador con todos sus campos.                                                     |
+| numeroIdentificacion | String            | Número de identificación fiscal de la empresa del tipo indicado en "tipoIdentificador".                                                                        |
+| razonSocial          | String            | Razón social de la empresa.                                                                                                                                    |
+| datosEconomicos      | Boolean           | Indicador de si se trata de una empresa con datos económicos (está dada de alta en GENTE y en JUSTO) o sin datos económicos (está dada de alta solo en GENTE). |
+| padreId              | String            | Identificador de la empresa padre o entidad principal. Estará informado en el caso de empresas que son subentidad de otra.                                     |
+
+</div>
+
+<div class="code panel pdl" style="border-width: 1px;">
+
+<div class="codeHeader panelHeader pdl hide-border-bottom" style="border-bottom-width: 1px;">
+
+**Empresa**<span class="collapse-source expand-control" style="display:none;"><span class="expand-control-icon icon"> </span><span class="expand-control-text">Ampliar origen</span></span><span class="collapse-spinner-wrapper"></span>
+
+</div>
+
+<div class="codeContent panelContent pdl hide-toolbar">
+
+
+<pre><code class="language-syntaxhighlighter-pre">{
+    &quot;id&quot;: &quot;ent-002&quot;,
+    &quot;nombre&quot;: &quot;Empresa de Prueba&quot;,
+    &quot;tipoIdentificador&quot;: {
+          &quot;id&quot;:&quot;tp-1&quot;,
+          &quot;nombre&quot;:&quot;CIF&quot;
+     },
+    &quot;numeroIdentificacion&quot;: &quot;H11111111&quot;,
+    &quot;razonSocial&quot;: &quot;Empresa que es mayoritariamente de prueba del SGI&quot;,
+    &quot;datosEconomicos&quot;: false,
+    &quot;padreId&quot;: &quot;ent-001&quot;
+}
+</code></pre>
+
+
+</div>
+
+</div>
+
+#### TipoIdentificador
+
+<div class="table-wrap">
+
+|        |        |                                                |
+|--------|--------|------------------------------------------------|
+| Nombre | Tipo   | Descripción                                    |
+| id     | String | Identificador de la entidad TipoIdentificador. |
+| nombre | String | Nombre (Posibles valores: CIF, VAT, ...).      |
+
+</div>
+
+<div class="code panel pdl" style="border-width: 1px;">
+
+<div class="codeHeader panelHeader pdl hide-border-bottom" style="border-bottom-width: 1px;">
+
+**TipoIdentificador**<span class="collapse-source expand-control" style="display:none;"><span class="expand-control-icon icon"> </span><span class="expand-control-text">Ampliar origen</span></span><span class="collapse-spinner-wrapper"></span>
+
+</div>
+
+<div class="codeContent panelContent pdl hide-toolbar">
+
+
+<pre><code class="language-syntaxhighlighter-pre">{ 
+    &quot;id&quot;:&quot;tp-1&quot;,
+    &quot;nombre&quot;: &quot;CIF&quot;   
+}
+</code></pre>
+
+
+</div>
+
+</div>
+
+</div>
+
+
+
+#### <span style="color:var(--ds-background-accent-red-bolder,#c9372c);"> </span>
+
+<div class="content-wrapper">
+
+#### DatosContacto
+
+</div>
+
+<div class="content-wrapper">
+
+
+
+<div class="table-wrap">
+
+|           |        |                                      |
+|-----------|--------|--------------------------------------|
+| Nombre    | Tipo   | Descripción                          |
+| direccion | String | Dirección de contacto de la empresa. |
+
+</div>
+
+<div class="code panel pdl" style="border-width: 1px;">
+
+<div class="codeHeader panelHeader pdl hide-border-bottom" style="border-bottom-width: 1px;">
+
+**DatosContacto**<span class="collapse-source expand-control" style="display:none;"><span class="expand-control-icon icon"> </span><span class="expand-control-text">Ampliar origen</span></span><span class="collapse-spinner-wrapper"></span>
+
+</div>
+
+<div class="codeContent panelContent pdl hide-toolbar">
+
+
+<pre><code class="language-syntaxhighlighter-pre">{
+    &quot;direccion&quot;: &quot;C/ Uría, número 4, puerta A, 33002, Oviedo, Asturias, España&quot;
+}
+</code></pre>
+
+
+</div>
+
+</div>
+
+</div>
+
+### Servicios
+
+
+
+<div class="table-wrap">
+
+<table class="relative-table wrapped confluenceTable" style="width: 100.0%;">
+<colgroup>
+<col style="width: 6%" />
+<col style="width: 14%" />
+<col style="width: 18%" />
+<col style="width: 16%" />
+<col style="width: 43%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th class="confluenceTh"><p>Método</p></th>
+<th class="confluenceTh"><p>URL</p></th>
+<th class="confluenceTh"><p>Parámetros</p></th>
+<th class="confluenceTh"><p>Respuesta</p></th>
+<th class="confluenceTh"><p>Descripción</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<th class="confluenceTd">GET</th>
+<td class="confluenceTd">/empresas</td>
+<td class="confluenceTd"><p>q+s (query + sort)</p>
+<p>La query estará formada por:</p>
+<ul>
+<li>id</li>
+<li>nombre</li>
+<li>razonSocial</li>
+<li>numeroIdentificacion</li>
+</ul></td>
+<td class="confluenceTd"><p>Lista[Empresa]</p></td>
+<td class="confluenceTd"><p>Listado de Empresa.</p>
+<p><em>Ejemplo</em>:</p>
+<p>nombre=like=(Tree);(razonSocial=like=SL)</p></td>
+</tr>
+<tr class="even">
+<th class="confluenceTd">GET</th>
+<td class="confluenceTd">/empresas/{id}</td>
+<td class="confluenceTd">id</td>
+<td class="confluenceTd">Empresa</td>
+<td class="confluenceTd">Detalle de los datos generales de una empresa.</td>
+</tr>
+<tr class="odd">
+<th class="confluenceTd">GET</th>
+<td class="confluenceTd">/empresas/formly/create </td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Formly</td>
+<td class="confluenceTd"><p>Devuelve el formulario (formly) a pintar para la pantalla de solicitar alta empresa, pestaña "Datos generales". Ver <a href="/confluence/pages/createpage.action?spaceKey=TEMP001&amp;title=IU-GEN-0081+-+Solicitar+alta+de+empresa" class="createlink">IU-GEN-0081 - Solicitar alta de empresa</a><a href="https://confluence.treelogic.com/display/HERCULES/IU-GEN-0081+-+Solicitar+alta+de+empresa" class="external-link" rel="nofollow">.</a></p></td>
+</tr>
+<tr class="even">
+<th class="confluenceTd">POST</th>
+<td class="confluenceTd">/empresas</td>
+<td class="confluenceTd">JSON</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Recibe como parámetro la respuesta del usuario del formulario de datos de alta (formly) con los campos necesarios para crear una empresa.</td>
+</tr>
+<tr class="odd">
+<th class="confluenceTd">PUT</th>
+<td class="confluenceTd">/empresas</td>
+<td class="confluenceTd">JSON</td>
+<td class="confluenceTd"><p>id</p>
+<p>Vendrá relleno si la creación es síncrona y no vendrá si es asíncrona.</p></td>
+<td class="confluenceTd">Recibe como parámetro la respuesta del usuario del formulario de datos de modificación (formly) con los campos necesarios para actualizar una empresa.</td>
+</tr>
+<tr class="even">
+<th class="confluenceTd" style="text-align: left;">GET</th>
+<td class="confluenceTd" style="text-align: left;">/empresas/formly/{id}</td>
+<td class="confluenceTd" style="text-align: left;"><br />
+</td>
+<td class="confluenceTd" style="text-align: left;">JSON</td>
+<td class="confluenceTd" style="text-align: left;">Devuelve los datos a pintar en el formulario de Ver Detalle/Actualizar en el SGI (formly).</td>
+</tr>
+<tr class="odd">
+<th class="highlight-grey confluenceTd" data-highlight-colour="grey"><br />
+</th>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<th class="confluenceTd">GET</th>
+<td class="confluenceTd">/datos-contacto/empresa/{id}</td>
+<td class="confluenceTd">id</td>
+<td class="confluenceTd">DatosContacto</td>
+<td class="confluenceTd">Contiene los datos de contacto de una empresa.</td>
+</tr>
+<tr class="odd">
+<th class="highlight-grey confluenceTd" data-highlight-colour="grey"><br />
+</th>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<th class="confluenceTd">GET</th>
+<td class="confluenceTd">/tipos-identificador</td>
+<td class="confluenceTd"><br />
+</td>
+<td class="confluenceTd">Lista[TipoIdentificador]</td>
+<td class="confluenceTd">Listado de tipos de identificador fiscal para las empresas ordenados alfabéticamente de forma ascendente.</td>
+</tr>
+<tr class="odd">
+<th class="confluenceTh"><br />
+</th>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<th class="highlight-#eae6ff confluenceTd" data-highlight-colour="#eae6ff"><strong>Métodos donde el SGI solo hace de pasarela entre Universidad y CVN (No son necesarios para el funcionamiento del SGI)<br />
+</strong></th>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<th class="confluenceTd">GET</th>
+<td class="confluenceTd">/empresas/modificadas-ids</td>
+<td class="confluenceTd"><p>q+s</p>
+<p>La query estará formada por:</p>
+<ul>
+<li>fechaModificacion</li>
+</ul></td>
+<td class="confluenceTd">Lista[String]</td>
+<td class="confluenceTd">Listado de los identificadores de empresas que han sufrido cambios en los datos de identificativos de la empresa o en sus datos de contacto.</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+<div class="pageSection group">
+
+<div class="pageSectionHeader">
+
+## Attachments:
+
+</div>
+
+<div class="greybox" align="left">
+
+<img src="images/icons/bullet_blue.gif" width="8" height="8" /> [ESB SGEMP Logical Model.png](/attachments/598147536/598148462.png) (image/png)  
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div id="footer" role="contentinfo">
+
+<div class="section footer-body">
+
+Document generated by Confluence on oct 27, 2025 09:24
+
+<div id="footer-logo">
+
+[Atlassian](https://www.atlassian.com/)
+
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 
 
