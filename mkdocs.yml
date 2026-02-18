@@ -1,0 +1,54 @@
+site_name: Hércules SGI
+
+repo_url: https://github.com/dialrepo/hercules-docs/
+edit_uri: blob/main/docs/
+
+theme:
+  name: material
+  logo: assets/images/icons/favicon.jpg
+  features:
+    - navigation.footer
+    - navigation.indexes
+    - navigation.tabs
+    - navigation.top
+    - navigation.tracking
+    - navigation.path
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.follow
+    - toc.integrate
+
+markdown_extensions:
+  - toc:
+      permalink: true
+
+plugins:
+  - search
+
+validation:
+  links:
+    absolute_links: warn
+    anchors: warn
+    unrecognized_links: warn
+
+extra_css:
+  - stylesheets/extra.css
+
+nav:
+  - Inicio: index.md
+  - SGI:
+      - sgi-sistema-de-gestion-de-investigacion/index.md
+  - Arquitectura:
+      - arquitectura-de-los-proyectos-hercules/index.md
+  - APIs de Integración:
+      - apis-de-integracion/index.md
+  - EDMA:
+      - herramienta-de-cv-hercules-ed-enriquecimiento-de-datos/index.md
+  - Portal Nacional MA:
+      - portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/index.md
+  - RPA:
+      - rpa/index.md
+  - Piloto Murcia:
+      - piloto-murcia-informacion-general-de-la-actualizacion-de-informacion.md
+
