@@ -51,8 +51,8 @@ Se dispondrá de dos modos de filtrado, la "Búsqueda simple", donde se podrá f
 | Acciones | Descripción | Enlace CU. | Permisos |
 | --- | --- | --- | --- |
 | Ver/Modificar | Accede a la pantalla con los formularios para Ver detalle/Modificar la invención [IU-PII-0010-0030 - Ver detalle - Modificar invención](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/pii-modulo-de-propiedad-industrial-e-intelectual/pii-interfaz-de-usuario/iu-pii-0010-gestion-de-invencion/iu-pii-0010-0030-ver-detalle-modificar-invencion) y en concreto a la pestaña de Datos Generales [IU-PII-0010-0030-001 - Ver detalle-modificar invención - Datos Generales](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/pii-modulo-de-propiedad-industrial-e-intelectual/pii-interfaz-de-usuario/iu-pii-0010-gestion-de-invencion/iu-pii-0010-0030-ver-detalle-modificar-invencion/iu-pii-0010-0030-001-ver-detalle-modificar-invencion-datos-generales). |  | PII-INV-V  PII-INV-E |
-| Vida de la invención | Visualización del informe de vida de la invención.  [REP-PII-0030- Vida de la invención](/confluence/pages/createpage.action?spaceKey=HERCULES&title=__REP-PII-0030-+Vida+de+la+invenci%C3%B3n&linkCreation=true&fromPageId=597852698). |  | PII-INV-V  PII-INV-E |
-| Exportar | Genera el informe asociado al listado de invenciones.  Se mostrará la pantalla [IU-PII-0010-0040 - Exportación listado de invenciones](/confluence/pages/createpage.action?spaceKey=HERCULES&title=IU-PII-0010-0040+-+Exportaci%C3%B3n+listado+de+invenciones&linkCreation=true&fromPageId=597852698). |  | PII-INV-V  PII-INV-E |
+| Vida de la invención | Visualización del informe de vida de la invención.  REP-PII-0030- Vida de la invención. |  | PII-INV-V  PII-INV-E |
+| Exportar | Genera el informe asociado al listado de invenciones.  Se mostrará la pantalla IU-PII-0010-0040 - Exportación listado de invenciones. |  | PII-INV-V  PII-INV-E |
 
 ### Botones generales a la pantalla
 

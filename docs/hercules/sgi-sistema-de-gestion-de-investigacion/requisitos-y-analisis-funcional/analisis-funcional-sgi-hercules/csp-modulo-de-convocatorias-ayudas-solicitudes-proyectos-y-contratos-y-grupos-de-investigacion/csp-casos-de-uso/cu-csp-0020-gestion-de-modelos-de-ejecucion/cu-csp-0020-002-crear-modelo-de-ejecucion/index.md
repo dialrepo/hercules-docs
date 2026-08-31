@@ -23,7 +23,7 @@ ACT-CSP-004-Administrador.  Deberá pertenecer a una unidad de gestión que ten
 
 #### Personal involucrado e intereses
 
-ACT-CSP-003-Gestor de las unidades que tengan habilitadas las funcionalidades de EDICION sobre Convocatorias y proyectos. Ver  [CU-USR-0020-003 - Asignar funcionalidad a unidad de gestión y perfil de usuario](/confluence/pages/createpage.action?spaceKey=HERCULES&title=CU-USR-0020-003+-++Asignar+funcionalidad+a+unidad+de+gesti%C3%B3n&linkCreation=true&fromPageId=597853770). Normalmente se tratará de las unidades UGI, OTRI, OPE.
+ACT-CSP-003-Gestor de las unidades que tengan habilitadas las funcionalidades de EDICION sobre Convocatorias y proyectos. Ver  CU-USR-0020-003 - Asignar funcionalidad a unidad de gestión y perfil de usuario. Normalmente se tratará de las unidades UGI, OTRI, OPE.
 
 Personal investigador (ACT- CSP-001-Investigador, ACT-CSP-002-InvestigadorExterno) que requiere que se creen las convocatorias para presentar solicitudes sobre las mismas.
 
@@ -80,7 +80,7 @@ El nuevo modelo estará visible en los formularios de creación y modificación 
 5. No existe ningún tipo de documento disponible en el desplegable de Tipos de documento
 6. El usuario pulsa Guardar
 7. El usuario es informado del resultado positivo de la acción.
-8. El usuario crea el tipo de documento ([CU-CSP-0006-002 - Crear tipo de documento](/confluence/pages/createpage.action?spaceKey=HERCULES&title=CU-CSP-0006-002+-+Crear+tipo+de+documento&linkCreation=true&fromPageId=597853770))
+8. El usuario crea el tipo de documento (CU-CSP-0006-002 - Crear tipo de documento)
 9. El  usuario accede a la opción Buscar y listar modelos de ejecución para modificar el Modelo y proseguir con su configuración
 
 ### Extensiones (flujos alternativos) - No existen tipos de enlace

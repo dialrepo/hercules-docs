@@ -13,7 +13,7 @@
 
 ## Formulario Ver detalle - Solicitar modificación de persona para UM
 
-Pantalla que muestra el formulario con los datos identificados como necesarios o de interés para la Universidad de Murcia a la hora de ver el detalle y/o solicitar la modificación de una persona en sus sistemas. Es por tanto un planteamiento a medida para UM del formulario [IU-GEN-0062 - Ver detalle - Solicitar modificación de persona](/confluence/pages/createpage.action?spaceKey=HERCULES&title=IU-GEN-0062+-+Ver+detalle+-+Solicitar+modificaci%C3%B3n+de+persona&linkCreation=true&fromPageId=597853089) que podría llegar a implementarse a futuro como común al SGI.
+Pantalla que muestra el formulario con los datos identificados como necesarios o de interés para la Universidad de Murcia a la hora de ver el detalle y/o solicitar la modificación de una persona en sus sistemas. Es por tanto un planteamiento a medida para UM del formulario IU-GEN-0062 - Ver detalle - Solicitar modificación de persona que podría llegar a implementarse a futuro como común al SGI.
 
 Se abrirá en una ventana emergente o popup desde el popup de búsqueda de personas [IU-GEN-0060 - Búsqueda de personas](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/sha-buscadores-y-listados-comunes/iu-gen-0060-busqueda-de-personas).
 

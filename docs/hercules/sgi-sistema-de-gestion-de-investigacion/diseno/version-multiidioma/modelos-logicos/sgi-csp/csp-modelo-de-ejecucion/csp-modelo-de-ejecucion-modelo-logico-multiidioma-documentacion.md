@@ -11,19 +11,19 @@
 * [Entidad Unidades de gestión de un modelo de ejecución: "ModeloUnidad"](#)
 * [Entidad Tipos de documento: "TipoDocumento"](#)
 * [Entidad Nombre del Tipo de documento: "TipoDocumentoNombre"](#)
-* [Entidad Descripción del Tipo de Documento "TipoDocumentoDescripción"](/confluence/pages/createpage.action?spaceKey=HERCULES&title=CSPMEModelol%C3%B3gicoDocumentaci%C3%B3n-EntidadDescripci%C3%B3ndelTipodeDocumento%2522TipoDocumentoDescripci%C3%B3n%2522&linkCreation=true&fromPageId=1205862516)
+* Entidad Descripción del Tipo de Documento "TipoDocumentoDescripción"
 * [Entidad Tipos de enlace: "TipoEnlace"](#)
 * [Entidad Nombre del Tipo de Enlace: "TipoEnlaceNombre"](#)
-* [Entidad Descripción del Tipo de Enlace "TipoEnlaceDescripción"](/confluence/pages/createpage.action?spaceKey=HERCULES&title=CSPMEModelol%C3%B3gicoDocumentaci%C3%B3n-EntidadDescripci%C3%B3ndelTipodeEnlace%2522TipoEnlaceDescripci%C3%B3n%2522&linkCreation=true&fromPageId=1205862516)
+* Entidad Descripción del Tipo de Enlace "TipoEnlaceDescripción"
 * [Entidad Tipos de fase: "TipoFase"](#)
 * [Entidad Nombre del Tipo de Fase: "TipoFaseNombre"](#)
-* [Entidad Descripción del Tipo de Fase "TipoFaseDescripción"](/confluence/pages/createpage.action?spaceKey=HERCULES&title=CSPMEModelol%C3%B3gicoDocumentaci%C3%B3n-EntidadDescripci%C3%B3ndelTipodeFase%2522TipoFaseDescripci%C3%B3n%2522&linkCreation=true&fromPageId=1205862516)
+* Entidad Descripción del Tipo de Fase "TipoFaseDescripción"
 * [Entidad Tipos de finalidad: "TipoFinalidad"](#)
 * [Entidad Nombre del Tipo de Finalidad: "TipoFinalidadNombre"](#)
-* [Entidad Descripción del Tipo de Finalidad "TipoFinalidadDescripción"](/confluence/pages/createpage.action?spaceKey=HERCULES&title=CSPMEModelol%C3%B3gicoDocumentaci%C3%B3n-EntidadDescripci%C3%B3ndelTipodeFinalidad%2522TipoFinalidadDescripci%C3%B3n%2522&linkCreation=true&fromPageId=1205862516)
+* Entidad Descripción del Tipo de Finalidad "TipoFinalidadDescripción"
 * [Entidad Tipos de hito: "TipoHito"](#)
 * [Entidad Nombre del Tipo de Hito: "TipoHitoNombre"](#)
-* [Entidad Descripción del Tipo de Hito "TipoHitoDescripción"](/confluence/pages/createpage.action?spaceKey=HERCULES&title=CSPMEModelol%C3%B3gicoDocumentaci%C3%B3n-EntidadDescripci%C3%B3ndelTipodeHito%2522TipoHitoDescripci%C3%B3n%2522&linkCreation=true&fromPageId=1205862516)
+* Entidad Descripción del Tipo de Hito "TipoHitoDescripción"
 
 ### Entidad Modelo de ejecución: "ModeloEjecucion"
 

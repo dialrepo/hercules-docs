@@ -13,7 +13,7 @@
 
 ### Descripción
 
-Cuando el usuario genera la primera solicitud o una segunda PCT de protección asociada a una invención, el sistema ha de generar los avisos en el sistema para que los usuarios Gestor de la OTRI reciban recordatorios antes de se cumplan algunas fechas ([\_\_NO USAR CU-COM-0020 - Generar comunicado automático - Original con enlaces de AFs fuera de PMV](/confluence/pages/createpage.action?spaceKey=HERCULES&title=__NO+USAR+CU-COM-0020+-+Generar+comunicado+autom%C3%A1tico+-+Original+con+enlaces+de+AFs+fuera+de+PMV&linkCreation=true&fromPageId=597853200)). La forma de generar estos avisos es:
+Cuando el usuario genera la primera solicitud o una segunda PCT de protección asociada a una invención, el sistema ha de generar los avisos en el sistema para que los usuarios Gestor de la OTRI reciban recordatorios antes de se cumplan algunas fechas (\_\_NO USAR CU-COM-0020 - Generar comunicado automático - Original con enlaces de AFs fuera de PMV). La forma de generar estos avisos es:
 
 * De manera genérica para una primera solicitud:
   + avisos a los usuarios dentro de los X meses desde la fecha de prioridad hasta la fecha de fin de prioridad. Los avisos han de ser:

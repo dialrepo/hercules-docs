@@ -24,7 +24,7 @@ Cargamos los siguientes datos:
 
 ## Paso 2 - Fuentes externas de resultados de investigación
 
-Antes de recuperar los datos desde los CVs de los investigadores, recuperamos los resultados de investigación (papers, conference papers, ROs, etc.) desde las fuentes externas establecidas en EDMA: WoS, Scopus, OpenAire y otras fuentes para publicaciones (ver en [Fuentes externas de publicaciones científicas](/hercules/herramienta-de-cv-hercules-ed-enriquecimiento-de-datos/analisis-funcional-herramienta-de-cv-hercules-ed-enriquecimiento-de-datos/gestion-de-fair-research-objects-fair-ro/fuentes-de-publicaciones-cientificas/fuentes-externas-de-publicaciones-cientificas)); otras fuentes para ROs (ver en [Gestión de FAIR RO](/confluence/pages/createpage.action?spaceKey=TEMP001&title=Gesti%C3%B3n+FAIR+RO)).
+Antes de recuperar los datos desde los CVs de los investigadores, recuperamos los resultados de investigación (papers, conference papers, ROs, etc.) desde las fuentes externas establecidas en EDMA: WoS, Scopus, OpenAire y otras fuentes para publicaciones (ver en [Fuentes externas de publicaciones científicas](/hercules/herramienta-de-cv-hercules-ed-enriquecimiento-de-datos/analisis-funcional-herramienta-de-cv-hercules-ed-enriquecimiento-de-datos/gestion-de-fair-research-objects-fair-ro/fuentes-de-publicaciones-cientificas/fuentes-externas-de-publicaciones-cientificas)); otras fuentes para ROs (ver en Gestión de FAIR RO).
 
 El proceso de carga de estos datos tiene 2 pasos:
 

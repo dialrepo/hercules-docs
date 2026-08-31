@@ -23,7 +23,7 @@
 | Empresa | Contiene los datos básicos de una empresa. |
 | DatosContacto | Contiene los datos de contacto de la empresa. |
 | TipoIdentificador | Listado con los tipos de identificador fiscal (CIF, VAT, ...). |
-| EmpresaClasificacion | Listado de relaciones entre empresas y clasificaciones. Las empresas se relacionarán únicamente con las clasificaciones del tipo "Sector Industrial". Ver definición de clasificaciones en [SGI - ESB - SGO](/confluence/pages/createpage.action?spaceKey=TEMP001&title=SGI+-+ESB+-+SGO).  IMPORTANTE  La relación entre empresas y clasificaciones de tipo "Sector industrial" se considera algo que puede generalizarse a cualquier empresa y no algo específico de las empresas con las que se relaciona UM, es por ello que se ha modelado a nivel lógico en el diagrama.  Al no haberse identificado por el momento necesidad de gestionar en ningún punto del SGI como producto, sino solamente en los formularios específicos de UM, la clasificación de una empresa no se ha modelado a nivel de objetos de transferencia del API ni tiene servicios específicos para su gestión. |
+| EmpresaClasificacion | Listado de relaciones entre empresas y clasificaciones. Las empresas se relacionarán únicamente con las clasificaciones del tipo "Sector Industrial". Ver definición de clasificaciones en SGI - ESB - SGO.  IMPORTANTE  La relación entre empresas y clasificaciones de tipo "Sector industrial" se considera algo que puede generalizarse a cualquier empresa y no algo específico de las empresas con las que se relaciona UM, es por ello que se ha modelado a nivel lógico en el diagrama.  Al no haberse identificado por el momento necesidad de gestionar en ningún punto del SGI como producto, sino solamente en los formularios específicos de UM, la clasificación de una empresa no se ha modelado a nivel de objetos de transferencia del API ni tiene servicios específicos para su gestión. |
 
 ### Modelo lógico
 
@@ -33,8 +33,8 @@
 
 Características generales que todas las API REST deben de cumplir:
 
-* [Consultas filtradas y paginadas](/confluence/pages/createpage.action?spaceKey=TEMP001&title=Consultas+filtradas+y+paginadas)
-* [Formatos de datos API](/confluence/pages/createpage.action?spaceKey=TEMP001&title=Formatos+de+datos+API)
+* Consultas filtradas y paginadas
+* Formatos de datos API
 
 #### Definición de los objetos
 
@@ -105,7 +105,7 @@ Características generales que todas las API REST deben de cumplir:
 | --- | --- | --- | --- | --- |
 | GET | /empresas | q+s (query + sort)  La query estará formada por:   * id * nombre * razonSocial * numeroIdentificacion | Lista[Empresa] | Listado de Empresa.  *Ejemplo*:  nombre=like=(Tree);(razonSocial=like=SL) |
 | GET | /empresas/{id} | id | Empresa | Detalle de los datos generales de una empresa. |
-| GET | /empresas/formly/create |  | Formly | Devuelve el formulario (formly) a pintar para la pantalla de solicitar alta empresa, pestaña "Datos generales". Ver [IU-GEN-0081 - Solicitar alta de empresa](/confluence/pages/createpage.action?spaceKey=TEMP001&title=IU-GEN-0081+-+Solicitar+alta+de+empresa)[.](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/sha-buscadores-y-listados-comunes/iu-gen-0081-solicitar-alta-de-empresa) |
+| GET | /empresas/formly/create |  | Formly | Devuelve el formulario (formly) a pintar para la pantalla de solicitar alta empresa, pestaña "Datos generales". Ver IU-GEN-0081 - Solicitar alta de empresa[.](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/sha-buscadores-y-listados-comunes/iu-gen-0081-solicitar-alta-de-empresa) |
 | POST | /empresas | JSON |  | Recibe como parámetro la respuesta del usuario del formulario de datos de alta (formly) con los campos necesarios para crear una empresa. |
 | PUT | /empresas | JSON | id  Vendrá relleno si la creación es síncrona y no vendrá si es asíncrona. | Recibe como parámetro la respuesta del usuario del formulario de datos de modificación (formly) con los campos necesarios para actualizar una empresa. |
 | GET | /empresas/formly/{id} |  | JSON | Devuelve los datos a pintar en el formulario de Ver Detalle/Actualizar en el SGI (formly). |

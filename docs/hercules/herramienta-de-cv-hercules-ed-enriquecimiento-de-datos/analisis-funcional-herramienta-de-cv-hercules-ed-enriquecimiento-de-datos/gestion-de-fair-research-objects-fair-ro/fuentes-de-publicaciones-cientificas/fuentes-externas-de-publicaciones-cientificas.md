@@ -4,7 +4,7 @@ El documento adjunto incluye el análisis de varias fuentes externas de publicac
 
 Implementado en [HerculesED/src/Hercules.ED.ExternalSources at main · HerculesCRUE/HerculesED (github.com)](https://github.com/HerculesCRUE/HerculesED/tree/main/src/Hercules.ED.ExternalSources)
 
-Ver detalle del uso de cada tiipo de RO en [Gestión FAIR RO](/confluence/pages/createpage.action?spaceKey=TEMP001&title=Gesti%C3%B3n+FAIR+RO).
+Ver detalle del uso de cada tiipo de RO en Gestión FAIR RO.
 
 El objetivo de este entregable es realizar un análisis inicial de otras fuentes externas de ROs de tipo publicación que puedan ser una alternativa a Scopus-Elsevier, fuente externa para la que ya se ha desarrollado un microservicio en Hércules y que posee una serie de restricciones de cuotas o número de llamadas a la misma que obligan a realizar este estudio. Para ello, se analizarán las diversas fuentes externas, sus cuotas, sus restricciones de uso, los metadatos devueltos por cada publicación y otras características determinantes en la elección de la próxima fuente externa.
 

@@ -1,6 +1,6 @@
 # Hércules SGI indicators
 
-The functional analysis of the Hercules SGI (CRIS) has a section for [Business Intelligence - Indicators](/confluence/pages/createpage.action?spaceKey=TEMP001&title=Indicadores) that has been used to extract the SGI metrics and align them within the Snowball metrics and framework.
+The functional analysis of the Hercules SGI (CRIS) has a section for Business Intelligence - Indicators that has been used to extract the SGI metrics and align them within the Snowball metrics and framework.
 
 The sections of the Hércules Indicators analysis are (in Spanish):
 

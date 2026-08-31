@@ -27,7 +27,7 @@
 
 ### Entidades
 
-Hay entidades que se reutilizan del modelo de Ejecución económica del SGE y pero se repiten aquí por claridad aunque ya están descritas en el API del SGE: [SGI - ESB - SGE - Ejecución económica](/confluence/pages/createpage.action?spaceKey=TEMP001&title=SGI+-+ESB+-+SGE+-+Ejecuci%C3%B3n+econ%C3%B3mica).
+Hay entidades que se reutilizan del modelo de Ejecución económica del SGE y pero se repiten aquí por claridad aunque ya están descritas en el API del SGE: SGI - ESB - SGE - Ejecución económica.
 
 | Entidad | Descripción |
 | --- | --- |
@@ -49,7 +49,7 @@ Hay entidades que se reutilizan del modelo de Ejecución económica del SGE y pe
 
 #### Definición de los objetos
 
-Hay objetos que se reutilizan del modelo de Ejecución económica del SGE y por tanto no se repiten aquí, están descritos en el API del SGE: [SGI - ESB - SGE - Ejecución económica](/confluence/pages/createpage.action?spaceKey=TEMP001&title=SGI+-+ESB+-+SGE+-+Ejecuci%C3%B3n+econ%C3%B3mica).
+Hay objetos que se reutilizan del modelo de Ejecución económica del SGE y por tanto no se repiten aquí, están descritos en el API del SGE: SGI - ESB - SGE - Ejecución económica.
 
 ##### Invencion
 
@@ -85,7 +85,7 @@ Hay objetos que se reutilizan del modelo de Ejecución económica del SGE y por 
 | acumulable | Boolean | Indica si la columna se puede sumar y por extensión, además indica que es numérica.  Dos valores:   * true * false |
 | importeReparto | Boolean | Indica que la columna se corresponde con el importe que se quiere tener en cuenta a la hora de calcular el reparto de regalías. SOLO UNA COLUMNA PODRÁ TENER ESTE CAMPO ACTIVO, en el caso de UM, será el campo que contenga el dato de base imponible.  Dos valores:   * true * false |
 
-##### Documento (se reutilizaría el mismo que el definido en [SGI - ESB - SGE - Ejecución económica](/confluence/pages/createpage.action?spaceKey=TEMP001&title=SGI+-+ESB+-+SGE+-+Ejecuci%C3%B3n+econ%C3%B3mica).
+##### Documento (se reutilizaría el mismo que el definido en SGI - ESB - SGE - Ejecución económica.
 
 |  |  |  |
 | --- | --- | --- |
@@ -96,7 +96,7 @@ Hay objetos que se reutilizan del modelo de Ejecución económica del SGE y por 
 
 #### Servicios
 
-Hay servicios a los que no se hace mención en este API porque la funcionalidad que los precisa, por ejemplo, la recuperación del binario de cada documento asociado a un gasto, ha de reutilizar los que ya están definidos en el modelo de Ejecución económica del SGE y por tanto no se repiten aquí, están descritos en el API del SGE: [SGI - ESB - SGE - Ejecución económica](/confluence/pages/createpage.action?spaceKey=TEMP001&title=SGI+-+ESB+-+SGE+-+Ejecuci%C3%B3n+econ%C3%B3mica).
+Hay servicios a los que no se hace mención en este API porque la funcionalidad que los precisa, por ejemplo, la recuperación del binario de cada documento asociado a un gasto, ha de reutilizar los que ya están definidos en el modelo de Ejecución económica del SGE y por tanto no se repiten aquí, están descritos en el API del SGE: SGI - ESB - SGE - Ejecución económica.
 
 | Método | URL | Parámetros | Respuesta | Descripción |
 | --- | --- | --- | --- | --- |

@@ -22,7 +22,7 @@
 
 ### Modelo lógico
 
-[USR - Modelo lógico](/confluence/pages/createpage.action?spaceKey=HERCULES&title=USR+-+Modelo+l%C3%B3gico&linkCreation=true&fromPageId=597853116)
+USR - Modelo lógico
 
 ### API
 

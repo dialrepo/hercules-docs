@@ -78,7 +78,7 @@ La presentación de ROs similares se realiza en la ficha de publicación y en la
 
 Tenemos 3 casos:
 
-* El usuario investigador con login llega a la ficha web de uno de sus ROs (publicación o de otro tipo) en su [Gestión de FAIR ROs](/confluence/pages/createpage.action?spaceKey=TEMP001&title=Gesti%C3%B3n+FAIR+RO). En la pestaña "Relacionados" se muestra un listado de 20 (como máximo) ROs que tienen una relación de similitud  con el RO cuya ficha se está visualizando. Entre los ROs relacionados no se incluirán los ROs del propio investigador.
+* El usuario investigador con login llega a la ficha web de uno de sus ROs (publicación o de otro tipo) en su Gestión de FAIR ROs. En la pestaña "Relacionados" se muestra un listado de 20 (como máximo) ROs que tienen una relación de similitud  con el RO cuya ficha se está visualizando. Entre los ROs relacionados no se incluirán los ROs del propio investigador.
 * El usuario investigador con login llega a la a ficha web de un RO del que no es autor. Como en el caso anterior, se muestra un listado de ROs relacionados de los que el usuario investigador no es autor.
 * El usuario anónimo llega a la ficha web de un RO. En este caso se muestra una lista de ROs relacionados sin restricciones de autoría. Se propone la existencia de una cache que contenga estos ROs relacionados y que caduque a las 24h, para evitar un recálculo continuo de las recomendaciones en cada visita para usuarios anónimos y BOTs de indexación.
 

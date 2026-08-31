@@ -1,6 +1,6 @@
 # ETI-Modelo lógico - Documentación Multiidioma
 
-* [Entidades](/confluence/pages/createpage.action?spaceKey=HERCULES&title=ETIModelol%C3%B3gicoDocumentaci%C3%B3nMultiidioma-Entidades&linkCreation=true&fromPageId=1205862502)
+* Entidades
   + [Entidad: Acta](#)
   + [Entidad: ActaDocumento](#)
   + [Entidad: ActaResumen](#)
@@ -69,24 +69,24 @@
   + [Entidad: TipoInvestigacionTutelada](#)
   + [Entidad: TipoTarea](#)
   + [Entidad: TipoTareaNombre](#)
-* [Enumerados](/confluence/pages/createpage.action?spaceKey=HERCULES&title=ETIModelol%C3%B3gicoDocumentaci%C3%B3nMultiidioma-Enumerados&linkCreation=true&fromPageId=1205862502)
-  + [TipoValorSocial](/confluence/pages/createpage.action?spaceKey=HERCULES&title=ETIModelol%C3%B3gicoDocumentaci%C3%B3nMultiidioma-TipoValorSocial&linkCreation=true&fromPageId=1205862502)
-  + [EstadoFinanciacion](/confluence/pages/createpage.action?spaceKey=HERCULES&title=ETIModelol%C3%B3gicoDocumentaci%C3%B3nMultiidioma-EstadoFinanciacion&linkCreation=true&fromPageId=1205862502)
-  + [EstadoRetrospectiva](/confluence/pages/createpage.action?spaceKey=HERCULES&title=ETIModelol%C3%B3gicoDocumentaci%C3%B3nMultiidioma-EstadoRetrospectiva&linkCreation=true&fromPageId=1205862502)
-  + [Genero](/confluence/pages/createpage.action?spaceKey=HERCULES&title=ETIModelol%C3%B3gicoDocumentaci%C3%B3nMultiidioma-Genero&linkCreation=true&fromPageId=1205862502)
-  + [SeguimientoAnualDocumentacionTitle](/confluence/pages/createpage.action?spaceKey=HERCULES&title=ETIModelol%C3%B3gicoDocumentaci%C3%B3nMultiidioma-SeguimientoAnualDocumentacionTitle&linkCreation=true&fromPageId=1205862502)
-  + [TipoActividad](/confluence/pages/createpage.action?spaceKey=HERCULES&title=ETIModelol%C3%B3gicoDocumentaci%C3%B3nMultiidioma-TipoActividad&linkCreation=true&fromPageId=1205862502)
-  + [TipoComentario](/confluence/pages/createpage.action?spaceKey=HERCULES&title=ETIModelol%C3%B3gicoDocumentaci%C3%B3nMultiidioma-TipoComentario&linkCreation=true&fromPageId=1205862502)
-  + [TipoConvocatoriaReunion](/confluence/pages/createpage.action?spaceKey=HERCULES&title=ETIModelol%C3%B3gicoDocumentaci%C3%B3nMultiidioma-TipoConvocatoriaReunion&linkCreation=true&fromPageId=1205862502)
-  + [TipoDictamen](/confluence/pages/createpage.action?spaceKey=HERCULES&title=ETIModelol%C3%B3gicoDocumentaci%C3%B3nMultiidioma-TipoDictamen&linkCreation=true&fromPageId=1205862502)
-  + [TipoEstadoActa](/confluence/pages/createpage.action?spaceKey=HERCULES&title=ETIModelol%C3%B3gicoDocumentaci%C3%B3nMultiidioma-TipoEstadoActa&linkCreation=true&fromPageId=1205862502)
-  + [TipoEstadoComentario](/confluence/pages/createpage.action?spaceKey=HERCULES&title=ETIModelol%C3%B3gicoDocumentaci%C3%B3nMultiidioma-TipoEstadoComentario&linkCreation=true&fromPageId=1205862502)
-  + [TipoEstadoMemoria](/confluence/pages/createpage.action?spaceKey=HERCULES&title=ETIModelol%C3%B3gicoDocumentaci%C3%B3nMultiidioma-TipoEstadoMemoria&linkCreation=true&fromPageId=1205862502)
-  + [TipoEvaluacion](/confluence/pages/createpage.action?spaceKey=HERCULES&title=ETIModelol%C3%B3gicoDocumentaci%C3%B3nMultiidioma-TipoEvaluacion&linkCreation=true&fromPageId=1205862502)
-  + [TipoFormulario](/confluence/pages/createpage.action?spaceKey=HERCULES&title=ETIModelol%C3%B3gicoDocumentaci%C3%B3nMultiidioma-TipoFormulario&linkCreation=true&fromPageId=1205862502)
-  + [TipoInvestigacionTutelada](/confluence/pages/createpage.action?spaceKey=HERCULES&title=ETIModelol%C3%B3gicoDocumentaci%C3%B3nMultiidioma-TipoInvestigacionTutelada&linkCreation=true&fromPageId=1205862502)
-  + [TipoMemoria](/confluence/pages/createpage.action?spaceKey=HERCULES&title=ETIModelol%C3%B3gicoDocumentaci%C3%B3nMultiidioma-TipoMemoria&linkCreation=true&fromPageId=1205862502)
-  + [TpoCargoComite](/confluence/pages/createpage.action?spaceKey=HERCULES&title=ETIModelol%C3%B3gicoDocumentaci%C3%B3nMultiidioma-TpoCargoComite&linkCreation=true&fromPageId=1205862502)
+* Enumerados
+  + TipoValorSocial
+  + EstadoFinanciacion
+  + EstadoRetrospectiva
+  + Genero
+  + SeguimientoAnualDocumentacionTitle
+  + TipoActividad
+  + TipoComentario
+  + TipoConvocatoriaReunion
+  + TipoDictamen
+  + TipoEstadoActa
+  + TipoEstadoComentario
+  + TipoEstadoMemoria
+  + TipoEvaluacion
+  + TipoFormulario
+  + TipoInvestigacionTutelada
+  + TipoMemoria
+  + TpoCargoComite
 
 ## Entidades
 

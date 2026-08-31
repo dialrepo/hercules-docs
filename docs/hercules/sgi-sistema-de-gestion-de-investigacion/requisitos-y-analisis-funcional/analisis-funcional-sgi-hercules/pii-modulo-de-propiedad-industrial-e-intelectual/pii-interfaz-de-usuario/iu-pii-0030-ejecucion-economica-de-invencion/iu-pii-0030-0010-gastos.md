@@ -32,7 +32,7 @@ Pantalla que muestra el formulario con el listado de todos los gastos que se han
 | Acciones | Descripción | Enlace CU. | Permisos |
 | --- | --- | --- | --- |
 | Ver detalle/Modificar (gasto) | Muestra la pantalla [IU-PII-0031-001 - Ver detalle-modificar gasto](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/pii-modulo-de-propiedad-industrial-e-intelectual/pii-interfaz-de-usuario/iu-pii-0030-ejecucion-economica-de-invencion/iu-pii-0031-ejecucion-economica-de-invencion-popups-auxiliares/iu-pii-0031-001-ver-detalle-modificar-gasto) que permitirá ver el detalle del gasto y modificar su información únicamente en cuanto a informar o cambiar la solicitud de protección asociada al mismo. |  | PII-INV-V  PII-INV-E |
-| Informe de gastos de las protecciones | Muestra el informe de de gastos de las protecciones. | [REP-PII-0010- Coste de las protecciones a una invención](/confluence/pages/createpage.action?spaceKey=HERCULES&title=__REP-PII-0010+-+Coste+de+las+protecciones+a+una+invenci%C3%B3n&linkCreation=true&fromPageId=597852713) | PII-INV-V  PII-INV-E |
+| Informe de gastos de las protecciones | Muestra el informe de de gastos de las protecciones. | REP-PII-0010- Coste de las protecciones a una invención | PII-INV-V  PII-INV-E |
 
 ### Botones generales a la pantalla
 

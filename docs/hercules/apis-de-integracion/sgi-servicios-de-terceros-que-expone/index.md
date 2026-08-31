@@ -4,7 +4,7 @@
 
 Dentro del Sistema de Gestión de la Investigación **se gestiona un Bus de Integración que permite centralizar las comunicaciones**, el objetivo es que a través de este bus otras aplicaciones de la Universidad o de terceros puedan exponer sus métodos y centralizar de esta forma todas las comunicaciones en un único punto.
 
-En las siguientes páginas se describen funcionalmente los requisitos de integración del SGI: [Requisitos de integración](/confluence/pages/createpage.action?spaceKey=TEMP001&title=INT+-+Requisitos+de+integraci%C3%B3n)
+En las siguientes páginas se describen funcionalmente los requisitos de integración del SGI: Requisitos de integración
 
 A continuación se detalla la relación de métodos implementados en el bus de integración del SGI y agrupados por módulos/funcionalidades, en este apartado se muestran los métodos sobre los que el SGI hace de pasarela a través de su Bus de Integración y que exponen otras aplicaciones:
 

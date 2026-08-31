@@ -1,6 +1,6 @@
 # MA. ROs. Definición
 
-Los ROs que se mostrarán están documentados en el documento [Gestión FAIR RO](/confluence/pages/createpage.action?spaceKey=TEMP001&title=Gesti%C3%B3n+FAIR+RO).
+Los ROs que se mostrarán están documentados en el documento Gestión FAIR RO.
 
 Los datos que se mostrarán en la ficha de cada tipo de RO se ha definido en el mismo documento, en la sección [Presentación de ROs](https://confluence.um.es/confluence/pages/viewpage.action?pageId=319750153#Gesti%C3%B3nFAIRRO-Presentaci%C3%B3ndeROs.AplicableaH%C3%A9rculesMA-ResearchSynergyFinder).
 

@@ -6,7 +6,7 @@
   + [Envío de producción científica a la biblioteca. Sistema Digitum (DSpace)](https://confluence.um.es/confluence/spaces/TEMP001/pages/598147266/Env%C3%ADo+de+producci%C3%B3n+cient%C3%ADfica+a+la+biblioteca.+Sistema+Digitum+DSpace)
   + [De-duplicación de datos](/hercules/herramienta-de-cv-hercules-ed-enriquecimiento-de-datos/analisis-funcional-herramienta-de-cv-hercules-ed-enriquecimiento-de-datos/gestion-de-fair-research-objects-fair-ro/fuentes-de-publicaciones-cientificas/de-duplicacion-de-datos-de-fuentes-externas)
   + [Anexo. Ítems recuperables desde fuentes externas y relación con CVN y EDMA](/hercules/herramienta-de-cv-hercules-ed-enriquecimiento-de-datos/analisis-funcional-herramienta-de-cv-hercules-ed-enriquecimiento-de-datos/gestion-de-fair-research-objects-fair-ro/fuentes-de-publicaciones-cientificas/anexo-items-recuperables-desde-fuentes-externas-y-relacion-con-cvn-y-edma)
-* [Gestión FAIR RO](/confluence/pages/createpage.action?spaceKey=TEMP001&title=Gesti%C3%B3n+FAIR+RO)
+* Gestión FAIR RO
 * [Actualizaciones de ROS](/hercules/herramienta-de-cv-hercules-ed-enriquecimiento-de-datos/analisis-funcional-herramienta-de-cv-hercules-ed-enriquecimiento-de-datos/gestion-de-fair-research-objects-fair-ro/actualizaciones-de-ros)
 * UX
   + Edición/fusión RO

@@ -13,7 +13,7 @@
   + [Asistente para la creación de cluster (equipo de proyecto)](https://confluence.um.es/confluence/pages/viewpage.action?pageId=398786801&src=contextnavpagetreemode)
   + [Ofertas Tecnológicas](/hercules/portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/analisis-funcional-portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/busqueda-de-investigadores-modulo-research-synergy-finder/ma-ofertas-tecnologicas)
 * [Análisis de proyectos de investigación - Módulo de Gestión y Análisis de Proyectos](/hercules/portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/analisis-funcional-portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/analisis-de-proyectos-de-investigacion-modulo-de-gestion-y-analisis-de-proyectos)  
-  + [MA. Projects. UX](/confluence/pages/createpage.action?spaceKey=TEMP001&title=MA.+Projects.+UX)
+  + MA. Projects. UX
   + [MA. Projects. Definición funcional](https://confluence.um.es/confluence/pages/viewpage.action?pageId=312705185&src=contextnavpagetreemode)
 * [Análisis de indicadores de investigación - Módulo de Catálogo de indicadores](/hercules/portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/analisis-funcional-portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/analisis-de-indicadores-de-investigacion-modulo-de-catalogo-de-indicadores)
   + [Especificación de Indicadores. Snowball Metrics](/hercules/portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/analisis-funcional-portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/analisis-de-indicadores-de-investigacion-modulo-de-catalogo-de-indicadores/especificacion-de-indicadores)

@@ -37,7 +37,7 @@ Se han creado los siguientes tipos asociados:
 * Tipos de documentos ([CU-CSP-0006 - Gestión de tipos de documentos](https://confluence.um.es/confluence/pages/viewpage.action?pageId=85632141))
 * Tipos de enlaces ([CU-CSP-0007 - Gestión de tipos de enlace](https://confluence.um.es/confluence/pages/viewpage.action?pageId=87827200))
 * Tipos de finalidad ([CU-CSP-0008 - Gestión de tipos de finalidad](https://confluence.um.es/confluence/pages/viewpage.action?pageId=87827242))
-* Unidades de gestión ([CU-USR-0020 - Gestión de "unidad de gestión"](/confluence/pages/createpage.action?spaceKey=HERCULES&title=CU-USR-0020+-+Gesti%C3%B3n+de+%22unidad+de+gesti%C3%B3n%22&linkCreation=true&fromPageId=597852679))
+* Unidades de gestión (CU-USR-0020 - Gestión de "unidad de gestión")
 
 ### Garantías de éxito (postcondiciones)
 

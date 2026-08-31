@@ -1,6 +1,6 @@
 # Entidades introducidas
 
-En este apartado describimos cada una de las entidades introducidas en esta nueva versión en detalle. Durante el transcurso de esta sección también se hablará de diversas propiedades que se pueden usar para relacionarlas, todas ellas se verán en detalle en la [sección de propiedades.](/confluence/pages/createpage.action?spaceKey=TEMP001&title=_heading%3Dh.upglbi)
+En este apartado describimos cada una de las entidades introducidas en esta nueva versión en detalle. Durante el transcurso de esta sección también se hablará de diversas propiedades que se pueden usar para relacionarlas, todas ellas se verán en detalle en la sección de propiedades.
 
 ## **Process – Proceso**
 
@@ -62,7 +62,7 @@ Documento denominado README que describe el contenido de un Repositorio o Softwa
 * Label                         Repository
 * In Data                     :Repository
 
-Esta entidad denota repositorios de información, es decir, repositorios donde se almacenan diversos resultados de investigación.  Los axiomas indicados en Repositorio son válidos para sus subclases, que son [ZenodoRepository](/confluence/pages/createpage.action?spaceKey=TEMP001&title=_heading%3Dh.3oy7u29), [BitBucketRepository](/confluence/pages/createpage.action?spaceKey=TEMP001&title=_heading%3Dh.243i4a2), [GitHubRepository](/confluence/pages/createpage.action?spaceKey=TEMP001&title=_heading%3Dh.j8sehv).  
+Esta entidad denota repositorios de información, es decir, repositorios donde se almacenan diversos resultados de investigación.  Los axiomas indicados en Repositorio son válidos para sus subclases, que son ZenodoRepository, BitBucketRepository, GitHubRepository.  
 **Condición Repositorio:** Se puede definir una instancia de 'Experimental Protocol' o bibo:Document o Software  está contenida en un Repositorio mediante la propiedad partOfRepository.  Por ejemplo, dada una instancia, x, de 'Experimental Protocol' o bibo:Document o Software se puede definir que dicha instancia está contenida en el Repositorio y del siguiente modo: x :partOfRepository y. Véase [ilustración 5.](/hercules/herramienta-de-cv-hercules-ed-enriquecimiento-de-datos/analisis-funcional-herramienta-de-cv-hercules-ed-enriquecimiento-de-datos/gestion-de-fair-research-objects-fair-ro/ef2-23-modelos-de-metadatos-para-la-descripcion-y-anotacion-de-fair-ro-v22/proceso-seguido-en-la-especificacion-de-los-metadatos-necesarios-para-cada-tipo-de-ro-version-2#ProcesoseguidoenlaespecificacióndelosmetadatosnecesariosparacadatipodeRO–versión2-bookmark=id.2grqrue)
 
 ### BitBucket Repository
@@ -113,7 +113,7 @@ Todo objeto de investigación o resultado de investigación, así como cada uno 
 * In Data                         : ResearchObject
 
 Esta entidad nos permite modelizar los componentes de un resultado de investigación, los cuales son resuletados también, por lo que explica que esta entidad sea subclase de Research Result como se puede ver en la [Ilustración 1](/hercules/herramienta-de-cv-hercules-ed-enriquecimiento-de-datos/analisis-funcional-herramienta-de-cv-hercules-ed-enriquecimiento-de-datos/gestion-de-fair-research-objects-fair-ro/ef2-23-modelos-de-metadatos-para-la-descripcion-y-anotacion-de-fair-ro-v22/proceso-seguido-en-la-especificacion-de-los-metadatos-necesarios-para-cada-tipo-de-ro-version-2#ProcesoseguidoenlaespecificacióndelosmetadatosnecesariosparacadatipodeRO–versión2-bookmark=id.qsh70q). Esta entidad es una defined class por lo que sus elementos están completamente definidos y serán los siguientes: todo aquello que haya sido producido en un proyecto, así como todo aquel recurso que forme parte de un resultado de investigación (Research Result).   
-Como se verá más adelante, todo aquello que puede formar parte de un Research Object, debe modelarse mediante la propiedad [researchResultHasPart](/confluence/pages/createpage.action?spaceKey=TEMP001&title=_heading%3Dh.338fx5o) o [partOfResearchResult](/confluence/pages/createpage.action?spaceKey=TEMP001&title=_heading%3Dh.1idq7dh). Esta propiedad nos permite que no cualquier instancia pueda ser parte de un resultado de investigación, sino únicamente las instancias de las entidad: Protocol Experiment, Software, bibo:Document.   
+Como se verá más adelante, todo aquello que puede formar parte de un Research Object, debe modelarse mediante la propiedad researchResultHasPart o partOfResearchResult. Esta propiedad nos permite que no cualquier instancia pueda ser parte de un resultado de investigación, sino únicamente las instancias de las entidad: Protocol Experiment, Software, bibo:Document.   
 La definición de esta defined class es la siguiente:   
 (  
 ('produced by' some vivo:Project) and   

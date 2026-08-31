@@ -57,7 +57,7 @@ El usuario se descarga el documento PDF con los cálculos para el rango de fecha
 3. Se presentan los datos de gastos, ingresos, resultado y reparto.
 4. En caso de que el resultado sea positivo el usuario ha de seleccionar a dónde se le paga a los inventores.
 5. El usuario selecciona la acción Imprimir a PDF.
-6. Se descarga el documento. ([REP-PII-0040- Balances y pagos de regalías a la Universidad y los inventores](/confluence/pages/createpage.action?spaceKey=HERCULES&title=__REP-PII-0040-+Balances+y+pagos+de+regal%C3%ADas+a+la+Universidad+y+los+inventores&linkCreation=true&fromPageId=597853196))
+6. Se descarga el documento. (REP-PII-0040- Balances y pagos de regalías a la Universidad y los inventores)
 
 ### Extensiones (flujos alternativos)
 

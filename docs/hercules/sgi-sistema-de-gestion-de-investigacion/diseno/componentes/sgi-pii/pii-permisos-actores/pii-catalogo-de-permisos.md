@@ -2,7 +2,7 @@
 
 ## Diseño de permisos
 
-Se siguen los criterios generales descritos en [Permisos](/confluence/pages/createpage.action?spaceKey=HERCULES&title=Permisos&linkCreation=true&fromPageId=597853083).
+Se siguen los criterios generales descritos en Permisos.
 
 ---
 

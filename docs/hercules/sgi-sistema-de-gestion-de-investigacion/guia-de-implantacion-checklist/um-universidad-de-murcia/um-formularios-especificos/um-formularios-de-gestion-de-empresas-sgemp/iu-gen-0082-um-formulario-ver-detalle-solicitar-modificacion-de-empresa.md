@@ -13,7 +13,7 @@
 
 ## Formulario Ver detalle - Solicitar modificación de empresa para UM
 
-Pantalla que muestra el formulario con los datos identificados como necesarios o de interés para la Universidad de Murcia a la hora de ver el detalle y/o solicitar la modificación de una empresa en sus sistemas. Es por tanto un planteamiento a medida para UM del formulario [IU-GEN-0082 - Ver detalle - Solicitar modificación de empresa](/confluence/pages/createpage.action?spaceKey=HERCULES&title=IU-GEN-0082+-+Ver+detalle+-+Solicitar+modificaci%C3%B3n+de+empresa&linkCreation=true&fromPageId=597853098) que podría llegar a implementarse a futuro como común al SGI.
+Pantalla que muestra el formulario con los datos identificados como necesarios o de interés para la Universidad de Murcia a la hora de ver el detalle y/o solicitar la modificación de una empresa en sus sistemas. Es por tanto un planteamiento a medida para UM del formulario IU-GEN-0082 - Ver detalle - Solicitar modificación de empresa que podría llegar a implementarse a futuro como común al SGI.
 
 Se abrirá en una ventana emergente o popup desde el popup de búsqueda de empresas [IU-GEN-0080 - Búsqueda de empresas](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/sha-buscadores-y-listados-comunes/iu-gen-0080-busqueda-de-empresas).
 

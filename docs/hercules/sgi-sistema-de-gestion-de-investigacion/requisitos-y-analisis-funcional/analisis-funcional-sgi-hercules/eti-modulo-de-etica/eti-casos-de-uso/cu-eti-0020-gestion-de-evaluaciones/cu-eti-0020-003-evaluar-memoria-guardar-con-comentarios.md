@@ -72,7 +72,7 @@ Crear comentarios.
 11. El usuario repiten los pasos 6 , 7  y 8 tantas veces como comentarios quiera añadir al informe de evaluación.
 12. El usuario selecciona la acción Guardar.
 13. Se cambia el estado a la memoria.
-14. Se notifica  al investigador/solicitante de que ya tiene disponible el informe de evaluación [\_\_NO USAR CU-COM-0020 - Generar comunicado automático - Original con enlaces de AFs fuera de PMV](/confluence/pages/createpage.action?spaceKey=HERCULES&title=__NO+USAR+CU-COM-0020+-+Generar+comunicado+autom%C3%A1tico+-+Original+con+enlaces+de+AFs+fuera+de+PMV&linkCreation=true&fromPageId=597853586)
+14. Se notifica  al investigador/solicitante de que ya tiene disponible el informe de evaluación \_\_NO USAR CU-COM-0020 - Generar comunicado automático - Original con enlaces de AFs fuera de PMV
 15. El usuario es informado del resultado positivo de la acción.
 16. Se presenta el listado de Evaluaciones sin la evaluación que se acaba de Evaluar, porque ya ha cambiado de estado.
 

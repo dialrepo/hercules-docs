@@ -14,7 +14,7 @@
 
 ### Definición y objetivos
 
-Recuperar colectivos de personal de la Universidad que pueden ejercer como miembros de los equipos de proyecto o trabajo de los proyectos/contratos del SGI ([IU-CSP-0100 - Gestión de roles de equipo de proyecto](/confluence/pages/createpage.action?spaceKey=HERCULES&title=_noimplementado_sinactualizar_IU-CSP-0100+-+Gesti%C3%B3n+de+roles+de+equipo+de+proyecto&linkCreation=true&fromPageId=597853185)).
+Recuperar colectivos de personal de la Universidad que pueden ejercer como miembros de los equipos de proyecto o trabajo de los proyectos/contratos del SGI (IU-CSP-0100 - Gestión de roles de equipo de proyecto).
 
 Los roles de los equipos de proyecto serán configurables para cada implantación del SGI. Para cada uno de los roles se debe de especificar a qué colectivos del personal universitario va a estar vinculado. Ver  [CSP - Solicitudes - Gestión de roles de equipo de proyecto](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-solicitudes#CSPSolicitudes-Solicitudes-rol_equipoGesti%C3%B3ndeTiposderoldeproyecto).
 

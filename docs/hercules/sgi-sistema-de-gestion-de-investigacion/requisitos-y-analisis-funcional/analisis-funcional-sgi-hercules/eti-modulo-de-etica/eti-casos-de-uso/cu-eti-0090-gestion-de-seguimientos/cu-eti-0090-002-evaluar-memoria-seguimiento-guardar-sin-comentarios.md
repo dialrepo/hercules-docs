@@ -58,7 +58,7 @@ Asignar un dictamen a la memoria y dependiendo del dictamen un informe favorable
 5. El usuario selecciona la acción Guardar.
 6. Se realizan las validaciones en cuanto a formato, obligatoriedad habituales.
 7. Se cambia el estado a la memoria a "Fin evaluación seguimiento final"
-8. Se notifica  al investigador/solicitante de que ya tiene disponible el informe favorable [\_\_NO USAR CU-COM-0020 - Generar comunicado automático - Original con enlaces de AFs fuera de PMV](/confluence/pages/createpage.action?spaceKey=HERCULES&title=__NO+USAR+CU-COM-0020+-+Generar+comunicado+autom%C3%A1tico+-+Original+con+enlaces+de+AFs+fuera+de+PMV&linkCreation=true&fromPageId=597853348)
+8. Se notifica  al investigador/solicitante de que ya tiene disponible el informe favorable \_\_NO USAR CU-COM-0020 - Generar comunicado automático - Original con enlaces de AFs fuera de PMV
 9. El usuario es informado del resultado positivo de la acción.
 10. Se presenta el listado de Seguimientos sin la evaluación que se acaba de Evaluar, porque ya ha cambiado de estado.
 

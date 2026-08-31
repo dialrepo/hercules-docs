@@ -41,7 +41,7 @@ Si bien no es imprescindible para todas las operaciones de gestión, sí debiera
 * Tipos de documentos ([CU-CSP-0006 - Gestión de tipos de documentos](https://confluence.um.es/confluence/pages/viewpage.action?pageId=85632141))
 * Tipos de enlaces  [CU-CSP-0007 - Gestión de tipos de enlace](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-casos-de-uso/cu-csp-0007-gestion-de-tipos-de-enlace)
 * Tipos de finalidad [CU-CSP-0008 - Gestión de tipos de finalidad](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-casos-de-uso/cu-csp-0008-gestion-de-tipos-de-finalidad)
-* Unidades de gestión ([CU-USR-0020 - Gestión de "unidad de gestión"](/confluence/pages/createpage.action?spaceKey=HERCULES&title=CU-USR-0020+-+Gesti%C3%B3n+de+%22unidad+de+gesti%C3%B3n%22&linkCreation=true&fromPageId=597853536))
+* Unidades de gestión (CU-USR-0020 - Gestión de "unidad de gestión")
 
 ### Garantías de éxito (postcondiciones)
 

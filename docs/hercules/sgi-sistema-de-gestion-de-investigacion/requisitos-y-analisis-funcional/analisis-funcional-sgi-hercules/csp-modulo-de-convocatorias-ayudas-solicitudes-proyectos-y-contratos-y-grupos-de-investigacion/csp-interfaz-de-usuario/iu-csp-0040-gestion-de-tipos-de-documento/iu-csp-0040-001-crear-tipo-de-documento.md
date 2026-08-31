@@ -25,7 +25,7 @@ Formulario de creación de los tipos de documentos. Se utilizarán en los modelo
 
 | Acciones | Descripción | Enlace CU. | Permisos |
 | --- | --- | --- | --- |
-| Guardar | Crea un nuevo registro en base de datos. | Se deberá verificar la unicidad a partir del campo "Nombre" entre los registros de la tabla "tipo documento" que tengan el campo "activo" a "true".  El registro se almacenará con el campo "activo" a true.  [CU-CSP-0006-002 - Crear tipo de documento](/confluence/pages/createpage.action?spaceKey=HERCULES&title=CU-CSP-0006-002+-+Crear+tipo+de+documento&linkCreation=true&fromPageId=597852572) | CSP-TDOC-C |
+| Guardar | Crea un nuevo registro en base de datos. | Se deberá verificar la unicidad a partir del campo "Nombre" entre los registros de la tabla "tipo documento" que tengan el campo "activo" a "true".  El registro se almacenará con el campo "activo" a true.  CU-CSP-0006-002 - Crear tipo de documento | CSP-TDOC-C |
 | Cancelar | No realiza ninguna operación en base de datos | No se realiza ninguna inserción en base de datos. Se vuelve a mostrar la pantalla de listado de tipos de documento [IU-CSP-0040-002 Buscar y listar tipos de documento](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-interfaz-de-usuario/iu-csp-0040-gestion-de-tipos-de-documento/iu-csp-0040-002-buscar-y-listar-tipos-de-documento) |  |
 
 ### Permisos de acceso a la pantalla

@@ -434,4 +434,4 @@ Ver [ETI - Comunicados](/hercules/sgi-sistema-de-gestion-de-investigacion/requis
 
 ##### Módulo Invenciones
 
-Ver [PII - Comunicados](/confluence/pages/createpage.action?spaceKey=HERCULES&title=PII+-+Comunicados&linkCreation=true&fromPageId=597852453)
+Ver PII - Comunicados

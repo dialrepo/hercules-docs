@@ -165,8 +165,8 @@ Para la definición de los enumerados en el código seguir lo indicado en: [Enum
 | Nombre | Tipo | Descripción |
 | --- | --- | --- |
 | fechaNacimiento | Fecha | Fecha de nacimiento de la persona |
-| paisNacimiento | Pais | Se devuelve la entidad Pais con todos sus campos. Ver definición en [SGI - ESB - SGO](/confluence/pages/createpage.action?spaceKey=TEMP001&title=SGI+-+ESB+-+SGO) |
-| comAuntonomaNacimiento | ComunidadAutonoma | Se devuelve la entidad ComunidadAutonoma con todos sus campos. Ver definición en [SGI - ESB - SGO](/confluence/pages/createpage.action?spaceKey=TEMP001&title=SGI+-+ESB+-+SGO) |
+| paisNacimiento | Pais | Se devuelve la entidad Pais con todos sus campos. Ver definición en SGI - ESB - SGO |
+| comAuntonomaNacimiento | ComunidadAutonoma | Se devuelve la entidad ComunidadAutonoma con todos sus campos. Ver definición en SGI - ESB - SGO |
 | ciudadNacimiento | String | Ciudad de nacimiento de la persona |
 
 **DatosPersonales** Ampliar origen
@@ -191,9 +191,9 @@ Para la definición de los enumerados en el código seguir lo indicado en: [Enum
 
 | Nombre | Tipo | Descripción |
 | --- | --- | --- |
-| paisContacto | Pais | Se devuelve la entidad Pais con todos sus campos. Ver definición en [SGI - ESB - SGO](/confluence/pages/createpage.action?spaceKey=TEMP001&title=SGI+-+ESB+-+SGO). |
-| comAutonomaContacto | ComunidadAutonoma | Se devuelve la entidad ComunidadAutonoma con todos sus campos. Ver definición en [SGI - ESB - SGO](/confluence/pages/createpage.action?spaceKey=TEMP001&title=SGI+-+ESB+-+SGO). |
-| provinciaContacto | Provincia | Se devuelve la entidad Provincia con todos sus campos. Ver definición en [SGI - ESB - SGO](/confluence/pages/createpage.action?spaceKey=TEMP001&title=SGI+-+ESB+-+SGO). |
+| paisContacto | Pais | Se devuelve la entidad Pais con todos sus campos. Ver definición en SGI - ESB - SGO. |
+| comAutonomaContacto | ComunidadAutonoma | Se devuelve la entidad ComunidadAutonoma con todos sus campos. Ver definición en SGI - ESB - SGO. |
+| provinciaContacto | Provincia | Se devuelve la entidad Provincia con todos sus campos. Ver definición en SGI - ESB - SGO. |
 | ciudadContacto | String | Ciudad de contacto de la persona. |
 | direccionContacto | String | Dirección de contacto de la persona. |
 | codigoPostalContacto | String | Código postal de la dirección de contacto de la persona. |
@@ -239,9 +239,9 @@ Para la definición de los enumerados en el código seguir lo indicado en: [Enum
 | Nombre | Tipo | Descripción |
 | --- | --- | --- |
 | vinculacionCategoriaProfesional | VinculacionCategoriaProfesional | Se devuelve la entidad VinculacionCategoriaProfesional con todos sus campos. |
-| departamento | Departamento | Se devuelve la entidad Departamento con todos sus campos. Ver definición en [SGI - ESB - SGO](/confluence/pages/createpage.action?spaceKey=TEMP001&title=SGI+-+ESB+-+SGO). |
+| departamento | Departamento | Se devuelve la entidad Departamento con todos sus campos. Ver definición en SGI - ESB - SGO. |
 | centro | Centro | Se devuelve la entidad Centro con todos sus campos. Ver definición en [Sistema Gestión de Organizaciones (UM - SGI - ESB - SGO)](/hercules/apis-de-integracion/sgi-servicios-de-terceros-que-consume/caso-de-uso-servicios-implementados-por-la-universidad-de-murcia/sistema-gestion-de-organizacionesum-sgi-esb-sgo) |
-| areaConocimiento | AreaConocimiento | Se devuelve la entidad AreaConocimiento con todos sus campos. Ver definición en [SGI - ESB - SGO](/confluence/pages/createpage.action?spaceKey=TEMP001&title=SGI+-+ESB+-+SGO). |
+| areaConocimiento | AreaConocimiento | Se devuelve la entidad AreaConocimiento con todos sus campos. Ver definición en SGI - ESB - SGO. |
 | empresaRef | String | Se devuelve el identificador/referencia de la entidad Empresa externa que es la relacionada en la actualidad con la persona, la vigente. |
 | personalPropio | Boolean | Indica si es personal de la Universidad o no (a día de hoy). |
 | entidadPropiaRef | String | Se devuelve el identificador/referencia de la entidad que representa a la Universidad en caso de que valor de personalPropio sea true (a día de hoy), esto es, que la relación de la persona con la Universidad esté vigente. |
@@ -433,7 +433,7 @@ Para la definición de los enumerados en el código seguir lo indicado en: [Enum
 | POST | /personas | JSON | id  Vendrá relleno si la creación es síncrona y no vendrá si es asíncrona. |  | Recibe como parámetro la respuesta del usuario del formulario de datos de alta (formly) con los campos necesarios para crear una persona. |
 | PUT | /personas | JSON |  |  | Recibe como parámetro la respuesta del usuario del formulario de datos de modificación (formly) con los campos necesarios para actualizar una persona. |
 | GET | /personas/formly/{id} |  | JSON |  | Devuelve los datos a pintar en el formulario de Ver Detalle/Actualizar en el SGI (formly). |
-| GET | /personas/formly/create |  | Formly |  | Devuelve el formulario (formly) a pintar para la pantalla de solicitar alta persona. Ver  [IU-GEN-0061- Solicitar alta de persona](/confluence/pages/createpage.action?spaceKey=TEMP001&title=IU-GEN-0061-+Solicitar+alta+de+persona). |
+| GET | /personas/formly/create |  | Formly |  | Devuelve el formulario (formly) a pintar para la pantalla de solicitar alta persona. Ver  IU-GEN-0061- Solicitar alta de persona. |
 | GET | /personas/formly/update |  | Formly |  | Devuelve el formulario (formly) a pintar para la pantalla de solicitar modificar persona. |
 | GET | /personas/formly/view |  | Formly |  | Devuelve el formulario (formly) a pintar para la pantalla de ver detalle de persona. |
 |  | | | | | |

@@ -12,7 +12,7 @@ En esta sección se describirán las propiedades incorporadas, de algunas ya se 
 * **Inversa:**   :partOfResearchResult
 * **Tipo de propiedad:**   Object Property
 
-Esta propiedad nos permite, dado un resultado de investigación, identificar los componentes que lo componen, los cuales deben ser instancias del rango de esta propiedad.  De este modo, si el Software, y, es un componente del [Research](/confluence/pages/createpage.action?spaceKey=TEMP001&title=_heading%3Dh.42ddq1a) Result x, entonces la tripleta del grafo de conocimiento x :researchObjectHasPart y, permite saber que es un componente de dicho resultado de investigación. Lo mismo en el caso de que la instancia y pertenezca a cualquier otra entidad que del rango de esta propiedad.
+Esta propiedad nos permite, dado un resultado de investigación, identificar los componentes que lo componen, los cuales deben ser instancias del rango de esta propiedad.  De este modo, si el Software, y, es un componente del Research Result x, entonces la tripleta del grafo de conocimiento x :researchObjectHasPart y, permite saber que es un componente de dicho resultado de investigación. Lo mismo en el caso de que la instancia y pertenezca a cualquier otra entidad que del rango de esta propiedad.
 
 ## **Part of research result**
 

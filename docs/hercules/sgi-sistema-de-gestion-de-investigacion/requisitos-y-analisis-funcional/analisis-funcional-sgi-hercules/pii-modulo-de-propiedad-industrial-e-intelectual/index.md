@@ -447,7 +447,7 @@ El resultado de este proceso de reparto se podrá finalmente exportar a un docum
     - Al mes 18, avisando de que se ha terminado de extensión.
 * Generar avisos dinámicos a partir de los procedimientos de la solicitud.
 
-Ver análisis en [PII - Comunicados](/confluence/pages/createpage.action?spaceKey=HERCULES&title=PII+-+Comunicados&linkCreation=true&fromPageId=597853838).
+Ver análisis en PII - Comunicados.
 
 ## Informes
 

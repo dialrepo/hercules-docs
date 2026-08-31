@@ -1,6 +1,6 @@
 # Análisis para la extracción de descriptores temáticos
 
-**Documento integrado en "[Enriquecimiento. Extracción de tópicos y similitud v2](/confluence/pages/createpage.action?spaceKey=TEMP001&title=Enriquecimiento.+Extracci%C3%B3n+de+t%C3%B3picos+y+similitud+v2)****".**
+**Documento integrado en "Enriquecimiento. Extracción de tópicos y similitud v2****".**
 
 El proceso de reclamación (*claim*) de un RO debe pasar por un proceso de enriquecimiento que le incorpore un conjunto de descriptores. Estos descriptores serán, en primer lugar, específicos y se tratará de palabras o conjuntos de palabras reconocidos en el texto y alineados, si es posible, con entidades de ontologías existentes.
 

@@ -823,7 +823,7 @@ No se permite añadir el mismo tipo de fase dos veces sobre el mismo modelo de e
 
 ![](/attachments/597853119/597859699.png)
 
-Si lo que se quiere hacer es modificar la configuración sobre el modelo de ejecución de ese tipo de fase ya añadido (por ejemplo para cambiarle la configuración para habilitarlo sobre convocatorias y/o proyectos), se debe acceder a su modificación desde el listado de tipos de fase del modelo de ejecución (Ver [Modificar tipo de fase de un modelo de ejecución](/confluence/pages/createpage.action?spaceKey=HERCULES&title=modelo_ejecucion_tipo_fase_modificar&linkCreation=true&fromPageId=597853119)).
+Si lo que se quiere hacer es modificar la configuración sobre el modelo de ejecución de ese tipo de fase ya añadido (por ejemplo para cambiarle la configuración para habilitarlo sobre convocatorias y/o proyectos), se debe acceder a su modificación desde el listado de tipos de fase del modelo de ejecución (Ver Modificar tipo de fase de un modelo de ejecución).
 
 ###### Crear un nuevo tipo de fase
 

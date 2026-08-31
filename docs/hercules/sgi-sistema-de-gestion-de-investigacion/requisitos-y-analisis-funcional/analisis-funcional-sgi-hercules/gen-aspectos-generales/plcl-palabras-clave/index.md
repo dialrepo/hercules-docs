@@ -4,7 +4,7 @@ La funcionalidad de palabras clave es reutilizada a lo largo del SGI por los dif
 
 ### Descripción Funcional
 
-La funcionalidad de palabras clave aplicará o estará disponible solo para aquellas entidades de las consideradas principales o de mayor relevancia dentro de Hércules [REQ - GEN - 0006 - Entidades principales](/confluence/pages/createpage.action?spaceKey=HERCULES&title=REQ+-+GEN+-+0006+-+Entidades+principales&linkCreation=true&fromPageId=597853849).
+La funcionalidad de palabras clave aplicará o estará disponible solo para aquellas entidades de las consideradas principales o de mayor relevancia dentro de Hércules REQ - GEN - 0006 - Entidades principales.
 
 Una palabra clave será una cadena de texto, formada por una una o varias palabras, única a nivel de todo el SGI, que se registrará dentro de lo que se llamará diccionario de palabras clave y que se asignará a una instancia de una entidad, esto es, será asignable a nivel de registros concretos que sean instancias de una de las entidades principales del SGI referenciadas anteriormente. Estas palabras claves que se asocien a los registros se podrán explotar mediante a través de los buscadores de dichas entidades, esto es, "palabras clave" será un campo más de dichas entidades por el que se podría buscar.
 

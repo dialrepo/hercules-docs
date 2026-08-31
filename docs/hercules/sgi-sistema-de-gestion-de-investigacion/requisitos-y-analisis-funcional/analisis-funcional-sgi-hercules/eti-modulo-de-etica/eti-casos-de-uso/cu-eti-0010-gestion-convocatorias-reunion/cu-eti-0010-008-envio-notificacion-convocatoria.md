@@ -39,7 +39,7 @@ Se guarda la fecha de envío en la convocatoria.
 
 1. Se presenta la pantalla Convocatorias reunión con el listado de todas las Convocatorias de reunión dadas de alta en el sistema.
 2. Se selecciona Envío sobre una de las convocatorias.
-3. Se envía la notificación a los miembros integrantes del comité asociado a la convocatoria y a los gestores del módulo de ética [\_\_NO USAR CU-COM-0020 - Generar comunicado automático - Original con enlaces de AFs fuera de PMV](/confluence/pages/createpage.action?spaceKey=HERCULES&title=__NO+USAR+CU-COM-0020+-+Generar+comunicado+autom%C3%A1tico+-+Original+con+enlaces+de+AFs+fuera+de+PMV&linkCreation=true&fromPageId=597852491).
+3. Se envía la notificación a los miembros integrantes del comité asociado a la convocatoria y a los gestores del módulo de ética \_\_NO USAR CU-COM-0020 - Generar comunicado automático - Original con enlaces de AFs fuera de PMV.
 4. Se presenta la misma pantalla pero sin la acción de Envío sobre la convocatoria que se ha enviado.
 
 ### Extensiones (flujos alternativos) - Error al enviar la notificación

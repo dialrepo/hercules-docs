@@ -23,7 +23,7 @@ ACT-CSP-004-Administrador.  Deberá pertenecer a una unidad de gestión que ten
 
 #### Personal involucrado e intereses
 
-ACT-CSP-003-Gestor de las unidades que tengan habilitadas las funcionalidades de EDICION sobre Convocatorias y proyectos. Ver [CU-USR-0020-003 - Asignar funcionalidad a unidad de gestión y perfil de usuario](/confluence/pages/createpage.action?spaceKey=HERCULES&title=CU-USR-0020-003+-++Asignar+funcionalidad+a+unidad+de+gesti%C3%B3n&linkCreation=true&fromPageId=597852680). Normalmente se tratará de las unidades UGI, OTRI, OPE.
+ACT-CSP-003-Gestor de las unidades que tengan habilitadas las funcionalidades de EDICION sobre Convocatorias y proyectos. Ver CU-USR-0020-003 - Asignar funcionalidad a unidad de gestión y perfil de usuario. Normalmente se tratará de las unidades UGI, OTRI, OPE.
 
 Personal investigador (ACT- CSP-001-Investigador, ACT-CSP-002-InvestigadorExterno) que requiere que se creen las convocatorias para presentar solicitudes sobre las mismas.
 

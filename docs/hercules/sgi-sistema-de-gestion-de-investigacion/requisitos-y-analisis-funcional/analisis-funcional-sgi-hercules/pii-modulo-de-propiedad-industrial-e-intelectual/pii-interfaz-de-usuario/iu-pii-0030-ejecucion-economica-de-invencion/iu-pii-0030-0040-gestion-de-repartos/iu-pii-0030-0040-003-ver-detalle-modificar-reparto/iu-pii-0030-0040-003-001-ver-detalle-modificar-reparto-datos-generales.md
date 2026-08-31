@@ -62,7 +62,7 @@ Pantalla que muestra el formulario que permite ver el detalle o modificar un rep
 | --- | --- | --- | --- |
 | Guardar reparto | Guarda el reparto de resultados.  Las validaciones que se aplicarán serán las siguientes:   * Para cada miembro del equipo inventor, la suma de los importes Imp. a Nómina + Imp. a Proyecto + Imp. a Otros ha de ser igual al Imp. total a repartir al mismo. * Para el reparto general:   + El Importe total del desglose de reparto a equipo inventor ha de ser igual al Importe del reparto a equipo inventor.   + El Importe a pagar Universidad + Importe a pagar a los Inventores ha de ser igual al Resultado a repartir.   Si se produce un cambio de estado, el único posible, que es de "Pendiente de ejecutar" a "Ejecutado", una vez guardados los cambios, la entidad reparto pasará a ser únicamente de "solo consulta". |  | PII-INV-E |
 | Cancelar | Retorna al listado de repartos de la invención sin salvar los posibles cambios.  Al cancelar, se descarta la información modificada o introducida (si estamos dando de alta por primera vez) de todo los formularios de la pantalla de reparto. |  |  |
-| Imprimir a PDF | Genera documento de resultados en PDF [REP-PII-0040- Balances y pagos de regalías a la Universidad y los inventores](/confluence/pages/createpage.action?spaceKey=HERCULES&title=__REP-PII-0040-+Balances+y+pagos+de+regal%C3%ADas+a+la+Universidad+y+los+inventores&linkCreation=true&fromPageId=597852473) |  | PII-INV-E |
+| Imprimir a PDF | Genera documento de resultados en PDF REP-PII-0040- Balances y pagos de regalías a la Universidad y los inventores |  | PII-INV-E |
 
 ### Permisos de acceso a la pantalla
 

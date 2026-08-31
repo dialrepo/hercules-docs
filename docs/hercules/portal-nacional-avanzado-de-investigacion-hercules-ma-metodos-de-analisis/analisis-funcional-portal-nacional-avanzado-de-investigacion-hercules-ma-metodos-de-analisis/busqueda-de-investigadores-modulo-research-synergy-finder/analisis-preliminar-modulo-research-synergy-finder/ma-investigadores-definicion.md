@@ -60,8 +60,8 @@ En el buscador, deben estar todos los investigadores que participan tanto en los
     - La gráfica se actualiza al aplicar una faceta.
 * ### Otros resultados (antes ROs)
 
-  + Facetas (las indicadas para el [buscador de ROs](/confluence/pages/createpage.action?spaceKey=TEMP001&title=Gesti%C3%B3n+FAIR+RO)).
-  + Minificha (las indicadas para el [buscador de ROs](/confluence/pages/createpage.action?spaceKey=TEMP001&title=Gesti%C3%B3n+FAIR+RO)).
+  + Facetas (las indicadas para el buscador de ROs).
+  + Minificha (las indicadas para el buscador de ROs).
   + Gráfica
     - ROs por año
     - Citas por año (cuando podamos obtener el dato)

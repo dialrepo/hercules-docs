@@ -10,15 +10,15 @@ Código en:
 
 Implementado:
 
-[Proyectos](/confluence/pages/createpage.action?spaceKey=TEMP001&title=Proyectos).
+Proyectos.
 
-[Personal investigador y datos personales](/confluence/pages/createpage.action?spaceKey=TEMP001&title=Personas+y+CV).
+Personal investigador y datos personales.
 
-[Organizaciones (sociedades)](/confluence/pages/createpage.action?spaceKey=TEMP001&title=Sociedades).
+Organizaciones (sociedades).
 
 ## En curso.
 
-[020.000.000.000 Formación académica recibida](/confluence/pages/createpage.action?spaceKey=TEMP001&title=Formaci%C3%B3n+acad%C3%A9mica+recibida+-+CVN)
+020.000.000.000 Formación académica recibida
 
 * [020.010.010.000 Estudios de 1º y 2º ciclo, y antiguos ciclos (Licenciados, Diplomados, Ingenieros Superiores, Ingenieros Técnicos, Arquitectos)](https://confluence.um.es/confluence/pages/viewpage.action?pageId=397534658#Formaci%C3%B3nacad%C3%A9micarecibidaCVN-Formaci%C3%B3n_020.010.010.000(Estudiosde1%C2%BAy2%C2%BAciclo,yantiguosciclos))
 * [020.010.020.000 Doctorados](https://confluence.um.es/confluence/pages/viewpage.action?pageId=397534658#Formaci%C3%B3nacad%C3%A9micarecibidaCVN-Formaci%C3%B3n_020.010.020.000(Doctorados))
@@ -27,7 +27,7 @@ Implementado:
 * [020.060.000.000 Conocimiento de idiomas](https://confluence.um.es/confluence/pages/viewpage.action?pageId=397534658#Formaci%C3%B3nacad%C3%A9micarecibidaCVN-Formaci%C3%B3n_020.060.000.000(Conocimientodeidiomas))
 * [020.050.000.000 Cursos y seminarios recibidos de perfeccionamiento, innovación y mejora docente, nuevas tecnologías, etc., cuyo objetivo sea la mejora de la docencia](https://confluence.um.es/confluence/pages/viewpage.action?pageId=397534658#Formaci%C3%B3nacad%C3%A9micarecibidaCVN-ActividadDocente_020.050.000.000(Cursosyseminariosrecibidosdeperfeccionamiento,innovaci%C3%B3nymejoradocente,nuevastecnolog%C3%ADas,etc.,cuyoobjetivosealamejoradeladocencia))
 
-[030.000.000.000 Actividad docente](/confluence/pages/createpage.action?spaceKey=TEMP001&title=Actividad+docente+-+CVN)
+030.000.000.000 Actividad docente
 
 * [030.040.000.000 Dirección de tesis doctorales y/o proyectos fin de carrera](https://confluence.um.es/confluence/display/HERCULES/Actividad+docente+-+CVN#ActividaddocenteCVN-ActividadDocente_030.040.000.000(Direcci%C3%B3ndetesisdoctoralesy/oproyectosfindecarrera))
 * [030.010.000.000 Formación académica impartida](https://confluence.um.es/confluence/display/HERCULES/Actividad+docente+-+CVN#ActividaddocenteCVN-ActividadDocente_030.010.000.000(Formaci%C3%B3nacad%C3%A9micaimpartida))
@@ -56,7 +56,7 @@ Grupos/equipos de investigación, desarrollo o innovación. Multivaluado.
 
 <https://confluence.treelogic.com/pages/viewpage.action?pageId=131858462> (análisis de correspondencia con CVN)
 
-Propiedad industrial e intelectual (ver [IU-GEN-0130 - Búsqueda de invenciones](/confluence/pages/createpage.action?spaceKey=TEMP001&title=IU-GEN-0130+-+B%C3%BAsqueda+de+invenciones))
+Propiedad industrial e intelectual (ver IU-GEN-0130 - Búsqueda de invenciones)
 
 Preguntamos al servicio por "Fecha actualización" y obtenemos los IDs de las invenciones nuevas o modificadas
 

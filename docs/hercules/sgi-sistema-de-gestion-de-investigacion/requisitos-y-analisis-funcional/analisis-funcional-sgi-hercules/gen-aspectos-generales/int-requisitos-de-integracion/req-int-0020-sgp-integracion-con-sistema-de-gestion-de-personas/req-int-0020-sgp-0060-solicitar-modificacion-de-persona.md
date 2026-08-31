@@ -18,7 +18,7 @@ El ESB proporcionará el interface de integración para que desde el SGI se soli
 
 ### Descripción integración
 
-El SGI no dispondrá de un formulario propio para recoger los datos de modificación de una persona sino uno específico por implantación/universidad tal y como se describe en [IU-GEN-0062 - Ver detalle - Solicitar modificación de persona](/confluence/pages/createpage.action?spaceKey=HERCULES&title=IU-GEN-0062+-+Ver+detalle+-+Solicitar+modificaci%C3%B3n+de+persona&linkCreation=true&fromPageId=597853090).
+El SGI no dispondrá de un formulario propio para recoger los datos de modificación de una persona sino uno específico por implantación/universidad tal y como se describe en IU-GEN-0062 - Ver detalle - Solicitar modificación de persona.
 
 Los parámetros de entrada y salida a la hora de integrarse con los sistemas universitarios para la modificación de personas serán definidos en cada implantación/universidad en particular, puesto que dependen de las necesidades y restricciones tanto de sus usuarios finales como de sus sistemas de gestión de la información de personas.
 

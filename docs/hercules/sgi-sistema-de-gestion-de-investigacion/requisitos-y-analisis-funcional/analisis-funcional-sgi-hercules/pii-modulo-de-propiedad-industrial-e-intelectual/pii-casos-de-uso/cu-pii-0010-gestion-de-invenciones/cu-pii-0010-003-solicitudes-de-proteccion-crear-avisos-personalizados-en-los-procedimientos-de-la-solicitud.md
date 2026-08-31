@@ -13,7 +13,7 @@
 
 ### Descripción
 
-Cuando el usuario va gestionando una solicitud de protección y se generan procedimientos el usuario va dejando constancia en la misma. Este procedimiento que el usuario registra, normalmente, requerirá de unas acciones a tomar que si no son de manera inmediata o no son para el usuario que está haciendo el registro requieren de un aviso en una fecha y a unos usuarios determinados ([\_\_NO USAR CU-COM-0020 - Generar comunicado automático - Original con enlaces de AFs fuera de PMV](/confluence/pages/createpage.action?spaceKey=HERCULES&title=__NO+USAR+CU-COM-0020+-+Generar+comunicado+autom%C3%A1tico+-+Original+con+enlaces+de+AFs+fuera+de+PMV&linkCreation=true&fromPageId=597853204) - [IU-COM-0020-001 - Generación de comunicados](/confluence/pages/createpage.action?spaceKey=HERCULES&title=__IU-COM-0020-001+-+Generaci%C3%B3n+de+comunicados&linkCreation=true&fromPageId=597853204)).
+Cuando el usuario va gestionando una solicitud de protección y se generan procedimientos el usuario va dejando constancia en la misma. Este procedimiento que el usuario registra, normalmente, requerirá de unas acciones a tomar que si no son de manera inmediata o no son para el usuario que está haciendo el registro requieren de un aviso en una fecha y a unos usuarios determinados (\_\_NO USAR CU-COM-0020 - Generar comunicado automático - Original con enlaces de AFs fuera de PMV - IU-COM-0020-001 - Generación de comunicados).
 
 ### Actores
 

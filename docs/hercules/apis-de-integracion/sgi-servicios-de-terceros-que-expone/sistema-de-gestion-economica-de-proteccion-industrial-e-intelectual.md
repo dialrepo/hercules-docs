@@ -1,6 +1,6 @@
 # Sistema de gestión económica de protección industrial e intelectual
 
-[Descripción funcional de requisitos de integración](/confluence/pages/createpage.action?spaceKey=TEMP001&title=REQ-INT-0013-SGEPII+-+Integraci%C3%B3n+con+Sistema+de+Gesti%C3%B3n+Econ%C3%B3mica+de+Protecci%C3%B3n+Industrial+e+Intelectual)
+Descripción funcional de requisitos de integración
 
 ---
 

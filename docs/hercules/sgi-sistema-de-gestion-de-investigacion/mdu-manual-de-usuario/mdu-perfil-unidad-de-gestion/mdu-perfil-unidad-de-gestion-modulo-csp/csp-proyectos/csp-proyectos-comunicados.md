@@ -59,13 +59,13 @@ Para los gestores el comunicado se programará para el día 1 de cada mes con to
 
 Las direcciones de email destinatarias de este tipo de comunicados deberán haber sido configurada durante la  implantación del SGI. Se podrán establecer direcciones de envío diferentes para cada unidad de gestión.
 
-Se remitirá un comunicado el día 1 de cada mes. En este comunicado se informará de todos los proyectos que tengan periodos de justificación cuya presentación deba realizarse en ese mes. Es decir, se incluirán todos los proyectos que tengan periodos de justificación cuya "fecha de inicio de presentación" esté dentro del mes con el que corresponde el comunicado. Puede consultarse el apartado [CSP-Proyectos - Configuración económica - 9 Calendario de justificación](/confluence/pages/createpage.action?spaceKey=HERCULES&title=CSP-Proyectos-Configuraci%26oacute%3Bn+econ%26oacute%3Bmica&linkCreation=true&fromPageId=597852587).
+Se remitirá un comunicado el día 1 de cada mes. En este comunicado se informará de todos los proyectos que tengan periodos de justificación cuya presentación deba realizarse en ese mes. Es decir, se incluirán todos los proyectos que tengan periodos de justificación cuya "fecha de inicio de presentación" esté dentro del mes con el que corresponde el comunicado. Puede consultarse el apartado CSP-Proyectos - Configuración económica - 9 Calendario de justificación.
 
 ### 6. Aviso calendario facturación - Notificar IP
 
 Los destinatarios de este tipo de comunicados serán los investigadores principales y responsable económico de los proyectos. No admiten configuración.
 
-Se enviará un comunicado cuando el usuario del SGI pulse sobre la acción "Notificar IP" para un ítem de facturación en el calendario de facturación (ver descripción del apartado en [CSP-Proyectos - Configuración económica - 8.2 Ciclo de gestión de un ítem de facturación](/confluence/pages/createpage.action?spaceKey=HERCULES&title=CSP-Proyectos-Configuraci%26oacute%3Bn+econ%26oacute%3Bmica&linkCreation=true&fromPageId=597852587)). La notificación se realiza sobre un ítem de facturación que tendrá asociado, de manera opcional, un tipo de facturación.
+Se enviará un comunicado cuando el usuario del SGI pulse sobre la acción "Notificar IP" para un ítem de facturación en el calendario de facturación (ver descripción del apartado en CSP-Proyectos - Configuración económica - 8.2 Ciclo de gestión de un ítem de facturación). La notificación se realiza sobre un ítem de facturación que tendrá asociado, de manera opcional, un tipo de facturación.
 
 El comunicado tendrá siempre el mismo asunto, pero contenido diferente en función de:
 

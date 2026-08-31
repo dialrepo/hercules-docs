@@ -29,8 +29,8 @@
 
 Características generales que todas las API REST deben de cumplir:
 
-* [Consultas filtradas y paginadas](/confluence/pages/createpage.action?spaceKey=TEMP001&title=Consultas+filtradas+y+paginadas)
-* [Formatos de datos API](/confluence/pages/createpage.action?spaceKey=TEMP001&title=Formatos+de+datos+API)
+* Consultas filtradas y paginadas
+* Formatos de datos API
 
 #### Definición de los objetos
 

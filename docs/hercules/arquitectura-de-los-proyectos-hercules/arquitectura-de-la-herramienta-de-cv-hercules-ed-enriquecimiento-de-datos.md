@@ -11,7 +11,7 @@ La descripción del proyecto puede consultarse en [Herramienta de CV. Hércules 
 ![](/attachments/598147668/598148308.png)
 
 * Hércules ED (Enriquecimiento de datos). Se comunica con:
-  + [**Hércules SGI** (Sistema de Gestión de Innovación)](/confluence/pages/createpage.action?spaceKey=TEMP001&title=Sistema+Innovador+de+Gesti%C3%B3n+de+Investigaci%C3%B3n). Se pueden ver detalles de la conexión en [Servicios de integración utilizados por Hércules ED y MA](/hercules/apis-de-integracion/ed-y-ma-integraciones)).
+  + **Hércules SGI** (Sistema de Gestión de Innovación). Se pueden ver detalles de la conexión en [Servicios de integración utilizados por Hércules ED y MA](/hercules/apis-de-integracion/ed-y-ma-integraciones)).
     - Consulta un servicio OAI-PMH que proporciona información actualizada del SGI y de otros sistemas de la Universidad.
     - Envía información introducida en ED para la validación de la producción científica, la conformidad de proyectos externos y la creación de ofertas tecnológicas.
   + Biblioteca de la UMU. Envío de publicaciones.

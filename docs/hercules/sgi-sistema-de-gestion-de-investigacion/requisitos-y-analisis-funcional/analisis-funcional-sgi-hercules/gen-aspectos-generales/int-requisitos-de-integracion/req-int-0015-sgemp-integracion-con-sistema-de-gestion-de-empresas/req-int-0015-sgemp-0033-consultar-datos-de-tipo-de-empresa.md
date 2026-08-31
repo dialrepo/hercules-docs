@@ -22,7 +22,7 @@ Parámetro de entrada: referencia de empresa (identificador de referencia entre 
 
 Salida: se devolverá un registro de un tipo de empresa de la empresa con la siguiente información:
 
-* Tipo empresa (PYME, Microempresa, ...). Habría de ser uno de los tipos devueltos a través de la llamada al sistema universitario que corresponda usando el requisito de integración [REQ-INT-0015-SGEMP-0010 - Listar tipos de empresa](/confluence/pages/createpage.action?spaceKey=HERCULES&title=REQ-INT-0015-SGEMP-0010+-+Listar+tipos+de+empresa&linkCreation=true&fromPageId=597853172).
+* Tipo empresa (PYME, Microempresa, ...). Habría de ser uno de los tipos devueltos a través de la llamada al sistema universitario que corresponda usando el requisito de integración REQ-INT-0015-SGEMP-0010 - Listar tipos de empresa.
 
 ### Diseño técnico
 
