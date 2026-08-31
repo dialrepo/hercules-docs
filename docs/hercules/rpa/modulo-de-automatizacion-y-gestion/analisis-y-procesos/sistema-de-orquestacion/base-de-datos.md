@@ -1,6 +1,4 @@
-# Hércules : Base de Datos
-
-
+# Base de Datos
 
 La persistencia será almacenada en una base de datos relacional. Se hará uso de PostgreSQL para su despliegue y su objetivo principal es dotar de robustez al sistema ante posibles caídas así como almacenar información útil de logs y procesos.
 
@@ -8,10 +6,9 @@ La siguiente ilustración es la implementación del esquema actual de la base de
 
 ![](/attachments/598147209/598147784.png)
 
-
-
-| **Log** | | |
+|  |  |  |
 | --- | --- | --- |
+| **Log** | | |
 | Atributo | Tipo | Descripción |
 | id | int | Identificador del log. |
 | id\_schedule | int | Identificador de la planificación de ejecución. |
@@ -23,15 +20,11 @@ La siguiente ilustración es la implementación del esquema actual de la base de
 | end\_time | timestmap | Cuando terminó la ejecución. |
 | state | string | Estado de la ejecución (OK, ERROR...). |
 | finished | boolean | Ha finalizado la ejecución (True o False). |
-| completed | int | 0\-100, numero para la monitorización del proceso. |
+| completed | int | 0-100, numero para la monitorización del proceso. |
 
-  
-
-
-
-
-| **Process** | | |
+|  |  |  |
 | --- | --- | --- |
+| **Process** | | |
 | Atributo | Tipo | Descripción |
 | id | int | Identificador del proceso. |
 | class | string | Nombre de la clase del proceso, para poder ser invocado. |
@@ -39,13 +32,9 @@ La siguiente ilustración es la implementación del esquema actual de la base de
 | requirements | string | Librerías necesarias para la ejecución. |
 | description | string | Descripción del proceso. |
 
-  
-
-
-
-
-| **Schedule** | | |
+|  |  |  |
 | --- | --- | --- |
+| **Schedule** | | |
 | Atributo | Tipo | Descripción |
 | id | int | Identificador de la planificación de ejecución. |
 | id\_robot | int | Robot que ha realizado o realizará esa ejecución. |
@@ -53,13 +42,9 @@ La siguiente ilustración es la implementación del esquema actual de la base de
 | active | boolean | La planificación de ejecución sigue activa (true, false) para procesos que queramos planificar cada día. |
 | next\_run | timestamp | Timestamp de la siguiente ejecución. |
 
-  
-
-
-
-
-| **Robot** | | |
+|  |  |  |
 | --- | --- | --- |
+| **Robot** | | |
 | Atributo | Tipo | Descripción |
 | id | int | Identificador del robot. |
 | name | string | Nombre del robot. |
@@ -88,7 +73,7 @@ A continuación, se muestra un ejemplo de información que estaría almacenada e
          "description":"Proceso que Segmenta y Crea boletines para la ayuda a la transferencia de investigación"
       }
    ]
-} 
+}
 ```
 
 **Tabla Log**
@@ -112,9 +97,6 @@ A continuación, se muestra un ejemplo de información que estaría almacenada e
 }
 ```
 
-  
-
-
 **Tabla Schedule**
 
 ```
@@ -131,9 +113,6 @@ A continuación, se muestra un ejemplo de información que estaría almacenada e
    ]
 }
 ```
-
-  
-
 
 **Tabla Robot**
 
@@ -159,13 +138,3 @@ A continuación, se muestra un ejemplo de información que estaría almacenada e
 ```
 
 Toda la información contenida en la persistencia podrá ser consultada mediante una API.
-
-  
-
-
-  
-
-
-
-
-

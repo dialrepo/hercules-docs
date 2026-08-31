@@ -1,10 +1,15 @@
-# Hércules : IU\-CSP\-0406\-021\-001 \- Búsqueda de proyectos económicos
+# IU-CSP-0406-021-001 - Búsqueda de proyectos económicos
 
-
-
-
-
-
+|  |  |
+| --- | --- |
+| Cod. IU | **********IU-CSP-0406-021-001 - Búsqueda de proyectos económicos********** |
+| Ver. objetivo |  |
+| Ver. IU | 1.0.0 |
+| Estado | PENDIENTE |
+| Fec. Aprobación |  |
+| Épica, historia |  |
+| Actores | ACT-CSP-003-Gestor, ACT-CSP-004-Administrador |
+| Frecuencia | Media |
 
 ## Formulario de búsqueda de proyectos económicos
 
@@ -12,10 +17,9 @@ Pantalla que implementa el buscador de proyectos económicos dados de alta en el
 
 Se abrirá en una ventana emergente o popup.
 
-
-
-|  | | |
+|  |  |  |
 | --- | --- | --- |
+|  | | |
 | Nombre | Tipo | Características / Notas |
 | Formulario de búsqueda | | |
 | Introduzca el identificador SGE o el título de proyecto | Texto | Se comprobará si el valor introducido forma parte de los identificadores SGE y los títulos de los proyectos. |
@@ -31,47 +35,27 @@ Se abrirá en una ventana emergente o popup.
 | Seleccionar | Icono de acción | Acción "seleccionar y notificar SGE". |
 | Ver | Icono de acción | Acción "ver". |
 
-
-
 | Acciones | Descripción | Enlace CU. | Permisos |
 | --- | --- | --- | --- |
-| Buscar | Invoca a la función de búsqueda y muestra el listado de resultados.Se invocará a la función de búsqueda, [REQ\-INT\-0010\-SGE\-0080 \- Buscar proyecto económico](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0010-sge-integracion-con-sistema-de-gestion-economica/req-int-0010-sge-0080-buscar-proyecto-economico.md "/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0010-sge-integracion-con-sistema-de-gestion-economica/req-int-0010-sge-0080-buscar-proyecto-economico.md") proporcionada por el módulo de integración.Los parámetros a pasar a esta función serán:* Valor introducido en el campo identificador SGE/título de proyecto * Fecha inicio desde \- Fecha inicio hasta * Fecha fin desde \- Fecha fin hasta |  | No se necesita permiso, cualquier usuario que haya podido acceder puede realizar la búsqueda |
+| Buscar | Invoca a la función de búsqueda y muestra el listado de resultados.  Se invocará a la función de búsqueda, [REQ-INT-0010-SGE-0080 - Buscar proyecto económico](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0010-sge-integracion-con-sistema-de-gestion-economica/req-int-0010-sge-0080-buscar-proyecto-economico) proporcionada por el módulo de integración.  Los parámetros a pasar a esta función serán:   * Valor introducido en el campo identificador SGE/título de proyecto * Fecha inicio desde - Fecha inicio hasta * Fecha fin desde - Fecha fin hasta |  | No se necesita permiso, cualquier usuario que haya podido acceder puede realizar la búsqueda |
 | Limpiar | Vacía los datos introducidos en el formulario de búsqueda de proyectos, en este caso, el campo único de búsqueda. |  |  |
-| Seleccionar | Selecciona el proyecto del listado y notifica al SGE la nueva relaciónMuestra el formulario [IU\-CSP\-0406\-021\-004\- Solicitar relaciónproyecto económico desde Proyecto SGI](/hercules/sgi-sistema-de-gestion-de-investigacion/guia-de-implantacion-checklist/um-universidad-de-murcia/um-formularios-especificos/um-formularios-de-gestion-economica-sge/iu-csp-0406-021-004-solicitar-relacion-proyecto-economico-desde-proyecto-sgi.md "/hercules/sgi-sistema-de-gestion-de-investigacion/guia-de-implantacion-checklist/um-universidad-de-murcia/um-formularios-especificos/um-formularios-de-gestion-economica-sge/iu-csp-0406-021-004-solicitar-relacion-proyecto-economico-desde-proyecto-sgi.md")Tras seleccionar un proyecto, se devuelve el identificador "identificadorSGE" al módulo que invoca al buscador y se cierra el buscador. |  | ESB\-PRO\-C |
-| Solicitar alta proyecto | Muestra el formulario [IU\-CSP\-0406\-021\-002\- Solicitar alta de proyecto económico UM](/hercules/sgi-sistema-de-gestion-de-investigacion/guia-de-implantacion-checklist/um-universidad-de-murcia/um-formularios-especificos/um-formularios-de-gestion-economica-sge/iu-csp-0406-021-002-solicitar-alta-de-proyecto-economico-desde-proyecto-sgi.md "/hercules/sgi-sistema-de-gestion-de-investigacion/guia-de-implantacion-checklist/um-universidad-de-murcia/um-formularios-especificos/um-formularios-de-gestion-economica-sge/iu-csp-0406-021-002-solicitar-alta-de-proyecto-economico-desde-proyecto-sgi.md") |  | ESB\-PRO\-C |
+| Seleccionar | Selecciona el proyecto del listado y notifica al SGE la nueva relación  Muestra el formulario [IU-CSP-0406-021-004- Solicitar relaciónproyecto económico desde Proyecto SGI](/hercules/sgi-sistema-de-gestion-de-investigacion/guia-de-implantacion-checklist/um-universidad-de-murcia/um-formularios-especificos/um-formularios-de-gestion-economica-sge/iu-csp-0406-021-004-solicitar-relacion-proyecto-economico-desde-proyecto-sgi)  Tras seleccionar un proyecto, se devuelve el identificador "identificadorSGE" al módulo que invoca al buscador y se cierra el buscador. |  | ESB-PRO-C |
+| Solicitar alta proyecto | Muestra el formulario [IU-CSP-0406-021-002- Solicitar alta de proyecto económico UM](/hercules/sgi-sistema-de-gestion-de-investigacion/guia-de-implantacion-checklist/um-universidad-de-murcia/um-formularios-especificos/um-formularios-de-gestion-economica-sge/iu-csp-0406-021-002-solicitar-alta-de-proyecto-economico-desde-proyecto-sgi) |  | ESB-PRO-C |
 | Cancelar | No se realiza ninguna acción, se cierra el formulario sin devolver ningún dato al formulario de invocación. |  |  |
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
 
 ### Permisos de acceso a la pantalla
 
 #### Por actor
 
+|  |  |
+| --- | --- |
+| ACT-CSP-003-Gestor | ESB-PRO-C |
+| ACT-CSP-004-Administrador | ESB-PRO-C |
+
 #### Todos los permisos de acceso
 
+|  |  |
+| --- | --- |
+| Permisos | ESB-PRO-V, ESB-PRO-C |
 
-
-
-
-
-
+Se aplican las mismas restricciones para todos los elementos del árbol de navegación bajo este path.

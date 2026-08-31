@@ -1,10 +1,15 @@
-# Hércules : CU\-PII\-0010\-004 \- Asociar persona
+# CU-PII-0010-004 - Asociar persona
 
-
-
-
-
-
+|  |  |
+| --- | --- |
+| Cod. CU | ********CU-PII-0010-004 - Asociar persona******** |
+| Ver. objetivo |  |
+| Ver. CU | 1.0.0 |
+| Estado | LIBERADO\_ |
+| Fec. Aprobación |  |
+| Épica, historia |  |
+| Actores | ACT-PII-001-Gestor |
+| Frecuencia | Media |
 
 ### Descripción
 
@@ -16,7 +21,7 @@ Se presenta un diálogo para la búsqueda de esta persona en los sistemas de la 
 
 #### Actor principal
 
-ACT\-PII\-001\-Gestor
+ACT-PII-001-Gestor
 
 ### Precondiciones
 
@@ -28,11 +33,11 @@ Haber accedido a la gestión de la entidad que necesita asociar a la persona.
 
 El usuario asocia una persona a la entidad donde necesita.
 
-### Escenario principal (flujo básico) \- ACT\-PII\-001\-Gestor
+### Escenario principal (flujo básico) - ACT-PII-001-Gestor
 
 1. Se presenta la pantalla donde se pide asociar a la persona.
 2. El usuario pulsa el botón del formulario para la asociación.
-3. Busca la persona (IU\-GEN\-0060 \- Búsqueda de persona \- REQ\-INT\-0020\-SGP\-0020 \- Buscar persona en un listado de colectivos) y la selecciona.
+3. Busca la persona (IU-GEN-0060 - Búsqueda de persona - REQ-INT-0020-SGP-0020 - Buscar persona en un listado de colectivos) y la selecciona.
 4. Pulsa el botón de asociar.
 
 ### Extensiones (flujos alternativos)
@@ -49,33 +54,14 @@ N/A
 
 ### Acciones
 
-  
-
-
-  
-
-
-
-
-
-
-
+|  |  |
+| --- | --- |
+| ACT-PII-001-Gestor | PII-INVENCION-ASOCIARPERSONA |
 
 ### Casos de uso relacionados
 
-
-
-
-
-
+![](plugins/servlet/confluence/placeholder/unknown-macro)
 
 ### Interfaces relacionados
 
-
-
-
-
-
-
-
-
+![](plugins/servlet/confluence/placeholder/unknown-macro)

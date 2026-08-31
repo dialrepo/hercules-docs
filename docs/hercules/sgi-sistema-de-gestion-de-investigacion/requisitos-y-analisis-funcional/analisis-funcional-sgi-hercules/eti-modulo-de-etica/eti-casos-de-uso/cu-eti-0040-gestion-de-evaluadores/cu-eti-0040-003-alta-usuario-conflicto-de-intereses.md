@@ -1,6 +1,15 @@
-# Hércules : CU\-ETI\-0040\-003 \- Alta usuario conflicto de intereses
+# CU-ETI-0040-003 - Alta usuario conflicto de intereses
 
-
+|  |  |
+| --- | --- |
+| Cod. CU | ********CU-ETI-0040-003 - Alta usuario conflicto de intereses******** |
+| Ver. objetivo |  |
+| Ver. CU | 1.0.0 |
+| Estado | LIBERADO\_ |
+| Fec. Aprobación |  |
+| Épica, historia |  |
+| Actores | ACT-ETI-001-Gestor |
+| Frecuencia | Baja |
 
 ### Descripción
 
@@ -10,7 +19,7 @@ Se añade un nuevo usuario en el listado de conflictos de intereses
 
 #### Actor principal
 
-ACT\-ETI\-001\-Gestor
+ACT-ETI-001-Gestor
 
 ### Precondiciones
 
@@ -31,7 +40,3 @@ Se añade al listado de conflictos de intereses el nuevo usuario seleccionado
 3. Se presenta la pantalla de nuevo/modificar evaluador.
 4. El usuario va al al listado de usuarios con conflicto de intereses
 5. El usuario seleccionar un usuario y lo añade a la lista de conflicto de intereses
-
-
-
-

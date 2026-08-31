@@ -1,6 +1,13 @@
-# Hércules : SGI \- Vistas Timesheet
+# SGI - Vistas Timesheet
 
-
+* [TS\_PROYECTO\_JUSTIFICABLE](#SGIVistasTimesheet-TS_PROYECTO_JUSTIFICABLE)
+* [TS\_PROYECTO\_ENT\_FIN](#SGIVistasTimesheet-TS_PROYECTO_ENT_FIN)
+* [TS\_PROYECTO\_ENT\_CONV](#SGIVistasTimesheet-TS_PROYECTO_ENT_CONV)
+* [TS\_PROYECTO\_SGE](#SGIVistasTimesheet-TS_PROYECTO_SGE)
+* [TS\_PROYECTO\_EQUIPO](#SGIVistasTimesheet-TS_PROYECTO_EQUIPO)
+* [TS\_PROYECTO\_PAQUETE\_TRABAJO](#SGIVistasTimesheet-TS_PROYECTO_PAQUETE_TRABAJO)
+* [TS\_GRUPO\_JUSTIFICABLE](#SGIVistasTimesheet-TS_GRUPO_JUSTIFICABLE)
+* [TS\_GRUPO\_EQUIPO](#SGIVistasTimesheet-TS_GRUPO_EQUIPO)
 
 ## TS\_PROYECTO\_JUSTIFICABLE
 
@@ -8,34 +15,33 @@ Listado de proyectos del SGI que cumplen las siguientes condiciones:
 
 * activos: campo "activo" con valor "true"
 * estado que no sea BORRADOR: campo "estado actual" valor distinto a "BORRADOR"
-* fecha fin mayor al año 2013: si campo "fecha fin definitiva" distinto de null "fecha fin definitiva" \>\= "01/01/2013", sino "fecha fin" es null o "fecha fin" \>\= "01/01/2013"
+* fecha fin mayor al año 2013: si campo "fecha fin definitiva" distinto de null "fecha fin definitiva" >= "01/01/2013", sino "fecha fin" es null o "fecha fin" >= "01/01/2013"
 * con identificador SGE: existe registro en la tabla "Proyecto proyecto SGE"
 
-
-
-| **Campo** | **Tipo** | **Obligatorio** | **Campo del SGI** | **Tabla del SGI** | **Esquema del SGI** | **Comentario** |
+|  |  |  |  |  |  |  |
 | --- | --- | --- | --- | --- | --- | --- |
-| ID | NUMBER (38,0\) | SI | ID | PROYECTO | CSP\_SGI | Identificador único del proyecto. Clave primaria. |
-| CONVOCATORIA | VARCHAR(50\) | NO | CODIGO | CONVOCATORIA | CSP\_SGI | Campo "identificación" de la convocatoria asociada al proyecto en caso de tenerla. |
-| REFERENCIA | VARCHAR(50\) | NO | CODIGO\_EXTERNO | PROYECTO | CSP\_SGI | Campo "referencia en entidad convocante" del proyecto. |
-| TITULO | VARCHAR(250\) | SI | TITULO | PROYECTO | CSP\_SGI | Campo "título" del proyecto. |
-| ACRONIMO | VARCHAR2(50\) | NO | ACRONIMO | PROYECTO | CSP\_SGI | Campo "acrónimo" del proyecto. |
+| **Campo** | **Tipo** | **Obligatorio** | **Campo del SGI** | **Tabla del SGI** | **Esquema del SGI** | **Comentario** |
+| ID | NUMBER (38,0) | SI | ID | PROYECTO | CSP\_SGI | Identificador único del proyecto. Clave primaria. |
+| CONVOCATORIA | VARCHAR(50) | NO | CODIGO | CONVOCATORIA | CSP\_SGI | Campo "identificación" de la convocatoria asociada al proyecto en caso de tenerla. |
+| REFERENCIA | VARCHAR(50) | NO | CODIGO\_EXTERNO | PROYECTO | CSP\_SGI | Campo "referencia en entidad convocante" del proyecto. |
+| TITULO | VARCHAR(250) | SI | TITULO | PROYECTO | CSP\_SGI | Campo "título" del proyecto. |
+| ACRONIMO | VARCHAR2(50) | NO | ACRONIMO | PROYECTO | CSP\_SGI | Campo "acrónimo" del proyecto. |
 | FECHA\_INICIO | TIMESTAMP | SI | FECHA\_INICIO | PROYECTO | CSP\_SGI | Campo "fecha inicio" del proyecto. |
 | FECHA\_FIN | TIMESTAMP | SI | FECHA\_FIN O FECHA\_FIN\_DEFINITIVA | PROYECTO | CSP\_SGI | Si esta informada "fecha fin definitiva" se enviará "fecha fin definitiva", sino la "fecha de fin" del proyecto. |
-| ESTADO | VARCHAR2(50\) | SI | NOMBRE | ESTADO\_PROYECTO | CSP\_SGI | Estado actual del proyecto. Se sacará el campo "estado" de la tabla ESTADO\_PROYECTO del estado actual del proyecto.Posibles valores:* CONCEDIDO * RENUNCIADO * RESCINDIDO |
-| MODELO\_EJECUCION\_ID | NUMBER (38,0\) | SI | MODELO\_EJECUCION\_ID | PROYECTO | CSP\_SGI | Identificador único del modelo de ejecución asociado al proyecto. Los modelos de ejecución son configurables en el SGI. |
-| MODELO\_EJCUCION\_NOMBRE | VARCHAR2(50\) | SI | NOMBRE | MODELO\_EJECUCION | CSP\_SGI | Nombre del modelo de ejecución asociado al proyecto. |
-| TIPO\_FINALIDAD\_ID | NUMBER (38,0\) | NO | TIPO\_FINALIDAD\_ID | PROYECTO | CSP\_SGI | Identificador único del tipo de finalidad asociado al proyecto. Los tipos de finalidad son configurables en el SGI. |
-| TIPO\_FINALIDAD\_NOMBRE | VARCHAR2(100\) | NO | NOMBRE | TIPO\_FINALIDAD | CSP\_SGI | Nombre del tipo de finalidad asociado al proyecto. |
-| AMBITO\_ID | NUMBER (38,0\) | NO | TIPO\_AMBITO\_GEOGRAFICO\_ID | PROYECTO | CSP\_SGI | Identificador único del tipo de ámbito geográfico asociado al proyecto. Los tipos  de ámbitos geográficos son configurables en el SGI. |
-| AMBITO\_NOMBRE | VARCHAR2(50\) | NO | NOMBRE | TIPO\_AMBITO\_GEOGRAFICO | CSP\_SGI | Nombre del tipo de ámbito geográfico asociado al proyecto. |
-| FECHA\_CONCESION | TIMESTAMP | NO | FECHA\_ESTADO | ESTADO\_SOLICITUD | CSP\_SGI | Fecha en la que la solicitud pase a estado CONCEDIDA. En el SGI se considera estado CONCEDIDA (cuando sale el botón de "Crear proyecto" a partir de la Solicitud, en uno de los siguientes estados "Concedida provisional", "Concedida provisional alegada", "Concedida provisional no alegada" o "Concedida"En el caso de que el proyecto tenga relacionada una solicitud, se irá a la tabla del histórico de estados y se buscará la fecha de estado mas antigua de los estados: * CONCEDIDA * CONCEDIDA\_PROVISIONAL * CONCEDIDA\_PROVISIONAL\_ALEGADA * CONCEDIDA\_PROVISIONAL\_NO\_ALEGADA |
-| IMPORTE\_SOLICITADO | NUMBER (19,2\) | NO |  |  | CSP\_SGI | Si el campo "importe presupuesto" o "importe presupuesto costes indirectos" del proyecto están informados, será la suma de ellos, en caso de que no estén informados será la suma del campo "importe presupuesto" de todos los gastos del proyecto (tabla ANUALIDAD\_GASTO). |
-| IMPORTE\_CONCEDIDO | NUMBER (19,2\) | NO |  |  | CSP\_SGI | Si el campo "importe concedido" o "importe concedido costes indirectos" del proyecto están informados, será la suma de ellos, en caso de que no estén informados será la suma del campo "importe concedido" de todos los gastos del proyecto (tabla ANUALIDAD\_GASTO). |
-| COSTES\_INDIRECTOS | NUMBER (19,2\) | NO |  |  | CSP\_SGI | Si el campo "importe concedido" o "importe concedido costes indirectos" del proyecto están informados, será la suma de ellos, en caso de que no estén informados será la suma del campo "importe concedido" de todos los gastos del proyecto (tabla ANUALIDAD\_GASTO).Será el campo "importe concedido" esta informado, en caso contrario será la suma del campo "importe concedido" de todos los gastos del proyecto que se correspondan con conceptos de gastos configurados como costes indirectos (tabla ANUALIDAD\_GASTO del proyecto cuyos CONCEPTO\_GASTO tenga el flag de COSTES\_INDIRECTOS a true). |
-| OBSERVACIONES | VARCHAR2(2000\) | NO | OBSERVACIONES | PROYECTO | CSP\_SGI | Campo "observaciones" del proyecto. |
-| UNIDAD\_GESTION\_REF | VARCHAR2(50\) | SI | UNIDAD\_GESTION\_REF | PROYECTO | CSP\_SGI | Identificador único de la unidad de gestión asociada al proyecto. Las unidades de gestión son configurables en el SGI por implantación. |
-| UNIDAD\_GESTION\_NOMBRE | VARCHAR2(50\) | SI | NOMBRE | UNIDAD | USR\_SGI | Nombre de la unidad de gestión asociada al proyecto. |
+| ESTADO | VARCHAR2(50) | SI | NOMBRE | ESTADO\_PROYECTO | CSP\_SGI | Estado actual del proyecto. Se sacará el campo "estado" de la tabla ESTADO\_PROYECTO del estado actual del proyecto.  Posibles valores:   * CONCEDIDO * RENUNCIADO * RESCINDIDO |
+| MODELO\_EJECUCION\_ID | NUMBER (38,0) | SI | MODELO\_EJECUCION\_ID | PROYECTO | CSP\_SGI | Identificador único del modelo de ejecución asociado al proyecto. Los modelos de ejecución son configurables en el SGI. |
+| MODELO\_EJCUCION\_NOMBRE | VARCHAR2(50) | SI | NOMBRE | MODELO\_EJECUCION | CSP\_SGI | Nombre del modelo de ejecución asociado al proyecto. |
+| TIPO\_FINALIDAD\_ID | NUMBER (38,0) | NO | TIPO\_FINALIDAD\_ID | PROYECTO | CSP\_SGI | Identificador único del tipo de finalidad asociado al proyecto. Los tipos de finalidad son configurables en el SGI. |
+| TIPO\_FINALIDAD\_NOMBRE | VARCHAR2(100) | NO | NOMBRE | TIPO\_FINALIDAD | CSP\_SGI | Nombre del tipo de finalidad asociado al proyecto. |
+| AMBITO\_ID | NUMBER (38,0) | NO | TIPO\_AMBITO\_GEOGRAFICO\_ID | PROYECTO | CSP\_SGI | Identificador único del tipo de ámbito geográfico asociado al proyecto. Los tipos  de ámbitos geográficos son configurables en el SGI. |
+| AMBITO\_NOMBRE | VARCHAR2(50) | NO | NOMBRE | TIPO\_AMBITO\_GEOGRAFICO | CSP\_SGI | Nombre del tipo de ámbito geográfico asociado al proyecto. |
+| FECHA\_CONCESION | TIMESTAMP | NO | FECHA\_ESTADO | ESTADO\_SOLICITUD | CSP\_SGI | Fecha en la que la solicitud pase a estado CONCEDIDA. En el SGI se considera estado CONCEDIDA (cuando sale el botón de "Crear proyecto" a partir de la Solicitud, en uno de los siguientes estados "Concedida provisional", "Concedida provisional alegada", "Concedida provisional no alegada" o "Concedida"  En el caso de que el proyecto tenga relacionada una solicitud, se irá a la tabla del histórico de estados y se buscará la fecha de estado mas antigua de los estados:   * CONCEDIDA * CONCEDIDA\_PROVISIONAL * CONCEDIDA\_PROVISIONAL\_ALEGADA * CONCEDIDA\_PROVISIONAL\_NO\_ALEGADA |
+| IMPORTE\_SOLICITADO | NUMBER (19,2) | NO |  |  | CSP\_SGI | Si el campo "importe presupuesto" o "importe presupuesto costes indirectos" del proyecto están informados, será la suma de ellos, en caso de que no estén informados será la suma del campo "importe presupuesto" de todos los gastos del proyecto (tabla ANUALIDAD\_GASTO). |
+| IMPORTE\_CONCEDIDO | NUMBER (19,2) | NO |  |  | CSP\_SGI | Si el campo "importe concedido" o "importe concedido costes indirectos" del proyecto están informados, será la suma de ellos, en caso de que no estén informados será la suma del campo "importe concedido" de todos los gastos del proyecto (tabla ANUALIDAD\_GASTO). |
+| COSTES\_INDIRECTOS | NUMBER (19,2) | NO |  |  | CSP\_SGI | Si el campo "importe concedido" o "importe concedido costes indirectos" del proyecto están informados, será la suma de ellos, en caso de que no estén informados será la suma del campo "importe concedido" de todos los gastos del proyecto (tabla ANUALIDAD\_GASTO).  Será el campo "importe concedido" esta informado, en caso contrario será la suma del campo "importe concedido" de todos los gastos del proyecto que se correspondan con conceptos de gastos configurados como costes indirectos (tabla ANUALIDAD\_GASTO del proyecto cuyos CONCEPTO\_GASTO tenga el flag de COSTES\_INDIRECTOS a true). |
+| OBSERVACIONES | VARCHAR2(2000) | NO | OBSERVACIONES | PROYECTO | CSP\_SGI | Campo "observaciones" del proyecto. |
+| UNIDAD\_GESTION\_REF | VARCHAR2(50) | SI | UNIDAD\_GESTION\_REF | PROYECTO | CSP\_SGI | Identificador único de la unidad de gestión asociada al proyecto. Las unidades de gestión son configurables en el SGI por implantación. |
+| UNIDAD\_GESTION\_NOMBRE | VARCHAR2(50) | SI | NOMBRE | UNIDAD | USR\_SGI | Nombre de la unidad de gestión asociada al proyecto. |
 
 **TS\_PROYECTO\_JUSTIFICABLE**
 
@@ -65,16 +71,13 @@ OR (p.FECHA_FIN_DEFINITIVA IS NULL AND p.FECHA_FIN >= TO_DATE('01/01/2013','dd/m
 AND p.id IN (SELECT pps.PROYECTO_ID FROM CSP_SGI.PROYECTO_PROYECTO_SGE pps)
 ```
 
-  
-
-
 ## TS\_PROYECTO\_ENT\_FIN
 
 Listado de entidades financiadores de los proyectos del SGI que cumplen las siguientes condiciones:
 
 * activos: campo "activo" con valor "true"
 * estado que no sea BORRADOR: campo "estado actual" valor distinto a "BORRADOR"
-* fecha fin mayor al año 2013: si campo "fecha fin definitiva" distinto de null "fecha fin definitiva" \>\= "01/01/2013", sino "fecha fin" es null o "fecha fin" \>\= "01/01/2013"
+* fecha fin mayor al año 2013: si campo "fecha fin definitiva" distinto de null "fecha fin definitiva" >= "01/01/2013", sino "fecha fin" es null o "fecha fin" >= "01/01/2013"
 * con identificador SGE: existe registro en la tabla "Proyecto proyecto SGE"
 
 Por cada proyecto se mostrarán los siguientes campos de una entidad financiadora:
@@ -83,18 +86,17 @@ Por cada proyecto se mostrarán los siguientes campos de una entidad financiador
 * fuente de financiación
 * tipo de financiación
 
-
-
-| **Campo** | **Tipo** | **Obligatorio** | **Campo del SGI** | **Tabla del SGI** | **Esquema del SGI** | **Comentario** |
+|  |  |  |  |  |  |  |
 | --- | --- | --- | --- | --- | --- | --- |
-| ID | NUMBER (38,0\) | SI | ID | PROYECTO\_ENTIDAD\_FINANCIADORA | CSP\_SGI | Identificador único del registro. Clave primaria. |
-| PROYECTO\_ID | NUMBER (38,0\) | SI | PROYECTO\_ID | PROYECTO\_ENTIDAD\_FINANCIADORA | CSP\_SGI | Identificador del proyecto. |
-| ENTIDAD\_REF | VARCHAR2(50\) | SI | ENTIDAD\_REF | PROYECTO\_ENTIDAD\_FINANCIADORA | CSP\_SGI | Identificador de la entidad en el sistema de gestión de empresas de la Universidad. |
-| FUENTE\_FINANCIACION\_ID | NUMBER (38,0\) | NO | FUENTE\_FINANCIACION\_ID | PROYECTO\_ENTIDAD\_FINANCIADORA | CSP\_SGI | Identificador único de la fuente de financiación asociada a la entidad financiadora. Las fuentes de financiación son configurables en el SGI. |
-| FUENTE\_FINANCIACION\_NOMBRE | VARCHAR2(50\) | NO | NOMBRE | FUENTE\_FINANCIACION | CSP\_SGI | Nombre de la fuente de financiación asociada a la entidad financiadora. |
-| TIPO\_FINANCIACION\_ID | NUMBER (38,0\) | NO | TIPO\_FINANCIACION\_ID | PROYECTO\_ENTIDAD\_FINANCIADORA | CSP\_SGI | Identificador único del tipo de financiación asociada a la entidad financiadora. Los tipos de financiación son configurables en el SGI. |
-| TIPO\_FINANCIACION\_NOMBRE | VARCHAR2(50\) | NO | NOMBRE | TIPO\_FINANCIACION | CSP\_SGI | Nombre del tipo de financiación asociado a la entidad financiadora. |
-| AJENA | NUMBER (1,0\) | SI | AJENA | PROYECTO\_ENTIDAD\_FINANCIADORA | CSP\_SGI | Indica si la entidad financiadora es ajena o no a la convocatoria |
+| **Campo** | **Tipo** | **Obligatorio** | **Campo del SGI** | **Tabla del SGI** | **Esquema del SGI** | **Comentario** |
+| ID | NUMBER (38,0) | SI | ID | PROYECTO\_ENTIDAD\_FINANCIADORA | CSP\_SGI | Identificador único del registro. Clave primaria. |
+| PROYECTO\_ID | NUMBER (38,0) | SI | PROYECTO\_ID | PROYECTO\_ENTIDAD\_FINANCIADORA | CSP\_SGI | Identificador del proyecto. |
+| ENTIDAD\_REF | VARCHAR2(50) | SI | ENTIDAD\_REF | PROYECTO\_ENTIDAD\_FINANCIADORA | CSP\_SGI | Identificador de la entidad en el sistema de gestión de empresas de la Universidad. |
+| FUENTE\_FINANCIACION\_ID | NUMBER (38,0) | NO | FUENTE\_FINANCIACION\_ID | PROYECTO\_ENTIDAD\_FINANCIADORA | CSP\_SGI | Identificador único de la fuente de financiación asociada a la entidad financiadora. Las fuentes de financiación son configurables en el SGI. |
+| FUENTE\_FINANCIACION\_NOMBRE | VARCHAR2(50) | NO | NOMBRE | FUENTE\_FINANCIACION | CSP\_SGI | Nombre de la fuente de financiación asociada a la entidad financiadora. |
+| TIPO\_FINANCIACION\_ID | NUMBER (38,0) | NO | TIPO\_FINANCIACION\_ID | PROYECTO\_ENTIDAD\_FINANCIADORA | CSP\_SGI | Identificador único del tipo de financiación asociada a la entidad financiadora. Los tipos de financiación son configurables en el SGI. |
+| TIPO\_FINANCIACION\_NOMBRE | VARCHAR2(50) | NO | NOMBRE | TIPO\_FINANCIACION | CSP\_SGI | Nombre del tipo de financiación asociado a la entidad financiadora. |
+| AJENA | NUMBER (1,0) | SI | AJENA | PROYECTO\_ENTIDAD\_FINANCIADORA | CSP\_SGI | Indica si la entidad financiadora es ajena o no a la convocatoria |
 
 **TS\_PROYECTO\_ENT\_FIN**
 
@@ -127,17 +129,15 @@ Por cada proyecto se mostrarán los siguientes campos de una entidad convocante:
 * programa de la convocatoria: puede ser el plan de investigación o el programa o el subprograma de la convocatoria asociada al proyecto
 * programa del proyecto: puede ser plan de investigación o el programa o el subprograma o la modalidad seleccionada en el proyecto
 
-
-
 | Campo | **Tipo** | **Obligatorio** | **Campo del SGI** | **Tabla del SGI** | **Esquema del SGI** | Comentario |
 | --- | --- | --- | --- | --- | --- | --- |
-| ID | NUMBER (38,0\) | SI | ID | PROYECTO\_ENTIDAD\_CONVOCANTE | CSP\_SGI | Identificador único del registro. Clave primaria. |
-| PROYECTO\_ID | NUMBER (38,0\) | SI | PROYECTO\_ID | PROYECTO\_ENTIDAD\_CONVOCANTE | CSP\_SGI | Identificador del proyecto. |
-| ENTIDAD\_REF | VARCHAR2(50\) | SI | ENTIDAD\_REF | PROYECTO\_ENTIDAD\_CONVOCANTE | CSP\_SGI | Identificador de la entidad en el sistema de gestión de empresas de la Universidad. |
-| PROGRAMA\_CONVOCATORIA\_ID | NUMBER (38,0\) | NO | PROGRAMA\_CONVOCATORIA\_ID | PROYECTO\_ENTIDAD\_CONVOCANTE | CSP\_SGI | Identificador único del plan o del programa o del subprograma definido en la convocatoria asociada al proyecto. Los planes de investigación junto con sus programa, subprograma y modalidades son configurables en el SGI en una estructura de árbol. |
-| PROGRAMA\_CONVOCATORIA\_NOMBRE | VARCHAR2(50\) | NO | NOMBRE | PROGRAMA | CSP\_SGI | Nombre del plan o del programa o del subprograma definido en la convocatoria asociada al proyecto. |
-| PROGRAMA\_ID | NUMBER (38,0\) | NO | PROGRAMA\_ID | PROYECTO\_ENTIDAD\_CONVOCANTE | CSP\_SGI | Identificador único del plan o del programa o del subprograma o de la modalidad seleccionada en el proyecto. Los planes de investigación junto con sus programa, subprograma y modalidades son configurables en el SGI en una estructura de árbol. |
-| PROGRAMA\_NOMBRE | VARCHAR2(50\) | NO | NOMBRE | PROGRAMA | CSP\_SGI | Nombre del plan o del programa o del subprograma o de la modalidad seleccionada en el proyecto. |
+| ID | NUMBER (38,0) | SI | ID | PROYECTO\_ENTIDAD\_CONVOCANTE | CSP\_SGI | Identificador único del registro. Clave primaria. |
+| PROYECTO\_ID | NUMBER (38,0) | SI | PROYECTO\_ID | PROYECTO\_ENTIDAD\_CONVOCANTE | CSP\_SGI | Identificador del proyecto. |
+| ENTIDAD\_REF | VARCHAR2(50) | SI | ENTIDAD\_REF | PROYECTO\_ENTIDAD\_CONVOCANTE | CSP\_SGI | Identificador de la entidad en el sistema de gestión de empresas de la Universidad. |
+| PROGRAMA\_CONVOCATORIA\_ID | NUMBER (38,0) | NO | PROGRAMA\_CONVOCATORIA\_ID | PROYECTO\_ENTIDAD\_CONVOCANTE | CSP\_SGI | Identificador único del plan o del programa o del subprograma definido en la convocatoria asociada al proyecto. Los planes de investigación junto con sus programa, subprograma y modalidades son configurables en el SGI en una estructura de árbol. |
+| PROGRAMA\_CONVOCATORIA\_NOMBRE | VARCHAR2(50) | NO | NOMBRE | PROGRAMA | CSP\_SGI | Nombre del plan o del programa o del subprograma definido en la convocatoria asociada al proyecto. |
+| PROGRAMA\_ID | NUMBER (38,0) | NO | PROGRAMA\_ID | PROYECTO\_ENTIDAD\_CONVOCANTE | CSP\_SGI | Identificador único del plan o del programa o del subprograma o de la modalidad seleccionada en el proyecto. Los planes de investigación junto con sus programa, subprograma y modalidades son configurables en el SGI en una estructura de árbol. |
+| PROGRAMA\_NOMBRE | VARCHAR2(50) | NO | NOMBRE | PROGRAMA | CSP\_SGI | Nombre del plan o del programa o del subprograma o de la modalidad seleccionada en el proyecto. |
 
 **TS\_PROYECTO\_ENT\_CONV**
 
@@ -165,13 +165,11 @@ Listado de identificadores SGE (Sistema gestión económico) de los proyectos de
 
 Por cada proyecto se mostrará el identificador SGE (un proyecto SGI puede tener más de uno identificador SGE asociado, aunque la normal general es que sea único)
 
-
-
 | Campo | **Tipo** | **Obligatorio** | **Campo del SGI** | **Tabla del SGI** | **Esquema del SGI** | Comentario |
 | --- | --- | --- | --- | --- | --- | --- |
-| ID | NUMBER (38,0\) | SI | ID | PROYECTO\_PROYECTO\_SGE | CSP\_SGI | Identificador único del registro. Clave primaria. |
-| PROYECTO\_ID | NUMBER (38,0\) | SI | PROYECTO\_ID | PROYECTO\_PROYECTO\_SGE | CSP\_SGI | Identificador del proyecto. |
-| PROYECTO\_SGE\_REF | VARCHAR2(50\) | SI | PROYECTO\_SGE\_REF | PROYECTO\_PROYECTO\_SGE | CSP\_SGI | Identificador del proyecto económico en el sistema de gestión económico de la Universidad |
+| ID | NUMBER (38,0) | SI | ID | PROYECTO\_PROYECTO\_SGE | CSP\_SGI | Identificador único del registro. Clave primaria. |
+| PROYECTO\_ID | NUMBER (38,0) | SI | PROYECTO\_ID | PROYECTO\_PROYECTO\_SGE | CSP\_SGI | Identificador del proyecto. |
+| PROYECTO\_SGE\_REF | VARCHAR2(50) | SI | PROYECTO\_SGE\_REF | PROYECTO\_PROYECTO\_SGE | CSP\_SGI | Identificador del proyecto económico en el sistema de gestión económico de la Universidad |
 
 **TS\_PROYECTO\_SGE**
 
@@ -202,8 +200,6 @@ Por cada proyecto se mostrarán los siguientes campos de un miembro del equipo:
 * rol con el que participa en el equipo
 * si el rol tiene marcado el flag de principal o no
 * en caso de que el rol tenga marcado el flag principal se indica si el orden es PRIMARIO o SECUNDARIO
-
-
 
 | Campo | Comentario |
 | --- | --- |
@@ -249,8 +245,6 @@ Por cada proyecto se mostrarán los siguientes campos de un paquete de trabajo:
 * persona mes
 * descripción
 
-
-
 | Campo | Comentario |
 | --- | --- |
 | ID | Identificador único del registro. Clave primaria. |
@@ -282,24 +276,22 @@ Listado de grupos de investigación del SGI que cumplen las siguientes condicion
 * fecha fin no tiene o mayor al año 2013
 * con identificador SGE
 
-
-
 | Campo | **Tipo** | **Obligatorio** | **Campo del SGI** | **Tabla del SGI** | **Esquema del SGI** | Comentario |
 | --- | --- | --- | --- | --- | --- | --- |
-| ID | NUMBER (38,0\) | SI | ID | GRUPO | CSP\_SGI | Identificador único del grupo de investigación. Clave primaria. |
-| CONVOCATORIA | VARCHAR(50\) | NO | CODIGO | CONVOCATORIA | CSP\_SGI | Campo "identificación" de la convocatoria asociada a la solicitud de constitución del grupos en caso de que se creara a partir de una solicitud el grupo. |
-| REFERENCIA | VARCHAR(50\) | SI | CODIGO | GRUPO | CSP\_SGI | Campo "código" del grupo. |
-| TITULO | VARCHAR(250\) | SI | NOMBRE | GRUPO | CSP\_SGI | Campo "nombre" del grupo. |
-| ID\_GESTION\_ECONOMICA | VARCHAR(250\) | SI | PROYECTO\_SGE\_REF | GRUPO | CSP\_SGI | Identificación SGE (sistema de gestión económico) |
+| ID | NUMBER (38,0) | SI | ID | GRUPO | CSP\_SGI | Identificador único del grupo de investigación. Clave primaria. |
+| CONVOCATORIA | VARCHAR(50) | NO | CODIGO | CONVOCATORIA | CSP\_SGI | Campo "identificación" de la convocatoria asociada a la solicitud de constitución del grupos en caso de que se creara a partir de una solicitud el grupo. |
+| REFERENCIA | VARCHAR(50) | SI | CODIGO | GRUPO | CSP\_SGI | Campo "código" del grupo. |
+| TITULO | VARCHAR(250) | SI | NOMBRE | GRUPO | CSP\_SGI | Campo "nombre" del grupo. |
+| ID\_GESTION\_ECONOMICA | VARCHAR(250) | SI | PROYECTO\_SGE\_REF | GRUPO | CSP\_SGI | Identificación SGE (sistema de gestión económico) |
 | FECHA\_INICIO | TIMESTAMP | SI | FECHA\_INICIO | GRUPO | CSP\_SGI | Campo "fecha inicio" del grupo. |
 | FECHA\_FIN | TIMESTAMP | NO | FECHA\_FIN | GRUPO | CSP\_SGI | Campo "fecha fin" del grupo. |
-| MODELO\_EJECUCION\_ID | NUMBER (38,0\) | NO | MODELO\_EJECUCION\_ID | CONVOCATORIA | CSP\_SGI | Identificador único del modelo de ejecución asociado a la convocatoria de constitución del grupo. Los modelos de ejecución son configurables en el SGI. |
-| MODELO\_EJCUCION\_NOMBRE | VARCHAR2(50\) | NO | NOMBRE | MODELO\_EJCUCION | CSP\_SGI | Nombre del modelo de ejecución asociado a la solicitud de constitución del grupo. |
-| TIPO\_FINALIDAD\_ID | NUMBER (38,0\) | NO | TIPO\_FINALIDAD\_ID | CONVOCATORIA | CSP\_SGI | Identificador único del tipo de finalidad asociado a la convocatoria de constitución del grupo. Los tipos de finalidad son configurables en el SGI. |
-| TIPO\_FINALIDAD\_NOMBRE | VARCHAR2(50\) | NO | NOMBRE | TIPO\_FINALIDAD | CSP\_SGI | Nombre del tipo de finalidad asociado a la solicitud de constitución del grupo. |
-| FECHA\_CONCESION | TIMESTAMP | NO | FECHA\_ESTADO | ESTADO\_SOLICITUD | CSP\_SGI | Fecha en la que la solicitud pase a estado CONCEDIDA. En el SGI se considera estado CONCEDIDA (cuando sale el botón de "Crear grupo" a partir de la Solicitud, en uno de los siguientes estados "Concedida provisional", "Concedida provisional alegada", "Concedida provisional no alegada" o "Concedida"En el caso de que el grupo tenga relacionada una solicitud, se irá a la tabla del histórico de estados y se buscará la fecha de estado mas antigua de los estados: * CONCEDIDA * CONCEDIDA\_PROVISIONAL * CONCEDIDA\_PROVISIONAL\_ALEGADA * CONCEDIDA\_PROVISIONAL\_NO\_ALEGADA |
-| UNIDAD\_GESTION\_REF | VARCHAR2(50\) | NO | UNIDAD\_GESTION\_REF | CONVOCATORIA | CSP\_SGI | Identificador único de la unidad de gestión asociada a la convocatoria de constitución del grupo. Las unidades de gestión son configurables en el SGI por implantación. |
-| UNIDAD\_GESTION\_NOMBRE | VARCHAR2(50\) | NO | NOMBRE | UNIDAD | USR\_SGI | Nombre de la unidad de gestión asociada a la solicitud de constitución del grupo. |
+| MODELO\_EJECUCION\_ID | NUMBER (38,0) | NO | MODELO\_EJECUCION\_ID | CONVOCATORIA | CSP\_SGI | Identificador único del modelo de ejecución asociado a la convocatoria de constitución del grupo. Los modelos de ejecución son configurables en el SGI. |
+| MODELO\_EJCUCION\_NOMBRE | VARCHAR2(50) | NO | NOMBRE | MODELO\_EJCUCION | CSP\_SGI | Nombre del modelo de ejecución asociado a la solicitud de constitución del grupo. |
+| TIPO\_FINALIDAD\_ID | NUMBER (38,0) | NO | TIPO\_FINALIDAD\_ID | CONVOCATORIA | CSP\_SGI | Identificador único del tipo de finalidad asociado a la convocatoria de constitución del grupo. Los tipos de finalidad son configurables en el SGI. |
+| TIPO\_FINALIDAD\_NOMBRE | VARCHAR2(50) | NO | NOMBRE | TIPO\_FINALIDAD | CSP\_SGI | Nombre del tipo de finalidad asociado a la solicitud de constitución del grupo. |
+| FECHA\_CONCESION | TIMESTAMP | NO | FECHA\_ESTADO | ESTADO\_SOLICITUD | CSP\_SGI | Fecha en la que la solicitud pase a estado CONCEDIDA. En el SGI se considera estado CONCEDIDA (cuando sale el botón de "Crear grupo" a partir de la Solicitud, en uno de los siguientes estados "Concedida provisional", "Concedida provisional alegada", "Concedida provisional no alegada" o "Concedida"  En el caso de que el grupo tenga relacionada una solicitud, se irá a la tabla del histórico de estados y se buscará la fecha de estado mas antigua de los estados:   * CONCEDIDA * CONCEDIDA\_PROVISIONAL * CONCEDIDA\_PROVISIONAL\_ALEGADA * CONCEDIDA\_PROVISIONAL\_NO\_ALEGADA |
+| UNIDAD\_GESTION\_REF | VARCHAR2(50) | NO | UNIDAD\_GESTION\_REF | CONVOCATORIA | CSP\_SGI | Identificador único de la unidad de gestión asociada a la convocatoria de constitución del grupo. Las unidades de gestión son configurables en el SGI por implantación. |
+| UNIDAD\_GESTION\_NOMBRE | VARCHAR2(50) | NO | NOMBRE | UNIDAD | USR\_SGI | Nombre de la unidad de gestión asociada a la solicitud de constitución del grupo. |
 
 **TS\_GRUPO\_JUSTIFICABLE**
 
@@ -337,19 +329,17 @@ Por cada grupo se mostrarán los siguientes campos de un miembro del equipo:
 * si el rol tiene marcado el flag de principal o no
 * en caso de que el rol tenga marcado el flag principal se indica si el orden es PRIMARIO o SECUNDARIO
 
-
-
 | Campo | **Tipo** | **Obligatorio** | **Campo del SGI** | **Tabla del SGI** | **Esquema del SGI** | Comentario |
 | --- | --- | --- | --- | --- | --- | --- |
-| ID | NUMBER (38,0\) | SI | ID | GRUPO | CSP\_SGI | Identificador único del registro. Clave primaria. |
-| GRUPO\_ID | NUMBER (38,0\) | SI | GRUPO\_ID | GRUPO\_EQUIPO | CSP\_SGI | Identificador del grupo. |
-| PERSONA\_REF | VARCHAR2(50\) | SI | PERSONA\_REF | GRUPO\_EQUIPO | CSP\_SGI | Identificador de la persona en el sistema de personas de la Universidad |
+| ID | NUMBER (38,0) | SI | ID | GRUPO | CSP\_SGI | Identificador único del registro. Clave primaria. |
+| GRUPO\_ID | NUMBER (38,0) | SI | GRUPO\_ID | GRUPO\_EQUIPO | CSP\_SGI | Identificador del grupo. |
+| PERSONA\_REF | VARCHAR2(50) | SI | PERSONA\_REF | GRUPO\_EQUIPO | CSP\_SGI | Identificador de la persona en el sistema de personas de la Universidad |
 | FECHA\_INICIO | TIMESTAMP | SI | FECHA\_INICIO | GRUPO\_EQUIPO | CSP\_SGI | Fecha de inicio de la participación en el equipo. |
 | FECHA\_FIN | TIMESTAMP | NO | FECHA\_FIN | GRUPO\_EQUIPO | CSP\_SGI | Fecha de finalización de la participación en el equipo. |
-| ROL\_PROYECTO\_ID | NUMBER (38,0\) | SI | ROL\_PROYECTO\_ID | GRUPO\_EQUIPO | CSP\_SGI | Identificador del rol del miembro en el equipo. |
-| ROL\_PROYECTO\_ABREVIATURA | VARCHAR2(5\) | SI | ABREVIATURA | ROL\_PROYECTO | CSP\_SGI | Abreviatura o código identificativo del rol del miembro en el equipo. |
-| ROL\_PRINCIPAL | NUMBER (1,0\) | SI | ROL\_PRINCIPAL | ROL\_PROYECTO | CSP\_SGI | Si el rol es un rol principal o no. |
-| ROL\_ORDEN | VARCHAR2(255\) | NO | ORDEN | ROL\_PROYECTO | CSP\_SGI | En caso de que el rol tenga marcado el flag principal se indica si el orden es:* PRIMARIO * SECUNDARIO |
+| ROL\_PROYECTO\_ID | NUMBER (38,0) | SI | ROL\_PROYECTO\_ID | GRUPO\_EQUIPO | CSP\_SGI | Identificador del rol del miembro en el equipo. |
+| ROL\_PROYECTO\_ABREVIATURA | VARCHAR2(5) | SI | ABREVIATURA | ROL\_PROYECTO | CSP\_SGI | Abreviatura o código identificativo del rol del miembro en el equipo. |
+| ROL\_PRINCIPAL | NUMBER (1,0) | SI | ROL\_PRINCIPAL | ROL\_PROYECTO | CSP\_SGI | Si el rol es un rol principal o no. |
+| ROL\_ORDEN | VARCHAR2(255) | NO | ORDEN | ROL\_PROYECTO | CSP\_SGI | En caso de que el rol tenga marcado el flag principal se indica si el orden es:   * PRIMARIO * SECUNDARIO |
 
 **TS\_GRUPO\_EQUIPO**
 
@@ -362,10 +352,4 @@ INNER JOIN CSP_SGI.ROL_PROYECTO rp ON ge.ROL_PROYECTO_ID = rp.ID
 WHERE g.ACTIVO = 1 
 AND (g.FECHA_FIN >= TO_DATE('01/01/2013','dd/mm/yyyy') OR g.FECHA_FIN IS NULL)
 AND g.PROYECTO_SGE_REF IS NOT NULL
-
-
 ```
-
-
-
-

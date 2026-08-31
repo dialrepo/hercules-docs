@@ -1,7 +1,2 @@
-# Hércules : CU\-ETI\-0100 \- Memorias
-
-
-
-
-
+# CU-ETI-0100 - Memorias
 

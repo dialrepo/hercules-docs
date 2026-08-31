@@ -1,6 +1,4 @@
-# Hércules : Fuentes externas de información
-
-
+# Fuentes externas de información
 
 Para recuperar información de fuentes externas se usan estas dos opciones dentro del menú de ED:
 
@@ -31,19 +29,3 @@ Además aparecerán los distintos identificadores de fuentes externas, aunque es
 Activar el matching hará que las publicaciones de ámbito médico (Health Science) tengan etiquetas enriquecidas con las fuentes de MESH y SNOMED.
 
 ![](/attachments/598147375/598147946.png)
-
-  
-
-
-  
-
-
-  
-
-
-  
-
-
-
-
-

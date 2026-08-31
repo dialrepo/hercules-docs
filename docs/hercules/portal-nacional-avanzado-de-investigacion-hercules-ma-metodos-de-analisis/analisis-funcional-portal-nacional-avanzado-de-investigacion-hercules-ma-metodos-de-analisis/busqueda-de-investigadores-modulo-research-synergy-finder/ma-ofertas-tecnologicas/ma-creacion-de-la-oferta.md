@@ -1,14 +1,16 @@
-# Hércules : MA. Creación de la oferta
+# MA. Creación de la oferta
 
-
+* [Paso 1: Definición de la oferta](#MA.Creacióndelaoferta-Paso1:Definicióndelaoferta)
+* [Paso 2: Selección de investigadores](#MA.Creacióndelaoferta-Paso2:Seleccióndeinvestigadores)
+* [Paso 3: Datos generales](#MA.Creacióndelaoferta-Paso3:Datosgenerales)
+* [Paso 4: Datos descriptivos](#MA.Creacióndelaoferta-Paso4:Datosdescriptivos)
+* [Paso 5: Experiencia destacable](#MA.Creacióndelaoferta-Paso5:Experienciadestacable)
 
 Información de desarrollo
 
-[https://github.com/HerculesCRUE/HerculesMA/blob/main/Docs/funcionamiento\-ofertas\-tecnologicas.md](https://github.com/HerculesCRUE/HerculesMA/blob/main/Docs/funcionamiento-ofertas-tecnologicas.md "https://github.com/HerculesCRUE/HerculesMA/blob/main/Docs/funcionamiento-ofertas-tecnologicas.md")
+<https://github.com/HerculesCRUE/HerculesMA/blob/main/Docs/funcionamiento-ofertas-tecnologicas.md>
 
-
-
-
+---
 
 Una oferta tecnológica puede ser creada por parte de investigadores y gestores OTRI (usuarios de ED).
 
@@ -36,10 +38,10 @@ En este paso se procederá a añadir más campos relacionados con contenido rele
 
 * **Líneas de investigación:** Selección de las líneas de investigación obtenidas de los grupos de investigación de los investigadores disponibles en la oferta
 * **Estado de Madurez (TRL):** Listado con los siguientes elementos;
-	+ En investigación (TRL 1\-2\)
-	+ Tecnología validada en laboratorio (TRL 3\-5\)
-	+ Tecnología demostrada con prototipo funcional (TRL 6\-7\)
-	+ Sistema completo disponible para cliente\-mercado (TRL 8\-9\)
+  + En investigación (TRL 1-2)
+  + Tecnología validada en laboratorio (TRL 3-5)
+  + Tecnología demostrada con prototipo funcional (TRL 6-7)
+  + Sistema completo disponible para cliente-mercado (TRL 8-9)
 * **Áreas de procedencia:** Indican el área/s o disciplina/s académica/s de la que procede la oferta tecnológica.
 * **Áreas de procedencia:** Indican qué sector/es objetivo tendrá la oferta tecnológica.
 
@@ -66,31 +68,3 @@ Se dispondrá en este apartado de 3 buscadores (y sus correspondientes apartados
 * Propiedad intelectual industrial (PII)
 
 Una vez que se vayan seleccionando, aparecerán en sus correspondientes secciones de "seleccionados" para cada tipo de recurso.
-
-  
-
-
-  
-
-
-  
-
-
-  
-
-
-  
-
-
-  
-
-
-  
-
-
-  
-
-
-
-
-

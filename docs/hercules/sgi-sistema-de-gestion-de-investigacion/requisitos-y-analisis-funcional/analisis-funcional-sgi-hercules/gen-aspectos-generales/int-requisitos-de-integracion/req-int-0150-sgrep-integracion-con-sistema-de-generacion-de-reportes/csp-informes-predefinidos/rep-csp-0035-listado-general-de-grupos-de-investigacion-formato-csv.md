@@ -1,10 +1,14 @@
-# Hércules : REP\-CSP\-0035 \- Listado general de grupos de investigación \- Formato csv
+# REP-CSP-0035 - Listado general de grupos de investigación - Formato csv
 
-
-
-
-
-
+|  |  |
+| --- | --- |
+| Cod. REP | **REP-CSP-0035 - Listado general de grupos de investigación - Formato csv** |
+| Ver. Objetivo |  |
+| Ver. REP | 1.0.0 |
+| Estado | PENDIENTE |
+| Fec. Aprobación |  |
+| Épica, historia |  |
+| Frecuencia |  |
 
 ### Diseño Informe
 
@@ -12,17 +16,12 @@ Se debe de generar un informe en formato csv que reciba como parámetro de entra
 
 Los nombres de las columnas en el fichero csv que formen parte de un bloque que se repita, deberán llevar en su nombre un número cardinal representativo del número de repetición, de forma que se permita la distinción del título de la columna. En la siguiente tabla se identifican también los bloques de datos susceptibles de repetirse. El fichero resultante contendrá las columnas necesarias, sobre cada bloque de repetición, de acuerdo al grupo de investigación que más elementos contenga para ese bloque. Para los grupos de investigación que no contengan tantos elementos sobre cada bloque como marque el máximo, se mostrarán las columnas sin contenido.
 
-Ejemplo: [grupo\_with\_columns\_repeated.csv](/attachments/597852513/597858151.csv "attachments/597852513/597858151.csv")
-
-  
-
-
-
+Ejemplo: [grupo\_with\_columns\_repeated.csv](/attachments/597852513/597858151.csv)
 
 | Bloque de datos | Columna informe | Campo SGI | Repetición |
 | --- | --- | --- | --- |
 |  | Nombre | Campo "nombre" de la tabla "grupo" |  |
-|  | Investigador/a principal | Se recuperarán el Nombre y apellidos por medio de [REQ\-INT\-0020\-SGP\-0030 \- Consultar datos generales de persona](https://confluence.um.es/confluence/display/HERCULES/REQ-INT-0020-SGP-0030+-+Consultar+datos+generales+de+persona "https://confluence.um.es/confluence/display/HERCULES/REQ-INT-0020-SGP-0030+-+Consultar+datos+generales+de+persona") del investigador/a principal, es decir, de todos los miembros del grupo de investigación (tabla "grupo equipo") aquel que **actualmente** (a fecha actual) tiene el "rol" con el flag "principal" a true. En caso de existir mas de una persona, se mostrará el que tenga el mayor porcentaje de dedicación al grupo (campo "participación" de la tabla "grupo equipo"). Y en caso de coincidir se mostrarán separados por coma. |  |
+|  | Investigador/a principal | Se recuperarán el Nombre y apellidos por medio de [REQ-INT-0020-SGP-0030 - Consultar datos generales de persona](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0020-sgp-integracion-con-sistema-de-gestion-de-personas/req-int-0020-sgp-0030-consultar-datos-generales-de-persona) del investigador/a principal, es decir, de todos los miembros del grupo de investigación (tabla "grupo equipo") aquel que **actualmente** (a fecha actual) tiene el "rol" con el flag "principal" a true. En caso de existir mas de una persona, se mostrará el que tenga el mayor porcentaje de dedicación al grupo (campo "participación" de la tabla "grupo equipo"). Y en caso de coincidir se mostrarán separados por coma. |  |
 |  | Código | Campo "codigo" de la tabla "grupo" |  |
 |  | Código de identificación SGE | Campo "proyecto SGE ref" de la tabla "grupo". |  |
 |  | Fecha inicio | Campo "fecha inicio" de la tabla "grupo" |  |
@@ -30,17 +29,17 @@ Ejemplo: [grupo\_with\_columns\_repeated.csv](/attachments/597852513/597858151.c
 |  | Tipo grupo | Valor del enumerado "tipo grupo" para el registro de la tabla "grupo tipo" referenciado desde el campo "tipo" de la tabla "grupo" |  |
 |  | Grupo especial de investigación | Campo "especial investigación" de la tabla "grupo especial investigación" referenciado desde el campo "especial investigación" de la tabla "grupo". Si es "true" se mostrará "Sí" y si es "false" se mostrará "No" |  |
 | Equipo investigación |  | Se mostrarán todos los miembros del equipo de investigación del grupo, tabla "grupo equipo" | Sí |
-|  | Equipo \- MiembroX: Nombre | Campo "nombre" recuperado a través de [REQ\-INT\-0020\-SGP\-0030 \- Consultar datos generales de persona](https://confluence.um.es/confluence/display/HERCULES/REQ-INT-0020-SGP-0030+-+Consultar+datos+generales+de+persona "https://confluence.um.es/confluence/display/HERCULES/REQ-INT-0020-SGP-0030+-+Consultar+datos+generales+de+persona") para la referenciada indicada en el campo "persona ref" de la tabla "grupo equipo". |  |
-|  | Equipo \- MiembroX: Apellidos | Campo "apellidos" recuperado a través de [REQ\-INT\-0020\-SGP\-0030 \- Consultar datos generales de persona](https://confluence.um.es/confluence/display/HERCULES/REQ-INT-0020-SGP-0030+-+Consultar+datos+generales+de+persona "https://confluence.um.es/confluence/display/HERCULES/REQ-INT-0020-SGP-0030+-+Consultar+datos+generales+de+persona") para la referenciada indicada en el campo "persona ref" de la tabla "grupo equipo". |  |
-|  | Equipo \- MiembroX: E\-mail | Campo "email" con el indicador "principal" a "true" recuperado a través de [REQ\-INT\-0020\-SGP\-0030 \- Consultar datos generales de persona](https://confluence.um.es/confluence/display/HERCULES/REQ-INT-0020-SGP-0030+-+Consultar+datos+generales+de+persona "https://confluence.um.es/confluence/display/HERCULES/REQ-INT-0020-SGP-0030+-+Consultar+datos+generales+de+persona") para la referenciada indicada en el campo "persona ref" de la tabla "grupo equipo". |  |
-|  | Equipo \- MiembroX: Rol | Campo "nombre" de la tabla "rol proyecto" para la referencia establecida por el campo "rol proyecto" de la tabla "grupo equipo". |  |
-|  | Equipo \- MiembroX: Fecha inicio | Campo "fecha inicio" de la tabla "grupo equipo". |  |
-|  | Equipo \- MiembroX: Fecha fin | Campo "fecha fin" de la tabla "grupo equipo". |  |
-|  | Equipo \- MiembroX: Participación | Campo "participación" de la tabla "grupo equipo". |  |
+|  | Equipo - MiembroX: Nombre | Campo "nombre" recuperado a través de [REQ-INT-0020-SGP-0030 - Consultar datos generales de persona](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0020-sgp-integracion-con-sistema-de-gestion-de-personas/req-int-0020-sgp-0030-consultar-datos-generales-de-persona) para la referenciada indicada en el campo "persona ref" de la tabla "grupo equipo". |  |
+|  | Equipo - MiembroX: Apellidos | Campo "apellidos" recuperado a través de [REQ-INT-0020-SGP-0030 - Consultar datos generales de persona](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0020-sgp-integracion-con-sistema-de-gestion-de-personas/req-int-0020-sgp-0030-consultar-datos-generales-de-persona) para la referenciada indicada en el campo "persona ref" de la tabla "grupo equipo". |  |
+|  | Equipo - MiembroX: E-mail | Campo "email" con el indicador "principal" a "true" recuperado a través de [REQ-INT-0020-SGP-0030 - Consultar datos generales de persona](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0020-sgp-integracion-con-sistema-de-gestion-de-personas/req-int-0020-sgp-0030-consultar-datos-generales-de-persona) para la referenciada indicada en el campo "persona ref" de la tabla "grupo equipo". |  |
+|  | Equipo - MiembroX: Rol | Campo "nombre" de la tabla "rol proyecto" para la referencia establecida por el campo "rol proyecto" de la tabla "grupo equipo". |  |
+|  | Equipo - MiembroX: Fecha inicio | Campo "fecha inicio" de la tabla "grupo equipo". |  |
+|  | Equipo - MiembroX: Fecha fin | Campo "fecha fin" de la tabla "grupo equipo". |  |
+|  | Equipo - MiembroX: Participación | Campo "participación" de la tabla "grupo equipo". |  |
 | Responsable económico |  | Se mostrarán todos los responsables económicos (histórico) del grupo, tabla "grupo responsable económico" | Sí |
-|  | Responsable económicoX: Nombre | Campo "nombre" recuperado a través de [REQ\-INT\-0020\-SGP\-0030 \- Consultar datos generales de persona](https://confluence.um.es/confluence/display/HERCULES/REQ-INT-0020-SGP-0030+-+Consultar+datos+generales+de+persona "https://confluence.um.es/confluence/display/HERCULES/REQ-INT-0020-SGP-0030+-+Consultar+datos+generales+de+persona") para la referenciada indicada en el campo "persona ref" de la tabla "grupo responsable económico". |  |
-|  | Responsable económicoX: Apellidos | Campo "apellidos" recuperado a través de [REQ\-INT\-0020\-SGP\-0030 \- Consultar datos generales de persona](https://confluence.um.es/confluence/display/HERCULES/REQ-INT-0020-SGP-0030+-+Consultar+datos+generales+de+persona "https://confluence.um.es/confluence/display/HERCULES/REQ-INT-0020-SGP-0030+-+Consultar+datos+generales+de+persona") para la referenciada indicada en el campo "persona ref" de la tabla "grupo responsable económico". |  |
-|  | Responsable económicoX: E\-mail | Campo "email" con el indicador "principal" a "true" recuperado a través de [REQ\-INT\-0020\-SGP\-0030 \- Consultar datos generales de persona](https://confluence.um.es/confluence/display/HERCULES/REQ-INT-0020-SGP-0030+-+Consultar+datos+generales+de+persona "https://confluence.um.es/confluence/display/HERCULES/REQ-INT-0020-SGP-0030+-+Consultar+datos+generales+de+persona") para la referenciada indicada en el campo "persona ref" de la tabla "grupo responsable económico". |  |
+|  | Responsable económicoX: Nombre | Campo "nombre" recuperado a través de [REQ-INT-0020-SGP-0030 - Consultar datos generales de persona](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0020-sgp-integracion-con-sistema-de-gestion-de-personas/req-int-0020-sgp-0030-consultar-datos-generales-de-persona) para la referenciada indicada en el campo "persona ref" de la tabla "grupo responsable económico". |  |
+|  | Responsable económicoX: Apellidos | Campo "apellidos" recuperado a través de [REQ-INT-0020-SGP-0030 - Consultar datos generales de persona](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0020-sgp-integracion-con-sistema-de-gestion-de-personas/req-int-0020-sgp-0030-consultar-datos-generales-de-persona) para la referenciada indicada en el campo "persona ref" de la tabla "grupo responsable económico". |  |
+|  | Responsable económicoX: E-mail | Campo "email" con el indicador "principal" a "true" recuperado a través de [REQ-INT-0020-SGP-0030 - Consultar datos generales de persona](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0020-sgp-integracion-con-sistema-de-gestion-de-personas/req-int-0020-sgp-0030-consultar-datos-generales-de-persona) para la referenciada indicada en el campo "persona ref" de la tabla "grupo responsable económico". |  |
 |  | Responsable económicoX Fecha inicio | Campo "fecha inicio" de la tabla "grupo responsable económico". |  |
 |  | Responsable económicoX Fecha fin | Campo "fecha fin" de la tabla "grupo responsable económico". |  |
 | Líneas de investigación |  | Se mostrarán todos las líneas de investigación del grupo, tabla "grupo línea investigación". Por cada línea de investigación se tendrá que mostrar la información de sus miembros adscritos (tabla "grupo línea investigador"), sus clasificaciones (tabla "grupo línea clasificación) y sus equipos instrumentales (tabla "grupo línea equipo instrumental" | Sí |
@@ -48,14 +47,14 @@ Ejemplo: [grupo\_with\_columns\_repeated.csv](/attachments/597852513/597858151.c
 |  | LíneaX: Fecha inicio | Campo "fecha inicio" de la tabla "grupo línea investigación". |  |
 |  | LíneaX: Fecha fin | Campo "fecha fin" de la tabla "grupo línea investigación". |  |
 | Miembros adscritos a la línea de investigación |  | Por cada línea de investigación (X) se mostrarán sus miembros adscritos (tabla "grupo línea investigador") | Sí |
-|  | LíneaX: MiembroY: Nombre | Campo "nombre" recuperado a través de [REQ\-INT\-0020\-SGP\-0030 \- Consultar datos generales de persona](https://confluence.um.es/confluence/display/HERCULES/REQ-INT-0020-SGP-0030+-+Consultar+datos+generales+de+persona "https://confluence.um.es/confluence/display/HERCULES/REQ-INT-0020-SGP-0030+-+Consultar+datos+generales+de+persona") para la referenciada indicada en el campo "persona ref" de la tabla "grupo línea investigador". |  |
-|  | LíneaX: MiembroY: Apellidos | Campo "apellidos" recuperado a través de [REQ\-INT\-0020\-SGP\-0030 \- Consultar datos generales de persona](https://confluence.um.es/confluence/display/HERCULES/REQ-INT-0020-SGP-0030+-+Consultar+datos+generales+de+persona "https://confluence.um.es/confluence/display/HERCULES/REQ-INT-0020-SGP-0030+-+Consultar+datos+generales+de+persona") para la referenciada indicada en el campo "persona ref" de la tabla "grupo línea investigador". |  |
-|  | LíneaX: MiembroY: E\-mail | Campo "email" con el indicador "principal" a "true" recuperado a través de [REQ\-INT\-0020\-SGP\-0030 \- Consultar datos generales de persona](https://confluence.um.es/confluence/display/HERCULES/REQ-INT-0020-SGP-0030+-+Consultar+datos+generales+de+persona "https://confluence.um.es/confluence/display/HERCULES/REQ-INT-0020-SGP-0030+-+Consultar+datos+generales+de+persona") para la referenciada indicada en el campo "persona ref" de la tabla "grupo línea investigador". |  |
+|  | LíneaX: MiembroY: Nombre | Campo "nombre" recuperado a través de [REQ-INT-0020-SGP-0030 - Consultar datos generales de persona](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0020-sgp-integracion-con-sistema-de-gestion-de-personas/req-int-0020-sgp-0030-consultar-datos-generales-de-persona) para la referenciada indicada en el campo "persona ref" de la tabla "grupo línea investigador". |  |
+|  | LíneaX: MiembroY: Apellidos | Campo "apellidos" recuperado a través de [REQ-INT-0020-SGP-0030 - Consultar datos generales de persona](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0020-sgp-integracion-con-sistema-de-gestion-de-personas/req-int-0020-sgp-0030-consultar-datos-generales-de-persona) para la referenciada indicada en el campo "persona ref" de la tabla "grupo línea investigador". |  |
+|  | LíneaX: MiembroY: E-mail | Campo "email" con el indicador "principal" a "true" recuperado a través de [REQ-INT-0020-SGP-0030 - Consultar datos generales de persona](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0020-sgp-integracion-con-sistema-de-gestion-de-personas/req-int-0020-sgp-0030-consultar-datos-generales-de-persona) para la referenciada indicada en el campo "persona ref" de la tabla "grupo línea investigador". |  |
 |  | LíneaX: MiembroY: Fecha inicio | Campo "fecha inicio" de la tabla "grupo línea investigador" |  |
 |  | LíneaX: MiembroY: Fecha fin | Campo "fecha fin" de la tabla "grupo línea investigador" |  |
 | Clasificaciones de la línea de investigación |  | Por cada línea de investigación (X) se mostrarán sus clasificaciones (tabla "grupo línea clasificación") | Sí |
-|  | LíneaX: ClasificaciónY | Se deberán recuperar todas las clasificaciones con las que esté relacionada la línea de investigación (tabla "grupo línea clasificación"). Se mostrará en una primera columna el nombre de la clasificación y a continuación tantas columnas como códigos dentro de esta clasificación con los que esté relacionada la líneaEl nombre de la clasificación se obtendrá como sigue. Se corresponde con el campo "nombre" recuperado a través de [REQ\-INT\-0030\-SGO\-0031 \- Consultar clasificación](https://confluence.um.es/confluence/pages/viewpage.action?pageId=103904541 "https://confluence.um.es/confluence/pages/viewpage.action?pageId=103904541") para el nodo raíz del árbol de clasificación al que pertenece el  "código clasificación ref" referenciado en la tabla "grupo línea clasificación". El nodo raíz se obtendrá ascendiendo a través del campo "padre" obtenido con [REQ\-INT\-0030\-SGO\-0031 \- Consultar clasificación](https://confluence.um.es/confluence/pages/viewpage.action?pageId=103904541 "https://confluence.um.es/confluence/pages/viewpage.action?pageId=103904541") hasta llegar al elemento para el que el campo "padre" toma el valor "null" (se dispone de [REQ\-INT\-0030\-SGO\-0030 \- Listar clasificaciones](https://confluence.um.es/confluence/display/HERCULES/REQ-INT-0030-SGO-0030+-+Listar+clasificaciones "https://confluence.um.es/confluence/display/HERCULES/REQ-INT-0030-SGO-0030+-+Listar+clasificaciones") para obtener el listado completo de una clasificación) |  |
-|  | LíneaX: ClasificaciónY: Código Z | Campo "nombre" recuperado a través de [REQ\-INT\-0030\-SGO\-0031 \- Consultar clasificación](https://confluence.um.es/confluence/pages/viewpage.action?pageId=103904541 "https://confluence.um.es/confluence/pages/viewpage.action?pageId=103904541") para el  "código clasificación ref" de la tabla "grupo línea clasificación". | Sí. Repetición dentro de clasificación |
+|  | LíneaX: ClasificaciónY | Se deberán recuperar todas las clasificaciones con las que esté relacionada la línea de investigación (tabla "grupo línea clasificación"). Se mostrará en una primera columna el nombre de la clasificación y a continuación tantas columnas como códigos dentro de esta clasificación con los que esté relacionada la línea  El nombre de la clasificación se obtendrá como sigue. Se corresponde con el campo "nombre" recuperado a través de [REQ-INT-0030-SGO-0031 - Consultar clasificación](https://confluence.um.es/confluence/pages/viewpage.action?pageId=103904541) para el nodo raíz del árbol de clasificación al que pertenece el  "código clasificación ref" referenciado en la tabla "grupo línea clasificación". El nodo raíz se obtendrá ascendiendo a través del campo "padre" obtenido con [REQ-INT-0030-SGO-0031 - Consultar clasificación](https://confluence.um.es/confluence/pages/viewpage.action?pageId=103904541) hasta llegar al elemento para el que el campo "padre" toma el valor "null" (se dispone de [REQ-INT-0030-SGO-0030 - Listar clasificaciones](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0030-sgo-integracion-con-sistema-de-gestion-de-la-estructura-organica/req-int-0030-sgo-0030-listar-clasificaciones) para obtener el listado completo de una clasificación) |  |
+|  | LíneaX: ClasificaciónY: Código Z | Campo "nombre" recuperado a través de [REQ-INT-0030-SGO-0031 - Consultar clasificación](https://confluence.um.es/confluence/pages/viewpage.action?pageId=103904541) para el  "código clasificación ref" de la tabla "grupo línea clasificación". | Sí. Repetición dentro de clasificación |
 | Equipos instrumentales de la línea |  | Por cada línea de investigación (X) se mostrarán sus equipos instrumentales (tabla "grupo línea equipo instrumental") | Sí |
 |  | LíneaX: Equipo instrumental Y: Nombre | Campo "nombre" de la tabla "grupo línea equipo instrumental" |  |
 | Equipos instrumentales |  | Se mostrarán los equipos instrumentales del grupo de investigación (tabla "grupo equipo instrumental") | Sí |
@@ -64,49 +63,22 @@ Ejemplo: [grupo\_with\_columns\_repeated.csv](/attachments/597852513/597858151.c
 | Enlaces |  | Se mostrarán los enlaces del grupo de investigación (tabla "grupo enlace") | Sí |
 |  | EnlaceX: Enlace | Campo "enlace" de la tabla "grupo enlace" |  |
 | Persona autorizada |  | Se mostrarán todas las personas autorizadas (histórico) del grupo, tabla "grupo persona autorizada" | Sí |
-|  | Persona autorizadaX: Nombre | Campo "nombre" recuperado a través de [REQ\-INT\-0020\-SGP\-0030 \- Consultar datos generales de persona](https://confluence.um.es/confluence/display/HERCULES/REQ-INT-0020-SGP-0030+-+Consultar+datos+generales+de+persona "https://confluence.um.es/confluence/display/HERCULES/REQ-INT-0020-SGP-0030+-+Consultar+datos+generales+de+persona") para la referenciada indicada en el campo "persona ref" de la tabla "grupo persona autorizada". |  |
-|  | Persona autorizadaX: Apellidos | Campo "apellidos" recuperado a través de [REQ\-INT\-0020\-SGP\-0030 \- Consultar datos generales de persona](https://confluence.um.es/confluence/display/HERCULES/REQ-INT-0020-SGP-0030+-+Consultar+datos+generales+de+persona "https://confluence.um.es/confluence/display/HERCULES/REQ-INT-0020-SGP-0030+-+Consultar+datos+generales+de+persona") para la referenciada indicada en el campo "persona ref" de la tabla "grupo persona autorizada". |  |
-|  | Persona autorizadaX: E\-mail | Campo "email" con el indicador "principal" a "true" recuperado a través de [REQ\-INT\-0020\-SGP\-0030 \- Consultar datos generales de persona](https://confluence.um.es/confluence/display/HERCULES/REQ-INT-0020-SGP-0030+-+Consultar+datos+generales+de+persona "https://confluence.um.es/confluence/display/HERCULES/REQ-INT-0020-SGP-0030+-+Consultar+datos+generales+de+persona") para la referenciada indicada en el campo "persona ref" de la tabla "grupo persona autorizada". |  |
+|  | Persona autorizadaX: Nombre | Campo "nombre" recuperado a través de [REQ-INT-0020-SGP-0030 - Consultar datos generales de persona](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0020-sgp-integracion-con-sistema-de-gestion-de-personas/req-int-0020-sgp-0030-consultar-datos-generales-de-persona) para la referenciada indicada en el campo "persona ref" de la tabla "grupo persona autorizada". |  |
+|  | Persona autorizadaX: Apellidos | Campo "apellidos" recuperado a través de [REQ-INT-0020-SGP-0030 - Consultar datos generales de persona](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0020-sgp-integracion-con-sistema-de-gestion-de-personas/req-int-0020-sgp-0030-consultar-datos-generales-de-persona) para la referenciada indicada en el campo "persona ref" de la tabla "grupo persona autorizada". |  |
+|  | Persona autorizadaX: E-mail | Campo "email" con el indicador "principal" a "true" recuperado a través de [REQ-INT-0020-SGP-0030 - Consultar datos generales de persona](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0020-sgp-integracion-con-sistema-de-gestion-de-personas/req-int-0020-sgp-0030-consultar-datos-generales-de-persona) para la referenciada indicada en el campo "persona ref" de la tabla "grupo persona autorizada". |  |
 |  | Persona autorizadaX: Fecha inicio | Campo "fecha inicio" de la tabla "grupo persona autorizada". |  |
 |  | Persona autorizadaX: Fecha fin | Campo "fecha fin" de la tabla "grupo persona autorizada". |  |
 
-  
-  
-
-
-  
-
-
-
-
-
-
-
-
 ### Interfaces de usuario relacionados
 
-
-
-
-
-
+![](plugins/servlet/confluence/placeholder/unknown-macro)
 
 ### Casos de uso relacionados
 
+![](plugins/servlet/confluence/placeholder/unknown-macro)
 
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+|  |  |
+| --- | --- |
+| ACT-CPS-003-Gestor | CSP-GIN-E |
+| ACT-CSP-004-Administrador | CSP-GIN-E |
+| ACT-CSP-005-Visor | CSP-GIN-V |

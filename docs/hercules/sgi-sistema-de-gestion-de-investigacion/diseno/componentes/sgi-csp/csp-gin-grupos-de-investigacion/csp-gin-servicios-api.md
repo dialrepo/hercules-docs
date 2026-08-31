@@ -1,16 +1,23 @@
-# Hércules : CSP\-GIN \- Servicios API
+# CSP-GIN - Servicios API
 
-
+* [Definición de los objetos](#CSPGINServiciosAPI-Definicióndelosobjetos)
+  + [Grupo](#CSPGINServiciosAPI-Grupo)
+  + [GrupoEquipo](#CSPGINServiciosAPI-GrupoEquipo)
+  + [GrupoLineaClasificacion](#CSPGINServiciosAPI-GrupoLineaClasificacion)
+  + [GrupoPalabraClave](#CSPGINServiciosAPI-GrupoPalabraClave)
+  + [LineaInvestigacion](#CSPGINServiciosAPI-LineaInvestigacion)
+* [Servicios](#CSPGINServiciosAPI-Servicios)
+  + [Grupo](#CSPGINServiciosAPI-Grupo.1)
+  + [GrupoEquipo](#CSPGINServiciosAPI-GrupoEquipo.1)
+  + [GrupoLineaInvestigacion](#CSPGINServiciosAPI-GrupoLineaInvestigacion)
+  + [GrupoLineaClasificacion](#CSPGINServiciosAPI-GrupoLineaClasificacion.1)
+  + [LineaInvestigacion](#CSPGINServiciosAPI-LineaInvestigacion.1)
 
 #### Definición de los objetos
 
 ##### Grupo
 
-
-
 **GrupoInput** Ampliar origen
-
-
 
 ```
 {
@@ -26,12 +33,7 @@
  }
 ```
 
-
-
-
 **GrupoOutput** Ampliar origen
-
-
 
 ```
 {
@@ -48,12 +50,7 @@
 }
 ```
 
-
-
-
 **GrupoDto** Ampliar origen
-
-
 
 ```
 {
@@ -64,14 +61,9 @@
 }
 ```
 
-
 ##### GrupoEquipo
 
-
-
 **GrupoEquipoInput** Ampliar origen
-
-
 
 ```
 {
@@ -84,12 +76,7 @@
 }
 ```
 
-
-
-
 **GrupoEquipoOutput** Ampliar origen
-
-
 
 ```
 {
@@ -111,12 +98,7 @@
 }
 ```
 
-
-
-
 **GrupoEquipoDto** Ampliar origen
-
-
 
 ```
 {
@@ -128,14 +110,9 @@
 }
 ```
 
-
 ##### GrupoLineaClasificacion
 
-
-
 **GrupoLineaClasificacionInput** Ampliar origen
-
-
 
 ```
 {
@@ -144,12 +121,7 @@
 }
 ```
 
-
-
-
 **GrupoLineaClasificacionOutput** Ampliar origen
-
-
 
 ```
 {
@@ -158,14 +130,9 @@
 }
 ```
 
-
 ##### GrupoPalabraClave
 
-
-
 **GrupoPalabraClaveInput** Ampliar origen
-
-
 
 ```
 {
@@ -173,12 +140,7 @@
 }
 ```
 
-
-
-
 **GrupoPalabraClaveOutput** Ampliar origen
-
-
 
 ```
 {
@@ -187,14 +149,9 @@
 }
 ```
 
-
 ##### LineaInvestigacion
 
-
-
 **LineaInvestigacionInput** Ampliar origen
-
-
 
 ```
 {
@@ -202,12 +159,7 @@
 }
 ```
 
-
-
-
 **LineaInvestigacionOutput** Ampliar origen
-
-
 
 ```
 {
@@ -217,90 +169,65 @@
 }
 ```
 
-
 #### Servicios
 
 ##### Grupo
 
-
-
 | Método | URL | Parámetros | Respuesta | Permisos | Descripción |
 | --- | --- | --- | --- | --- | --- |
-| GET | /grupos/modificados\-ids | q\+sLa query estará formada por:* fechaModificacion | Lista\[Long] | CSP\-GIN\-E, CSP\-GIN\-V | Listado de Identificadores de Grupo que han sido modificados en los datos generales (tabla Grupo), en el equipo (tabla GrupoEquipo) o en las palabras claves (tabla GrupoPalabraClave)Se utilizarán los siguiente parámetros en la llamada al servicio* fechaModificacion: se le pasará la fecha a partir de la cual se quieren ver los cambios  Ejemplo:* fechaModificacion\=ge\="2021\-08\-18T22:00:00Z" |
-| GET | /grupos | q \+ s | Lista\[GrupoOutput] | CSP\-GIN\-PRC\-V, CSP\-SOL\-C, CSP\-SOL\-E, CSP\-SOL\-V, CSP\-SOL\-INV\-C, CSP\-SOL\-INV\-ER | Listado de grupos (sólo devuelve los activos) |
-| POST | /grupos | GrupoInput |  | CSP\-GIN\-C | Crea un grupo |
-| GET | /grupos/todos | q \+ s | Lista\[GrupoOutput] | CSP\-GIN\-B, CSP\-GIN\-E, CSP\-GIN\-R, CSP\-GIN\-V | Listado de grupos (devuelve todos) |
-| GET | /grupos/{id} |  | GrupoOutput | CSP\-GIN\-E, CSP\-GIN\-V, CSP\-SOL\-C, CSP\-SOL\-E, CSP\-SOL\-INV\-C | Detalle del grupo |
-| HEAD | /grupos/{id} |  | HTTP 200 / HTTP 204 | CSP\-GIN\-E, CSP\-GIN\-V | Comprueba si existe el grupo |
-| PUT | /grupos/{id} | GrupoInput | GrupoOutput | CSP\-GIN\-E | Modifica el grupo (datos generales) |
-| PATCH | /grupos/{id}/activar |  | GrupoOutput | CSP\-GIN\-R | Activa el grupo |
-| HEAD | /grupos/{id}/codigoduplicado | grupoId (opcional)codigo | HTTP 200 / HTTP 204 | CSP\-GIN\-C, CSP\-GIN\-E, CSP\-SOL\-E | Comprueba si ya existe un grupo (u otro grupo si se indica un grupoId) con el código indicado |
-| PATCH | /grupos/{id}/desactivar |  | GrupoOutput | CSP\-GIN\-B | Desactiva el grupo |
-| GET | /grupos/{id}/nextcodigo | departamentoRef | String | CSP\-GIN\-C, CSP\-GIN\-E, CSP\-SOL\-E | Siguiente código de grupo disponible para el departamento |
+| GET | /grupos/modificados-ids | q+s  La query estará formada por:   * fechaModificacion | Lista[Long] | CSP-GIN-E, CSP-GIN-V | Listado de Identificadores de Grupo que han sido modificados en los datos generales (tabla Grupo), en el equipo (tabla GrupoEquipo) o en las palabras claves (tabla GrupoPalabraClave)  Se utilizarán los siguiente parámetros en la llamada al servicio   * fechaModificacion: se le pasará la fecha a partir de la cual se quieren ver los cambios   Ejemplo:   * fechaModificacion=ge="2021-08-18T22:00:00Z" |
+| GET | /grupos | q + s | Lista[GrupoOutput] | CSP-GIN-PRC-V, CSP-SOL-C, CSP-SOL-E, CSP-SOL-V, CSP-SOL-INV-C, CSP-SOL-INV-ER | Listado de grupos (sólo devuelve los activos) |
+| POST | /grupos | GrupoInput |  | CSP-GIN-C | Crea un grupo |
+| GET | /grupos/todos | q + s | Lista[GrupoOutput] | CSP-GIN-B, CSP-GIN-E, CSP-GIN-R, CSP-GIN-V | Listado de grupos (devuelve todos) |
+| GET | /grupos/{id} |  | GrupoOutput | CSP-GIN-E, CSP-GIN-V, CSP-SOL-C, CSP-SOL-E, CSP-SOL-INV-C | Detalle del grupo |
+| HEAD | /grupos/{id} |  | HTTP 200 / HTTP 204 | CSP-GIN-E, CSP-GIN-V | Comprueba si existe el grupo |
+| PUT | /grupos/{id} | GrupoInput | GrupoOutput | CSP-GIN-E | Modifica el grupo (datos generales) |
+| PATCH | /grupos/{id}/activar |  | GrupoOutput | CSP-GIN-R | Activa el grupo |
+| HEAD | /grupos/{id}/codigoduplicado | grupoId (opcional)  codigo | HTTP 200 / HTTP 204 | CSP-GIN-C, CSP-GIN-E, CSP-SOL-E | Comprueba si ya existe un grupo (u otro grupo si se indica un grupoId) con el código indicado |
+| PATCH | /grupos/{id}/desactivar |  | GrupoOutput | CSP-GIN-B | Desactiva el grupo |
+| GET | /grupos/{id}/nextcodigo | departamentoRef | String | CSP-GIN-C, CSP-GIN-E, CSP-SOL-E | Siguiente código de grupo disponible para el departamento |
 |  |  |  |  |  |  |
-| GET | /grupos/{id}/investigadoresprincipales |  | Lista\[String] | CSP\-EJEC\-V, CSP\-EJEC\-E, CSP\-EJEC\-INV\-VR | Lista de investigadores principales del grupo en el momento actual. |
-| GET | /grupos/{id}/investigadoresprincipalesmaxparticipacion |  | Lista\[String] | CSP\-GIN\-V, CSP\-GIN\-E, CSP\-GIN\-PRC\-V | Lista de investigadores principales con mayor participación del grupo en el momento actual. |
-| GET | /grupos/{id}/miembrosequipo | q \+ s | Lista\[GrupoEquipoOutput] | CSP\-GIN\-V, CSP\-GIN\-E | Listado de miembros del grupo |
-| GET | /grupos/{id}/palabrasclave | q \+ s | Lista\[GrupoPalabraClaveOutput] | CSP\-GIN\-E, CSP\-GIN\-V, CSP\-GIN\-C | Listado de palabras clave del grupo |
-| PATCH | /grupos/{id}/palabrasclave | Lista\[GrupoPalabraClaveInput] | Lista\[GrupoPalabraClaveOutput] | CSP\-GIN\-E, CSP\-GIN\-V, CSP\-GIN\-C | Actualiza la lista de palabras clave del grupo con la lista enviada |
-| HEAD | /grupos/grupo\-baremable/{grupoId}/{anio} |  | HTTP 200 / HTTP 204 | CSP\-PRO\-PRC\-V, SCOPE\_sgi\-csp | Comprueba si el grupo es baremable en el año indicado |
-| GET | /grupos/baremables/{anio} |  | Lista\[GrupoDto] | CSP\-PRO\-PRC\-V, SCOPE\_sgi\-csp | Lista de grupos que son baremables en el año indicado |
-
-  
-
+| GET | /grupos/{id}/investigadoresprincipales |  | Lista[String] | CSP-EJEC-V, CSP-EJEC-E, CSP-EJEC-INV-VR | Lista de investigadores principales del grupo en el momento actual. |
+| GET | /grupos/{id}/investigadoresprincipalesmaxparticipacion |  | Lista[String] | CSP-GIN-V, CSP-GIN-E, CSP-GIN-PRC-V | Lista de investigadores principales con mayor participación del grupo en el momento actual. |
+| GET | /grupos/{id}/miembrosequipo | q + s | Lista[GrupoEquipoOutput] | CSP-GIN-V, CSP-GIN-E | Listado de miembros del grupo |
+| GET | /grupos/{id}/palabrasclave | q + s | Lista[GrupoPalabraClaveOutput] | CSP-GIN-E, CSP-GIN-V, CSP-GIN-C | Listado de palabras clave del grupo |
+| PATCH | /grupos/{id}/palabrasclave | Lista[GrupoPalabraClaveInput] | Lista[GrupoPalabraClaveOutput] | CSP-GIN-E, CSP-GIN-V, CSP-GIN-C | Actualiza la lista de palabras clave del grupo con la lista enviada |
+| HEAD | /grupos/grupo-baremable/{grupoId}/{anio} |  | HTTP 200 / HTTP 204 | CSP-PRO-PRC-V, SCOPE\_sgi-csp | Comprueba si el grupo es baremable en el año indicado |
+| GET | /grupos/baremables/{anio} |  | Lista[GrupoDto] | CSP-PRO-PRC-V, SCOPE\_sgi-csp | Lista de grupos que son baremables en el año indicado |
 
 ##### GrupoEquipo
 
-
-
 | Método | URL | Parámetros | Respuesta | Permisos | Descripción |
 | --- | --- | --- | --- | --- | --- |
-| POST | /gruposequipos | GrupoInput |  | CSP\-GIN\-C, CSP\-GIN\-E | Crea un miembro del equipo del grupo |
-| GET | /gruposequipos/{id} |  | GrupoEquipoOutput | CSP\-GIN\-E, CSP\-GIN\-V | Recupera un miembro del equipo del grupo |
-| PUT | /gruposequipos/{id} | GrupoInput | GrupoEquipoOutput | CSP\-GIN\-E | Actualiza un miembro del equipo del grupo |
-| HEAD | /gruposequipos/baremables/{grupoId}/{anio} |  | Lista\[GrupoEquipoOutput] | CSP\-PRO\-PRC\-V, SCOPE\_sgi\-csp | Listado de miembros del equipo del grupo baramables en el año indicado |
-| GET | /gruposequipos/persona\-baremable/{personaRef}/{anio} |  | HTTP 200 / HTTP 204 | CSP\-PRO\-PRC\-V, SCOPE\_sgi\-csp | Comprueba si la persona es baremable en el año indicado |
+| POST | /gruposequipos | GrupoInput |  | CSP-GIN-C, CSP-GIN-E | Crea un miembro del equipo del grupo |
+| GET | /gruposequipos/{id} |  | GrupoEquipoOutput | CSP-GIN-E, CSP-GIN-V | Recupera un miembro del equipo del grupo |
+| PUT | /gruposequipos/{id} | GrupoInput | GrupoEquipoOutput | CSP-GIN-E | Actualiza un miembro del equipo del grupo |
+| HEAD | /gruposequipos/baremables/{grupoId}/{anio} |  | Lista[GrupoEquipoOutput] | CSP-PRO-PRC-V, SCOPE\_sgi-csp | Listado de miembros del equipo del grupo baramables en el año indicado |
+| GET | /gruposequipos/persona-baremable/{personaRef}/{anio} |  | HTTP 200 / HTTP 204 | CSP-PRO-PRC-V, SCOPE\_sgi-csp | Comprueba si la persona es baremable en el año indicado |
 
 ##### GrupoLineaInvestigacion
 
-
-
 | Método | URL | Parámetros | Respuesta | Permisos | Descripción |
 | --- | --- | --- | --- | --- | --- |
 |  |  |  |  |  |  |
 |  |  |  |  |  |  |
-| GET | /gruposlineasinvestigacion/{id}/clasificaciones | q \+ s | Lista\[GrupoLineaClasificacionOutput] | CSP\-GIN\-E, CSP\-GIN\-V | Listado de clasificaciones de una linea investigación de un grupo |
+| GET | /gruposlineasinvestigacion/{id}/clasificaciones | q + s | Lista[GrupoLineaClasificacionOutput] | CSP-GIN-E, CSP-GIN-V | Listado de clasificaciones de una linea investigación de un grupo |
 
 ##### GrupoLineaClasificacion
 
-
-
 | Método | URL | Parámetros | Respuesta | Permisos | Descripción |
 | --- | --- | --- | --- | --- | --- |
-| POST | /gruposlineasclasificaciones | GrupoLineaClasificacionInput | GrupoLineaClasificacionOutput | CSP\-GIN\-E | Añade una clasificación a la linea investigación de un grupo |
-| DELETE | /gruposlineasclasificaciones/{id} |  |  | CSP\-GIN\-E | Elimina una clasificación de una linea investigación de un grupo |
+| POST | /gruposlineasclasificaciones | GrupoLineaClasificacionInput | GrupoLineaClasificacionOutput | CSP-GIN-E | Añade una clasificación a la linea investigación de un grupo |
+| DELETE | /gruposlineasclasificaciones/{id} |  |  | CSP-GIN-E | Elimina una clasificación de una linea investigación de un grupo |
 
 ##### LineaInvestigacion
 
-
-
 | Método | URL | Parámetros | Respuesta | Permisos | Descripción |
 | --- | --- | --- | --- | --- | --- |
-| POST | /lineasinvestigacion | LineaInvestigacionInput |  | CSP\-LIN\-C | Crea una linea de investigación |
-| GET | /lineasinvestigacion | q \+ s | Lista\[LineaInvestigacionOutput] | CSP\-LIN\-C, CSP\-LIN\-E, CSP\-LIN\-B | Listado de lineas de investigación (sólo devuelve los activos) |
-| GET | /lineasinvestigacion/todos | q \+ s | Lista\[LineaInvestigacionOutput] | CSP\-LIN\-C, CSP\-LIN\-E, CSP\-LIN\-B, CSP\-LIN\-R | Listado de lineas de investigación (devuelve todos) |
+| POST | /lineasinvestigacion | LineaInvestigacionInput |  | CSP-LIN-C | Crea una linea de investigación |
+| GET | /lineasinvestigacion | q + s | Lista[LineaInvestigacionOutput] | CSP-LIN-C, CSP-LIN-E, CSP-LIN-B | Listado de lineas de investigación (sólo devuelve los activos) |
+| GET | /lineasinvestigacion/todos | q + s | Lista[LineaInvestigacionOutput] | CSP-LIN-C, CSP-LIN-E, CSP-LIN-B, CSP-LIN-R | Listado de lineas de investigación (devuelve todos) |
 | GET | /lineasinvestigacion/{id} |  | LineaInvestigacionOutput |  | Recupera una linea de investigación |
-| PUT | /lineasinvestigacion/{id} | LineaInvestigacionInput | LineaInvestigacionOutput | CSP\-LIN\-E | Actualiza una linea de investigación |
-| PATCH | /lineasinvestigacion/{id}/desactivar |  | LineaInvestigacionOutput | CSP\-LIN\-B | Desactiva la linea de investigación |
-| PATCH | /lineasinvestigacion/{id}/reactivar |  | LineaInvestigacionOutput | CSP\-LIN\-R | Activa la linea de investigación |
-
-  
-
-
-  
-  
-
-
-
-
-
+| PUT | /lineasinvestigacion/{id} | LineaInvestigacionInput | LineaInvestigacionOutput | CSP-LIN-E | Actualiza una linea de investigación |
+| PATCH | /lineasinvestigacion/{id}/desactivar |  | LineaInvestigacionOutput | CSP-LIN-B | Desactiva la linea de investigación |
+| PATCH | /lineasinvestigacion/{id}/reactivar |  | LineaInvestigacionOutput | CSP-LIN-R | Activa la linea de investigación |

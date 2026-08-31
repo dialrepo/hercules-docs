@@ -1,8 +1,58 @@
-# Hércules : CSP \- GIN \- Navegación
+# CSP - GIN - Navegación
 
+* [Perfil Investigador](#CSPGINNavegación-PerfilInvestigador)
+  + [Solicitud de constitución de grupo](#CSPGINNavegación-Solicituddeconstitucióndegrupo)
+  + [Solicitud de modificación de grupo](#CSPGINNavegación-Solicituddemodificacióndegrupo)
+  + [Consulta datos grupo](#CSPGINNavegación-Consultadatosgrupo)
+    - [Consulta Grupo - Datos generales](#CSPGINNavegación-ConsultaGrupo-Datosgenerales)
+    - [Consulta Grupo - Equipo investigación](#CSPGINNavegación-ConsultaGrupo-Equipoinvestigación)
+    - [Consulta Grupo - Responsable económico](#CSPGINNavegación-ConsultaGrupo-Responsableeconómico)
+    - [Consulta Grupo - Líneas investigación](#CSPGINNavegación-ConsultaGrupo-Líneasinvestigación)
+      * [Consulta Línea investigación - Datos generales](#CSPGINNavegación-ConsultaLíneainvestigación-Datosgenerales)
+      * [Consulta Línea investigación - Investigadores](#CSPGINNavegación-ConsultaLíneainvestigación-Investigadores)
+      * [Consulta Línea investigación - Clasificaciones](#CSPGINNavegación-ConsultaLíneainvestigación-Clasificaciones)
+      * [Consulta Línea investigación - Equipos Instrumentales](#CSPGINNavegación-ConsultaLíneainvestigación-EquiposInstrumentales)
+    - [Consulta Grupo - Equipos instrumentales](#CSPGINNavegación-ConsultaGrupo-Equiposinstrumentales)
+    - [Consulta Grupo - Enlaces](#CSPGINNavegación-ConsultaGrupo-Enlaces)
+    - [Consulta Grupo - Personas autorizadas](#CSPGINNavegación-ConsultaGrupo-Personasautorizadas)
+* [Perfil Gestor](#CSPGINNavegación-PerfilGestor)
+  + [Grupos Investigación](#CSPGINNavegación-GruposInvestigación)
+    - [Búsqueda simple](#CSPGINNavegación-Búsquedasimple)
+    - [Búsqueda ampliada](#CSPGINNavegación-Búsquedaampliada)
+    - [Añadir Nuevo grupo investigación](#CSPGINNavegación-AñadirNuevogrupoinvestigación)
+    - [Edición grupo investigación](#CSPGINNavegación-Edicióngrupoinvestigación)
+      * [Datos Generales](#CSPGINNavegación-DatosGenerales)
+      * [Equipo Investigación](#CSPGINNavegación-EquipoInvestigación)
+        + [Añadir miembro al equipo](#CSPGINNavegación-Añadirmiembroalequipo)
+      * [Responsable económico](#CSPGINNavegación-Responsableeconómico)
+        + [Añadir Responsable económico](#CSPGINNavegación-AñadirResponsableeconómico)
+      * [Líneas Investigación](#CSPGINNavegación-LíneasInvestigación)
+        + [Añadir línea investigación al grupo](#CSPGINNavegación-Añadirlíneainvestigaciónalgrupo)
+          - [Datos generales](#CSPGINNavegación-Datosgenerales)
+          - [Miembros adscritos](#CSPGINNavegación-Miembrosadscritos)
+          - [Añadir miembro adscrito a la línea de investigación](#CSPGINNavegación-Añadirmiembroadscritoalalíneadeinvestigación)
+          - [Clasificaciones](#CSPGINNavegación-Clasificaciones)
+          - [Equipos Instrumentales](#CSPGINNavegación-EquiposInstrumentales)
+          - [Añadir equipo instrumental a la línea de investigación](#CSPGINNavegación-Añadirequipoinstrumentalalalíneadeinvestigación)
+      * [Equipos Instrumentales](#CSPGINNavegación-EquiposInstrumentales.1)
+        + [Añadir equipo instrumental al Grupo](#CSPGINNavegación-AñadirequipoinstrumentalalGrupo)
+      * [Enlaces](#CSPGINNavegación-Enlaces)
+        + [Añadir enlace](#CSPGINNavegación-Añadirenlace)
+      * [Personas autorizadas](#CSPGINNavegación-Personasautorizadas)
+        + [Añadir persona autorizada](#CSPGINNavegación-Añadirpersonaautorizada)
+  + [Ejecución Económica](#CSPGINNavegación-EjecuciónEconómica)
+    - [Ejecución presupuestaria – Estado actual](#CSPGINNavegación-Ejecuciónpresupuestaria–Estadoactual)
+    - [Ejecución presupuestaria – Gastos](#CSPGINNavegación-Ejecuciónpresupuestaria–Gastos)
+    - [Ejecución presupuestaria – Ingresos](#CSPGINNavegación-Ejecuciónpresupuestaria–Ingresos)
+    - [Detalle operaciones – Gastos](#CSPGINNavegación-Detalleoperaciones–Gastos)
+    - [Detalle operaciones – Ingresos](#CSPGINNavegación-Detalleoperaciones–Ingresos)
+    - [Detalle operaciones – Modificaciones](#CSPGINNavegación-Detalleoperaciones–Modificaciones)
+    - [Facturas y justificantes – Facturas y gastos](#CSPGINNavegación-Facturasyjustificantes–Facturasygastos)
+    - [Facturas y justificantes – Viajes y dietas](#CSPGINNavegación-Facturasyjustificantes–Viajesydietas)
+    - [Facturas y justificantes – Personal contratado](#CSPGINNavegación-Facturasyjustificantes–Personalcontratado)
+  + [Líneas investigación](#CSPGINNavegación-Líneasinvestigación)
 
-
-
+![](plugins/servlet/confluence/placeholder/unknown-macro)
 
 ## Perfil Investigador
 
@@ -28,9 +78,6 @@ El único dato obligatorio es el "Título", donde se tendrá que introducir el n
 
 ![](/attachments/597852272/597868357.png)
 
-  
-
-
 Una vez introducido el "Título" se pulsa el botón de "GUARDAR SOLICITUD" que crea la solicitud en estado "Borrador" en el SGI. Una vez creada la solicitud te redirige a la edición de la solicitud.
 
 ![](/attachments/597852272/597868358.png)
@@ -52,15 +99,9 @@ Los datos para dar de alta un nuevo documento son:
 
 Una vez introducidos los campos se pulsará el botón "Aceptar" para que el documento se introduzca en el árbol de documentos de la izquierda.
 
-  
-
-
 ![](/attachments/597852272/597868353.png)
 
 Para almacenar el documento se deberá pulsar el botón "GUARDAR SOLICITUD"
-
-  
-
 
 ![](/attachments/597852272/597868354.png)
 
@@ -119,17 +160,11 @@ Para almacenar el documento se deberá pulsar el botón "GUARDAR SOLICITUD"
 
 ![](/attachments/597852272/597868343.png)
 
-  
-
-
 Una vez guardado el documento, y si no hay cambios pendientes de guardar, se habilitará el botón de "CAMBIAR ESTADO". A través de este botón se podrán realizar el cambio de estado de "Borrador" a "Solicitada". Con esto la solicitud será visible para la unidad de gestión.
 
 Al pulsar el botón de "CAMBIAR ESTADO" se le muestra una pantalla emergente para seleccionar el estado al que se quiere pasar la solicitud y un campo comentarios.
 
 ### 
-
-  
-
 
 Se debe de seleccionar el estado "Solicitada" y pulsar el botón "Aceptar". En ese momento se cierra la ventana emergente y se muestra la pantalla de búsqueda de solicitudes del usuario mostrando un mensaje informativo. En el buscador de solicitudes se puede ver que la solicitud ya tiene el estado "Solicitada". En este instante la unidad de gestión recibe un comunicado para indicarle que se ha enviado un nueva solicitud de constitución de grupo. A partir de este instante la solicitud se comportará como cualquier otra solicitud de convocatorias.
 
@@ -155,25 +190,25 @@ Al consultar un grupo de investigación (icono del ojo) se abre la pantalla de "
 * Enlaces
 * Personas autorizadas
 
-#### Consulta Grupo \- Datos generales
+#### Consulta Grupo - Datos generales
 
 Contiene la información general del grupo de investigación.
 
 ![](/attachments/597852272/597884715.png)
 
-#### Consulta Grupo \- Equipo investigación
+#### Consulta Grupo - Equipo investigación
 
 Contiene a los miembros del grupo de investigación junto con su participación en el grupo.
 
 ![](/attachments/597852272/597884711.png)
 
-#### Consulta Grupo \- Responsable económico
+#### Consulta Grupo - Responsable económico
 
 Contiene la persona con el rol de responsable económico del grupo. Sólo puede existir un único responsable económico en el mismo instante. Se mostrará siempre todo el histórico de responsables económicos del grupo.
 
 ![](/attachments/597852272/597873949.png)
 
-#### Consulta Grupo \- Líneas investigación
+#### Consulta Grupo - Líneas investigación
 
 Contiene las líneas definidas para el grupo de investigación.
 
@@ -187,43 +222,43 @@ Para ver el detalle de la información de cada línea se puede pulsar la acción
 
 ![](/attachments/597852272/597884710.png)
 
-##### Consulta Línea investigación \- Datos generales
+##### Consulta Línea investigación - Datos generales
 
 Información general de la línea de investigación
 
 ![](/attachments/597852272/597884707.png)
 
-##### Consulta Línea investigación \- Investigadores
+##### Consulta Línea investigación - Investigadores
 
 Miembros del grupos que están adscritos a la línea
 
 ![](/attachments/597852272/597884706.png)
 
-##### Consulta Línea investigación \- Clasificaciones
+##### Consulta Línea investigación - Clasificaciones
 
 Clasificaciones de códigos UNESCO, códigos CNAE que definen la línea.
 
 ![](/attachments/597852272/597884714.png)
 
-##### Consulta Línea investigación \- Equipos Instrumentales
+##### Consulta Línea investigación - Equipos Instrumentales
 
 Equipos instrumentales del grupos que estarán reservados para la línea.
 
 ![](/attachments/597852272/597884713.png)
 
-#### Consulta Grupo \- Equipos instrumentales
+#### Consulta Grupo - Equipos instrumentales
 
 Contiene los equipos instrumentales que va a utilizar el grupo de investigación.
 
 ![](/attachments/597852272/597884709.png)
 
-#### Consulta Grupo \- Enlaces
+#### Consulta Grupo - Enlaces
 
 Contiene enlaces a páginas web de interés para el grupo de investigación.
 
 ![](/attachments/597852272/597884708.png)
 
-#### Consulta Grupo \- Personas autorizadas
+#### Consulta Grupo - Personas autorizadas
 
 Contiene la persona autorizada a validar o rechazar items de producción científica y la persona autorizada a realizar la solicitud de modificación de grupo. Sólo puede existir una única persona autorizada en el mismo instante. Se mostrará siempre todo el histórico de personas autorizadas del grupo.
 
@@ -235,7 +270,7 @@ Contiene la persona autorizada a validar o rechazar items de producción cientí
 
 #### Búsqueda simple
 
-Pulsar la Opción de menú "Grupos Investigación" en el módulo de CSP \- Da acceso a la pantalla de gestión de "Grupos Investigación".
+Pulsar la Opción de menú "Grupos Investigación" en el módulo de CSP - Da acceso a la pantalla de gestión de "Grupos Investigación".
 
 Desde donde se puede:
 
@@ -253,7 +288,7 @@ Desde donde se puede:
 
 #### Añadir Nuevo grupo investigación
 
-Pulsar la Opción de "Añadir Grupos Investigación" \- Da acceso a la pantalla de "Nuevo Grupo Investigación"
+Pulsar la Opción de "Añadir Grupos Investigación" - Da acceso a la pantalla de "Nuevo Grupo Investigación"
 
 ![](/attachments/597852272/597877040.png)
 
@@ -303,30 +338,27 @@ Al editar un grupo de investigación se abre la pantalla de "Datos Generales" de
 
 Una línea de investigación esta formada por las pantallas de: Datos Generales, Investigadores, Clasificaciones, Área Conocimiento y Equipos Instrumentales
 
-####### Datos generales
+###### Datos generales
 
 ![](/attachments/597852272/597876922.png)
 
-####### Miembros adscritos
+###### Miembros adscritos
 
 ![](/attachments/597852272/597876928.png)
 
-  
-
-
-####### Añadir miembro adscrito a la línea de investigación
+###### Añadir miembro adscrito a la línea de investigación
 
 ![](/attachments/597852272/597880496.png)
 
-####### Clasificaciones
+###### Clasificaciones
 
 ![](/attachments/597852272/597876926.png)
 
-####### Equipos Instrumentales
+###### Equipos Instrumentales
 
 ![](/attachments/597852272/597876915.png)
 
-####### Añadir equipo instrumental a la línea de investigación
+###### Añadir equipo instrumental a la línea de investigación
 
 ![](/attachments/597852272/597876919.png)
 
@@ -337,9 +369,6 @@ Una línea de investigación esta formada por las pantallas de: Datos Generales,
 ###### Añadir equipo instrumental al Grupo
 
 ![](/attachments/597852272/597876908.png)
-
-  
-
 
 ##### Enlaces
 
@@ -371,9 +400,6 @@ Se abre la pantalla del buscador de los proyectos económicos asociados a grupos
 
 ![](/attachments/597852272/597876827.png)
 
-  
-
-
 #### Ejecución presupuestaria – Gastos
 
 ![](/attachments/597852272/597876826.png)
@@ -386,22 +412,13 @@ Se abre la pantalla del buscador de los proyectos económicos asociados a grupos
 
 ![](/attachments/597852272/597876824.png)
 
-  
-
-
 #### Detalle operaciones – Ingresos
 
 ![](/attachments/597852272/597876823.png)
 
-  
-
-
 #### Detalle operaciones – Modificaciones
 
 ![](/attachments/597852272/597876822.png)
-
-  
-
 
 #### Facturas y justificantes – Facturas y gastos
 
@@ -411,15 +428,9 @@ Se abre la pantalla del buscador de los proyectos económicos asociados a grupos
 
 ![](/attachments/597852272/597876820.png)
 
-  
-
-
 #### Facturas y justificantes – Personal contratado
 
 ![](/attachments/597852272/597876819.png)
-
-  
-
 
 ### Líneas investigación
 
@@ -430,14 +441,4 @@ Se abre la pantalla de la gestión de líneas de investigación (comunes a todos
 * Eliminar línea de investigación
 * Reactivar línea de investigación
 
-  
-
-
 ![](/attachments/597852272/597876890.png)
-
-  
-
-
-
-
-

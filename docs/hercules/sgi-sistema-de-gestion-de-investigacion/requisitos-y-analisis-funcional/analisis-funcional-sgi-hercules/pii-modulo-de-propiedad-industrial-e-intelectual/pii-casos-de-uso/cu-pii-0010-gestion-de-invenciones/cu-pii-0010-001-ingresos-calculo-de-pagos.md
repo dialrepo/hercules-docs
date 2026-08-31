@@ -1,6 +1,15 @@
-# Hércules : CU\-PII\-0010\-001\- Ingresos \- Cálculo de pagos
+# CU-PII-0010-001- Ingresos - Cálculo de pagos
 
-
+|  |  |
+| --- | --- |
+| Cod. CU | ********CU-PII-0010-001-Ingresos-Cálculo de pagos******** |
+| Ver. objetivo |  |
+| Ver. CU | 1.0.0 |
+| Estado | LIBERADO\_ |
+| Fec. Aprobación |  |
+| Épica, historia |  |
+| Actores | ACT-PII-001-Gestor |
+| Frecuencia | Media |
 
 ### Descripción
 
@@ -15,13 +24,13 @@ Una vez introducidos un rango de fecha y pulsado el botón se muestra:
 * Balance de gastos e ingresos. Cifra resultado de la suma de todas las cifras.
 * Si el resultado es negativo o cero. No hay pagos que calcular.
 * Si el resultado es positivo.
-	+ El rango de reparto entre Universidad e inventores en que se encuadra la cifra de resultado.
-	+ La cifra que le corresponde a la Universidad.
-	+ Listado de los inventores no externos con:
-		- sus datos identificativos.
-		- porcentaje de invención.
-		- un selector para indicar a donde se paga la cantidad.
-		- la cifra. Esta cifra es la parte proporcional de la invención aplicada a la parte proporcional de reparto entre la Universidad y los inventores.
+  + El rango de reparto entre Universidad e inventores en que se encuadra la cifra de resultado.
+  + La cifra que le corresponde a la Universidad.
+  + Listado de los inventores no externos con:
+    - sus datos identificativos.
+    - porcentaje de invención.
+    - un selector para indicar a donde se paga la cantidad.
+    - la cifra. Esta cifra es la parte proporcional de la invención aplicada a la parte proporcional de reparto entre la Universidad y los inventores.
 
 En la parte final aparece un botón para Imprimir a PDF de este cálculo.
 
@@ -29,7 +38,7 @@ En la parte final aparece un botón para Imprimir a PDF de este cálculo.
 
 #### Actor principal
 
-ACT\-PII\-001\-Gestor
+ACT-PII-001-Gestor
 
 ### Precondiciones
 
@@ -41,14 +50,14 @@ Haber accedido a la opción de Invenciones y dentro de una invención haber acce
 
 El usuario se descarga el documento PDF con los cálculos para el rango de fechas seleccionado.
 
-### Escenario principal (flujo básico) \- ACT\-PII\-001\-Gestor
+### Escenario principal (flujo básico) - ACT-PII-001-Gestor
 
 1. Se presenta la pantalla de cálculo de pagos con una fecha desde, una fecha hasta y un botón Buscar.
 2. El gestor pulsa sobre el botón de Buscar.
 3. Se presentan los datos de gastos, ingresos, resultado y reparto.
 4. En caso de que el resultado sea positivo el usuario ha de seleccionar a dónde se le paga a los inventores.
 5. El usuario selecciona la acción Imprimir a PDF.
-6. Se descarga el documento. ([REP\-PII\-0040\- Balances y pagos de regalías a la Universidad y los inventores](https://confluence.um.es/confluence/pages/createpage.action?spaceKey=HERCULES&title=__REP-PII-0040-+Balances+y+pagos+de+regal%C3%ADas+a+la+Universidad+y+los+inventores&linkCreation=true&fromPageId=597853196 "/confluence/pages/createpage.action?spaceKey=HERCULES&title=__REP-PII-0040-+Balances+y+pagos+de+regal%C3%ADas+a+la+Universidad+y+los+inventores&linkCreation=true&fromPageId=597853196"))
+6. Se descarga el documento. ([REP-PII-0040- Balances y pagos de regalías a la Universidad y los inventores](/confluence/pages/createpage.action?spaceKey=HERCULES&title=__REP-PII-0040-+Balances+y+pagos+de+regal%C3%ADas+a+la+Universidad+y+los+inventores&linkCreation=true&fromPageId=597853196))
 
 ### Extensiones (flujos alternativos)
 
@@ -64,12 +73,6 @@ N/A
 
 ### Acciones
 
-  
-
-
-  
-
-
-
-
-
+|  |  |
+| --- | --- |
+| ACT-PII-001-Gestor | PII-CALCULARPAGOS-VER |

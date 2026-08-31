@@ -1,6 +1,8 @@
-# Hércules : Research Metrics for Input
+# Research Metrics for Input
 
-
+* [Applications volume](#ResearchMetricsforInput-Applicationsvolume)
+* [Awards volume](#ResearchMetricsforInput-Awardsvolume)
+* [Success Rate](#ResearchMetricsforInput-SuccessRate)
 
 ### Applications volume
 
@@ -10,24 +12,20 @@ To define:
 
 Data Source: SGI
 
-
-
-|  | User | Privacy | Ranking |
+|  |  |  |  |
 | --- | --- | --- | --- |
+|  | User | Privacy | Ranking |
 | **Snowball metrics** |  |  |  |
-| Count of applications per quarter\-year | Any | Public |  |
-| Amount applied for per quarter\-year | Any | Public |  |
-| Count of applications per quarter\-year / FTE | Any | Public |  |
-| Amount applied for per quarter\-year / FTE | Any | Public |  |
+| Count of applications per quarter-year | Any | Public |  |
+| Amount applied for per quarter-year | Any | Public |  |
+| Count of applications per quarter-year / FTE | Any | Public |  |
+| Amount applied for per quarter-year / FTE | Any | Public |  |
 | **Data breakdown or filters** |  |  |  |
 | Funder type (Snowball denominator) | Any | Public |  |
 | Funding type (Snowball denominator) | Any | Public |  |
 | Discipline (Snowball denominator) | Any | Public |  |
 | **Hércules SGI (CRIS) metrics** |  |  |  |
 |  |  |  |  |
-
-  
-
 
 ### Awards volume
 
@@ -38,15 +36,14 @@ To define:
 
 Data Source: SGI
 
-
-
-|  | User | Privacy | Ranking |
+|  |  |  |  |
 | --- | --- | --- | --- |
+|  | User | Privacy | Ranking |
 | **Snowball metrics** |  |  |  |
-| Count of awards per quarter\-year | Any | Public |  |
-| Value of awards per quarter\-year | Any | Public |  |
-| Count of awards per quarter\-year / FTE | Any | Public |  |
-| Value of awards per quarter\-year / FTE | Any | Public |  |
+| Count of awards per quarter-year | Any | Public |  |
+| Value of awards per quarter-year | Any | Public |  |
+| Count of awards per quarter-year / FTE | Any | Public |  |
+| Value of awards per quarter-year / FTE | Any | Public |  |
 | **Data breakdown or filters** |  |  |  |
 | Funder type (Snowball denominator) | Any | Public |  |
 | Funding type (Snowball denominator) | Any | Public |  |
@@ -54,18 +51,15 @@ Data Source: SGI
 | **Hércules SGI (CRIS) metrics** |  |  |  |
 | CRUE: Value of received awards | Any | Public |  |
 | **Data breakdown or filters** |  |  |  |
-| Type of Researcher\-PDI | Any | Public |  |
+| Type of Researcher-PDI | Any | Public |  |
 | Teaching area | Any | Public |  |
 | Type of award (including internal financing project) | Any | Public |  |
-| State of award | Non\-researcher staff | Private |  |
+| State of award | Non-researcher staff | Private |  |
 | Nationality | Any | Public |  |
 | Gender (Snowball denominator) (if the award is to hire a researcher) | Any | Public |  |
 | Knowledge area | Any | Public |  |
 | **University Rankings** |  |  |  |
-| Value of awards per total of teachers (normalized to the CPI) per year | Any | Public | THE2,25% |
-
-  
-
+| Value of awards per total of teachers (normalized to the CPI) per year | Any | Public | THE 2,25% |
 
 ### Success Rate
 
@@ -76,17 +70,16 @@ To define:
 
 Data source: SGI
 
-
-
-|  | User | Privacy | Ranking |
+|  |  |  |  |
 | --- | --- | --- | --- |
+|  | User | Privacy | Ranking |
 | **Snowball metrics** |  |  |  |
 | Successful applications by count per year | Any | Public |  |
-| % pending applications by count per year | Non\-researcher staff | Private |  |
-| % rejected applications by count per year | Non\-researcher staff | Private |  |
+| % pending applications by count per year | Non-researcher staff | Private |  |
+| % rejected applications by count per year | Non-researcher staff | Private |  |
 | Successful applications by value per year | Any | Public |  |
-| % pending applications by value per year | Non\-researcher staff | Private |  |
-| % rejected applications by value per year | Non\-researcher staff | Private |  |
+| % pending applications by value per year | Non-researcher staff | Private |  |
+| % rejected applications by value per year | Non-researcher staff | Private |  |
 | **Data breakdown or filters** |  |  |  |
 | Funder type (Snowball denominator) | Any | Public |  |
 | Funding type (Snowball denominator) | Any | Public |  |
@@ -96,7 +89,3 @@ Data source: SGI
 | **Data breakdown or filters** |  |  |  |
 | Knowledge area | Any | Public |  |
 | Type of participation | Any | Public |  |
-
-
-
-

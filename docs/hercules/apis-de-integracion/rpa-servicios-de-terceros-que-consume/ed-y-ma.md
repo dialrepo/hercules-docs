@@ -1,20 +1,10 @@
-# Hércules : ED y MA
+# ED y MA
 
+Esta página contiene el inventario de servicios de integración consumidos por Hércules RPA para incorporar información desde Hércules-SGI y Hércules-ED. A continuación se detallarán que servicios y consultas que se utilizan por proceso.
 
-
-Esta página contiene el inventario de servicios de integración consumidos por Hércules RPA para incorporar información desde Hércules\-SGI y Hércules\-ED. A continuación se detallarán que servicios y consultas que se utilizan por proceso.
-
-  
-
-
-[Proceso 1 : Segmentación y generación automática de boletines informativos](https://confluence.um.es/confluence/pages/viewpage.action?pageId=397534800&src=contextnavpagetreemode "https://confluence.um.es/confluence/pages/viewpage.action?pageId=397534800&src=contextnavpagetreemode")
-
-  
-
+[Proceso 1 : Segmentación y generación automática de boletines informativos](https://confluence.um.es/confluence/pages/viewpage.action?pageId=397534800&src=contextnavpagetreemode)
 
 * Obtención de artículos:
-
-
 
 ```
 select ?s ?nombreDoc ?nombreRevista ?aniomesdia ?fecha group_concat(?nombreArea;separator="|") as ?nombreArea ?autor ?ORCID from <http://gnoss.com/b836078b-78a0-4939-b809-3f2ccf4e5c01>
@@ -42,15 +32,10 @@ select ?s ?nombreDoc ?nombreRevista ?aniomesdia ?fecha group_concat(?nombreArea;
                         MINUS{?nodo <http://www.w3.org/2008/05/skos#narrower> ?hijos}
                 }
                 FILTER(?aniomesdia>=" + start_date + " AND ?aniomesdia<=" + end_date + ")"
-            }order by desc(?fecha) desc(?s) 
+            }order by desc(?fecha) desc(?s)
 ```
 
-  
-
-
 * Obtención de Oferta Tecnológica (OTC):
-
-
 
 ```
 select * from <http://gnoss.com/b836078b-78a0-4939-b809-3f2ccf4e5c01>
@@ -66,19 +51,11 @@ select * from <http://gnoss.com/b836078b-78a0-4939-b809-3f2ccf4e5c01>
     }order by desc(?fecha) desc(?s)
 ```
 
-  
-
-
-  
-
-
-[Proceso 2 : Sexenios y acreditaciones](https://confluence.um.es/confluence/display/HERCULES/Proceso+2+%3A+Sexenios+y+acreditaciones?src=contextnavpagetreemode "https://confluence.um.es/confluence/display/HERCULES/Proceso+2+%3A+Sexenios+y+acreditaciones?src=contextnavpagetreemode")
+[Proceso 2 : Sexenios y acreditaciones](https://confluence.um.es/confluence/display/HERCULES/Proceso+2+%3A+Sexenios+y+acreditaciones?src=contextnavpagetreemode)
 
 En este proceso se utilizan los servicios de ED y MA para recuperar producción científica desde su servicio de datos enriquecidos, a continuación se detallan las consultas SPARQL que se llevan a cabo : 
 
 * Obtener datos de investigador a partir de ORCID:
-
-
 
 ```
 select ?person ?nombreCompleto ?email ?nombreDepartamento ?nombreUniversidad from <http://gnoss.com/b836078b-78a0-4939-b809-3f2ccf4e5c01>
@@ -101,16 +78,9 @@ select ?person ?nombreCompleto ?email ?nombreDepartamento ?nombreUniversidad fro
         ?person <http://w3id.org/roh/ORCID> ?orcid.
         FILTER(?orcid='"""+orcid+"""')
     }
-
-
 ```
 
-  
-
-
 * Obtener datos de investigador a partir de PersonaRef:
-
-
 
 ```
 select ?person ?nombreCompleto ?email ?nombreDepartamento ?nombreUniversidad from <http://gnoss.com/b836078b-78a0-4939-b809-3f2ccf4e5c01>
@@ -131,15 +101,10 @@ select ?person ?nombreCompleto ?email ?nombreDepartamento ?nombreUniversidad fro
         }
             ?person <http://w3id.org/roh/crisIdentifier> ?identifier.
             FILTER(?identifier='"""+persona_ref+"""')
- 		} 
+ 		}
 ```
 
-  
-
-
 * Obtener datos de investigador a partir del email del investigador:
-
-
 
 ```
 select ?person ?nombreCompleto ?email ?nombreDepartamento ?nombreUniversidad from <http://gnoss.com/b836078b-78a0-4939-b809-3f2ccf4e5c01>
@@ -163,12 +128,7 @@ select ?person ?nombreCompleto ?email ?nombreDepartamento ?nombreUniversidad fro
         }
 ```
 
-  
-
-
 * Obtener producción científica a partir del ORCID de investigador:
-
-
 
 ```
 select distinct ?doc ?citasWos ?citasScopus ?citasSemanticScholar ?tipoProduccion ?title ?posicion ?autorUnico ?quartile from <http://gnoss.com/b836078b-78a0-4939-b809-3f2ccf4e5c01>
@@ -213,18 +173,9 @@ select distinct ?doc ?citasWos ?citasScopus ?citasSemanticScholar ?tipoProduccio
                             BIND(?person!=?person2 as ?dif)
                         }
     }
-        
 ```
 
-  
-
-
-  
-
-
 * Obtener producción científica a partir del PersonaRef de investigador:
-
-
 
 ```
 select distinct ?doc ?citasWos ?citasScopus ?citasSemanticScholar ?tipoProduccion ?title ?posicion ?autorUnico ?quartile from <http://gnoss.com/b836078b-78a0-4939-b809-3f2ccf4e5c01>
@@ -267,15 +218,10 @@ select distinct ?doc ?citasWos ?citasScopus ?citasSemanticScholar ?tipoProduccio
                                 ?listAuthor2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#member> ?person2.
                                 BIND(?person!=?person2 as ?dif)
                             }
-        }         
+        }        
 ```
 
-  
-
-
 * Obtener producción científica a partir del email de investigador:
-
-
 
 ```
 select distinct ?doc ?citasWos ?citasScopus ?citasSemanticScholar ?tipoProduccion ?title ?posicion ?autorUnico ?quartile from <http://gnoss.com/b836078b-78a0-4939-b809-3f2ccf4e5c01>
@@ -318,16 +264,11 @@ select distinct ?doc ?citasWos ?citasScopus ?citasSemanticScholar ?tipoProduccio
                                     ?listAuthor2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#member> ?person2.
                                     BIND(?person!=?person2 as ?dif)
                                 }
-            }         
+            }        
 ```
-
-  
-
 
 * Obtención de capítulos de libros de investigador por ORCID:
 
-
-
 ```
 select ?doc ?titulo ?anioFecha ?tipoProduccion from <http://gnoss.com/b836078b-78a0-4939-b809-3f2ccf4e5c01>
         where
@@ -348,14 +289,9 @@ select ?doc ?titulo ?anioFecha ?tipoProduccion from <http://gnoss.com/b836078b-7
                         FILTER(?typeProduccion=<http://gnoss.com/items/publicationtype_004>)
         }
 ```
-
-  
-
 
 * Obtención de capítulos de libros de investigador por PersonaRef:
 
-
-
 ```
 select ?doc ?titulo ?anioFecha ?tipoProduccion from <http://gnoss.com/b836078b-78a0-4939-b809-3f2ccf4e5c01>
         where
@@ -377,12 +313,7 @@ select ?doc ?titulo ?anioFecha ?tipoProduccion from <http://gnoss.com/b836078b-7
         }
 ```
 
-  
-
-
 * Obtención de capítulos de libros de investigador por email:
-
-
 
 ```
 select ?doc ?titulo ?anioFecha ?tipoProduccion from <http://gnoss.com/b836078b-78a0-4939-b809-3f2ccf4e5c01>
@@ -405,12 +336,7 @@ select ?doc ?titulo ?anioFecha ?tipoProduccion from <http://gnoss.com/b836078b-7
         }
 ```
 
-  
-
-
 * Obtención de libros de investigador por ORCID:
-
-
 
 ```
 select ?doc ?titulo ?anioFecha ?tipoProduccion from <http://gnoss.com/b836078b-78a0-4939-b809-3f2ccf4e5c01>
@@ -433,12 +359,7 @@ select ?doc ?titulo ?anioFecha ?tipoProduccion from <http://gnoss.com/b836078b-7
         }
 ```
 
-  
-
-
 * Obtención de libros de investigador por PersonaRef:
-
-
 
 ```
 select ?doc ?titulo ?anioFecha ?tipoProduccion from <http://gnoss.com/b836078b-78a0-4939-b809-3f2ccf4e5c01>
@@ -461,12 +382,7 @@ select ?doc ?titulo ?anioFecha ?tipoProduccion from <http://gnoss.com/b836078b-7
         }
 ```
 
-  
-
-
 * Obtención de libros de investigador por email:
-
-
 
 ```
 select ?doc ?titulo ?anioFecha ?tipoProduccion from <http://gnoss.com/b836078b-78a0-4939-b809-3f2ccf4e5c01>
@@ -489,12 +405,7 @@ select ?doc ?titulo ?anioFecha ?tipoProduccion from <http://gnoss.com/b836078b-7
         }
 ```
 
-  
-
-
 * Obtener información y parámetros de un artículo a partir de su ID:
-
-
 
 ```
 select ?titulo ?doi ?tipoProduccion ?fechaPublicacion ?citasWos ?citasScopus  ?citasSemanticScholar ?volumen ?numero ?paginaInicio ?paginaFin min(?journalNumberInCat) as ?journalNumberInCat min(?publicationPosition) as ?publicationPosition  ?issn ?revista ?editorial ?nombreRevista ?indiceImpacto  min(?cuartil)  as ?cuartil    from <http://gnoss.com/b836078b-78a0-4939-b809-3f2ccf4e5c01>
@@ -533,15 +444,9 @@ select ?titulo ?doi ?tipoProduccion ?fechaPublicacion ?citasWos ?citasScopus  ?c
                     FILTER(?anioIndiceImpacto=?anioFecha)
                     FILTER(?doc =<"""+id_articulo+""">)
     }
-        
 ```
 
-  
-
-
 * Obtención de los autores de un artículo en orden por posición del investigador :
-
-
 
 ```
 select ?posicion ?autor ?nombreAutor ?emailAutor ?orcidAutor from <http://gnoss.com/b836078b-78a0-4939-b809-3f2ccf4e5c01>
@@ -558,12 +463,7 @@ select ?posicion ?autor ?nombreAutor ?emailAutor ?orcidAutor from <http://gnoss.
     }order by asc(?posicion)
 ```
 
-  
-
-
 * Obtener trabajos presentados en congresos nacionales e internacionales de un investigador:
-
-
 
 ```
 select ?doc from <http://gnoss.com/b836078b-78a0-4939-b809-3f2ccf4e5c01>
@@ -581,12 +481,7 @@ select ?doc from <http://gnoss.com/b836078b-78a0-4939-b809-3f2ccf4e5c01>
             }
 ```
 
-  
-
-
 * Obtener patentes de un investigador:
-
-
 
 ```
 select ?doc from <http://gnoss.com/b836078b-78a0-4939-b809-3f2ccf4e5c01>
@@ -600,15 +495,10 @@ where
       ?listAuthor <http://www.w3.org/1999/02/22-rdf-syntax-ns#member> ?person. 
 	  """+filtro_investigador+"""
       FILTER(?anioFecha in (2010,2011,2013,2015,2018,2020))
-} 
+}
 ```
 
-  
-
-
 * Obtener título y fecha de una patente utilizando su identificador:
-
-
 
 ```
 select ?titulo ?fechaPublicacion from <http://gnoss.com/b836078b-78a0-4939-b809-3f2ccf4e5c01>
@@ -621,12 +511,7 @@ where
 }
 ```
 
-  
-
-
 * Obtener lista de autores de una patente utilizando su identificador:
-
-
 
 ```
 select ?posicion ?autor ?nombreAutor ?emailAutor ?orcidAutor from <http://gnoss.com/b836078b-78a0-4939-b809-3f2ccf4e5c01>
@@ -643,22 +528,11 @@ where
 }order by asc(?posicion)
 ```
 
-  
-
-
 donde, *filtro\_investigador* es el filtro que indica el identificador del investigador, puede ser personaRef, email u ORCID, como se puede ver en las queries anteriores.
 
-  
-
-
-[Proceso 4 : Sistemas Inteligentes de encaje entre convocatorias e investigadores](https://confluence.um.es/confluence/display/HERCULES/Proceso+4+%3A++Sistemas+Inteligentes+de+encaje+entre+convocatorias+e+investigadores?src=contextnavpagetreemode "https://confluence.um.es/confluence/display/HERCULES/Proceso+4+%3A++Sistemas+Inteligentes+de+encaje+entre+convocatorias+e+investigadores?src=contextnavpagetreemode")
-
-  
-
+[Proceso 4 : Sistemas Inteligentes de encaje entre convocatorias e investigadores](https://confluence.um.es/confluence/display/HERCULES/Proceso+4+%3A++Sistemas+Inteligentes+de+encaje+entre+convocatorias+e+investigadores?src=contextnavpagetreemode)
 
 * Obtención de grafo de colaboración:
-
-
 
 ```
 SELECT ?person ?nombre ?email count(distinct ?documento) as ?colaboracionesDocumentos  count(distinct ?proy)  as ?colaboracionesProyectos
@@ -689,12 +563,7 @@ WHERE
 	}order by desc(?totalColaboraciones)
 ```
 
-  
-
-
 * Obtención de la lista de investigadores:
-
-
 
 ```
 select ?person ?nombrePersona ?email from <http://gnoss.com/document.owl> from <http://gnoss.com/person.owl> from <http://gnoss.com/taxonomy.owl> 
@@ -704,17 +573,10 @@ where {
             ?autor <http://www.w3.org/1999/02/22-rdf-syntax-ns#member> ?person.
             ?person <http://xmlns.com/foaf/0.1/name> ?nombrePersona.
             ?person <https://www.w3.org/2006/vcard/ns#email> ?email.
-}GROUP BY ?email 
-
-
+}GROUP BY ?email
 ```
 
-  
-
-
 * Obtención de los datos de una persona dado su identificador "personaRef":
-
-
 
 ```
 select ?person ?identifier ?nombrePersona ?email from <http://gnoss.com/document.owl> from <http://gnoss.com/person.owl> from <http://gnoss.com/taxonomy.owl> 
@@ -726,14 +588,5 @@ where {
             ?person <http://xmlns.com/foaf/0.1/name> ?nombrePersona.
             ?person <https://www.w3.org/2006/vcard/ns#email> ?email.
             FILTER(?email='"""+email+"""')
-}GROUP BY ?email 
-
-
+}GROUP BY ?email
 ```
-
-  
-
-
-
-
-

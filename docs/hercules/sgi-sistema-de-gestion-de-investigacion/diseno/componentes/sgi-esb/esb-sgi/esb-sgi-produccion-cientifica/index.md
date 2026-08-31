@@ -1,20 +1,35 @@
-# Hércules : ESB \- SGI \- Producción Científica
+# ESB - SGI - Producción Científica
 
+---
 
+* [Sistema de Gestión Investigación](#ESBSGIProducciónCientífica-SistemadeGestiónInvestigación)
+  + [Entidades](#ESBSGIProducciónCientífica-Entidades)
+  + [Modelo lógico](#ESBSGIProducciónCientífica-Modelológico)
+  + [API](#ESBSGIProducciónCientífica-API)
+    - [Definición de los objetos](#ESBSGIProducciónCientífica-Definicióndelosobjetos)
+      * [ProduccionCientifica](#ESBSGIProducciónCientífica-ProduccionCientifica)
+      * [CampoProduccionCientifica](#ESBSGIProducciónCientífica-CampoProduccionCientifica)
+      * [IndiceImpacto](#ESBSGIProducciónCientífica-IndiceImpacto)
+      * [Autor](#ESBSGIProducciónCientífica-Autor)
+      * [Acreditacion](#ESBSGIProducciónCientífica-Acreditacion)
+      * [EpigrafeCVN](#ESBSGIProducciónCientífica-EpigrafeCVN)
+      * [ProduccionCientificaEstado](#ESBSGIProducciónCientífica-ProduccionCientificaEstado)
+    - [Servicios](#ESBSGIProducciónCientífica-Servicios)
+    - [Ejemplos de JSON de la entidad ProduccionCientifica](#ESBSGIProducciónCientífica-EjemplosdeJSONdelaentidadProduccionCientifica)
+      * [Publicación - Libro](#ESBSGIProducciónCientífica-Publicación-Libro)
+      * [Publicación - Artículo](#ESBSGIProducciónCientífica-Publicación-Artículo)
+      * [Participación en Congresos](#ESBSGIProducciónCientífica-ParticipaciónenCongresos)
+      * [Comités/consejos editoriales](#ESBSGIProducciónCientífica-Comités/consejoseditoriales)
+      * [Obra artística](#ESBSGIProducciónCientífica-Obraartística)
+      * [Dirección de tesis](#ESBSGIProducciónCientífica-Direccióndetesis)
+      * [Organización actividad I+D+i](#ESBSGIProducciónCientífica-OrganizaciónactividadI+D+i)
+    - [Tipo campo CVN](#ESBSGIProducciónCientífica-TipocampoCVN)
 
-
-
-
-
-
-
-
+---
 
 ## Sistema de Gestión Investigación
 
 ### Entidades
-
-
 
 | Entidad | Descripción |
 | --- | --- |
@@ -34,114 +49,83 @@
 
 Características generales que todas las API REST deben de cumplir:
 
-* [Consultas filtradas y paginadas](/hercules/sgi-sistema-de-gestion-de-investigacion/desarrollo-y-configuracion/estandares-de-desarrollo/consultas-filtradas-y-paginadas.md "/hercules/sgi-sistema-de-gestion-de-investigacion/desarrollo-y-configuracion/estandares-de-desarrollo/consultas-filtradas-y-paginadas.md")
-* [Formatos de datos API](/hercules/sgi-sistema-de-gestion-de-investigacion/desarrollo-y-configuracion/estandares-de-desarrollo/formatos-de-datos-api.md "/hercules/sgi-sistema-de-gestion-de-investigacion/desarrollo-y-configuracion/estandares-de-desarrollo/formatos-de-datos-api.md")
+* [Consultas filtradas y paginadas](/hercules/sgi-sistema-de-gestion-de-investigacion/desarrollo-y-configuracion/estandares-de-desarrollo/consultas-filtradas-y-paginadas)
+* [Formatos de datos API](/hercules/sgi-sistema-de-gestion-de-investigacion/desarrollo-y-configuracion/estandares-de-desarrollo/formatos-de-datos-api)
 
 #### Definición de los objetos
 
 ##### ProduccionCientifica
 
-
-
 | Nombre | Tipo | Descripción |
 | --- | --- | --- |
 | idRef | String | Identificador del item de producción científica en el sistema origen. Debe de ser único. |
-| epigrafeCVN | String | Código de la Fecyt para identificar el apartado.Ejemplos* 060\.010\.010\.000 (cuando es un item de una publicación) * 060\.010\.020\.000 (cuando es un item de un congreso) * 060\.030\.030\.000 (cuando es un item de un comité editorial) * 050\.020\.030\.000 (cuando es un item de una obra artística) |
-| estado | String | Enumerado con dos opciones:VALIDADOPENDIENTE |
-| campos | Lista\[CampoProduccionCientifica] | Lista con los campos definidos en el item.Si se envía un CampoProduccionCientifica tiene que tener los dos campos informados, el codigoCVN y los valores, en caso de que no tenga valores, entonces no se enviará el bloque CampoProduccionCientifica para ese codigoCVN. |
-| autores | Lista\[Autor] | Lista con los autores del item. |
-| indicesImpacto | Lista\[IndiceImpacto] | Lista con los índices de impacto del item. |
-| proyectos | Lista\[Numérico] | Lista con los identificadores de los proyectos SGI con los que se relaciona el item de producción científica |
-| acreditaciones | Lista\[Acreditacion] | Lista con las url y/o documentos que acreditan el item. |
-
-  
-
+| epigrafeCVN | String | Código de la Fecyt para identificar el apartado.  Ejemplos   * 060.010.010.000 (cuando es un item de una publicación) * 060.010.020.000 (cuando es un item de un congreso) * 060.030.030.000 (cuando es un item de un comité editorial) * 050.020.030.000 (cuando es un item de una obra artística) |
+| estado | String | Enumerado con dos opciones:  VALIDADO  PENDIENTE |
+| campos | Lista[CampoProduccionCientifica] | Lista con los campos definidos en el item.  Si se envía un CampoProduccionCientifica tiene que tener los dos campos informados, el codigoCVN y los valores, en caso de que no tenga valores, entonces no se enviará el bloque CampoProduccionCientifica para ese codigoCVN. |
+| autores | Lista[Autor] | Lista con los autores del item. |
+| indicesImpacto | Lista[IndiceImpacto] | Lista con los índices de impacto del item. |
+| proyectos | Lista[Numérico] | Lista con los identificadores de los proyectos SGI con los que se relaciona el item de producción científica |
+| acreditaciones | Lista[Acreditacion] | Lista con las url y/o documentos que acreditan el item. |
 
 ##### CampoProduccionCientifica
-
-  
-
-
-
 
 | Nombre | Tipo | Descripción |
 | --- | --- | --- |
 | codigoCVN | String | Código de la Fecyt para identificar el campo del item. |
-| valores | Lista\[String] | Lista con los valores indicados en codigoCVN. Lo normal es que sea un único valor, por lo que se enviará una lista de un único String, pero en el caso de que existan mas de un valor porque en el CVN sea tratado el campo como una lista, se recogerán todos los valores.Los valores pueden ser una cadena de texto, el valor de una fecha o de un número. En el caso de que el campo sea de tipo booleano, es decir, pueda tener valores Sí/No se informará con los textos "true" si tiene el valor "Sí" o "false" si tiene el valor "No"En caso de ser una fecha tendrá el formato de fecha ISO 8601, sin información horaria o con información horaria (Ver [Formatos de datos API](https://confluence.um.es/confluence/display/HERCULES/Formatos+de+datos+API "https://confluence.um.es/confluence/display/HERCULES/Formatos+de+datos+API")). Ejemplos:* 2020\-11\-15 * 2020\-11\-15T23:00:00Z (esto correponde al 15/11/2020 a las 00:00:00\) * 2020\-08\-15T22:00:00Z (esto corresponde al 15/08/2020 a las 00:00:00\)  Para los campos que hagan referencia a una tabla de la Fecyt:Por ejemplo el campo 060\.010\.010\.010 (tipo de producción), en este campo se indicará el código de la tabla, por lo que será un valor de los siguientes::* 004 * 018 * 020 * 032 * 075 * 106 * 173 * 202 * 203 * 204 * 205 * 206 * 207 * 208 * 209 * OTHERS * COMENTARIO\_SISTEMATICO\_NORMAS: será un código añadido al CVN para incorporar el valor "Comentario sistemático a normas" |
-
-  
-
+| valores | Lista[String] | Lista con los valores indicados en codigoCVN. Lo normal es que sea un único valor, por lo que se enviará una lista de un único String, pero en el caso de que existan mas de un valor porque en el CVN sea tratado el campo como una lista, se recogerán todos los valores.  Los valores pueden ser una cadena de texto, el valor de una fecha o de un número. En el caso de que el campo sea de tipo booleano, es decir, pueda tener valores Sí/No se informará con los textos "true" si tiene el valor "Sí" o "false" si tiene el valor "No"  En caso de ser una fecha tendrá el formato de fecha ISO 8601, sin información horaria o con información horaria (Ver [Formatos de datos API](/hercules/sgi-sistema-de-gestion-de-investigacion/desarrollo-y-configuracion/estandares-de-desarrollo/formatos-de-datos-api)). Ejemplos:   * 2020-11-15 * 2020-11-15T23:00:00Z (esto correponde al 15/11/2020 a las 00:00:00) * 2020-08-15T22:00:00Z (esto corresponde al 15/08/2020 a las 00:00:00)   Para los campos que hagan referencia a una tabla de la Fecyt:  Por ejemplo el campo 060.010.010.010 (tipo de producción), en este campo se indicará el código de la tabla, por lo que será un valor de los siguientes::   * 004 * 018 * 020 * 032 * 075 * 106 * 173 * 202 * 203 * 204 * 205 * 206 * 207 * 208 * 209 * OTHERS * COMENTARIO\_SISTEMATICO\_NORMAS: será un código añadido al CVN para incorporar el valor "Comentario sistemático a normas" |
 
 Los siguientes codigos CVN son **obligatorios** que vayan informados con un valor en la petición.
 
-
-
 | EpigrafeCVN | codigoCVN | Descripción |
 | --- | --- | --- |
-| 060\.010\.010\.000 | 060\.010\.010\.030 | Título de la publicación |
-| 060\.010\.010\.000 | 060\.010\.010\.010 | Tipo de producción |
-| 060\.010\.010\.000 | 060\.010\.010\.140 | Fecha de la publicación |
-| 060\.010\.020\.000 | 060\.010\.020\.010 | Tipo de evento |
-| 060\.010\.020\.000 | 060\.010\.020\.030 | Título del trabajo |
-| 060\.010\.020\.000 | 060\.010\.020\.190 | Fecha de celebración |
-| 060\.020\.030\.000 | 060\.020\.030\.010 | Descripción |
-| 060\.020\.030\.000 | 060\.020\.030\.160 | Fecha de inicio |
-| 060\.030\.030\.000 | 060\.030\.030\.010 | Nombre del comité editorial |
-| 060\.030\.030\.000 | 060\.030\.030\.140 | Fecha de inicio |
-| 030\.040\.000\.000 | 030\.040\.000\.030 | Título del trabajo |
-| 030\.040\.000\.000 | 030\.040\.000\.140 | Fecha de defensa |
-| 050\.020\.030\.000 | 050\.020\.030\.010 | Descripción |
-| 050\.020\.030\.000 | 050\.020\.030\.120 | Fecha de inicio |
+| 060.010.010.000 | 060.010.010.030 | Título de la publicación |
+| 060.010.010.000 | 060.010.010.010 | Tipo de producción |
+| 060.010.010.000 | 060.010.010.140 | Fecha de la publicación |
+| 060.010.020.000 | 060.010.020.010 | Tipo de evento |
+| 060.010.020.000 | 060.010.020.030 | Título del trabajo |
+| 060.010.020.000 | 060.010.020.190 | Fecha de celebración |
+| 060.020.030.000 | 060.020.030.010 | Descripción |
+| 060.020.030.000 | 060.020.030.160 | Fecha de inicio |
+| 060.030.030.000 | 060.030.030.010 | Nombre del comité editorial |
+| 060.030.030.000 | 060.030.030.140 | Fecha de inicio |
+| 030.040.000.000 | 030.040.000.030 | Título del trabajo |
+| 030.040.000.000 | 030.040.000.140 | Fecha de defensa |
+| 050.020.030.000 | 050.020.030.010 | Descripción |
+| 050.020.030.000 | 050.020.030.120 | Fecha de inicio |
 
 ##### IndiceImpacto
 
-
-
 | Nombre | Tipo | Descripción |
 | --- | --- | --- |
-| fuenteImpacto | String | Tipo de la fuente de impacto. Tomará uno de los valores de la Fecyt junto con los añadidos para producción científica. Puede tener los siguientes valores:* 000 (representa a WOS \- JCR) * 010 (representa a SCOPUS \- SJR) * 020 (representa a INRECS) * BCI (representa a BCI) * ICEE (representa a ICEE) * DIALNET (representa a DIALNET) * CITEC (representa a CITEC) * SCIMAGO (representa a SCIMAGO o ERI) * ERIH (representa a ERIH) * MIAR (representa a MIAR) * FECYT (representa a FECYT) * GII\_GRIN\_SCIE (representa a GII\_GRIN\_SCIE) * CORE (representa a CORE) * OTHERS (representa a Otros) |
+| fuenteImpacto | String | Tipo de la fuente de impacto. Tomará uno de los valores de la Fecyt junto con los añadidos para producción científica. Puede tener los siguientes valores:   * 000 (representa a WOS - JCR) * 010 (representa a SCOPUS - SJR) * 020 (representa a INRECS) * BCI (representa a BCI) * ICEE (representa a ICEE) * DIALNET (representa a DIALNET) * CITEC (representa a CITEC) * SCIMAGO (representa a SCIMAGO o ERI) * ERIH (representa a ERIH) * MIAR (representa a MIAR) * FECYT (representa a FECYT) * GII\_GRIN\_SCIE (representa a GII\_GRIN\_SCIE) * CORE (representa a CORE) * OTHERS (representa a Otros) |
 | indice | Número | Valor de la fuente de impacto cuando es un número |
-| ranking | String | Valor de la fuente de impacto cuando se trata de un ranking (una cadena):* CLASE1 (valor "Clase1" de la fuente de impacto GII\_GRIN\_SCIE) * CLASE2  (valor "Clase2" de la fuente de impacto GII\_GRIN\_SCIE) * CLASE3  (valor "Clase3"  de la fuente de impacto GII\_GRIN\_SCIE) * A\_POR  (valor "A\*" de la fuente de impacto CORE) * A (valor "A" de la fuente de impacto CORE) |
+| ranking | String | Valor de la fuente de impacto cuando se trata de un ranking (una cadena):   * CLASE1 (valor "Clase1" de la fuente de impacto GII\_GRIN\_SCIE) * CLASE2  (valor "Clase2" de la fuente de impacto GII\_GRIN\_SCIE) * CLASE3  (valor "Clase3"  de la fuente de impacto GII\_GRIN\_SCIE) * A\_POR  (valor "A\*" de la fuente de impacto CORE) * A (valor "A" de la fuente de impacto CORE) |
 | anio | String | Año en el que se estable el valor del índice para la fuente de impacto. |
 | otraFuenteImpacto | String | En el caso de que en tipo tenga la opción OTROS, sería la descripción de la fuente de impacto |
 | posicionPublicacion | Número | Indica la posición que ocupa la revista dentro de su categoría |
 | numeroRevistas | Número | Número total de revistas existentes en su categoría |
 | revista25 | Boolean | Indica si la revista se encuentra dentro del 25% (primer cuartil) de mayor índice de impacto en su área de conocimiento en el año de publicación |
 
-  
-
-
 ##### Autor
-
-
 
 | Nombre | Tipo | Descripción |
 | --- | --- | --- |
 | personaRef | String | Identificador único de la persona dentro del sistema de gestión de personas de la Universidad, en caso de ser un investigador que pertenezca a la Universidad o este dado de alta como externo. En caso de que no exista en la Universidad dicho campo vendrá vacío. En esos casos será obligatorio que venga la firma o el nombre y apellidos. |
-| firma | String | Firma del autor. Obligatorio si personaRef y nombre y apellidos no vienen informados. Es decir, se necesita uno de los tres casos:* personaRef * firma * nombre y apellidos |
+| firma | String | Firma del autor. Obligatorio si personaRef y nombre y apellidos no vienen informados. Es decir, se necesita uno de los tres casos:   * personaRef * firma * nombre y apellidos |
 | nombre | String | Nombre de la persona. Obligatorio si personaRef y la firma no vienen informados |
 | apellidos | String | Apellidos de la persona. Obligatorio si personaRef y la firma no vienen informados |
 | orden | Numero | Indica la posición del autor dentro del listado de todos los autores, 1, 2, 3, etc... |
 | orcidId | String | Identificador ORCID |
 | ip | Boolean | Indica si el autor es un IP o no |
 
-  
-
-
 ##### Acreditacion
-
-
 
 | Nombre | Tipo | Descripción |
 | --- | --- | --- |
 | url | String | URL acreditativa en repositorios ajenos a la Universidad |
 | documentoRef | String | Identificador del documento acreditativo |
 
-
-
 **ProduccionCientifica** Ampliar origen
-
-
 
 ```
 {
@@ -257,18 +241,14 @@ Los siguientes codigos CVN son **obligatorios** que vayan informados con un valo
 ]
 
 }
-
 ```
 
-
 ##### EpigrafeCVN
-
-
 
 | Nombre | Tipo | Descripción |
 | --- | --- | --- |
 | codigo | String | Código de uno de lo apartados del CVN que forman parte de la Producción científica y que necesita validación |
-| campos | Lista\[String] | Códigos de los campos del apartado del CVN que se tienen que enviar a Producción científica para su validación |
+| campos | Lista[String] | Códigos de los campos del apartado del CVN que se tienen que enviar a Producción científica para su validación |
 
 **Ejemplo epígrafe Publicaciones**
 
@@ -323,18 +303,13 @@ Los siguientes codigos CVN son **obligatorios** que vayan informados con un valo
    "campos": ["060.020.030.010","060.020.030.160","060.020.030.020","060.020.030.030","060.020.030.110"]
 ```
 
-  
-
-
 ##### ProduccionCientificaEstado
-
-
 
 | Nombre | Tipo | Descripción |
 | --- | --- | --- |
 | idRef | String | Identificador del item de producción científica en el sistema origen. |
-| epigrafeCVN | String | Código de la Fecyt para identificar el apartado.Ejemplos* 060\.010\.010\.000 (cuando es un item de una publicación) * 060\.010\.020\.000 (cuando es un item de un congreso) * 060\.030\.030\.000 (cuando es un item de un comité editorial) * 050\.020\.030\.000 (cuando es un item de una obra artística) |
-|  | String | Enumerado con dos opciones:VALIDADORECHAZADO |
+| epigrafeCVN | String | Código de la Fecyt para identificar el apartado.  Ejemplos   * 060.010.010.000 (cuando es un item de una publicación) * 060.010.020.000 (cuando es un item de un congreso) * 060.030.030.000 (cuando es un item de un comité editorial) * 050.020.030.000 (cuando es un item de una obra artística) |
+|  | String | Enumerado con dos opciones:  VALIDADO  RECHAZADO |
 
 **ProduccionCientificaEstado**
 
@@ -352,23 +327,17 @@ Para componer la URL llamada completa, se debe anteponer a lo indicado en la col
 
 | Servicio | Método | URL | Parámetros | Respuesta | Descripción |
 | --- | --- | --- | --- | --- | --- |
-| [ESB \- SGI \- Producción científica \- Buscar](https://confluence.um.es/confluence/pages/viewpage.action?pageId=597853384 "/confluence/pages/viewpage.action?pageId=597853384") | GET | /producciones\-cientificas/estado | q\+sLa query estará formada por:* fechaEstado | Lista\[[ProduccionCientificaEstado](https://confluence.um.es/confluence/pages/viewpage.action?pageId=120030384#ESBSGIProducci%C3%B3nCient%C3%ADfica-ProduccionCientificaEstado "https://confluence.um.es/confluence/pages/viewpage.action?pageId=120030384#ESBSGIProducci%C3%B3nCient%C3%ADfica-ProduccionCientificaEstado")] | Devuelve el identificador CVN, epígafre CVN y el estado (Validado O Rechazado) de aquellos Ítems, almacenados en producción científica, que han cambiado al estado Validado o Rechazado en una fecha igual o superior a la fecha de estado pasada por parámetro. |
-| [ESB \- SGI \- Producción científica \- Dar de alta](https://confluence.um.es/confluence/pages/viewpage.action?pageId=597853379 "/confluence/pages/viewpage.action?pageId=597853379") | POST | /producciones\-cientificas | [ProduccionCientifica](https://confluence.um.es/confluence/pages/viewpage.action?pageId=120030384#ESBSGIProducci%C3%B3nCient%C3%ADfica-ProduccionCientifica "https://confluence.um.es/confluence/pages/viewpage.action?pageId=120030384#ESBSGIProducci%C3%B3nCient%C3%ADfica-ProduccionCientifica") |  | Recibe como parámetro los campos necesarios para crear un Ítem de producción científica. |
-| [ESB \- SGI \- Producción científica \- Listar epígrafes](https://confluence.um.es/confluence/pages/viewpage.action?pageId=597853380 "/confluence/pages/viewpage.action?pageId=597853380") | GET | /epigrafes |  | Lista\[[EpigrafeCVN](https://confluence.um.es/confluence/pages/viewpage.action?pageId=120030384#ESBSGIProducci%C3%B3nCient%C3%ADfica-EpigrafeCVN "https://confluence.um.es/confluence/pages/viewpage.action?pageId=120030384#ESBSGIProducci%C3%B3nCient%C3%ADfica-EpigrafeCVN")] | Listado con los códigos de los apartados del CVN que forman parte de la Producción científica y que necesitan validación. Se enviarán los epígrafes marcados en el SGI de la última convocatoria creada.Por cada epígrafe se enviarán los campos dinámicos del CVN que se tienen que enviar a PRC. Será un subconjunto de los de la Fecyt. |
-| [ESB \- SGI \- Producción científica \- Eliminar](https://confluence.um.es/confluence/pages/viewpage.action?pageId=597853381 "/confluence/pages/viewpage.action?pageId=597853381") | DELETE | /producciones\-cientificas/{idRef} |  |  | Elimina un ítem de producción científica.El id pasado por URL es el identificador que tienen en el CVN. |
-| [ESB \- SGI \- Producción científica \- Modificar](https://confluence.um.es/confluence/pages/viewpage.action?pageId=597853382 "/confluence/pages/viewpage.action?pageId=597853382") | PUT | /producciones\-cientificas/{idRef} | [ProduccionCientifica](https://confluence.um.es/confluence/pages/viewpage.action?pageId=120030384#ESBSGIProducci%C3%B3nCient%C3%ADfica-ProduccionCientifica "https://confluence.um.es/confluence/pages/viewpage.action?pageId=120030384#ESBSGIProducci%C3%B3nCient%C3%ADfica-ProduccionCientifica") |  | Recibe como parámetro los campos necesarios para modificar un Ítem de producción científica.El id pasado por URL es el identificador que tienen en el CVN. |
-
-  
-
+| [ESB - SGI - Producción científica - Buscar](/confluence/spaces/HERCULES/pages/597853384/ESB+-+SGI+-+Producci%C3%B3n+cient%C3%ADfica+-+Buscar) | GET | /producciones-cientificas/estado | q+s  La query estará formada por:   * fechaEstado | Lista[[ProduccionCientificaEstado](https://confluence.um.es/confluence/pages/viewpage.action?pageId=120030384#ESBSGIProducci%C3%B3nCient%C3%ADfica-ProduccionCientificaEstado)] | Devuelve el identificador CVN, epígafre CVN y el estado (Validado O Rechazado) de aquellos Ítems, almacenados en producción científica, que han cambiado al estado Validado o Rechazado en una fecha igual o superior a la fecha de estado pasada por parámetro. |
+| [ESB - SGI - Producción científica - Dar de alta](/confluence/spaces/HERCULES/pages/597853379/ESB+-+SGI+-+Producci%C3%B3n+cient%C3%ADfica+-+Dar+de+alta) | POST | /producciones-cientificas | [ProduccionCientifica](https://confluence.um.es/confluence/pages/viewpage.action?pageId=120030384#ESBSGIProducci%C3%B3nCient%C3%ADfica-ProduccionCientifica) |  | Recibe como parámetro los campos necesarios para crear un Ítem de producción científica. |
+| [ESB - SGI - Producción científica - Listar epígrafes](/confluence/spaces/HERCULES/pages/597853380/ESB+-+SGI+-+Producci%C3%B3n+cient%C3%ADfica+-+Listar+ep%C3%ADgrafes) | GET | /epigrafes |  | Lista[[EpigrafeCVN](https://confluence.um.es/confluence/pages/viewpage.action?pageId=120030384#ESBSGIProducci%C3%B3nCient%C3%ADfica-EpigrafeCVN)] | Listado con los códigos de los apartados del CVN que forman parte de la Producción científica y que necesitan validación. Se enviarán los epígrafes marcados en el SGI de la última convocatoria creada.  Por cada epígrafe se enviarán los campos dinámicos del CVN que se tienen que enviar a PRC. Será un subconjunto de los de la Fecyt. |
+| [ESB - SGI - Producción científica - Eliminar](/confluence/spaces/HERCULES/pages/597853381/ESB+-+SGI+-+Producci%C3%B3n+cient%C3%ADfica+-+Eliminar) | DELETE | /producciones-cientificas/{idRef} |  |  | Elimina un ítem de producción científica.  El id pasado por URL es el identificador que tienen en el CVN. |
+| [ESB - SGI - Producción científica - Modificar](/confluence/spaces/HERCULES/pages/597853382/ESB+-+SGI+-+Producci%C3%B3n+cient%C3%ADfica+-+Modificar) | PUT | /producciones-cientificas/{idRef} | [ProduccionCientifica](https://confluence.um.es/confluence/pages/viewpage.action?pageId=120030384#ESBSGIProducci%C3%B3nCient%C3%ADfica-ProduccionCientifica) |  | Recibe como parámetro los campos necesarios para modificar un Ítem de producción científica.  El id pasado por URL es el identificador que tienen en el CVN. |
 
 #### Ejemplos de JSON de la entidad ProduccionCientifica
 
-##### Publicación \- Libro
+##### Publicación - Libro
 
-  
-
-
-**Publicación\-Libro**
+**Publicación-Libro**
 
 ```
 {
@@ -487,15 +456,11 @@ Para componer la URL llamada completa, se debe anteponer a lo indicado en la col
 ]
 
 }
-
 ```
 
-##### Publicación \- Artículo
+##### Publicación - Artículo
 
-  
-
-
-**Publicación\-Artículo**
+**Publicación-Artículo**
 
 ```
 {
@@ -614,16 +579,9 @@ Para componer la URL llamada completa, se debe anteponer a lo indicado en la col
 ]
 
 }
-
 ```
 
-  
-
-
 ##### Participación en Congresos
-
-  
-
 
 **Congreso**
 
@@ -716,13 +674,9 @@ Para componer la URL llamada completa, se debe anteponer a lo indicado en la col
 ]
 
 }
-
 ```
 
 ##### Comités/consejos editoriales
-
-  
-
 
 **ComiteEditorial**
 
@@ -805,13 +759,9 @@ Para componer la URL llamada completa, se debe anteponer a lo indicado en la col
 ]
 
 }
-
 ```
 
 ##### Obra artística
-
-  
-
 
 **Obra artística**
 
@@ -889,7 +839,6 @@ Para componer la URL llamada completa, se debe anteponer a lo indicado en la col
 ]
 
 }
-
 ```
 
 ##### Dirección de tesis
@@ -961,10 +910,9 @@ Para componer la URL llamada completa, se debe anteponer a lo indicado en la col
 ]
 
 }
-
 ```
 
-##### Organización actividad I\+D\+i
+##### Organización actividad I+D+i
 
 **Obra artística**
 
@@ -1010,75 +958,68 @@ Para componer la URL llamada completa, se debe anteponer a lo indicado en la col
 ]
 
 }
-
 ```
 
 #### Tipo campo CVN
 
-
-
 | codigo | Nombre del campo | tipoCVN norma Fecyt | Dato a enviar |
 | --- | --- | --- | --- |
-| 060\.010\.010\.030 | Título de la publicación | CvnString |  |
-| 060\.010\.010\.140 | Fecha de la publicación | CvnDate |  |
-| 060\.010\.010\.010 | Tipo de producción | CvnString |  |
-| 060\.010\.010\.070 | Tipo de soporte | CvnString |  |
-| 060\.010\.010\.210 | Nombre de la publicación | CvnString |  |
-| 060\.010\.010\.160 | ISBN \- ISSN publicación | CvnExternalPKBean | Enviar el campo "Value" del CvnExternalPKBean |
-| 060\.010\.010\.100 | Editorial | CvnString |  |
-| 060\.010\.010\.080 | Volumen \- Número | CvnVolumeBean | Concatenar el campo "Number" y el campo "Volumen" con el separador "\-" del objeto CvnVolumeBean |
-| 060\.010\.010\.090 | Página inicial \- final | CvnPageBean | Concatenar el campo "InitialPage" y el campo "FinalPage" con el separador "\-" del objeto CvnPageBean |
-| 060\.010\.010\.390 | Autor/a de correspondencia | CvnBoolean | personaRef si es de la Universidad y si no nombre y apellidos |
-| 060\.010\.010\.400 | Identificadores digitales | CvnExternalPKBean | Enviar el campo "Value" del CvnExternalPKBean |
-| 060\.010\.010\.410 | Tipo identificadores digitales | CvnExternalPKBean | Enviar el campo "Value" del CvnExternalPKBean |
-| 060\.010\.010\.300 | Publicación relevante | CvnBoolean |  |
+| 060.010.010.030 | Título de la publicación | CvnString |  |
+| 060.010.010.140 | Fecha de la publicación | CvnDate |  |
+| 060.010.010.010 | Tipo de producción | CvnString |  |
+| 060.010.010.070 | Tipo de soporte | CvnString |  |
+| 060.010.010.210 | Nombre de la publicación | CvnString |  |
+| 060.010.010.160 | ISBN - ISSN publicación | CvnExternalPKBean | Enviar el campo "Value" del CvnExternalPKBean |
+| 060.010.010.100 | Editorial | CvnString |  |
+| 060.010.010.080 | Volumen - Número | CvnVolumeBean | Concatenar el campo "Number" y el campo "Volumen" con el separador "-" del objeto CvnVolumeBean |
+| 060.010.010.090 | Página inicial - final | CvnPageBean | Concatenar el campo "InitialPage" y el campo "FinalPage" con el separador "-" del objeto CvnPageBean |
+| 060.010.010.390 | Autor/a de correspondencia | CvnBoolean | personaRef si es de la Universidad y si no nombre y apellidos |
+| 060.010.010.400 | Identificadores digitales | CvnExternalPKBean | Enviar el campo "Value" del CvnExternalPKBean |
+| 060.010.010.410 | Tipo identificadores digitales | CvnExternalPKBean | Enviar el campo "Value" del CvnExternalPKBean |
+| 060.010.010.300 | Publicación relevante | CvnBoolean |  |
 | INDICE\_NORMALIZADO | Indice normalizado |  |  |
 | PUBLICACION\_MUY\_RELEVANTE | Publicación muy televante |  |  |
 | TIPO\_OPEN\_ACCESS | Tipo Open Access |  |  |
 | INTERNACIONAL | Internacional |  |  |
 | INTERDISCIPLINAR | Interdisciplinar |  |  |
-| 060\.010\.020\.030 | Título del trabajo | CvnString |  |
-| 060\.010\.020\.190 | Fecha de celebración | CvnDate |  |
-| 060\.010\.020\.380 | Fecha de finalización | CvnDate |  |
-| 060\.010\.020\.010 | Tipo de evento | CvnString |  |
-| 060\.010\.020\.080 | Ámbito geográfico | CvnString |  |
-| 060\.010\.020\.100 | Nombre del congreso | CvnString |  |
-| 060\.010\.020\.370 | Nombre de la publicación | CvnString |  |
-| 060\.010\.020\.320 | ISBN \- ISSN publicación | CvnExternalPKBean | Enviar el campo "Value" del CvnExternalPKBean |
-| 060\.010\.020\.050 | Tipo de participación | CvnString |  |
-| 060\.010\.020\.390 | Autor/a de de correspondencia | CvnBoolean | personaRef si es de la Universidad y si no nombre y apellidos |
+| 060.010.020.030 | Título del trabajo | CvnString |  |
+| 060.010.020.190 | Fecha de celebración | CvnDate |  |
+| 060.010.020.380 | Fecha de finalización | CvnDate |  |
+| 060.010.020.010 | Tipo de evento | CvnString |  |
+| 060.010.020.080 | Ámbito geográfico | CvnString |  |
+| 060.010.020.100 | Nombre del congreso | CvnString |  |
+| 060.010.020.370 | Nombre de la publicación | CvnString |  |
+| 060.010.020.320 | ISBN - ISSN publicación | CvnExternalPKBean | Enviar el campo "Value" del CvnExternalPKBean |
+| 060.010.020.050 | Tipo de participación | CvnString |  |
+| 060.010.020.390 | Autor/a de de correspondencia | CvnBoolean | personaRef si es de la Universidad y si no nombre y apellidos |
 | RESUMEN\_REVISTA | Resumen o abstract en una revista |  |  |
-| 050\.020\.030\.010 | Descripción | CvnString |  |
-| 050\.020\.030\.020 | Nombre de la exposición | CvnString |  |
-| 050\.020\.030\.120 | Fecha de inicio | CvnDate |  |
-| 050\.020\.030\.040 | País celebración | CvnString |  |
-| 050\.020\.030\.050 | Comunidad Autónoma | CvnString |  |
-| 050\.020\.030\.090 | Monográfica | CvnBoolean |  |
-| 050\.020\.030\.100 | Catálogo | CvnBoolean |  |
-| 050\.020\.030\.110 | Comisario de exposición | CvnBoolean |  |
+| 050.020.030.010 | Descripción | CvnString |  |
+| 050.020.030.020 | Nombre de la exposición | CvnString |  |
+| 050.020.030.120 | Fecha de inicio | CvnDate |  |
+| 050.020.030.040 | País celebración | CvnString |  |
+| 050.020.030.050 | Comunidad Autónoma | CvnString |  |
+| 050.020.030.090 | Monográfica | CvnBoolean |  |
+| 050.020.030.100 | Catálogo | CvnBoolean |  |
+| 050.020.030.110 | Comisario de exposición | CvnBoolean |  |
 | COLECTIVA | Colectiva |  |  |
 | TIPO\_OBRA | Tipo |  |  |
-| 060\.030\.030\.010 | Nombre del comité editorial | CvnString |  |
-| 060\.030\.030\.020 | País de radicación | CvnString |  |
-| 060\.030\.030\.140 | Fecha de inicio | CvnDate |  |
+| 060.030.030.010 | Nombre del comité editorial | CvnString |  |
+| 060.030.030.020 | País de radicación | CvnString |  |
+| 060.030.030.140 | Fecha de inicio | CvnDate |  |
 | ISSN | ISSN |  |  |
-| 060\.030\.030\.100 | Categoría profesional | CvnString |  |
-| 030\.040\.000\.030 | Título del trabajo | CvnString |  |
-| 030\.040\.000\.140 | Fecha de defensa | CvnDate |  |
-| 030\.040\.000\.120 | Alumno/a | CvnAuthorBean | Enviar el campo "GivenName" del CvnAuthorBean |
-| 030\.040\.000\.170 | Mención de calidad del programa | CvnBoolean |  |
-| 030\.040\.000\.200 | Fecha Mención de calidad | CvnDate |  |
-| 030\.040\.000\.190 | Doctorado Europeo | CvnBoolean |  |
-| 030\.040\.000\.160 | Si es Doctorado Europeo, fecha de mención | CvnDate |  |
-| 030\.040\.000\.010 | Tipo de proyecto | CvnString |  |
+| 060.030.030.100 | Categoría profesional | CvnString |  |
+| 030.040.000.030 | Título del trabajo | CvnString |  |
+| 030.040.000.140 | Fecha de defensa | CvnDate |  |
+| 030.040.000.120 | Alumno/a | CvnAuthorBean | Enviar el campo "GivenName" del CvnAuthorBean |
+| 030.040.000.170 | Mención de calidad del programa | CvnBoolean |  |
+| 030.040.000.200 | Fecha Mención de calidad | CvnDate |  |
+| 030.040.000.190 | Doctorado Europeo | CvnBoolean |  |
+| 030.040.000.160 | Si es Doctorado Europeo, fecha de mención | CvnDate |  |
+| 030.040.000.010 | Tipo de proyecto | CvnString |  |
 | MENCION\_INDUSTRIAL | Mención Industrial |  |  |
 | MENCION\_INTERNACIONAL | Mención Internacional |  |  |
-| 060\.020\.030\.010 | Título de la actividad | CvnString |  |
-| 060\.020\.030\.160 | Fecha de inicio | CvnDate |  |
-| 060\.020\.030\.020 | Tipo de actividad | CvnString |  |
-| 060\.020\.030\.030 | País de celebración | CvnString |  |
-| 060\.020\.030\.110 | Modo de participación | CvnString |  |
-
-
-
-
+| 060.020.030.010 | Título de la actividad | CvnString |  |
+| 060.020.030.160 | Fecha de inicio | CvnDate |  |
+| 060.020.030.020 | Tipo de actividad | CvnString |  |
+| 060.020.030.030 | País de celebración | CvnString |  |
+| 060.020.030.110 | Modo de participación | CvnString |  |

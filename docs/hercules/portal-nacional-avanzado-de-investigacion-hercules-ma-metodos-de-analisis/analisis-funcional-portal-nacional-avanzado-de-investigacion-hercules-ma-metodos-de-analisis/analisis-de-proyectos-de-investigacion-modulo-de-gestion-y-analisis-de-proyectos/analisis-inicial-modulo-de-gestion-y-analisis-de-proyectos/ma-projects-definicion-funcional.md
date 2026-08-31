@@ -1,6 +1,14 @@
-# Hércules : MA. Projects. Definición funcional
+# MA. Projects. Definición funcional
 
-
+* [Buscador](#MA.Projects.Definiciónfuncional-Buscador)
+  + [Facetas:](#MA.Projects.Definiciónfuncional-Facetas:)
+  + [Mini ficha:](#MA.Projects.Definiciónfuncional-Minificha:)
+* [Ficha](#MA.Projects.Definiciónfuncional-Ficha)
+* [Pestañas](#MA.Projects.Definiciónfuncional-Pestañas)
+  + [Participantes](#MA.Projects.Definiciónfuncional-Participantes)
+  + [Publicaciones](#MA.Projects.Definiciónfuncional-Publicaciones)
+  + [Otros resultados (Pendiente definir ROs)](#MA.Projects.Definiciónfuncional-Otrosresultados(PendientedefinirROs))
+  + [Áreas temáticas](#MA.Projects.Definiciónfuncional-Áreastemáticas)
 
 #### Buscador
 
@@ -34,7 +42,7 @@
 * Código proyecto según entidad financiadora / Ámbito geográfico / Número de investigadores
 * Fecha de inicio / Fecha de fin (En caso de ser un proyecto en curso, la fecha de fin prevista)
 * Descripción (Corresponde a "Resultados relevantes" en el CVN)
-* Áreas temáticas (Visibles: 3\. Número máximo: 20\)
+* Áreas temáticas (Visibles: 3. Número máximo: 20)
 
 **Nota:** El acrónimo forma parte de los títulos en el caso de la UMU. ¿Es posible obtener este dato por separado con el fin de incorporarlo a la ficha?
 
@@ -68,7 +76,7 @@ Facetas de la pestaña:
 * Revista
 * Entidad de realización
 * Conferencia
-* Fecha (desde\-hasta)
+* Fecha (desde-hasta)
 
 Mini ficha de publicación:
 
@@ -87,10 +95,3 @@ Mini ficha de publicación:
 
 * Gráfica de nodos de las áreas temáticas (de las publicaciones, por el momento)
 * Gráfica de barras con el volumen (en porcentaje) de dichas áreas temáticas
-
-  
-
-
-
-
-

@@ -1,16 +1,82 @@
-# Hércules : CSP\-Solicitudes
+# CSP-Solicitudes
 
+* [1. Introducción](#CSPSolicitudes-1.Introducción)
+  + [1.1 Detalle de una solicitud](#CSPSolicitudes-1.1Detalledeunasolicitud)
+  + [1.2 Estados de una solicitud](#CSPSolicitudes-1.2Estadosdeunasolicitud)
+* [2. Listado y búsqueda de solicitudes](#CSPSolicitudes-2.Listadoybúsquedadesolicitudes)
+  + [2.1 Buscador simple](#CSPSolicitudes-2.1Buscadorsimple)
+  + [2.2 Buscador ampliado](#CSPSolicitudes-2.2Buscadorampliado)
+  + [2.3 Exportación de solicitudes](#CSPSolicitudes-2.3Exportacióndesolicitudes)
+* [3. Creación de una solicitud](#CSPSolicitudes-3.Creacióndeunasolicitud)
+* [4. Modificar una solicitud](#CSPSolicitudes-4.Modificarunasolicitud)
+  + [4.1 Datos generales](#CSPSolicitudes-4.1Datosgenerales)
+  + [4.2 Documentos](#CSPSolicitudes-4.2Documentos)
+    - [4.2.1 Añadir documento](#CSPSolicitudes-4.2.1Añadirdocumento)
+    - [4.2.2 Modificar documento](#CSPSolicitudes-4.2.2Modificardocumento)
+    - [4.2.3 Eliminar documento](#CSPSolicitudes-4.2.3Eliminardocumento)
+    - [4.2.4 Descargar fichero](#CSPSolicitudes-4.2.4Descargarfichero)
+  + [4.3 Histórico estados](#CSPSolicitudes-4.3Históricoestados)
+  + [4.4 Hitos](#CSPSolicitudes-4.4Hitos)
+    - [4.4.1 Añadir un nuevo hito](#CSPSolicitudes-4.4.1Añadirunnuevohito)
+    - [4.4.1 Modificar hito](#CSPSolicitudes-4.4.1Modificarhito)
+    - [4.4.1 Eliminar hito](#CSPSolicitudes-4.4.1Eliminarhito)
+  + [4.5 Datos Proyecto - Ficha general](#CSPSolicitudes-4.5DatosProyecto-Fichageneral)
+    - [4.5.2 Listado de áreas temáticas](#CSPSolicitudes-4.5.2Listadodeáreastemáticas)
+  + [4.6 Datos Proyecto - Áreas conocimiento](#CSPSolicitudes-4.6DatosProyecto-Áreasconocimiento)
+    - [4.6.1 Añadir área conocimiento](#CSPSolicitudes-4.6.1Añadiráreaconocimiento)
+    - [4.6.2 Eliminar área conocimiento](#CSPSolicitudes-4.6.2Eliminaráreaconocimiento)
+  + [4.7 Datos Proyecto - Clasificaciones](#CSPSolicitudes-4.7DatosProyecto-Clasificaciones)
+    - [4.7.1 Añadir clasificación](#CSPSolicitudes-4.7.1Añadirclasificación)
+    - [4.7.2 Eliminar clasificación](#CSPSolicitudes-4.7.2Eliminarclasificación)
+  + [4.8 Datos Proyecto - Equipo](#CSPSolicitudes-4.8DatosProyecto-Equipo)
+    - [4.8.1 Añadir un nuevo miembro](#CSPSolicitudes-4.8.1Añadirunnuevomiembro)
+    - [4.8.2 Modificar miembro del equipo](#CSPSolicitudes-4.8.2Modificarmiembrodelequipo)
+    - [4.8.3 Eliminar miembro del equipo](#CSPSolicitudes-4.8.3Eliminarmiembrodelequipo)
+  + [4.9 Datos Proyecto - Responsable económico](#CSPSolicitudes-4.9DatosProyecto-Responsableeconómico)
+    - [4.9.1 Añadir un responsable económico](#CSPSolicitudes-4.9.1Añadirunresponsableeconómico)
+    - [4.9.2 Modificar responsable económico](#CSPSolicitudes-4.9.2Modificarresponsableeconómico)
+    - [4.9.3 Eliminar responsable económico](#CSPSolicitudes-4.9.3Eliminarresponsableeconómico)
+  + [4.10 Datos Proyecto - Socios](#CSPSolicitudes-4.10DatosProyecto-Socios)
+    - [4.10.1 Añadir socio](#CSPSolicitudes-4.10.1Añadirsocio)
+      * [4.10.1.1 Datos generales](#CSPSolicitudes-4.10.1.1Datosgenerales)
+      * [4.10.1.1 Equipo del socio](#CSPSolicitudes-4.10.1.1Equipodelsocio)
+      * [4.10.1.1 Periodos de pago](#CSPSolicitudes-4.10.1.1Periodosdepago)
+      * [4.10.1.1 Periodos de justificación](#CSPSolicitudes-4.10.1.1Periodosdejustificación)
+    - [4.10.2 Modificar socio](#CSPSolicitudes-4.10.2Modificarsocio)
+    - [4.10.3 Eliminar socio](#CSPSolicitudes-4.10.3Eliminarsocio)
+  + [4.11 Datos Proyecto - Entidades financiadoras](#CSPSolicitudes-4.11DatosProyecto-Entidadesfinanciadoras)
+    - [4.11.1 Añadir entidad financiadora ajena a la convocatoria](#CSPSolicitudes-4.11.1Añadirentidadfinanciadoraajenaalaconvocatoria)
+    - [4.11.2 Modificar entidad financiadora ajena a la convocatoria](#CSPSolicitudes-4.11.2Modificarentidadfinanciadoraajenaalaconvocatoria)
+    - [4.11.3 Eliminar entidad financiadora ajena a la convocatoria](#CSPSolicitudes-4.11.3Eliminarentidadfinanciadoraajenaalaconvocatoria)
+  + [4.12 Datos Proyecto - Desglose presupuesto](#CSPSolicitudes-4.12DatosProyecto-Desglosepresupuesto)
+    - [4.12.1 Datos Proyecto - Desglose presupuesto global](#CSPSolicitudes-4.12.1DatosProyecto-Desglosepresupuestoglobal)
+    - [4.12.2 Datos Proyecto - Desglose presupuesto por entidades](#CSPSolicitudes-4.12.2DatosProyecto-Desglosepresupuestoporentidades)
+    - [4.12.3 Datos Proyecto - Desglose presupuesto mixto](#CSPSolicitudes-4.12.3DatosProyecto-Desglosepresupuestomixto)
+  + [4.13 Datos Proyecto - Autoevaluación de ética](#CSPSolicitudes-4.13DatosProyecto-Autoevaluacióndeética)
+  + [4.14 Datos solicitud RRHH - Solicitante](#CSPSolicitudes-4.14DatossolicitudRRHH-Solicitante)
+  + [4.15 Datos solicitud RRHH - Tutor/a](#CSPSolicitudes-4.15DatossolicitudRRHH-Tutor/a)
+  + [4.16 Datos solicitud RRHH - Requisitos convocatoria](#CSPSolicitudes-4.16DatossolicitudRRHH-Requisitosconvocatoria)
+  + [4.17 Datos solicitud RRHH - Memoria](#CSPSolicitudes-4.17DatossolicitudRRHH-Memoria)
+* [5. Cambiar estado a una solicitud](#CSPSolicitudes-5.Cambiarestadoaunasolicitud)
+  + [Datos obligatorios para "cambiar de estado" una solicitud](#CSPSolicitudes-Datosobligatoriospara"cambiardeestado"unasolicitud)
+* [6. Eliminar una solicitud](#CSPSolicitudes-6.Eliminarunasolicitud)
+* [7. Recuperar una solicitud eliminada](#CSPSolicitudes-7.Recuperarunasolicitudeliminada)
+* [8. Crear proyecto desde solicitud concedida](#CSPSolicitudes-8.Crearproyectodesdesolicitudconcedida)
+* [9. Crear grupo de investigación desde solicitud concedida](#CSPSolicitudes-9.Creargrupodeinvestigacióndesdesolicitudconcedida)
+* [10. Navegación a convocatoria y proyecto](#CSPSolicitudes-10.Navegaciónaconvocatoriayproyecto)
+* [11. Comunicados de solicitudes](#CSPSolicitudes-11.Comunicadosdesolicitudes)
+  + [11.1 Cambios de estado](#CSPSolicitudes-11.1Cambiosdeestado)
+  + [11.2 Alta de solicitud de petición de evaluación de ética](#CSPSolicitudes-11.2Altadesolicituddepeticióndeevaluacióndeética)
 
-
-### 1\. Introducción
+### 1. Introducción
 
 En el SGI se podrá realizar el registro de solicitudes y su ciclo de revisión y aprobación.  En este ciclo intervendrá  el personal de investigación y el personal de la unidad de gestión vinculada a la convocatoria, siempre en función de la configuración indicada en la convocatoria durante su registro en el SGI, en referencia a la habilitación de la presentación de solicitudes en el SGI. La tramitación de la solicitud en el SGI no sustituirá a la tramitación de la misma en la plataforma correspondiente de la entidad gestora/convocante/financiadora de la convocatoria, salvo que se trate de convocatorias del plan propio.
 
-El parámetro de "habilitación de la presentación de solicitudes en el SGI" solamente afectará al registro de las solicitudes por parte del personal de investigación. El personal de la unidad de gestión siempre podrá registrar solicitudes sobre las convocatorias de sus unidades de gestión, haciendo referencia siempre a un solicitante. Por norma general, las solicitudes de convocatorias externas (no plan propio) que deban tramitarse a través de los medios facilitados por las entidades convocantes, serán registradas con el parámetro "habilitación de la presentación de solicitudes en el SGI"  desactivado, de forma que sea el personal de la unidad de gestión correspondiente quien registre las solicitudes del SGI de forma paralela al proceso de registro que el  personal de investigación vaya realizando en la entidad convocante. Si bien este no es un comportamiento limitado en el SGI, ni de base ni por implantación, ya que a través del apartado "Configuración solicitudes" el personal de la unidad de gestión podría habilitar el registro de las solicitudes, por parte del personal de investigación, para cualquier convocatoria registrada en el SGI. 
+El parámetro de "habilitación de la presentación de solicitudes en el SGI" solamente afectará al registro de las solicitudes por parte del personal de investigación. El personal de la unidad de gestión siempre podrá registrar solicitudes sobre las convocatorias de sus unidades de gestión, haciendo referencia siempre a un solicitante. Por norma general, las solicitudes de convocatorias externas (no plan propio) que deban tramitarse a través de los medios facilitados por las entidades convocantes, serán registradas con el parámetro "habilitación de la presentación de solicitudes en el SGI"  desactivado, de forma que sea el personal de la unidad de gestión correspondiente quien registre las solicitudes del SGI de forma paralela al proceso de registro que el  personal de investigación vaya realizando en la entidad convocante. Si bien este no es un comportamiento limitado en el SGI, ni de base ni por implantación, ya que a través del apartado "Configuración solicitudes" el personal de la unidad de gestión podría habilitar el registro de las solicitudes, por parte del personal de investigación, para cualquier convocatoria registrada en el SGI.
 
 El SGI tine un flujo de estados único, independientemente de que se habilite o no el registro de las mismas para los investigadores/as e independientemente de cual sea la entidad convocante externa. Cada Universidad establecerá las pautas para hacer corresponder este flujo con el establecido por la entidad correspondiente que gestiona la convocatoria.
 
-#### 1\.1 Detalle de una solicitud
+#### 1.1 Detalle de una solicitud
 
 El SGI se plantea tres tipos de solicitud unificados:
 
@@ -18,7 +84,7 @@ El SGI se plantea tres tipos de solicitud unificados:
 * Solicitudes tipo "grupo investigación"
 * Solicitudes tipo "RRHH"
 
-La vinculación del tipo de solicitud a la convocatoria se realiza en el apartado "Datos generales" de la Convocatoria, a través del campo "tipo solicitud SGI" ([CSP\-Convocatorias \- 3\.1 Datos generales](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/mdu-perfil-unidad-de-gestion/mdu-perfil-unidad-de-gestion-modulo-csp/csp-convocatorias.md#CSPConvocatorias-con_datos_generales3.1Datosgenerales "/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/mdu-perfil-unidad-de-gestion/mdu-perfil-unidad-de-gestion-modulo-csp/csp-convocatorias.md#CSPConvocatorias-con_datos_generales3.1Datosgenerales"))
+La vinculación del tipo de solicitud a la convocatoria se realiza en el apartado "Datos generales" de la Convocatoria, a través del campo "tipo solicitud SGI" ([CSP-Convocatorias - 3.1 Datos generales](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/mdu-perfil-unidad-de-gestion/mdu-perfil-unidad-de-gestion-modulo-csp/csp-convocatorias#CSPConvocatorias-con_datos_generales3.1Datosgenerales))
 
 Existe un comportamiento común a todos los tipos de solicitudes así como una serie de apartados base que estarán presentes en todos los tipos de solicitud.  Con estos apartados base, que incluyen unos datos generales, documentos, hitos y el ciclo de estados, se permite disponer de una estructura mínima para la gestión de solicitudes genéricas confiriendo así al SGI la capacidad de gestionar en el futuro nuevos tipos de solicitud que no requieran un comportamiento especial. Los apartados comunes a todos los tipos de solicitud y que permiten realizar un tratamiento homogéneo de las mismas son:
 
@@ -53,7 +119,7 @@ Las solicitudes de tipo "RRHH" añadirán a los apartados base los siguientes:
 * Requisitos convocatoria.
 * Memoria
 
-#### 1\.2 Estados de una solicitud
+#### 1.2 Estados de una solicitud
 
 Los estados del ciclo de vida de una solicitud son los siguientes:
 
@@ -84,52 +150,47 @@ Los estados del ciclo de vida de una solicitud son los siguientes:
 * Firmada: Estado final.  Este estado podrá ser marcado por cualquier persona de la unidad de gestión correspondiente independientemente que la solicitud haya sido registrada en el SGI directamente por el personal de investigación.
 * Renunciada: Estado final.  Este estado podrá ser marcado por cualquier persona de la unidad de gestión correspondiente independientemente que la solicitud haya sido registrada en el SGI directamente por el personal de investigación.
 * Adicionalmente existirán dos estados, que solo afectarán a solicitudes de RRHH:
-	+ Validada: Este estado puede ser marcado por el/la tutor/a que hubiese sido especificado en la solicitud. El/la tutor/a podrá pasar a este estado solamente cuando la solicitud esté en "solicitada". Este estado también podrá ser marcado por cualquier persona de la unidad de gestión correspondiente, sin que exista en este caso ninguna restricción sobre el estado previo que tuviese la solicitud. A partir del estado  "Validada", independientemente de quien lo hubiera marcado, la solicitud podrá seguir teniendo el mismo comportamiento establecido para el resto de estados (desde "en subsanación" hasta "concedida", "denegada" o "renunciada").
-	+ Rechazada: Este estado puede ser marcado por el/la  tutor/a que hubiese sido especificado en la solicitud. El/la tutor/a podrá pasar a este estado solamente cuando la solicitud esté en "solicitada". Este estado también podrá ser marcado por cualquier persona de la unidad de gestión correspondiente, sin que exista en este caso ninguna restricción sobre el estado previo que tuviese la solicitud. A partir del estado  "Rechazada", independientemente de quien lo hubiera marcado, la solicitud podrá seguir teniendo el mismo comportamiento establecido para el resto de estados (desde "en subsanación" hasta "concedida", "denegada" o "renunciada").
+  + Validada: Este estado puede ser marcado por el/la tutor/a que hubiese sido especificado en la solicitud. El/la tutor/a podrá pasar a este estado solamente cuando la solicitud esté en "solicitada". Este estado también podrá ser marcado por cualquier persona de la unidad de gestión correspondiente, sin que exista en este caso ninguna restricción sobre el estado previo que tuviese la solicitud. A partir del estado  "Validada", independientemente de quien lo hubiera marcado, la solicitud podrá seguir teniendo el mismo comportamiento establecido para el resto de estados (desde "en subsanación" hasta "concedida", "denegada" o "renunciada").
+  + Rechazada: Este estado puede ser marcado por el/la  tutor/a que hubiese sido especificado en la solicitud. El/la tutor/a podrá pasar a este estado solamente cuando la solicitud esté en "solicitada". Este estado también podrá ser marcado por cualquier persona de la unidad de gestión correspondiente, sin que exista en este caso ninguna restricción sobre el estado previo que tuviese la solicitud. A partir del estado  "Rechazada", independientemente de quien lo hubiera marcado, la solicitud podrá seguir teniendo el mismo comportamiento establecido para el resto de estados (desde "en subsanación" hasta "concedida", "denegada" o "renunciada").
 
 El personal de la unidad de gestión puede pasar la solicitud de cualquier estado a cualquier otro estado (hacia delante y hacia atrás), no habrá ningún tipo de restricciones.
 
 El personal de investigación como solicitante únicamente podrá realizar los siguientes cambios de estado:
 
 * Del estado "Borrador" o "Rechazada" a los estados:  
-
-	+ Solicitada
-	+ Desistida
+  + Solicitada
+  + Desistida
 * Del estado  "En subsanación" a los estados:
-	+ Presentada subsanación
-	+ Desistida
+  + Presentada subsanación
+  + Desistida
 * Del estado "Excluida provisional" a los estados:
-	+ Alegación fase admisión
-	+ Desistida"
+  + Alegación fase admisión
+  + Desistida"
 * Del estado "Excluida definitiva" a los estados:
-	+ Recurso fase admisión
-	+ Desistida
+  + Recurso fase admisión
+  + Desistida
 * Del estado "Denegada provisional" a los estados:
-	+ Alegación fase provisional
-	+ Desistida
+  + Alegación fase provisional
+  + Desistida
 * Del estado "Denegada" a los estados:
-	+ Recurso fase concesión
-	+ Desistida
+  + Recurso fase concesión
+  + Desistida
 
 Las solicitudes de tipo "RRHH" implementará un flujo adicional que implica la participación del personal de investigación que actúa como tutor/as del trabajo asociado. El personal de investigación como tutor/a podrá realizar los siguientes cambios de estado:
 
 * Del estado "Solicitada" a los estados:  
-
-	+ Validada
-	+ Rechazada
+  + Validada
+  + Rechazada
 
 El flujo de estados estará integrado con el módulo de avisos global al SGI, de forma que el personal de investigación y el personal de la unidad de gestión reciban notificaciones de acuerdo a las modificaciones realizadas sobre el estado de la Solicitud.
 
-### 2\. Listado y búsqueda de solicitudes
+### 2. Listado y búsqueda de solicitudes
 
-El acceso a la gestión de solicitudes ocupa la segunda posición en el menú del módulo CSP.  Siguiendo la estructura general del SGI, tras pulsar en el menú Solicitudes se accede a la página inicial que contiene el listado de solicitudes y su buscador, que sigue las normas básicas descritas en [MDU\-Manual de usuario \- 3\.2 Buscadores y listados](https://confluence.um.es/confluence/display/HERCULES/MDU+-+Manual+de+usuario#MDUManualdeusuario-3.2Buscadoresylistados "https://confluence.um.es/confluence/display/HERCULES/MDU+-+Manual+de+usuario#MDUManualdeusuario-3.2Buscadoresylistados").
+El acceso a la gestión de solicitudes ocupa la segunda posición en el menú del módulo CSP.  Siguiendo la estructura general del SGI, tras pulsar en el menú Solicitudes se accede a la página inicial que contiene el listado de solicitudes y su buscador, que sigue las normas básicas descritas en [MDU-Manual de usuario - 3.2 Buscadores y listados](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario#MDUManualdeusuario-3.2Buscadoresylistados).
 
 ![](/attachments/597853537/857473226.png)
 
-  
-
-
-Por defecto, se listan todas las solicitudes disponibles sobre una tabla de resultados paginada, [MDU\-Manual de usuario \- 3\.5 Paginación de listados](https://confluence.um.es/confluence/display/HERCULES/MDU+-+Manual+de+usuario#MDUManualdeusuario-3.5Paginaci%C3%B3ndelistados "https://confluence.um.es/confluence/display/HERCULES/MDU+-+Manual+de+usuario#MDUManualdeusuario-3.5Paginaci%C3%B3ndelistados").  La tabla muestra una serie de campos significativos:
+Por defecto, se listan todas las solicitudes disponibles sobre una tabla de resultados paginada, [MDU-Manual de usuario - 3.5 Paginación de listados](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario#MDUManualdeusuario-3.5Paginaci%C3%B3ndelistados).  La tabla muestra una serie de campos significativos:
 
 * Código interno: Código de registro de la solicitud generado automáticamente al crear la solicitud. Esta formado por un sufijo unido a la fecha y hora de la creación, por tanto, es único y permite identificar inequívocamente a la solicitud.
 * Código de registro en entidad convocantes: Código de registro de la solicitud en la entidad convocante, en caso que la solicitud se haya registrado/presentado de forma paralela en la entidad convocante. En el caso de las convocatorias del plan propio (internas a la Universidad) el código introducido se corresponde con el código asignado en el Registro de la institución.
@@ -146,19 +207,19 @@ El apartado de solicitud incluye dos buscadores:
 * Buscador simple
 * Buscador ampliado
 
-Por defecto, se muestra visible el buscador simple. 
+Por defecto, se muestra visible el buscador simple.
 
 A través del botón "Limpiar" se eliminará cualquier criterio de búsqueda que hubiese sido introducido en el buscador activo en cada momento.
 
-#### 2\.1 Buscador simple
+#### 2.1 Buscador simple
 
 Es el buscador mostrado por defecto. Dispone de tres campos de búsqueda:
 
-* Convocatoria:  Este campo permite especificar una convocatoria. Se realizará la búsqueda de las solicitudes que pertenezcan a la convocatoria indicada. Para indicar la convocatoria se utilizará el buscador común de convocatorias [MDU\-Manual de usuario \- 7\.1 Buscador de convocatorias](https://confluence.um.es/confluence/display/HERCULES/MDU+-+Manual+de+usuario#MDUManualdeusuario-7.1Buscadordeconvocatorias "https://confluence.um.es/confluence/display/HERCULES/MDU+-+Manual+de+usuario#MDUManualdeusuario-7.1Buscadordeconvocatorias").
-* Estado Solicitud: Campo para aplicar búsquedas por el estado de la solicitud. Es un desplegable con el listado de estados posibles.
+* Convocatoria:  Este campo permite especificar una convocatoria. Se realizará la búsqueda de las solicitudes que pertenezcan a la convocatoria indicada. Para indicar la convocatoria se utilizará el buscador común de convocatorias [MDU-Manual de usuario - 7.1 Buscador de convocatorias](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario#MDUManualdeusuario-7.1Buscadordeconvocatorias).
+* Estado actual solicitud: Campo para aplicar búsquedas por el estado de la solicitud. Es un desplegable con el listado de estados posibles.
 * Tipo solicitud SGI: Permite filtrar por los tres tipos de solicitudes que cubre el SGI: tipo proyecto, de rrhh y de grupos.
 * Acrónimo: Si se introduce una cadena en este filtro, se listarán las solicitudes de tipo proyecto que contengan la cadena introducida en cualquier parte del campo "acrónimo". Este filtro sólo aplica sobre las solicitudes de tipo proyecto ya que son las únicas que disponen del campo "acrónimo".
-* Solicitante IP: Este campo permite especificar una persona. Se realizará la búsqueda de las solicitudes presentadas por la persona indicada en el caso de que dicha persona exista dada de alta en el sistema corporativo de RRHH, es decir, se trate de una persona de investigación de la Universidad. Para indicar la persona se utilizará el buscador común de personas [MDU\-Manual de usuario \- 8\.1 Personas](https://confluence.treelogic.com/display/HERCULES/MDU+-+Manual+de+usuario#MDUManualdeusuario-8.1Personas "https://confluence.treelogic.com/display/HERCULES/MDU+-+Manual+de+usuario#MDUManualdeusuario-8.1Personas")
+* Solicitante IP: Este campo permite especificar una persona. Se realizará la búsqueda de las solicitudes presentadas por la persona indicada en el caso de que dicha persona exista dada de alta en el sistema corporativo de RRHH, es decir, se trate de una persona de investigación de la Universidad. Para indicar la persona se utilizará el buscador común de personas [MDU-Manual de usuario - 8.1 Personas](https://confluence.treelogic.com/display/HERCULES/MDU+-+Manual+de+usuario#MDUManualdeusuario-8.1Personas)
 * Nombre solicitante externo: Este campo permite especificar el nombre de una persona ajena a la Universidad y que no existe en el sistema corporativo de RRHH. Si se introduce una cadena en este filtro, se mostrarán las solicitudes que contengan la cadena introducida en cualquier parte del campo "nombre solicitante".
 * Apellidos solicitante externo: Este campo permite especificar los apellidos de una persona ajena a la Universidad y que no existe en el sistema corporativo de RRHH. Si se introduce una cadena en este filtro, se mostrarán las solicitudes que contengan la cadena introducida en cualquier parte del campo "apellidos solicitante".
 
@@ -168,33 +229,37 @@ Se puede utilizar el botón "Limpiar" para vaciar cualquier valor introducido en
 
 Si se pulsa el botón "Buscador ampliado" se cambiará a la búsqueda avanzada.
 
-#### 2\.2 Buscador ampliado
+#### 2.2 Buscador ampliado
 
 Al pulsar el botón "Buscador ampliado" se mostrarán todos los filtros de este buscador. El aspecto de la ventana de solicitudes pasa a ser:
 
-![](/attachments/597853537/1088323609.png)
+![](/attachments/597853537/1152811237.png)
 
 El buscador ampliado contiene los siguientes campos:
 
-* Convocatoria:  Este campo permite especificar una convocatoria. Se realizará la búsqueda de las solicitudes que pertenezcan a la convocatoria indicada. Para indicar la convocatoria se utilizará el buscador común de convocatorias [MDU\-Manual de usuario \- 7\.1 Buscador de convocatorias](https://confluence.um.es/confluence/display/HERCULES/MDU+-+Manual+de+usuario#MDUManualdeusuario-7.1Buscadordeconvocatorias "https://confluence.um.es/confluence/display/HERCULES/MDU+-+Manual+de+usuario#MDUManualdeusuario-7.1Buscadordeconvocatorias")
-* Estado Solicitud: Campo para aplicar búsquedas por el estado de la solicitud. Es un desplegable con el listado de estados posibles.
+* Convocatoria:  Este campo permite especificar una convocatoria. Se realizará la búsqueda de las solicitudes que pertenezcan a la convocatoria indicada. Para indicar la convocatoria se utilizará el buscador común de convocatorias [MDU-Manual de usuario - 7.1 Buscador de convocatorias](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario#MDUManualdeusuario-7.1Buscadordeconvocatorias)
+* Estado actual solicitud: Campo para aplicar búsquedas por el estado de la solicitud. Es un desplegable con el listado de estados posibles.
 * Acrónimo: Si se introduce una cadena en este filtro, se listarán las solicitudes de tipo proyecto que contengan la cadena introducida en cualquier parte del campo "acrónimo". Este filtro sólo aplica sobre las solicitudes de tipo proyecto ya que son las únicas que disponen del campo "acrónimo".
-* Solicitante/IP: Este campo permite especificar una persona. Se realizará la búsqueda de las solicitudes presentadas por la persona indicada en el caso de que dicha persona exista dada de alta en el sistema corporativo de RRHH, es decir, se trate de una persona de investigación de la Universidad. Para indicar la persona se utilizará el buscador común de personas [MDU\-Manual de usuario \- 8\.1 Personas](https://confluence.um.es/confluence/display/HERCULES/MDU+-+Manual+de+usuario#MDUManualdeusuario-8.1Personas "https://confluence.um.es/confluence/display/HERCULES/MDU+-+Manual+de+usuario#MDUManualdeusuario-8.1Personas")
+* Solicitante/IP: Este campo permite especificar una persona. Se realizará la búsqueda de las solicitudes presentadas por la persona indicada en el caso de que dicha persona exista dada de alta en el sistema corporativo de RRHH, es decir, se trate de una persona de investigación de la Universidad. Para indicar la persona se utilizará el buscador común de personas [MDU-Manual de usuario - 8.1 Personas](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario#MDUManualdeusuario-8.1Personas)
 * Nombre solicitante externo: Este campo permite especificar el nombre de una persona ajena a la Universidad y que no existe en el sistema corporativo de RRHH. Si se introduce una cadena en este filtro, se mostrarán las solicitudes que contengan la cadena introducida en cualquier parte del campo "nombre solicitante".
 * Apellidos solicitante externo: Este campo permite especificar los apellidos de una persona ajena a la Universidad y que no existe en el sistema corporativo de RRHH. Si se introduce una cadena en este filtro, se mostrarán las solicitudes que contengan la cadena introducida en cualquier parte del campo "apellidos solicitante".
 * Título Solicitud: Si se introduce una cadena en este filtro, se mostrarán las solicitudes que contengan la cadena introducida en cualquier parte del campo "título".
-* Entidad convocante: Este campo permite especificar una entidad. Se realizará la búsqueda de las solicitudes que pertenezcan a las convocatorias que contengan a la entidad indicada como una de sus entidades convocantes. Para indicar la entidad convocante se utilizará el buscador común de empresas [MDU\-Manual de usuario \- 8\.2 Entidades o empresas](https://confluence.um.es/confluence/display/HERCULES/MDU+-+Manual+de+usuario#MDUManualdeusuario-8.2Entidadesoempresas "https://confluence.um.es/confluence/display/HERCULES/MDU+-+Manual+de+usuario#MDUManualdeusuario-8.2Entidadesoempresas").  Si el campo "convocatoria" de la solicitud no está informado será indicativo de que la solicitud no fue vinculada a una convocatoria registrada en el SGI por lo que, en este caso, la solicitud quedará excluida de los resultados al no poder aplicar el filtro establecido.
-* Plan/programa investigación. Este campo permite especificar una plan o un programa de investigación. Se realizará  la búsqueda de todas las solicitudes en las que en el campo modalidad o programa convocatoria de alguna de las entidades convocantes que tangan vinculadas tengan vinculado el elemento seleccionado en el árbol o cualquiera que derive del mismo. Para indicar el plan o el programa se utilizará el buscador común de plan/programa de investigación [MDU \- Manual de usuario\#7\.7Selector de plan/programa de investigación](https://confluence.um.es/confluence/display/HERCULES/MDU+-+Manual+de+usuario#MDUManualdeusuario-7.7Selectordeplan/programadeinvestigaci%C3%B3n "https://confluence.um.es/confluence/display/HERCULES/MDU+-+Manual+de+usuario#MDUManualdeusuario-7.7Selectordeplan/programadeinvestigaci%C3%B3n").
-* Entidad financiadora: Este campo permite especificar una entidad. Se realizará la búsqueda de las solicitudes que pertenezcan a las convocatorias que contengan a la entidad indicada como una de sus entidades financiadoras. Para indicar la entidad financiadora se utilizará el buscador común de empresas [MDU\-Manual de usuario \- 8\.2 Entidades o empresas](https://confluence.um.es/confluence/display/HERCULES/MDU+-+Manual+de+usuario#MDUManualdeusuario-8.2Entidadesoempresas "https://confluence.um.es/confluence/display/HERCULES/MDU+-+Manual+de+usuario#MDUManualdeusuario-8.2Entidadesoempresas"). Si el campo "convocatoria" de la solicitud no está informado será indicativo de que la solicitud no fue vinculada a una convocatoria registrada en el SGI por lo que, en este caso, la solicitud quedará excluida de los resultados al no poder aplicar el filtro establecido.
-* Fuente financiación: Permite acotar la búsqueda a las solicitudes que pertenezcan a las convocatorias sobre las que participe una entidad financiadora a través de la fuente de financiación especificada. La fuente de financiación por la que se buscará deberá ser seleccionada del listado. Se listarán todas las fuentes de financiación disponibles en el SGI. Para más información se puede consultar [CSP\-Configuración \- 10 Fuentes de financiación](https://confluence.um.es/confluence/pages/viewpage.action?pageId=134296892#CSPConfiguraci%C3%B3n-10.Fuentesdefinanciaci%C3%B3n "https://confluence.um.es/confluence/pages/viewpage.action?pageId=134296892#CSPConfiguraci%C3%B3n-10.Fuentesdefinanciaci%C3%B3n"). Si el campo "convocatoria" de la solicitud no está informado será indicativo de que la solicitud no fue vinculada a una convocatoria registrada en el SGI por lo que, en este caso, la solicitud quedará excluida de los resultados al no poder aplicar el filtro establecido.
-* Rol participación universidad: Permite acotar la búsqueda a las solicitudes de tipo proyecto donde la universidad participa con un rol determinado. Se listarán los roles de participación de la universidad activos disponibles en el SGI. Para más información se puede consultar [CSP\-Configuración](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/mdu-perfil-unidad-de-gestion/mdu-perfil-unidad-de-gestion-modulo-csp/csp-configuracion.md "/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/mdu-perfil-unidad-de-gestion/mdu-perfil-unidad-de-gestion-modulo-csp/csp-configuracion.md").
+* Entidad convocante: Este campo permite especificar una entidad. Se realizará la búsqueda de las solicitudes que pertenezcan a las convocatorias que contengan a la entidad indicada como una de sus entidades convocantes. Para indicar la entidad convocante se utilizará el buscador común de empresas [MDU-Manual de usuario - 8.2 Entidades o empresas](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario#MDUManualdeusuario-8.2Entidadesoempresas).  Si el campo "convocatoria" de la solicitud no está informado será indicativo de que la solicitud no fue vinculada a una convocatoria registrada en el SGI por lo que, en este caso, la solicitud quedará excluida de los resultados al no poder aplicar el filtro establecido.
+* Plan/programa investigación. Este campo permite especificar una plan o un programa de investigación. Se realizará  la búsqueda de todas las solicitudes en las que en el campo modalidad o programa convocatoria de alguna de las entidades convocantes que tangan vinculadas tengan vinculado el elemento seleccionado en el árbol o cualquiera que derive del mismo. Para indicar el plan o el programa se utilizará el buscador común de plan/programa de investigación [MDU - Manual de usuario#7.7Selector de plan/programa de investigación](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario#MDUManualdeusuario-7.7Selectordeplan/programadeinvestigaci%C3%B3n).
+* Entidad financiadora: Este campo permite especificar una entidad. Se realizará la búsqueda de las solicitudes que pertenezcan a las convocatorias que contengan a la entidad indicada como una de sus entidades financiadoras. Para indicar la entidad financiadora se utilizará el buscador común de empresas [MDU-Manual de usuario - 8.2 Entidades o empresas](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario#MDUManualdeusuario-8.2Entidadesoempresas). Si el campo "convocatoria" de la solicitud no está informado será indicativo de que la solicitud no fue vinculada a una convocatoria registrada en el SGI por lo que, en este caso, la solicitud quedará excluida de los resultados al no poder aplicar el filtro establecido.
+* Fuente financiación: Permite acotar la búsqueda a las solicitudes que pertenezcan a las convocatorias sobre las que participe una entidad financiadora a través de la fuente de financiación especificada. La fuente de financiación por la que se buscará deberá ser seleccionada del listado. Se listarán todas las fuentes de financiación disponibles en el SGI. Para más información se puede consultar [CSP-Configuración - 10 Fuentes de financiación](https://confluence.um.es/confluence/pages/viewpage.action?pageId=134296892#CSPConfiguraci%C3%B3n-10.Fuentesdefinanciaci%C3%B3n). Si el campo "convocatoria" de la solicitud no está informado será indicativo de que la solicitud no fue vinculada a una convocatoria registrada en el SGI por lo que, en este caso, la solicitud quedará excluida de los resultados al no poder aplicar el filtro establecido.
+* Rol participación universidad: Permite acotar la búsqueda a las solicitudes de tipo proyecto donde la universidad participa con un rol determinado. Se listarán los roles de participación de la universidad activos disponibles en el SGI. Para más información se puede consultar [CSP-Configuración](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/mdu-perfil-unidad-de-gestion/mdu-perfil-unidad-de-gestion-modulo-csp/csp-configuracion).
+* Unidad de gestión: Permite limitar la búsqueda a las solicitudes de una unidad de gestión. La unidad de gestión se indicará mediante un desplegable. En el desplegable de unidades de gestión no estarán incluidas todas las unidades configuradas en el SGI sino solamente las que cada persona tenga habilitadas en la configuración de acceso al SGI.
+* Finalidad: Permite aplicar búsquedas sobre las solicitudes de un determinado tipo de finalidad.  Los tipos de finalidad se listarán a través de un desplegable. Para ampliar información sobre los tipo de finalidad, se puede consultar [CSP-Configuración 3.Tipos de finalidad](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/mdu-perfil-unidad-de-gestion/mdu-perfil-unidad-de-gestion-modulo-csp/csp-configuracion)
 * Abierto plazo de presentación de solicitudes: Este filtro permite buscar las solicitudes que pertenezcan a las convocatorias cuyo plazo de presentación de solicitudes se encuentre vigente al momento actual. El plazo de presentación de solicitudes no es un campo específico de la convocatoria sino que debe haber sido configurado como tal (apartados "configuración solicitudes" y "fases" de la Convocatoria). En caso que la Solicitud no se haya asociado a ninguna convocatoria registrada en el SGI  o no tenga informado el plazo de presentación de solicitudes quedará excluida de los resultados, pues el filtro no podrá aplicarse sobre ella.
 * Plazo de presentación de solicitudes. Se podrá filtrar por el periodo de presentación de las solicitudes, permitiendo especificar la fecha de inicio y fin de este periodo. Cada una de las fechas, inicio y fin, se podrá introducir como un rango "fecha desde" "fecha hasta". Con este filtro se permitirá buscar las solicitudes que pertenezcan a convocatorias registradas en el SGI, configuradas con "presentación de solicitudes a través del SGI" y cuyo plazo de presentación de solicitudes, especificado en lo apartados "configuración solicitudes" y "fases" de la Convocatoria, cumpla el/los rango/s de fecha/s indicados en este filtro.
-* Fecha publicación convocatoria desde \- hasta: Con los campos "desde" y "hasta", ambos del tipo fecha, se puede establecer un periodo que permitirá buscar las solicitudes que pertenezcan a las convocatorias cuya fecha de publicación esté comprendida en el mismo. Ambos campos disponen de un control calendario a través del que se podrá seleccionar la fecha deseada. En caso que la Solicitud no se haya asociado a ninguna convocatoria registrada en el SGI quedará excluida de los resultados, pues el filtro no podrá aplicarse sobre ella.
-* Palabras clave: Este filtro actúa sobre las palabras clave de la solicitud. Se pueden incluir una o varias palabras. Este campo sigue el comportamiento general descrito en [MDU\-Manual de usuario \- 9 Palabras clave](https://confluence.um.es/confluence/display/HERCULES/MDU+-+Manual+de+usuario#MDUManualdeusuario-9.Palabrasclave "https://confluence.um.es/confluence/display/HERCULES/MDU+-+Manual+de+usuario#MDUManualdeusuario-9.Palabrasclave").
-* Activo en SGI: Es un desplegable con los valores "sí", "no", "todos". La entidad "solicitud" admite eliminación con recuperación ([MDU\-Manual de usuario \- 3\.10 Eliminar elemento](https://confluence.um.es/confluence/display/HERCULES/MDU+-+Manual+de+usuario#MDUManualdeusuario-3.10Eliminarelemento "https://confluence.um.es/confluence/display/HERCULES/MDU+-+Manual+de+usuario#MDUManualdeusuario-3.10Eliminarelemento")), con el campo "activo" se permite realizar búsquedas sobre las solicitudes que hubieran sido eliminadas. Por defecto el filtro está precargado con el valor "sí", para que de partida solo se muestren las solicitudes activas. Para mostrar las solicitudes que hubieran sido eliminadas se debe establecer el valor de este filtro a:
-	+ No: se muestran solo las solicitudes que hubieran sido desactivadas (eliminadas).
-	+ Todas: se muestran todas las solicitudes, tanto las activas como las desactivadas (eliminadas).
+* Fecha publicación convocatoria desde - hasta: Con los campos "desde" y "hasta", ambos del tipo fecha, se puede establecer un periodo que permitirá buscar las solicitudes que pertenezcan a las convocatorias cuya fecha de publicación esté comprendida en el mismo. Ambos campos disponen de un control calendario a través del que se podrá seleccionar la fecha deseada. En caso que la Solicitud no se haya asociado a ninguna convocatoria registrada en el SGI quedará excluida de los resultados, pues el filtro no podrá aplicarse sobre ella.
+* Histórico estado solicitud: Campo para aplicar búsquedas por un estado por el que haya pasado la solicitud. Es un desplegable con el listado de estados posibles.
+* Fecha de estado desde - hasta: Con los campos "desde" y "hasta", ambos del tipo fecha, se puede establecer un periodo que permitirá buscar las solicitudes que hayan pasado por el estado indicado en el campo "Histórico estado solicitud" en el rango indicado.
+* Palabras clave: Este filtro actúa sobre las palabras clave de la solicitud. Se pueden incluir una o varias palabras. Este campo sigue el comportamiento general descrito en [MDU-Manual de usuario - 9 Palabras clave](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario#MDUManualdeusuario-9.Palabrasclave).
+* Activo en SGI: Es un desplegable con los valores "sí", "no", "todos". La entidad "solicitud" admite eliminación con recuperación ([MDU-Manual de usuario - 3.10 Eliminar elemento](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario#MDUManualdeusuario-3.10Eliminarelemento)), con el campo "activo" se permite realizar búsquedas sobre las solicitudes que hubieran sido eliminadas. Por defecto el filtro está precargado con el valor "sí", para que de partida solo se muestren las solicitudes activas. Para mostrar las solicitudes que hubieran sido eliminadas se debe establecer el valor de este filtro a:
+  + No: se muestran solo las solicitudes que hubieran sido desactivadas (eliminadas).
+  + Todas: se muestran todas las solicitudes, tanto las activas como las desactivadas (eliminadas).
 
 Una vez introducidos los filtros de búsqueda se debe pulsar el botón "Buscar". Los resultados coincidentes se mostrarán en el listado de resultados. Todos los filtros de búsqueda actuarán como una conjunción "y", es decir, las solicitudes que se muestren en el listado de resultados deberán cumplir todos los filtros especificados.
 
@@ -202,21 +267,15 @@ Se puede utilizar el botón "Limpiar" para vaciar cualquier valor introducido en
 
 Si se pulsa el botón "Buscador simple" se cambiará a la versión básica del buscador.
 
-#### 2\.3 Exportación de solicitudes
+#### 2.3 Exportación de solicitudes
 
-El listado de solicitudes obtenido del buscador puede ser exportado siguiendo los criterios generales indicados en [MDU \- Exportación de listados](https://confluence.um.es/confluence/display/HERCULES/MDU+-+Manual+de+usuario#MDUManualdeusuario-3.6Exportaci%C3%B3ndelistados "https://confluence.um.es/confluence/display/HERCULES/MDU+-+Manual+de+usuario#MDUManualdeusuario-3.6Exportaci%C3%B3ndelistados"). 
+El listado de solicitudes obtenido del buscador puede ser exportado siguiendo los criterios generales indicados en [MDU - Exportación de listados](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario#MDUManualdeusuario-3.6Exportaci%C3%B3ndelistados).
 
 ![](/attachments/597853537/857473228.png)
 
 Al pulsar el icono de exportación situado a pie del listado de resultados, se mostrarán las opciones de exportación propias de las solicitudes:
 
-  
-
-
-![](/attachments/597853537/841089184.png)
-
-  
-
+![](/attachments/597853537/1154777089.png)
 
 Se debe seleccionar el formato de exportación. Los disponibles son:
 
@@ -228,99 +287,94 @@ El detalle de una solicitud se encuentra agrupado en diferentes apartados. Todos
 * Se se pulsa sobre la casilla "todos" estando marcada, se desmarcarán todas las casillas, pudiendo pasar a seleccionar individualmente cada una de ellas.
 * Si la casilla "todos" está marcada, se podrán desmarcar una a una las casillas de aquellos apartados que no se desea incluir en la exportación.
 
-Una vez introducidos todos los criterios de la exportación se deberá pulsar el botón "Exportar", se generará el documento asociado que podrá ser nombrado y descargado a la unidad de disco deseada. 
+Una vez introducidos todos los criterios de la exportación se deberá pulsar el botón "Exportar", se generará el documento asociado que podrá ser nombrado y descargado a la unidad de disco deseada.
 
-  
-
-
-### 3\. Creación de una solicitud
+### 3. Creación de una solicitud
 
 Desde el listado de solicitudes se dispondrá del botón "Añadir solicitud".
 
 ![](/attachments/597853537/857473229.png)
 
-  
-
-
 Al pulsar este botón se mostrará la ventana de introducción de "Datos generales" de una solicitud, que presenta el siguiente aspecto:
 
-![](/attachments/597853537/597882851.png)  
+![](https://treetk.atlassian.net/wiki/download/thumbnails/178770231/03_UG_crear_solicitud_1.png?version=1&modificationDate=1738135129354&cacheVersion=1&api=v2&width=1000&height=479)
 
-
-Para la creación de una nueva solicitud únicamente es necesario informar los datos del apartado de "Datos generales", el resto de apartados se podrán informar desde la edición o modificación de la solicitud (ver apartado del manual [Modificar una solicitud](#CSPSolicitudes-4.Modificarunasolicitud "#CSPSolicitudes-4.Modificarunasolicitud")).
+Para la creación de una nueva solicitud únicamente es necesario informar los datos del apartado de "Datos generales", el resto de apartados se podrán informar desde la edición o modificación de la solicitud (ver apartado del manual [Modificar una solicitud](#CSPSolicitudes-4.Modificarunasolicitud)).
 
 A continuación se describe cada uno de los campos solicitados en este formulario o pantalla:
 
-* Convocatoria. Campo para buscar la convocatoria a la que pertenece la solicitud, siempre y cuando la convocatoria este registrada previamente en el SGI. Para indicar la convocatoria se utiliza el buscador común de convocatorias [MDU\-Manual de usuario \- 7\.1 Buscador de convocatorias](https://confluence.um.es/confluence/display/HERCULES/MDU+-+Manual+de+usuario#MDUManualdeusuario-7.1Buscadordeconvocatorias "https://confluence.um.es/confluence/display/HERCULES/MDU+-+Manual+de+usuario#MDUManualdeusuario-7.1Buscadordeconvocatorias"). La convocatoria seleccionada que se devolverá desde el buscador será a la que quedará vinculada la solicitud. El título de la convocatoria se mostrará sobre el campo "Convocatoria" de este formulario. Será obligatorio indicar una convocatoria salvo que se cumplimente el campo "Identificación convocatoria". Si no se especifica una convocatoria de las registradas en el SGI la solicitud no dispondrá de información como: modalidad seleccionada, hitos, áreas temáticas (en el caso de proyectos).
-* Identificación convocatoria: Campo de texto libre para introducir un identificador de una convocatoria que no ésta registrada en el SGI. Si no se ha seleccionado una convocatoria registrada en el SGI en el campo anterior, este campo será obligatorio.
-* Tipo solicitud SGI: Campo de tipo desplegable que indica el tipo de la solicitud, es decir, discrimina si la solicitud es de tipo "proyecto", "grupo de investigación" o "rrhh". Por defecto estará marcado el valor "Proyecto". En el caso de que se haya elegido una Convocatoria registrada en el SGI (se ha informado el campo "Convocatoria"), se recuperará el dato de la misma y no se deja modificar tal y como muestra la siguiente imagen:
+* Origen solicitud: Es un campo obligatorio. Por defecto estará relleno al valor "Convocatoria registrada en el SGI". Es un campo en base al cual se activan unas obligatoriedades u otras en referencia a la cumplimentación de campos en este pantalla:
+  + Convocatoria registrada en el SGI. Indicará que la solicitud  se va a vincular a una convocatoria que previamente se hubiera creado en el SGI y figure en estado "registrada". Se habilitará el campo "convocatoria" que será un buscador sobre las convocatorias registradas en el SGI, siendo obligatorio seleccionar una de ellas. Al seleccionar una convocatoria de las listadas en el buscador, se rellenarán automáticamente los campos "referencia externa de la convocatoria", "unidad de gestión", "modelo de ejecución" y "finalidad", así como "tipo de solicitud SGI". Estos campos tomará el mismo valor que tengan en la convocatoria y no podrán ser modificados en la solicitud. Además, el campo "año" de la solicitud tomará de forma inicial el valor indicado en la convocatoria, si estuviese informado, o bien el año en curso, en caso de no estarlo. En cualquiera de los dos casos el valor del año podrá ser modificado en la solicitud. También se recuperará de la convocatoria el listado de entidades convocantes, sobre las que se podrá seleccionar la modalidad sobre la que concurre la solicitud (siempre que en la convocatoria se hubiera incluido el detalle de la/s entidad/es convocante/s y su plan de investigación)
 
-![](/attachments/597853537/597882857.png)
+![](https://treetk.atlassian.net/wiki/download/thumbnails/178770231/03_UG_crear_solicitud_2_convocatoria_SGI.png?version=1&modificationDate=1738136901904&cacheVersion=1&api=v2&width=1000&height=479)
 
-En caso que la solicitud no se vincule a una convocatoria registrada en el SGI (se ha informado el campo "Identificación Convocatoria"), se deberá indicar obligatoriamente el tipo de formulario de la solicitud. Puede tomar los valores:
+* + Convocatoria no registrada en el SGI. Indica que la solicitud se corresponde con una convocatoria, pero que ésta no ha sido introducida/registrada en el SGI. En este caso se desactivará el buscador de convocatorias y quedará disponible el campo "Referencia externa convocatoria" que permitirá indicar el código o referencia de la convocatoria que la identifica con carácter oficial a nivel externo, en el organismo o entidad correspondiente, y que, en este caso, es un dato obligatorio. Se debe de enmarcar la solicitud dentro de la convocatoria a la que pertenece, pero sin que los datos de detalle de ésta se recojan en el SGI. En este escenario, también será obligatorio indicar la "unidad de gestión" a la que estará asociada la convocatoria, así como su modelo de ejecución y finalidad. También será obligatorio indicar el "Tipo de solicitud SGI" (proyecto, grupo o RRHH) para que se active el bloque de datos de detalle que corresponda según el tipo de solicitud. El campo año se rellena automáticamente con el valor del año en curso, pero podrá ser modificado.
 
-* + - Proyecto
-		- Grupo
-		- RRHH
+![](https://treetk.atlassian.net/wiki/download/thumbnails/178770231/03_UG_crear_solicitud_3_convocatoria_no_SGI.png?version=2&modificationDate=1738574065253&cacheVersion=1&api=v2&width=1000&height=479)
 
-![](/attachments/597853537/597882828.png)
+* + Sin convocatoria. Se elegirá esta opción cuando se vaya a crear una solitud que no se corresponda con ninguna convocatoria. Es una solicitud que no asocia a la financiación de una convocatoria sino a cualquier otro mecanismo. En este caso será obligatorio indicar la unidad de gestión, el modelo de ejecución y la finalidad. Los modelos de ejecución disponibles sólo será aquellos que estén configurados para permitir, precisamente, la creación de solitudes sin convocatorias.  Ver [CSP-Configuración - Modelo Ejecución - Datos generales](https://treetk.atlassian.net/wiki/spaces/HERCULES/pages/178770054/CSP-Configuraci+n). En caso que no se disponga de ningún modelo de ejecución con esta configuración, no podrá crearse una solicitud sin convocatoria. También será obligatorio cumplimentar el campo "Tipo solicitud SGI" para que se active el bloque de datos de detalle de la solicitud. Como en los escenarios anteriores, el campo año se rellena automáticamente con el año actual, pero puede ser modificado.
 
-* Unidad de gestión: Campo de tipo desplegable que indica la unidad de gestión a la que pertenece la solicitud. En el caso de que se haya elegido una Convocatoria registrada en el SGI (se ha informado el campo "Convocatoria"), se recuperará el campo unidad de gestión de la convocatoria asociado a la misma y no se deja modificar tal y como muestra la siguiente imagen:
+![](https://treetk.atlassian.net/wiki/download/thumbnails/178770231/03_UG_crear_solicitud_4_sin_convocatoria.png?version=1&modificationDate=1738139281619&cacheVersion=1&api=v2&width=1000&height=480)
 
-![](/attachments/597853537/597882829.png)
+* Convocatoria. Como ya se ha indicado anteriormente, este campo se deberá de cumplimentar cuando se haya seleccionado previamente el valor "convocatoria registrada en el SGI" en el selector "origen solicitud". Para indicar la convocatoria se utiliza el buscador común de convocatorias [MDU-Manual de usuario - 7.1 Buscador de convocatorias](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario#MDUManualdeusuario-7.1Buscadordeconvocatorias). La convocatoria seleccionada que se devolverá desde el buscador será a la que quedará vinculada la solicitud. El título de la convocatoria se mostrará sobre el campo "Convocatoria" de este formulario. Tras seleccionar la convocatoria se rellenarán automáticamente los campos unidad de gestión, modelo de ejecución, finalidad y tipo de solicitud SGI, que tomarán el mismo valor que tengan en la convocatoria seleccionada y no se podrán modificar.
+* Referencia externa convocatoria: Campo de texto libre para introducir cualquier referencia que identifique a la convocatoria en el organismo externo al que pertenece o, por ejemplo el identificador en la BDNS (base de datos nacional de subvenciones). El SGI no limita qué  identificador externo debe utilizarse, queda a libertad de la unidad de gestión. Este campo sólo estará disponible si se ha seleccionado uno de los valores "convocatoria registrada en el SGI" o "convocatoria no registrada en el SGI" en el campo "origen de la solicitud". Si se ha seleccionado el valor "convocatoria registrada en el SGI", la referencia externa será un campo opcional (ya que el detalle de la convocatoria ya se habrá registrado en el SGI), pero si se ha seleccionado el valor  "convocatoria no registrada en el SGI", este campo de referencia externa será obligatorio. En este caso no se ha creado la convocatoria en el SGI y para crear la solicitud asociada a la convocatoria se debe de introducir algún código que la identifique.
+* Unidad de gestión: Campo de tipo desplegable que indica la unidad que se va a encargar de la gestión de la solicitud. El comportamiento de este campo dependerá del valor seleccionado en el campo "origen solitud":
+  + "convocatoria registrada en el SGI". Cuando se haya seleccionado una convocatoria a través del buscador proporcionado, se recuperará el campo unidad de gestión de la convocatoria seleccionada. Este valor no se podrá modificar.
+  + "convocatoria no registrada en el SGI". El campo será de obligada cumplimentación. Las unidades de gestión que contendrá el listado serán las disponibles para la persona que está haciendo uso de la aplicación y que dependerán de la configuración de sus permisos.
+  + "sin convocatoria". El campo será de obligada cumplimentación. Las unidades de gestión que contendrá el listado serán aquellas que, de entre las disponibles para la persona que está haciendo uso de la aplicación y que dependerán de la configuración de sus permisos, tengan algún modelo de ejecución configurado para permitir la creación de solicitudes sin convocatoria (Ver [CSP-Configuración - Modelo Ejecución - Datos generales](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/mdu-perfil-unidad-de-gestion/mdu-perfil-unidad-de-gestion-modulo-csp/csp-configuracion#CSPConfiguraci%C3%B3n-7.2.1Modelodeejecuci%C3%B3n-Datosgenerales)).
+* Modelo de ejecución: Campo que indica el modelo de ejecución en el que se clasifica la solicitud. El comportamiento de este campo dependerá del valor seleccionado en el campo "origen solitud":
+  + "convocatoria registrada en el SGI". Cuando se haya seleccionado una convocatoria a través del buscador proporcionado, se recuperará el modelo de ejecución de la convocatoria seleccionada. Este valor no se podrá modificar.
+  + "convocatoria no registrada en el SGI". El campo será de obligada cumplimentación. Se deberá seleccionar un valor de los incluidos en el listado. El listado contendrá los modelos de ejecución activos disponibles para la unidad de gestión seleccionada en el campo anterior.
+  + "sin convocatoria".  El campo será de obligada cumplimentación. Se deberá seleccionar un valor de los incluidos en el listado. El listado contendrá los modelos de ejecución activos disponibles para la unidad de gestión seleccionada en el campo anterior y que hayan sido configurados para permitir la creación de solicitudes sin convocatoria (Ver [CSP-Configuración - Modelo Ejecución - Datos generales](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/mdu-perfil-unidad-de-gestion/mdu-perfil-unidad-de-gestion-modulo-csp/csp-configuracion#CSPConfiguraci%C3%B3n-7.2.1Modelodeejecuci%C3%B3n-Datosgenerales)).
+* Finalidad: Campo que indica el tipo de finalidad bajo el que se clasifica la solicitud. El comportamiento de este campo dependerá del valor seleccionado en el campo "origen solitud":
+  + "convocatoria registrada en el SGI". Cuando se haya seleccionado una convocatoria a través del buscador proporcionado, se recuperará la finalidad indicada en la convocatoria seleccionada. Este valor no se podrá modificar.
+  + "convocatoria no registrada en el SGI". El campo será de obligada cumplimentación. Se deberá seleccionar un valor de los incluidos en el listado. El listado contendrá los tipos de finalidad disponibles para el modelo de ejecución seleccionado en el campo anterior.
+  + "sin convocatoria". El campo será de obligada cumplimentación. Se deberá seleccionar un valor de los incluidos en el listado. El listado contendrá los tipos de finalidad disponibles para el modelo de ejecución seleccionado en el campo anterior.
+* Tipo solicitud SGI: En el caso de que se haya elegido una Convocatoria registrada en el SGI (se ha informado el campo "Convocatoria"), se recuperará el dato de la misma y no se permitirá su modificación. Este campo se deberá cumplimentar cuando se haya seleccionado previamente uno de los valores "convocatoria no registrada en el SGI" o "solicitud sin convocatoria"  en el selector "origen de la solicitud". Para cumplimentarlo se debe de seleccionar un valor de los disponibles en el listado que se despliega: "proyecto", "grupo de investigación" o "rrhh". En base al valor seleccionado el detalle de la solicitud tendrá unos campos u otros [1.1Detalledeunasolicitud](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/mdu-perfil-unidad-de-gestion/mdu-perfil-unidad-de-gestion-modulo-csp/csp-solicitudes#CSPSolicitudes-1.1Detalledeunasolicitud). El detalle de campos de las solicitudes de proyectos y grupos puede consultarse en apartados posteriores de este manual.
+  + - Datos de proyecto [4.5DatosProyecto-Fichageneral](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/mdu-perfil-unidad-de-gestion/mdu-perfil-unidad-de-gestion-modulo-csp/csp-solicitudes#CSPSolicitudes-4.5DatosProyecto-Fichageneral)
+    - Datos de RRHH: [4.14DatossolicitudRRHH-Solicitante](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/mdu-perfil-unidad-de-gestion/mdu-perfil-unidad-de-gestion-modulo-csp/csp-solicitudes#CSPSolicitudes-4.14DatossolicitudRRHH-Solicitante)
+    - Cuando se selecciona el tipo de solicitud "grupo" será necesario cumplimentar dos campos adicionales:
 
-En caso que la solicitud no se vincule a una convocatoria registrada en el SGI (se ha informado el campo "Identificación Convocatoria"), se deberá indicar obligatoriamente la unidad de gestión a la que pertenece la solicitud. El listado disponible serán las unidades de gestión sobre las que el usuario tenga habilitado el permiso de creación de solicitudes.
+* + - * Tipo solicitud grupo: Campo de tipo desplegable que indica si se trata de una solicitud de constitución de grupo o de modificación de un grupo. Es un campo obligatorio para las solicitudes que tengan en el campo "tipo solicitud SGI" el valor "Grupo". Puede tomar los valores:
+        + Constitución nuevo grupo
+        + Modificación datos grupo
+          - Grupo: Únicamente se muestra y es un campo obligatorio en el caso de que en el campo "Tipo solicitud grupo" se haya seleccionado la opción "Modificación datos grupo". En caso contrario no se mostrará este campo. Es un campo de tipo desplegable con el nombre de los grupos de investigación en los que la persona introducida en el campo "Solicitante/IP" es el investigador/a principal o es una persona autorizada del grupo de investigación. Si no se ha introducido el "Solicitante/IP" el campo estará deshabilitado. Una vez introducido el dato  "Solicitante/IP" se muestra el listado de grupos de investigación para los que la persona seleccionada actúa con rol IP o figura como persona autorizada.
+    - * + ![](https://treetk.atlassian.net/wiki/download/thumbnails/178770231/NuevaSolicitudModificacionGrupo1.png?version=1&modificationDate=1660892757517&cacheVersion=1&api=v2&width=1000&height=117)
 
-![](/attachments/597853537/597882824.png)
+![](https://treetk.atlassian.net/wiki/download/thumbnails/178770231/NuevaSolicitudModificacionGrupo2.png?version=1&modificationDate=1660892872150&cacheVersion=1&api=v2&width=1000&height=128)
 
-* Solicitante/IP: Campo para buscar a la persona que es el solicitante o investigador/a principal del proyecto o del nuevo grupo de investigación que se quiere constituir. Para indicar la persona se utiliza el buscador común de personas [MDU \- Manual de usuario \- 8\.1 Personas](https://confluence.um.es/confluence/display/HERCULES/MDU+-+Manual+de+usuario#MDUManualdeusuario-8.1Personas "https://confluence.um.es/confluence/display/HERCULES/MDU+-+Manual+de+usuario#MDUManualdeusuario-8.1Personas"). Únicamente se muestra este campo si en el campo "Tipo solicitud SGI" se ha seleccionado "Proyecto" o "Grupo". En estos casos será un campo obligatorio. Cuanto el "Tipo solicitud SGI" es "RRHH" no se pinta el campo ni será obligatorio.
+* Solicitante/IP: Campo para buscar a la persona que es el solicitante o investigador/a principal del proyecto o del nuevo grupo de investigación que se quiere constituir. Para indicar la persona se utiliza el buscador común de personas [MDU - Manual de usuario - 8.1 Personas](https://treetk.atlassian.net/wiki/display/HERCULES/MDU+-+Manual+de+usuario#MDUManualdeusuario-8.1Personas). Únicamente se muestra este campo si en el campo "Tipo solicitud SGI" se ha seleccionado "Proyecto" o "Grupo". En estos casos será un campo obligatorio. Cuanto se selecciona el valor "RRRH" en el campo "Tipo solicitud SGI", este campo "solicitante" no estará habilitado, pues se recogerá en el detalle de la solicitud de RRHHH.
+* Año: Campo que permite introducir el año en el que se encuadra la solicitud. Si la solicitud se vincula a una "convocatoria registrada en el SGI" , el año tomará el valor del indicado en la convocatoria, aunque podrá modificarse. Si en la convocatoria no se hubiese introducido ningún valor para el campo año, en la solicitud se rellenará con el año actual, si bien podrá modificarse. Si la solicitud se está creando bajo cualquiera de los tipos de origen "convocatoria no registrada en el SGI" o "sin convocatoria", el campo año tomará por defecto el valor del año en curso, si bien podrá modificarse. No se realiza ninguna comprobación del valor introducido en el campo año sobre la fecha de creación de la solicitud, es decir, podrá indicarse un año diferente al correspondiente a la fecha actual. El año es de introducción libre quedando delegado en la unidad de gestión la introducción de un dato coherente para su uso posterior.
 * Código de registro en entidad convocante:  Campo de texto libre para introducir el código de registro de la solicitud en la entidad convocante, en caso que la solicitud se haya registrado/presentado de forma paralela en la entidad convocante. En el caso de las convocatorias del plan propio (internas a la Universidad) el código introducido se correspondería con el código asignado en el Registro de la institución. Es un campo opcional.
 * Título: Campo de texto para introducir el título de la solicitud, si se trata de una solicitud de un proyecto de investigación, será el título del proyecto, si es una solicitud de grupos será el nombre del grupo. Es un campo opcional.
-* Listado de entidades convocantes: En el caso de que se haya elegido una Convocatoria registrada en el SGI (se ha informado el campo "Convocatoria"), se recuperará el listado de entidades convocantes junto con el plan de investigación y el programa seleccionados para cada entidad convocante de la convocatoria asociado a la misma tal y como muestra la siguiente imagen:
+* Observaciones: Campo de texto abierto para detallar cualquier observación genérica. Es un campo opcional.
+* Listado de entidades convocantes: En el caso de que se haya elegido una Convocatoria registrada en el SGI y una vez que se haya seleccionado una convocatoria de las disponibles (se ha informado el campo "Convocatoria"), se recuperará el listado de entidades convocantes de la convocatoria  junto con el plan de investigación y el programa seleccionados para cada entidad convocante:
 
-![](/attachments/597853537/597882818.png)
+![](https://treetk.atlassian.net/wiki/download/thumbnails/178770231/NuevaSolicitudPrograma1.png?version=1&modificationDate=1660890491616&cacheVersion=1&api=v2&width=1000&height=152)
 
 El personal de la unidad de gestión podrá seleccionar un programa/subprograma/modalidad/submodalidad por cada una de las entidades convocantes, de acuerdo a la definición de la convocatoria pulsando el icono del lápiz en cada una de las entidades convocantes mostradas en la tabla. Al pulsar el icono de la acción se muestra la siguiente pantalla:
 
-![](/attachments/597853537/597882821.png)
+![](https://treetk.atlassian.net/wiki/download/thumbnails/178770231/NuevaSolicitudPrograma2.png?version=1&modificationDate=1660890824206&cacheVersion=1&api=v2&width=600&height=248)
 
-Se muestra el árbol de programas/subprogramas/modalidades/submodalidades del plan de investigación de la entidad convocante a partir del programa seleccionado en la convocatoria permitiendo al usuario ir desplegando el árbol de programas para seleccionar el adecuado.  
+Se muestra el árbol de programas/subprogramas/modalidades/submodalidades del plan de investigación de la entidad convocante a partir del programa seleccionado en la convocatoria permitiendo al usuario ir desplegando el árbol de programas para seleccionar el adecuado.
 
-![](/attachments/597853537/597882820.png)
+![](https://treetk.atlassian.net/wiki/download/thumbnails/178770231/NuevaSolicitudPrograma3.png?version=1&modificationDate=1660891016962&cacheVersion=1&api=v2&width=600&height=631)
 
 En el árbol mostrado, serán seleccionables todos los nodos de cualquier rama a partir del nodo referenciado por la convocatoria (campo "programa/subprograma de la convocatoria") o el mismo nodo referenciado en la convocatoria en caso que de él no cuelguen más nodos. Únicamente se podrá seleccionar una modalidad por cada programa de la convocatoria.
 
-![](/attachments/597853537/597882817.png)
+![](https://treetk.atlassian.net/wiki/download/thumbnails/178770231/NuevaSolicitudPrograma4.png?version=1&modificationDate=1660891073699&cacheVersion=1&api=v2&width=600&height=633)
 
 Una vez seleccionada la modalidad se activará el botón "Aceptar". Al pulsar sobre el botón "Aceptar" la modalidad de la solicitud se mostrará en el listado de entidades convocantes  tal y como muestra la siguiente imagen:
 
-![](/attachments/597853537/597882816.png)
+![](https://treetk.atlassian.net/wiki/download/thumbnails/178770231/NuevaSolicitudPrograma5.png?version=1&modificationDate=1660891243425&cacheVersion=1&api=v2&width=1000&height=150)
 
 En caso que la solicitud no se vincule a una convocatoria registrada en el SGI (se ha informado el campo "Identificación Convocatoria") el listado aparecerá vacío y no se podrá seleccionar ningún programa/subprograma/modalidad en la solicitud.
 
-![](/attachments/597853537/597882819.png)
+![](https://treetk.atlassian.net/wiki/download/thumbnails/178770231/NuevaSolicitudPrograma6.png?version=1&modificationDate=1660890472559&cacheVersion=1&api=v2&width=1000&height=280)
 
-* Observaciones: Campo de texto abierto para detallar cualquier observación genérica. Es un campo opcional.
+Una vez introducidos todos los campos obligatorios del formulario de "Datos generales" se activa el botón "Guardar" y se muestra el icono del signo de admiración en los "Datos generales"  y en el pie de página a lado del botón "Guardar".  Este icono indica que se han introducido cambios en el formulario (se han informado los campos) pero no se ha pulsado "Guardar".
 
-Todos los campos solicitados en el apartado o en el formulario de "Datos generales" de la solicitud son los mismos independientemente del "Tipo Solicitud SGI" (proyecto, grupo o RRHH) excepto para el tipo de solicitud "Grupo" que para este caso se piden dos campos adicionales:
-
-* Tipo solicitud grupo: Campo de tipo desplegable que indica si se trata de una solicitud de constitución de grupo o de modificación de un grupo. Es un campo obligatorio para las solicitudes que tengan en el campo "tipo solicitud SGI" el valor "Grupo". Puede tomar los valores:
-	+ Constitución nuevo grupo
-	+ Modificación datos grupo
-
-![](/attachments/597853537/597882833.png)
-
-* Grupo: Únicamente se muestra y es un campo obligatorio en el caso de que en el campo "Tipo solicitud grupo" se haya seleccionado la opción "Modificación datos grupo". En caso contrario no se mostrará este campo. Es un campo de tipo desplegable con el nombre de los grupos de investigación en los que la persona introducida en el campo "Solicitante/IP" es el investigador/a principal o es una persona autorizada del grupo de investigación. Sino se ha introducido el "Solicitante/IP" el campo estará deshabilitado:
-
-![](/attachments/597853537/597882837.png)
-
-Una vez introducido al "Solicitante/IP" se muestra el listado de grupos de investigación en los que es el investigador/a principal o es una persona autorizada:
-
-![](/attachments/597853537/597882835.png)
-
-Una vez introducidos todos los campos obligatorios del formulario de "Datos generales" se activa el botón "Guardar" y se muestra el icono del signo de admiración en los "Datos generales"  y en el pie de página a lado del botón "Guardar".  Este icono indica que se han introducido cambios en el formulario (se han informado los campos) pero no se ha dado a "Guardar".
-
-![](/attachments/597853537/597882842.png)
+![](https://treetk.atlassian.net/wiki/download/thumbnails/178770231/202407_sol_datos_generales_guardar.png?version=2&modificationDate=1720092006835&cacheVersion=1&api=v2&width=1000&height=478)
 
 Si se pulsa el botón "Guardar" se crea la solicitud con los datos generales de la solicitud.
 
@@ -332,71 +386,60 @@ Si se pulsa el botón Cancelar se cerrará la ventana del mensaje de confirmaci�
 
 Si se pulsa el botón Aceptar la solicitud se crea  y se mostrará un mensaje de que la solicitud se ha creado correctamente igual que el de la siguiente imagen.
 
-![](/attachments/597853537/597882838.png)  
+![](/attachments/597853537/597882838.png)
 
+Una vez creada la solicitud te lleva a la edición o modificación de la solicitud donde se muestran el resto de apartados para que sean cumplimentados. Ver [Modificar una solicitud](#CSPSolicitudes-4.Modificarunasolicitud)
 
-Una vez creada la solicitud te lleva a la edición o modificación de la solicitud donde se muestran el resto de apartados para que sean cumplimentados. Ver [Modificar una solicitud](#CSPSolicitudes-4.Modificarunasolicitud "#CSPSolicitudes-4.Modificarunasolicitud")
+### 4. Modificar una solicitud
 
-### 4\. Modificar una solicitud
-
-La modificación de los datos de una solicitud puede realizarse a través del icono de acción editar ![](/attachments/597853537/597882898.png)del listado de solicitudes. Si ya existe el proyecto generado a partir de la solicitud el personal de gestión no podrá modificar ningún dato de la solicitud y visualizará todos los campos de todos los apartados en modo consulta. Sino existe el proyecto el personal de gestión podrá modificar cualquier dato de cualquiera de los apartados de la solicitud (a excepción de los campos comentados en cada uno de los apartados).  
-
+La modificación de los datos de una solicitud puede realizarse a través del icono de acción editar ![](/attachments/597853537/597882898.png)del listado de solicitudes. Si ya existe el proyecto generado a partir de la solicitud el personal de gestión no podrá modificar ningún dato de la solicitud y visualizará todos los campos de todos los apartados en modo consulta. Sino existe el proyecto el personal de gestión podrá modificar cualquier dato de cualquiera de los apartados de la solicitud (a excepción de los campos comentados en cada uno de los apartados).
 
 ![](/attachments/597853537/857473229.png)
 
 Tras pulsar la acción editar se mostrará el detalle de la solicitud, en su apartado inicial "Datos generales" seleccionado, pudiendo acceder a través del menú lateral izquierdo al resto de apartados.
 
-Si la solicitud es de tipo solicitud SGI "Proyecto" la edición de la solicitud nada mas crearse la solicitud es el siguiente:
+Si la solicitud es de tipo solicitud SGI "Proyecto" la edición de la solicitud de forma inmediata tras haber sido creada, tiene el siguiente aspecto:
 
-![](/attachments/597853537/597882874.png)
+![](https://treetk.atlassian.net/wiki/download/thumbnails/178770231/04_UG_modificar_solicitud_convocatoria_SGI_01.png?version=1&modificationDate=1738154071537&cacheVersion=1&api=v2&width=1200&height=574)
 
-Se muestran los datos introducidos durante la creación de la solicitud de proyecto en el apartado de "Datos generales", pero se muestra el aviso de que existen errores en el formulario, porque hay errores en el apartado "Ficha general" (hay dos campos que son de cumplimentación obligatoria para el caso de solicitudes de tipo "proyecto") los cuales el personal de gestión debe de informarlos para poder guardar la solicitud. No se activará el botón "Guardar" hasta a ver introducido dichos campos obligatorios. Ver funcionalidad del apartado "Ficha general" para mas detalle [4\.5 Datos Proyecto \- Ficha general](#CSPSolicitudes-4.5DatosProyecto-Fichageneral "#CSPSolicitudes-4.5DatosProyecto-Fichageneral").
+Se muestran los datos introducidos durante la creación de la solicitud de proyecto en el apartado de "Datos generales", pero se muestra el aviso de que existen errores en el formulario, porque hay errores en el apartado "Ficha general" (hay dos campos que son de cumplimentación obligatoria para el caso de solicitudes de tipo "proyecto") los cuales el personal de gestión debe de informarlos para poder guardar la solicitud. No se activará el botón "Guardar" hasta a ver introducido dichos campos obligatorios. Ver funcionalidad del apartado "Ficha general" para mas detalle [4.5 Datos Proyecto - Ficha general](#CSPSolicitudes-4.5DatosProyecto-Fichageneral).
 
-La edición de una solicitud de tipo solicitud SGI "Proyecto" que ya se haya editado al menos una vez (ya se han cumplimentado todos los datos obligatorios para la edición o modificación de una solicitud) es el siguiente:
+La edición de una solicitud de tipo solicitud SGI "Proyecto" que ya se haya editado al menos una vez (ya se han cumplimentado todos los datos obligatorios para la edición o modificación de una solicitud) tiene el siguiente aspecto:
 
-![](/attachments/597853537/597882875.png)
-
-  
-
+![](https://treetk.atlassian.net/wiki/download/thumbnails/178770231/04_UG_modificar_solicitud_convocatoria_SGI.png?version=2&modificationDate=1738154128713&cacheVersion=1&api=v2&width=1200&height=574)
 
 Si la solicitud es de tipo solicitud SGI "RRHH" la edición de la solicitud nada mas crearse la solicitud es el siguiente:
 
 ![](/attachments/597853537/597882872.png)
 
-Se muestran los datos introducidos durante la creación de la solicitud de RRHH en el apartado de "Datos generales", pero se muestra el aviso de que existen errores en el formulario, porque hay errores en los apartados "Solicitante", "Tutor/a" y "Memoria" (hay campos que son de cumplimentación obligatoria para el caso de solicitudes de tipo "RRHH") los cuales el personal de gestión debe de informarlos para poder guardar la solicitud. No se activará el botón "Guardar" hasta a ver introducido los campos obligatorios de los tres apartados. Ver funcionalidad en [4\.14 Datos solicitud RRHH \- Solicitante](#CSPSolicitudes-4.14DatossolicitudRRHH-Solicitante "#CSPSolicitudes-4.14DatossolicitudRRHH-Solicitante"), [4\.15 Datos solicitud RRHH \- Tutor/a](#CSPSolicitudes-4.15DatossolicitudRRHH-Tutor/a "#CSPSolicitudes-4.15DatossolicitudRRHH-Tutor/a") y [4\.17 Datos solicitud RRHH \- Memoria](#CSPSolicitudes-4.17DatossolicitudRRHH-Memora "#CSPSolicitudes-4.17DatossolicitudRRHH-Memora")
+Se muestran los datos introducidos durante la creación de la solicitud de RRHH en el apartado de "Datos generales", pero se muestra el aviso de que existen errores en el formulario, porque hay errores en los apartados "Solicitante", "Tutor/a" y "Memoria" (hay campos que son de cumplimentación obligatoria para el caso de solicitudes de tipo "RRHH") los cuales el personal de gestión debe de informarlos para poder guardar la solicitud. No se activará el botón "Guardar" hasta a ver introducido los campos obligatorios de los tres apartados. Ver funcionalidad en [4.14 Datos solicitud RRHH - Solicitante](#CSPSolicitudes-4.14DatossolicitudRRHH-Solicitante), [4.15 Datos solicitud RRHH - Tutor/a](#CSPSolicitudes-4.15DatossolicitudRRHH-Tutor/a) y [4.17 Datos solicitud RRHH - Memoria](#CSPSolicitudes-4.17DatossolicitudRRHH-Memora)
 
 La edición de una solicitud de tipo solicitud SGI "RRHH" que ya se haya editado al menos una vez (ya se han cumplimentado todos los datos obligatorios para la edición o modificación de una solicitud) es el siguiente:
 
 ![](/attachments/597853537/597882870.png)
 
-  
-
-
 Si la solicitud es de tipo solicitud SGI "Grupo" la edición de la solicitud nada mas crearse la solicitud o la edición de una solicitud que previamente se haya modificado es el mismo y es el siguiente:
 
 ![](/attachments/597853537/597882867.png)
 
-En este caso no existen datos obligatorios para el SGI en el resto de apartados que no sea el de "Datos generales", aunque es muy recomendable al menos subir el documento del formulario de constitución o de modificación del grupo al apartado de "Documentos" ([4\.2 Documentos](#CSPSolicitudes-4.2Documentos "#CSPSolicitudes-4.2Documentos")).
-
-  
-
+En este caso no existen datos obligatorios para el SGI en el resto de apartados que no sea el de "Datos generales", aunque es muy recomendable al menos subir el documento del formulario de constitución o de modificación del grupo al apartado de "Documentos" ([4.2 Documentos](#CSPSolicitudes-4.2Documentos)).
 
 La edición de una solicitud esta formada por los siguientes bloques de información o apartados:
 
 * Datos generales: Conjunto de datos de información general sobre la solicitud (ya informados durante la creación de la solicitud).
-* Datos proyecto \- Ficha general: En este apartado se agrupa la información relativa al proyecto/actividad de investigación propuesto. Este apartado solo estará disponible en caso que la solicitud sea de tipo "Proyecto". Contiene datos obligatorios para poder guardar la solicitud.
-* Datos proyecto \-Áreas de conocimiento: En este apartado el proyecto solicitado se podrá clasificar dentro de una o varias áreas de conocimiento. Este apartado solo estará disponible en caso que la solicitud sea de tipo "Proyecto".
-* Datos proyecto \- Clasificaciones: Listado con las distintas clasificaciones (UNESCO, CNAE, ...) con las que se identifica el proyecto/actividad de investigación propuesto. Este apartado solo estará disponible en caso que la solicitud sea de tipo "Proyecto".
-* Datos proyecto \- Equipo: Listado con las personas que forman parte del equipo investigador del proyecto/actividad de investigación propuesto. Este apartado solo estará disponible en caso que la solicitud sea de tipo "Proyecto".
-* Datos proyecto \- Responsable económico: Persona que se encargará de la parte económica del proyecto propuesto. Sólo puede existir un único responsable económico en cada momento. Este apartado solo estará disponible en caso que la solicitud sea de tipo "Proyecto".
-* Datos proyecto \- Socios: Listado de socios, entendidos éstos como empresas, que participarán en el proyecto propuesto. Este apartado solo estará disponible en caso que la solicitud sea de tipo "Proyecto" y si en el campo "Proyecto colaborativo" del apartado "Datos generales" se indica el valor "Sí".
-* Datos proyecto \- Entidades financiadoras: Se visualizarán las entidades financiadoras de la convocatoria, de forma adicional, se podrán añadir otras entidades financiadoras ajenas a la convocatoria. Este apartado solo estará disponible en caso que la solicitud sea de tipo "Proyecto".
-* Datos proyecto \- Desglose presupuesto: Desglose presupuestario del proyecto en solicitud. Este apartado solo estará disponible en caso que la solicitud sea de tipo "Proyecto".
-* Datos proyecto \- Autoevaluación de ética: Cuestionario básico (con preguntas sí/no) que permitirá conocer si el proyecto solicitado debe someterse a evaluación por parte del Comité de ética. Este apartado solo estará disponible en caso que la solicitud sea de tipo "Proyecto".
-* Datos solicitud RRHH \- Solicitante: Recoge información relativa al solicitante. Este apartado solo estará disponible en caso que la solicitud sea de tipo "RRHH". Contiene datos obligatorios para poder guardar la solicitud.
-* Datos solicitud RRHH \- Tutor/a: Persona que el solicitante propone como tutor/a del trabajo de RRHH. Este apartado solo estará disponible en caso que la solicitud sea de tipo "RRHH". Contiene datos obligatorios para poder guardar la solicitud.
-* Datos solicitud RRHH \- Requisitos convocatoria: Requisitos especificados en el apartado "Requisitos IP" y en el apartado "Requisitos Equipo "de la convocatoria relativas al nivel académico y categorías exigidas, con sus correspondientes fechas de anterioridad o posterioridad. Este apartado solo estará disponible en caso que la solicitud sea de tipo "RRHH".
-* Datos solicitud RRHH \- Memoria: Información relativa al trabajo. Este apartado solo estará disponible en caso que la solicitud sea de tipo "RRHH". Contiene datos obligatorios para poder guardar la solicitud.
+* Datos proyecto - Ficha general: En este apartado se agrupa la información relativa al proyecto/actividad de investigación propuesto. Este apartado solo estará disponible en caso que la solicitud sea de tipo "Proyecto". Contiene datos obligatorios para poder guardar la solicitud.
+* Datos proyecto -Áreas de conocimiento: En este apartado el proyecto solicitado se podrá clasificar dentro de una o varias áreas de conocimiento. Este apartado solo estará disponible en caso que la solicitud sea de tipo "Proyecto".
+* Datos proyecto - Clasificaciones: Listado con las distintas clasificaciones (UNESCO, CNAE, ...) con las que se identifica el proyecto/actividad de investigación propuesto. Este apartado solo estará disponible en caso que la solicitud sea de tipo "Proyecto".
+* Datos proyecto - Equipo: Listado con las personas que forman parte del equipo investigador del proyecto/actividad de investigación propuesto. Este apartado solo estará disponible en caso que la solicitud sea de tipo "Proyecto".
+* Datos proyecto - Responsable económico: Persona que se encargará de la parte económica del proyecto propuesto. Sólo puede existir un único responsable económico en cada momento. Este apartado solo estará disponible en caso que la solicitud sea de tipo "Proyecto".
+* Datos proyecto - Socios: Listado de socios, entendidos éstos como empresas, que participarán en el proyecto propuesto. Este apartado solo estará disponible en caso que la solicitud sea de tipo "Proyecto" y si en el campo "Proyecto colaborativo" del apartado "Datos generales" se indica el valor "Sí".
+* Datos proyecto - Entidades financiadoras: Se visualizarán las entidades financiadoras de la convocatoria, de forma adicional, se podrán añadir otras entidades financiadoras ajenas a la convocatoria. Este apartado solo estará disponible en caso que la solicitud sea de tipo "Proyecto".
+* Datos proyecto - Desglose presupuesto: Desglose presupuestario del proyecto en solicitud. Este apartado solo estará disponible en caso que la solicitud sea de tipo "Proyecto".
+* Datos proyecto - Autoevaluación de ética: Cuestionario básico (con preguntas sí/no) que permitirá conocer si el proyecto solicitado debe someterse a evaluación por parte del Comité de ética. Este apartado solo estará disponible en caso que la solicitud sea de tipo "Proyecto".
+* Datos solicitud RRHH - Solicitante: Recoge información relativa al solicitante. Este apartado solo estará disponible en caso que la solicitud sea de tipo "RRHH". Contiene datos obligatorios para poder guardar la solicitud.
+* Datos solicitud RRHH - Tutor/a: Persona que el solicitante propone como tutor/a del trabajo de RRHH. Este apartado solo estará disponible en caso que la solicitud sea de tipo "RRHH". Contiene datos obligatorios para poder guardar la solicitud.
+* Datos solicitud RRHH - Requisitos convocatoria: Requisitos especificados en el apartado "Requisitos IP" y en el apartado "Requisitos Equipo "de la convocatoria relativas al nivel académico y categorías exigidas, con sus correspondientes fechas de anterioridad o posterioridad. Este apartado solo estará disponible en caso que la solicitud sea de tipo "RRHH".
+* Datos solicitud RRHH - Memoria: Información relativa al trabajo. Este apartado solo estará disponible en caso que la solicitud sea de tipo "RRHH". Contiene datos obligatorios para poder guardar la solicitud.
 * Documentos: Apartado para centralizar todos los documentos aportados a la solicitud.
 * Histórico de estados: Es un apartado únicamente de información para mostrar las fechas en las que ha cambiado de estado la solicitud.
 * Hitos: Listado con las fechas de los acontecimientos que se consideren relevantes para la solicitud. Este apartado solo estará disponible en caso que la solicitud se asocie a una convocatoria del SGI.
@@ -411,37 +454,32 @@ Si se pulsa el botón Cancelar se cerrará la ventana del mensaje de confirmaci�
 
 Si se pulsa el botón Aceptar la solicitud se actualiza y se modifican los datos introducidos. Se mostrará un mensaje informativo confirmando que la solicitud ha sido modificada correctamente.
 
-![](/attachments/597853537/597882882.png)  
+![](/attachments/597853537/597882882.png)
 
-
-#### 4\.1 Datos generales
+#### 4.1 Datos generales
 
 Apartado con los datos de información básica o general de una solicitud.
 
-![](/attachments/597853537/597882875.png)
+![](https://treetk.atlassian.net/wiki/download/thumbnails/178770231/04_UG_modificar_solicitud_convocatoria_SGI.png?version=2&modificationDate=1738154128713&cacheVersion=1&api=v2&width=1200&height=574)
 
-En el apartado del manual [Añadir nueva solicitud](#CSPSolicitudes-3.A%C3%B1adirnuevasolicitud "#CSPSolicitudes-3.A%C3%B1adirnuevasolicitud") se puede ver la descripción detallada de cada campo.
+En el apartado del manual [Añadir nueva solicitud](#CSPSolicitudes-3.A%C3%B1adirnuevasolicitud) se puede ver la descripción detallada de cada campo.
 
 En la edición de la solicitud existen las siguientes restricciones respecto al apartado de "Datos generales":
 
-* Convocatoria: Si la solicitud ya fue vinculada a una convocatoria del SGI en la creación, este campo no podrá modificarse y se mostrará en modo consulta al igual que los datos que se obtienen de la convocatoria, es decir, los campos "Tipos solicitud SGI" y "Unidad de gestión"
-
-![](/attachments/597853537/597882603.png)
-
-* Identificación convocatoria: Sólo estará habilitado si durante la creación de la solicitud se ha informado este campo, es decir, la convocatoria no esta registrada en el SGI. En este caso se dejará modificar el campo "Unidad de gestión" siempre y cuando el estado de la solicitud sea "Borrador".
-
-![](/attachments/597853537/597882879.png)
-
+* Convocatoria: Si la solicitud ya fue vinculada a una convocatoria del SGI en la creación, este campo no podrá modificarse y se mostrará en modo consulta al igual que los datos que se obtienen de la convocatoria, es decir, los campos "Tipos solicitud SGI", "Unidad de gestión", "Modelo de ejecución", "finalidad" y "tipo de solicitud SGI"
+* Referencia externa convocatoria: Sólo estará habilitado si la solicitud se creó con origen "convocatoria no registrada en el SGI". En este caso se dejará modificar el campo "Unidad de gestión" siempre y cuando el estado de la solicitud sea "Borrador".
 * Tipo solicitud SGI: Es un campo que ya debe estar cumplimentado desde la creación de la solicitud. En la edición siempre se mostrará en modo consulta (deshabilitado), no se podrá modificar nunca este campo.
 * Tipo solicitud Grupo: Este campo solo estará disponible si la solicitud está vinculada a una convocatoria de tipo grupo (el campo "Tipo Solicitud SGI" tiene el valor "Grupo)". Se mostrará siempre en modo consulta.
-* Unidad de Gestión: Si la solicitud está vinculada a una convocatoria del SGI (campo "convocatoria" informado) este campo se mostrará en modo consulta (deshabilitado) y no se podrá modificar. En caso que la solicitud no se vincule a una convocatoria registrada en el SGI (campo "Identificación convocatoria" informado), el campo se podrá modificar mientras la solicitud este en estado "Borrador".
-* Código de registro: Código de registro de la solicitud generado automáticamente al crear la solicitud. Estará formado por un sufijo unido a la fecha y hora de la creación, por tanto, será único y permitirá identificar inequívocamente a la solicitud. Se mostrará siempre en modo consulta.
+* Unidad de Gestión: Si la solicitud está vinculada a una convocatoria registrada en el SGI (campo "convocatoria" informado) este campo se mostrará en modo consulta (deshabilitado) y no se podrá modificar. En caso que la solicitud no se vincule a una convocatoria registrada en el SGI el campo se podrá modificar mientras la solicitud este en estado "Borrador" y mientras no existan datos asociados en los apartados de Documentos y/o Hitos.
+* Modelo de Ejecución: Si la solicitud está vinculada a una convocatoria registrada en el SGI (campo "convocatoria" informado) este campo se mostrará en modo consulta (deshabilitado) y no se podrá modificar. En caso que la solicitud no se vincule a una convocatoria registrada en el SGI el campo se podrá modificar mientras la solicitud este en estado "Borrador" y mientras no existan datos asociados en los apartados de Documentos y/o Hitos.
+* Finalidad: Si la solicitud está vinculada a una convocatoria registrada en el SGI (campo "convocatoria" informado) este campo se mostrará en modo consulta (deshabilitado) y no se podrá modificar.
+* Código de registro interno: Código de registro de la solicitud generado automáticamente al crear la solicitud. Estará formado por un sufijo unido a la fecha y hora de la creación, por tanto, será único y permitirá identificar inequívocamente a la solicitud. Se mostrará siempre en modo consulta.
 
-#### 4\.2 Documentos
+#### 4.2 Documentos
 
 Apartado para centralizar todos los documentos aportados a la solicitud.
 
-Se mostrarán en forma de árbol, los documentos que se tienen que aportar obligatoriamente (porque son los documentos requeridos configurados en la convocatoria [CSP\-Convocatorias \- 3\.14 Configuración de solicitudes](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/mdu-perfil-unidad-de-gestion/mdu-perfil-unidad-de-gestion-modulo-csp/csp-convocatorias.md#CSPConvocatorias-3.14Configuraci%C3%B3ndesolicitudes "/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/mdu-perfil-unidad-de-gestion/mdu-perfil-unidad-de-gestion-modulo-csp/csp-convocatorias.md#CSPConvocatorias-3.14Configuraci%C3%B3ndesolicitudes")) y los propios documentos adicionales que se quieran aportar a la solicitud agrupados por el campo "Tipo documento". Podrán existir documentos sin "Tipo de documento" que se mostrarán en el árbol de documentos bajo una rama genérica "sin tipo documento".
+Se mostrarán en forma de árbol, los documentos que se tienen que aportar obligatoriamente (porque son los documentos requeridos configurados en la convocatoria [CSP-Convocatorias - 3.14 Configuración de solicitudes](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/mdu-perfil-unidad-de-gestion/mdu-perfil-unidad-de-gestion-modulo-csp/csp-convocatorias#CSPConvocatorias-3.14Configuraci%C3%B3ndesolicitudes)) y los propios documentos adicionales que se quieran aportar a la solicitud agrupados por el campo "Tipo documento". Podrán existir documentos sin "Tipo de documento" que se mostrarán en el árbol de documentos bajo una rama genérica "sin tipo documento".
 
 En la siguiente imagen muestra una vista del árbol de documentos sin ningún documento requerido en la configuración de la convocatoria y sin ningún documento aportado:
 
@@ -467,7 +505,7 @@ A lado de cada documento aportado aparecerá el icono de la acción Ver ![](/att
 
 ![](/attachments/597853537/597882592.png)
 
-##### 4\.2\.1 Añadir documento
+##### 4.2.1 Añadir documento
 
 El botón "añadir documento" permite adjuntar un documento de los obligatorios marcados por la convocatoria (apartado "Configuración Solicitudes" de la convocatoria) o bien cualquier otro documento adicional a la solicitud. Tras pulsar el botón se muestra a la derecha del árbol de documentos la pantalla de introducción de datos:
 
@@ -477,7 +515,9 @@ Los campos de un documento son:
 
 * Nombre: Campo de texto libre para introducir el nombre del documento que se visualizará en el árbol de documentos. Es un campo obligatorio.
 * Documento: Fichero a adjuntar,  a través de la lupa se abrirá una pantalla de examinador de archivos que permite seleccionar un fichero desde la unidad de disco local. Una vez seleccionado un fichero se mostrará el nombre y extensión del mismo sobre el campo "Documento" del formulario. Es un campo obligatorio.
-* Tipo de documento: Nombre del tipo de documento. Es un campo desplegable con los tipos de documento asociados a la fase de presentación de solicitudes configurada en la pantalla de "Configuración Solicitud de la Convocatoria". En caso de estar creando una solicitud no vinculada a una convocatoria del SGI o que no se haya definido dicha fase se mostrará el combo vacío.Aunque la solicitud esté vinculada a una convocatoria del SGI, no será obligatorio que un documento subido tenga obligatoriamente uno de los tipos de documentos del listado (podrá seleccionarse el valor vacío sobre él). En este caso el documento será uno de los que se visualice en el árbol bajo la rama genérica "sin tipo documento". Es un campo opcional.
+* Tipo de documento: Nombre del tipo de documento. Es un campo desplegable con los tipos de documento asociados a la fase de presentación de solicitudes configurada en la pantalla de "Configuración Solicitud de la Convocatoria". En caso de estar creando una solicitud no vinculada a una convocatoria del SGI o que no se haya definido dicha fase se mostrará el combo vacío.
+
+  Aunque la solicitud esté vinculada a una convocatoria del SGI, no será obligatorio que un documento subido tenga obligatoriamente uno de los tipos de documentos del listado (podrá seleccionarse el valor vacío sobre él). En este caso el documento será uno de los que se visualice en el árbol bajo la rama genérica "sin tipo documento". Es un campo opcional.
 * Comentarios: Campo de texto libre para informar de las indicaciones u observaciones sobre el documento subido. Es un campo opcional.
 
 Hasta que no se cumplimente todos los datos obligatorios no se activará el botón "Aceptar".
@@ -490,7 +530,7 @@ Al pulsar sobre el botón "Aceptar" el documento será añadido al árbol de doc
 
 Aunque el documento se visualice en el árbol de documentos no se guardará en el sistema documental ni será adjuntado a la solicitud hasta que el personal de gestión pulse el botón "Guardar" en la parte inferior de la pantalla en el pie de página para actualizar la solicitud, funcionamiento genérico y universal en todo el SGI, si no se pulsa sobre el botón "Guardar" todos los cambios realizados se perderán.
 
-##### 4\.2\.2 Modificar documento
+##### 4.2.2 Modificar documento
 
 Para poder acceder a la modificación de los datos de un documento del árbol de documentos de una solicitud, se debe de pulsar sobre el icono de la acción Ver ![](/attachments/597853537/597882617.png) mostrado junto con el nombre de cada uno de los documentos aportados del árbol.
 
@@ -508,7 +548,7 @@ Una vez introducidos los cambios se debe de pulsar el botón "Aceptar" y los cam
 
 Para que se consoliden los datos el personal de gestión deberá pulsar sobre el botón "Guardar" situado en la parte inferior de la pantalla en el pie de página para actualizar la solicitud, si no se pulsa sobre el botón "Guardar" todos los cambios realizados se perderán.
 
-##### 4\.2\.3 Eliminar documento
+##### 4.2.3 Eliminar documento
 
 Para poder eliminar un documento del árbol de documentos de una solicitud, se debe de pulsar sobre el icono de la acción Ver ![](/attachments/597853537/597882617.png) mostrado junto con el nombre de cada uno de los documentos aportados del árbol.
 
@@ -526,7 +566,7 @@ Si se pulsa el botón Cancelar se cerrará la ventana del mensaje de confirmaci�
 
 Si se pulsa el botón Aceptar el documento desaparecerá del árbol de documento de la solicitud pero no se hará efectivo el borrado en la aplicación hasta que el personal  de gestión no pulse el botón "Guardar" para que los cambios realizados (en este caso un borrado de un documento) se consoliden.
 
-##### 4\.2\.4 Descargar fichero
+##### 4.2.4 Descargar fichero
 
 Para poder eliminar un documento del árbol de documentos de una solicitud, se debe de pulsar sobre el icono de la acción Ver ![](/attachments/597853537/597882617.png) mostrado junto con el nombre de cada uno de los documentos aportados del árbol.
 
@@ -536,98 +576,89 @@ Al pulsar el icono se muestra en la parte derecha del árbol de documentos el de
 
 Al pulsar el botón de "Descargar fichero" directamente se descargará el fichero en la unidad de disco local.
 
-#### 4\.3 Histórico estados
+#### 4.3 Histórico estados
 
 Este apartado se irá completando automáticamente a medida que se van sucediendo los cambios de estado de la solicitud. Cada vez que se modifica el estado de la solicitud se mostrará en la tabla el estado y la fecha del estado que figurasen hasta ese momento en la solicitud. También se llevará al histórico el comentario asociado al estado. De esta forma quedarán historificados todos los estados por los que fue pasando la solicitud, la fecha de los mismos y su comentario.
 
-De forma general, la fecha del estado actual se corresponderá siempre con la fecha en la que se realiza la acción de "Cambiar estado" (apartado [Cambiar estado a una solicitud](#CSPSolicitudes-5.Cambiarestadoaunasolicitud "#CSPSolicitudes-5.Cambiarestadoaunasolicitud")) habiendo realizado un cambio en el valor del estado de la solicitud. Algunos de estos estados conllevarán un comentario que podrá ser agregado por el personal de investigación o el personal de gestión en función del caso. Este comentario también pasará al apartado Histórico de estados.
+De forma general, la fecha del estado actual se corresponderá siempre con la fecha en la que se realiza la acción de "Cambiar estado" (apartado [Cambiar estado a una solicitud](#CSPSolicitudes-5.Cambiarestadoaunasolicitud)) habiendo realizado un cambio en el valor del estado de la solicitud. Algunos de estos estados conllevarán un comentario que podrá ser agregado por el personal de investigación o el personal de gestión en función del caso. Este comentario también pasará al apartado Histórico de estados.
 
-Puede verse el detalle de estados en el apartado [Estados de una solicitud](#CSPSolicitudes-1.2Estadosdeunasolicitud "#CSPSolicitudes-1.2Estadosdeunasolicitud").
+Puede verse el detalle de estados en el apartado [Estados de una solicitud](#CSPSolicitudes-1.2Estadosdeunasolicitud).
 
 ![](/attachments/597853537/597882566.png)
 
-#### 4\.4 Hitos
+#### 4.4 Hitos
 
 Los hitos permiten dejar historificado los acontecimientos que se consideren relevantes. Este apartado solo estará disponible en caso que la solicitud se asocie a una convocatoria del SGI porque para las solicitudes que no se asocien a una convocatoria del SGI no se podrán crear hitos porque no se podrá cumplimentar el campo "Tipo de hito".
 
-Con la configuración de los tipos de hitos de solicitud, vinculados al modelo de ejecución, se dota al SGI de un mecanismo dinámico para el registro de fechas. La configuración de estos tipos de hitos está  abierta al personal de Administración de las Unidades de gestión. De esta forma las fechas a registrar en las solicitudes no están limitadas de antemano por el Sistema, dando así libertad en la gestión de solicitudes, a la vez que se mantiene una base común para todas las Unidades de gestión y a todo el SGI (Tipo de hito de solicitud). Esta tipificación común permitirá realizar búsquedas y clasificaciones posteriores en base a criterios homogéneos. 
+Con la configuración de los tipos de hitos de solicitud, vinculados al modelo de ejecución, se dota al SGI de un mecanismo dinámico para el registro de fechas. La configuración de estos tipos de hitos está  abierta al personal de Administración de las Unidades de gestión. De esta forma las fechas a registrar en las solicitudes no están limitadas de antemano por el Sistema, dando así libertad en la gestión de solicitudes, a la vez que se mantiene una base común para todas las Unidades de gestión y a todo el SGI (Tipo de hito de solicitud). Esta tipificación común permitirá realizar búsquedas y clasificaciones posteriores en base a criterios homogéneos.
 
-Si por ejemplo resultase de interés recoger la fecha de resolución de convocatoria, o la de publicación en el BOE, se podrán definir ambos, en el apartado de configuraciones del módulo de CSP ([CSP\-Configuración \- 7\.2\.6 Modelo de ejecución \- Tipos de hito](https://confluence.um.es/confluence/pages/viewpage.action?pageId=134296892#CSPConfiguraci%C3%B3n-7.2.6Modelodeejecuci%C3%B3n-Tiposdehito "https://confluence.um.es/confluence/pages/viewpage.action?pageId=134296892#CSPConfiguraci%C3%B3n-7.2.6Modelodeejecuci%C3%B3n-Tiposdehito")), como tipos de hito de solicitud. Posteriormente, en la solicitud, en el apartado Hitos, se añadirán las fechas concretas en las que suceden ambos acontecimientos, seleccionando los tipos de hitos definidos.
+Si por ejemplo resultase de interés recoger la fecha de resolución de convocatoria, o la de publicación en el BOE, se podrán definir ambos, en el apartado de configuraciones del módulo de CSP ([CSP-Configuración - 7.2.6 Modelo de ejecución - Tipos de hito](https://confluence.um.es/confluence/pages/viewpage.action?pageId=134296892#CSPConfiguraci%C3%B3n-7.2.6Modelodeejecuci%C3%B3n-Tiposdehito)), como tipos de hito de solicitud. Posteriormente, en la solicitud, en el apartado Hitos, se añadirán las fechas concretas en las que suceden ambos acontecimientos, seleccionando los tipos de hitos definidos.
 
 Inicialmente el apartado estará vacío, presentando el siguiente aspecto:
 
-![](/attachments/597853537/597882586.png)  
-
+![](/attachments/597853537/597882586.png)
 
 Se pueden añadir, modificar y eliminar hitos independientemente del estado de la solicitud siempre y cuando la solicitud no tenga el proyecto asociado, si ya existe el proyecto generado a partir de la solicitud el personal de gestión no podrá modificar ningún dato de la solicitud.
 
-##### 4\.4\.1 Añadir un nuevo hito
+##### 4.4.1 Añadir un nuevo hito
 
 Para añadir un nuevo hito se debe pulsar el botón "añadir hito". Se mostrará la siguiente ventana:
 
-![](/attachments/597853537/597882582.png)  
-
-
-  
-
+![](/attachments/597853537/597882582.png)
 
 Se dispone de los siguientes campos:
 
-* Tipo de hito: De forma obligatoria se puede indicar la tipología del hito. El tipo de hito debe seleccionarse del listado proporcionado. El listado incluirá los tipos de hito configurados en [CSP\-Configuración \- 7\.2\.6 Modelo de ejecución \- Tipos de hito](https://confluence.um.es/confluence/pages/viewpage.action?pageId=134296892#CSPConfiguraci%C3%B3n-7.2.6Modelodeejecuci%C3%B3n-Tiposdehito "https://confluence.um.es/confluence/pages/viewpage.action?pageId=134296892#CSPConfiguraci%C3%B3n-7.2.6Modelodeejecuci%C3%B3n-Tiposdehito") indicado para la convocatoria en el apartado ["Datos generales"](https://confluence.um.es/confluence/display/HERCULES/CSP-Convocatorias#CSPConvocatorias-con_datos_generales "https://confluence.um.es/confluence/display/HERCULES/CSP-Convocatorias#CSPConvocatorias-con_datos_generales").
+* Tipo de hito: De forma obligatoria se puede indicar la tipología del hito. El tipo de hito debe seleccionarse del listado proporcionado. El listado incluirá los tipos de hito configurados en [CSP-Configuración - 7.2.6 Modelo de ejecución - Tipos de hito](https://confluence.um.es/confluence/pages/viewpage.action?pageId=134296892#CSPConfiguraci%C3%B3n-7.2.6Modelodeejecuci%C3%B3n-Tiposdehito) indicado para la convocatoria en el apartado ["Datos generales"](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/mdu-perfil-unidad-de-gestion/mdu-perfil-unidad-de-gestion-modulo-csp/csp-convocatorias#CSPConvocatorias-con_datos_generales).
 * Fecha: Campo de tipo fecha para introducir la fecha concreta en la que ocurre el hito. Se puede introducir la fecha de forma manual o con la ayuda del calendario. Es un campo obligatorio.
 * Observaciones: Campo de texto de libre introducción. Es un campo opcional. En el caso que se marque el check de "Generar aviso" y que este informado este campo, se volcará al final del campo "contenido del email" el siguiente texto "En el hito se han indicado las siguientes observaciones: " seguido del contenido de este campo.
 * Generar aviso: Check que definirá si el hito creará un aviso en el módulo de avisos del SGI. Si en el campo "Fecha" se ha indicado una fecha ya pasada, el campo "Generar aviso" tomará el valor false, y no podrá modificarse, esto es, no podrá ni marcarse ni desmarcarse (no editable).Si la fecha del hito es posterior a la actual, el campo será editable, esto es, podrá marcarse o desmarcarse. Al marcar el chek se mostrarán los siguientes campos necesarios para configurar el aviso o comunicado que se quiere enviar cuando se alcance la fecha del hito:
 
 ![](/attachments/597853537/597882579.png)
 
-* + Fecha y hora de envío: Campo de tipo fecha y hora para introducir la fecha y hora concreta en la que se programa el envío del comunicado.Se puede introducir la fecha de forma manual o con la ayuda del calendario. Es un campo obligatorio. En el alta del hito, por defecto, aparecerá la fecha y hora del hito permitiendo su modificación. Esta fecha deberá ser posterior al momento actual \+ 15 minutos, para permitir que al usuario le pueda dar tiempo a realizar los cambios que precise en el hito, el aviso o en otros apartados de la solicitud, antes de Guardar los cambios en la pantalla de Solicitudes, momento en el que se ya sí se registrará la programación del envío para la fecha y hora indicadas. En caso que no se cumpla este requisito se mostrará el siguiente error de validación:
+* + Fecha y hora de envío: Campo de tipo fecha y hora para introducir la fecha y hora concreta en la que se programa el envío del comunicado.Se puede introducir la fecha de forma manual o con la ayuda del calendario. Es un campo obligatorio. En el alta del hito, por defecto, aparecerá la fecha y hora del hito permitiendo su modificación. Esta fecha deberá ser posterior al momento actual + 15 minutos, para permitir que al usuario le pueda dar tiempo a realizar los cambios que precise en el hito, el aviso o en otros apartados de la solicitud, antes de Guardar los cambios en la pantalla de Solicitudes, momento en el que se ya sí se registrará la programación del envío para la fecha y hora indicadas. En caso que no se cumpla este requisito se mostrará el siguiente error de validación:
 
 ![](/attachments/597853537/597882654.png)
 
 * + Asunto: Campo de texto libre para indicar el asunto del email. Se mostrará un asunto por defecto que podrá ser modificado posteriormente por el usuario.
-	+ Contenido de email: Campo de texto libre para indicar el contenido o cuerpo del email de aviso. Se mostrará un contenido por defecto que podrá ser modificado posteriormente por el usuario.
-	+ Destinatarios: Lista de destinatarios del email adicionales a los que añadirá el check "Añadir IPs solicitud" si se marca. Se mostrarán unos destinatarios por defecto que podrán ser modificados por el usuario. Si se quiere que el aviso llegue, además de a los destinatarios por defecto, a un nuevo destinatario, se debe añadir este nuevo destinatario al conjunto de destinatarios.
+  + Contenido de email: Campo de texto libre para indicar el contenido o cuerpo del email de aviso. Se mostrará un contenido por defecto que podrá ser modificado posteriormente por el usuario.
+  + Destinatarios: Lista de destinatarios del email adicionales a los que añadirá el check "Añadir IPs solicitud" si se marca. Se mostrarán unos destinatarios por defecto que podrán ser modificados por el usuario. Si se quiere que el aviso llegue, además de a los destinatarios por defecto, a un nuevo destinatario, se debe añadir este nuevo destinatario al conjunto de destinatarios.
 
 En este caso, se plantean dos opciones:
 
-* + - 1\) Que el destinatario adicional se encuentre en los sistemas de gestión de RRHH de la Universidad. En este caso, hay 2 formas posibles de añadir destinatarios al comunicado:
+* + - 1) Que el destinatario adicional se encuentre en los sistemas de gestión de RRHH de la Universidad. En este caso, hay 2 formas posibles de añadir destinatarios al comunicado:
+
 * + - * Utilizando la función de autocompletar: al comenzar a escribir los 3 primeros caracteres (en el ejemplo "palma") se sugieren personas existentes en la Universidad que contengan esa cadena de texto en su nombre, apellidos o email, para, si se quiere, poder seleccionar una. Si se encuentra la persona entre las sugerencias del autocompletar, para completar la operación de añadir el destinatario, se debe seleccionar una persona (que contenga email) y a continuación pulsar "click" con el ratón o bien pulsar la tecla "enter", con lo que la persona se añadirá a la lista de destinatarios. Si en los 10 primeros resultados propuestos por el autocompletar no aparece la persona buscada, se deberán introducir más caracteres para refinar la búsqueda o bien se podrá pulsar sobre el botón "Buscar", que abrirá el buscador de personas lanzando por defecto la búsqueda con el texto que el usuario haya introducido en el cajetín de "Destinatario".
 
 ![](/attachments/597853537/597882647.png)
 
-* + - * Utilizando el texto introducido \+ el botón buscar para abrir el buscador de personas ([MDU\-Manual de usuario \- 8\.1\.1 Buscar personas](https://confluence.um.es/confluence/display/HERCULES/MDU+-+Manual+de+usuario#MDUManualdeusuario-8.1.1Buscarpersonas "https://confluence.um.es/confluence/display/HERCULES/MDU+-+Manual+de+usuario#MDUManualdeusuario-8.1.1Buscarpersonas")) con el resultado de la búsqueda por dicho texto ya cargada
+* + - * Utilizando el texto introducido + el botón buscar para abrir el buscador de personas ([MDU-Manual de usuario - 8.1.1 Buscar personas](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario#MDUManualdeusuario-8.1.1Buscarpersonas)) con el resultado de la búsqueda por dicho texto ya cargada
 
 ![](/attachments/597853537/597882641.png)
 
 Se deberá pulsar a continuación el botón "Seleccionar" de la fila de la persona una vez la localicemos en el la lista de resultados o bien restringir más la búsqueda introduciendo más caracteres en el filtro hasta que se encuentre. Se debe seleccionar una persona que disponga de un email principal, ya que en otro caso, el comunicado no se podría generar. Una vez seleccionada la persona se añadirá a la lista de destinatarios
 
-* + - 2\) Que el destinatario adicional NO se encuentre en los sistemas de gestión de RR de la Universidad, bien porque no exista ninguna relación registrada con él en dichos sistemas bien porque el destinatario a añadir sea una lista de distribución o un email genérico y no propio una persona en concreto. En este caso se teclea el email completo en el componente "Destinatarios" en la zona donde aparece el texto "Añadir destinatario ...", por ejemplo, "prueba@correo.es:
-	+ Añadir IP solicitud: Indicador de si se quiere añadir a los IPs de la solicitud como destinatarios del email de aviso. Estos destinatarios no se mostrarán ni se guardarán en el campo "Destinatarios" ya que se resolverán en el día y hora en el que se haya programado el envío del aviso.
+* + - 2) Que el destinatario adicional NO se encuentre en los sistemas de gestión de RR de la Universidad, bien porque no exista ninguna relación registrada con él en dichos sistemas bien porque el destinatario a añadir sea una lista de distribución o un email genérico y no propio una persona en concreto. En este caso se teclea el email completo en el componente "Destinatarios" en la zona donde aparece el texto "Añadir destinatario ...", por ejemplo, "prueba@correo.es:
+  + Añadir IP solicitud: Indicador de si se quiere añadir a los IPs de la solicitud como destinatarios del email de aviso. Estos destinatarios no se mostrarán ni se guardarán en el campo "Destinatarios" ya que se resolverán en el día y hora en el que se haya programado el envío del aviso.
 
 Cumplimentados los campos obligatorios y deseados se pulsará el botón "Añadir":
 
-![](/attachments/597853537/597882578.png)  
-
-
-  
-
+![](/attachments/597853537/597882578.png)
 
 El hito pasará a estar disponible en el listado de hitos de la solicitud, desde donde podrá ser modificado y/o eliminado:
 
-![](/attachments/597853537/597882581.png)  
-
+![](/attachments/597853537/597882581.png)
 
 Para que se consoliden los datos el personal de gestión deberá pulsar sobre el botón "Guardar" situado en la parte inferior de la pantalla en el pie de página para actualizar la solicitud, si no se pulsa sobre el botón "Guardar" todos los cambios realizados se perderán.
 
-Se podrán añadir tantos hitos como sea necesario. 
+Se podrán añadir tantos hitos como sea necesario.
 
-##### 4\.4\.1 Modificar hito
+##### 4.4.1 Modificar hito
 
 El icono "modificar hito" permite modificar los datos de uno de los hitos de la solicitud. Tras pulsar el botón se muestra la ventana para la modificación de datos, la pantalla es idéntica a la utilizada durante el alta:
 
 ![](/attachments/597853537/597882671.png)
 
-Se da la posibilidad de modificar cualquiera de los campos del formulario (ver funcionalidad descrita en el apartado [Añadir un nuevo hito](#CSPSolicitudes-4.4.1A%C3%B1adirunnuevohito "#CSPSolicitudes-4.4.1A%C3%B1adirunnuevohito") para mas detalle) con las siguientes excepciones o consideraciones:
+Se da la posibilidad de modificar cualquiera de los campos del formulario (ver funcionalidad descrita en el apartado [Añadir un nuevo hito](#CSPSolicitudes-4.4.1A%C3%B1adirunnuevohito) para mas detalle) con las siguientes excepciones o consideraciones:
 
 * Observaciones: Si se modifica a posterioridad de haber marcado el check de "Generar aviso", no se volcará en el campo "Contenido del email", ya que, en otro caso, se perdería el texto existente previamente.
 * Generar aviso: Si la fecha del hito es posterior a la actual y el aviso aún no ha sido enviado, el campo será editable, esto es, podrá marcarse o desmarcarse (según fuera su estado original). En caso contrario no se podrá modificar.
@@ -641,18 +672,17 @@ El botón "Aceptar" no se habilitará hasta que se introduzca algún cambio en u
 
 Al pulsar sobre el botón "Aceptar" el hito se modificará y los cambios se verán reflejados en la tabla de hitos de la solicitud mostrando el icono de la admiración en el menú de "Hitos" y el mensaje de información en la parte de abajo de la pantalla en el pie de página para recordar al personal de gestión que debe de pulsar el botón "Guardar" para que los cambios realizados (en este caso un cambio de un hito) se consoliden.
 
-##### 4\.4\.1 Eliminar hito
+##### 4.4.1 Eliminar hito
 
 Tras pulsar el icono eliminar se mostrará un mensaje de confirmación.
 
-![](/attachments/597853537/597882670.png)  
-
+![](/attachments/597853537/597882670.png)
 
 Si se pulsa el botón Cancelar se cerrará la ventana del mensaje de confirmación y el hito no será borrado.
 
 Si se pulsa el botón Aceptar el hito desaparecerá de la tabla de hitos de la solicitud mostrando el icono de la admiración en el menú de "Hitos" y el mensaje de información en la parte de abajo de la pantalla en el pie de página para recordar al personal de gestión que debe de pulsar el botón "Guardar" para que los cambios realizados (en este caso un borrado de un hito) se consoliden.
 
-#### 4\.5 Datos Proyecto \- Ficha general
+#### 4.5 Datos Proyecto - Ficha general
 
 En este apartado se agrupa la información relativa al proyecto/actividad de investigación propuesto. Este apartado y, en general, todo del bloque "Datos proyectos" solamente ser hará visible cuando el campo "Tipo solicitud SGI" de la solicitud toma valor "Proyecto".
 
@@ -672,54 +702,55 @@ A continuación se describe cada uno de los campos solicitados en este formulari
 No tomará ningún valor por defecto. En función del valor seleccionado:
 
 * + Si se indica "Sí", se activará:
+
 * + - El campo "Rol participación Universidad" de este mismo formulario.
-		- El campo "Proyecto colaborativo" de este mismo formulario.
-		- El apartado "Socios"
+    - El campo "Proyecto colaborativo" de este mismo formulario.
+    - El apartado "Socios"
 
 ![](/attachments/597853537/1087307782.png)
 
 * + Si se indica "No", no se mostrara:
+
 * + - El campo "Rol participación Universidad" de este mismo formulario.
-		- El campo "Proyecto colaborativo" de este mismo formulario.
-		- El apartado "Socios"
+    - El campo "Proyecto colaborativo" de este mismo formulario.
+    - El apartado "Socios"
 
 ![](/attachments/597853537/597883167.png)
 
-* Rol participación Universidad: Este campo sólo estará disponible si se ha marcado que el proyecto es coordinado. En caso de que el proyecto sea coordinado, este campo permite indicar el rol con el que participará la Universidad en el proyecto. El rol debe de ser seleccionado del listado disponible. El lisado contendrá los roles configurados en el apartado Configuración \- Roles de socio de proyecto del módulo CSP.
+* Rol participación Universidad: Este campo sólo estará disponible si se ha marcado que el proyecto es coordinado. En caso de que el proyecto sea coordinado, este campo permite indicar el rol con el que participará la Universidad en el proyecto. El rol debe de ser seleccionado del listado disponible. El lisado contendrá los roles configurados en el apartado Configuración - Roles de socio de proyecto del módulo CSP.
 
 Si toma el valor "no", es decir, es la propia universidad quien coordina se dará visibilidad, dentro del apartado "Socios", a los subapartados:
 
 * + Periodos de pago
-	+ Periodos de justificación
+  + Periodos de justificación
 
-Si se indica que la universidad actuará como coordinadora del proyecto, es decir, se selecciona el rol que haya sido configurado como rol de coordinación (Ver Configuración \- Roles de socio de proyecto del módulo CSP), se habilitarán, dentro del apartado "[Socios](https://confluence.um.es/confluence/display/HERCULES/CSP-Solicitudes#CSPSolicitudes-4.10DatosProyecto-Socios "https://confluence.um.es/confluence/display/HERCULES/CSP-Solicitudes#CSPSolicitudes-4.10DatosProyecto-Socios")", a los subapartados:
+Si se indica que la universidad actuará como coordinadora del proyecto, es decir, se selecciona el rol que haya sido configurado como rol de coordinación (Ver Configuración - Roles de socio de proyecto del módulo CSP), se habilitarán, dentro del apartado "[Socios](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/mdu-perfil-unidad-de-gestion/mdu-perfil-unidad-de-gestion-modulo-csp/csp-solicitudes#CSPSolicitudes-4.10DatosProyecto-Socios)", a los subapartados:
 
 * + Periodos de pago
-	+ Periodos de justificación
+  + Periodos de justificación
 
-Si se indica que la Universidad no actuará con un rol de coordinación, se mostrará un icono informativo que al pasar por encima el ratón muestra el siguiente mensaje: "No se ha indicado el socio que actuará como coordinador del proyecto. Verifique los datos en el apartado Socios." Es decir, se recuerda que debe de indicarse que socio actuará como coordinador del proyecto. Esta información se aportará en el apartado "[Socios](https://confluence.um.es/confluence/display/HERCULES/CSP-Solicitudes#CSPSolicitudes-4.10DatosProyecto-Socios "https://confluence.um.es/confluence/display/HERCULES/CSP-Solicitudes#CSPSolicitudes-4.10DatosProyecto-Socios")".
+Si se indica que la Universidad no actuará con un rol de coordinación, se mostrará un icono informativo que al pasar por encima el ratón muestra el siguiente mensaje: "No se ha indicado el socio que actuará como coordinador del proyecto. Verifique los datos en el apartado Socios." Es decir, se recuerda que debe de indicarse que socio actuará como coordinador del proyecto. Esta información se aportará en el apartado "[Socios](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/mdu-perfil-unidad-de-gestion/mdu-perfil-unidad-de-gestion-modulo-csp/csp-solicitudes#CSPSolicitudes-4.10DatosProyecto-Socios)".
 
 ![](/attachments/597853537/1087307783.png)
 
 * Proyecto colaborativo: Este campo solo estará disponible si se ha marcado que el proyecto es coordinado. Permitirá indicar si, además de coordinado, el proyecto será colaborativo, es decir, alguno de los socios es una empresa privada. Será un campo opcional y no tomará ningún valor por defecto. Los valores que puede tomar son "Sí" o "No".
 * Tipo de desglose de presupuesto: Campo de tipo desplegable que indica la forma en la que se va a detallar el/los presupuestos de la solicitud.  Es un campo obligatorio. Puede tomar los valores:  
+  + Global: Un único presupuesto sin asociar a ninguna entidad
+  + Por entidad: Un presupuesto asociado a cada entidad financiadora de la convocatoria y a cada una de las ajenas
+  + Mixto: Un presupuesto único asociado a la entidad gestora de la convocatoria y un presupuesto por cada entidad ajena
 
-	+ Global: Un único presupuesto sin asociar a ninguna entidad
-	+ Por entidad: Un presupuesto asociado a cada entidad financiadora de la convocatoria y a cada una de las ajenas
-	+ Mixto: Un presupuesto único asociado a la entidad gestora de la convocatoria y un presupuesto por cada entidad ajenaDependiendo por lo tanto del valor del combo el apartado de "Desglose presupuesto" tendrá un aspecto u otro.
-* Palabras clave: Campo de texto para ir introduciendo el listado de palabras clave. Una palabra clave es una cadena de texto, formada por una una o varias palabras. Una vez introducida una palabra clave se debe pulsar la tecla "enter" del teclado para añadirla a la lista de palabras clave. Se pueden añadir todas las palabras clave deseadas. (Ver funcionalidad de creación de palabras clave en [MDU\-Manual de usuario \- Introducción de palabras clave](https://confluence.um.es/confluence/display/HERCULES/MDU+-+Manual+de+usuario#MDUManualdeusuario-Introducci%C3%B3ndepalabrasclave "https://confluence.um.es/confluence/display/HERCULES/MDU+-+Manual+de+usuario#MDUManualdeusuario-Introducci%C3%B3ndepalabrasclave"))
+  Dependiendo por lo tanto del valor del combo el apartado de "Desglose presupuesto" tendrá un aspecto u otro.
+* Palabras clave: Campo de texto para ir introduciendo el listado de palabras clave. Una palabra clave es una cadena de texto, formada por una una o varias palabras. Una vez introducida una palabra clave se debe pulsar la tecla "enter" del teclado para añadirla a la lista de palabras clave. Se pueden añadir todas las palabras clave deseadas. (Ver funcionalidad de creación de palabras clave en [MDU-Manual de usuario - Introducción de palabras clave](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario#MDUManualdeusuario-Introducci%C3%B3ndepalabrasclave))
 * Objetivos del proyecto: Campo de texto libre para redactar los objetivos marcados con el desarrollo de la actividad de investigación.. Es un campo opcional . El personal de gestión puede modificar el tamaño de la caja de texto de este campo, para ello deberá situar el cursor sobre su esquina inferior izquierda (rayado gris), cuando el cursor cambie de aspecto, deberá pulsar con el botón izquierdo del ratón y arrastrar sin soltar.
 * Justificación e interés: Campo de texto libre que permite introducir información referente a la justificación y datos de interés de la actividad de investigación. Es un campo opcional . El personal de gestión puede modificar el tamaño de la caja de texto de este campo, para ello deberá situar el cursor sobre su esquina inferior izquierda (rayado gris), cuando el cursor cambie de aspecto, deberá pulsar con el botón izquierdo del ratón y arrastrar sin soltar.
 * Resultados esperados: Campo de texto libre que permite introducir los resultados esperados de la actividad de investigación. Es un campo opcional . El personal de gestión puede modificar el tamaño de la caja de texto de este campo, para ello deberá situar el cursor sobre su esquina inferior izquierda (rayado gris), cuando el cursor cambie de aspecto, deberá pulsar con el botón izquierdo del ratón y arrastrar sin soltar.
-* Listado de áreas temáticas: funcionalidad detallada en [Listado de Áreas temáticas](#CSPSolicitudes-4.5.2Listadode%C3%A1reastem%C3%A1ticas "#CSPSolicitudes-4.5.2Listadode%C3%A1reastem%C3%A1ticas").
+* Listado de áreas temáticas: funcionalidad detallada en [Listado de Áreas temáticas](#CSPSolicitudes-4.5.2Listadode%C3%A1reastem%C3%A1ticas).
 
 Una vez introducidos todos los campos obligatorios del formulario de "Ficha general" se activa el botón "Guardar" y se muestra el icono del signo de admiración en la "Ficha general"  y el mensaje de información en la parte de abajo de la pantalla en el pie de página para recordar al personal de gestión que debe de pulsar el botón "Guardar" para que los cambios realizados se consoliden.
 
-La edición del apartado "Ficha general" de una solicitud que ha sido modificada previamente (ya se han introducido los datos obligatorios del apartado "Ficha general") se muestra en la siguiente imagen:  
+La edición del apartado "Ficha general" de una solicitud que ha sido modificada previamente (ya se han introducido los datos obligatorios del apartado "Ficha general") se muestra en la siguiente imagen:
 
-
-![](/attachments/597853537/597883159.png)  
-
+![](/attachments/597853537/597883159.png)
 
 Los campos son los mismos que cuando se edita la primera vez (una vez creada) pero existen las siguientes restricciones sobre la modificación de algunos de los campos:
 
@@ -735,11 +766,11 @@ Los campos son los mismos que cuando se edita la primera vez (una vez creada) pe
 
 ![](/attachments/597853537/597883174.png)
 
-##### 4\.5\.2 Listado de áreas temáticas
+##### 4.5.2 Listado de áreas temáticas
 
 El listado  de áreas temáticas se puede mostrar de tres formas distintas dependiendo de los datos introducidos:
 
-1\) Si la solicitud esta vinculada a una convocatoria del SGI que tiene marcada alguna restricción sobre áreas temáticas (se ha seleccionado alguna área temática en la convocatoria) y en la propia solicitud no se ha seleccionado todavía el área temática se mostrará la tabla de la siguiente forma:
+1) Si la solicitud esta vinculada a una convocatoria del SGI que tiene marcada alguna restricción sobre áreas temáticas (se ha seleccionado alguna área temática en la convocatoria) y en la propia solicitud no se ha seleccionado todavía el área temática se mostrará la tabla de la siguiente forma:
 
 ![](/attachments/597853537/597883198.png)
 
@@ -751,13 +782,13 @@ Una vez seleccionada la área temática se pulsará el botón "Añadir". La áre
 
 ![](/attachments/597853537/597883291.png)
 
-2\) Si la solicitud esta vinculada a una convocatoria del SGI que tiene marcada alguna restricción sobre áreas temáticas (se ha seleccionado alguna área temática en la convocatoria) y en la propia solicitud se ha seleccionado la área temática se mostrará la tabla de la siguiente forma:
+2) Si la solicitud esta vinculada a una convocatoria del SGI que tiene marcada alguna restricción sobre áreas temáticas (se ha seleccionado alguna área temática en la convocatoria) y en la propia solicitud se ha seleccionado la área temática se mostrará la tabla de la siguiente forma:
 
 ![](/attachments/597853537/597883291.png)
 
 Como una solicitud sólo puede estar asignada a una única área temática, si ya tiene una asignada se podrá modificar o bien eliminar la asignación.
 
-Si se elimina la asignación pasaría a ser el caso definido en el punto 1\).
+Si se elimina la asignación pasaría a ser el caso definido en el punto 1).
 
 Si se quiere modificar la área se pulsa sobre el icono de edición y se mostrará una ventana con la área temática de la solicitud seleccionada.
 
@@ -771,43 +802,29 @@ Seleccionada la nueva área se pulsará el botón "Aceptar". La área selecciona
 
 ![](/attachments/597853537/597883288.png)
 
-3\) Si no se da ninguno de los dos casos anteriores la tabla no se mostrará, mostrándose en su lugar el botón "Añadir área temática".
+3) Si no se da ninguno de los dos casos anteriores la tabla no se mostrará, mostrándose en su lugar el botón "Añadir área temática".
 
 ![](/attachments/597853537/597883191.png)
 
 Para añadir un listado de áreas temáticas a la solicitud se debe pulsar el botón "Añadir área temática". Se mostrará una ventana desde la que se podrá indicar el listado de áreas temáticas a utilizar en la solicitud.
 
-![](/attachments/597853537/597883195.png) 
+![](/attachments/597853537/597883195.png)
 
-  
-
-
-El desplegable "Listado áreas temáticas" contendrá los listados activos creados a través de la opción de Configuración [CSP\-Configuración \- 9\. Listados de áreas temáticas](https://confluence.um.es/confluence/pages/viewpage.action?pageId=134296892#CSPConfiguraci%C3%B3n-9.Listadosde%C3%A1reastem%C3%A1ticas "https://confluence.um.es/confluence/pages/viewpage.action?pageId=134296892#CSPConfiguraci%C3%B3n-9.Listadosde%C3%A1reastem%C3%A1ticas"). 
+El desplegable "Listado áreas temáticas" contendrá los listados activos creados a través de la opción de Configuración [CSP-Configuración - 9. Listados de áreas temáticas](https://confluence.um.es/confluence/pages/viewpage.action?pageId=134296892#CSPConfiguraci%C3%B3n-9.Listadosde%C3%A1reastem%C3%A1ticas).
 
 ![](/attachments/597853537/597883193.png)
-
-  
-
 
 Al seleccionar el nombre de uno de los listados del desplegable, se mostrará el árbol de áreas correspondiente.
 
 ![](/attachments/597853537/597883185.png)
 
-  
-
-
 Las áreas que lleven a su izquierda el control desplegar![](/attachments/597853537/597882595.png), tendrá subáreas dependientes. Haciendo click sobre este control se desplegará el área:
 
-![](/attachments/597853537/597883213.png)  
-
+![](/attachments/597853537/597883213.png)
 
 Cada área temática va acompañada a su izquierda con una casilla de selección ![](/attachments/597853537/597883189.png). Al hacer click sobre la misma la área temática quedará seleccionada.
 
-![](/attachments/597853537/597883180.png)  
-
-
-  
-
+![](/attachments/597853537/597883180.png)
 
 Sólo podrá seleccionar una área, pudiendo ocupar ésta cualquier nivel en el árbol de áreas del listado.
 
@@ -815,10 +832,9 @@ Una vez seleccionada una área bastará volver a pulsar sobre la casilla de sele
 
 Seleccionada la área se pulsará el botón "Añadir". La área seleccionada se mostrarán en el listado de áreas de la solicitud:
 
-![](/attachments/597853537/597883214.png)  
+![](/attachments/597853537/597883214.png)
 
-
-#### 4\.6 Datos Proyecto \- Áreas conocimiento
+#### 4.6 Datos Proyecto - Áreas conocimiento
 
 En este apartado el proyecto solicitado se podrá clasificar dentro de una o varias áreas de conocimiento. Esto permitirá asociar el proyecto solicitado a una área de manera independiente a la área de conocimiento a la que esté adscrito el responsable principal. Las áreas de conocimiento disponibles se obtendrán del sistema corporativo universitario correspondiente. El SGI permitirá que las áreas sea una estructura jerárquica de forma que el proyecto quede asociado de manera directa a la rama o ramas de conocimiento a la que pertenezca la área/áreas con las que se relaciona.
 
@@ -830,7 +846,7 @@ Inicialmente el apartado estará vacío, presentando el siguiente aspecto:
 
 Se pueden asignar y eliminar asignaciones de áreas de conocimiento a la solicitud independientemente del estado de la solicitud siempre y cuando la solicitud no tenga el proyecto asociado, si ya existe el proyecto generado a partir de la solicitud el personal de gestión no podrá modificar ningún dato de la solicitud.
 
-##### 4\.6\.1 Añadir área conocimiento
+##### 4.6.1 Añadir área conocimiento
 
 El botón "añadir área conocimiento"  permite clasificar el proyecto solicitado dentro de una área de conocimiento. Tras pulsar el botón se muestra el árbol de áreas de conocimiento.
 
@@ -838,7 +854,7 @@ En un primer momento, cuando no haya ninguna área de conocimiento previamente a
 
 ![](/attachments/597853537/597883305.png)
 
-Según se vaya abriendo el árbol (ver [MDU\-Manual de usuario \- 7\.6 Selector de áreas de conocimiento](https://confluence.um.es/confluence/display/HERCULES/MDU+-+Manual+de+usuario#MDUManualdeusuario-7.6Selectorde%C3%A1reasdeconocimiento "https://confluence.um.es/confluence/display/HERCULES/MDU+-+Manual+de+usuario#MDUManualdeusuario-7.6Selectorde%C3%A1reasdeconocimiento") para mas detalle del funcionamiento de esta pantalla), se mostrará el nivel descendiente de la rama desplegada y así sucesivamente.
+Según se vaya abriendo el árbol (ver [MDU-Manual de usuario - 7.6 Selector de áreas de conocimiento](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario#MDUManualdeusuario-7.6Selectorde%C3%A1reasdeconocimiento) para mas detalle del funcionamiento de esta pantalla), se mostrará el nivel descendiente de la rama desplegada y así sucesivamente.
 
 ![](/attachments/597853537/597883304.png)
 
@@ -846,7 +862,7 @@ Si ya existen áreas de conocimiento asociadas a la solicitud, se mostrarán igu
 
 ![](/attachments/597853537/597883299.png)
 
-Una vez seleccionada la área de conocimiento que se quiere vincular a la solicitud se habilita el botón "Aceptar". 
+Una vez seleccionada la área de conocimiento que se quiere vincular a la solicitud se habilita el botón "Aceptar".
 
 ![](/attachments/597853537/597883298.png)
 
@@ -856,20 +872,19 @@ Al pulsar sobre el botón "Aceptar" la área de conocimiento se añadirá como �
 
 Para que se consoliden los datos el personal de gestión deberá pulsar sobre el botón "Guardar" situado en la parte inferior de la pantalla en el pie de página para actualizar la solicitud, si no se pulsa sobre el botón "Guardar" todos los cambios realizados se perderán.
 
-##### 4\.6\.2 Eliminar área conocimiento
+##### 4.6.2 Eliminar área conocimiento
 
 Tras pulsar el icono eliminar se mostrará un mensaje de confirmación.
 
-![](/attachments/597853537/597883297.png)  
-
+![](/attachments/597853537/597883297.png)
 
 Si se pulsa el botón Cancelar se cerrará la ventana del mensaje de confirmación y la área de conocimiento vinculada a la solicitud no será borrada.
 
 Si se pulsa el botón Aceptar la área de conocimiento vinculada a la solicitud desaparecerá de la tabla de áreas de conocimiento de la solicitud mostrando el icono de la admiración en el menú de "Áreas conocimiento" y el mensaje de información en la parte de abajo de la pantalla en el pie de página para recordar al personal de gestión que debe de pulsar el botón "Guardar" para que los cambios realizados (en este caso un borrado de una área de conocimiento) se consoliden.
 
-#### 4\.7 Datos Proyecto \- Clasificaciones
+#### 4.7 Datos Proyecto - Clasificaciones
 
-El SGI contará con una estructura dinámica de listados de clasificación. Una solicitud de proyecto podrá clasificarse bajo tantos listados como se desee. Listados de clasificación tipo que podrían ser cubiertas bajo esta estructura abierta son: 
+El SGI contará con una estructura dinámica de listados de clasificación. Una solicitud de proyecto podrá clasificarse bajo tantos listados como se desee. Listados de clasificación tipo que podrían ser cubiertas bajo esta estructura abierta son:
 
 * Código UNESCO. No será un campo de obligada cumplimentación. Un proyecto se podrá vincular a un código UNESCO. El listado de códigos UNESCO estará precargado a partir de los listados aportados por la Universidad.
 * Código NABS. No será un campo de obligada cumplimentación. Un proyecto se podrá vincular a un código NABS. El listado de códigos NABS estará precargado a partir de los listados aportados por la Universidad.
@@ -883,12 +898,11 @@ Inicialmente el apartado estará vacío, presentando el siguiente aspecto:
 
 Se pueden asignar y eliminar asignaciones de clasificaciones a la solicitud independientemente del estado de la solicitud siempre y cuando la solicitud no tenga el proyecto asociado, si ya existe el proyecto generado a partir de la solicitud el personal de gestión no podrá modificar ningún dato de la solicitud.
 
-##### 4\.7\.1 Añadir clasificación
+##### 4.7.1 Añadir clasificación
 
 El botón "añadir clasificación" permite clasificar a un proyecto solicitado dentro de una tipología.
 
-![](/attachments/597853537/597883259.png)  
-
+![](/attachments/597853537/597883259.png)
 
 El primer campo a cumplimentar de forma obligatoria será la "clasificación". Una clasificación se entiende como una organización jerárquica conformada por un conjunto de códigos a los que diferentes entidades dentro del SGI se podrán asociar. Inicialmente se identifican en el SGI cuatro clasificaciones distintas: UNESCO, NABS, ANEP y CNAE, si bien la lista de clasificaciones podrá ser extendida por parte de la Universidad con otras adicionales en tiempo de implantación.
 
@@ -896,9 +910,9 @@ El primer campo a cumplimentar de forma obligatoria será la "clasificación". U
 
 Una vez seleccionada la clasificación, se muestra el primer nivel de la jerarquía asociada a la clasificación seleccionada (en este caso UNESCO).
 
-Se pueden ir desplegando categorías por niveles. Ver [MDU\-Manual de usuario \- 7\.5 Selector de clasificaciones](https://confluence.um.es/confluence/display/HERCULES/MDU+-+Manual+de+usuario#MDUManualdeusuario-7.5Selectordeclasificaciones "https://confluence.um.es/confluence/display/HERCULES/MDU+-+Manual+de+usuario#MDUManualdeusuario-7.5Selectordeclasificaciones") para mas detalle del funcionamiento de esta pantalla.
+Se pueden ir desplegando categorías por niveles. Ver [MDU-Manual de usuario - 7.5 Selector de clasificaciones](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario#MDUManualdeusuario-7.5Selectordeclasificaciones) para mas detalle del funcionamiento de esta pantalla.
 
-Una vez seleccionada el código de clasificación que se quiere vincular a la solicitud se habilita el botón "Aceptar". 
+Una vez seleccionada el código de clasificación que se quiere vincular a la solicitud se habilita el botón "Aceptar".
 
 ![](/attachments/597853537/597883259.png)
 
@@ -908,23 +922,21 @@ Si ya existen clasificaciones asociadas a la solicitud, en el árbol de clasific
 
 Al pulsar sobre el botón "Aceptar" la clasificación se añadirá como clasificación vinculada a la solicitud mostrando en la tabla de clasificaciones de la solicitud un fila mas que representa a la clasificación que se acaba de añadir.
 
-![](/attachments/597853537/597883260.png)  
-
+![](/attachments/597853537/597883260.png)
 
 Para que se consoliden los datos el personal de gestión deberá pulsar sobre el botón "Guardar" situado en la parte inferior de la pantalla en el pie de página para actualizar la la solicitud, si no se pulsa sobre el botón "Guardar" todos los cambios realizados se perderán.
 
-##### 4\.7\.2 Eliminar clasificación
+##### 4.7.2 Eliminar clasificación
 
 Tras pulsar el icono eliminar se mostrará un mensaje de confirmación.
 
-![](/attachments/597853537/597883250.png)  
-
+![](/attachments/597853537/597883250.png)
 
 Si se pulsa el botón Cancelar se cerrará la ventana del mensaje de confirmación y la clasificación vinculada a la solicitud no será borrada.
 
 Si se pulsa el botón Aceptar la clasificación vinculada a la solicitud desaparecerá de la tabla de clasificaciones de la solicitud mostrando el icono de la admiración en el menú de "Clasificaciones" y el mensaje de información en la parte de abajo de la pantalla en el pie de página para recordar al personal de gestión que debe de pulsar el botón "Guardar" para que los cambios realizados (en este caso un borrado de una clasificación) se consoliden.
 
-#### 4\.8 Datos Proyecto \- Equipo
+#### 4.8 Datos Proyecto - Equipo
 
 En apartado contiene el equipo de proyecto propuesto. El investigador/a solicitante quedará vinculado/a directamente al equipo de proyecto con rol Investigador principal. El equipo de proyecto quedará constituido por una serie de investigadores/as para cada uno de los cuales se indicará el rol con el que participará en el equipo de proyecto y los meses inicial y final previsto de participación.
 
@@ -940,7 +952,7 @@ En la primera columna del listado en caso de que la solicitud está vinculada a 
 
 Se pueden añadir, modificar y eliminar miembros del equipo propuesto siempre y cuando la solicitud no tenga el proyecto asociado, si ya existe el proyecto generado a partir de la solicitud el personal de gestión no podrá modificar ningún dato de la solicitud.
 
-##### 4\.8\.1 Añadir un nuevo miembro
+##### 4.8.1 Añadir un nuevo miembro
 
 El botón "añadir miembro" permite dar de alta a un nuevo miembro del equipo propuesto en una solicitud de proyecto. Tras pulsar el botón se muestra la ventana para la introducción de datos:
 
@@ -949,9 +961,9 @@ El botón "añadir miembro" permite dar de alta a un nuevo miembro del equipo pr
 Los campos de un miembro del equipo son:
 
 * Rol de Participación: Campo de tipo desplegable que indica el rol con el que participará el miembro en el equipo de proyecto. Los roles disponibles en el desplegable serán los definidos durante la implantación de la aplicación en la Universidad. Es un campo obligatorio.
-* Miembro: Campo para buscar a la persona que se quiere añadir al equipo de proyecto. Para indicar la persona se utiliza el buscador común de personas [MDU\-Manual de usuario \- 8\.1 Personas](https://confluence.um.es/confluence/display/HERCULES/MDU+-+Manual+de+usuario#MDUManualdeusuario-8.1Personas "https://confluence.um.es/confluence/display/HERCULES/MDU+-+Manual+de+usuario#MDUManualdeusuario-8.1Personas"). Es un campo obligatorio.
-* Periodo de participación \- Mes inicial: Campo de numérico para introducir el mes inicial previsto para la participación del miembro del equipo de proyecto con el rol especificado en el campo "Rol".  Es un campo opcional.
-* Periodo de participación \- Mes final: Campo de numérico para introducir el mes final previsto para la participación del miembro del equipo de proyecto con el rol especificado en el campo "Rol".  Es un campo opcional.
+* Miembro: Campo para buscar a la persona que se quiere añadir al equipo de proyecto. Para indicar la persona se utiliza el buscador común de personas [MDU-Manual de usuario - 8.1 Personas](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario#MDUManualdeusuario-8.1Personas). Es un campo obligatorio.
+* Periodo de participación - Mes inicial: Campo de numérico para introducir el mes inicial previsto para la participación del miembro del equipo de proyecto con el rol especificado en el campo "Rol".  Es un campo opcional.
+* Periodo de participación - Mes final: Campo de numérico para introducir el mes final previsto para la participación del miembro del equipo de proyecto con el rol especificado en el campo "Rol".  Es un campo opcional.
 
 Adicionalmente a las validaciones de la obligatoriedad, se realizarán las siguientes comprobaciones de validación de vigencia de la participación de la persona:
 
@@ -962,46 +974,41 @@ Adicionalmente a las validaciones de la obligatoriedad, se realizarán las sigui
 
 El error de validación se mostrará debajo del campo en color rojo. En la siguiente imagen se muestra alguno de los errores:
 
-![](/attachments/597853537/597883274.png)  
-
+![](/attachments/597853537/597883274.png)
 
 Hasta que no se cumplimente todos los datos obligatorios y no existan errores de validación no se activará el botón "Añadir".
 
-![](/attachments/597853537/597883272.png)  
-
+![](/attachments/597853537/597883272.png)
 
 Al pulsar sobre el botón "Añadir" la persona se añadirá al equipo mostrando en la tabla de miembros del equipo de proyecto un fila mas que representa a la persona que se acaba de añadir. Se comprobará que la persona añadida cumpla con los "Requesitos IP" o con los "Requisitos Equipo" establecidos por la convocatoria, en caso de que no los cumpla se mostrará en la primera columna el icono de advertencia informando del requisito que no cumple al pasar con el ratón por encima del icono de advertencia:
 
-![](/attachments/597853537/597883264.png)  
-
+![](/attachments/597853537/597883264.png)
 
 Para que se consoliden los datos el personal de gestión deberá pulsar sobre el botón "Guardar" situado en la parte inferior de la pantalla en el pie de página para actualizar la solicitud, si no se pulsa sobre el botón "Guardar" todos los cambios realizados se perderán.
 
-##### 4\.8\.2 Modificar miembro del equipo
+##### 4.8.2 Modificar miembro del equipo
 
-El icono "modificar miembro" permite modificar los datos de uno de los miembros del equipo investigador del proyecto. Tras pulsar el botón se muestra la ventana para la modificación de datos, la pantalla es idéntica a la utilizada durante el alta, dejando la posibilidad de modificar cualquiera de los campos del formulario (ver funcionalidad descrita en el apartado [Añadir un nuevo miembro](#CSPSolicitudes-4.8.1A%C3%B1adirunnuevomiembro "#CSPSolicitudes-4.8.1A%C3%B1adirunnuevomiembro") para mas detalle).
+El icono "modificar miembro" permite modificar los datos de uno de los miembros del equipo investigador del proyecto. Tras pulsar el botón se muestra la ventana para la modificación de datos, la pantalla es idéntica a la utilizada durante el alta, dejando la posibilidad de modificar cualquiera de los campos del formulario (ver funcionalidad descrita en el apartado [Añadir un nuevo miembro](#CSPSolicitudes-4.8.1A%C3%B1adirunnuevomiembro) para mas detalle).
 
 En la siguiente imagen se muestra la pantalla de edición de un miembro del equipo de un proyecto:
 
-![](/attachments/597853537/597883262.png)  
-
+![](/attachments/597853537/597883262.png)
 
 El botón "Aceptar" no se habilitará hasta que se introduzca algún cambio en uno de los datos de la pantalla. Se realizarán las misma validaciones que en la creación de un nuevo miembro.
 
 Al pulsar sobre el botón "Aceptar" el miembro del equipo se modificará y los cambios se verán reflejados en la tabla de miembros del equipo de proyecto mostrando el icono de la admiración en el menú de "Equipo" y el mensaje de información en la parte de abajo de la pantalla en el pie de página para recordar al personal de gestión que debe de pulsar el botón "Guardar" para que los cambios realizados (en este caso un cambio de un miembro del equipo) se consoliden.
 
-##### 4\.8\.3 Eliminar miembro del equipo
+##### 4.8.3 Eliminar miembro del equipo
 
 Tras pulsar el icono eliminar se mostrará un mensaje de confirmación.
 
-![](/attachments/597853537/597882668.png)  
-
+![](/attachments/597853537/597882668.png)
 
 Si se pulsa el botón Cancelar se cerrará la ventana del mensaje de confirmación y el miembro del equipo no será borrado.
 
 Si se pulsa el botón Aceptar el miembro del equipo desaparecerá de la tabla de miembros del equipo de proyecto mostrando el icono de la admiración en el menú de "Equipo" y el mensaje de información en la parte de abajo de la pantalla en el pie de página para recordar al personal de gestión que debe de pulsar el botón "Guardar" para que los cambios realizados (en este caso un borrado de un miembro del equipo) se consoliden.
 
-#### 4\.9 Datos Proyecto \- Responsable económico
+#### 4.9 Datos Proyecto - Responsable económico
 
 Este apartado muestra en una tabla al responsable económico actual del proyecto solicitado junto con el listado de responsables económicos que ha tenido el proyecto solicitado (su histórico). Sólo puede existir una persona responsable económica en cada momento.
 
@@ -1009,21 +1016,19 @@ Este apartado y, en general, todo del bloque "Datos proyectos" solamente ser har
 
 Inicialmente el apartado estará vacío, presentando el siguiente aspecto:
 
-![](/attachments/597853537/597883354.png)  
-
+![](/attachments/597853537/597883354.png)
 
 Se pueden añadir, modificar y eliminar responsables económicos independientemente del estado de la solicitud siempre y cuando la solicitud no tenga el proyecto asociado, si ya existe el proyecto generado a partir de la solicitud el personal de gestión no podrá modificar ningún dato de la solicitud.
 
-##### 4\.9\.1 Añadir un responsable económico
+##### 4.9.1 Añadir un responsable económico
 
 El botón "añadir responsable económico" permite dar de alta a un nuevo responsable económico del proyecto solicitado. Tras pulsar el botón se muestra la ventana para la introducción de datos:
 
-![](/attachments/597853537/597883346.png)  
-
+![](/attachments/597853537/597883346.png)
 
 Los campos de un responsable económico son:
 
-* Responsable económico: Campo para buscar a la persona que se quiere añadir al grupo como responsable económico. Para indicar la persona se utiliza el buscador común de personas [MDU\-Manual de usuario \- 8\.1 Personas](https://confluence.um.es/confluence/display/HERCULES/MDU+-+Manual+de+usuario#MDUManualdeusuario-8.1Personas "https://confluence.um.es/confluence/display/HERCULES/MDU+-+Manual+de+usuario#MDUManualdeusuario-8.1Personas"). Es un campo obligatorio.
+* Responsable económico: Campo para buscar a la persona que se quiere añadir al grupo como responsable económico. Para indicar la persona se utiliza el buscador común de personas [MDU-Manual de usuario - 8.1 Personas](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario#MDUManualdeusuario-8.1Personas). Es un campo obligatorio.
 * Mes inicial: Campo de tipo numérico para introducir el mes inicial previsto para la participación del responsable económico de proyecto. Es un campo opcional.
 * Mes final: Campo de tipo numérico para introducir el mes final previsto para la participación del responsable económico de proyecto. Es un campo opcional.
 
@@ -1035,60 +1040,55 @@ Adicionalmente a las validaciones de la obligatoriedad se aplican las siguientes
 
 Hasta que no se cumplimente todos los datos obligatorios y no existan errores de validación no se activará el botón "Añadir".
 
-![](/attachments/597853537/597883344.png)  
-
+![](/attachments/597853537/597883344.png)
 
 Al pulsar sobre el botón "Añadir" la persona se añadirá como responsable económico mostrando en la tabla de responsables económicos del proyecto solicitado un fila mas que representa a la persona que se acaba de añadir.
 
-![](/attachments/597853537/597883350.png)  
-
+![](/attachments/597853537/597883350.png)
 
 Para que se consoliden los datos el personal de gestión deberá pulsar sobre el botón "Guardar" situado en la parte inferior de la pantalla en el pie de página para actualizar el proyecto solicitado, si no se pulsa sobre el botón "Guardar" todos los cambios realizados se perderán.
 
-##### 4\.9\.2 Modificar responsable económico
+##### 4.9.2 Modificar responsable económico
 
-El icono "modificar responsable económico" permite modificar los datos de uno de los responsables económicos del proyecto solicitado. Tras pulsar el botón se muestra la ventana para la modificación de datos, la pantalla es idéntica a la utilizada durante el alta, dejando la posibilidad de modificar cualquiera de los campos del formulario (ver funcionalidad descrita en el apartado [Añadir un responsable económico](#CSPSolicitudes-4.9.1A%C3%B1adirunresponsableecon%C3%B3mico "#CSPSolicitudes-4.9.1A%C3%B1adirunresponsableecon%C3%B3mico") para mas detalle).
+El icono "modificar responsable económico" permite modificar los datos de uno de los responsables económicos del proyecto solicitado. Tras pulsar el botón se muestra la ventana para la modificación de datos, la pantalla es idéntica a la utilizada durante el alta, dejando la posibilidad de modificar cualquiera de los campos del formulario (ver funcionalidad descrita en el apartado [Añadir un responsable económico](#CSPSolicitudes-4.9.1A%C3%B1adirunresponsableecon%C3%B3mico) para mas detalle).
 
 En la siguiente imagen se muestra la pantalla de edición de un responsable económico de un proyecto solicitado:
 
-![](/attachments/597853537/597883348.png)  
-
+![](/attachments/597853537/597883348.png)
 
 El botón "Aceptar" no se habilitará hasta que se introduzca algún cambio en uno de los datos de la pantalla. Se realizarán las misma validaciones que en la creación de un nuevo responsable económico.
 
 Al pulsar sobre el botón "Aceptar" el responsable económico se modificará y los cambios se verán reflejados en la tabla de responsables económicos del proyecto solicitado mostrando el icono de la admiración en el menú de "Responsable económico" y el mensaje de información en la parte de abajo de la pantalla en el pie de página para recordar al personal de gestión que debe de pulsar el botón "Guardar" para que los cambios realizados (en este caso un cambio de un responsable económico) se consoliden.
 
-##### 4\.9\.3 Eliminar responsable económico
+##### 4.9.3 Eliminar responsable económico
 
 Tras pulsar el icono eliminar se mostrará un mensaje de confirmación.
 
-![](/attachments/597853537/597883352.png)  
-
+![](/attachments/597853537/597883352.png)
 
 Si se pulsa el botón Cancelar se cerrará la ventana del mensaje de confirmación y el responsable económico no será borrado.
 
 Si se pulsa el botón Aceptar el responsable económico desaparecerá de la tabla de responsables económicos del proyecto solicitado mostrando el icono de la admiración en el menú de "Responsable económico" y el mensaje de información en la parte de abajo de la pantalla en el pie de página para recordar al personal de gestión que debe de pulsar el botón "Guardar" para que los cambios realizados (en este caso el borrado del responsable económico) se consoliden.
 
-#### 4\.10 Datos Proyecto \- Socios
+#### 4.10 Datos Proyecto - Socios
 
 En este apartado se recogerá el listado de socios, entendidos éstos como empresas, que participarán en el proyecto propuesto. Para cada socio se permitirá recoger su equipo de proyecto.
 
-Este apartado y, en general, todo del bloque "Datos proyectos" solamente ser hará visible cuando el campo "Tipo solicitud SGI" de la solicitud toma valor "Proyecto" y si en el campo "Proyecto coordinado" del apartado "Datos proyecto \- Ficha general" se indica el valor "Sí".  
+Este apartado y, en general, todo del bloque "Datos proyectos" solamente ser hará visible cuando el campo "Tipo solicitud SGI" de la solicitud toma valor "Proyecto" y si en el campo "Proyecto coordinado" del apartado "Datos proyecto - Ficha general" se indica el valor "Sí".
 
-
-Inicialmente el apartado estará vacío. Si la Universidad no actúa como coordinadora del proyecto, se mostrará un mensaje recordando que se debe de indicar que socio actuará como coordinador. El rol que desempeña la  universidad se recoge en el campo "Rol Universidad" del apartado  "Datos proyecto \- Ficha general". El rol de coordinación debe de configurarse en el apartado  Configuración \- Roles de socio de proyecto del módulo CSP).
+Inicialmente el apartado estará vacío. Si la Universidad no actúa como coordinadora del proyecto, se mostrará un mensaje recordando que se debe de indicar que socio actuará como coordinador. El rol que desempeña la  universidad se recoge en el campo "Rol Universidad" del apartado  "Datos proyecto - Ficha general". El rol de coordinación debe de configurarse en el apartado  Configuración - Roles de socio de proyecto del módulo CSP).
 
 ![](/attachments/597853537/597883306.png)
 
 Se muestra un mensaje con fondo azul indicando que no se ha introducido el socio que actuará como coordinador del proyecto. Es únicamente un mensaje informativo.
 
-Si la Universidad actúa como coordinadora del proyecto, es decir, si en el campo  el campo "Rol Universidad" del apartado "Datos proyecto \- Ficha general" se indica un rol que se corresponde con el rol configurado como de coordinación (Ver  Configuración \- Roles de socio de proyecto) no mostrará el aviso:
+Si la Universidad actúa como coordinadora del proyecto, es decir, si en el campo  el campo "Rol Universidad" del apartado "Datos proyecto - Ficha general" se indica un rol que se corresponde con el rol configurado como de coordinación (Ver  Configuración - Roles de socio de proyecto) no mostrará el aviso:
 
 ![](/attachments/597853537/597883307.png)
 
 Se pueden añadir, modificar y eliminar socios independientemente del estado de la solicitud siempre y cuando la solicitud no tenga el proyecto asociado, si ya existe el proyecto generado a partir de la solicitud el personal de gestión no podrá modificar ningún dato de la solicitud.
 
-##### 4\.10\.1 Añadir socio
+##### 4.10.1 Añadir socio
 
 Para añadir  un socio se pulsará el botón "añadir socio". La creación de un socio da lugar a un cambio de contexto, por lo que si hay datos pendientes de guardar de la solicitud, se advertirá de que deben ser guardados.
 
@@ -1096,12 +1096,12 @@ Al pulsar este botón se mostrará la ventana de introducción de datos de un so
 
 ![](/attachments/597853537/597883329.png)
 
-El detalle de un socio se encuentra distribuido e diferentes apartados, cada uno de ellos accesible desde el menú izquierdo. 
+El detalle de un socio se encuentra distribuido e diferentes apartados, cada uno de ellos accesible desde el menú izquierdo.
 
-* Datos generales: conjunto de datos de información general del socio. Es el único apartado obligatorio para crear un nuevo socio. Ver detalle de los campos en [Datos generales](#CSPSolicitudes-4.10.1.1Datosgenerales "#CSPSolicitudes-4.10.1.1Datosgenerales").
-* Equipo del socio: listado con el equipo de investigación del socio. Ver detalla del apartado en [Equipo del socio](#CSPSolicitudes-4.10.1.1Equipodelsocio "#CSPSolicitudes-4.10.1.1Equipodelsocio").
-* Periodos de pago: sólo se muestra este apartado cuando la Universidad actúa como coordinadora del proyecto (campo "Rol Universidad" del apartado de "Datos proyecto \- Ficha general" toma el valor del rol configurado como coordinador en  Configuración \- Roles de socio de proyecto). Serán los periodos de pago a los que la Universidad se compromete con el socio. Ver detalla del apartado en [Periodos de pago](https://confluence.treelogic.com/display/HERCULES/CSP-Solicitudes#CSPSolicitudes-4.10.1.1Periodosdepago "https://confluence.treelogic.com/display/HERCULES/CSP-Solicitudes#CSPSolicitudes-4.10.1.1Periodosdepago").
-* Periodos de justificación: sólo se muestra este apartado cuando la Universidad actúa como coordinadora del proyecto (campo "Rol Universidad" del apartado de "Datos proyecto \- Ficha general" toma el valor del rol configurado como coordinador en  Configuración \- Roles de socio de proyecto). Serán los periodos de justificación que se le deben exigir al socio. Ver detalle del apartado en [Periodos de justificación](https://confluence.treelogic.com/display/HERCULES/CSP-Solicitudes#CSPSolicitudes-4.10.1.1Periodosdejustificaci%C3%B3n "https://confluence.treelogic.com/display/HERCULES/CSP-Solicitudes#CSPSolicitudes-4.10.1.1Periodosdejustificaci%C3%B3n").
+* Datos generales: conjunto de datos de información general del socio. Es el único apartado obligatorio para crear un nuevo socio. Ver detalle de los campos en [Datos generales](#CSPSolicitudes-4.10.1.1Datosgenerales).
+* Equipo del socio: listado con el equipo de investigación del socio. Ver detalla del apartado en [Equipo del socio](#CSPSolicitudes-4.10.1.1Equipodelsocio).
+* Periodos de pago: sólo se muestra este apartado cuando la Universidad actúa como coordinadora del proyecto (campo "Rol Universidad" del apartado de "Datos proyecto - Ficha general" toma el valor del rol configurado como coordinador en  Configuración - Roles de socio de proyecto). Serán los periodos de pago a los que la Universidad se compromete con el socio. Ver detalla del apartado en [Periodos de pago](https://confluence.treelogic.com/display/HERCULES/CSP-Solicitudes#CSPSolicitudes-4.10.1.1Periodosdepago).
+* Periodos de justificación: sólo se muestra este apartado cuando la Universidad actúa como coordinadora del proyecto (campo "Rol Universidad" del apartado de "Datos proyecto - Ficha general" toma el valor del rol configurado como coordinador en  Configuración - Roles de socio de proyecto). Serán los periodos de justificación que se le deben exigir al socio. Ver detalle del apartado en [Periodos de justificación](https://confluence.treelogic.com/display/HERCULES/CSP-Solicitudes#CSPSolicitudes-4.10.1.1Periodosdejustificaci%C3%B3n).
 
 Una vez introducidos todos los datos obligatorios del formulario "Datos generales", se activará el botón "Guardar" situado en la parte inferior de la pantalla que permite dar de alta el nuevo socio. Se podrá guardar el nuevo socio únicamente con los datos introducidos en el apartado de "Datos generales" o se puede ir al resto de apartados para informar de dichos datos.
 
@@ -1109,8 +1109,7 @@ Una vez introducidos todos los datos obligatorios del formulario "Datos generale
 
 El botón "Guardar" no sólo guarda los datos del formulario que este mostrando en ese momento la pantalla, sino todos los formularios que componen el nuevo socio, es decir, los datos generales, equipo, periodos de pago y periodos de justificación. Al pulsar el botón se muestra un mensaje de que el socio se ha creado correctamente igual que el de la siguiente imagen.
 
-![](/attachments/597853537/597883333.png)  
-
+![](/attachments/597853537/597883333.png)
 
 Una vez creado el socio te lleva a la edición del socio.
 
@@ -1122,13 +1121,13 @@ se retornará al apartado "Socios" de la solicitud de procedencia:
 
 ![](/attachments/597853537/597883320.png)
 
-###### 4\.10\.1\.1 Datos generales
+###### 4.10.1.1 Datos generales
 
 Este apartado centraliza los datos principales de un socio. A continuación se describe cada uno de los campos solicitados en este formulario:
 
 ![](/attachments/597853537/597883329.png)
 
-* Socio: Campo para buscar a la empresa que participará como socio colaborador en el proyecto propuesto en la solicitud. Para indicar la empresa se utiliza el buscador común de entidades [MDU\-Manual de usuario \- 8\.2 Entidades o empresas](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/index.md#MDUManualdeusuario-8.2Entidadesoempresas "/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/index.md#MDUManualdeusuario-8.2Entidadesoempresas"). Es un campo obligatorio.
+* Socio: Campo para buscar a la empresa que participará como socio colaborador en el proyecto propuesto en la solicitud. Para indicar la empresa se utiliza el buscador común de entidades [MDU-Manual de usuario - 8.2 Entidades o empresas](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario#MDUManualdeusuario-8.2Entidadesoempresas). Es un campo obligatorio.
 * Rol del socio en el proyecto: Campo de tipo desplegable que indica el rol con el que participará el socio colaborador. Los roles disponibles serán los configurados durante la implantación del SGI en la Universidad. Por ejemplo: Coordinar, Socio, Partner organisation, Tercera parte y Otros. Es un campo obligatorio.
 * Número de investigadores del equipo del socio: Campo numérico para indicar el número de investigadores que forman parte del equipo del socio. Es un campo opcional.
 * Importe solicitado: Campo decimal para indicar el importe presupuestado por el socio para el desarrollo de su parte del proyecto. Es un campo opcional.
@@ -1136,12 +1135,11 @@ Este apartado centraliza los datos principales de un socio. A continuación se d
 * Mes inicial: Campo numérico para indicar el mes de inicio de la colaboración del socio en el proyecto. Es un campo opcional.
 * Mes final: Campo numérico para indicar el mes de fin de la colaboración del socio en el proyecto. Es un campo opcional.
 
-Cumplimentados los campos obligatorios se activa el botón "Guardar":  
-
+Cumplimentados los campos obligatorios se activa el botón "Guardar":
 
 ![](/attachments/597853537/597883327.png)
 
-###### 4\.10\.1\.1 Equipo del socio
+###### 4.10.1.1 Equipo del socio
 
 Listado con el equipo de investigación del socio. Inicialmente el apartado estará vacío, presentando el siguiente aspecto:
 
@@ -1154,22 +1152,21 @@ Para añadir un nuevo miembro al equipo del socio se debe pulsar el botón "aña
 Los campos de un miembro del equipo son:
 
 * Rol de participación: Campo de tipo desplegable que indica el rol con el que participará el miembro en el equipo del socio. Los roles disponibles en el desplegable serán los definidos durante la implantación de la aplicación en la Universidad. Es un campo obligatorio.
-* Miembro: Campo para buscar a la persona que se quiere añadir al equipo del socio. Para indicar la persona se utiliza el buscador común de personas [MDU\-Manual de usuario \- 8\.1 Personas](https://confluence.um.es/confluence/display/HERCULES/MDU+-+Manual+de+usuario#MDUManualdeusuario-8.1Personas "https://confluence.um.es/confluence/display/HERCULES/MDU+-+Manual+de+usuario#MDUManualdeusuario-8.1Personas"). Es un campo obligatorio.
-* Periodo de participación previsto \- Mes inicial: Campo de numérico para introducir el mes inicial previsto para la participación del miembro del equipo del socio con el rol especificado en el campo "Rol".  Es un campo opcional.
-* Periodo de participación previsto \- Mes final: Campo de numérico para introducir el mes final previsto para la participación del miembro del equipo del socio con el rol especificado en el campo "Rol".  Es un campo opcional.
+* Miembro: Campo para buscar a la persona que se quiere añadir al equipo del socio. Para indicar la persona se utiliza el buscador común de personas [MDU-Manual de usuario - 8.1 Personas](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario#MDUManualdeusuario-8.1Personas). Es un campo obligatorio.
+* Periodo de participación previsto - Mes inicial: Campo de numérico para introducir el mes inicial previsto para la participación del miembro del equipo del socio con el rol especificado en el campo "Rol".  Es un campo opcional.
+* Periodo de participación previsto - Mes final: Campo de numérico para introducir el mes final previsto para la participación del miembro del equipo del socio con el rol especificado en el campo "Rol".  Es un campo opcional.
 
 Hasta que no se cumplimente todos los datos obligatorios y no existan errores de validación no se activará el botón "Añadir":
 
-![](/attachments/597853537/597882937.png)  
-
+![](/attachments/597853537/597882937.png)
 
 Al pulsar sobre el botón "Añadir"  el miembro del equipo pasará a estar disponible en el listado de miembros del equipo del socio, desde donde podrá ser modificado y/o eliminado:
 
 ![](/attachments/597853537/597883312.png)
 
-###### 4\.10\.1\.1 Periodos de pago
+###### 4.10.1.1 Periodos de pago
 
-Listado con los periodos de pago a los que la Universidad se compromete con el socio. Este apartado sólo se muestra si la Universidad actúa como coordinadora del proyecto (campo "Rol Universidad" del apartado de "Datos proyecto \- Ficha general" toma el valor del rol configurado como coordinador en  Configuración \- Roles de socio de proyecto)
+Listado con los periodos de pago a los que la Universidad se compromete con el socio. Este apartado sólo se muestra si la Universidad actúa como coordinadora del proyecto (campo "Rol Universidad" del apartado de "Datos proyecto - Ficha general" toma el valor del rol configurado como coordinador en  Configuración - Roles de socio de proyecto)
 
 Inicialmente el apartado estará vacío, presentando el siguiente aspecto:
 
@@ -1182,27 +1179,24 @@ Para añadir un nuevo periodo de pago del socio se debe pulsar el botón "añadi
 Los campos de un periodo de pago son:
 
 * Número de periodo: Número secuencial dentro de la solicitud que asignará directamente el sistema en función de la ordenación del mes. Es un campo de información para el personal de gestión, es de consulta, no se puede modificar.
-* Mes: Campo de tipo numérico para indicar el mes previsto de pago al socio colaborador por parte de la Universidad. Será relativo a la duración de los proyectos que deriven de la solicitud. Es un campo obligatorio. Se comprobará que el mes no sea superior a la duración del proyecto indicada en el campo "Duración" en la pestaña de "Datos proyecto \- Ficha general" (en caso de estar informado)
+* Mes: Campo de tipo numérico para indicar el mes previsto de pago al socio colaborador por parte de la Universidad. Será relativo a la duración de los proyectos que deriven de la solicitud. Es un campo obligatorio. Se comprobará que el mes no sea superior a la duración del proyecto indicada en el campo "Duración" en la pestaña de "Datos proyecto - Ficha general" (en caso de estar informado)
 * Importe: Campo de tipo decimal para indicar el importe previsto de pago al socio colaborador por parte de la Universidad. Es un campo opcional.
 
 Hasta que no se cumplimente todos los datos obligatorios y no existan errores de validación no se activará el botón "Añadir":
 
 ![](/attachments/597853537/597882935.png)
 
-Al pulsar sobre el botón "Añadir" el periodo de pago pasará a estar disponible en el listado de periodos de pago del socio, desde donde podrá ser modificado y/o eliminado:  
+Al pulsar sobre el botón "Añadir" el periodo de pago pasará a estar disponible en el listado de periodos de pago del socio, desde donde podrá ser modificado y/o eliminado:
 
+![](/attachments/597853537/597882938.png)
 
-![](/attachments/597853537/597882938.png)  
+###### 4.10.1.1 Periodos de justificación
 
-
-###### 4\.10\.1\.1 Periodos de justificación
-
-Listado con los periodos de justificación que se le deben exigir al socio. Este apartado sólo se muestra si la Universidad desempeña el rol de coordinadora del proyecto (campo "Rol Universidad" del apartado de "Datos proyecto \- Ficha general" toma el valor del rol configurado como coordinador en  Configuración \- Roles de socio de proyecto).
+Listado con los periodos de justificación que se le deben exigir al socio. Este apartado sólo se muestra si la Universidad desempeña el rol de coordinadora del proyecto (campo "Rol Universidad" del apartado de "Datos proyecto - Ficha general" toma el valor del rol configurado como coordinador en  Configuración - Roles de socio de proyecto).
 
 Inicialmente el apartado estará vacío, presentando el siguiente aspecto:
 
-![](/attachments/597853537/597882933.png)  
-
+![](/attachments/597853537/597882933.png)
 
 Para añadir un nuevo periodo de justificación del socio se debe pulsar el botón "añadir periodo de justificación". Se mostrará la siguiente ventana:
 
@@ -1212,17 +1206,17 @@ Los campos de un periodo de justificación son:
 
 * Nombre: Nombre del socio. Es un campo de consulta, no se puede modificar.
 * Número de periodo: Número secuencial dentro de la solicitud que asignará directamente el sistema en función de la ordenación del mes de inicio. Es un campo de información para el personal de gestión, es de consulta, no se puede modificar.
-* Periodo a justificar \- Desde el mes: Campo de tipo numérico para indicar el mes inicial del periodo a justificar. Será relativo a la duración del proyecto que derive de la solicitud. Es un campo obligatorio.
-* Periodo a justificar \- Hasta el mes: Campo de tipo numérico para indicar el mes final del periodo a justificar. Será relativo a la duración del proyecto que derive de la solicitud. Es un campo obligatorio.
-* Periodo de presentación \- Fecha inicio presentación: Campo de tipo fecha para introducir la fecha de inicio del plazo de presentación de la justificación a la Universidad por parte del socio colaborador. Se puede introducir la fecha de forma manual o con la ayuda del calendario. Es un campo opcional.
-* Periodo de presentación \- Fecha fin presentación: Campo de tipo fecha para introducir la fecha de fin del plazo de presentación de la justificación a la Universidad por parte del socio colaborador. Se puede introducir la fecha de forma manual o con la ayuda del calendario. Es un campo opcional.
+* Periodo a justificar - Desde el mes: Campo de tipo numérico para indicar el mes inicial del periodo a justificar. Será relativo a la duración del proyecto que derive de la solicitud. Es un campo obligatorio.
+* Periodo a justificar - Hasta el mes: Campo de tipo numérico para indicar el mes final del periodo a justificar. Será relativo a la duración del proyecto que derive de la solicitud. Es un campo obligatorio.
+* Periodo de presentación - Fecha inicio presentación: Campo de tipo fecha para introducir la fecha de inicio del plazo de presentación de la justificación a la Universidad por parte del socio colaborador. Se puede introducir la fecha de forma manual o con la ayuda del calendario. Es un campo opcional.
+* Periodo de presentación - Fecha fin presentación: Campo de tipo fecha para introducir la fecha de fin del plazo de presentación de la justificación a la Universidad por parte del socio colaborador. Se puede introducir la fecha de forma manual o con la ayuda del calendario. Es un campo opcional.
 * Observaciones: Campo de texto libre que permite introducir cualquier observación sobre el periodo de justificación. El personal de gestión puede modificar el tamaño de la caja de texto de este campo, para ello deberá situar el cursor sobre su esquina inferior izquierda (rayado gris), cuando el cursor cambie de aspecto, deberá pulsar con el botón izquierdo del ratón y arrastrar sin soltar. Es un campo opcional.
 
-Se comprobará que no se solapen rangos de mes inicial \- mes final. Para ello:
+Se comprobará que no se solapen rangos de mes inicial - mes final. Para ello:
 
 * El número de mes (inicial o final) de cualquier periodo será único.
 * Para cualquier periodo mes final ha de ser mayor o igual que mes inicial.
-* No pueden existir solapamientos de meses, si existe un periodo del mes 5 al 10, se puede crear otro periodo del mes 1 al 4\. Habrá que reordenar los distintos periodos cada vez que se añade un nuevo periodo o se modifica uno.
+* No pueden existir solapamientos de meses, si existe un periodo del mes 5 al 10, se puede crear otro periodo del mes 1 al 4. Habrá que reordenar los distintos periodos cada vez que se añade un nuevo periodo o se modifica uno.
 * El mes inicial o final de cualquier periodo no podrán superar nunca la duración en meses indicada en "Datos generales" de la solicitud, siempre que este campo estuviese informado. En caso de no estar informado no se aplicaría esta comprobación.
 * El primer periodo siempre comenzará en el mes 1
 * No pueden existir salto de meses entre periodos, ya que no se puede dar la situación de que queden días fuera desde el día de inicio del primer periodo hasta el día fin del último periodo.
@@ -1240,12 +1234,11 @@ Hasta que no se cumplimente todos los datos obligatorios y no existan errores de
 
 ![](/attachments/597853537/597882953.png)
 
-Al pulsar sobre el botón "Añadir" el periodo de justificación pasará a estar disponible en el listado de periodos de justificación del socio, desde donde podrá ser modificado y/o eliminado:  
-
+Al pulsar sobre el botón "Añadir" el periodo de justificación pasará a estar disponible en el listado de periodos de justificación del socio, desde donde podrá ser modificado y/o eliminado:
 
 ![](/attachments/597853537/597882955.png)
 
-##### 4\.10\.2  Modificar socio
+##### 4.10.2  Modificar socio
 
 El icono "modificar socio" permite modificar los datos de uno de los socios de la solicitud.  La modificación de un socio da lugar a un cambio de contexto, por lo que si hay datos pendientes de guardar de la solicitud, se advertirá de que deben ser guardados.
 
@@ -1253,20 +1246,19 @@ Tras pulsar el botón se muestra la ventana para la modificación de datos, en s
 
 ![](/attachments/597853537/597882945.png)
 
-Se podrán introducir cambios sobre los campos del apartado "Datos generales". Del mismo modo, accediendo a través del menú lateral izquierdo, se podrán realizar modificaciones sobre los campos del resto de apartados. Las pantallas de cada uno de los apartados no varían con respecto a las indicadas en el apartado [Añadir socio](#CSPSolicitudes-4.10.1A%C3%B1adirsocio "#CSPSolicitudes-4.10.1A%C3%B1adirsocio").
+Se podrán introducir cambios sobre los campos del apartado "Datos generales". Del mismo modo, accediendo a través del menú lateral izquierdo, se podrán realizar modificaciones sobre los campos del resto de apartados. Las pantallas de cada uno de los apartados no varían con respecto a las indicadas en el apartado [Añadir socio](#CSPSolicitudes-4.10.1A%C3%B1adirsocio).
 
-##### 4\.10\.3  Eliminar socio
+##### 4.10.3  Eliminar socio
 
 Tras pulsar el icono eliminar se mostrará un mensaje de confirmación.
 
-![](/attachments/597853537/597882668.png)  
-
+![](/attachments/597853537/597882668.png)
 
 Si se pulsa el botón Cancelar se cerrará la ventana del mensaje de confirmación y el miembro del equipo del socio no será borrado.
 
 Si se pulsa el botón Aceptar el miembro del equipo del socio desaparecerá de la tabla de miembros del equipo del socio mostrando el icono de la admiración en el menú de "Equipo del Socio" y el mensaje de información en la parte de abajo de la pantalla en el pie de página para recordar al personal de gestión que debe de pulsar el botón "Guardar" para que los cambios realizados (en este caso un borrado de un miembro del equipo) se consoliden.
 
-#### 4\.11 Datos Proyecto \- Entidades financiadoras
+#### 4.11 Datos Proyecto - Entidades financiadoras
 
 En este apartado se visualizarán las entidades financiadoras de la convocatoria si la solicitud esta vinculada a una convocatoria del SGI. De forma adicional, se podrán añadir otras entidades financiadoras ajenas a la convocatoria.
 
@@ -1280,7 +1272,7 @@ Sobre las entidades financiadoras de la convocatoria no se podrá realizar ningu
 
 Se pueden añadir, modificar y eliminar entidades financiadoras ajenas a la convocatoria independientemente del estado de la solicitud siempre y cuando la solicitud no tenga el proyecto asociado, si ya existe el proyecto generado a partir de la solicitud el personal de gestión no podrá modificar ningún dato de la solicitud.
 
-##### 4\.11\.1 Añadir entidad financiadora ajena a la convocatoria
+##### 4.11.1 Añadir entidad financiadora ajena a la convocatoria
 
 Para añadir una entidad financiadora se pulsará el botón "Añadir entidad financiadora". Se mostrará una ventana con el siguiente aspecto:
 
@@ -1288,16 +1280,16 @@ Para añadir una entidad financiadora se pulsará el botón "Añadir entidad fin
 
 Los campos de una entidad financiadora son:
 
-* Entidad financiadora: Campo para buscar a la entidad financiadora. Para indicar la entidad se utiliza el buscador común de empresas [MDU\-Manual de Usuario \- 8\.2 Entidades o empresas.](https://confluence.um.es/confluence/display/HERCULES/MDU+-+Manual+de+usuario#MDUManualdeusuario-8.2Entidadesoempresas "https://confluence.um.es/confluence/display/HERCULES/MDU+-+Manual+de+usuario#MDUManualdeusuario-8.2Entidadesoempresas") Es un campo obligatorio.
-* Fuente de financiación. Indicará la fuente de financiación a través de la que la entidad participa en el proyecto solicitado. Se debe seleccionar un valor del desplegable. El listado de valores disponible será el introducido a través de la opción [CSP\-Configuración \- 10 Fuentes de financiación](https://confluence.um.es/confluence/pages/viewpage.action?pageId=134296892#CSPConfiguraci%C3%B3n-10.Fuentesdefinanciaci%C3%B3n "https://confluence.um.es/confluence/pages/viewpage.action?pageId=134296892#CSPConfiguraci%C3%B3n-10.Fuentesdefinanciaci%C3%B3n"). El desplegable "fuente de financiación" incorpora los controles "refrescar" ![](/attachments/597853537/597883044.png) y "crear" ![](/attachments/597853537/597883041.png) siguiendo el comportamiento descrito en [MDU\-Manual de usuario \- 3\.17 Controles sobre campos desplegables o selectores](https://confluence.um.es/confluence/display/HERCULES/MDU+-+Manual+de+usuario#MDUManualdeusuario-3.17Controlessobrecamposdesplegablesoselectores "https://confluence.um.es/confluence/display/HERCULES/MDU+-+Manual+de+usuario#MDUManualdeusuario-3.17Controlessobrecamposdesplegablesoselectores")
+* Entidad financiadora: Campo para buscar a la entidad financiadora. Para indicar la entidad se utiliza el buscador común de empresas [MDU-Manual de Usuario - 8.2 Entidades o empresas.](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario#MDUManualdeusuario-8.2Entidadesoempresas) Es un campo obligatorio.
+* Fuente de financiación. Indicará la fuente de financiación a través de la que la entidad participa en el proyecto solicitado. Se debe seleccionar un valor del desplegable. El listado de valores disponible será el introducido a través de la opción [CSP-Configuración - 10 Fuentes de financiación](https://confluence.um.es/confluence/pages/viewpage.action?pageId=134296892#CSPConfiguraci%C3%B3n-10.Fuentesdefinanciaci%C3%B3n). El desplegable "fuente de financiación" incorpora los controles "refrescar" ![](/attachments/597853537/597883044.png) y "crear" ![](/attachments/597853537/597883041.png) siguiendo el comportamiento descrito en [MDU-Manual de usuario - 3.17 Controles sobre campos desplegables o selectores](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario#MDUManualdeusuario-3.17Controlessobrecamposdesplegablesoselectores)
 
 ![](/attachments/597853537/597883048.png)
 
-* Tipo de financiación: Indicará el tipo o mecanismo financiero a través del que la entidad aporta la financiación a la convocatoria.  Se debe seleccionar un valor del desplegable. El listado de valores disponible será el introducido a través de la opción [CSP\-Configuración \- 11 Tipo de financiación](https://confluence.um.es/confluence/pages/viewpage.action?pageId=134296892#CSPConfiguraci%C3%B3n-11.Tiposdefinanciaci%C3%B3n "https://confluence.um.es/confluence/pages/viewpage.action?pageId=134296892#CSPConfiguraci%C3%B3n-11.Tiposdefinanciaci%C3%B3n"). El desplegable "fuente de financiación" incorpora los controles "refrescar" ![](/attachments/597853537/597883044.png) y "crear" ![](/attachments/597853537/597883041.png) siguiendo el comportamiento descrito en [MDU\-Manual de usuario \- 3\.17 Controles sobre campos desplegables o selectores](https://confluence.um.es/confluence/display/HERCULES/MDU+-+Manual+de+usuario#MDUManualdeusuario-3.17Controlessobrecamposdesplegablesoselectores "https://confluence.um.es/confluence/display/HERCULES/MDU+-+Manual+de+usuario#MDUManualdeusuario-3.17Controlessobrecamposdesplegablesoselectores").
+* Tipo de financiación: Indicará el tipo o mecanismo financiero a través del que la entidad aporta la financiación a la convocatoria.  Se debe seleccionar un valor del desplegable. El listado de valores disponible será el introducido a través de la opción [CSP-Configuración - 11 Tipo de financiación](https://confluence.um.es/confluence/pages/viewpage.action?pageId=134296892#CSPConfiguraci%C3%B3n-11.Tiposdefinanciaci%C3%B3n). El desplegable "fuente de financiación" incorpora los controles "refrescar" ![](/attachments/597853537/597883044.png) y "crear" ![](/attachments/597853537/597883041.png) siguiendo el comportamiento descrito en [MDU-Manual de usuario - 3.17 Controles sobre campos desplegables o selectores](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario#MDUManualdeusuario-3.17Controlessobrecamposdesplegablesoselectores).
 
 ![](/attachments/597853537/597883014.png)
 
-* Porcentaje de financiación. Se permite indicar un valor numérico entero comprendido entre 0 y 100\. Si se intenta introducir un valor superior a 100 se mostrará un mensaje de error sobre el campo:
+* Porcentaje de financiación. Se permite indicar un valor numérico entero comprendido entre 0 y 100. Si se intenta introducir un valor superior a 100 se mostrará un mensaje de error sobre el campo:
 
 ![](/attachments/597853537/597883018.png)
 
@@ -1307,28 +1299,23 @@ Los campos de una entidad financiadora son:
 
 Introducidos los campos deseados se deberá pulsar el botón "Añadir". La entidad financiadora pasará a mostrarse en el listado del apartado "Entidades financiadoras ajenas a la convocatoria"
 
-![](/attachments/597853537/597883004.png)  
+![](/attachments/597853537/597883004.png)
 
+El campo "ámbito" mostrado en la tabla del listado de entidades financiadoras se corresponde con el ámbito geográfico de la fuente de financiación (Ver el apartado [CSP-Configuración - 10 Fuentes de financiación](https://confluence.um.es/confluence/pages/viewpage.action?pageId=134296892#CSPConfiguraci%C3%B3n-10.Fuentesdefinanciaci%C3%B3n) para más detalle).
 
-  
+##### 4.11.2 Modificar entidad financiadora ajena a la convocatoria
 
-
-El campo "ámbito" mostrado en la tabla del listado de entidades financiadoras se corresponde con el ámbito geográfico de la fuente de financiación (Ver el apartado [CSP\-Configuración \- 10 Fuentes de financiación](https://confluence.um.es/confluence/pages/viewpage.action?pageId=134296892#CSPConfiguraci%C3%B3n-10.Fuentesdefinanciaci%C3%B3n "https://confluence.um.es/confluence/pages/viewpage.action?pageId=134296892#CSPConfiguraci%C3%B3n-10.Fuentesdefinanciaci%C3%B3n") para más detalle). 
-
-##### 4\.11\.2 Modificar entidad financiadora ajena a la convocatoria
-
-El icono "modificar entidad financiadora" permite modificar los datos de las entidades financiadoras ajenas a la convocatia. Tras pulsar el botón se muestra la ventana para la modificación de datos, la pantalla es idéntica a la utilizada durante el alta, dejando la posibilidad de modificar cualquiera de los campos del formulario excepto a la propia entidad financiadora (ver funcionalidad descrita en el apartado  [Añadir entidad financiadora ajena a la convocatoria](#CSPSolicitudes-4.11.1A%C3%B1adirentidadfinanciadoraajenaalaconvocatoria "#CSPSolicitudes-4.11.1A%C3%B1adirentidadfinanciadoraajenaalaconvocatoria") para mas detalle).
+El icono "modificar entidad financiadora" permite modificar los datos de las entidades financiadoras ajenas a la convocatia. Tras pulsar el botón se muestra la ventana para la modificación de datos, la pantalla es idéntica a la utilizada durante el alta, dejando la posibilidad de modificar cualquiera de los campos del formulario excepto a la propia entidad financiadora (ver funcionalidad descrita en el apartado  [Añadir entidad financiadora ajena a la convocatoria](#CSPSolicitudes-4.11.1A%C3%B1adirentidadfinanciadoraajenaalaconvocatoria) para mas detalle).
 
 En la siguiente imagen se muestra la pantalla de edición de una entidad financiadora del proyecto solicitado:
 
-![](/attachments/597853537/597883001.png)  
-
+![](/attachments/597853537/597883001.png)
 
 El botón "Aceptar" no se habilitará hasta que se introduzca algún cambio en uno de los datos de la pantalla. Se realizarán las misma validaciones que en la creación de una nueva entidad financiadora.
 
 Al pulsar sobre el botón "Aceptar" los datos de la entidad financiadora se modificarán y los cambios se verán reflejados en la tabla de entidades financiadoras ajenas a la convocatoria mostrando el icono de la admiración en el menú de "Entidades financiadoras" y el mensaje de información en la parte de abajo de la pantalla en el pie de página para recordar al personal de gestión que debe de pulsar el botón "Guardar" para que los cambios realizados (en este caso un cambio de una entidad financiadora ajena) se consoliden.
 
-##### 4\.11\.3 Eliminar entidad financiadora ajena a la convocatoria
+##### 4.11.3 Eliminar entidad financiadora ajena a la convocatoria
 
 Únicamente se puede eliminar una entidad financiadora ajena a la convocatoria si no tiene desglose de presupuesto vinculado. En este caso en vez de mostrar la acción de eliminar en la columna de "Acciones" se mostrará el icono de información tal y como muestra la siguiente imagen:
 
@@ -1338,16 +1325,15 @@ Al pasar con el ratón por encima del icono de información se muestra el mensaj
 
 Tras pulsar el icono eliminar se mostrará un mensaje de confirmación.
 
-![](/attachments/597853537/597883029.png)  
-
+![](/attachments/597853537/597883029.png)
 
 Si se pulsa el botón Cancelar se cerrará la ventana del mensaje de confirmación y la entidad financiadora no será borrada.
 
 Si se pulsa el botón Aceptar la entidad financiadora desaparecerá de la tabla de entidades financiadoras ajenas a la convocartoria mostrando el icono de la admiración en el menú de "Entidades financiadoras" y el mensaje de información en la parte de abajo de la pantalla en el pie de página para recordar al personal de gestión que debe de pulsar el botón "Guardar" para que los cambios realizados (en este caso un borrado de una entidad financiadora) se consoliden.
 
-#### 4\.12 Datos Proyecto \- Desglose presupuesto
+#### 4.12 Datos Proyecto - Desglose presupuesto
 
-En este apartado se recogerá el desglose presupuestario del proyecto en solicitud. Para este desglose se partirá de las restricciones de elegibilidad añadidas en la convocatoria. El presupuesto se deberá desglosar en base a los conceptos de gasto configurados a nivel global en el SGI ([CSP\-Configuración \- 12 Conceptos de gasto](https://confluence.um.es/confluence/pages/viewpage.action?pageId=134296892#CSPConfiguraci%C3%B3n-12.Conceptosdegasto "https://confluence.um.es/confluence/pages/viewpage.action?pageId=134296892#CSPConfiguraci%C3%B3n-12.Conceptosdegasto")).
+En este apartado se recogerá el desglose presupuestario del proyecto en solicitud. Para este desglose se partirá de las restricciones de elegibilidad añadidas en la convocatoria. El presupuesto se deberá desglosar en base a los conceptos de gasto configurados a nivel global en el SGI ([CSP-Configuración - 12 Conceptos de gasto](https://confluence.um.es/confluence/pages/viewpage.action?pageId=134296892#CSPConfiguraci%C3%B3n-12.Conceptosdegasto)).
 
 Como la convocatoria puede admitir varias entidades financiadoras o incluso el proyecto (solicitud en este momento) podría tener otras fuentes de financiación adicionales a las que promueven la convocatoria, el desglose del presupuesto se podrá recoger especificado por entidad financiadora. Dependiendo del valor del campo "Desglose del presupuesto por entidades financiadoras" de "Datos proyecto" se dejará introducir un único presupuesto global, un presupuesto individual por cada entidada financiadora y un presupuesto conjunto para todas las entidades de la convocatoria e individual para cada una de las entidades ajenas a la convocatoria (mixto).
 
@@ -1417,7 +1403,7 @@ En el caso de que no se quiera llegar a detallar la información a nivel de pres
 
 ![](/attachments/597853537/597883515.png)
 
-##### 4\.12\.1 Datos Proyecto \- Desglose presupuesto global
+##### 4.12.1 Datos Proyecto - Desglose presupuesto global
 
 Si el valor del campo "Desglose del presupuesto por entidades financiadoras" de "Datos proyecto"  tiene el valor "Global " el apartado presentará el siguiente aspecto inicialmente, cuando no se ha dado de alta ningún concepto de gasto del presupuesto:
 
@@ -1429,9 +1415,9 @@ Para dar de alta una partida de gasto o un concepto de gasto del presupuesto glo
 
 Los campos de una partida de gasto del presupuesto son:
 
-* Concepto de gasto: En este campo se indicará el nombre del concepto de gasto. El valor deberá ser seleccionado del listado ofrecido en el desplegable, que se corresponderá con los conceptos de gasto activos definidos a nivel global en el SGI. Puede consultarse [CSP\-Configuración \- 12 Conceptos de gasto](https://confluence.um.es/confluence/pages/viewpage.action?pageId=134296892#CSPConfiguraci%C3%B3n-12.Conceptosdegasto "https://confluence.um.es/confluence/pages/viewpage.action?pageId=134296892#CSPConfiguraci%C3%B3n-12.Conceptosdegasto") para ampliar más información sobre el origen de este campo. Es un campo obligatorio.
+* Concepto de gasto: En este campo se indicará el nombre del concepto de gasto. El valor deberá ser seleccionado del listado ofrecido en el desplegable, que se corresponderá con los conceptos de gasto activos definidos a nivel global en el SGI. Puede consultarse [CSP-Configuración - 12 Conceptos de gasto](https://confluence.um.es/confluence/pages/viewpage.action?pageId=134296892#CSPConfiguraci%C3%B3n-12.Conceptosdegasto) para ampliar más información sobre el origen de este campo. Es un campo obligatorio.
 
-Si la solicitud esta vinculada a una convocatoria registrada en el SGI y en dicha convocatoria se ha informado de los gastos permitidos y no permitidos en el apartado "Elegibilidad" (ver [CSP\-Convocatorias \- 3\.12 Elegibilidad](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/mdu-perfil-unidad-de-gestion/mdu-perfil-unidad-de-gestion-modulo-csp/csp-convocatorias.md#CSPConvocatorias-3.12Elegibilidad "/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/mdu-perfil-unidad-de-gestion/mdu-perfil-unidad-de-gestion-modulo-csp/csp-convocatorias.md#CSPConvocatorias-3.12Elegibilidad") para mas detalle), al seleccionar un concepto de gasto se buscará si esta dado de alta en el apartado "Elegibilidad" de la convocatoria y se mostrará la información introducida sobre el concepto de gasto (nombre, importe máximo, permitido desde mes y permitido hasta mes) junto con sus código económicos, tal y como muestra la siguiente imagen:
+Si la solicitud esta vinculada a una convocatoria registrada en el SGI y en dicha convocatoria se ha informado de los gastos permitidos y no permitidos en el apartado "Elegibilidad" (ver [CSP-Convocatorias - 3.12 Elegibilidad](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/mdu-perfil-unidad-de-gestion/mdu-perfil-unidad-de-gestion-modulo-csp/csp-convocatorias#CSPConvocatorias-3.12Elegibilidad) para mas detalle), al seleccionar un concepto de gasto se buscará si esta dado de alta en el apartado "Elegibilidad" de la convocatoria y se mostrará la información introducida sobre el concepto de gasto (nombre, importe máximo, permitido desde mes y permitido hasta mes) junto con sus código económicos, tal y como muestra la siguiente imagen:
 
 ![](/attachments/597853537/597883497.png)
 
@@ -1468,8 +1454,7 @@ Se muestra por cada anualidad el la suma del importe presupuestado y solicitado 
 
 La información mostrada en la tabla de resumen podrá ser exportada a Excel a través del botón "Exportar". Al pulsar sobre el botón "Exportar" se mostrarán las opciones de exportación:
 
-![](/attachments/597853537/597883529.png)  
-
+![](/attachments/597853537/597883529.png)
 
 Se debe seleccionar el formato de exportación. Los disponibles son:
 
@@ -1480,15 +1465,15 @@ Se debe seleccionar el formato de exportación. Los disponibles son:
 
 El campo "Título" se muestra cumplimentado por defecto al valor "Listado de presupuestos", pero podría ser modificado. Este campo solo es de utilidad en el caso de la exportación a los formatos PDF y RTF, incluyéndose como Título en la primera página del informe generado.
 
-Una vez introducidos todos los criterios de la exportación se deberá pulsar el botón "Exportar", se generará el documento asociado que podrá ser nombrado y descargado a la unidad de disco deseada. 
+Una vez introducidos todos los criterios de la exportación se deberá pulsar el botón "Exportar", se generará el documento asociado que podrá ser nombrado y descargado a la unidad de disco deseada.
 
-##### 4\.12\.2 Datos Proyecto \- Desglose presupuesto por entidades
+##### 4.12.2 Datos Proyecto - Desglose presupuesto por entidades
 
 Si el valor del campo "Desglose del presupuesto por entidades financiadoras" de "Datos proyecto"  tiene el valor "Por entidad" el apartado presentará el siguiente aspecto:
 
 ![](/attachments/597853537/597883105.png)
 
-En el listado de Entidades financiadores se mostrarán todas las entidades financiadoras de la convocatoria  y las entidades financiadoras ajenas a la convocatoria que se hubieran añadido en el apartado [DatosProyecto \- Entidades financiadoras](#CSPSolicitudes-4.11DatosProyecto-Entidadesfinanciadoras "#CSPSolicitudes-4.11DatosProyecto-Entidadesfinanciadoras").
+En el listado de Entidades financiadores se mostrarán todas las entidades financiadoras de la convocatoria  y las entidades financiadoras ajenas a la convocatoria que se hubieran añadido en el apartado [DatosProyecto - Entidades financiadoras](#CSPSolicitudes-4.11DatosProyecto-Entidadesfinanciadoras).
 
 Por cada entidad financiadora se muestra el nombre de la entidad, la fuente de financiación, el CIF y se indica si la entidad financiadora es de la convocatoria o es ajena a la convocatoria. Para añadir el desglose presupuestario de cada una de las entidades financiadoras (independientemente que sea o no de la convocatoria) se debe de pulsar el icono de acción ver  ![](/attachments/597853537/597882617.png).
 
@@ -1508,9 +1493,9 @@ Para dar de alta una partida de gasto o un concepto de gasto de la entidad finan
 
 Los campos de una partida de gasto del presupuesto son:
 
-* Concepto de gasto: En este campo se indicará el nombre del concepto de gasto. El valor deberá ser seleccionado del listado ofrecido en el desplegable, que se corresponderá con los conceptos de gasto activos definidos a nivel global en el SGI. Puede consultarse [CSP\-Configuración \- 12 Conceptos de gasto](https://confluence.um.es/confluence/pages/viewpage.action?pageId=134296892#CSPConfiguraci%C3%B3n-12.Conceptosdegasto "https://confluence.um.es/confluence/pages/viewpage.action?pageId=134296892#CSPConfiguraci%C3%B3n-12.Conceptosdegasto") para ampliar más información sobre el origen de este campo. Es un campo obligatorio.
+* Concepto de gasto: En este campo se indicará el nombre del concepto de gasto. El valor deberá ser seleccionado del listado ofrecido en el desplegable, que se corresponderá con los conceptos de gasto activos definidos a nivel global en el SGI. Puede consultarse [CSP-Configuración - 12 Conceptos de gasto](https://confluence.um.es/confluence/pages/viewpage.action?pageId=134296892#CSPConfiguraci%C3%B3n-12.Conceptosdegasto) para ampliar más información sobre el origen de este campo. Es un campo obligatorio.
 
-Si la entidad financiadora viene de la convocatoria y en dicha convocatoria se ha informado de los gastos permitidos y no permitidos en el apartado "Elegibilidad" (ver [CSP\-Convocatorias \- 3\.12 Elegibilidad](https://confluence.um.es/confluence/display/HERCULES/CSP-Convocatorias#CSPConvocatorias-3.12Elegibilidad "https://confluence.um.es/confluence/display/HERCULES/CSP-Convocatorias#CSPConvocatorias-3.12Elegibilidad") para mas detalle), al seleccionar un concepto de gasto se buscará si esta dado de alta en el apartado "Elegibilidad" de la convocatoria y se mostrará la información introducida sobre el concepto de gasto (nombre, importe máximo, permitido desde mes y permitido hasta mes) junto con sus código económicos, tal y como muestra la siguiente imangen:
+Si la entidad financiadora viene de la convocatoria y en dicha convocatoria se ha informado de los gastos permitidos y no permitidos en el apartado "Elegibilidad" (ver [CSP-Convocatorias - 3.12 Elegibilidad](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/mdu-perfil-unidad-de-gestion/mdu-perfil-unidad-de-gestion-modulo-csp/csp-convocatorias#CSPConvocatorias-3.12Elegibilidad) para mas detalle), al seleccionar un concepto de gasto se buscará si esta dado de alta en el apartado "Elegibilidad" de la convocatoria y se mostrará la información introducida sobre el concepto de gasto (nombre, importe máximo, permitido desde mes y permitido hasta mes) junto con sus código económicos, tal y como muestra la siguiente imangen:
 
 ![](/attachments/597853537/597883497.png)
 
@@ -1529,8 +1514,7 @@ Cumplimentados los campos obligatorios y deseados se pulsará el botón "Añadir
 
 El concepto de gasto pasará a estar disponible en el listado de partidas de gasto de la entidad financiadora, desde donde podrá ser modificado y/o eliminado:
 
-![](/attachments/597853537/597883552.png)  
-
+![](/attachments/597853537/597883552.png)
 
 Para que se consoliden los datos el personal de gestión deberá pulsar sobre el botón "Guardar" situado en la parte inferior de la pantalla en el pie de página para actualizar el desglose de presupuesto de la entidad financiadora que se esta consultado, si no se pulsa sobre el botón "Guardar" todos los cambios realizados en el presupuesto de la entidad financiadora se perderán.
 
@@ -1550,19 +1534,19 @@ se retornará al apartado "Desglose Presupuesto" de la solicitud de procedencia:
 
 Según se vayan dando de alta nuevas partidas de gasto en las entidades financiadoras los datos calculados sobre los importes presupuestados y solicitados de la Universidad de la panatalla "Desglose presupuesto" de irán actualizando.
 
-##### 4\.12\.3 Datos Proyecto \- Desglose presupuesto mixto
+##### 4.12.3 Datos Proyecto - Desglose presupuesto mixto
 
 Si el valor del campo "Desglose del presupuesto por entidades financiadoras" de "Datos proyecto"  tiene el valor "Mixto" el apartado presentará el siguiente aspecto:
 
 ![](/attachments/597853537/597883104.png)
 
-En el listado de Entidades financiadores se mostrará la entidad indicada como "gestora" de la convocatoria (en representación de todas las entidades financiadoras de la convocatoria, es el caso de que no se quiere especificar una desglose de presupuesto por cada entidad financiadora de la convoctoria sino que se desea únicamente especificar uno)  y las entidades financiadoras ajenas a la convocatoria que se hubieran añadido en el apartado [Datos Proyecto Entidades financiadoras](#CSPSolicitudes-4.11DatosProyecto-Entidadesfinanciadoras "#CSPSolicitudes-4.11DatosProyecto-Entidadesfinanciadoras").
+En el listado de Entidades financiadores se mostrará la entidad indicada como "gestora" de la convocatoria (en representación de todas las entidades financiadoras de la convocatoria, es el caso de que no se quiere especificar una desglose de presupuesto por cada entidad financiadora de la convoctoria sino que se desea únicamente especificar uno)  y las entidades financiadoras ajenas a la convocatoria que se hubieran añadido en el apartado [Datos Proyecto Entidades financiadoras](#CSPSolicitudes-4.11DatosProyecto-Entidadesfinanciadoras).
 
-Por cada entidad financiadora ajena a la convocatoria se muestra el nombre de la entidad, la fuente de financiación y el CIF, pero para la entidad gestora de la convocatoria únicamente se muestra el nombre y el CIF (porque el resto de campos no son recogidos en la convocatoria). Para añadir el desglose presupuestario de cada una de las entidades financiadoras (independientemente que sea o no de la convocatoria) se debe de pulsar el icono de acción ver  ![](/attachments/597853537/597882617.png) y seguir los pasos indicados en el apartado [Datos Proyecto \- Desglose presupuesto por entidades](#CSPSolicitudes-4.12.2DatosProyecto-Desglosepresupuestoporentidades "#CSPSolicitudes-4.12.2DatosProyecto-Desglosepresupuestoporentidades")
+Por cada entidad financiadora ajena a la convocatoria se muestra el nombre de la entidad, la fuente de financiación y el CIF, pero para la entidad gestora de la convocatoria únicamente se muestra el nombre y el CIF (porque el resto de campos no son recogidos en la convocatoria). Para añadir el desglose presupuestario de cada una de las entidades financiadoras (independientemente que sea o no de la convocatoria) se debe de pulsar el icono de acción ver  ![](/attachments/597853537/597882617.png) y seguir los pasos indicados en el apartado [Datos Proyecto - Desglose presupuesto por entidades](#CSPSolicitudes-4.12.2DatosProyecto-Desglosepresupuestoporentidades)
 
-#### 4\.13 Datos Proyecto \- Autoevaluación de ética
+#### 4.13 Datos Proyecto - Autoevaluación de ética
 
-Cuestionario básico (con preguntas sí/no) que permitirá conocer si el proyecto solicitado debe someterse a evaluación por parte del Comité de ética. Si el resultado de este cuestionario confirma la necesidad de evaluación, se creará automáticamente una nueva petición de evaluación de ética en  [MDU \- Perfil personal investigador \- ETI \- Editar solicitud de evaluación](https://confluence.um.es/confluence/display/HERCULES/ETI#ETI-Editarsolicituddeevaluaci%C3%B3n "https://confluence.um.es/confluence/display/HERCULES/ETI#ETI-Editarsolicituddeevaluaci%C3%B3n"). La creación de esta petición automática tendrá lugar cuando se realice el cambio de estado desde estado "Borrador" a cualquier otro estado diferente a "Desistida" y "Renunciada".
+Cuestionario básico (con preguntas sí/no) que permitirá conocer si el proyecto solicitado debe someterse a evaluación por parte del Comité de ética. Si el resultado de este cuestionario confirma la necesidad de evaluación, se creará automáticamente una nueva petición de evaluación de ética en  [MDU - Perfil personal investigador - ETI - Editar solicitud de evaluación](https://confluence.um.es/confluence/display/HERCULES/ETI#ETI-Editarsolicituddeevaluaci%C3%B3n). La creación de esta petición automática tendrá lugar cuando se realice el cambio de estado desde estado "Borrador" a cualquier otro estado diferente a "Desistida" y "Renunciada".
 
 Este apartado y, en general, todo del bloque "Datos proyectos" solamente ser hará visible cuando el campo "Tipo solicitud SGI" de la solicitud toma valor "Proyecto".
 
@@ -1572,7 +1556,7 @@ El aspecto del cuestionario es el siguiente:
 
 Una vez contestadas a todas las preguntas se activa el botón "Guardar" y se muestra el icono del signo de admiración en  el apartado "Autoevaluación ética"  y el mensaje de información en la parte de abajo de la pantalla en el pie de página para recordar al personal de gestión que debe de pulsar el botón "Guardar" para que los cambios realizados se consoliden.
 
-#### 4\.14 Datos solicitud RRHH \- Solicitante
+#### 4.14 Datos solicitud RRHH - Solicitante
 
 En este apartado se recogerá la información relativa al solicitante. Este apartado y, en general, todo del bloque "Datos solicitud RRHH" solamente ser hará visible cuando el campo "Tipo solicitud SGI" de la solicitud toma valor "RRHH".
 
@@ -1584,12 +1568,12 @@ Todos los campos estarán sin informar y se muestra el icono de que existen erro
 
 A continuación se describe cada uno de los campos solicitados en este formulario o pantalla:
 
-* Solicitante: Campo para buscar a la persona que es el solicitante de la beca predoctoral o postdoctoral de RRHH. Para indicar la persona se utiliza el buscador común de personas [MDU \- Manual de usuario \- 8\.1 Personas](https://confluence.um.es/confluence/display/HERCULES/MDU+-+Manual+de+usuario#MDUManualdeusuario-8.1Personas "https://confluence.um.es/confluence/display/HERCULES/MDU+-+Manual+de+usuario#MDUManualdeusuario-8.1Personas"). Una vez seleccionada la persona se mostrará en este campo el nombre, apellidos y email de la persona seleccionada. Si se selecciona a una persona, los campos de datos personales (nombre, apellidos, tipo de documento, número documento, sexo, teléfonos y emais) y de contacto (dirección, país, comunidad autónoma, provincia, localidad y código postal) de la persona estarán deshabilitados, únicamente se podrá informar de la "Universidad de origen" y del "Área ANEP". Se informará de este campo cuando la persona solicitante este dada de alta en la Universidad, en caso contrario (no se encuentra en el buscador de personas de RRHH de la Universidad) se tendrán que cumplimentar de forma manual los campos personales y de contacto de la persona.
+* Solicitante: Campo para buscar a la persona que es el solicitante de la beca predoctoral o postdoctoral de RRHH. Para indicar la persona se utiliza el buscador común de personas [MDU - Manual de usuario - 8.1 Personas](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario#MDUManualdeusuario-8.1Personas). Una vez seleccionada la persona se mostrará en este campo el nombre, apellidos y email de la persona seleccionada. Si se selecciona a una persona, los campos de datos personales (nombre, apellidos, tipo de documento, número documento, sexo, teléfonos y emais) y de contacto (dirección, país, comunidad autónoma, provincia, localidad y código postal) de la persona estarán deshabilitados, únicamente se podrá informar de la "Universidad de origen" y del "Área ANEP". Se informará de este campo cuando la persona solicitante este dada de alta en la Universidad, en caso contrario (no se encuentra en el buscador de personas de RRHH de la Universidad) se tendrán que cumplimentar de forma manual los campos personales y de contacto de la persona.
 
 ![](/attachments/597853537/597883598.png)
 
 * Nombre: Dependiente de si el campo previo "Solicitante" este informado o no el funcionamiento de este campo variará:
-	+ Si campo "Solicitante" esta informado: se recuperará el nombre de la persona "Solicitante" de los datos almacenados en la Universidad. Es un campo de consulta.
+  + Si campo "Solicitante" esta informado: se recuperará el nombre de la persona "Solicitante" de los datos almacenados en la Universidad. Es un campo de consulta.
 
 ![](/attachments/597853537/597883571.png)
 
@@ -1598,12 +1582,10 @@ A continuación se describe cada uno de los campos solicitados en este formulari
 ![](/attachments/597853537/597883597.png)
 
 * Apellidos: Dependiente de si el campo previo "Solicitante" este informado o no el funcionamiento de este campo variará:  
-
-	+ Si campo "Solicitante" esta informado: se recuperarán los apellidos de la persona "Solicitante" de los datos almacenados en la Universidad. Es un campo de consulta.
-	+ Si el campo "Solicitante" no esta informado: será un campo de texto libre para introducir los apellidos de la persona solicitante. Es un campo obligatorio.
+  + Si campo "Solicitante" esta informado: se recuperarán los apellidos de la persona "Solicitante" de los datos almacenados en la Universidad. Es un campo de consulta.
+  + Si el campo "Solicitante" no esta informado: será un campo de texto libre para introducir los apellidos de la persona solicitante. Es un campo obligatorio.
 * Tipo documento: Dependiente de si el campo previo "Solicitante" este informado o no el funcionamiento de este campo variará:  
-
-	+ Si campo "Solicitante" esta informado: se recuperará el tipo de documento de la persona "Solicitante" de los datos almacenados en la Universidad. Es un campo de consulta.
+  + Si campo "Solicitante" esta informado: se recuperará el tipo de documento de la persona "Solicitante" de los datos almacenados en la Universidad. Es un campo de consulta.
 
 ![](/attachments/597853537/597883572.png)
 
@@ -1612,12 +1594,10 @@ A continuación se describe cada uno de los campos solicitados en este formulari
 ![](/attachments/597853537/597883573.png)
 
 * Número documento: Dependiente de si el campo previo "Solicitante" este informado o no el funcionamiento de este campo variará:  
-
-	+ Si campo "Solicitante" esta informado: se recuperará el número de documento de la persona "Solicitante" de los datos almacenados en la Universidad. Es un campo de consulta.
-	+ Si el campo "Solicitante" no esta informado: será un campo de texto libre para introducir el número de documento de la persona solicitante. Es un campo obligatorio.
+  + Si campo "Solicitante" esta informado: se recuperará el número de documento de la persona "Solicitante" de los datos almacenados en la Universidad. Es un campo de consulta.
+  + Si el campo "Solicitante" no esta informado: será un campo de texto libre para introducir el número de documento de la persona solicitante. Es un campo obligatorio.
 * Sexo: Dependiente de si el campo previo "Solicitante" este informado o no el funcionamiento de este campo variará:  
-
-	+ Si campo "Solicitante" esta informado: se recuperará el sexo de la persona "Solicitante" de los datos almacenados en la Universidad. Es un campo de consulta.
+  + Si campo "Solicitante" esta informado: se recuperará el sexo de la persona "Solicitante" de los datos almacenados en la Universidad. Es un campo de consulta.
 
 ![](/attachments/597853537/597883572.png)
 
@@ -1626,12 +1606,10 @@ A continuación se describe cada uno de los campos solicitados en este formulari
 ![](/attachments/597853537/597883568.png)
 
 * Fecha nacimiento: Dependiente de si el campo previo "Solicitante" este informado o no el funcionamiento de este campo variará:  
-
-	+ Si campo "Solicitante" esta informado: se recuperará la fecha de nacimiento de la persona "Solicitante" de los datos almacenados en la Universidad. Es un campo de consulta.
-	+ Si el campo "Solicitante" no esta informado: será un campo de tipo fecha para introducir la fecha de nacimiento de la persona solicitante. Es un campo obligatorio.
+  + Si campo "Solicitante" esta informado: se recuperará la fecha de nacimiento de la persona "Solicitante" de los datos almacenados en la Universidad. Es un campo de consulta.
+  + Si el campo "Solicitante" no esta informado: será un campo de tipo fecha para introducir la fecha de nacimiento de la persona solicitante. Es un campo obligatorio.
 * País de nacimiento: Dependiente de si el campo previo "Solicitante" este informado o no el funcionamiento de este campo variará:  
-
-	+ Si campo "Solicitante" esta informado: se recuperará el país de nacimiento de la persona "Solicitante" de los datos almacenados en la Universidad. Es un campo de consulta.
+  + Si campo "Solicitante" esta informado: se recuperará el país de nacimiento de la persona "Solicitante" de los datos almacenados en la Universidad. Es un campo de consulta.
 
 ![](/attachments/597853537/597883569.png)
 
@@ -1640,47 +1618,36 @@ A continuación se describe cada uno de los campos solicitados en este formulari
 ![](/attachments/597853537/597883567.png)
 
 * Teléfono: Dependiente de si el campo previo "Solicitante" este informado o no el funcionamiento de este campo variará:  
-
-	+ Si campo "Solicitante" esta informado: se recuperarán los teléfonos del "Solicitante" de los datos almacenados en la Universidad y se mostrarán en formato de lista. Es un campo de consulta.
-	+ Si el campo "Solicitante" no esta informado: será un campo de texto libre para introducir el teléfono de contacto de la persona solicitante. Únicamente se puede introducir uno. Es un campo obligatorio.
+  + Si campo "Solicitante" esta informado: se recuperarán los teléfonos del "Solicitante" de los datos almacenados en la Universidad y se mostrarán en formato de lista. Es un campo de consulta.
+  + Si el campo "Solicitante" no esta informado: será un campo de texto libre para introducir el teléfono de contacto de la persona solicitante. Únicamente se puede introducir uno. Es un campo obligatorio.
 * Email: Dependiente de si el campo previo "Solicitante" este informado o no el funcionamiento de este campo variará:  
-
-	+ Si campo "Solicitante" esta informado: se recuperarán los emails del "Solicitante" de los datos almacenados en la Universidad y se mostrarán en formato de lista. Es un campo de consulta.
-	+ Si el campo "Solicitante" no esta informado: será un campo de texto libre para introducir el email de contacto de la persona solicitante. Únicamente se puede introducir uno. Es un campo obligatorio. Será el correo donde reciba las notificaciones de la solicitud.
+  + Si campo "Solicitante" esta informado: se recuperarán los emails del "Solicitante" de los datos almacenados en la Universidad y se mostrarán en formato de lista. Es un campo de consulta.
+  + Si el campo "Solicitante" no esta informado: será un campo de texto libre para introducir el email de contacto de la persona solicitante. Únicamente se puede introducir uno. Es un campo obligatorio. Será el correo donde reciba las notificaciones de la solicitud.
 * Dirección (de contacto): Dependiente de si el campo previo "Solicitante" este informado o no el funcionamiento de este campo variará:  
-
-	+ Si campo "Solicitante" esta informado: se recuperará la dirección de contacto del "Solicitante" de los datos almacenados en la Universidad. Es un campo de consulta.
-	+ Si el campo "Solicitante" no esta informado: será un campo de texto libre para introducir la dirección contacto de la persona solicitante. Es un campo opcional.
+  + Si campo "Solicitante" esta informado: se recuperará la dirección de contacto del "Solicitante" de los datos almacenados en la Universidad. Es un campo de consulta.
+  + Si el campo "Solicitante" no esta informado: será un campo de texto libre para introducir la dirección contacto de la persona solicitante. Es un campo opcional.
 * País (de la dirección de contacto): Dependiente de si el campo previo "Solicitante" este informado o no el funcionamiento de este campo variará:  
-
-	+ Si campo "Solicitante" esta informado: se recuperará el país de la dirección de contacto de la persona "Solicitante" de los datos almacenados en la Universidad. Es un campo de consulta.
-	+ Si el campo "Solicitante" no esta informado: será un campo de tipo desplegable para seleccionar el país de la dirección de contacto de la persona solicitante. El listado mostrado son los valores proporcionados por la propia Universdiad. Es un campo opcional.
+  + Si campo "Solicitante" esta informado: se recuperará el país de la dirección de contacto de la persona "Solicitante" de los datos almacenados en la Universidad. Es un campo de consulta.
+  + Si el campo "Solicitante" no esta informado: será un campo de tipo desplegable para seleccionar el país de la dirección de contacto de la persona solicitante. El listado mostrado son los valores proporcionados por la propia Universdiad. Es un campo opcional.
 * Comunidad autonóma (de la dirección de contacto): Dependiente de si el campo previo "Solicitante" este informado o no el funcionamiento de este campo variará:  
-
-	+ Si campo "Solicitante" esta informado: se recuperará la comunidad autonóma de la dirección de contacto de la persona "Solicitante" de los datos almacenados en la Universidad. Es un campo de consulta.
-	+ Si el campo "Solicitante" no esta informado: será un campo de tipo desplegable para seleccionar la comunidad autonóma de la dirección de contacto de la persona solicitante. El listado mostrado son los valores proporcionados por la propia Universdiad. Es un campo opcional.
+  + Si campo "Solicitante" esta informado: se recuperará la comunidad autonóma de la dirección de contacto de la persona "Solicitante" de los datos almacenados en la Universidad. Es un campo de consulta.
+  + Si el campo "Solicitante" no esta informado: será un campo de tipo desplegable para seleccionar la comunidad autonóma de la dirección de contacto de la persona solicitante. El listado mostrado son los valores proporcionados por la propia Universdiad. Es un campo opcional.
 * Provincia (de la dirección de contacto): Dependiente de si el campo previo "Solicitante" este informado o no el funcionamiento de este campo variará:  
-
-	+ Si campo "Solicitante" esta informado: se recuperará la provincia de la dirección de contacto de la persona "Solicitante" de los datos almacenados en la Universidad. Es un campo de consulta.
-	+ Si el campo "Solicitante" no esta informado: será un campo de tipo desplegable para seleccionar la provincia de la dirección de contacto de la persona solicitante. El listado mostrado son los valores proporcionados por la propia Universdiad. Es un campo opcional.
+  + Si campo "Solicitante" esta informado: se recuperará la provincia de la dirección de contacto de la persona "Solicitante" de los datos almacenados en la Universidad. Es un campo de consulta.
+  + Si el campo "Solicitante" no esta informado: será un campo de tipo desplegable para seleccionar la provincia de la dirección de contacto de la persona solicitante. El listado mostrado son los valores proporcionados por la propia Universdiad. Es un campo opcional.
 * Localidad (de la dirección de contacto): Dependiente de si el campo previo "Solicitante" este informado o no el funcionamiento de este campo variará:  
-
-	+ Si campo "Solicitante" esta informado: se recuperará la localidad de la dirección de contacto de la persona "Solicitante" de los datos almacenados en la Universidad. Es un campo de consulta.
-	+ Si el campo "Solicitante" no esta informado: será un campo de texto libre para introducir la localidad de la dirección de contacto de la persona solicitante. Es un campo opcional.
+  + Si campo "Solicitante" esta informado: se recuperará la localidad de la dirección de contacto de la persona "Solicitante" de los datos almacenados en la Universidad. Es un campo de consulta.
+  + Si el campo "Solicitante" no esta informado: será un campo de texto libre para introducir la localidad de la dirección de contacto de la persona solicitante. Es un campo opcional.
 * Código postal (de la dirección de contacto):  Dependiente de si el campo previo "Solicitante" este informado o no el funcionamiento de este campo variará:  
-
-	+ Si campo "Solicitante" esta informado: se recuperará el código postal de la dirección de contacto de la persona "Solicitante" de los datos almacenados en la Universidad. Es un campo de consulta.
-	+ Si el campo "Solicitante" no esta informado: será un campo de texto libre para introducir el código postal de la dirección de contacto de la persona solicitante. Es un campo opcional.
-* Universidad de origen: Campo para buscar a la universdiad de origen. Para indicar la entidad se utiliza el buscador común de empresas y entidades [MDU\-Manual de usuario \- 8\.2 Entidades o empresas](https://confluence.um.es/confluence/display/HERCULES/MDU+-+Manual+de+usuario#MDUManualdeusuario-8.2Entidadesoempresas "https://confluence.um.es/confluence/display/HERCULES/MDU+-+Manual+de+usuario#MDUManualdeusuario-8.2Entidadesoempresas") Es un campo opcional.
+  + Si campo "Solicitante" esta informado: se recuperará el código postal de la dirección de contacto de la persona "Solicitante" de los datos almacenados en la Universidad. Es un campo de consulta.
+  + Si el campo "Solicitante" no esta informado: será un campo de texto libre para introducir el código postal de la dirección de contacto de la persona solicitante. Es un campo opcional.
+* Universidad de origen: Campo para buscar a la universdiad de origen. Para indicar la entidad se utiliza el buscador común de empresas y entidades [MDU-Manual de usuario - 8.2 Entidades o empresas](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario#MDUManualdeusuario-8.2Entidadesoempresas) Es un campo opcional.
 * Datos universidad de origen: Campo para que el investigador/a pueda introducir el nombre de la Universidad de origen del trabajo. Este campo se muestra siempre en modo consulta para el personal de gestión. El dato que tiene que cumplimentar el personal de gestión es "Univeridad de origen".
 * Área ANEP: Campo para indicar la área ANEP sobre la qe va a trabajar el solicitante. Es un campo opcional. Al crear la solicitud este campo estará vacío y se mostrará el botón de "Añadir Área ANEP"
 
 ![](/attachments/597853537/597883465.png)
 
-  
-
-
-Al pulsar sobre el botón "Añadir Área ANEP" se muestra en una ventana emergente la pantalla de selector de clasificaciones  ([MDU\-Manual de usuario \- 7\.5 Selector de clasificaciones](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/index.md#MDUManualdeusuario-7.5Selectordeclasificaciones "/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/index.md#MDUManualdeusuario-7.5Selectordeclasificaciones")) pero con la clasificación "ANEP" seleccionada (sin posibilidad de cambiarla) y el árbol de las áreas ANEP mostrando las áreas del primer nivel:
+Al pulsar sobre el botón "Añadir Área ANEP" se muestra en una ventana emergente la pantalla de selector de clasificaciones  ([MDU-Manual de usuario - 7.5 Selector de clasificaciones](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario#MDUManualdeusuario-7.5Selectordeclasificaciones)) pero con la clasificación "ANEP" seleccionada (sin posibilidad de cambiarla) y el árbol de las áreas ANEP mostrando las áreas del primer nivel:
 
 ![](/attachments/597853537/597883459.png)
 
@@ -1692,29 +1659,21 @@ Cada área ANEP va acompañada a su izquierda con una casilla de selección ![](
 
 ![](/attachments/597853537/597883482.png)
 
- La área seleccionada se mostrará en la tabla de Área ANEP desde donde se podrá modificar la área o bien eliminarla  
-
+La área seleccionada se mostrará en la tabla de Área ANEP desde donde se podrá modificar la área o bien eliminarla
 
 ![](/attachments/597853537/597883485.png)
-
-  
-
 
 Una vez introducidos todos los campos obligatorios del formulario de "Solicitante" se muestra el icono del signo de admiración en  "Solicitante"  informando de que hay cambios sin guardar, no se activará el botón "Guardar" porque faltan campos obligatorios en los apartados "Tutor/a" y "Memoria".
 
 ![](/attachments/597853537/597883890.png)
 
-  
-
-
 La edición del apartado "Solicitante" de una solicitud que ha sido modificada previamente (ya se han introducido los datos obligatorios de los apartados "Solicitante", "Tutor/a" y  "Memoria"") se muestra en la siguiente imagen:
 
 ![](/attachments/597853537/597883491.png)
 
-Los campos son los mismos que cuando se edita la primera vez (una vez creada) vistos previamente al inicio de este apartado. Aplican las mismas restricciones.  
+Los campos son los mismos que cuando se edita la primera vez (una vez creada) vistos previamente al inicio de este apartado. Aplican las mismas restricciones.
 
-
-#### 4\.15 Datos solicitud RRHH \- Tutor/a
+#### 4.15 Datos solicitud RRHH - Tutor/a
 
 En este apartado se recogerá la persona que el solicitante propone como tutor/a del trabajo de RRHH. Este apartado y, en general, todo del bloque "Datos solicitud RRHH" solamente ser hará visible cuando el campo "Tipo solicitud SGI" de la solicitud toma valor "RRHH".
 
@@ -1722,12 +1681,11 @@ La edición del apartado "Tutor/a" de la solicitud nada mas crearse la solicitud
 
 ![](/attachments/597853537/597883444.png)
 
-Todos los campos estarán sin informar y se muestra el icono de que existen errores en el formulario de "Tutor/a" porque existen campos de cumplimentación obligatoria que no se han informado.   
-
+Todos los campos estarán sin informar y se muestra el icono de que existen errores en el formulario de "Tutor/a" porque existen campos de cumplimentación obligatoria que no se han informado.
 
 A continuación se describe cada uno de los campos solicitados en este formulario o pantalla:
 
-* Selecciona tutor/a del trabajo: Campo para buscar a la persona que el solicitante propone como tutor/a del trabajo de RRHH. Para indicar la persona se utiliza el buscador común de personas [MDU\-Manual de usuario \- 8\.1 Personas](https://confluence.um.es/confluence/display/HERCULES/MDU+-+Manual+de+usuario#MDUManualdeusuario-8.1Personas "https://confluence.um.es/confluence/display/HERCULES/MDU+-+Manual+de+usuario#MDUManualdeusuario-8.1Personas"). Una vez seleccionada la persona se mostrará en este campo el nombre, apellidos y email de la persona seleccionada. Si se selecciona a una persona, el resto de campos se informarán de forma automática con los datos que dispone la Universidad de la persona seleccionada:
+* Selecciona tutor/a del trabajo: Campo para buscar a la persona que el solicitante propone como tutor/a del trabajo de RRHH. Para indicar la persona se utiliza el buscador común de personas [MDU-Manual de usuario - 8.1 Personas](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario#MDUManualdeusuario-8.1Personas). Una vez seleccionada la persona se mostrará en este campo el nombre, apellidos y email de la persona seleccionada. Si se selecciona a una persona, el resto de campos se informarán de forma automática con los datos que dispone la Universidad de la persona seleccionada:
 
 ![](/attachments/597853537/597883887.png)
 
@@ -1743,16 +1701,13 @@ Una vez introducidos todos los campos obligatorios del formulario de "Tutor/a" s
 
 ![](/attachments/597853537/597883886.png)
 
-  
-
-
 La edición del apartado "Tutor/a" de una solicitud que ha sido modificada previamente (ya se han introducido los datos obligatorios de los apartados "Solicitante", "Tutor/a" y  "Memoria" ) se muestra en la siguiente imagen:
 
 ![](/attachments/597853537/597883731.png)
 
 Los campos son los mismos que cuando se edita la primera vez (una vez creada) vistos previamente al inicio de este apartado. Aplican las mismas restricciones.
 
-#### 4\.16 Datos solicitud RRHH \- Requisitos convocatoria
+#### 4.16 Datos solicitud RRHH - Requisitos convocatoria
 
 En este apartado se muestran los requisitos especificados en el apartado "Requisitos IP" de la convocatoria  relativas al nivel académico y categorías exigidas, con sus correspondientes fechas de anterioridad o posterioridad. Si bien para el personal perteneciente a la propia Universidad el cumplimento de este tipo de requisitos puede ser recuperado a partir de la información recuperada del sistema de gestión de RRHH, se dará la posibilidad al personal de investigación de adjuntar el documento acreditativo correspondiente (de forma opcional).
 
@@ -1760,11 +1715,11 @@ También se muestran los requisitos especificados en el apartado "Requisitos Equ
 
 Este apartado y, en general, todo del bloque "Datos solicitud RRHH" solamente ser hará visible cuando el campo "Tipo solicitud SGI" de la solicitud toma valor "RRHH".
 
-En el momento inicial de creación de una solicitud este apartado puede mostrar el siguiente aspecto, si en el apartado "Requisito IP" ([CSP\-Convocatorias \- 3\.10 Requisitos IP](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/mdu-perfil-unidad-de-gestion/mdu-perfil-unidad-de-gestion-modulo-csp/csp-convocatorias.md#CSPConvocatorias-3.10RequisitosIP "/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/mdu-perfil-unidad-de-gestion/mdu-perfil-unidad-de-gestion-modulo-csp/csp-convocatorias.md#CSPConvocatorias-3.10RequisitosIP")) y/o "Requisito Equipo" ([CSP\-Convocatorias \- 3\.11 Requisitos equipo](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/mdu-perfil-unidad-de-gestion/mdu-perfil-unidad-de-gestion-modulo-csp/csp-convocatorias.md#CSPConvocatorias-3.11Requisitosequipo "/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/mdu-perfil-unidad-de-gestion/mdu-perfil-unidad-de-gestion-modulo-csp/csp-convocatorias.md#CSPConvocatorias-3.11Requisitosequipo")) de la convocatoria se han especificado alguna requisito relativo al nivel acadeḿico o  la categoría profesional:
+En el momento inicial de creación de una solicitud este apartado puede mostrar el siguiente aspecto, si en el apartado "Requisito IP" ([CSP-Convocatorias - 3.10 Requisitos IP](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/mdu-perfil-unidad-de-gestion/mdu-perfil-unidad-de-gestion-modulo-csp/csp-convocatorias#CSPConvocatorias-3.10RequisitosIP)) y/o "Requisito Equipo" ([CSP-Convocatorias - 3.11 Requisitos equipo](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/mdu-perfil-unidad-de-gestion/mdu-perfil-unidad-de-gestion-modulo-csp/csp-convocatorias#CSPConvocatorias-3.11Requisitosequipo)) de la convocatoria se han especificado alguna requisito relativo al nivel acadeḿico o  la categoría profesional:
 
 ![](/attachments/597853537/597882269.png)
 
-En la primera tabla "**Solicitante \- Niveles académicos exigidos**" se muestran los requisitos especificados en el apartado "Requisitos IP" de la convocatoria relativos al nivel académico con sus correspondientes fechas de anterioridad o posterioridad.
+En la primera tabla "**Solicitante - Niveles académicos exigidos**" se muestran los requisitos especificados en el apartado "Requisitos IP" de la convocatoria relativos al nivel académico con sus correspondientes fechas de anterioridad o posterioridad.
 
 ![](/attachments/597853537/597882346.png)
 
@@ -1782,7 +1737,7 @@ El único dato que se debe de introducir es el documento acreditativo, a través
 
 ![](/attachments/597853537/597882353.png)
 
-Al pulsar el botón "Aceptar" el documento será añadido a la tabla de "Solicitante \- Niveles académicos exigidos" mostrando ahora en lugar del icono de "editar" el icono de "eliminar" por si se quiere eliminar el documento acreditativo del requisito. También se muestra un nueva columna para poder descargarse el documento adjuntado.
+Al pulsar el botón "Aceptar" el documento será añadido a la tabla de "Solicitante - Niveles académicos exigidos" mostrando ahora en lugar del icono de "editar" el icono de "eliminar" por si se quiere eliminar el documento acreditativo del requisito. También se muestra un nueva columna para poder descargarse el documento adjuntado.
 
 ![](/attachments/597853537/597882352.png)
 
@@ -1790,10 +1745,7 @@ En caso de querer modificar el documento acreditativo de uno de los requisitos, 
 
 No será obligatorio la aportación de los documentos acreditativos de nivel académico ni para el caso de personal propio ni para el caso de usuarios externos.
 
-  
-
-
-En la segunta tabla "**Solicitante \- Categorías profesionales exigidas**" se muestran los requisitos especificados en el apartado "Requisitos IP" de la convocatoria relativos a la categoría profesional con sus correspondientes fechas de anterioridad o posterioridad.
+En la segunta tabla "**Solicitante - Categorías profesionales exigidas**" se muestran los requisitos especificados en el apartado "Requisitos IP" de la convocatoria relativos a la categoría profesional con sus correspondientes fechas de anterioridad o posterioridad.
 
 ![](/attachments/597853537/597882349.png)
 
@@ -1809,27 +1761,19 @@ Se muestran como información la categoría profesional requerida y las fechas d
 
 El único dato que se debe de introducir es el documento acreditativo, a través de la lupa se abrirá una pantalla de examinador de archivos que permite seleccionar un fichero desde la unidad de disco local. Una vez seleccionado un fichero se mostrará el nombre y extensión del mismo sobre el campo "Adjunte el documento acreditativo" del formulario. Una vez introducido el documento se activa el botón "Aceptar".
 
-![](/attachments/597853537/597882350.png)  
+![](/attachments/597853537/597882350.png)
 
+Al pulsar el botón "Aceptar" el documento será añadido a la tabla de "Solicitante - Categorías profesionales exigidas" mostrando ahora en lugar del icono de "editar" el icono de "eliminar" por si se quiere eliminar el documento acreditativo del requisito. También se muestra un nueva columna para poder descargarse el documento adjuntado.
 
-Al pulsar el botón "Aceptar" el documento será añadido a la tabla de "Solicitante \- Categorías profesionales exigidas" mostrando ahora en lugar del icono de "editar" el icono de "eliminar" por si se quiere eliminar el documento acreditativo del requisito. También se muestra un nueva columna para poder descargarse el documento adjuntado.
-
-![](/attachments/597853537/597882347.png)  
-
+![](/attachments/597853537/597882347.png)
 
 En caso de querer modificar el documento acreditativo de uno de los requisitos, se deberá de eliminar primero el documento a través de la acción de "eliminar" y luego adjuntar el nuevo documento con la acción de "editar".
 
 No será obligatorio la aportación de los documentos acreditativos de categoría profesional ni para el caso de personal propio ni para el caso de usuarios externos.
 
-  
-
-
-Las tablas "**Tutor/a \- Niveles académicos exigidos**" y "**Tutor/a \- Categorías profesionales exigidas**" muestran los requisitos especificados en el apartado "Requisitos Equipo" de la convocatoria relativos al nivel académico y a la categoría profesional con sus correspondientes fechas de anterioridad o posterioridad. Se dibujará el icono de advertencia cuando de acuerdo a los datos recuperados del tutor/a en el sistema de RRHH no se cumple con el requisito de la convocatoria. Para el tutor/a no se pedirán los documentos acreditativos.
+Las tablas "**Tutor/a - Niveles académicos exigidos**" y "**Tutor/a - Categorías profesionales exigidas**" muestran los requisitos especificados en el apartado "Requisitos Equipo" de la convocatoria relativos al nivel académico y a la categoría profesional con sus correspondientes fechas de anterioridad o posterioridad. Se dibujará el icono de advertencia cuando de acuerdo a los datos recuperados del tutor/a en el sistema de RRHH no se cumple con el requisito de la convocatoria. Para el tutor/a no se pedirán los documentos acreditativos.
 
 ![](/attachments/597853537/597882364.png)
-
-  
-
 
 En el caso de que en el  apartado "Requisito IP" y/o "Requisito Equipo" de la convocatoria no se hayan especificado ningún requisito relativo al nivel acadeḿico o  la categoría profesional el aspecto de la pantalla nada mas crearse la solicitud será:
 
@@ -1837,7 +1781,7 @@ En el caso de que en el  apartado "Requisito IP" y/o "Requisito Equipo" de la c
 
 En este caso no se podrá realizar ningún cambio en esta pantalla ni se mostrará ningún tipo de formación debido a que en la convocatoria no se ha exigido ningún requisito ni para el IP ni para el equipo.
 
-#### 4\.17 Datos solicitud RRHH \- Memoria
+#### 4.17 Datos solicitud RRHH - Memoria
 
 En este apartado se recogerán datos relativos al trabajo. Este apartado y, en general, todo del bloque "Datos solicitud RRHH" solamente ser hará visible cuando el campo "Tipo solicitud SGI" de la solicitud toma valor "RRHH".
 
@@ -1857,16 +1801,13 @@ Una vez introducidos todos los campos obligatorios del formulario de "Memoria" s
 
 ![](/attachments/597853537/597882363.png)
 
-  
-
-
 La edición del apartado "Memoria" de una solicitud que ha sido modificada previamente (ya se han introducido los datos obligatorios de los apartados "Solicitante", "Tutor/a" y  "Memoria") se muestra en la siguiente imagen:
 
 ![](/attachments/597853537/597882362.png)
 
 Los campos son los mismos que cuando se edita la primera vez (una vez creada) vistos previamente al inicio de este apartado. Aplican las mismas restricciones.
 
-### 5\. Cambiar estado a una solicitud
+### 5. Cambiar estado a una solicitud
 
 El cambio de estado se podrá realizar a través del botón "Cambiar estado solicitud" disponible desde todos los apartados de una solicitud.
 
@@ -1893,7 +1834,7 @@ Tras pulsar el botón "Cambiar estado solicitud" se muestra la siguiente ventana
 
 Los datos pedidos para realizar el cambio de estado son:
 
-* Nuevo estado: Es un campo desplegable con todos los estados posibles de una solicidud ([Estados de una solicitud](#CSPSolicitudes-1.2Estadosdeunasolicitud "#CSPSolicitudes-1.2Estadosdeunasolicitud")). El personal de gestión puede cambiar a cualquier estado una solicitud. No existe ninguna comprobación. Es un campo obligatorio.
+* Nuevo estado: Es un campo desplegable con todos los estados posibles de una solicidud ([Estados de una solicitud](#CSPSolicitudes-1.2Estadosdeunasolicitud)). El personal de gestión puede cambiar a cualquier estado una solicitud. No existe ninguna comprobación. Es un campo obligatorio.
 * Fecha estado: Es un campo de tipo fecha y hora. Se mostrarán inicializadas a la fecha y horas actuales, aunque el personal de gestión puede modificar su valor. Se puede introducir la fecha de forma manual o con la ayuda del calendario. Es un campo obligatorio.
 * Comentario:  Campo de texto libre para explicar los motivos que justifican el paso al nuevo estado. Es un campo opcional.
 
@@ -1901,7 +1842,7 @@ Una vez introducido el nuevo estado y su fecha se habilitará el botón "Aceptar
 
 ![](/attachments/597853537/597884107.png)
 
-Si alguno de los requisitos especificados en el apartado [Datos obligatorios para "Cambiar de estado" una solicitud](#CSPSolicitudes-Datosobligatoriospara%22cambiardeestado%22unasolicitud "#CSPSolicitudes-Datosobligatoriospara%22cambiardeestado%22unasolicitud") no se cumplen se mostrará un mensaje de error como el siguiente (fuera de la ventana emergente de cambio de estado):
+Si alguno de los requisitos especificados en el apartado [Datos obligatorios para "Cambiar de estado" una solicitud](#CSPSolicitudes-Datosobligatoriospara%22cambiardeestado%22unasolicitud) no se cumplen se mostrará un mensaje de error como el siguiente (fuera de la ventana emergente de cambio de estado):
 
 ![](/attachments/597853537/597884119.png)
 
@@ -1911,22 +1852,21 @@ Una vez que se han informado de todos los campos obligatorios para realizar el c
 
 ![](/attachments/597853537/597884111.png)
 
-Al realizar la acción de cambio de estado se generarán comunicados, en algunos casos concretos y según ciertas condiciones, según se describe en el apartado [Comunicados de solicitudes](https://confluence.um.es/confluence/display/HERCULES/CSP-Solicitudes#CSPSolicitudes-10Comunicadosdesolicitudes "https://confluence.um.es/confluence/display/HERCULES/CSP-Solicitudes#CSPSolicitudes-10Comunicadosdesolicitudes").  
-
+Al realizar la acción de cambio de estado se generarán comunicados, en algunos casos concretos y según ciertas condiciones, según se describe en el apartado [Comunicados de solicitudes](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/mdu-perfil-unidad-de-gestion/mdu-perfil-unidad-de-gestion-modulo-csp/csp-solicitudes#CSPSolicitudes-10Comunicadosdesolicitudes).
 
 #### Datos obligatorios para "cambiar de estado" una solicitud
 
 En el caso de cambiar a un estado diferente a "Desistida" o "Renunciada" se relizarán las siguientes comprobaciones:
 
 * **Apartado Documentos:** Si solicitud esta vinculada a una convocatoria del SGI, se comprobará que se hayan adjuntado todos los documentos requeridos de la solicitud indicados en el apartado "Configuración de la solicitud" de la convocatoria.
-* **Apartado Datos proyecto \- Ficha general:** Si la solicitud en el campo "Tipo solicitud SGI" del apartado "Datos generales" tiene el valor "Proyecto", se comprobará
-	+ campo "proyecto coordinado"  cumplimentado
-	+ campo "Rol Universidad" cumplimentado si "Proyecto coordinado" toma el valor "Sí"
-	+ campo "tipo desglose de presupuesto" cumplimentado
+* **Apartado Datos proyecto - Ficha general:** Si la solicitud en el campo "Tipo solicitud SGI" del apartado "Datos generales" tiene el valor "Proyecto", se comprobará
+  + campo "proyecto coordinado"  cumplimentado
+  + campo "Rol Universidad" cumplimentado si "Proyecto coordinado" toma el valor "Sí"
+  + campo "tipo desglose de presupuesto" cumplimentado
 * **Apartado Equipo:** Si la solicitud en el campo "Tipo solicitud SGI" del apartado "Datos generales" tiene el valor "Proyecto", se comprobará que exista al menos el solicitante como miembro del equipo.
 * **Apartado Autoevaluación ética**: Si la solicitud en el campo "Tipo solicitud SGI" del apartado "Datos generales" tiene el valor "Proyecto", no será obligatorio cumplimentar el apartado Autoevaluación ética, pero si se cumplimenta una pregunta será obligatorio cumplimentarlas todas.
 
-### 6\. Eliminar una solicitud
+### 6. Eliminar una solicitud
 
 La eliminación de los datos de una solicitud se realiza a través del icono de acción eliminar ![](/attachments/597853537/597883900.png) del listado de solicitudes.
 
@@ -1936,17 +1876,15 @@ Una solicitud solo puede ser eliminada mientras está en estado "borrador". Si l
 
 Solicitud es una de las entidades del SGI que admite desactivación, por lo que posteriormente podrá ser recuperada. Tras pulsar el icono eliminar se mostrará un mensaje de confirmación.
 
-![](/attachments/597853537/597883897.png)  
-
+![](/attachments/597853537/597883897.png)
 
 Si se pulsa el botón Cancelar se cerrará la ventana del mensaje de confirmación y la solicitud no será eliminada (desactivada).
 
 Si se pulsa el botón Aceptar la solicitud será desactivada, mostrándose un mensaje informativo al finalizar la operación:
 
-![](/attachments/597853537/597883891.png)  
+![](/attachments/597853537/597883891.png)
 
-
-### 7\. Recuperar una solicitud eliminada
+### 7. Recuperar una solicitud eliminada
 
 Una solicitud eliminada puede ser recuperada. La acción recuperar ![](/attachments/597853537/597883893.png) está disponible desde el listado de solicitudes. Para que las solicitudes desactivadas se muestren en el listado de solicitudes se debe de hacer uso del filtro "activo" del buscador ampliado. Por defecto, el buscador de solicitudes muestra las solicitudes activadas (filtro activo está preseleccionado al valor "sí"). Para mostrar las solicitudes desactivadas se deberá establecer el valor "no" en el filtro "activo".
 
@@ -1962,15 +1900,15 @@ Si se pulsa el botón  Aceptar se recuperará la solicitud, pasando de nuevo a 
 
 ![](/attachments/597853537/597883928.png)
 
-### 8\. Crear proyecto desde solicitud concedida
+### 8. Crear proyecto desde solicitud concedida
 
 Cuando una solicitud cumpla con las siguientes condiciones:
 
 * Que esté en uno de los siguientes estados:
-	+ Concedida provisional
-	+ Concedida provisional alegada
-	+ Concedida provisional no alegada
-	+ Concedida
+  + Concedida provisional
+  + Concedida provisional alegada
+  + Concedida provisional no alegada
+  + Concedida
 * El campo "Tipo solicitud SGI" del apartado "Datos generales" tenga el valor "Proyecto" o "RRHH"
 
 Se mostrará un nuevo icono de acción en la columna de acciones del listado de solicitudes para esa solicitud que es el icono de "crear proyecto"  representado por ![](/attachments/597853537/597884084.png) que permite crear un proyecto a partir de la solicitud.
@@ -1979,15 +1917,14 @@ Se mostrará un nuevo icono de acción en la columna de acciones del listado de 
 
 Al pulsar sobre el icono de "crear proyecto" se muestra la siguiente ventana emergente para introducir los datos mínimos para poder crear un proyecto:
 
-![](/attachments/597853537/1014169685.png)  
-
+![](/attachments/597853537/1014169685.png)
 
 Estos datos mínimos para poder crear un proyecto son:
 
-* Título: Campo de texto para introducir el título del proyecto. Si el campo "Tipo solicitud SGI" del apartado "Datos generales" tiene el valor "Proyecto" se precarga con el valor del campo "título" del apartado "Datos generales" de la solicitud, pudiendo ser modificado. Si el campo "Tipo solicitud SGI" del apartado "Datos generales" tiene el valor "RRHH" se precarga con la concatenación (por el carácter "\-") de los siguientes campos de la solicitud:
-	+ Título de la convocatoria
-	+ Año de la convocatoria (extraído del campo "fecha publicación" de la convocatoria)
-	+ Nombre y apellidos del solicitante
+* Título: Campo de texto para introducir el título del proyecto. Si el campo "Tipo solicitud SGI" del apartado "Datos generales" tiene el valor "Proyecto" se precarga con el valor del campo "título" del apartado "Datos generales" de la solicitud, pudiendo ser modificado. Si el campo "Tipo solicitud SGI" del apartado "Datos generales" tiene el valor "RRHH" se precarga con la concatenación (por el carácter "-") de los siguientes campos de la solicitud:
+  + Título de la convocatoria
+  + Año de la convocatoria (extraído del campo "fecha publicación" de la convocatoria)
+  + Nombre y apellidos del solicitante
 
 En ambos casos es un campo obligatorio.
 
@@ -2009,7 +1946,8 @@ El proyecto creado a partir de la solicitud se creará con los siguientes campos
 **Apartado Datos generales**
 
 * Título: se inicializa con el título introducido en la ventana modal de creación del proyecto desde la solicitud
-* Acrónimo: si la solicitud tiene el campo "Tipo Solicitud SGI" con el valor "Proyecto" se inicializa con el campo "acrónimo" del apartado "Datos proyecto \- Ficha general" de la solicitud. Si la solicitud tiene el campo "Tipo Solicitud SGI" con el valor "RRHH" se dejará vacío este campo.
+* Acrónimo: si la solicitud tiene el campo "Tipo Solicitud SGI" con el valor "Proyecto" se inicializa con el campo "acrónimo" del apartado "Datos proyecto - Ficha general" de la solicitud. Si la solicitud tiene el campo "Tipo Solicitud SGI" con el valor "RRHH" se dejará vacío este campo.
+* Año: tomará el valor indicado en la solicitud, en caso de estar informado. Si en la solicitud no está informado, tomará el valor del año indicado en la convocatoria.
 * Fecha inicio: se inicializa con la fecha de inicio introducida en la ventana modal de creación del proyecto desde la solicitud
 * Fecha fin: se inicializa con la fecha de fin introducida en la ventana modal de creación del proyecto desde la solicitud
 * Convocatoria: se inicializa con la convocatoria que tenga asignada la solicitud en caso de que la tuviese (campo "convocatoria" del apartado de "Datos generales" de la solicitud), si no se dejará a vacío este campo y se informará el campo "Identificación convocatoria"
@@ -2020,18 +1958,18 @@ El proyecto creado a partir de la solicitud se creará con los siguientes campos
 * Modelo de ejecución: se inicializa con el campo "modelo de ejecución" del apartado de "Datos generales" de la convocatoria vinculada a la solicitud.
 * Finalidad: se inicializa con el campo "finalidad" del apartado de "Datos generales" de la convocatoria vinculada a la solicitud.
 * Ámbito geográfico: se inicializa con el campo "ámbito geográfico" del apartado de "Datos generales" de la convocatoria vinculada a la solicitud.
-* Proyecto coordinado: si la solicitud tiene el campo "Tipo Solicitud SGI" con el valor "Proyecto" se inicializa con el campo "proyecto coordinado" del apartado "Datos proyecto \- Ficha general" de la solicitud. Si la solicitud tiene el campo "Tipo Solicitud SGI" con el valor "RRHH" se dejará vacío este campo.
-* Rol Universidad: si la solicitud tiene el campo "Tipo Solicitud SGI" con el valor "Proyecto" se inicializa con el campo "Rol Universidad" del apartado "Datos proyecto \- Ficha general" de la solicitud. Si la solicitud tiene el campo "Tipo Solicitud SGI" con el valor "RRHH" se dejará vacío este campo.
-* Proyecto colaborativo: si la solicitud tiene el campo "Tipo Solicitud SGI" con el valor "Proyecto" se inicializa con el campo "proyecto colaborativo" del apartado "Datos proyecto \- Ficha general" de la solicitud. Si la solicitud tiene el campo "Tipo Solicitud SGI" con el valor "RRHH" se dejará vacío este campo.
+* Proyecto coordinado: si la solicitud tiene el campo "Tipo Solicitud SGI" con el valor "Proyecto" se inicializa con el campo "proyecto coordinado" del apartado "Datos proyecto - Ficha general" de la solicitud. Si la solicitud tiene el campo "Tipo Solicitud SGI" con el valor "RRHH" se dejará vacío este campo.
+* Rol Universidad: si la solicitud tiene el campo "Tipo Solicitud SGI" con el valor "Proyecto" se inicializa con el campo "Rol Universidad" del apartado "Datos proyecto - Ficha general" de la solicitud. Si la solicitud tiene el campo "Tipo Solicitud SGI" con el valor "RRHH" se dejará vacío este campo.
+* Proyecto colaborativo: si la solicitud tiene el campo "Tipo Solicitud SGI" con el valor "Proyecto" se inicializa con el campo "proyecto colaborativo" del apartado "Datos proyecto - Ficha general" de la solicitud. Si la solicitud tiene el campo "Tipo Solicitud SGI" con el valor "RRHH" se dejará vacío este campo
 
 **Apartado Datos contexto**
 
 Si la solicitud tiene el campo "Tipo Solicitud SGI" con el valor "Proyecto":
 
-* Objetivos del proyecto: se inicializa con el campo "objetivos del proyecto" del apartado "Datos proyecto \- Ficha general" de la solicitud.
-* Justificación e interés: se inicializa con el campo "justificación e interés" del apartado "Datos proyecto \- Ficha general" de la solicitud.
-* Resultados esperados: se inicializa con el campo "resultados esperados" del apartado "Datos proyecto \- Ficha general" de la solicitud.
-* Área temática proyecto: se inicializa con el campo "área temática solicitud" del apartado "Datos proyecto \- Ficha general" de la solicitud.
+* Objetivos del proyecto: se inicializa con el campo "objetivos del proyecto" del apartado "Datos proyecto - Ficha general" de la solicitud.
+* Justificación e interés: se inicializa con el campo "justificación e interés" del apartado "Datos proyecto - Ficha general" de la solicitud.
+* Resultados esperados: se inicializa con el campo "resultados esperados" del apartado "Datos proyecto - Ficha general" de la solicitud.
+* Área temática proyecto: se inicializa con el campo "área temática solicitud" del apartado "Datos proyecto - Ficha general" de la solicitud.
 
 Si la solicitud tiene el campo "Tipo Solicitud SGI" con el valor "RRHH" se dejan todos los campos vacío del apartado "Contexto proyecto".
 
@@ -2043,19 +1981,19 @@ Si la solicitud tiene el campo "Tipo Solicitud SGI" con el valor "Proyecto" se c
 
 Si la solicitud tiene el campo "Tipo Solicitud SGI" con el valor "Proyecto" se copian las clasificaciones definidas en la solicitud al proyecto.
 
-**Apartado Entidades \- Gestora**
+**Apartado Entidades - Gestora**
 
-Si la solicitud tiene vinculada una convocatoria registrada en el SGI y en esta convocatoria se ha rellenado el campo "convocatoria entidad gestora" se copiará al apartado "Entidades \- Gestora" del proyecto
+Si la solicitud tiene vinculada una convocatoria registrada en el SGI y en esta convocatoria se ha rellenado el campo "convocatoria entidad gestora" se copiará al apartado "Entidades - Gestora" del proyecto
 
-**Apartado Entidades \- Convocantes**
+**Apartado Entidades - Convocantes**
 
-Si la solicitud tiene vinculada una convocatoria registrada en el SGI y en esta convocatoria existen entidades convocantes, dichas entidades convocantes se copiarán al apartado "Entidades \- Convocantes" del proyecto. En el caso de que en la solicitud se hubieran seleccionando la modalidad para cada una de ellas se copiarán al proyecto.
+Si la solicitud tiene vinculada una convocatoria registrada en el SGI y en esta convocatoria existen entidades convocantes, dichas entidades convocantes se copiarán al apartado "Entidades - Convocantes" del proyecto. En el caso de que en la solicitud se hubieran seleccionando la modalidad para cada una de ellas se copiarán al proyecto.
 
-**Apartado Entidades \- Financiadoras**
+**Apartado Entidades - Financiadoras**
 
-Si la solicitud tiene vinculada una convocatoria registrada en el SGI y en esta convocatoria existen entidades financiadoras, dichas entidades financiadoras se copiarán al apartado "Entidades \- Financiadoras" del proyecto indicando en el campo "ajena" el valor "No" .
+Si la solicitud tiene vinculada una convocatoria registrada en el SGI y en esta convocatoria existen entidades financiadoras, dichas entidades financiadoras se copiarán al apartado "Entidades - Financiadoras" del proyecto indicando en el campo "ajena" el valor "No" .
 
-Si la solicitud tiene entidades financiadoras ajenas se copiarán al apartado "Entidades \- Financiadoras" del proyecto indicando en el campo "ajena" el valor "Sí" .
+Si la solicitud tiene entidades financiadoras ajenas se copiarán al apartado "Entidades - Financiadoras" del proyecto indicando en el campo "ajena" el valor "Sí" .
 
 **Apartado Equipo**
 
@@ -2069,23 +2007,23 @@ Si la solicitud tiene el campo "Tipo Solicitud SGI" con el valor "Proyecto" y se
 
 Si la solicitud tiene el campo "Tipo Solicitud SGI" con el valor "Proyecto" y se ha introducido la fecha de inicio del proyecto en la ventana emergente, se copian los socios definidos en la solicitud al proyecto. Por cada socio también se copia su equipo de trabajo.
 
-**Apartado Configuración económica \- Elegibilidad**
+**Apartado Configuración económica - Elegibilidad**
 
 Si la solicitud tiene vinculada una convocatoria registrada en el SGI y se ha introducido la fecha de inicio del proyecto en la ventana emergente, se copian los conceptos de gastos permitidos y no permitidos definidos en la convocatoria al proyecto.
 
-**Apartado Configuración económica \- Partidas presupuestarias**
+**Apartado Configuración económica - Partidas presupuestarias**
 
 Si la solicitud tiene vinculada una convocatoria registrada en el SGI se copian las partidas presupuestarias definidas en la convocatoria al proyecto.
 
-### 9\. Crear grupo de investigación desde solicitud concedida
+### 9. Crear grupo de investigación desde solicitud concedida
 
 Cuando una solicitud cumpla con las siguientes condiciones:
 
 * Que esté en uno de los siguientes estados:
-	+ Concedida provisional
-	+ Concedida provisional alegada
-	+ Concedida provisional no alegada
-	+ Concedida
+  + Concedida provisional
+  + Concedida provisional alegada
+  + Concedida provisional no alegada
+  + Concedida
 * El campo "Tipo solicitud SGI" del apartado "Datos generales" tenga el valor "Grupo"
 
 Se mostrará un nuevo icono de acción en la columna de acciones del listado de solicitudes para esa solicitud que es el icono de "crear grupos investigación"  representado por  ![](/attachments/597853537/597882357.png) que permite crear un grupo de investigación a partir de la solicitud.
@@ -2094,8 +2032,7 @@ Se mostrará un nuevo icono de acción en la columna de acciones del listado de 
 
 Al pulsar sobre el icono de "crear grupo" se muestra la siguiente ventana emergente para introduir los datos mínimos para poder crear un grupo de investigación:
 
-![](/attachments/597853537/597882359.png)  
-
+![](/attachments/597853537/597882359.png)
 
 Estos datos mínimos para poder crear un grupo son:
 
@@ -2109,8 +2046,7 @@ Cumplimentados los campos obligatorios se pulsará el botón "Añadir".
 
 Se creará el grupo de investigación y se abre en una pestaña nueva la pantalla de edición de "Datos generales"  del grupo creado.
 
-![](/attachments/597853537/597882355.png)  
-
+![](/attachments/597853537/597882355.png)
 
 El grupo creado a partir de la solicitud se creará con los siguientes campos informados (recogidos de la solicitud):
 
@@ -2133,46 +2069,31 @@ Se crea al solicitante como miembro del equipo del grupo con los siguientes dato
 * Dedicación: se inicializa al valor "Completa"
 * Participación: se inicializa al valor "100"
 
-### 10\. Navegación a convocatoria y proyecto
+### 10. Navegación a convocatoria y proyecto
 
 Cuando una solicitud está asociada a una convocatoria registrada en el SGI, se podrá navegar de manera directa a la misma.
 
 ![](/attachments/597853537/597858992.png)
 
-  
-
-
 Al pulsar sobre el enlace "Convocatoria" se accederá al detalle de la Convocatoria a la que está vinculada la solicitud, mostrando inicialmente su página de Datos generales. Si se pulsa el enlace "Convocatoria" con la combinación de "tecla Ctrl" y "botón izquierdo de ratón", el detalle de convocatoria se mostrará en una ventana de navegador nueva, permitiendo así alternar la visibilidad de la solicitud y la convocatoria.
-
-  
-
 
 Si la solicitud tiene proyectos asociados se mostrará el enlace que permitirá navegar a los mismos.
 
 ![](/attachments/597853537/597858990.png)
 
-  
-
-
 En caso que se hayan creado varios proyectos asociados a la solicitud, el enlace "Proyecto" mostrará el listado de todos los proyectos derivados de la solicitud, pudiendo acceder al detalle de cualquiera de ellos.
 
 ![](/attachments/597853537/597858991.png)
 
-  
-
-
 Si la solicitud solo tiene un proyecto derivado,  al pulsar el enlace "Proyecto" se accederá al detalle del mismo, mostrando inicialmente la página de sus datos generales.
 
-En cualquiera de las dos situaciones anteriores se podrá pulsar el enlace "Proyecto" haciendo uso de la combinación "tecla Ctrl" \+ "botón izquierdo de ratón" lo que provocará que el listado de proyectos o el proyecto concreto se muestren sobre una pestaña de navegador nueva, posibilitando así que se alterne la visualización de la solicitud y del proyecto.
+En cualquiera de las dos situaciones anteriores se podrá pulsar el enlace "Proyecto" haciendo uso de la combinación "tecla Ctrl" + "botón izquierdo de ratón" lo que provocará que el listado de proyectos o el proyecto concreto se muestren sobre una pestaña de navegador nueva, posibilitando así que se alterne la visualización de la solicitud y del proyecto.
 
-  
+### 11. Comunicados de solicitudes
 
+#### 11.1 Cambios de estado
 
-### 11\. Comunicados de solicitudes
-
-#### 11\.1 Cambios de estado
-
-Muchos de los cambios de estado de las solicitudes deben ser comunicados como tales, bajo ciertas condiciones, a diferentes destinatarios según el caso. 
+Muchos de los cambios de estado de las solicitudes deben ser comunicados como tales, bajo ciertas condiciones, a diferentes destinatarios según el caso.
 
 Para el caso de los cambios de estado que puede realizar el personal gestor **sobre solicitudes registradas por el propio solicitante**, estos comunicados se agruparán en:
 
@@ -2184,10 +2105,9 @@ Para el caso de cambios de estado sobre solicitudes registradas tanto por la uni
 
 * **Cambio al estado "SOLICITADA" para solicitudes de tipo "RRHH"**
 
-
-	+ En este caso, el destinatario del comunicado será el tutor/a de la solicitud de RRHH.
+  + En este caso, el destinatario del comunicado será el tutor/a de la solicitud de RRHH.
 * **Cambio a los estados "VALIDADA" o "RECHAZADA" para solicitudes de tipo "RRHH"**
-	+ En este caso, el destinatario del comunicado será el solicitante de la solicitud de RRHH.
+  + En este caso, el destinatario del comunicado será el solicitante de la solicitud de RRHH.
 
 Para todos los casos, deberá estar configurado en el momento de la implantación del SGI en la Universidad:
 
@@ -2196,7 +2116,7 @@ Para todos los casos, deberá estar configurado en el momento de la implantació
 
 Estos avisos serán enviados por el SGI de forma inmediata y automática tras producirse el cambio de estado por parte del usuario.
 
-#### 11\.2 Alta de solicitud de petición de evaluación de ética
+#### 11.2 Alta de solicitud de petición de evaluación de ética
 
 Es necesario avisar desde el SGI acerca de la creación de una solicitud/petición de evaluación de ética.
 
@@ -2206,13 +2126,3 @@ Deberá estar configurado en el momento de la implantación del SGI en la Univer
 * Un contenido del email de aviso.
 
 El envío de este tipo de aviso, que será un email dirigido al solicitante, se producirá de manera inmediata y automática por parte del SGI al identificar que es necesario crear una solicitud de petición de evaluación de ética para una solicitud. La comprobación se realiza tras cambiar el personal gestor el estado de una solicitud y haberse completado el formulario de autoevaluación de ética.
-
-  
-
-
-  
-
-
-
-
-

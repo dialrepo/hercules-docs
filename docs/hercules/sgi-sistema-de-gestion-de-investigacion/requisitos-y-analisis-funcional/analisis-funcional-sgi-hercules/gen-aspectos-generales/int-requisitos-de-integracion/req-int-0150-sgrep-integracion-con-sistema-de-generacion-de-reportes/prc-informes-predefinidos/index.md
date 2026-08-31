@@ -1,10 +1,5 @@
-# Hércules : PRC \- Informes Predefinidos
+# PRC - Informes Predefinidos
 
-
-
-  
-
-
-
-
-
+- [REP-PRC-0030 - Informe Resumen puntuación grupos](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0150-sgrep-integracion-con-sistema-de-generacion-de-reportes/prc-informes-predefinidos/rep-prc-0030-informe-resumen-puntuacion-grupos)
+- [REP-PRC-0040 - Informe Detalle grupo](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0150-sgrep-integracion-con-sistema-de-generacion-de-reportes/prc-informes-predefinidos/rep-prc-0040-informe-detalle-grupo)
+- [REP-PRC-0050 - Informe Detalle producción investigador](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0150-sgrep-integracion-con-sistema-de-generacion-de-reportes/prc-informes-predefinidos/rep-prc-0050-informe-detalle-produccion-investigador)

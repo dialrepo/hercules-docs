@@ -1,12 +1,12 @@
-# Hércules : Guia de Implantación \- Checklist
+# Guia de Implantación - Checklist
 
+* [UM - Universidad de Murcia](/hercules/sgi-sistema-de-gestion-de-investigacion/guia-de-implantacion-checklist/um-universidad-de-murcia)
+* [Universidad de Lérida](/hercules/sgi-sistema-de-gestion-de-investigacion/guia-de-implantacion-checklist/universidad-de-lerida)
+* [Particularidades de distintas bases de datos](/hercules/sgi-sistema-de-gestion-de-investigacion/guia-de-implantacion-checklist/particularidades-de-distintas-bases-de-datos)
+* [Universidad de Córdoba](/hercules/sgi-sistema-de-gestion-de-investigacion/guia-de-implantacion-checklist/universidad-de-cordoba)
+* [Universidad Católica de Valencia](/hercules/sgi-sistema-de-gestion-de-investigacion/guia-de-implantacion-checklist/universidad-catolica-de-valencia)
 
-
-* [UM \- Universidad de Murcia](/hercules/sgi-sistema-de-gestion-de-investigacion/guia-de-implantacion-checklist/um-universidad-de-murcia/index.md "/hercules/sgi-sistema-de-gestion-de-investigacion/guia-de-implantacion-checklist/um-universidad-de-murcia/index.md")
-* [Universidad de Lérida](/hercules/sgi-sistema-de-gestion-de-investigacion/guia-de-implantacion-checklist/universidad-de-lerida.md "/hercules/sgi-sistema-de-gestion-de-investigacion/guia-de-implantacion-checklist/universidad-de-lerida.md")
-* [Particularidades de distintas bases de datos](/hercules/sgi-sistema-de-gestion-de-investigacion/guia-de-implantacion-checklist/particularidades-de-distintas-bases-de-datos.md "/hercules/sgi-sistema-de-gestion-de-investigacion/guia-de-implantacion-checklist/particularidades-de-distintas-bases-de-datos.md")
-
-## Checklist pre\-valoración implantación SGI
+## Checklist pre-valoración implantación SGI
 
 Este documento debe ser utilizado como una guía para recopilar la información necesaria para realizar el estudio de implantación del SGI
 
@@ -20,9 +20,9 @@ en función de las necesidades y el uso que le vaya a dar la Universidad tanto a
 
 resto de las aplicaciones que lo puedan compartir.
 
-El clúster puede estar funcionando en la propia infraestructura de la Universidad (instalación on\-premise) o en una nube pública bajo una
+El clúster puede estar funcionando en la propia infraestructura de la Universidad (instalación on-premise) o en una nube pública bajo una
 
-suscripción de la propia Universidad (instalación on\-cloud).
+suscripción de la propia Universidad (instalación on-cloud).
 
 Es recomendable pero no necesaria la disponibilidad de dos clúster diferenciados, uno para el entorno de producción y otro para el
 
@@ -56,7 +56,7 @@ Para plantear otros escenarios sería necesario realizar las reuniones correspon
 
 Teniendo en cuenta lo anterior, debe indicarse:
 
-* Qué tipo de instalación se llevará a cabo: on\-premise / on\-cloud
+* Qué tipo de instalación se llevará a cabo: on-premise / on-cloud
 * Bajo que motor de BBDD se instalará el SGI Hércules
 * Si existe algún tipo de problema para disponer de la infraestructura y entornos indicada
 * Si se quiere plantear un escenario de instalación de la infraestructura diferente al planteado (por ejemplo, que las tareas de instalación recaigan en Treelogic)
@@ -73,15 +73,12 @@ Esta solución permite implementar el inicio de sesión único con Identity Mana
 
 Para integrar la plataforma con los servicios de gestión de identidades de la universidad estos solo tendrán que ser compatibles con los
 
-protocolos de federación de identidades SAML v2 o OpenID Connect (OIDC) / OAuth2\.
+protocolos de federación de identidades SAML v2 o OpenID Connect (OIDC) / OAuth2.
 
 Las cuestiones que habría que tener en cuenta para valorar esta integración serían:
 
 * ¿Se desea implantar el SGI de forma integrada con el sistema de autenticación corporativo?
 * ¿Cuál es este sistema?
-
-  
-
 
 El SGI está preparado para recibir atributos del sistema de autenticación corporativo de tal forma que en base a estos atributos se puedan
 
@@ -98,7 +95,7 @@ El SGI dispone de los siguientes módulos funcionales:
 * CSP: Gestión de convocatorias, solicitudes, proyectos/contratos y grupos de investigación.
 * ETI: Comisión de evaluación de ética.
 * PII: Gestión de la propiedad industrial e intelectual
-* EER: Gestión de empresas de explotación de resultados (spin\-off, ebts, start\-ups ..)
+* EER: Gestión de empresas de explotación de resultados (spin-off, ebts, start-ups ..)
 * PRC: Baremación de la producción científica de los grupos de investigación.
 * INV: Módulo para el perfil de investigación, incluyendo gestión relativa a CSP, ETI y PRC que afecte a la persona investigadora.
 
@@ -121,54 +118,54 @@ las siguientes cuestiones relativas a una posible migración de datos:
 
 * Se debe de identificar si existe algún sistema actual y si deben migrarse datos del mismo al SGI. Si el sistema da soporte a formularios que recojan la memoria del proyecto para cualquiera de los comités de ética: CEI (seres humanos), CEEA (experimentación animal) o CBE (Bioseguridad), deben adjuntarse el contenido de estos formularios y cómo el sistema actual recoge toda la información tanto de los formularios como del resultado de las evaluaciones de ética realizadas sobre los proyectos.
 * Si no existe un sistema pero sí se dispone de datos recopilados en ficheros (forma excel, filemaker o similar), debe identificarse:
-	+ Formato en el que están disponibles los datos que sean objeto de migración
-	+ De qué conjunto de datos se dispone (detalle de proyectos evaluados, resultados de la evaluación, personal que realizaevaluaciones, memorias de los proyectos con o sin detalle de los formularios asociados a los comités CEI, CEEA o CBE,etc)
-	+ Volumen de datos a migrar
+  + Formato en el que están disponibles los datos que sean objeto de migración
+  + De qué conjunto de datos se dispone (detalle de proyectos evaluados, resultados de la evaluación, personal que realizaevaluaciones, memorias de los proyectos con o sin detalle de los formularios asociados a los comités CEI, CEEA o CBE,etc)
+  + Volumen de datos a migrar
 * Se debe de indicar si los datos a migrar referencian a personas en el SGP o si los datos de las personas están contenidos de manera independiente al SGP (en caso de ser así debe tenerse en cuenta que el proceso de migración implicaría referenciar a la personas en el SGP siendo éste el sistema mandatorio y prescindiendo de los datos independientes que figuren en la fuente de migración)
 
-### CSP \- Convocatorias, solicitudes y proyectos
+### CSP - Convocatorias, solicitudes y proyectos
 
 Las integraciones necesarias para disponer de la funcionalidad el módulo al completo son:
 
 * Personas: SGP. Es una integración imprescindible.
 * Empresas: SGEMP. Es una integración imprescindible.
 * Estructura organizativa: SGO. Podría prescindirse de esta opción siempre que:
-	+ No se habilite la posibilidad de ver el detalle de las personas y/o dar de alta nuevas personas desde el SGI. En caso de habilitarse esta funcionalidad, la integración sería necesaria y siempre y cuando el SGP corporativo incluya como obligatorio algún campo recogido a través de esta integración.
-	+ No se habilite la posibilidad de ver el detalle y/o dar de alta nuevas empresas desde el SGI. En caso de habilitarse esta funcionalidad, la integración sería necesaria y siempre y cuando el SGEMP corporativo incluya como obligatorio algún campo recogido a través de esta integración.
-	+ Se prescinda de realizar la clasificación de solicitudes y proyectos por áreas de conocimiento y otras clasificaciones que puedan residir en sistemas corporativos.
+  + No se habilite la posibilidad de ver el detalle de las personas y/o dar de alta nuevas personas desde el SGI. En caso de habilitarse esta funcionalidad, la integración sería necesaria y siempre y cuando el SGP corporativo incluya como obligatorio algún campo recogido a través de esta integración.
+  + No se habilite la posibilidad de ver el detalle y/o dar de alta nuevas empresas desde el SGI. En caso de habilitarse esta funcionalidad, la integración sería necesaria y siempre y cuando el SGEMP corporativo incluya como obligatorio algún campo recogido a través de esta integración.
+  + Se prescinda de realizar la clasificación de solicitudes y proyectos por áreas de conocimiento y otras clasificaciones que puedan residir en sistemas corporativos.
 * Gestión económica: SGE. Aunque esta integración resulta imprescindible para disponer del detalle económico de proyectos y contratos, podría optarse por realizar esta integración en una segunda fase de la implantación del SGI. Mientras la integración no esté disponible el detalle económico de proyectos y contratos deberá ser consultado haciendo uso del SGE.
 * Sistema de CVN. Es una integración opcional. Solo será necesaria en caso de existir un sistema de gestión de CVN que se integre con el SGI y que implemente la funcionalidad de incorporar de manera directa proyectos, contratos, grupos en el CVN.
 
 Además de las cuestiones relativas a estas integraciones, incluidas en los apartados finales de este documento, de debe dar respuesta las siguientes cuestiones relativas a una posible migración de datos:
 
 * Si existe algún sistema a través del que se realice actualmente la gestión de convocatorias, solicitudes y proyectos se debe de identificar:
-	+ ¿Se trata de un sistema comercial o un desarrollo propio?
-	+ ¿Se dispone del modelo de datos?
+  + ¿Se trata de un sistema comercial o un desarrollo propio?
+  + ¿Se dispone del modelo de datos?
 * Si no existe un sistema pero sí se dispone de datos recopilados en ficheros (forma excel, filemaker o similar), debe identificarse:
-	+ Formato en el que están disponibles los datos que sean objeto de migración
+  + Formato en el que están disponibles los datos que sean objeto de migración
 * ¿Tienen todas las convocatorias, solicitudes y proyectos los mismos datos o existe un conjunto de datos diferente en función de la naturaleza de cada convocatoria, solicitud o proyecto?
 * Identificar el volumen de convocatorias a migrar y una estructura aproximada de la información contenida.
 * Identificar el volumen de solicitudes a migrar y una estructura aproximada de la información contenida.
 * Identificar el volumen de proyectos/contratos a migrar y una estructura aproximada de la información contenida.
 * Si existe algún sistema a través del que se realice actualmente la gestión de grupos:
-	+ ¿Se trata de un sistema comercial o un desarrollo propio?
-	+ ¿Se dispone del modelo de datos?
+  + ¿Se trata de un sistema comercial o un desarrollo propio?
+  + ¿Se dispone del modelo de datos?
 * Si no existe un sistema pero sí se dispone de datos recopilados en ficheros (forma excel, filemaker o similar), debe identificarse:
-	+ Formato en el que están disponibles los datos que sean objeto de migración
+  + Formato en el que están disponibles los datos que sean objeto de migración
 * Identificar el volumen de grupos a migrar y la estructura aproximada de la información que contienen.
 * Se debe de indicar si los datos a migrar referencian a personas en el SGP o si los datos de las personas están contenidos de manera independiente al SGP (en caso de ser así debe tenerse en cuenta que el proceso de migración implicaría referenciar a la personas en el SGP siendo éste el sistema mandatorio y prescindiendo de los datos independientes que figuren en la fuente de migración)
 * Se debe de indicar si los datos a migrar referencian a empresas del SGEMP o si los datos de las empresas están contenidas de manera independiente al SGEMP (en caso de ser así debe tenerse en cuenta que el proceso de migración implicaría referenciar a las empresas en el SGEMP siendo éste el sistema mandatorio y prescindiendo de los datos independientes que figuren en la fuente de migración)
 
-### PII \- Propiedad intelectual e industrial
+### PII - Propiedad intelectual e industrial
 
 Las integraciones necesarias para disponer de la funcionalidad el módulo al completo son:
 
 * Personas: SGP. Es una integración imprescindible.
 * Empresas: SGEMP. Es una integración imprescindible.
 * Estructura organizativa: SGO. Podría prescindirse de esta opción siempre que:
-	+ No se habilite la posibilidad de ver el detalle de las personas y/o dar de alta nuevas personas desde el SGI. En caso de habilitarse esta funcionalidad, la integración sería necesaria y siempre y cuando el SGP corporativo incluya como obligatorio algún campo recogido a través de esta integración.
-	+ No se habilite la posibilidad de ver el detalle y/o dar de alta nuevas empresas desde el SGI. En caso de habilitarse esta funcionalidad, la integración sería necesaria y siempre y cuando el SGEMP corporativo incluya como obligatorio algún campo recogido a través de esta integración.
-	+ No exista ningún sistema corporativo que proporcione un listado centralizado de países. En este caso se debería preconfigurar un listado de países en la fase de implantación del SGI para que esté disponible para la configuración de vías de protección.
+  + No se habilite la posibilidad de ver el detalle de las personas y/o dar de alta nuevas personas desde el SGI. En caso de habilitarse esta funcionalidad, la integración sería necesaria y siempre y cuando el SGP corporativo incluya como obligatorio algún campo recogido a través de esta integración.
+  + No se habilite la posibilidad de ver el detalle y/o dar de alta nuevas empresas desde el SGI. En caso de habilitarse esta funcionalidad, la integración sería necesaria y siempre y cuando el SGEMP corporativo incluya como obligatorio algún campo recogido a través de esta integración.
+  + No exista ningún sistema corporativo que proporcione un listado centralizado de países. En este caso se debería preconfigurar un listado de países en la fase de implantación del SGI para que esté disponible para la configuración de vías de protección.
 * Gestión económica: SGE. Aunque esta integración resulta imprescindible para disponer del detalle de gastos asociados al registro de las PII y para el cálculo automático de las regalías derivadas de los contratos de explotación de las PII, podría optarse por realizar esta integración en una segunda fase de la implantación del SGI. Mientras la integración no esté disponible el detalle de gastos e ingresos de las PII deberá ser consultado haciendo uso del SGE y el cálculo de los repartos se realizaría por vías ajenas al SGI.
 * Sistema de CVN. Es una integración opcional. Solo será necesaria en caso de existir un sistema de gestión de CVN que se integre con el SGI y que implemente la funcionalidad de incorporar de manera directa las pii en el CVN.
 
@@ -177,10 +174,10 @@ Además de las cuestiones relativas a estas integraciones, incluidas en los apar
 las siguientes cuestiones relativas a una posible migración de datos:
 
 * Si existe algún sistema a través del que se realice actualmente la gestión de las PII y de sus solicitudes de protección:
-	+ ¿Se trata de un sistema comercial o un desarrollo propio?
-	+ ¿Se dispone del modelo de datos?
+  + ¿Se trata de un sistema comercial o un desarrollo propio?
+  + ¿Se dispone del modelo de datos?
 * Si no existe un sistema pero sí se dispone de datos recopilados en ficheros (forma excel, filemaker o similar), debe identificarse:
-	+ Formato en el que están disponibles los datos que sean objeto de migración
+  + Formato en el que están disponibles los datos que sean objeto de migración
 * ¿Tienen todas las PII los mismos datos o existe un conjunto de datos diferente en función de las mismas?
 * ¿Están las PII asociadas a todas sus solicitudes de protección o éstas se registran de manera independiente?
 * ¿Tienen todas las solicitudes de protección los mismos datos o existe un conjunto de datos diferente en función de las mismas?
@@ -188,31 +185,31 @@ las siguientes cuestiones relativas a una posible migración de datos:
 * Se debe de indicar si los datos a migrar referencian a personas en el SGP o si los datos de las personas están contenidos de manera independiente al SGP (en caso de ser así debe tenerse en cuenta que el proceso de migración implicaría referenciar a la personas en el SGP siendo éste el sistema mandatorio y prescindiendo de los datos independientes que figuren en la fuente de migración)
 * Se debe de indicar si los datos a migrar referencian a empresas del SGEMP o si los datos de las empresas están contenidas de manera independiente al SGEMP (en caso de ser así debe tenerse en cuenta que el proceso de migración implicaría referenciar a las empresas en el SGEMP siendo éste el sistema mandatorio y prescindiendo de los datos independientes que figuren en la fuente de migración)
 
-### EER \- Empresas de explotación de resultados
+### EER - Empresas de explotación de resultados
 
 Las integraciones necesarias para disponer de la funcionalidad el módulo al completo son:
 
 * Personas: SGP. Es una integración imprescindible.
 * Empresas: SGEMP. Es una integración imprescindible.
 * Estructura organizativa: SGO. Podría prescindirse de esta opción siempre que:
-	+ No se habilite la posibilidad de ver el detalle de las personas y/o dar de alta nuevas personas desde el SGI. En caso de habilitarse esta funcionalidad, la integración sería necesaria y siempre y cuando el SGP corporativo incluya como obligatorio algún campo recogido a través de esta integración.
-	+ No se habilite la posibilidad de ver el detalle y/o dar de alta nuevas empresas desde el SGI. En caso de habilitarse esta funcionalidad, la integración sería necesaria y siempre y cuando el SGEMP corporativo incluya como obligatorio algún campo recogido a través de esta integración.
+  + No se habilite la posibilidad de ver el detalle de las personas y/o dar de alta nuevas personas desde el SGI. En caso de habilitarse esta funcionalidad, la integración sería necesaria y siempre y cuando el SGP corporativo incluya como obligatorio algún campo recogido a través de esta integración.
+  + No se habilite la posibilidad de ver el detalle y/o dar de alta nuevas empresas desde el SGI. En caso de habilitarse esta funcionalidad, la integración sería necesaria y siempre y cuando el SGEMP corporativo incluya como obligatorio algún campo recogido a través de esta integración.
 
 Además de las cuestiones relativas a estas integraciones, incluidas en los apartados finales de este documento, de debe dar respuesta a
 
 las siguientes cuestiones relativas a una posible migración de datos:
 
 * Si existe algún sistema a través del que se realice actualmente la gestión de las EER
-	+ ¿Se trata de un sistema comercial o un desarrollo propio?
-	+ ¿Se dispone del modelo de datos?
+  + ¿Se trata de un sistema comercial o un desarrollo propio?
+  + ¿Se dispone del modelo de datos?
 * Si no existe un sistema pero sí se dispone de datos recopilados en ficheros (forma excel, filemaker o similar), debe identificarse:
-	+ Formato en el que están disponibles los datos que sean objeto de migración
+  + Formato en el que están disponibles los datos que sean objeto de migración
 * ¿Tienen todas las EER los mismos datos o existe un conjunto de datos diferente en función de las mismas?
 * Identificar el volumen de EER a migrar y la estructura aproximada de la información que contienen.
 * Se debe de indicar si los datos a migrar referencian a personas en el SGP o si los datos de las personas están contenidos de manera independiente al SGP (en caso de ser así debe tenerse en cuenta que el proceso de migración implicaría referenciar a la personas en el SGP siendo éste el sistema mandatorio y prescindiendo de los datos independientes que figuren en la fuente de migración)
 * Se debe de indicar si los datos a migrar referencian a empresas del SGEMP o si los datos de las empresas están contenidas de manera independiente al SGEMP (en caso de ser así debe tenerse en cuenta que el proceso de migración implicaría referenciar a las empresas en el SGEMP siendo éste el sistema mandatorio y prescindiendo de los datos independientes que figuren en la fuente de migración)
 
-### PRC \- Baremación de la producción científica
+### PRC - Baremación de la producción científica
 
 Las integraciones necesarias para disponer de la funcionalidad el módulo al completo son:
 
@@ -225,8 +222,8 @@ Dado que la orientación del módulo de PRC del SGI cubre la baremación de los 
 producción científica de los mismos, las premisas para implantación del módulo de PRC son:
 
 * + Disponer del módulo de CSP puesto que es este módulo el que cubre la gestión de los grupos de investigación
-	+ Que la Universidad disponga de un sistema de gestión de CVN capaz de integrarse con el SGI
-	+ Que los baremos a definir se ajusten al listado de baremos preconfigurados en el SGI y basados en los aparatados de la estructura CVN
+  + Que la Universidad disponga de un sistema de gestión de CVN capaz de integrarse con el SGI
+  + Que los baremos a definir se ajusten al listado de baremos preconfigurados en el SGI y basados en los aparatados de la estructura CVN
 
 Referente a la migración de datos históricos para el módulo de PRC, debe tenerse en cuenta que el planteamiento para este módulo en el
 
@@ -288,9 +285,9 @@ Teniendo en cuenta lo anterior:
 * ¿Se optará por desarrollar un interface de comunicación intermedio entre el SGI y los sistemas origen de la Universidad? o por el contrario ¿se desarrollarán los servicios de integración en los sistemas origen de la Universidad de forma que respondan exactamente al API que expone el SGI?
 * Si se opta por desarrollar un interface de comunicación intermedio ¿deberá ser un desarrollo a presupuestar por Treelogic o será un desarrollo a realizar por la propia Universidad o terceros?
 * ¿Se habilitará la creación de nuevas personas desde el SGI?
-	+ Si la respuesta es afirmativa ¿qué datos mínimos precisa el SGP corporativo para dar de alta una nueva persona?
+  + Si la respuesta es afirmativa ¿qué datos mínimos precisa el SGP corporativo para dar de alta una nueva persona?
 * ¿Se habilitará la modificación de datos personas desde el SGI?
-	+ Si la respuesta es afirmativa ¿qué datos de la persona podrán ser modificados desde el SGI?
+  + Si la respuesta es afirmativa ¿qué datos de la persona podrán ser modificados desde el SGI?
 
 ### Integración con el sistema de la estructura organizativa (SGO)
 
@@ -309,14 +306,11 @@ humanos o de cualquier otro sistema propio de la Universidad o de una combinaci�
 genérico de sistema de la estructura organizativa (SGO).
 
 * ¿Existe un sistema que pueda proporcionar al SGI el listado de áreas de conocimiento, los departamentos y los centros de la Universidad?
-	+ Si existe este sistema ¿Se optará por desarrollar un interface de comunicación intermedio entre el SGI y el/los sistemas origen de la Universidad? o por el contrario ¿se desarrollarán los servicios de integración en los sistemas origen de la Universidad de forma que respondan exactamente al API que expone el SGI?
-	+ Si se opta por desarrollar un interface de comunicación intermedio ¿deberá ser un desarrollo a presupuestar por Treelogic o será un desarrollo a realizar por la propia Universidad o terceros?
+  + Si existe este sistema ¿Se optará por desarrollar un interface de comunicación intermedio entre el SGI y el/los sistemas origen de la Universidad? o por el contrario ¿se desarrollarán los servicios de integración en los sistemas origen de la Universidad de forma que respondan exactamente al API que expone el SGI?
+  + Si se opta por desarrollar un interface de comunicación intermedio ¿deberá ser un desarrollo a presupuestar por Treelogic o será un desarrollo a realizar por la propia Universidad o terceros?
 * ¿Existe un sistema que pueda proporcionar al SGI algún listado de clasificaciones por las que interese clasificar los proyectos, tales como CNAE, UNESCO, ANEP o cualquier otra clasificación propia de la Universidad?
-	+ Si existe este sistema ¿Se optará por desarrollar un interface de comunicación intermedio entre el SGI y el/los sistemas origen de la Universidad? o por el contrario ¿se desarrollarán los servicios de integración en los sistemas origen de la Universidad de forma que respondan exactamente al API que expone el SGI?
-	+ Si se opta por desarrollar un interface de comunicación intermedio ¿deberá ser un desarrollo a presupuestar por Treelogic o será un desarrollo a realizar por la propia Universidad o terceros?
-
-  
-
+  + Si existe este sistema ¿Se optará por desarrollar un interface de comunicación intermedio entre el SGI y el/los sistemas origen de la Universidad? o por el contrario ¿se desarrollarán los servicios de integración en los sistemas origen de la Universidad de forma que respondan exactamente al API que expone el SGI?
+  + Si se opta por desarrollar un interface de comunicación intermedio ¿deberá ser un desarrollo a presupuestar por Treelogic o será un desarrollo a realizar por la propia Universidad o terceros?
 
 ### Integración con el sistema de gestión de empresas (SGEMP)
 
@@ -365,9 +359,9 @@ Teniendo en cuenta lo anterior:
 * ¿Se optará por desarrollar un interface de comunicación intermedio entre el SGI y los sistemas origen de la Universidad? o por el contrario ¿se desarrollarán los servicios de integración en los sistemas origen de la Universidad de forma que respondan exactamente al API que expone el SGI?
 * Si se opta por desarrollar un interface de comunicación intermedio ¿deberá ser un desarrollo a presupuestar por Treelogic o será un desarrollo a realizar por la propia Universidad o terceros?
 * ¿Se habilitará la creación de nuevas empresas desde el SGI?
-	+ Si la respuesta es afirmativa ¿qué datos mínimos precisa el SGEMP corporativo para dar de alta una nueva empresa?
+  + Si la respuesta es afirmativa ¿qué datos mínimos precisa el SGEMP corporativo para dar de alta una nueva empresa?
 * ¿Se habilitará la modificación de datos de empresas desde el SGI?
-	+ Si la respuesta es afirmativa ¿qué datos de la empresa podrán ser modificados desde el SGI?
+  + Si la respuesta es afirmativa ¿qué datos de la empresa podrán ser modificados desde el SGI?
 
 ### Integración con el sistema de gestión económica (SGE)
 
@@ -395,13 +389,13 @@ Como resumen general se listan algunas premisas y datos que forman parte de esta
 * En el SGI se podrá activar o no la validación de gastos. A través de esta validación de gastos se podrá realizar la aceptación del gasto y la correspondencia del tipo gasto con el concepto de gasto de la convocatoria/proyecto en caso de que esta no sea única.
 * En el caso de los contratos, en el SGI se definirá el calendario de facturación previsto. Las facturas se crearán y emitirán en el SGE asociándolas al número de previsión del SGI.
 * La información económica de un proyecto/contrato se mostrará en el SGI en tres secciones:
-	+ Estado actual del proyecto: en esta sección se presentará el balance actual de gastos ingresos del proyecto/contrato.
-	+ Detalle de operaciones contables, desglosado en ingresos, gastos y modificaciones presupuestarias. En cada Universidad se deberán definir las operaciones contables a mostrar y el estado en el que deben estar las mismas para que sean mostradas en el SGI (retenido, comprometido, obligado, etc). Se deben definir las columnas a mostrar en el SGI.
-	+ Facturas y gastos. Son los gastos ya materializados y validados. En cada Universidad se debe identificar el estado en el que han de figurar los gastos para que éstos se muestren en esta sección, así como los gastos a mostrar. Se desglosan en:
-		- Facturas y gastos generales
-		- Viajes y dietas
-		- Personal contratado
-	+ Facturas emitidas (asociadas a los contratos). Se deberá identificar el estado en el que han de figurar las facturas emitidas en el SGE para que se muestren en el SGI así como los campos a mostrar.
+  + Estado actual del proyecto: en esta sección se presentará el balance actual de gastos ingresos del proyecto/contrato.
+  + Detalle de operaciones contables, desglosado en ingresos, gastos y modificaciones presupuestarias. En cada Universidad se deberán definir las operaciones contables a mostrar y el estado en el que deben estar las mismas para que sean mostradas en el SGI (retenido, comprometido, obligado, etc). Se deben definir las columnas a mostrar en el SGI.
+  + Facturas y gastos. Son los gastos ya materializados y validados. En cada Universidad se debe identificar el estado en el que han de figurar los gastos para que éstos se muestren en esta sección, así como los gastos a mostrar. Se desglosan en:
+    - Facturas y gastos generales
+    - Viajes y dietas
+    - Personal contratado
+  + Facturas emitidas (asociadas a los contratos). Se deberá identificar el estado en el que han de figurar las facturas emitidas en el SGE para que se muestren en el SGI así como los campos a mostrar.
 * El SGE debe de permitir identificar los gastos de registros originados para cada PII. En el SGI se podrá vincular cada PII con sus contratos de explotación. Se recuperarán del SGE los ingresos originados por estos contratos. A partir de estos ingresos y los gastos de registros, el SGI podrá calcular el reparto de regalías asociado a la PII.
 
 Teniendo en cuenta lo anterior:
@@ -412,9 +406,9 @@ Teniendo en cuenta lo anterior:
 * ¿Existe algún punto de las premisas anteriores, relativas al SGE, que no pueda ser cubierto?
 * ¿Se debe habilitar la validación de gastos en el SGI?
 * ¿Se habilitará la creación de nuevos proyectos económicos/orgánicas desde el SGI?
-	+ Si la respuesta es afirmativa ¿qué datos mínimos precisa el SGE corporativo para dar de alta un nuevos proyecto económico/orgánica?
+  + Si la respuesta es afirmativa ¿qué datos mínimos precisa el SGE corporativo para dar de alta un nuevos proyecto económico/orgánica?
 * ¿Se habilitará la modificación de datos de este proyecto económico/orgánica desde el SGI?
-	+ Si la respuesta es afirmativa ¿qué datos podrán ser modificados desde el SGI?
+  + Si la respuesta es afirmativa ¿qué datos podrán ser modificados desde el SGI?
 
 ### Integración con sistema de CVN
 
@@ -434,7 +428,3 @@ investigación a partir del CVN de cada miembro del grupo.
 * ¿Se hará uso de la integración para que el SGI disponga de la información necesaria para la baremación de la producción científica de los grupos de investigación?
 * ¿Se optará por desarrollar un interface de comunicación intermedio entre el SGI y el sistema de gestión de CVN de la Universidad? o por el contrario ¿se desarrollarán los servicios de integración en el sistemas de CVN de forma que responda exactamente al API que expone el SGI?
 * Si se opta por desarrollar un interface de comunicación intermedio ¿deberá ser un desarrollo a presupuestar por Treelogic o será un desarrollo a realizar por la propia Universidad o terceros?
-
-
-
-

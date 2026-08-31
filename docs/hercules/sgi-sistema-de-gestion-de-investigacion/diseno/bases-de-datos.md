@@ -1,6 +1,4 @@
-# Hércules : Bases de datos
-
-
+# Bases de datos
 
 Antes de describir las diferentes bases de datos del SGI es importante ponerse en contexto dentro de la arquitectura de la aplicación, para ello, se incluye como referencia el siguiente diagrama, que representa tanto un modelo de despliegue como de comunicaciones a alto nivel entre cada una de las piezas que componen el SGI, así como las comunicaciones con otros sistemas externos.
 
@@ -8,20 +6,15 @@ Antes de describir las diferentes bases de datos del SGI es importante ponerse e
 
 ![](/attachments/676986997/676986998.png)
 
-  
- 
-
-
-
 | Elemento | | Descripción | Nº Elementos | Lista |
 | --- | --- | --- | --- | --- |
-| Elementos que acceden al SGI | Dispositivo Sistema | Representa a cada uno de los sistemas que pueden comunicarse con el SGI iniciando un circuito de petición\-respuesta HTTP a los servicios concretos expuestos en el SGI a través de su Bus de integración (ESB). | 3 | ED MA, RPA, Goliat (UM) |
-| Dispositivo Usuario | Representa a cada uno de los sistemas que pueden comunicarse con la aplicación Web de Gestión del SGI iniciando un circuito de petición\-respuesta HTTP. | 1 | Dispositivo del usuario de la aplicación SGI , dispositivo del usuario de Goliat |
+| Elementos que acceden al SGI | Dispositivo Sistema | Representa a cada uno de los sistemas que pueden comunicarse con el SGI iniciando un circuito de petición-respuesta HTTP a los servicios concretos expuestos en el SGI a través de su Bus de integración (ESB). | 3 | ED MA, RPA, Goliat (UM) |
+| Dispositivo Usuario | Representa a cada uno de los sistemas que pueden comunicarse con la aplicación Web de Gestión del SGI iniciando un circuito de petición-respuesta HTTP. | 1 | Dispositivo del usuario de la aplicación SGI , dispositivo del usuario de Goliat |
 | Conector BBDD | Representa una pieza que aglutina el acceso directo a la BBDD del SGI por parte de terceros (Universidad). | 2 | Conector BBDD (acceso a esquemas csp y pii) |
 | KUBERNETES | Gateway | Representa la pieza, que proporciona el propio Kubernetes, que se encarga de recibir las peticiones de los Dispositivos Usuario y Sistema y de redirigirlas en función del patrón que sigan al ESB, peticiones tipo **/api/**, o a la Web, resto de peticiones **/\***. | 1 | Gateway |
 | WEB | Representa el módulo de la aplicación de gestión del SGI, que hará de orquestador de todas las peticiones que vayan dirigidas a él, llamando a los diferentes módulos según la necesidad de cada funcionalidad concreta. | 1 | WEB |
-| ESB | Representa el Bus de integración del SGI, que abstrae tanto al SGI como los Elementos que acceden al SGI del origen de la información que se intercambia a través de él. Será esta pieza la que haga de pasarela, con o sin alguna adaptación según la necesidad, entre el SGI o los Dispositivos Sistema y Usuario y los servicios tanto internos al SGI como implementados por parte de terceros (Universidad). | 1 | Habrá un único ESB que contendrá los siguientes Componentes:* Los que requieren implementación por parte de terceros (Universidad): SGE, SGP, SGEMP, SGEPII. * Los que pueden tener o no implementación por parte de terceros (Universidad): SGO, SGDOC. * Los que dan acceso a servicios internos al SGI: SGICSP, SGIPII, SGIPRC, SGIUSR |
-| ESB \- Implementación SGI | Representa a los servicios del ESB que tienen implementación propia por parte del SGI de forma que se pueda utilizar si no se implementan por parte de terceros (Universidad). | 2 | SGISGO, SGISGDOC |
+| ESB | Representa el Bus de integración del SGI, que abstrae tanto al SGI como los Elementos que acceden al SGI del origen de la información que se intercambia a través de él. Será esta pieza la que haga de pasarela, con o sin alguna adaptación según la necesidad, entre el SGI o los Dispositivos Sistema y Usuario y los servicios tanto internos al SGI como implementados por parte de terceros (Universidad). | 1 | Habrá un único ESB que contendrá los siguientes Componentes:   * Los que requieren implementación por parte de terceros (Universidad): SGE, SGP, SGEMP, SGEPII. * Los que pueden tener o no implementación por parte de terceros (Universidad): SGO, SGDOC. * Los que dan acceso a servicios internos al SGI: SGICSP, SGIPII, SGIPRC, SGIUSR |
+| ESB - Implementación SGI | Representa a los servicios del ESB que tienen implementación propia por parte del SGI de forma que se pueda utilizar si no se implementan por parte de terceros (Universidad). | 2 | SGISGO, SGISGDOC |
 | Módulos comunes | Representa a cada uno de los módulos de uso común por parte del resto de módulos o componentes de la aplicación. | 7 | USR, CNF, REL, REP, TP, COM, KEYCLOAK |
 | Módulos funcionales | Representa a cada uno de los módulos o componentes con funcionalidad concreta de gestión por parte de los usuarios o sistemas de terceros del SGI. | 4 | CSP, ETI, PII, PRC |
 | Persistencia | BBDD | Representa a cada uno de los esquemas de base de datos del SGI. Existirá un esquema por módulo. | 13 | csp, eti, pii, prc, ... |
@@ -35,47 +28,43 @@ Antes de describir las diferentes bases de datos del SGI es importante ponerse e
 
 Los siguientes servicios  han de estar desplegados para el correcto funcionamiento del SGI:
 
-### Esquemas de base de datos
+![](plugins/servlet/confluence/placeholder/unknown-macro)
 
-##### ESB \- Implementación SGI
+#### Esquemas de base de datos
+
+##### ESB - Implementación SGI
 
 Nº de esquemas: 2
 
-
-
 | Componente | Descripción | Esquema | Documentación |
 | --- | --- | --- | --- |
-| SGISGDOC | Módulo del sistema de gestión de la documentación cross al resto de módulos del SGI. | sgdoc | [SGI \- ESB \- SGDOC](https://confluence.um.es/confluence/display/HERCULES/SGI+-+ESB+-+SGDOC "https://confluence.um.es/confluence/display/HERCULES/SGI+-+ESB+-+SGDOC") |
-| SGISGO | Módulo del sistema de gestión de la organización cross al resto de módulos del SGI. | sgo | [SGI \- ESB \- SGO](https://confluence.um.es/confluence/display/HERCULES/SGI+-+ESB+-+SGO "https://confluence.um.es/confluence/display/HERCULES/SGI+-+ESB+-+SGO") |
+| SGISGDOC | Módulo del sistema de gestión de la documentación cross al resto de módulos del SGI. | sgdoc | [SGI - ESB - SGDOC](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sgdoc) |
+| SGISGO | Módulo del sistema de gestión de la organización cross al resto de módulos del SGI. | sgo | [SGI - ESB - SGO](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sgo) |
 
 ##### Módulos funcionales
 
 Nº de esquemas: 4
 
-
-
 | Componente | Descripción | Esquema | Documentación |
 | --- | --- | --- | --- |
-| CSP | Módulo de convocatorias, ayudas, solicitudes, proyectos y contratos. Incluye además los grupos de investigación. | csp | Convocatorias:* [CSP\-CON \- Modelo lógico \- Diagrama](https://confluence.um.es/confluence/pages/viewpage.action?pageId=597852500 "https://confluence.um.es/confluence/pages/viewpage.action?pageId=597852500") * [CSP\-CON \- Modelo lógico \- Documentación](https://confluence.um.es/confluence/pages/viewpage.action?pageId=597852699 "https://confluence.um.es/confluence/pages/viewpage.action?pageId=597852699")  Solicitudes:* [CSP\-SOL \- Modelo lógico \- Diagrama](https://confluence.um.es/confluence/pages/viewpage.action?pageId=597853635 "https://confluence.um.es/confluence/pages/viewpage.action?pageId=597853635") * [CSP\-SOL \- Módelo lógico \- Documentación](https://confluence.um.es/confluence/pages/viewpage.action?pageId=597852694 "https://confluence.um.es/confluence/pages/viewpage.action?pageId=597852694")  Proyectos:* [CSP\-PRO \- Modelo lógico \- Diagrama](https://confluence.um.es/confluence/pages/viewpage.action?pageId=597853327 "https://confluence.um.es/confluence/pages/viewpage.action?pageId=597853327") * [CSP\-PRO \- Modelo lógico \- Documentación](https://confluence.um.es/confluence/pages/viewpage.action?pageId=597852754 "https://confluence.um.es/confluence/pages/viewpage.action?pageId=597852754")  Proyectos externos:* [CSP\-PPEX \- Modelo lógico \- Diagrama](https://confluence.um.es/confluence/pages/viewpage.action?pageId=597853659 "https://confluence.um.es/confluence/pages/viewpage.action?pageId=597853659") * [CSP\-PPEX \- Modelo lógico \- Documentación](https://confluence.um.es/confluence/pages/viewpage.action?pageId=597852745 "https://confluence.um.es/confluence/pages/viewpage.action?pageId=597852745")  Grupos de investigación:* [CSP\-GIN \- Diseño lógico \- Diagrama](https://confluence.um.es/confluence/pages/viewpage.action?pageId=597852812 "https://confluence.um.es/confluence/pages/viewpage.action?pageId=597852812") * [CSP\-GIN \- Modelo lógico \- Documentación](https://confluence.um.es/confluence/pages/viewpage.action?pageId=597852701 "https://confluence.um.es/confluence/pages/viewpage.action?pageId=597852701") |
-| ETI | Módulo de Ética. | eti | [ETI \- Modelo lógico](https://confluence.um.es/confluence/pages/viewpage.action?pageId=597852355 "https://confluence.um.es/confluence/pages/viewpage.action?pageId=597852355") |
-| PII | Módulo de Propiedad industrial e intelectual. | pii | [PII \- Modelo lógico](https://confluence.um.es/confluence/pages/viewpage.action?pageId=597852351 "https://confluence.um.es/confluence/pages/viewpage.action?pageId=597852351") |
-| PRC | Módulo de producción científica. | prc | [PRC \- Diseño lógico](https://confluence.um.es/confluence/pages/viewpage.action?pageId=597853216 "https://confluence.um.es/confluence/pages/viewpage.action?pageId=597853216") |
+| CSP | Módulo de convocatorias, ayudas, solicitudes, proyectos y contratos. Incluye además los grupos de investigación. | csp | Convocatorias:   * [CSP-CON - Modelo lógico - Diagrama](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-csp/csp-con-convocatorias/csp-con-modelo-logico-diagrama) * [CSP-CON - Modelo lógico - Documentación](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-csp/csp-con-convocatorias/csp-con-modelo-logico-documentacion)   Solicitudes:   * [CSP-SOL - Modelo lógico - Diagrama](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-csp/csp-sol-solicitudes/csp-sol-modelo-logico-diagrama) * [CSP-SOL - Módelo lógico - Documentación](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-csp/csp-sol-solicitudes/csp-sol-modelo-logico-documentacion)   Proyectos:   * [CSP-PRO - Modelo lógico - Diagrama](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-csp/csp-pro-proyectos/csp-pro-modelo-logico-diagrama) * [CSP-PRO - Modelo lógico - Documentación](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-csp/csp-pro-proyectos/csp-pro-modelo-logico-documentacion)   Proyectos externos:   * [CSP-PPEX - Modelo lógico - Diagrama](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-csp/csp-ppex-participacion-proyectos-externos/csp-ppex-modelo-logico-diagrama) * [CSP-PPEX - Modelo lógico - Documentación](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-csp/csp-ppex-participacion-proyectos-externos/csp-ppex-modelo-logico-documentacion)   Grupos de investigación:   * [CSP-GIN - Diseño lógico - Diagrama](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-csp/csp-gin-grupos-de-investigacion/csp-gin-diseno-logico-diagrama) * [CSP-GIN - Modelo lógico - Documentación](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-csp/csp-gin-grupos-de-investigacion/csp-gin-modelo-logico-documentacion) |
+| ETI | Módulo de Ética. | eti | [ETI - Modelo lógico](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-eti/eti-modelo-logico) |
+| PII | Módulo de Propiedad industrial e intelectual. | pii | [PII - Modelo lógico](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-pii/pii-modelo-logico-diagrama) |
+| PRC | Módulo de producción científica. | prc | [PRC - Diseño lógico](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-prc/prc-diseno-logico) |
 
 ##### Módulos cross
 
 Nº de esquemas: 7
 
-
-
 | Componente | Descripción | Esquema | Documentación |
 | --- | --- | --- | --- |
-| CNF | Módulo de configuración cross al resto de módulos del SGI. | cnf | [CNF \- Modelo lógico](https://confluence.um.es/confluence/pages/viewpage.action?pageId=597852251 "https://confluence.um.es/confluence/pages/viewpage.action?pageId=597852251") |
-| COM | Módulo de comunicados cross al resto de módulos del SGI. | com | [COM \- Modelo lógico](https://confluence.um.es/confluence/pages/viewpage.action?pageId=597852855 "https://confluence.um.es/confluence/pages/viewpage.action?pageId=597852855") |
+| CNF | Módulo de configuración cross al resto de módulos del SGI. | cnf | [CNF - Modelo lógico](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-cnf/cnf-modelo-logico) |
+| COM | Módulo de comunicados cross al resto de módulos del SGI. | com | [COM - Modelo lógico](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-com/com-modelo-logico) |
 | KEYCLOAK | Módulo de control de acceso al SGI. | keycloak |  |
-| REL | Módulo de relaciones cross al resto de módulos del SGI. | rel | [SGI\-REL \- Modelo lógico](https://confluence.um.es/confluence/pages/viewpage.action?pageId=597852752 "https://confluence.um.es/confluence/pages/viewpage.action?pageId=597852752") |
+| REL | Módulo de relaciones cross al resto de módulos del SGI. | rel | [SGI-REL - Modelo lógico](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-rel/sgi-rel-modelo-logico) |
 | REP | Módulo de reporting cross al resto de módulos del SGI. | rep |  |
 | USR | Módulo para la autenticación de usuarios | usr |  |
-| TP | Módulo del sistema de gestión de tareas programadas cross al resto de módulos del SGI. | tp | [TP \- Modelo lógico](https://confluence.um.es/confluence/pages/viewpage.action?pageId=597852469 "https://confluence.um.es/confluence/pages/viewpage.action?pageId=597852469") |
+| TP | Módulo del sistema de gestión de tareas programadas cross al resto de módulos del SGI. | tp | [TP - Modelo lógico](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-tp/tp-modelo-logico) |
 
 ### **TECNOLOGÍA**
 
@@ -83,10 +72,6 @@ Los servicios del SGI se apoyan en Liquibase para la creación y mantenimiento d
 
 Por tanto, la definición y creación del modelo inicial, así como los incrementales propios de cada versión, se encuentran dentro del código de cada servicio. Cada vez que un servicio arranca, y conecta a la BBDD, se comprueba que cambios (changeset) se han aplicado, ejecutando aquellos que sean necesarios para que el modelo de datos esté actualizado de acuerdo a lo que espera la versión de la aplicación. De este modo, en las actualizaciones de la aplicación cada servicio aplica el incremental o incrementales correspondientes. En una instalación nueva (cuando no existen tablas porque es una nueva BBDD) se aplican todos los cambios necesarios para crear las tablas y objectos que necesita la aplicación para funcionar.
 
-En el siguiente enlace se puede ver un fichero de definición de Liquibase del servicio de CSP: [https://github.com/HerculesCRUE/SGI/blob/main/sgi\-csp\-service/src/main/resources/db/changelog/changes/0\.1\.0/0000000000000\-initial\-database.xml](https://urldefense.com/v3/__https://github.com/HerculesCRUE/SGI/blob/main/sgi-csp-service/src/main/resources/db/changelog/changes/0.1.0/0000000000000-initial-database.xml__;!!D9dNQwwGXtA!T99OejjEbLl9N78jYY9ZwU_wGFoPrHi73q3H3k1RWsafINRWEjC8DAp1Bjug7Lv9DJsbaEp6aj6R2_MDBATMwo2k$ "https://urldefense.com/v3/__https://github.com/HerculesCRUE/SGI/blob/main/sgi-csp-service/src/main/resources/db/changelog/changes/0.1.0/0000000000000-initial-database.xml__;!!D9dNQwwGXtA!T99OejjEbLl9N78jYY9ZwU_wGFoPrHi73q3H3k1RWsafINRWEjC8DAp1Bjug7Lv9DJsbaEp6aj6R2_MDBATMwo2k$")
+En el siguiente enlace se puede ver un fichero de definición de Liquibase del servicio de CSP: [https://github.com/HerculesCRUE/SGI/blob/main/sgi-csp-service/src/main/resources/db/changelog/changes/0.1.0/0000000000000-initial-database.xml](https://urldefense.com/v3/__https://github.com/HerculesCRUE/SGI/blob/main/sgi-csp-service/src/main/resources/db/changelog/changes/0.1.0/0000000000000-initial-database.xml__;!!D9dNQwwGXtA!T99OejjEbLl9N78jYY9ZwU_wGFoPrHi73q3H3k1RWsafINRWEjC8DAp1Bjug7Lv9DJsbaEp6aj6R2_MDBATMwo2k$)
 
-Si lo ves necesario, para mayor detalle, puedes hacer referencia a la documentación oficial de Liquibase [https://docs.liquibase.com/home.html](https://urldefense.com/v3/__https://docs.liquibase.com/home.html__;!!D9dNQwwGXtA!T99OejjEbLl9N78jYY9ZwU_wGFoPrHi73q3H3k1RWsafINRWEjC8DAp1Bjug7Lv9DJsbaEp6aj6R2_MDBD16gtXY$ "https://urldefense.com/v3/__https://docs.liquibase.com/home.html__;!!D9dNQwwGXtA!T99OejjEbLl9N78jYY9ZwU_wGFoPrHi73q3H3k1RWsafINRWEjC8DAp1Bjug7Lv9DJsbaEp6aj6R2_MDBD16gtXY$")
-
-
-
-
+Si lo ves necesario, para mayor detalle, puedes hacer referencia a la documentación oficial de Liquibase [https://docs.liquibase.com/home.html](https://urldefense.com/v3/__https://docs.liquibase.com/home.html__;!!D9dNQwwGXtA!T99OejjEbLl9N78jYY9ZwU_wGFoPrHi73q3H3k1RWsafINRWEjC8DAp1Bjug7Lv9DJsbaEp6aj6R2_MDBD16gtXY$)

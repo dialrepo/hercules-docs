@@ -1,12 +1,15 @@
-# Hércules : IU\-ETI\-0130 Conflicto de interés
+# IU-ETI-0130 Conflicto de interés
 
-
-
-  
-
-
-  
-
+|  |  |
+| --- | --- |
+| Cod. IU | ********IU-ETI-0130-001 Conflicto de interés******** |
+| Ver. objetivo |  |
+| Ver. CU | 1.0.0 |
+| Estado |  |
+| Fec. Aprobación |  |
+| Épica, historia |  |
+| Actores | ACT-ETI-001-Gestor (cuando es evaluador)  ACT-ETI-004-Evaluador (investigador evaluador)  ACT-ETI-005-Técnico |
+| Frecuencia | Media |
 
 ## Formulario Conflicto de interés
 
@@ -16,36 +19,39 @@ Esta opción de menú únicamente se mostrará si la persona es un evaluador, es
 
 Se muestra para cada memoria en estado "En evaluación" y que pertenezca al comité del cual la persona logueada es evaluador, los campos referencia de la memoria, el título del proyecto al que pertenece la memoria y el nombre de las personas del equipo de trabajo asignadas a la memoria, para que el evaluador pueda seleccionar aquellas personas con las que tiene conflicto de interés. En caso de que exista un registro para ese evaluador, la memoria y el usuario que se esta mostrando en la tabla "ConflictoInteres" la columna "Existe conflicto de interés" mostrará el valor "Sí", en caso de que no exista el registro se mostrará el valor "No".
 
-
-
-|  | | |
+|  |  |  |
 | --- | --- | --- |
+|  | | |
 | Nombre | Tipo | Características / Notas |
 | Formulario de búsqueda | | |
-| Comité | DesplegableTexto cortoOpcional | Listado con los tres comités. Sacar el campo "nombre" de la tabla "Comite".Se aplica el filtro sobre el campo "comité" de la tabla "Memoria" |
-| Referencia memoria | Texto cortoOpcional | Identifica a una memoria.Se aplica el filtro sobre el campo "numReferencia" de la tabla "Memoria" |
+| Comité | Desplegable  Texto corto  Opcional | Listado con los tres comités. Sacar el campo "nombre" de la tabla "Comite".  Se aplica el filtro sobre el campo "comité" de la tabla "Memoria" |
+| Referencia memoria | Texto corto  Opcional | Identifica a una memoria.  Se aplica el filtro sobre el campo "numReferencia" de la tabla "Memoria" |
 | Listado de resultados: registros de al tabla "Memoria" que tenga en el estado actual el valor "En evaluación" y en "comite" el comité del cual la persona logueada es evaluador (miembro activo del comité) | | |
-| Memoria | Texto corto | Identifica a una memoria.Campo "numReferencia" de la tabla "Memoria" |
-| Título proyecto | Texto largo | Título de la solicitud de evaluación a la que pertenece la memoria.Campo "titulo" de la tabla "PeticionEvaluacion" referenciado por el campo "peticionEvaluacion" de la tabla "Memoria" |
-| E\-mail | Texto | Campo "nombre" y "apellidos" recuperado a través de [REQ\-INT\-0020\-SGP\-0030 \- Consultar datos generales de persona](https://confluence.um.es/confluence/display/HERCULES/REQ-INT-0020-SGP-0030+-+Consultar+datos+generales+de+persona "https://confluence.um.es/confluence/display/HERCULES/REQ-INT-0020-SGP-0030+-+Consultar+datos+generales+de+persona") para la referencia indicada en el campo "usuarioRef" de la tabla "EquipoTrabajo" referenciado por el campo "equipoTrabajo" de la tabla "Tarea" y el campo "memoria" |
-| Nombre y apellidos | Texto | Campo "email" con el indicador "principal" a "true" recuperado a través de [REQ\-INT\-0020\-SGP\-0030 \- Consultar datos generales de persona](https://confluence.um.es/confluence/display/HERCULES/REQ-INT-0020-SGP-0030+-+Consultar+datos+generales+de+persona "https://confluence.um.es/confluence/display/HERCULES/REQ-INT-0020-SGP-0030+-+Consultar+datos+generales+de+persona") para la referencia indicada en el campo "usuarioRef" de la tabla "EquipoTrabajo" referenciado por el campo "equipoTrabajo" de la tabla "Tarea" y el campo "memoria" |
+| Memoria | Texto corto | Identifica a una memoria.  Campo "numReferencia" de la tabla "Memoria" |
+| Título proyecto | Texto largo | Título de la solicitud de evaluación a la que pertenece la memoria.  Campo "titulo" de la tabla "PeticionEvaluacion" referenciado por el campo "peticionEvaluacion" de la tabla "Memoria" |
+| E-mail | Texto | Campo "nombre" y "apellidos" recuperado a través de [REQ-INT-0020-SGP-0030 - Consultar datos generales de persona](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0020-sgp-integracion-con-sistema-de-gestion-de-personas/req-int-0020-sgp-0030-consultar-datos-generales-de-persona) para la referencia indicada en el campo "usuarioRef" de la tabla "EquipoTrabajo" referenciado por el campo "equipoTrabajo" de la tabla "Tarea" y el campo "memoria" |
+| Nombre y apellidos | Texto | Campo "email" con el indicador "principal" a "true" recuperado a través de [REQ-INT-0020-SGP-0030 - Consultar datos generales de persona](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0020-sgp-integracion-con-sistema-de-gestion-de-personas/req-int-0020-sgp-0030-consultar-datos-generales-de-persona) para la referencia indicada en el campo "usuarioRef" de la tabla "EquipoTrabajo" referenciado por el campo "equipoTrabajo" de la tabla "Tarea" y el campo "memoria" |
 | Existe conflicto de interés | Texto corto | En caso de que exista un registro en la tabla "ConflictoInteres" para el evaluador logueado y la memoria y el usuario de la fila  que se esta mostrando se mostrará el valor "Sí", en caso de que no exista el registro se mostrará el valor "No". |
-
-
 
 | Acciones | Descripción | Enlace CU. | Permisos |
 | --- | --- | --- | --- |
-| Buscar | Aplica los filtros introducidos sobre la lista de Memorias mostrando las que cumplen las condiciones. |  | ETI\-COI\-ERETI\-COI\-INV\-ER |
+| Buscar | Aplica los filtros introducidos sobre la lista de Memorias mostrando las que cumplen las condiciones. |  | ETI-COI-ER  ETI-COI-INV-ER |
 | Limpiar | Elimina los datos introducidos en el formulario de búsqueda |  |  |
-| Añadir conflicto de interés | Se añade un conflicto de interés para el evaluador logueado y la persona seleccionada | Se creará un nuevo registro en la tabla "ConflictoInteres" con el identificador del evaluador, el identificador de la memoria y el identificador del usuario seleccionado.La columna "Conflicto de interés" se actualiza al valor "Sí" | ETI\-COI\-ERETI\-COI\-INV\-ER |
-| Eliminar conflicto de interés | Se elimina eĺ conflicto de interés para el evaluador logueado y la persona seleccionada | Se eliminará el registro de la tabla "ConflictoInteres" que se corresponde con el identificador del evaluador, el identificador de la memoria y el identificador del usuario seleccionado.La columna "Conflicto de interés" se actualiza al valor "No" | ETI\-COI\-ERETI\-COI\-INV\-ER |
+| Añadir conflicto de interés | Se añade un conflicto de interés para el evaluador logueado y la persona seleccionada | Se creará un nuevo registro en la tabla "ConflictoInteres" con el identificador del evaluador, el identificador de la memoria y el identificador del usuario seleccionado.  La columna "Conflicto de interés" se actualiza al valor "Sí" | ETI-COI-ER  ETI-COI-INV-ER |
+| Eliminar conflicto de interés | Se elimina eĺ conflicto de interés para el evaluador logueado y la persona seleccionada | Se eliminará el registro de la tabla "ConflictoInteres" que se corresponde con el identificador del evaluador, el identificador de la memoria y el identificador del usuario seleccionado.  La columna "Conflicto de interés" se actualiza al valor "No" | ETI-COI-ER  ETI-COI-INV-ER |
 
 ### Acciones
 
 #### Por actor
 
+|  |  |
+| --- | --- |
+| ACT-ETI-001-Gestor | ETI-COI-ER |
+| **ACT-ETI-004-Evaluador** | ETI-COI-INV-ER |
+| **ACT-ETI-005-Técnico** | ETI-COI-ER |
+
 #### Todos los permisos de acceso
 
-
-
-
+|  |  |
+| --- | --- |
+| Permisos | ETI-COI-INV-ER, ETI-COI-ER |

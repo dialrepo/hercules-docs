@@ -1,16 +1,14 @@
-# Hércules : MA. Anotaciones sobre los ROs
+# MA. Anotaciones sobre los ROs
 
-
-
-  
-
+* [Casos de uso](#MA.AnotacionessobrelosROs-Casosdeuso)
+* [Crear una anotación](#MA.AnotacionessobrelosROs-Crearunaanotación)
+* [Listado de las anotaciones en las fichas de los ROs](#MA.AnotacionessobrelosROs-ListadodelasanotacionesenlasfichasdelosROs)
+* [Editar y eliminar una anotación](#MA.AnotacionessobrelosROs-Editaryeliminarunaanotación)
+* [Buscador de las anotaciones](#MA.AnotacionessobrelosROs-Buscadordelasanotaciones)
 
 Información de desarrollo
 
-[https://github.com/HerculesCRUE/HerculesMA/blob/main/Docs/funcionamiento\-de\-las\-anotaciones.md](https://github.com/HerculesCRUE/HerculesMA/blob/main/Docs/funcionamiento-de-las-anotaciones.md "https://github.com/HerculesCRUE/HerculesMA/blob/main/Docs/funcionamiento-de-las-anotaciones.md")
-
-  
-
+<https://github.com/HerculesCRUE/HerculesMA/blob/main/Docs/funcionamiento-de-las-anotaciones.md>
 
 En las siguientes líneas trataremos de explicar adecuadamente el funcionamiento y el diseño funcional de las anotaciones, desde los casos de uso a la creación, edición y borrado de los mismos.
 
@@ -24,12 +22,9 @@ Destacar que las anotaciones **se pueden crear sobre cualquier RO** (publicacion
 
 ### Crear una anotación
 
-Para crear una anotación, el usuario debe de haber iniciado sesión como personal investigador, y una vez iniciada sesión, acceder al menú del RO, y seleccionar el botón de "nueva anotación". Una vez que se ha accionado el botón de crear la anotación aparecerá un popup que te pedirá introducir un texto que será el que se hará cargo de guardar el texto introducido como anotación sobre el recurso en el que se encuentra el usuario en ese momento. 
+Para crear una anotación, el usuario debe de haber iniciado sesión como personal investigador, y una vez iniciada sesión, acceder al menú del RO, y seleccionar el botón de "nueva anotación". Una vez que se ha accionado el botón de crear la anotación aparecerá un popup que te pedirá introducir un texto que será el que se hará cargo de guardar el texto introducido como anotación sobre el recurso en el que se encuentra el usuario en ese momento.
 
 ![](/attachments/598147398/598147899.png)
-
-  
-
 
 ### Listado de las anotaciones en las fichas de los ROs
 
@@ -48,33 +43,8 @@ La edición de la anotación mostrará un popup con el texto actual de la anotac
 
 ![](/attachments/598147398/598147893.png)
 
-  
-
-
 ### Buscador de las anotaciones
 
 El usuario dispondrá de un enlace desde el menú del usuario desde el que podrá acceder a "Mis anotaciones". El enlace lleva a una página que muestra un buscador facetado de las anotaciones que ha creado el usuario en los diferentes ROs, con un formato en el cual se muestra primeramente el título del RO e indicando de qué tipo de RO es (Publicación o ResearchObject), la fecha de la publicación y por último el texto propiamente dicho de la anotación. El título de la anotación lleva al recurso en el que se encuentra la anotación, mostrando la pestaña de las anotaciones, para poder así visualizar las anotaciones del recurso y ejecutar las acciones sobre cada anotación que el usuario considere oportunas.
 
 ![](/attachments/598147398/598147897.png)
-
-  
-
-
-  
-
-
-  
-
-
-  
-
-
-  
-
-
-  
-
-
-
-
-

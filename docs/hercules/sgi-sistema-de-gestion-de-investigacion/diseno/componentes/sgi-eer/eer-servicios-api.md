@@ -1,7 +1,2 @@
-# Hércules : EER \- Servicios \- API
-
-
-
-
-
+# EER - Servicios - API
 

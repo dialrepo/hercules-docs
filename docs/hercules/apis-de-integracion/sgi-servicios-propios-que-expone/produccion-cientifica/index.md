@@ -1,20 +1,34 @@
-# Hércules : Producción científica
+# Producción científica
 
+---
 
+* [Sistema de Gestión Investigación](#Produccióncientífica-SistemadeGestiónInvestigación)
+  + [Entidades](#Produccióncientífica-Entidades)
+  + [Modelo lógico](#Produccióncientífica-Modelológico)
+  + [API](#Produccióncientífica-API)
+    - [Definición de los objetos](#Produccióncientífica-Definicióndelosobjetos)
+      * [ProduccionCientifica](#Produccióncientífica-ProduccionCientifica)
+      * [CampoProduccionCientifica](#Produccióncientífica-CampoProduccionCientifica)
+      * [IndiceImpacto](#Produccióncientífica-IndiceImpacto)
+      * [Autor](#Produccióncientífica-Autor)
+      * [Acreditacion](#Produccióncientífica-Acreditacion)
+      * [EpigrafeCVN](#Produccióncientífica-EpigrafeCVN)
+      * [ProduccionCientificaEstado](#Produccióncientífica-ProduccionCientificaEstado)
+    - [Servicios](#Produccióncientífica-Servicios)
+    - [Ejemplos de JSON de la entidad ProduccionCientifica](#Produccióncientífica-EjemplosdeJSONdelaentidadProduccionCientifica)
+      * [Publicación - Libro](#Produccióncientífica-Publicación-Libro)
+      * [Publicación - Artículo](#Produccióncientífica-Publicación-Artículo)
+      * [Participación en Congresos](#Produccióncientífica-ParticipaciónenCongresos)
+      * [Comités/consejos editoriales](#Produccióncientífica-Comités/consejoseditoriales)
+      * [Obra artística](#Produccióncientífica-Obraartística)
+      * [Dirección de tesis](#Produccióncientífica-Direccióndetesis)
+      * [Organización actividad I+D+i](#Produccióncientífica-OrganizaciónactividadI+D+i)
 
-
-
-
-
-
-
-
+---
 
 ## Sistema de Gestión Investigación
 
 ### Entidades
-
-
 
 | Entidad | Descripción |
 | --- | --- |
@@ -34,90 +48,64 @@
 
 Características generales que todas las API REST deben de cumplir:
 
-* [Consultas filtradas y paginadas](https://confluence.treelogic.com/display/HERCULES/Consultas+filtradas+y+paginadas "https://confluence.treelogic.com/display/HERCULES/Consultas+filtradas+y+paginadas")
-* [Formatos de datos API](https://confluence.treelogic.com/display/HERCULES/Formatos+de+datos+API "https://confluence.treelogic.com/display/HERCULES/Formatos+de+datos+API")
+* [Consultas filtradas y paginadas](/hercules/sgi-sistema-de-gestion-de-investigacion/desarrollo-y-configuracion/estandares-de-desarrollo/consultas-filtradas-y-paginadas)
+* [Formatos de datos API](/hercules/sgi-sistema-de-gestion-de-investigacion/desarrollo-y-configuracion/estandares-de-desarrollo/formatos-de-datos-api)
 
 #### Definición de los objetos
 
 ##### ProduccionCientifica
 
-
-
 | Nombre | Tipo | Descripción |
 | --- | --- | --- |
 | idRef | String | Identificador del item de producción científica en el sistema origen. Debe de ser único. |
-| epigrafeCVN | String | Código de la Fecyt para identificar el apartado.Ejemplos* 060\.010\.010\.000 (cuando es un item de una publicación) * 060\.010\.020\.000 (cuando es un item de un congreso) * 060\.030\.030\.000 (cuando es un item de un comité editorial) * 050\.020\.030\.000 (cuando es un item de una obra artística) |
-| estado | String | Enumerado con dos opciones:VALIDADOPENDIENTE |
-| campos | Lista\[CampoProduccionCientifica] | Lista con los campos definidos en el item.Si se envía un CampoProduccionCientifica tiene que tener los dos campos informados, el codigoCVN y los valores, en caso de que no tenga valores, entonces no se enviará el bloque CampoProduccionCientifica para ese codigoCVN. |
-| autores | Lista\[Autor] | Lista con los autores del item. |
-| indicesImpacto | Lista\[IndiceImpacto] | Lista con los índices de impacto del item. |
-| proyectos | Lista\[Numérico] | Lista con los identificadores de los proyectos SGI con los que se relaciona el item de producción científica |
-| acreditaciones | Lista\[Acreditacion] | Lista con las url y/o documentos que acreditan el item. |
-
-  
-
+| epigrafeCVN | String | Código de la Fecyt para identificar el apartado.  Ejemplos   * 060.010.010.000 (cuando es un item de una publicación) * 060.010.020.000 (cuando es un item de un congreso) * 060.030.030.000 (cuando es un item de un comité editorial) * 050.020.030.000 (cuando es un item de una obra artística) |
+| estado | String | Enumerado con dos opciones:  VALIDADO  PENDIENTE |
+| campos | Lista[CampoProduccionCientifica] | Lista con los campos definidos en el item.  Si se envía un CampoProduccionCientifica tiene que tener los dos campos informados, el codigoCVN y los valores, en caso de que no tenga valores, entonces no se enviará el bloque CampoProduccionCientifica para ese codigoCVN. |
+| autores | Lista[Autor] | Lista con los autores del item. |
+| indicesImpacto | Lista[IndiceImpacto] | Lista con los índices de impacto del item. |
+| proyectos | Lista[Numérico] | Lista con los identificadores de los proyectos SGI con los que se relaciona el item de producción científica |
+| acreditaciones | Lista[Acreditacion] | Lista con las url y/o documentos que acreditan el item. |
 
 ##### CampoProduccionCientifica
-
-
 
 | Nombre | Tipo | Descripción |
 | --- | --- | --- |
 | codigoCVN | String | Código de la Fecyt para identificar el campo del item. |
-| valores | Lista\[String] | Lista con los valores indicados en codigoCVN. Lo normal es que sea un único valor, por lo que se enviará una lista de un único String, pero en el caso de que existan mas de un valor porque en el CVN sea tratado el campo como una lista, se recogerán todos los valores.Los valores pueden ser una cadena de texto, el valor de una fecha o de un número. En el caso de que el campo sea de tipo booleano, es decir, pueda tener valores Sí/No se informará con los textos "true" si tiene el valor "Sí" o "false" si tiene el valor "No"En caso de ser una fecha tendrá el formato de fecha ISO 8601, sin información horaria o con información horaria (Ver [Formatos de datos API](https://confluence.treelogic.com/display/HERCULES/Formatos+de+datos+API "https://confluence.treelogic.com/display/HERCULES/Formatos+de+datos+API")). Ejemplos:* 2020\-11\-15 * 2020\-11\-15T23:00:00Z (esto correponde al 15/11/2020 a las 00:00:00\) * 2020\-08\-15T22:00:00Z (esto corresponde al 15/08/2020 a las 00:00:00\)  Para los campos que hagan referencia a una tabla de la Fecyt:Por ejemplo el campo 060\.010\.010\.010 (tipo de producción), en este campo se indicará el código de la tabla, por lo que será un valor de los siguientes::* 004 * 018 * 020 * 032 * 075 * 106 * 173 * 202 * 203 * 204 * 205 * 206 * 207 * 208 * 209 * OTHERS * COMENTARIO\_SISTEMATICO\_NORMAS: será un código añadido al CVN para incorporar el valor "Comentario sistemático a normas" |
-
-  
-
+| valores | Lista[String] | Lista con los valores indicados en codigoCVN. Lo normal es que sea un único valor, por lo que se enviará una lista de un único String, pero en el caso de que existan mas de un valor porque en el CVN sea tratado el campo como una lista, se recogerán todos los valores.  Los valores pueden ser una cadena de texto, el valor de una fecha o de un número. En el caso de que el campo sea de tipo booleano, es decir, pueda tener valores Sí/No se informará con los textos "true" si tiene el valor "Sí" o "false" si tiene el valor "No"  En caso de ser una fecha tendrá el formato de fecha ISO 8601, sin información horaria o con información horaria (Ver [Formatos de datos API](/hercules/sgi-sistema-de-gestion-de-investigacion/desarrollo-y-configuracion/estandares-de-desarrollo/formatos-de-datos-api)). Ejemplos:   * 2020-11-15 * 2020-11-15T23:00:00Z (esto correponde al 15/11/2020 a las 00:00:00) * 2020-08-15T22:00:00Z (esto corresponde al 15/08/2020 a las 00:00:00)   Para los campos que hagan referencia a una tabla de la Fecyt:  Por ejemplo el campo 060.010.010.010 (tipo de producción), en este campo se indicará el código de la tabla, por lo que será un valor de los siguientes::   * 004 * 018 * 020 * 032 * 075 * 106 * 173 * 202 * 203 * 204 * 205 * 206 * 207 * 208 * 209 * OTHERS * COMENTARIO\_SISTEMATICO\_NORMAS: será un código añadido al CVN para incorporar el valor "Comentario sistemático a normas" |
 
 ##### IndiceImpacto
 
-
-
 | Nombre | Tipo | Descripción |
 | --- | --- | --- |
-| fuenteImpacto | String | Tipo de la fuente de impacto. Tomará uno de los valores de la Fecyt junto con los añadidos para producción científica. Puede tener los siguientes valores:* 000 (representa a WOS \- JCR) * 010 (representa a SCOPUS \- SJR) * 020 (representa a INRECS) * BCI (representa a BCI) * ICEE (representa a ICEE) * DIALNET (representa a DIALNET) * CITEC (representa a CITEC) * SCIMAGO (representa a SCIMAGO o ERI) * ERIH (representa a ERIH) * MIAR (representa a MIAR) * FECYT (representa a FECYT) * GII\_GRIN\_SCIE (representa a GII\_GRIN\_SCIE) * CORE (representa a CORE) * OTHERS (representa a Otros) |
+| fuenteImpacto | String | Tipo de la fuente de impacto. Tomará uno de los valores de la Fecyt junto con los añadidos para producción científica. Puede tener los siguientes valores:   * 000 (representa a WOS - JCR) * 010 (representa a SCOPUS - SJR) * 020 (representa a INRECS) * BCI (representa a BCI) * ICEE (representa a ICEE) * DIALNET (representa a DIALNET) * CITEC (representa a CITEC) * SCIMAGO (representa a SCIMAGO o ERI) * ERIH (representa a ERIH) * MIAR (representa a MIAR) * FECYT (representa a FECYT) * GII\_GRIN\_SCIE (representa a GII\_GRIN\_SCIE) * CORE (representa a CORE) * OTHERS (representa a Otros) |
 | indice | Número | Valor de la fuente de impacto cuando es un número |
-| ranking | String | Valor de la fuente de impacto cuando se trata de un ranking (una cadena):* CLASE1 (valor "Clase1" de la fuente de impacto GII\_GRIN\_SCIE) * CLASE2  (valor "Clase2" de la fuente de impacto GII\_GRIN\_SCIE) * CLASE3  (valor "Clase3"  de la fuente de impacto GII\_GRIN\_SCIE) * A\_POR  (valor "A\*" de la fuente de impacto CORE) * A (valor "A" de la fuente de impacto CORE) |
+| ranking | String | Valor de la fuente de impacto cuando se trata de un ranking (una cadena):   * CLASE1 (valor "Clase1" de la fuente de impacto GII\_GRIN\_SCIE) * CLASE2  (valor "Clase2" de la fuente de impacto GII\_GRIN\_SCIE) * CLASE3  (valor "Clase3"  de la fuente de impacto GII\_GRIN\_SCIE) * A\_POR  (valor "A\*" de la fuente de impacto CORE) * A (valor "A" de la fuente de impacto CORE) |
 | anio | String | Año en el que se estable el valor del índice para la fuente de impacto. |
 | otraFuenteImpacto | String | En el caso de que en tipo tenga la opción OTROS, sería la descripción de la fuente de impacto |
 | posicionPublicacion | Número | Indica la posición que ocupa la revista dentro de su categoría |
 | numeroRevistass | Número | Número total de revistas existentes en su categoría |
 | revista25 | Boolean | Indica si la revista se encuentra dentro del 25% (primer cuartil) de mayor índice de impacto en su área de conocimiento en el año de publicación |
 
-  
-
-
 ##### Autor
-
-
 
 | Nombre | Tipo | Descripción |
 | --- | --- | --- |
 | personaRef | String | Identificador único de la persona dentro del sistema de gestión de personas de la Universidad, en caso de ser un investigador que pertenezca a la Universidad o este dado de alta como externo. En caso de que no exista en la Universidad dicho campo vendrá vacío. En esos casos será obligatorio que venga la firma o el nombre y apellidos. |
-| firma | String | Firma del autor. Obligatorio si personaRef y nombre y apellidos no vienen informados. Es decir, se necesita uno de los tres casos:* personaRef * firma * nombre y apellidos |
+| firma | String | Firma del autor. Obligatorio si personaRef y nombre y apellidos no vienen informados. Es decir, se necesita uno de los tres casos:   * personaRef * firma * nombre y apellidos |
 | nombre | String | Nombre de la persona. Obligatorio si personaRef y la firma no vienen informados |
 | apellidos | String | Apellidos de la persona. Obligatorio si personaRef y la firma no vienen informados |
 | orden | Numero | Indica la posición del autor dentro del listado de todos los autores, 1, 2, 3, etc... |
 | orcidId | String | Identificador ORCID |
 | ip | Boolean | Indica si el autor es un IP o no |
 
-  
-
-
 ##### Acreditacion
-
-
 
 | Nombre | Tipo | Descripción |
 | --- | --- | --- |
 | url | String | URL acreditativa en repositorios ajenos a la Universidad |
 | documentoRef | String | Identificador del documento acreditativo |
 
-
-
 **ProduccionCientifica** Ampliar origen
-
-
 
 ```
 {
@@ -233,18 +221,14 @@ Características generales que todas las API REST deben de cumplir:
 ]
 
 }
-
 ```
 
-
 ##### EpigrafeCVN
-
-
 
 | Nombre | Tipo | Descripción |
 | --- | --- | --- |
 | codigo | String | Código de uno de lo apartados del CVN que forman parte de la Producción científica y que necesita validación |
-| campos | Lista\[String] | Códigos de los campos del apartado del CVN que se tienen que enviar a Producción científica para su validación |
+| campos | Lista[String] | Códigos de los campos del apartado del CVN que se tienen que enviar a Producción científica para su validación |
 
 **Ejemplo epígrafe Publicaciones**
 
@@ -299,18 +283,13 @@ Características generales que todas las API REST deben de cumplir:
    "campos": ["060.020.030.010","060.020.030.160","060.020.030.020","060.020.030.030","060.020.030.110"]
 ```
 
-  
-
-
 ##### ProduccionCientificaEstado
-
-
 
 | Nombre | Tipo | Descripción |
 | --- | --- | --- |
 | idRef | String | Identificador del item de producción científica en el sistema origen. |
-| epigrafeCVN | String | Código de la Fecyt para identificar el apartado.Ejemplos* 060\.010\.010\.000 (cuando es un item de una publicación) * 060\.010\.020\.000 (cuando es un item de un congreso) * 060\.030\.030\.000 (cuando es un item de un comité editorial) * 050\.020\.030\.000 (cuando es un item de una obra artística) |
-|  | String | Enumerado con dos opciones:VALIDADORECHAZADO |
+| epigrafeCVN | String | Código de la Fecyt para identificar el apartado.  Ejemplos   * 060.010.010.000 (cuando es un item de una publicación) * 060.010.020.000 (cuando es un item de un congreso) * 060.030.030.000 (cuando es un item de un comité editorial) * 050.020.030.000 (cuando es un item de una obra artística) |
+|  | String | Enumerado con dos opciones:  VALIDADO  RECHAZADO |
 
 **ProduccionCientificaEstado**
 
@@ -324,27 +303,19 @@ Características generales que todas las API REST deben de cumplir:
 
 #### Servicios
 
-
-
 | Método | URL | Parámetros | Respuesta | Descripción |
 | --- | --- | --- | --- | --- |
-| GET | /epigrafes |  | Lista\[EpigrafeCVN] | Listado con los códigos de los apartados del CVN que forman parte de la Producción científica y que necesitan validación. Se enviarán los epígrafes marcados en el SGI de la última convocatoria creada.Por cada epígrafe se enviarán los campos dinámicos del CVN que se tienen que enviar a PRC. Será un subconjunto de los de la Fecyt. |
-| POST | /producciones\-cientificas | ProduccionCientifica |  | Recibe como parámetro los campos necesarios para crear un item de producción científica |
-| PUT | /producciones\-cientificas/{idRef} | ProduccionCientifica |  | Recibe como parámetro los campos necesarios para modificar un item de producción científica.El id pasado por URL es el identificador que tienen en el CVN |
-| DETELE | /producciones\-cientificas/{idRef} |  |  | Elimina un item de producciín científica.El id pasado por URL es el identificador que tienen en el CVN |
-| GET | /producciones\-cientificas/estado | q\+sLa query estará formada por:* fechaEstado | Lista\[ProduccionCientificaEstado] | Devuelve el identificador CVN, epígafre CVN y el estado (Validado O Rechazado) de aquellos items almacenados en producción científica que han cambiado al estado Validado o Rechazado en una fecha igual o superior a la fecha de estado pasada por parámetro |
-
-  
-
+| GET | /epigrafes |  | Lista[EpigrafeCVN] | Listado con los códigos de los apartados del CVN que forman parte de la Producción científica y que necesitan validación. Se enviarán los epígrafes marcados en el SGI de la última convocatoria creada.  Por cada epígrafe se enviarán los campos dinámicos del CVN que se tienen que enviar a PRC. Será un subconjunto de los de la Fecyt. |
+| POST | /producciones-cientificas | ProduccionCientifica |  | Recibe como parámetro los campos necesarios para crear un item de producción científica |
+| PUT | /producciones-cientificas/{idRef} | ProduccionCientifica |  | Recibe como parámetro los campos necesarios para modificar un item de producción científica.  El id pasado por URL es el identificador que tienen en el CVN |
+| DETELE | /producciones-cientificas/{idRef} |  |  | Elimina un item de producciín científica.  El id pasado por URL es el identificador que tienen en el CVN |
+| GET | /producciones-cientificas/estado | q+s  La query estará formada por:   * fechaEstado | Lista[ProduccionCientificaEstado] | Devuelve el identificador CVN, epígafre CVN y el estado (Validado O Rechazado) de aquellos items almacenados en producción científica que han cambiado al estado Validado o Rechazado en una fecha igual o superior a la fecha de estado pasada por parámetro |
 
 #### Ejemplos de JSON de la entidad ProduccionCientifica
 
-##### Publicación \- Libro
+##### Publicación - Libro
 
-  
-
-
-**Publicación\-Libro**
+**Publicación-Libro**
 
 ```
 {
@@ -463,15 +434,11 @@ Características generales que todas las API REST deben de cumplir:
 ]
 
 }
-
 ```
 
-##### Publicación \- Artículo
+##### Publicación - Artículo
 
-  
-
-
-**Publicación\-Artículo**
+**Publicación-Artículo**
 
 ```
 {
@@ -590,16 +557,9 @@ Características generales que todas las API REST deben de cumplir:
 ]
 
 }
-
 ```
 
-  
-
-
 ##### Participación en Congresos
-
-  
-
 
 **Congreso**
 
@@ -692,13 +652,9 @@ Características generales que todas las API REST deben de cumplir:
 ]
 
 }
-
 ```
 
 ##### Comités/consejos editoriales
-
-  
-
 
 **ComiteEditorial**
 
@@ -778,13 +734,9 @@ Características generales que todas las API REST deben de cumplir:
 ]
 
 }
-
 ```
 
 ##### Obra artística
-
-  
-
 
 **Obra artística**
 
@@ -862,7 +814,6 @@ Características generales que todas las API REST deben de cumplir:
 ]
 
 }
-
 ```
 
 ##### Dirección de tesis
@@ -934,10 +885,9 @@ Características generales que todas las API REST deben de cumplir:
 ]
 
 }
-
 ```
 
-##### Organización actividad I\+D\+i
+##### Organización actividad I+D+i
 
 **Obra artística**
 
@@ -983,9 +933,4 @@ Características generales que todas las API REST deben de cumplir:
 ]
 
 }
-
 ```
-
-
-
-

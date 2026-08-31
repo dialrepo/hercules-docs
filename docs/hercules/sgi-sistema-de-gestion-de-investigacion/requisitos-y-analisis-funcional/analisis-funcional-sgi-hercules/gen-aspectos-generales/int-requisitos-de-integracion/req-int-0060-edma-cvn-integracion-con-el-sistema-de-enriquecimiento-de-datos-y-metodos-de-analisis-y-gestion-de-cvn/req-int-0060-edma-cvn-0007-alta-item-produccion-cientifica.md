@@ -1,10 +1,16 @@
-# Hércules : REQ\-INT\-0060\-EDMA\-CVN\-0007 \- Alta item producción científica
+# REQ-INT-0060-EDMA-CVN-0007 - Alta item producción científica
 
-
-
-
-
-
+|  |  |
+| --- | --- |
+| Cod. REQ | **REQ-INT-0060-EDMA-CVN-0007 - Alta item producción científica** |
+| Ver. Objetivo |  |
+| Ver. REQ | 1.0.0 |
+| Estado | IN PROGRESS |
+| Fec. Aprobación |  |
+| Épica, historia |  |
+| Frecuencia |  |
+| Características |  |
+| M. Consumidor |  |
 
 ### Definición y objetivos
 
@@ -29,48 +35,18 @@ Parámetros de salida:
 
 ### Diseño técnico
 
-En el siguiente enlace se muestra el diseño del modelo lógico y el diseño de la API del SGI para la gestión de la producción científica [ESB \- SGI \- Producción Científica](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/esb-sgi/esb-sgi-produccion-cientifica/index.md "/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/esb-sgi/esb-sgi-produccion-cientifica/index.md").
+En el siguiente enlace se muestra el diseño del modelo lógico y el diseño de la API del SGI para la gestión de la producción científica [ESB - SGI - Producción Científica](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/esb-sgi/esb-sgi-produccion-cientifica).
 
-El servicio concreto del API que cubre este requisito es [ESB \- SGI \- Producción científica \- Dar de alta](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/esb-sgi/esb-sgi-produccion-cientifica/esb-sgi-produccion-cientifica-dar-de-alta.md "/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/esb-sgi/esb-sgi-produccion-cientifica/esb-sgi-produccion-cientifica-dar-de-alta.md").
-
-
-
-
-
-
+El servicio concreto del API que cubre este requisito es [ESB - SGI - Producción científica - Dar de alta](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/esb-sgi/esb-sgi-produccion-cientifica/esb-sgi-produccion-cientifica-dar-de-alta).
 
 ### Interfaces de usuario relacionados
 
-
-
-
-
-
+![](plugins/servlet/confluence/placeholder/unknown-macro)
 
 ### Informes relacionados
 
-
-
-
-
-
+![](plugins/servlet/confluence/placeholder/unknown-macro)
 
 ### Casos de uso relacionados
 
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
+![](plugins/servlet/confluence/placeholder/unknown-macro)

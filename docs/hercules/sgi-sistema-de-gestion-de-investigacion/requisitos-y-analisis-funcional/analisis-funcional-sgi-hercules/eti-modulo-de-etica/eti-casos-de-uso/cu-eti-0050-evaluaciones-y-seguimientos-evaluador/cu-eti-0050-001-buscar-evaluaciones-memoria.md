@@ -1,6 +1,15 @@
-# Hércules : CU\-ETI\-0050\-001 \- Buscar Evaluaciones memoria
+# CU-ETI-0050-001 - Buscar Evaluaciones memoria
 
-
+|  |  |
+| --- | --- |
+| Cod. CU | ********CU-ETI-0050-001 - Buscar Evaluaciones memoria******** |
+| Ver. objetivo |  |
+| Ver. CU | 1.0.0 |
+| Estado | LIBERADO\_ |
+| Fec. Aprobación |  |
+| Épica, historia |  |
+| Actores | ACT-ETI-004-Evaluador  ACT-ETI-005-Técnico |
+| Frecuencia | Media |
 
 ### Descripción
 
@@ -26,9 +35,9 @@ El resultado serán todas las memorias que cumplan con los criterios seleccionad
 
 #### Actor principal
 
-ACT\-ETI\-004\-Evaluador
+ACT-ETI-004-Evaluador
 
-ACT\-ETI\-005\-Técnico
+ACT-ETI-005-Técnico
 
 ### Precondiciones
 
@@ -47,7 +56,3 @@ Se listan las evaluaciones de memorias en estado "En evaluación" o "En secretar
 1. Se presenta la pantalla Evaluaciones con el listado de las evaluaciones de  memoria en estado "En evaluación" o "En secretaria revisión mínima" dadas de alta en el sistema y asignadas al evaluador que esta entrando en la aplicación.
 2. El gestor introduce la información de los filtros y realiza la acción de buscar para poder filtrar un subconjunto de  memorias para evaluar.
 3. Se presenta la pantalla Evaluaciones con el subconjunto de memorias que cumplen las condiciones del filtro.
-
-
-
-

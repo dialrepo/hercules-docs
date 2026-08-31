@@ -1,6 +1,4 @@
-# Hércules : Integración SGI\-DIALNET
-
-
+# Integración SGI-DIALNET
 
 ## Introducción
 
@@ -8,28 +6,21 @@ Se describe en esta página la integración entre el SGI Hercules y Dialnet.
 
 ## Personas (personas.csv)
 
-  
-
-
 La documentación completa se encuentra en el siguiente enlace:
 
-[Sistema de gestión de personas](/hercules/apis-de-integracion/sgi-servicios-de-terceros-que-expone/sistema-de-gestion-de-personas.md "/hercules/apis-de-integracion/sgi-servicios-de-terceros-que-expone/sistema-de-gestion-de-personas.md")
+[Sistema de gestión de personas](/hercules/apis-de-integracion/sgi-servicios-de-terceros-que-expone/sistema-de-gestion-de-personas)
 
 #### Servicios
-
-
 
 | Método | URL | Parámetros | Respuesta | Permisos | Descripción |
 | --- | --- | --- | --- | --- | --- |
 | GET | /personas/{id} | id | Persona |  | Detalle de los datos generales de una persona (este la persona activo o no) |
-| GET | /datos\-personales/persona/{id} | id | DatosPersonales |  | Detalle de los datos personales de una persona independientemente de que este activa o no la persona (datos de dirección, nacimiento, etc). |
-| GET | /vinculaciones/persona/{id} |  | Vinculacion |  | Detalle de los datos de vinculación vigentes de una persona (independientemente de que esté activa o no la persona).Ver [UM \- SGI \- ESB \- SGP \- Adaptaciones integración](/hercules/sgi-sistema-de-gestion-de-investigacion/guia-de-implantacion-checklist/um-universidad-de-murcia/sistema-de-gestion-de-investigacion-apis-integracion/sistema-de-gestion-de-personas-rrhh-um-sgi-esb-sgp/um-sgi-esb-sgp-adaptaciones-integracion.md "/hercules/sgi-sistema-de-gestion-de-investigacion/guia-de-implantacion-checklist/um-universidad-de-murcia/sistema-de-gestion-de-investigacion-apis-integracion/sistema-de-gestion-de-personas-rrhh-um-sgi-esb-sgp/um-sgi-esb-sgp-adaptaciones-integracion.md") para su implementación en el SGI. |
+| GET | /datos-personales/persona/{id} | id | DatosPersonales |  | Detalle de los datos personales de una persona independientemente de que este activa o no la persona (datos de dirección, nacimiento, etc). |
+| GET | /vinculaciones/persona/{id} |  | Vinculacion |  | Detalle de los datos de vinculación vigentes de una persona (independientemente de que esté activa o no la persona).  Ver [UM - SGI - ESB - SGP - Adaptaciones integración](/hercules/sgi-sistema-de-gestion-de-investigacion/guia-de-implantacion-checklist/um-universidad-de-murcia/sistema-de-gestion-de-investigacion-apis-integracion/sistema-de-gestion-de-personas-rrhh-um-sgi-esb-sgp/um-sgi-esb-sgp-adaptaciones-integracion) para su implementación en el SGI. |
 
 #### Definición de los objetos
 
 ##### Persona
-
-
 
 | Nombre | Tipo | Descripción |
 | --- | --- | --- |
@@ -42,14 +33,10 @@ La documentación completa se encuentra en el siguiente enlace:
 | empresaRef | String | Se devuelve el identificador/referencia de la entidad Empresa. |
 | personalPropio | Boolean | Indica si es personal de la Universidad o no (a día de hoy). |
 | entidadPropiaRef | String | Se devuelve el identificador/referencia de la entidad que representa a la UM en caso de que valor de personalPropio sea true (a día de hoy), esto es, que la relación de la persona con la UM esté vigente. |
-| emails | Lista\[Email] | Lista con los emails de la persona (o con el email que se quiere visualizar en el resultado de la búsqueda de personas) |
+| emails | Lista[Email] | Lista con los emails de la persona (o con el email que se quiere visualizar en el resultado de la búsqueda de personas) |
 | activo | Boolean | Indica si la persona esta activa o no (a día de hoy). |
 
-
-
 **Persona** Ampliar origen
-
-
 
 ```
 {
@@ -81,23 +68,16 @@ La documentación completa se encuentra en el siguiente enlace:
 }
 ```
 
-
 ##### DatosPersonales
-
-
 
 | Nombre | Tipo | Descripción |
 | --- | --- | --- |
 | fechaNacimiento | Fecha | Fecha de nacimiento de la persona |
-| paisNacimiento | Pais | Se devuelve la entidad Pais con todos sus campos. Ver definición en [SGI \- ESB \- SGO](https://confluence.um.es/confluence/pages/createpage.action?spaceKey=TEMP001&title=SGI+-+ESB+-+SGO "/confluence/pages/createpage.action?spaceKey=TEMP001&title=SGI+-+ESB+-+SGO") |
-| comAuntonomaNacimiento | ComunidadAutonoma | Se devuelve la entidad ComunidadAutonoma con todos sus campos. Ver definición en [SGI \- ESB \- SGO](https://confluence.um.es/confluence/pages/createpage.action?spaceKey=TEMP001&title=SGI+-+ESB+-+SGO "/confluence/pages/createpage.action?spaceKey=TEMP001&title=SGI+-+ESB+-+SGO") |
+| paisNacimiento | Pais | Se devuelve la entidad Pais con todos sus campos. Ver definición en [SGI - ESB - SGO](/confluence/pages/createpage.action?spaceKey=TEMP001&title=SGI+-+ESB+-+SGO) |
+| comAuntonomaNacimiento | ComunidadAutonoma | Se devuelve la entidad ComunidadAutonoma con todos sus campos. Ver definición en [SGI - ESB - SGO](/confluence/pages/createpage.action?spaceKey=TEMP001&title=SGI+-+ESB+-+SGO) |
 | ciudadNacimiento | String | Ciudad de nacimiento de la persona |
 
-
-
 **DatosPersonales** Ampliar origen
-
-
 
 ```
 {
@@ -115,26 +95,19 @@ La documentación completa se encuentra en el siguiente enlace:
 }
 ```
 
-
 ##### Vinculacion
-
-
 
 | Nombre | Tipo | Descripción |
 | --- | --- | --- |
 | vinculacionCategoriaProfesional | VinculacionCategoriaProfesional | Se devuelve la entidad VinculacionCategoriaProfesional con todos sus campos. |
-| departamento | Departamento | Se devuelve la entidad Departamento con todos sus campos. Ver definición en [SGI \- ESB \- SGO](https://confluence.um.es/confluence/pages/createpage.action?spaceKey=TEMP001&title=SGI+-+ESB+-+SGO "/confluence/pages/createpage.action?spaceKey=TEMP001&title=SGI+-+ESB+-+SGO"). |
-| centro | Centro | Se devuelve la entidad Centro con todos sus campos. Ver definición en [Sistema Gestión de Organizaciones (UM \- SGI \- ESB \- SGO)](/hercules/apis-de-integracion/sgi-servicios-de-terceros-que-consume/caso-de-uso-servicios-implementados-por-la-universidad-de-murcia/sistema-gestion-de-organizacionesum-sgi-esb-sgo/index.md "/hercules/apis-de-integracion/sgi-servicios-de-terceros-que-consume/caso-de-uso-servicios-implementados-por-la-universidad-de-murcia/sistema-gestion-de-organizacionesum-sgi-esb-sgo/index.md") |
-| areaConocimiento | AreaConocimiento | Se devuelve la entidad AreaConocimiento con todos sus campos. Ver definición en [SGI \- ESB \- SGO](https://confluence.um.es/confluence/pages/createpage.action?spaceKey=TEMP001&title=SGI+-+ESB+-+SGO "/confluence/pages/createpage.action?spaceKey=TEMP001&title=SGI+-+ESB+-+SGO"). |
+| departamento | Departamento | Se devuelve la entidad Departamento con todos sus campos. Ver definición en [SGI - ESB - SGO](/confluence/pages/createpage.action?spaceKey=TEMP001&title=SGI+-+ESB+-+SGO). |
+| centro | Centro | Se devuelve la entidad Centro con todos sus campos. Ver definición en [Sistema Gestión de Organizaciones (UM - SGI - ESB - SGO)](/hercules/apis-de-integracion/sgi-servicios-de-terceros-que-consume/caso-de-uso-servicios-implementados-por-la-universidad-de-murcia/sistema-gestion-de-organizacionesum-sgi-esb-sgo) |
+| areaConocimiento | AreaConocimiento | Se devuelve la entidad AreaConocimiento con todos sus campos. Ver definición en [SGI - ESB - SGO](/confluence/pages/createpage.action?spaceKey=TEMP001&title=SGI+-+ESB+-+SGO). |
 | empresaRef | String | Se devuelve el identificador/referencia de la entidad Empresa externa que es la relacionada en la actualidad con la persona, la vigente. |
 | personalPropio | Boolean | Indica si es personal de la Universidad o no (a día de hoy). |
 | entidadPropiaRef | String | Se devuelve el identificador/referencia de la entidad que representa a la Universidad en caso de que valor de personalPropio sea true (a día de hoy), esto es, que la relación de la persona con la Universidad esté vigente. |
 
-
-
 **Vinculacion** Ampliar origen
-
-
 
 ```
 {
@@ -163,67 +136,44 @@ La documentación completa se encuentra en el siguiente enlace:
 }
 ```
 
-
-  
-
-
 #### Correspondencias
-
-  
-
-
-
 
 | personas.csv | Objetos SGI |
 | --- | --- |
 | persona\_id | Persona.id |
 | nif | Persona.numeroIdentificacion |
-| email | Persona.emails.email donde principal \= true |
+| email | Persona.emails.email donde principal = true |
 | nombre | Persona.nombre |
 | apellido1 | Persona.apellidos |
 | apellido2 | Persona.apellidos |
 | area\_id | DatosVinculacion.areaConocimiento.id |
 | genero | Persona.sexo.nombre |
 | fecha\_nacimiento | DatosPersonales.fechaNacimiento |
-| rol | Si Persona.activo \= true entonces INVESTIGADOR\_ACTUALen otro caso INVESTIGADOR\_EXTERNO |
-
-  
-
+| rol | Si Persona.activo = true entonces INVESTIGADOR\_ACTUAL  en otro caso INVESTIGADOR\_EXTERNO |
 
 ## Unidades (unidades.csv)
 
 La documentación completa se encuentra en el siguiente enlace:
 
-[Sistema de la gestión de la estructura orgánica \- Hércules \- Confluence (um.es)](https://confluence.um.es/confluence/pages/viewpage.action?pageId=598147533 "https://confluence.um.es/confluence/pages/viewpage.action?pageId=598147533")
+[Sistema de la gestión de la estructura orgánica - Hércules - Confluence (um.es)](/hercules/apis-de-integracion/sgi-servicios-de-terceros-que-expone/sistema-de-la-gestion-de-la-estructura-organica)
 
 #### Servicios
 
-
-
 | Método | URL | Parámetros | Respuesta | Permisos | Descripción |
 | --- | --- | --- | --- | --- | --- |
-| GET | /centros |  | Lista\[Centro] |  | Listado de centros. |
-| GET | /departamentos |  | Lista\[Departamento] |  | Listado de departamentos. |
+| GET | /centros |  | Lista[Centro] |  | Listado de centros. |
+| GET | /departamentos |  | Lista[Departamento] |  | Listado de departamentos. |
 
 #### Definición de los objetos
 
 ##### Centro
-
-
 
 | Nombre | Tipo | Descripción |
 | --- | --- | --- |
 | id | String | Identificador de la entidad Centro. |
 | nombre | String | Nombre del centro. |
 
-  
-
-
-
-
 **Centro** Ampliar origen
-
-
 
 ```
 {
@@ -232,44 +182,23 @@ La documentación completa se encuentra en el siguiente enlace:
 }
 ```
 
-
-  
-
-
 ##### Departamento
-
-
 
 | Nombre | Tipo | Descripción |
 | --- | --- | --- |
 | id | String | Identificador del departamento. |
 | nombre | String | Nombre del departamento. |
 
-  
-
-
-
-
 **Departamento** Ampliar origen
-
-
 
 ```
 {
     "id":"dpt-1",
     "nombre":"Departamento Ciencias de la teconología"
 }
-
-
 ```
 
-
 #### Correspondencias
-
-  
-
-
-
 
 | unidades.csv | Objetos SGI |
 | --- | --- |
@@ -277,33 +206,23 @@ La documentación completa se encuentra en el siguiente enlace:
 | nombre | Centro.nombre o Departamento.nombre |
 | tipo\_id | CENTROS\_ACADEMICOS o DEPARTAMENTO |
 
-  
-
-
 ## Grupos de investigación (grupos.csv)
-
-  
-
 
 La documentación completa se encuentra en el siguiente enlace:
 
-[SGI \- Grupos de investigación \- Hércules \- Confluence (um.es)](https://confluence.um.es/confluence/pages/viewpage.action?pageId=598147666 "https://confluence.um.es/confluence/pages/viewpage.action?pageId=598147666")
+[SGI - Grupos de investigación - Hércules - Confluence (um.es)](/hercules/apis-de-integracion/sgi-servicios-propios-que-expone/sgi-grupos-de-investigacion)
 
 #### Servicios
 
-
-
 | Método | URL | Parámetros | Respuesta | Descripción |
 | --- | --- | --- | --- | --- |
-| GET | /grupos | q\+sLa query estará formada por:* codigo * nombre * activo * fechaInicio * fechaFin | Lista\[Grupo] | Listado de los Grupo según los parámetros de consultaPor ejemplo, para obtener los grupos activos, excluyendo los "FP00", se utilizarán los siguiente parámetros en la llamada al servicioEjemplo:* nombre\=nk\="FP00\-";activo\=\=1;codigo\=nk\="FP00\-";fechaInicio\=le\="2023\-11\-16T00:00:00Z";(fechaFin\=gt\="2023\-11\-16T00:00:00Z",fechaFin\=na\='') |
+| GET | /grupos | q+s  La query estará formada por:   * codigo * nombre * activo * fechaInicio * fechaFin | Lista[Grupo] | Listado de los Grupo según los parámetros de consulta    Por ejemplo, para obtener los grupos activos, excluyendo los "FP00", se utilizarán los siguiente parámetros en la llamada al servicio    Ejemplo:   * nombre=nk="FP00-";activo==1;codigo=nk="FP00-";fechaInicio=le="2023-11-16T00:00:00Z";(fechaFin=gt="2023-11-16T00:00:00Z",fechaFin=na='') |
 | GET | /grupos/{id} |  | Grupo | Datos generales de un Grupo |
-| GET | /grupos/{id}/palabrasclave |  | Lista\[GrupoPalabraClave] | Listado de palabras clave de un Grupo |
+| GET | /grupos/{id}/palabrasclave |  | Lista[GrupoPalabraClave] | Listado de palabras clave de un Grupo |
 
 #### Definición de los objetos
 
 ##### Grupo
-
-
 
 | Nombre | Tipo | Descripción |
 | --- | --- | --- |
@@ -314,18 +233,11 @@ La documentación completa se encuentra en el siguiente enlace:
 | proyectoSgeRef | String | Identificador del proyecto económico asociado en el sistema de gestión económico. |
 | solicitudId | Long | Identificador de la solicitud de convocatoria que originó el grupo. |
 | codigo | String | Código del grupo. |
-| tipo | String | Tipo del grupo. Posibles valores:* EMERGENTE * CONSOLIDADO * PRECOMPETITIVO * ALTO\_RENDIMIENTO |
+| tipo | String | Tipo del grupo. Posibles valores:   * EMERGENTE * CONSOLIDADO * PRECOMPETITIVO * ALTO\_RENDIMIENTO |
 | especialInvestigación | Boolean | Indica si el grupo es un grupo especial de investigación o no. |
 | activo | Boolean | Indica si esta activo o no. En caso de no estar activo se considera como un grupo eliminado del sistema. Se realizan borrados lógicos por si el gestor o administrador desean recuperar un grupo eliminado. |
 
-  
-
-
-
-
 **Grupo** Ampliar origen
-
-
 
 ```
 {
@@ -342,27 +254,14 @@ La documentación completa se encuentra en el siguiente enlace:
 }
 ```
 
-
 ##### GrupoPalabraClave
-
-  
-
-
-
 
 | Nombre | Tipo | Descripción |
 | --- | --- | --- |
 | id | Long | Identificador de la entidad grupo palabra clave. |
 | palabraClaveRef | String | Palabra o conjunto de palabras clave definido en el grupo |
 
-  
-
-
-
-
 **GrupoPalabraClave** Ampliar origen
-
-
 
 ```
 [
@@ -377,13 +276,7 @@ La documentación completa se encuentra en el siguiente enlace:
 ]
 ```
 
-
 #### Correspondencias
-
-  
-
-
-
 
 | grupos.csv | Objetos SGI |
 | --- | --- |
@@ -395,63 +288,34 @@ La documentación completa se encuentra en el siguiente enlace:
 | palabras\_clave | GrupoPalabraClave.palabraClaveRef |
 | lineas\_investigacion |  |
 
-  
-
-
-  
-
-
-## Miembros del Grupo de investigación (grupos\-personas.csv)
-
-  
-
+## Miembros del Grupo de investigación (grupos-personas.csv)
 
 La documentación completa se encuentra en el siguiente enlace:
 
-[SGI \- Grupos de investigación \- Hércules \- Confluence (um.es)](https://confluence.um.es/confluence/pages/viewpage.action?pageId=598147666 "https://confluence.um.es/confluence/pages/viewpage.action?pageId=598147666")
-
-  
-
+[SGI - Grupos de investigación - Hércules - Confluence (um.es)](/hercules/apis-de-integracion/sgi-servicios-propios-que-expone/sgi-grupos-de-investigacion)
 
 #### Servicios
 
-
-
 | Método | URL | Parámetros | Respuesta | Descripción |
 | --- | --- | --- | --- | --- |
-| GET | /grupos/{id}/miembrosequipo |  | Lista\[GrupoEquipo] | Listado de miembros del equipo de un Grupo |
-
-  
-
+| GET | /grupos/{id}/miembrosequipo |  | Lista[GrupoEquipo] | Listado de miembros del equipo de un Grupo |
 
 #### Definición de los objetos
 
 ##### GrupoEquipo
-
-  
-
-
-
 
 | Nombre | Tipo | Descripción |
 | --- | --- | --- |
 | id | Long | Identificador de la entidad grupo equipo. |
 | grupoId | Long | Identificador del grupo. |
 | personaRef | String | Identificador o Referencia de la persona miembro del equipo de grupo. Es el identificador de la persona en el sistema de personas de la Universidad. |
-| rol | RolProyecto | Entidad que representa el rol. Son los roles que puede tener el equipo de grupo.Ejemplos:* Investigador/a principal * Co\-Investigador/a PrincipalColaborador * Asesor científico * Colaborador E.I. |
+| rol | RolProyecto | Entidad que representa el rol. Son los roles que puede tener el equipo de grupo.  Ejemplos:   * Investigador/a principal * Co-Investigador/a PrincipalColaborador * Asesor científico * Colaborador E.I. |
 | fechaInicio | String | Fecha de inicio para la participación del miembro del equipo de grupo con el rol seleccionado. |
 | fechaFin | String | Fecha de inicio para la participación del miembro del equipo de grupo con el rol seleccionado. |
-| dedicacion | String | Dedicación del miembro del equipo de grupo. Posibles valores:* PARCIAL * COMPLETA |
+| dedicacion | String | Dedicación del miembro del equipo de grupo. Posibles valores:   * PARCIAL * COMPLETA |
 | participacion | Numérico | Porcentaje de dedicación al grupo. |
 
-  
-
-
-
-
 **GrupoEquipo** Ampliar origen
-
-
 
 ```
 [
@@ -476,69 +340,41 @@ La documentación completa se encuentra en el siguiente enlace:
 }
 ```
 
-
 #### Correspondencias
 
-  
-
-
-
-
-| grupos\-personas.csv | Objetos SGI |
+| grupos-personas.csv | Objetos SGI |
 | --- | --- |
 | grupo\_id | GrupoEquipo.grupoId |
 | persona\_id | GrupoEquipo.personaRef |
-| rol | Según GrupoEquipo.rol.abreviatura:Si es IP o COIP entonces RESPONSABLEEn otro caso MIEMBRO |
+| rol | Según GrupoEquipo.rol.abreviatura:  Si es IP o COIP entonces RESPONSABLE  En otro caso MIEMBRO |
 | fecha\_inicio | GrupoEquipo.fechaInicio |
 | fecha\_fin | GrupoEquipo.fechaFin |
 
-  
-
-
 ## Entidades (entidades.csv)
-
-  
-
 
 La documentación completa se encuentra en el siguiente enlace:
 
-[Sistema de gestión de empresas \- Hércules \- Confluence (um.es)](https://confluence.um.es/confluence/pages/viewpage.action?pageId=598147536 "https://confluence.um.es/confluence/pages/viewpage.action?pageId=598147536")
-
-  
-
+[Sistema de gestión de empresas - Hércules - Confluence (um.es)](/hercules/apis-de-integracion/sgi-servicios-de-terceros-que-expone/sistema-de-gestion-de-empresas)
 
 #### Servicios
-
-  
-
-
-
 
 | Método | URL | Parámetros | Respuesta | Descripción |
 | --- | --- | --- | --- | --- |
 | GET | /empresas/{id} | id | Empresa | Detalle de los datos generales de una empresa. |
-| GET | /datos\-contacto/empresa/{id} | id | DatosContacto | Contiene los datos de contacto de una empresa. |
+| GET | /datos-contacto/empresa/{id} | id | DatosContacto | Contiene los datos de contacto de una empresa. |
 
 #### Definición de los objetos
 
-  
-
-
 ##### DatosContacto
-
-  
-
-
-
 
 | Nombre | Tipo | Descripción |
 | --- | --- | --- |
-| paisContacto | Pais | Se devuelve la entidad Pais con todos sus campos. Ver definición en [Sistema Gestión de Organizaciones (UM \- SGI \- ESB \- SGO)](https://confluence.um.es/confluence/pages/viewpage.action?pageId=598147635 "https://confluence.um.es/confluence/pages/viewpage.action?pageId=598147635"). |
-| comAutonomaContacto | ComunidadAutonoma | Se devuelve la entidad ComunidadAutonoma con todos sus campos. Ver definición en [Sistema Gestión de Organizaciones (UM \- SGI \- ESB \- SGO)](https://confluence.um.es/confluence/pages/viewpage.action?pageId=598147635 "https://confluence.um.es/confluence/pages/viewpage.action?pageId=598147635"). |
-| provinciaContacto | Provincia | Se devuelve la entidad Provincia con todos sus campos. Ver definición en [Sistema Gestión de Organizaciones (UM \- SGI \- ESB \- SGO)](https://confluence.um.es/confluence/pages/viewpage.action?pageId=598147635 "https://confluence.um.es/confluence/pages/viewpage.action?pageId=598147635"). |
+| paisContacto | Pais | Se devuelve la entidad Pais con todos sus campos. Ver definición en [Sistema Gestión de Organizaciones (UM - SGI - ESB - SGO)](/hercules/apis-de-integracion/sgi-servicios-de-terceros-que-consume/caso-de-uso-servicios-implementados-por-la-universidad-de-murcia/sistema-gestion-de-organizacionesum-sgi-esb-sgo). |
+| comAutonomaContacto | ComunidadAutonoma | Se devuelve la entidad ComunidadAutonoma con todos sus campos. Ver definición en [Sistema Gestión de Organizaciones (UM - SGI - ESB - SGO)](/hercules/apis-de-integracion/sgi-servicios-de-terceros-que-consume/caso-de-uso-servicios-implementados-por-la-universidad-de-murcia/sistema-gestion-de-organizacionesum-sgi-esb-sgo). |
+| provinciaContacto | Provincia | Se devuelve la entidad Provincia con todos sus campos. Ver definición en [Sistema Gestión de Organizaciones (UM - SGI - ESB - SGO)](/hercules/apis-de-integracion/sgi-servicios-de-terceros-que-consume/caso-de-uso-servicios-implementados-por-la-universidad-de-murcia/sistema-gestion-de-organizacionesum-sgi-esb-sgo). |
 | ciudadContacto | String | Ciudad de contacto de la empresa. |
 | codigoPostal | String | Código postal de la empresa. |
-| tipoVia | TipoVia | Tipo de vía de la dirección de contacto de la empersa. Se devuelve la entidad TipoVia con todos sus campos. Ver definición en [Sistema Gestión de Organizaciones (UM \- SGI \- ESB \- SGO)](https://confluence.um.es/confluence/pages/viewpage.action?pageId=598147635 "https://confluence.um.es/confluence/pages/viewpage.action?pageId=598147635"). |
+| tipoVia | TipoVia | Tipo de vía de la dirección de contacto de la empersa. Se devuelve la entidad TipoVia con todos sus campos. Ver definición en [Sistema Gestión de Organizaciones (UM - SGI - ESB - SGO)](/hercules/apis-de-integracion/sgi-servicios-de-terceros-que-consume/caso-de-uso-servicios-implementados-por-la-universidad-de-murcia/sistema-gestion-de-organizacionesum-sgi-esb-sgo). |
 | nombreVia | String | Nombre de la vía de la dirección de contacto de la empresa. |
 | numero | String | Número de la vía de la dirección de contacto de la empresa. |
 | ampliacion | String | Campo para ampliar la informaicón de la dirección de contacto de la empresa. |
@@ -547,17 +383,7 @@ La documentación completa se encuentra en el siguiente enlace:
 | telefono | String | Teléfono de contacto de la empresa. |
 | direccionWeb | String | Dirección web de la empresa. |
 
-  
-
-
-  
-
-
-
-
 **DatosContacto** Ampliar origen
-
-
 
 ```
 {
@@ -589,16 +415,7 @@ La documentación completa se encuentra en el siguiente enlace:
 }
 ```
 
-
-  
-
-
 ##### Empresa
-
-  
-
-
-
 
 | Nombre | Tipo | Descripción |
 | --- | --- | --- |
@@ -610,14 +427,7 @@ La documentación completa se encuentra en el siguiente enlace:
 | datosEconomicos | Boolean | Indicador de si se trata de una empresa con datos económicos (está dada de alta en GENTE y en JUSTO) o sin datos económicos (está dada de alta solo en GENTE). |
 | padreId | String | Identificador de la empresa padre o entidad principal. Estará informado en el caso de empresas que son subentidad de otra. |
 
-  
-
-
-
-
 **Empresa** Ampliar origen
-
-
 
 ```
 {
@@ -634,13 +444,7 @@ La documentación completa se encuentra en el siguiente enlace:
 }
 ```
 
-
 #### Correspondencias
-
-  
-
-
-
 
 | entidades.csv | Objetos SGI |
 | --- | --- |
@@ -655,37 +459,21 @@ La documentación completa se encuentra en el siguiente enlace:
 | pais | DatosContacto.paisContacto.nombre |
 | caracter |  |
 
-  
-
-
-## Financiaciones personas (financiaciones\-personas.csv)
-
-  
-
+## Financiaciones personas (financiaciones-personas.csv)
 
 La documentación completa se encuentra en el siguiente enlace:
 
-[Gestión proyectos](/hercules/apis-de-integracion/sgi-servicios-propios-que-expone/gestion-proyectos.md "/hercules/apis-de-integracion/sgi-servicios-propios-que-expone/gestion-proyectos.md")
+[Gestión proyectos](/hercules/apis-de-integracion/sgi-servicios-propios-que-expone/gestion-proyectos)
 
 #### Servicios
 
-  
-
-
-
-
 | Método | URL | Parámetros | Respuesta | Descripción |
 | --- | --- | --- | --- | --- |
-| GET | /proyectos/{id}/proyectoequipos |  | Lista\[ProyectoEquipo] | Listado de miembros del equipo de un Proyecto |
+| GET | /proyectos/{id}/proyectoequipos |  | Lista[ProyectoEquipo] | Listado de miembros del equipo de un Proyecto |
 
 #### Definición de los objetos
 
 ##### ProyectoEquipo
-
-  
-
-
-
 
 | Nombre | Tipo | Descripción |
 | --- | --- | --- |
@@ -696,19 +484,12 @@ La documentación completa se encuentra en el siguiente enlace:
 | lastModifiedDate | String | Fecha de la última modificación de la entidad. |
 | proyectoId | Long | Identifcador del proyecto. |
 | personaRef | String | Identificador o Referencia de la persona miembro del equipo de proyecto. Es el identificador de la persona en el sistema de personas de la Universidad. |
-| rolProyecto | RolProyecto | Entidad que representa el rol. Son los roles que puede tener el equipo de proyecto.Ejemplos:* Investigador/a principal * Co\-Investigador/a PrincipalColaborador * Asesor científico * Colaborador E.I. |
+| rolProyecto | RolProyecto | Entidad que representa el rol. Son los roles que puede tener el equipo de proyecto.  Ejemplos:   * Investigador/a principal * Co-Investigador/a PrincipalColaborador * Asesor científico * Colaborador E.I. |
 | fechaInicio | String | Fecha de inicio para la participación del miembro del equipo de proyecto con el rol seleccionado. |
 | fechaFin | String | Fecha de inicio para la participación del miembro del equipo de proyecto con el rol seleccionado. |
 | horasDedicacion | Numérico | Horas totales de dedicación al proyecto. Se utiliza para realizar la propuesta de distribución del timesheet. |
 
-  
-
-
-
-
 **ProyectoEquipo** Ampliar origen
-
-
 
 ```
 [
@@ -742,80 +523,49 @@ La documentación completa se encuentra en el siguiente enlace:
 ]
 ```
 
-
 #### Correspondencias
 
-  
-
-
-
-
-| financiaciones\-personas.csv | Objetos SGI |
+| financiaciones-personas.csv | Objetos SGI |
 | --- | --- |
 | financiacion\_id | ProyectoEquipo.proyectoId |
 | persona\_id | ProyectoEquipo.personaRef |
-| rol | Según ProyectoEquipo.rolProyecto.abreviatura:Si es IP entonces RESPONSABLESi en COIP entonces RESPONSABLE2En otro caso MIEMBRO |
+| rol | Según ProyectoEquipo.rolProyecto.abreviatura:  Si es IP entonces RESPONSABLE  Si en COIP entonces RESPONSABLE2  En otro caso MIEMBRO |
 | fecha\_inicio | ProyectoEquipo.fechaInicio |
 | fecha\_fin | ProyectoEquipo.fechaFin |
 
-  
-
-
-  
-
-
-## Entidades financiadoras (financiaciones\-entidadesfinanciadoras.csv)
-
-  
-
+## Entidades financiadoras (financiaciones-entidadesfinanciadoras.csv)
 
 La documentación completa se encuentra en el siguiente enlace:
 
-[Gestión proyectos](/hercules/apis-de-integracion/sgi-servicios-propios-que-expone/gestion-proyectos.md "/hercules/apis-de-integracion/sgi-servicios-propios-que-expone/gestion-proyectos.md")
-
-  
-
+[Gestión proyectos](/hercules/apis-de-integracion/sgi-servicios-propios-que-expone/gestion-proyectos)
 
 #### Servicios
 
-  
-
-
-
-
 | Método | URL | Parámetros | Respuesta | Descripción |
 | --- | --- | --- | --- | --- |
-| GET | /proyectos/{id}/proyectoentidadfinanciadoras |  | Lista\[ProyectoEntidadFinanciadora] | Listado de entidades financiadoras de un Proyecto |
+| GET | /proyectos/{id}/proyectoentidadfinanciadoras |  | Lista[ProyectoEntidadFinanciadora] | Listado de entidades financiadoras de un Proyecto |
 
 #### Definición de los objetos
 
 ##### EntidadFinanciadora
 
-
-
-| **Nombre** | **Tipo** | **Descripción** |
+|  |  |  |
 | --- | --- | --- |
+| **Nombre** | **Tipo** | **Descripción** |
 | id | Long | Identificador de la entidad financiadora del proyecto. |
 | createdBy | String | Nombre del usuario que ha creado la entidad. |
 | creationDate | String | Fecha de la creación de la entidad. |
 | lastModifiedBy | String | Nombre del usuario que ha modificado por última vez la entidad. |
 | lastModifiedDate | String | Fecha de la última modificación de la entidad. |
 | proyectoId | Long | Identifcador del proyecto. |
-| entidadRef | String | Referencia o Identificador de la entidad en el sistema externo de Empresas.Ver diseño del API de empresas para obtener el detalle de una empresa a a partir de su identificador: [SGI \- ESB \- SGEMP](https://confluence.um.es/confluence/display/HERCULES/SGI+-+ESB+-+SGEMP "https://confluence.um.es/confluence/display/HERCULES/SGI+-+ESB+-+SGEMP") |
+| entidadRef | String | Referencia o Identificador de la entidad en el sistema externo de Empresas.  Ver diseño del API de empresas para obtener el detalle de una empresa a a partir de su identificador: [SGI - ESB - SGEMP](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sgemp) |
 | fuenteFinanciacion | FuenteFinanciacion | Entidad que representa una fuente de financiación. |
 | tipoFinanciacion | TipoFinanciacion | Entidad que representa un tipo de financiación. |
 | porcentajeFinanciacion | Numérico | Porcentaje de financiación de la entidad financiadora. |
 | importeFinanciacion | Numérico | Importe de financiación de la entidad. |
 | ajena | Boolean | Indica si se trata de una entidad financiadora ajena a la convocatoria o no. |
 
-  
-
-
-
-
 **EntidadFinanciadora** Ampliar origen
-
-
 
 ```
 [
@@ -845,51 +595,29 @@ La documentación completa se encuentra en el siguiente enlace:
 ]
 ```
 
-
 #### Correspondencias
 
-  
-
-
-
-
-| financiaciones\-entidadesfinanciadoras.csv | Objetos SGI |
+| financiaciones-entidadesfinanciadoras.csv | Objetos SGI |
 | --- | --- |
 | financiacion\_id | EntidadFinanciadora.proyectoId |
 | entidad\_id | EntidadFinanciadora.entidadRef |
 
-  
-
-
 ## Financiaciones (financiaciones)
-
-  
-
 
 La documentación completa se encuentra en el siguiente enlace:
 
-[Gestión proyectos](/hercules/apis-de-integracion/sgi-servicios-propios-que-expone/gestion-proyectos.md "/hercules/apis-de-integracion/sgi-servicios-propios-que-expone/gestion-proyectos.md")
+[Gestión proyectos](/hercules/apis-de-integracion/sgi-servicios-propios-que-expone/gestion-proyectos)
 
 #### Servicios
 
-  
-
-
-
-
 | Método | URL | Parámetros | Respuesta | Descripción |
 | --- | --- | --- | --- | --- |
-| GET | /proyectos | q\+s (query \+ sort)La query estará formada por:* cualquiera de los campos del objeto Proyecto | Lista\[Proyecto] | Listado de proyectos.*Ejemplo*:**proyectos?q\=confidencial\=\=false;estado.estado\=\="CONCEDIDO";([modeloEjecucion.id](http://modeloEjecucion.id "http://modeloEjecucion.id")\=\=1 and [finalidad.id](http://finalidad.id "http://finalidad.id")\=in\=(16,17,18,19,20,21,22\)),([modeloEjecucion.id](http://modeloEjecucion.id "http://modeloEjecucion.id")\=\=3 and [finalidad.id](http://finalidad.id "http://finalidad.id")\=in\=(17,22\)),([modeloEjecucion.id](http://modeloEjecucion.id "http://modeloEjecucion.id")\=\=10 and [finalidad.id](http://finalidad.id "http://finalidad.id")\=in\=(44,45\)),([modeloEjecucion.id](http://modeloEjecucion.id "http://modeloEjecucion.id")\=\=7 and [finalidad.id](http://finalidad.id "http://finalidad.id")\=in\=(26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,48\))** |
-| GET | /proyectos/{id}/entidadconvocantes |  | Lista\[ProyectoEntidadConvocante] | Listado de entidades convocantes de un Proyecto |
+| GET | /proyectos | q+s (query + sort)  La query estará formada por:   * cualquiera de los campos del objeto Proyecto | Lista[Proyecto] | Listado de proyectos.  *Ejemplo*:  **proyectos?q=confidencial==false;estado.estado=="CONCEDIDO";([modeloEjecucion.id](http://modeloEjecucion.id)==1 and [finalidad.id](http://finalidad.id)=in=(16,17,18,19,20,21,22)),([modeloEjecucion.id](http://modeloEjecucion.id)==3 and [finalidad.id](http://finalidad.id)=in=(17,22)),([modeloEjecucion.id](http://modeloEjecucion.id)==10 and [finalidad.id](http://finalidad.id)=in=(44,45)),([modeloEjecucion.id](http://modeloEjecucion.id)==7 and [finalidad.id](http://finalidad.id)=in=(26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,48))** |
+| GET | /proyectos/{id}/entidadconvocantes |  | Lista[ProyectoEntidadConvocante] | Listado de entidades convocantes de un Proyecto |
 
 #### Definición de los objetos
 
 ##### Proyecto
-
-  
-
-
-
 
 | Nombre | Tipo | Descripción |
 | --- | --- | --- |
@@ -913,16 +641,16 @@ La documentación completa se encuentra en el siguiente enlace:
 | convocatoriaExterna | String | Permite mostrar o recoger la identificación externa de la convocatoria, dependiendo si el proyecto se asocia o no a una convocatoria registrada en el SGI. |
 | ambitoGeografico | TipoAmbitoGeografico | Entidad que representa el ámbito geográfico. |
 | confidencial | Boolean | Indica si el proyecto es confidencial. |
-| clasificacionCVN | String | Indica el apartado del CVN al que correspondería el proyecto. Tiene los siguientes valores:* AYUDAS * COMPETITIVOS * NO\_COMPETITIVOS |
+| clasificacionCVN | String | Indica el apartado del CVN al que correspondería el proyecto. Tiene los siguientes valores:   * AYUDAS * COMPETITIVOS  * NO\_COMPETITIVOS |
 | coordinado | Boolean | Indica si el proyecto se realizará de forma coordinada con otros socios. |
 | colaborativo | Boolean | Indica si un proyecto coordinado es además colaborativo (alguno de los socios participantes es una empresa privada). |
 | coordinadorExterno | Boolean | Indica quién actúa como coordinador del proyecto. Un valor "false" indica que es la propia universidad quien actúa en calidad de coordinador del proyecto. En caso que quien coordine el proyecto no sea la universidad sino uno de los socios, se indicará en este campo el valor "true". |
 | timesheet | Boolean | Indica si el proyecto requiere gestión de Timesheet. |
 | permitePaquetesTrabajo | Boolean | Indica si el proyecto requiere gestión de paquetes de trabajo en los Timesheet. |
 | costeHora | Boolean | Indica si el proyecto requerirá realizar el cálculo de coste de hora de personal. |
-| tipoHorasAnuales | String | Sólo se informará si se el campo "costeHora" tiene valor "true".Indica el criterio de las horas anuales para el cálculo del coste/hora.Tiene los siguientes valores:* CATEGORIA * FIJO * REAL |
+| tipoHorasAnuales | String | Sólo se informará si se el campo "costeHora" tiene valor "true".Indica el criterio de las horas anuales para el cálculo del coste/hora.Tiene los siguientes valores:  * CATEGORIA * FIJO * REAL |
 | iva | ProyectoIva | Entidad que representa el IVA del proyecto. |
-| causaExencion | String | Indica la causa de exención de IVA.Tiene los siguientes valores:* NO\_SUJETO * NO\_SUJETO\_CON\_DEDUCCION * NO\_SUJETO\_SIN\_DEDUCCION * SUJETO\_EXENTO |
+| causaExencion | String | Indica la causa de exención de IVA.Tiene los siguientes valores:  * NO\_SUJETO * NO\_SUJETO\_CON\_DEDUCCION * NO\_SUJETO\_SIN\_DEDUCCION * SUJETO\_EXENTO |
 | observaciones | String | Observaciones de carácter interno del proyecto. |
 | anualidades | Boolean | Indica si en el presupuesto se va a introducir por anualidades o no. |
 | importePresupuesto | Numérico | Es el importe presupuesto correspondiente al proyecto a desarrollar por la Universidad en caso de que lo deseen introducir de forma manual y no a través del detalle del presupuesto (entidad "AnualidadGasto"). |
@@ -933,14 +661,7 @@ La documentación completa se encuentra en el siguiente enlace:
 | totalImporteConcedido | Numérico | Es el importe total concedido del proyecto (Universidad y socios) en caso de que lo deseen introducir de forma manual y no a través del detalle del presupuesto (entidad "AnualidadGasto") y del importe presupuestado de los socios (entidad "ProyectoSocio"). |
 | activo | Boolean | Indica si esta activa o no. En caso de no estar activo se considera como un proyecto eliminado del sistema. Se realizan borrados lógicos por si el gesto o administrador desean recuperar un proyecto eliminado. |
 
-  
-
-
-
-
 **Proyecto** Ampliar origen
-
-
 
 ```
 {
@@ -1025,31 +746,22 @@ La documentación completa se encuentra en el siguiente enlace:
 }
 ```
 
-
 ##### ProyectoEntidadConvocante
 
-
-
-| **Nombre** | **Tipo** | **Descripción** |
+|  |  |  |
 | --- | --- | --- |
+| **Nombre** | **Tipo** | **Descripción** |
 | id | Long | Identificador de la entidad convocante del proyecto. |
 | createdBy | String | Nombre del usuario que ha creado la entidad. |
 | creationDate | String | Fecha de la creación de la entidad. |
 | lastModifiedBy | String | Nombre del usuario que ha modificado por última vez la entidad. |
 | lastModifiedDate | String | Fecha de la última modificación de la entidad. |
 | proyectoId | Long | Identifcador del proyecto. |
-| entidadRef | String | Referencia o Identificador de la entidad en el sistema externo de Empresas.Ver diseño del API de empresas para obtener el detalle de una empresa a a partir de su identificador: [SGI \- ESB \- SGEMP](https://confluence.treelogic.com/display/HERCULES/SGI+-+ESB+-+SGEMP "https://confluence.treelogic.com/display/HERCULES/SGI+-+ESB+-+SGEMP") |
+| entidadRef | String | Referencia o Identificador de la entidad en el sistema externo de Empresas.  Ver diseño del API de empresas para obtener el detalle de una empresa a a partir de su identificador: [SGI - ESB - SGEMP](https://confluence.treelogic.com/display/HERCULES/SGI+-+ESB+-+SGEMP) |
 | programaConvocatoria | Programa | Entidad que representa el Programa al que se asocia la entidad convocante en la Convocatoria. En el caso de que el proyecto este relacionado con una convocatoria del SGI, en este campo se guarda el programa que se haya definido en la convocatoria para la entidad convocante. |
 | programa | Programa | Entidad que representa el del Programa al que se asocia la entidad convocante en el proyecto. |
 
-  
-
-
-
-
 **ProyectoEntidadConvocante** Ampliar origen
-
-
 
 ```
 [
@@ -1102,19 +814,7 @@ La documentación completa se encuentra en el siguiente enlace:
 ]
 ```
 
-
 #### Correspondencias
-
-  
-
-
-  
-
-
-  
-
-
-
 
 | financiaciones.csv | Objetos SGI |
 | --- | --- |
@@ -1132,17 +832,5 @@ La documentación completa se encuentra en el siguiente enlace:
 | importe | Proyecto.importeConcedido |
 | ambito | Proyecto.ambitoGeografico.nombre |
 | colaborativo | Proyecto.colaborativo |
-| colavorativo\_rol | Según Proyecto.coordinadorExterno si es false entonces COORDINADORen otro caso SOCIO |
+| colavorativo\_rol | Según Proyecto.coordinadorExterno  si es false entonces COORDINADOR  en otro caso SOCIO |
 | caracter |  |
-
-             
-
-  
-
-
-  
-
-
-
-
-

@@ -1,6 +1,15 @@
-# Hércules : CU\-CSP\-1000 \- Gestión de convocatorias
+# CU-CSP-1000 - Gestión de convocatorias
 
-
+|  |  |
+| --- | --- |
+| Cod. CU | CU-CSP-1000 - Gestión de convocatorias |
+| Ver. objetivo |  |
+| Ver. CU |  |
+| Estado | PENDIENTE IN PROGRESS VALIDADO |
+| Fec. Aprobación |  |
+| Épica, historia |  |
+| Actores |  |
+| Frecuencia |  |
 
 ### Descripción
 
@@ -16,9 +25,7 @@
 
 ### Escenario principal (flujo básico)
 
-1. 
-2. 
-3. 
+
 
 ### Extensiones (flujos alternativos)
 
@@ -31,7 +38,3 @@ N/A
 ### Lista de tecnología y variaciones de datos
 
 N/A
-
-
-
-

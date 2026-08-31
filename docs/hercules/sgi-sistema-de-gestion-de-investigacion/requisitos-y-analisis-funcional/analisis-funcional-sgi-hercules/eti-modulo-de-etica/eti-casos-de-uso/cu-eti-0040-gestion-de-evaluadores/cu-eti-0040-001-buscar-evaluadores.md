@@ -1,6 +1,15 @@
-# Hércules : CU\-ETI\-0040\-001 \- Buscar Evaluadores
+# CU-ETI-0040-001 - Buscar Evaluadores
 
-
+|  |  |
+| --- | --- |
+| Cod. CU | ********CU-ETI-0040-001 - Buscar Evaluadores******** |
+| Ver. objetivo |  |
+| Ver. CU |  |
+| Estado | LIBERADO\_ |
+| Fec. Aprobación |  |
+| Épica, historia |  |
+| Actores | ACT-ETI-001-Gestor |
+| Frecuencia | Alta |
 
 ### Descripción
 
@@ -22,9 +31,8 @@ El resultado serán todas los evaluadores que cumplan con los criterios seleccio
 * Fecha de Alta: fecha a partir de la cual forma parte del comité de ética
 * Fecha de Baja: fecha en la que se dio de baja como perteneciente al comité de ética
 * Estado:   
-
-	+ Activo: si  no tiene fecha baja o fecha baja es mayor a la actual
-	+ Inactivo: si fecha baja es menor a la fecha actual
+  + Activo: si  no tiene fecha baja o fecha baja es mayor a la actual
+  + Inactivo: si fecha baja es menor a la fecha actual
 * Acciones: Editar / Borrar
 
 También habrá un botón para añadir un nuevo evaluador.
@@ -33,7 +41,7 @@ También habrá un botón para añadir un nuevo evaluador.
 
 #### Actor principal
 
-ACT\-ETI\-001\-Gestor
+ACT-ETI-001-Gestor
 
 ### Precondiciones
 
@@ -50,7 +58,3 @@ Se listan los evaluadores dados de alta en el sistema y que cumplan con los crit
 1. Se presenta la pantalla Evaluadores con el listado de evaluadores dados de alta en el sistema.
 2. El gestor introduce la información de los filtros y realiza la acción de buscar para poder filtrar un subconjunto de Evaluadores
 3. Se presenta la pantalla Evaluadores con el subconjunto de evaluadores que cumplen las condiciones del filtro.
-
-
-
-

@@ -1,6 +1,4 @@
-# Hércules : Alertas
-
-
+# Alertas
 
 La sección de alertas se accede desde el menú de la home y se compone por:
 
@@ -17,7 +15,3 @@ El resto de notificaciones tienen un autor de la notificación y un recurso vinc
 Al clicar en el autor o en el recurso, nos redireccionará al lugar correspondiente donde se ubica el recurso.
 
 ![](/attachments/598147351/598147865.png)
-
-
-
-

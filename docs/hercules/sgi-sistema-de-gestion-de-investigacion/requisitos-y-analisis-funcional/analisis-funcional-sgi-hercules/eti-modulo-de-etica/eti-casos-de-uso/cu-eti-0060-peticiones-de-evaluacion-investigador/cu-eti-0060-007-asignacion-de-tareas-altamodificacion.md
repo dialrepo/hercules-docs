@@ -1,6 +1,15 @@
-# Hércules : CU\-ETI\-0060\-007 \- Asignación de tareas \- Alta/modificación
+# CU-ETI-0060-007 - Asignación de tareas - Alta/modificación
 
-
+|  |  |
+| --- | --- |
+| Cod. CU | ********CU-ETI-0060-007 - Asignación de tareas - Alta/modificación******** |
+| Ver. objetivo |  |
+| Ver. CU | 1.0.0 |
+| Estado | LIBERADO\_ |
+| Fec. Aprobación |  |
+| Épica, historia |  |
+| Actores | ACT-ETI-002-Investigador  ACT-ETI-003-Solicitante  ACT-ETI-006-Responsable memoria |
+| Frecuencia | Media |
 
 ### Descripción
 
@@ -10,11 +19,11 @@ Formulario para ir asignando tareas dentro de una memoria a las personas del equ
 
 #### Actor principal
 
-ACT\-ETI\-002\-Investigador
+ACT-ETI-002-Investigador
 
-ACT\-ETI\-003\-Solicitante
+ACT-ETI-003-Solicitante
 
-ACT\-ETI\-006\-Responsable memoria
+ACT-ETI-006-Responsable memoria
 
 ### Precondiciones
 
@@ -51,7 +60,7 @@ No son guardados los datos en el sistema hasta que se pulse el botón Guardar de
 9. Se presenta la tarea en el listado de tareas asignadas a memorias.
 10. Se selecciona la tarea creada
 
-### Escenario principal (flujos alternativos) \- Memoria de comité CEISH
+### Escenario principal (flujos alternativos) - Memoria de comité CEISH
 
 1. Se presenta la pantalla Mis peticiones de evaluación con el listado de todas las peticiones de evaluación dadas de alta en el sistema y que la persona creadora de la misma sea la persona que se está logando en el sistema o bien este como responsable de una de las memorias de la petición de evaluación.
 2. Se selecciona la petición de evaluación.
@@ -62,7 +71,3 @@ No son guardados los datos en el sistema hasta que se pulse el botón Guardar de
 7. El usuario selecciona la acción Añadir.
 8. Se realizan las validaciones en cuanto a formato, obligatoriedad habituales.
 9. Se presenta la tarea en el listado de tareas asignadas a memorias.
-
-
-
-

@@ -1,6 +1,15 @@
-# Hércules : CU\-CSP\-0050\-003 \- Añadir programa al plan de investigación
+# CU-CSP-0050-003 - Añadir programa al plan de investigación
 
-
+|  |  |
+| --- | --- |
+| Cod. CU | **CU-CSP-0050-003 - Añadir programa al plan de investigación** |
+| Ver. objetivo |  |
+| Ver. CU | 1.0.0 |
+| Estado | LIBERADO\_ |
+| Fec. Aprobación |  |
+| Épica, historia |  |
+| Actores | ACT-CSP-004-Administrador, ACT-CSP-003-Gestor |
+| Frecuencia | Media |
 
 ### Descripción
 
@@ -10,15 +19,15 @@ Se añade un programa, subprograma, modalidad o submodalidad al plan de investig
 
 #### Actor principal
 
-ACT\-CSP\-004\-Administrador, ACT\-CSP\-003\-Gestor
+ACT-CSP-004-Administrador, ACT-CSP-003-Gestor
 
 #### Personal involucrado e intereses
 
-ACT\- CSP\-001\-Investigador que requiere que las convocatorias y proyectos estén categorizados de acuerdo a los programas bajo los que se enmarcan.
+ACT- CSP-001-Investigador que requiere que las convocatorias y proyectos estén categorizados de acuerdo a los programas bajo los que se enmarcan.
 
 ### Precondiciones
 
-El usuario ACT\-CSP\-004\-Administrador o ACT\-CSP\-003\-Gestor se autentica a través del usuario de dominio corporativo.
+El usuario ACT-CSP-004-Administrador o ACT-CSP-003-Gestor se autentica a través del usuario de dominio corporativo.
 
 A través del servicio de integración con el directorio activo y de la información del usuario almacenada en el propio SGI, se obtiene su rol y la unidades de gestión sobre las que tiene disponible el rol. El usuario está autorizado sobre la funcionalidades asociadas a esta gestión.
 
@@ -26,7 +35,7 @@ A través del servicio de integración con el directorio activo y de la informac
 
 El programa se ha añadido al plan conformando parte de su árbol de programas, subprogramas, modalidad, submodalid, etc. de acuerdo al nivel de profundidad en el que haya sido incluido.
 
-### Escenario principal (flujo básico) \- Creación de primer programa
+### Escenario principal (flujo básico) - Creación de primer programa
 
 1. El usuario accede al apartado de Programas de un Plan
 2. El plan no tiene ningún programa
@@ -36,7 +45,7 @@ El programa se ha añadido al plan conformando parte de su árbol de programas, 
 6. Se muestra un mensaje de acción positiva
 7. Se  vuelve a la pantalla de Modificación del Plan de investigación para que el usuario puede seguir añadiendo elementos al árbol
 
-### Extensiones (flujos alternativos) \- Creación de ítem
+### Extensiones (flujos alternativos) - Creación de ítem
 
 1. El usuario selecciona la opción Añadir nuevo ítem al árbol de programas desde la pantalla de Modificación del plan de investigación
 2. El usuario introduce el Nombre del ítem, no coincidente con ninguno de los nombres de los ítems activos del árbol del plan de investigación (la unicidad de los elementos no raíz aplica solamente dentro del propio árbol al que pertenezcan)
@@ -47,10 +56,7 @@ El programa se ha añadido al plan conformando parte de su árbol de programas, 
 7. Se muestra un mensaje de acción positiva
 8. Se  permanece en el apartado de Programas del Plan de investigación para que el usuario puede seguir añadiendo elementos al árbol
 
-  
-
-
-### Extensiones (flujos alternativos) \- Creación de ítem \- Error de unicidad
+### Extensiones (flujos alternativos) - Creación de ítem - Error de unicidad
 
 1. El usuario ha introducido un nombre que ya existía entre los ítems activos del árbol de un plan (la unicidad de los elementos no raíz aplica solamente dentro del propio árbol al que pertenezcan)
 2. El usuario introduce el resto de datos del ítem
@@ -68,12 +74,3 @@ N/A
 ### Lista de tecnología y variaciones de datos
 
 N/A
-
-  
-  
-  
-
-
-
-
-

@@ -1,15 +1,37 @@
-# Hércules : PRC \- Navegación
+# PRC - Navegación
 
-
+* [Validación producción científica](#PRCNavegación-Validaciónproduccióncientífica)
+  + [Publicaciones](#PRCNavegación-Publicaciones)
+  + [Congresos](#PRCNavegación-Congresos)
+  + [Obras artísticas](#PRCNavegación-Obrasartísticas)
+  + [Comités editoriales](#PRCNavegación-Comitéseditoriales)
+  + [Dirección de tesis/TFM/TFG](#PRCNavegación-Direccióndetesis/TFM/TFG)
+  + [Organización actividades I+D+i](#PRCNavegación-OrganizaciónactividadesI+D+i)
+* [Convocatorias](#PRCNavegación-Convocatorias)
+  + [Paso 1: Crear nueva convocatoria - Datos generales](#PRCNavegación-Paso1:Crearnuevaconvocatoria-Datosgenerales)
+  + [Paso 2: Crear nueva convocatoria - Baremos y puntuaciones](#PRCNavegación-Paso2:Crearnuevaconvocatoria-Baremosypuntuaciones)
+    - [Baremo Sexenios](#PRCNavegación-BaremoSexenios)
+    - [Baremo Aportación costes indirectos](#PRCNavegación-BaremoAportacióncostesindirectos)
+    - [Baremo producción científica](#PRCNavegación-Baremoproduccióncientífica)
+    - [Baremo Autoría - BCI - Editorial extranjera](#PRCNavegación-BaremoAutoría-BCI-Editorialextranjera)
+  + [Paso 3: Crear nueva convocatoria - Moduladores y rangos](#PRCNavegación-Paso3:Crearnuevaconvocatoria-Moduladoresyrangos)
+    - [Añadir nuevo rango cuantía contrato](#PRCNavegación-Añadirnuevorangocuantíacontrato)
+    - [Añadir nuevo rango licencia](#PRCNavegación-Añadirnuevorangolicencia)
+* [Configuración](#PRCNavegación-Configuración)
+  + [Edición tabla índice de experimentalidad](#PRCNavegación-Edicióntablaíndicedeexperimentalidad)
+    - [Añadir/modificar departamento con su índice](#PRCNavegación-Añadir/modificardepartamentoconsuíndice)
+* [Informes](#PRCNavegación-Informes)
+  + [Resumen puntuación grupos](#PRCNavegación-Resumenpuntuacióngrupos)
+  + [Detalle de grupo](#PRCNavegación-Detalledegrupo)
+  + [Detalle de producción por investigador/a](#PRCNavegación-Detalledeproducciónporinvestigador/a)
 
 El módulo de Producción científica tendrá 4 menús principales:
 
 ![](/attachments/597853265/597868445.png)
 
 * **Validación Producción científica**: Conjunto de todos los items de producción científica que necesitan validación, los que vienen del CVN.  
-
-	+ El investigador principal de un grupo de investigación o la persona a la que lo ha delegado, podrá consultar podrá consultar, validar y rechazar los items de los miembros de su grupo de investigación.
-	+ Los gestores/administradores podrán consultar, validar y rechazar todos lo items.
+  + El investigador principal de un grupo de investigación o la persona a la que lo ha delegado, podrá consultar podrá consultar, validar y rechazar los items de los miembros de su grupo de investigación.
+  + Los gestores/administradores podrán consultar, validar y rechazar todos lo items.
 * **Informes**: Generación de los informes de baremación de grupos y de investigador. Disponible para los investigadores y para los gestores/administradores.
 * **Convocatorias**: Configuración anual de las convocatorias. Es donde se definen los baremos y las puntuaciones de cada uno de ellos para cada año (convocatoria ACI). Sólo disponible para los gestores/administradores.
 * **Configuración**: Gestión de la tabla de índices de experimentalidad. Sólo disponible para los gestores/administradores.
@@ -25,7 +47,7 @@ El menú "Validación producción científica" es un agrupador de los menús:
 * Obras artísticas
 * Comités editoriales
 * Tesis/TFM/TFG
-* Organización actividades I\+D\+i
+* Organización actividades I+D+i
 
 Contienen todos los items de producción científica que necesitan validación, es decir, los que vienen del CVN.
 
@@ -46,10 +68,10 @@ En el buscador se podrá buscar por:
 * Título de la publicación
 * Rango de fecha de publicación
 * Estado: puede tener unos de los siguiente valores:
-	+ Pendiente: ningún IP de grupo ha validado el item. No cuenta para la baremación ACI.
-	+ Validado parcialmente: ha sido validado por uno o varios de los IP de los grupos de investigación a los que pertenecen los autores de la publicación, pero no por todos los IPs. Cuenta para la baremación ACI del grupo que ha sido validado.
-	+ Validado: ha sigo validado por todos los IP de los grupos de investigación a los que pertenecen los autores de la publicación. Cuenta para la baremación ACI.
-	+ Rechazado: ha sigo rechazado por uno de los IP de grupo de investigación. No cuenta para la baremación ACI.
+  + Pendiente: ningún IP de grupo ha validado el item. No cuenta para la baremación ACI.
+  + Validado parcialmente: ha sido validado por uno o varios de los IP de los grupos de investigación a los que pertenecen los autores de la publicación, pero no por todos los IPs. Cuenta para la baremación ACI del grupo que ha sido validado.
+  + Validado: ha sigo validado por todos los IP de los grupos de investigación a los que pertenecen los autores de la publicación. Cuenta para la baremación ACI.
+  + Rechazado: ha sigo rechazado por uno de los IP de grupo de investigación. No cuenta para la baremación ACI.
 
 ![](/attachments/597853265/597868184.png)
 
@@ -79,10 +101,10 @@ En el buscador se podrá buscar por:
 * Nombre del congreso
 * Rango de fecha de celebración
 * Estado: puede tener unos de los siguiente valores:
-	+ Pendiente: ningún IP de grupo ha validado el item
-	+ Validado parcialmente: ha sido validado por uno o varios de los IP de los grupos de investigación a los que pertenecen los autores del trabajo presentado en el congreso, pero no por todos los IPs.
-	+ Validado: ha sigo validado por todos los IP de los grupos de investigación a los que pertenecen los autores del trabajo presentado en el congreso
-	+ Rechazado: ha sigo rechazado por uno de los IP de grupo de investigación
+  + Pendiente: ningún IP de grupo ha validado el item
+  + Validado parcialmente: ha sido validado por uno o varios de los IP de los grupos de investigación a los que pertenecen los autores del trabajo presentado en el congreso, pero no por todos los IPs.
+  + Validado: ha sigo validado por todos los IP de los grupos de investigación a los que pertenecen los autores del trabajo presentado en el congreso
+  + Rechazado: ha sigo rechazado por uno de los IP de grupo de investigación
 
 ![](/attachments/597853265/597867669.png)
 
@@ -111,10 +133,10 @@ En el buscador se podrá buscar por:
 * Descripción
 * Rango de fecha de inicio
 * Estado: puede tener unos de los siguiente valores:
-	+ Pendiente: ningún IP de grupo ha validado el item
-	+ Validado parcialmente: ha sido validado por uno o varios de los IP de los grupos de investigación a los que pertenecen los autores de la obra, pero no por todos los IPs.
-	+ Validado: ha sigo validado por todos los IP de los grupos de investigación a los que pertenecen los autores de la obra.
-	+ Rechazado: ha sigo rechazado por uno de los IP de grupo de investigación
+  + Pendiente: ningún IP de grupo ha validado el item
+  + Validado parcialmente: ha sido validado por uno o varios de los IP de los grupos de investigación a los que pertenecen los autores de la obra, pero no por todos los IPs.
+  + Validado: ha sigo validado por todos los IP de los grupos de investigación a los que pertenecen los autores de la obra.
+  + Rechazado: ha sigo rechazado por uno de los IP de grupo de investigación
 
 ![](/attachments/597853265/597868690.png)
 
@@ -143,10 +165,10 @@ En el buscador se podrá buscar por:
 * Nombre del comité editorial
 * Rango de fecha de inicio
 * Estado: puede tener unos de los siguiente valores:
-	+ Pendiente: ningún IP de grupo ha validado el item
-	+ Validado parcialmente: ha sido validado por uno o varios de los IP de los grupos de investigación a los que pertenecen los autores del comité editorial, pero no por todos los IPs.
-	+ Validado: ha sigo validado por todos los IP de los grupos de investigación a los que pertenecen los autores del comité editorial.
-	+ Rechazado: ha sigo rechazado por uno de los IP de grupo de investigación
+  + Pendiente: ningún IP de grupo ha validado el item
+  + Validado parcialmente: ha sido validado por uno o varios de los IP de los grupos de investigación a los que pertenecen los autores del comité editorial, pero no por todos los IPs.
+  + Validado: ha sigo validado por todos los IP de los grupos de investigación a los que pertenecen los autores del comité editorial.
+  + Rechazado: ha sigo rechazado por uno de los IP de grupo de investigación
 
 ![](/attachments/597853265/597868693.png)
 
@@ -175,10 +197,10 @@ En el buscador se podrá buscar por:
 * Tipo de proyecto
 * Rango de fecha de defensa
 * Estado: puede tener unos de los siguiente valores:
-	+ Pendiente: ningún IP de grupo ha validado el item
-	+ Validado parcialmente: ha sido validado por uno o varios de los IP de los grupos de investigación a los que pertenecen los directores de la tesis, pero no por todos los IPs.
-	+ Validado: ha sigo validado por todos los IP de los grupos de investigación a los que pertenecen los directores de la tesis.
-	+ Rechazado: ha sigo rechazado por uno de los IP de grupo de investigación
+  + Pendiente: ningún IP de grupo ha validado el item
+  + Validado parcialmente: ha sido validado por uno o varios de los IP de los grupos de investigación a los que pertenecen los directores de la tesis, pero no por todos los IPs.
+  + Validado: ha sigo validado por todos los IP de los grupos de investigación a los que pertenecen los directores de la tesis.
+  + Rechazado: ha sigo rechazado por uno de los IP de grupo de investigación
 
 ![](/attachments/597853265/597868684.png)
 
@@ -195,9 +217,9 @@ Si el item esta en estado "Validado"  o "Rechazado" no se activará ningún bot
 
 ![](/attachments/597853265/597868375.png)
 
-### Organización actividades I\+D\+i
+### Organización actividades I+D+i
 
-Al ir a la opción del menú "Organización actividades I\+D\+i" se muestra el listado de comités científicos y/o organizadores dados de alta en el CVN y enviados a PRC para su validación.
+Al ir a la opción del menú "Organización actividades I+D+i" se muestra el listado de comités científicos y/o organizadores dados de alta en el CVN y enviados a PRC para su validación.
 
 En el buscador se podrá buscar por:
 
@@ -207,10 +229,10 @@ En el buscador se podrá buscar por:
 * Modo de participación
 * Rango de fecha de inicio
 * Estado: puede tener unos de los siguiente valores:
-	+ Pendiente: ningún IP de grupo ha validado el item
-	+ Validado parcialmente: ha sido validado por uno o varios de los IP de los grupos de investigación a los que pertenece el autor de la organización del comité científico, pero no por todos los IPs.
-	+ Validado: ha sigo validado por todos los IP de los grupos de investigación a los que pertenecen el autor de la organización del comité científico.
-	+ Rechazado: ha sigo rechazado por uno de los IP de grupo de investigación
+  + Pendiente: ningún IP de grupo ha validado el item
+  + Validado parcialmente: ha sido validado por uno o varios de los IP de los grupos de investigación a los que pertenece el autor de la organización del comité científico, pero no por todos los IPs.
+  + Validado: ha sigo validado por todos los IP de los grupos de investigación a los que pertenecen el autor de la organización del comité científico.
+  + Rechazado: ha sigo rechazado por uno de los IP de grupo de investigación
 
 ![](/attachments/597853265/597868687.png)
 
@@ -226,9 +248,6 @@ Si el item esta en estado "Pendiente" o "Validado parcialmente", desde el detall
 Si el item esta en estado "Validado"  o "Rechazado" no se activará ningún botón (ni "Validar" ni "Rechazar")
 
 ![](/attachments/597853265/597868365.png)
-
-  
-
 
 ## Convocatorias
 
@@ -246,7 +265,7 @@ En el buscador se podrá buscar por:
 
 El gestor/administrador podrá lanzar el proceso de baremación del año en el que se esta. Se lanzará y se ejecutará en segundo plano debido al tiempo que tarda en realizar todas las operaciones y consultas. Una vez finalizado el proceso se enviará un comunicado al gestor para informarle de que ya se ha finalizado el reparto ACI y que puede ir a consultarlo a la opción del menú "Informes". Se informará el campo "Fecha baremación" una vez que este hecho el reparto. Si ya tiene la fecha de baremación informada es que ya se ha lanzado al menos una vez el reparto ACI, se dejará volver a lanzarlo, pero se borrarán los datos anteriores y se cogerán los nuevos cálculos para el reparto ACI. Para la misma convocatoria (para el mismo año) no hay histórico, sino que se borran los datos anteriores.
 
-### Paso 1: Crear nueva convocatoria \- Datos generales
+### Paso 1: Crear nueva convocatoria - Datos generales
 
 Para crear una nueva convocatoria (sin usar la funcionalidad de clonar) se irá a la acción de "Añadir nueva convocatoria". Se abrirá la pantalla con los datos generales de la convocatoria para proceder a su cumplimentación.
 
@@ -257,7 +276,7 @@ Se tendrá que informar todos los campos obligatorios y luego se pueden optar po
 1. pulsar directamente el botón "Guardar" sin ir a las pantallas de "Baremos y puntuaciones" y "Moduladores y rangos", por lo que la convocatoria quedará guardada en el SGI pero no tendrá ningún criterio de baremación a aplicar a la producción científica. Se podrán informar en otro momento editando la convocatoria.
 2. ir a la pantalla "Baremos y puntuaciones" y a la de "Moduladores y rangos" y cumplimentar la información
 
-### Paso 2: Crear nueva convocatoria \- Baremos y puntuaciones
+### Paso 2: Crear nueva convocatoria - Baremos y puntuaciones
 
 Se mostrará en forma de árbol todos los baremos disponibles en el SGI, donde el gestor podrá marcar aquellos que quiere que se tengan en cuenta en la convocatoria que esta editando. Por defecto todos los baremos estarán desactivados.
 
@@ -265,7 +284,7 @@ Para "Guardar" tendrá que cumplimentar los datos de peso y/o ponderación mostr
 
 En caso de tener marcado un baremo se tendrá que ir a su edición (icono del ojo) para cumplimentar sus datos:
 
-* Peso: es el peso del baremo, únicamente se aplica el peso para los nodos raíz (los de orden 1\), es decir, a los epígrafes de Sexenios, Aportación coste indirectos y Producción científica. Campo obligatorio si es un nodo raíz.
+* Peso: es el peso del baremo, únicamente se aplica el peso para los nodos raíz (los de orden 1), es decir, a los epígrafes de Sexenios, Aportación coste indirectos y Producción científica. Campo obligatorio si es un nodo raíz.
 * Puntos: son los puntos que se les da al baremo, únicamente se les puede dar puntos a los nodos hoja, es decir, aquellos que no tienen hijos. Dato obligatorio si es un nodo hoja.
 
 Una vez editados todos los baremos marcados y cumplimentados se podrá pulsar el botón de "Guardar".
@@ -274,7 +293,7 @@ Una vez editados todos los baremos marcados y cumplimentados se podrá pulsar el
 
 A continuación se muestra un ejemplo de como se debe de cumplimentar el baremo de "Sexenios".
 
-Al ser un nodo raíz (orden 1\) se debe de informar el campo "Peso".
+Al ser un nodo raíz (orden 1) se debe de informar el campo "Peso".
 
 Al ser un nodo hoja (sin hijos) se debe de informar el campo "Puntos".
 
@@ -284,7 +303,7 @@ Al ser un nodo hoja (sin hijos) se debe de informar el campo "Puntos".
 
 A continuación se muestra un ejemplo de como se debe de cumplimentar el baremo de "Aportación costes indirectos".
 
-Al ser un nodo raíz (orden 1\) se debe de informar el campo "Peso".
+Al ser un nodo raíz (orden 1) se debe de informar el campo "Peso".
 
 Al ser un nodo hoja (sin hijos) se debe de informar el campo "Puntos".
 
@@ -292,28 +311,25 @@ Se informa el campo "Cuantía por punto". La cantidad de la cuantía del proyect
 
 ![](/attachments/597853265/597871793.png)
 
-  
-
-
 #### Baremo producción científica
 
 A continuación se muestra un ejemplo de como se debe de cumplimentar el baremo de "Producción científica".
 
-Al ser un nodo raíz (orden 1\) se debe de informar el campo "Peso".
+Al ser un nodo raíz (orden 1) se debe de informar el campo "Peso".
 
 El campo "Puntos" no se muestra en la pantalla porque no es un nodo "hoja".
 
 ![](/attachments/597853265/597871786.png)
 
-#### Baremo Autoría \- BCI \- Editorial extranjera
+#### Baremo Autoría - BCI - Editorial extranjera
 
-A continuación se muestra un ejemplo de como se debe de cumplimentar el baremo de "Autoría \- BCI \- Editorial extranjera".
+A continuación se muestra un ejemplo de como se debe de cumplimentar el baremo de "Autoría - BCI - Editorial extranjera".
 
 Al ser un nodo hoja (sin hijos) se debe de informar el campo "Puntos".
 
 ![](/attachments/597853265/597874043.png)
 
-### Paso 3: Crear nueva convocatoria \- Moduladores y rangos
+### Paso 3: Crear nueva convocatoria - Moduladores y rangos
 
 Se muestran los valores de los moduladores:
 
@@ -323,7 +339,7 @@ Se muestran los valores de los moduladores:
 * Cuantía contratos
 * Licencias de explotación
 
-Por defecto estarán con puntuación a 1\.
+Por defecto estarán con puntuación a 1.
 
 ![](/attachments/597853265/597871778.png)
 
@@ -331,7 +347,7 @@ Los rangos de la cuantía de los costes indirectos, cuantía de los contratos y 
 
 Los rangos se han de introducir de manera secuencial y ordenada de menor a mayor importe (se creará primero el rango de tipo Inicial, luego tantos intermedios como se necesite y por último el rango Final).
 
-Se validará que no existan saltos ni intersecciones entre los rangos configurados, esto es, un tramo ha de comenzar donde finalice el inmediatamente anterior \+ 1\.
+Se validará que no existan saltos ni intersecciones entre los rangos configurados, esto es, un tramo ha de comenzar donde finalice el inmediatamente anterior + 1.
 
 También se validará que no exista otro rango de tipo inicial o final ya añadido a la lista.
 
@@ -395,13 +411,9 @@ Al pulsar el botón de "Generar PDF" se genera un informe con el siguiente forma
 
 ### Detalle de grupo
 
-Tendrá acceso a este informe los investigadores del grupo y los gestores/administradores. Los investigadores únicamente podrán seleccionar un grupo al que pertenecen o han pertenecido.  
-
+Tendrá acceso a este informe los investigadores del grupo y los gestores/administradores. Los investigadores únicamente podrán seleccionar un grupo al que pertenecen o han pertenecido.
 
 Al seleccionar el tipo de informe "Detalla de grupo" se mostrará un campo para seleccionar el grupo del que se quiere generar el informe.
-
-  
-
 
 ![](/attachments/597853265/597868437.png)
 
@@ -413,13 +425,13 @@ NOTA: La forma de obtener el precio por punto es:
 
 Por ejemplo para sexenios:
 
-X: Suma total de todos los puntos de sexenios todos los grupos. Ejemplo 2000\.
+X: Suma total de todos los puntos de sexenios todos los grupos. Ejemplo 2000.
 
-Y: Importe de producción cientifíca definido en la configuración de la convocatoria. Ejemplo 200\.000
+Y: Importe de producción cientifíca definido en la configuración de la convocatoria. Ejemplo 200.000
 
-Z: Peso de Sexenios:  Y \* (Z/100\).  Ejemplo 200\.000 \* (10/100\) son 20\.000
+Z: Peso de Sexenios:  Y \* (Z/100).  Ejemplo 200.000 \* (10/100) son 20.000
 
-Precio punto sexenio: Z  / X. Ejemplo 20000/2000 \= 10
+Precio punto sexenio: Z  / X. Ejemplo 20000/2000 = 10
 
 El resultado es el valor de un punto, luego se multiplicará por los puntos de cada grupo.
 
@@ -434,7 +446,3 @@ Al seleccionar el tipo de informe "Detalle de producción por investigador/a" se
 Una vez seleccionado el investigador se podrá pulsar el botón de "Generar PDF" para generar el informe del investigador seleccionado. El formato de dicho informe es:
 
 ![](/attachments/597853265/597868433.png)
-
-
-
-

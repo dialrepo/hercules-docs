@@ -1,6 +1,15 @@
-# Hércules : CU\-ETI\-0060\-006 \- Equipo investigador \- Alta
+# CU-ETI-0060-006 - Equipo investigador - Alta
 
-
+|  |  |
+| --- | --- |
+| Cod. CU | ********CU-ETI-0060-006 -Equipo investigador - Alta******** |
+| Ver. objetivo |  |
+| Ver. CU | 1.0.0 |
+| Estado | LIBERADO\_ |
+| Fec. Aprobación |  |
+| Épica, historia |  |
+| Actores | ACT-ETI-002-Investigador  ACT-ETI-003-Solicitante  ACT-ETI-006-Responsable memoria |
+| Frecuencia | Media |
 
 ### Descripción
 
@@ -10,11 +19,11 @@ Formulario para añadir personas al equipo investigador de una petición de eval
 
 #### Actor principal
 
-ACT\-ETI\-002\-Investigador
+ACT-ETI-002-Investigador
 
-ACT\-ETI\-003\-Solicitante
+ACT-ETI-003-Solicitante
 
-ACT\-ETI\-006\-Responsable memoria
+ACT-ETI-006-Responsable memoria
 
 ### Precondiciones
 
@@ -49,7 +58,7 @@ La persona es añadida a la lista del equipo investigador pero sólo se ven los 
 9. Se realizan las validaciones en cuanto a formato, obligatoriedad habituales.
 10. Se presenta la persona seleccionada en el listado de equipo investigador de la petición de evaluación.
 
-### Extensiones (flujos alternativos) \- No existe el usuario
+### Extensiones (flujos alternativos) - No existe el usuario
 
 1. Se presenta la pantalla Mis peticiones de evaluación con el listado de todas las peticiones de evaluación dadas de alta en el sistema y que la persona creadora de la misma sea la persona que se está logando en el sistema o bien este como responsable de una de las memorias de la petición de evaluación.
 2. Se selecciona la petición de evaluación.
@@ -60,7 +69,3 @@ La persona es añadida a la lista del equipo investigador pero sólo se ven los 
 7. No existe el usuario en el sistema.
 8. Se le informa que dicho usuario no se puede añadir que tendrá que crearlo antes como usuario externo desde el módulo de usuarios.
 9. La persona no se añade al listado.
-
-
-
-

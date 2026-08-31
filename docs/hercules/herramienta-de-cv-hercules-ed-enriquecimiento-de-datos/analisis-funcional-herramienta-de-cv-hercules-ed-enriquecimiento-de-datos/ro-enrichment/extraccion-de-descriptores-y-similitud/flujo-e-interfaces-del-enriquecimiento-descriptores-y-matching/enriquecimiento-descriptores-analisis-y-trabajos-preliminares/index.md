@@ -1,9 +1,5 @@
-# Hércules : Enriquecimiento. Descriptores. Análisis y trabajos preliminares
+# Enriquecimiento. Descriptores. Análisis y trabajos preliminares
 
-
-
-Se agrupan en este epígrafe los análisis y trabajos realizados durante el desarrollo del enriquecimiento con descriptores temáticos y específicos.
-
-
-
-
+- [Enfoques para extracción de descriptores temáticos de ROs](/hercules/herramienta-de-cv-hercules-ed-enriquecimiento-de-datos/analisis-funcional-herramienta-de-cv-hercules-ed-enriquecimiento-de-datos/ro-enrichment/extraccion-de-descriptores-y-similitud/flujo-e-interfaces-del-enriquecimiento-descriptores-y-matching/enriquecimiento-descriptores-analisis-y-trabajos-preliminares/enfoques-para-extraccion-de-descriptores-tematicos-de-ros)
+- [Extracción de descriptores. Análisis y trabajos iniciales](/hercules/herramienta-de-cv-hercules-ed-enriquecimiento-de-datos/analisis-funcional-herramienta-de-cv-hercules-ed-enriquecimiento-de-datos/ro-enrichment/extraccion-de-descriptores-y-similitud/flujo-e-interfaces-del-enriquecimiento-descriptores-y-matching/enriquecimiento-descriptores-analisis-y-trabajos-preliminares/extraccion-de-descriptores-analisis-y-trabajos-iniciales)
+- [Extracción de descriptores. Experimentos y resultados](/hercules/herramienta-de-cv-hercules-ed-enriquecimiento-de-datos/analisis-funcional-herramienta-de-cv-hercules-ed-enriquecimiento-de-datos/ro-enrichment/extraccion-de-descriptores-y-similitud/flujo-e-interfaces-del-enriquecimiento-descriptores-y-matching/enriquecimiento-descriptores-analisis-y-trabajos-preliminares/extraccion-de-descriptores-experimentos-y-resultados)

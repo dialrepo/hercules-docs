@@ -1,6 +1,4 @@
-# Hércules : Cuadro de mandos
-
-
+# Cuadro de mandos
 
 El desarrollo de esta interfaz se llevará a cabo mediante el Framework Vue.js y se realizará en formato de interfaz web, consumiendo los datos directamente utilizando el API Rest que se proporciona como backend. Con él liberamos la carga del servidor, ya que este solo se encargará de procesar las peticiones JSON desde y hacia el explorador. Se desarrollará utilizando Vue.jspor su versatilidad, adaptabilidad y escalabilidad.
 
@@ -8,7 +6,7 @@ La interfaz será de tipo *Dashboard, c*uadro de mando o panel de control, donde
 
 Para facilitar la visualización del dashboard se ha adjuntado, a cada una de las secciones definidas, una figura que contiene un maquetado preliminar.
 
-Enlace a GitHub: [https://github.com/hercules\-rpa/dashboard](https://github.com/hercules-rpa/dashboard "https://github.com/hercules-rpa/dashboard")
+Enlace a GitHub: <https://github.com/hercules-rpa/dashboard>
 
 ### **Vista** **P****rincipal** **Dashboard**
 
@@ -26,10 +24,7 @@ Esta vista ofrece la información de todos los procesos disponibles para ser eje
 
 Esta vista mostrará un formulario para rellenar los datos de entrada que va a necesitar el proceso. Además, se deberá establecer la planificación de detalles, como su periodicidad o prioridad. Esta ventana será fundamental ya que, con ella, el usuario será capaz de ejecutar procesos o planificarlos para que se ejecuten más adelante.
 
-En la imagen que podemos observar a continuación se muestra un ejemplo del formulario asociado al [proceso 4](/hercules/rpa/modulo-de-automatizacion-y-gestion/analisis-y-procesos/proceso-4-sistemas-inteligentes-de-encaje-entre-convocatorias-e-investigadores/index.md "/hercules/rpa/modulo-de-automatizacion-y-gestion/analisis-y-procesos/proceso-4-sistemas-inteligentes-de-encaje-entre-convocatorias-e-investigadores/index.md") de Hércules\-RPA:
-
-  
-
+En la imagen que podemos observar a continuación se muestra un ejemplo del formulario asociado al [proceso 4](/hercules/rpa/modulo-de-automatizacion-y-gestion/analisis-y-procesos/proceso-4-sistemas-inteligentes-de-encaje-entre-convocatorias-e-investigadores) de Hércules-RPA:
 
 ![](/attachments/598147510/598148054.png)
 
@@ -53,21 +48,15 @@ Se dispone también de información referente al sistema general, como el histó
 
 A continuación, se muestra un ejemplo de esta vista:
 
-  
-
-
 ![](/attachments/598147510/622952452.png)
 
 ![](/attachments/598147510/598148066.png)
-
-  
-
 
 ### Vista Historial de Ejecuciones
 
 Esta vista contendrá una tabla con el histórico de todos los procesos que se han ejecutado hasta la fecha en el sistema. El usuario será capaz de filtrar los datos usando la barra de búsqueda disponible en el encabezado. Adicionalmente, contiene información relevante sobre la ejecución, como, por ejemplo, el inicio, finalización, robot ejecutor o resultado final.
 
-Haciendo doble clic sobre el proceso, el usuario será direccionado hacia la vista que contendrá la información completa de esa ejecución. Asimismo, también podrá hacer clic sobre los router\-links marcados en azul para ir directamente a la ventana pertinente del elemento seleccionado, como el robot o schedule. A continuación, se muestra un ejemplo de esta vista:
+Haciendo doble clic sobre el proceso, el usuario será direccionado hacia la vista que contendrá la información completa de esa ejecución. Asimismo, también podrá hacer clic sobre los router-links marcados en azul para ir directamente a la ventana pertinente del elemento seleccionado, como el robot o schedule. A continuación, se muestra un ejemplo de esta vista:
 
 ![](/attachments/598147510/598148065.png)
 
@@ -87,12 +76,9 @@ Adicionalmente, el usuario podrá borrar o editar la planificación usando los b
 
 ### Vista Planificación Individual
 
-Esta vista mostrará al usuario toda la información derivada de una planificación concreta. Se dispone de una tabla donde se localizan todas las ejecuciones que se han llevado a cabo dentro de esa planificación. Para ofrecer una forma rápida e intuitiva de consultarlo, el usuario podrá hacer clic sobre las ejecuciones de la tabla y así consultar el log de ese caso concreto. Asimismo, será capaz de dirigirse a la ventana de “log de ejecución” haciendo doble clic sobre la ejecución. Finalmente, el usuario podrá filtrar, mediante la barra de entrada de texto en el encabezado, para poder consultar la ejecución. A continuación, se muestra un ejemplo de esta vista: 
+Esta vista mostrará al usuario toda la información derivada de una planificación concreta. Se dispone de una tabla donde se localizan todas las ejecuciones que se han llevado a cabo dentro de esa planificación. Para ofrecer una forma rápida e intuitiva de consultarlo, el usuario podrá hacer clic sobre las ejecuciones de la tabla y así consultar el log de ese caso concreto. Asimismo, será capaz de dirigirse a la ventana de “log de ejecución” haciendo doble clic sobre la ejecución. Finalmente, el usuario podrá filtrar, mediante la barra de entrada de texto en el encabezado, para poder consultar la ejecución. A continuación, se muestra un ejemplo de esta vista:
 
 ![](/attachments/598147510/598148062.png)
-
-  
-
 
 ### Vista Problemas y Errores
 
@@ -121,19 +107,3 @@ Con esta vista podemos editar los configuradores de los procesos, mostrando las 
 En esta vista se puede editar y comprobar la configuración de los distintos ajustes globales que tiene la aplicación, como direcciones de bases de datos, configuración AMQP, etc. A continuación, se muestra un ejemplo de esta vista:
 
 ![](/attachments/598147510/598148058.png)
-
-  
-
-
-  
-
-
-  
-
-
-  
-
-
-
-
-

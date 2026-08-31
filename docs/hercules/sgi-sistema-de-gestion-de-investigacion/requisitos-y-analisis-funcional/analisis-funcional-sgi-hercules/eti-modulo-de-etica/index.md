@@ -1,13 +1,91 @@
-# Hércules : ETI \- Módulo de ética
+# ETI - Módulo de ética
 
+* [1. Descripción funcional](#ETIMódulodeética-1.Descripciónfuncional)
+* + [2.1 Nueva petición o solicitud de evaluación ética](#ETIMódulodeética-2.1Nuevapeticiónosolicituddeevaluaciónética)
+  + [2.2 Edición de solicitud de evaluación de ética](#ETIMódulodeética-2.2Edicióndesolicituddeevaluacióndeética)
+    - [2.2.1 Solicitud de evaluación - Datos generales](#ETIMódulodeética-2.2.1Solicituddeevaluación-Datosgenerales)
+    - [2.2.2 Solicitud de evaluación - Equipo investigador](#ETIMódulodeética-2.2.2Solicituddeevaluación-Equipoinvestigador)
+      * [Nueva persona del equipo](#ETIMódulodeética-Nuevapersonadelequipo)
+      * [Eliminar persona del equipo](#ETIMódulodeética-Eliminarpersonadelequipo)
+    - [2.2.3 Solicitud de evaluación - Asignación de tareas](#ETIMódulodeética-2.2.3Solicituddeevaluación-Asignacióndetareas)
+      * [Nueva tarea](#ETIMódulodeética-Nuevatarea)
+      * [Edición tarea](#ETIMódulodeética-Edicióntarea)
+      * [Eliminar tarea](#ETIMódulodeética-Eliminartarea)
+    - [2.2.4 Solicitud de evaluación - Memorias](#ETIMódulodeética-2.2.4Solicituddeevaluación-Memorias)
+      * [Creación de nueva memoria](#ETIMódulodeética-Creacióndenuevamemoria)
+        + [Datos generales](#ETIMódulodeética-Datosgenerales)
+      * [Edición de memoria](#ETIMódulodeética-Edicióndememoria)
+        + [Datos generales](#ETIMódulodeética-Datosgenerales.1)
+        + [Formulario de memoria](#ETIMódulodeética-Formulariodememoria)
+        + [Documentación](#ETIMódulodeética-Documentación)
+        + [Seguimiento anual](#ETIMódulodeética-Seguimientoanual)
+        + [Seguimiento final](#ETIMódulodeética-Seguimientofinal)
+        + [Retrospectiva](#ETIMódulodeética-Retrospectiva)
+        + [Informes](#ETIMódulodeética-Informes)
+        + [Evaluaciones](#ETIMódulodeética-Evaluaciones)
+      * [Eliminar (desactivar) memoria](#ETIMódulodeética-Eliminar(desactivar)memoria)
+      * [Enviar a secretaría](#ETIMódulodeética-Enviarasecretaría)
+      * [Enviar a secretaria retrospectiva](#ETIMódulodeética-Enviarasecretariaretrospectiva)
+  + [Eliminar (desactivar) petición de evaluación](#ETIMódulodeética-Eliminar(desactivar)peticióndeevaluación)
+  + [Formulario autoevaluación (checklist)](#ETIMódulodeética-Formularioautoevaluación(checklist))
+* [Perfil Gestor (ACT-ETI-001-Gestor)](#ETIMódulodeética-PerfilGestor(ACT-ETI-001-Gestor))
+  + [Peticiones de evaluación](#ETIMódulodeética-Peticionesdeevaluación)
+    - [Subsanación](#ETIMódulodeética-Subsanación)
+    - [Volver estado anterior](#ETIMódulodeética-Volverestadoanterior)
+  + [Convocatorias reunión](#ETIMódulodeética-Convocatoriasreunión)
+    - [Nueva convocatoria reunión](#ETIMódulodeética-Nuevaconvocatoriareunión)
+      * [Datos generales](#ETIMódulodeética-Datosgenerales.2)
+      * [Asignación memorias](#ETIMódulodeética-Asignaciónmemorias)
+      * [Botones](#ETIMódulodeética-Botones)
+    - [Edición convocatoria reunión](#ETIMódulodeética-Ediciónconvocatoriareunión)
+      * [Datos generales](#ETIMódulodeética-Datosgenerales.3)
+      * [Asignación memorias](#ETIMódulodeética-Asignaciónmemorias.1)
+      * [Botones](#ETIMódulodeética-Botones.1)
+    - [Envío convocatoria reunión](#ETIMódulodeética-Envíoconvocatoriareunión)
+    - [Eliminar (desactivar) convocatoria reunión](#ETIMódulodeética-Eliminar(desactivar)convocatoriareunión)
+  + [Evaluaciones](#ETIMódulodeética-Evaluaciones.1)
+    - [Evaluar](#ETIMódulodeética-Evaluar)
+      * [Evaluación](#ETIMódulodeética-Evaluación)
+      * [Comentarios](#ETIMódulodeética-Comentarios)
+      * [Documentación](#ETIMódulodeética-Documentación.1)
+  + [Seguimiento](#ETIMódulodeética-Seguimiento)
+    - [Evaluar](#ETIMódulodeética-Evaluar.1)
+      * [Evaluación](#ETIMódulodeética-Evaluación.1)
+      * [Comentarios](#ETIMódulodeética-Comentarios.1)
+      * [Documentación](#ETIMódulodeética-Documentación.2)
+  + [Actas](#ETIMódulodeética-Actas)
+    - [Nueva acta](#ETIMódulodeética-Nuevaacta)
+    - [Editar acta](#ETIMódulodeética-Editaracta)
+      * [Datos generales](#ETIMódulodeética-Datosgenerales.4)
+      * [Memorias](#ETIMódulodeética-Memorias)
+      * [Asistentes](#ETIMódulodeética-Asistentes)
+    - [Ver acta](#ETIMódulodeética-Veracta)
+    - [Finalizar acta](#ETIMódulodeética-Finalizaracta)
+  + [Evaluadores](#ETIMódulodeética-Evaluadores)
+    - [Alta evaluador](#ETIMódulodeética-Altaevaluador)
+    - [Editar evaluador](#ETIMódulodeética-Editarevaluador)
+    - [Eliminar (desactivar) evaluador](#ETIMódulodeética-Eliminar(desactivar)evaluador)
+* [Perfil Evaluador (ACT-ETI-004-Evaluador, ACT-ETI-005-Técnico)](#ETIMódulodeética-PerfilEvaluador(ACT-ETI-004-Evaluador,ACT-ETI-005-Técnico))
+  + [Evaluaciones](#ETIMódulodeética-Evaluaciones.2)
+    - [Evaluar](#ETIMódulodeética-Evaluar.2)
+      * [Comentarios](#ETIMódulodeética-Comentarios.2)
+      * [Datos memoria](#ETIMódulodeética-Datosmemoria)
+* [Perfil administrador (ACT-ETI-007-Administrador)](#ETIMódulodeética-Perfiladministrador(ACT-ETI-007-Administrador))
 
-
-  
-
+- [Comunicados](#ETIMódulodeética-Comunicados)
+- [Informes](#ETIMódulodeética-Informes.1)
+- [Procesos](#ETIMódulodeética-Procesos)
+  * [Paso a archivado por inactividad (modificaciones mínimas)](#ETIMódulodeética-Pasoaarchivadoporinactividad(modificacionesmínimas))
+  * [Paso a archivado por no presentar de nuevo el informe](#ETIMódulodeética-Pasoaarchivadopornopresentardenuevoelinforme)
+  * [Casos de uso relacionados](#ETIMódulodeética-Casosdeusorelacionados)
+  * [Interfaces relacionados](#ETIMódulodeética-Interfacesrelacionados)
+- [Integraciones](#ETIMódulodeética-Integraciones)
+- [Flujo de estados de una memoria](#ETIMódulodeética-Flujodeestadosdeunamemoria)
+- [Modelo lógico](#ETIMódulodeética-Modelológico)
 
 Módulo del SGI que implementa el ciclo de gestión de la Ética en proyectos de investigación.
 
-### 1\. Descripción funcional
+### 1. Descripción funcional
 
 El módulo de Ética permite realizar la gestión de las solicitudes de evaluación ética de proyectos de investigación de forma integrada en el SGI Hércules: el personal investigador realizará las solicitudes de evaluación ética de sus proyectos que serán tramitadas por el personal de gestión correspondiente.
 
@@ -17,7 +95,7 @@ Este módulo debe gestionar un sistema de roles y permisos, para implementar tre
 * La del personal de gestión encargado de realizar la gestión de las solicitudes de evaluaciones de proyectos y asignando los dictámenes.
 * La del personal evaluador que participará en la reuniones de evaluación y revisará las memorias.
 
-Cada solicitud de evaluación ética que se genera está compuesta por una o varias memorias, en función de la naturaleza del proyecto desde el punto de vista ético. Es decir, en función del uso que sea necesario hacer de seres humanos, sus datos o sus muestras (se generará una memoria  de tipo M10\), de  animales (se generará una o varias memorias de tipo M20\) y/o de agentes biológicos (se generará una memoria de tipo M30\).
+Cada solicitud de evaluación ética que se genera está compuesta por una o varias memorias, en función de la naturaleza del proyecto desde el punto de vista ético. Es decir, en función del uso que sea necesario hacer de seres humanos, sus datos o sus muestras (se generará una memoria  de tipo M10), de  animales (se generará una o varias memorias de tipo M20) y/o de agentes biológicos (se generará una memoria de tipo M30).
 
 A continuación se detalla el flujo de solicitud de una evaluación ética de proyecto desde la fase de solicitud de convocatoria (módulo CSP):
 
@@ -51,10 +129,7 @@ Cada par evaluador tiene uno o más peticiones de  evaluación de proyectos a 
 
 En la reunión de evaluación con los informes de petición de los distintos proyectos (entregados por los investigadores) y con las fichas de los evaluadores se llega a un resultado que es un acta y un informe para cada uno de los proyectos revisados. Dicha documentación  es realizada por el gestor.
 
-  
-
-
-El personal de gestión creará las convocatorias de reunión para cada uno de los comités. Cada convocatoria tendrá un fecha de celebración concreta y una fecha límite de presentación de solicitudes de evaluación de proyectos para que puedan ser incluidas en dicha convocatoria. En cada convocatoria de reunión se incluirán varias solicitudes de evaluación remitidas por parte del personal investigador. Las memorias de cada solicitud de evaluación serán incluidas en una o varias convocatorias de reunión dependiendo del comité por el que deban ser evaluadas (seres humanos, experimentación animal o experimentación con agentes biológicos). Para cada memoria incluida en una convocatoria de reunión se asignará un par evaluador. El par evaluador estará formado por miembros del comité correspondiente y actuarán como evaluadores responsables, si bien la memoria podrá ser revisada por todos lo miembros del comité. 
+El personal de gestión creará las convocatorias de reunión para cada uno de los comités. Cada convocatoria tendrá un fecha de celebración concreta y una fecha límite de presentación de solicitudes de evaluación de proyectos para que puedan ser incluidas en dicha convocatoria. En cada convocatoria de reunión se incluirán varias solicitudes de evaluación remitidas por parte del personal investigador. Las memorias de cada solicitud de evaluación serán incluidas en una o varias convocatorias de reunión dependiendo del comité por el que deban ser evaluadas (seres humanos, experimentación animal o experimentación con agentes biológicos). Para cada memoria incluida en una convocatoria de reunión se asignará un par evaluador. El par evaluador estará formado por miembros del comité correspondiente y actuarán como evaluadores responsables, si bien la memoria podrá ser revisada por todos lo miembros del comité.
 
 Cuando se convoca una nueva reunión de evaluación todos los miembros activos del comité correspondiente son debidamente informados a través de notificación remitida de forma automática por el SGI.
 
@@ -62,55 +137,38 @@ El personal evaluador (miembros del comité) podrán revisar y aportar comentari
 
 En la reunión de evaluación el personal de gestión y los miembros del comité asignarán un dictamen a cada memoria, que deberá ser registrado por el personal de gestión. Tras finalizar la reunión el personal de gestión elaborará el acta de la misma. Cada memoria evaluada en la reunión dispondrá de un informe de evaluación resultante en el que figurará el dictamen otorgado y que podrá ser descargado por la persona investigadora solicitante.
 
-  
-
-
 A continuación se incluye una imagen que recoge el modelo de dominio de alto nivel del módulo de Ética.
-
-  
-
 
 ![](/attachments/597853840/841089092.bmp)
 
-  
-
-
-  
-
-
-Los actores involucrados en el módulo de ética se recogen en ETI \- Actores
+Los actores involucrados en el módulo de ética se recogen en ETI - Actores
 
 A continuación se amplia la descripción funcional del módulo de Ética desde el punto de vista de los diferentes actores involucrados
 
-  
-
-
-#### 2\.1 Nueva petición o solicitud de evaluación ética
+#### 2.1 Nueva petición o solicitud de evaluación ética
 
 Las peticiones o solicitudes de evaluación de ética pueden iniciarse directamente desde la creación de una solicitud de proyecto del módulo CSP pero también podrán crearse directamente desde el módulo de Ética, sin que queden en este caso vinculadas a ninguna solicitud de proyecto del módulo CSP.
 
-La creación desde el módulo de Ética se realizará desde el botón Añadir solicitud disponible en el listado inicial del apartado Solicitudes de evaluación [IU\-ETI\-0060\-001 Búsqueda y listado de solicitudes de evaluación \- Solicitante](https://confluence.treelogic.com/pages/viewpage.action?pageId=87818959 "https://confluence.treelogic.com/pages/viewpage.action?pageId=87818959")
+La creación desde el módulo de Ética se realizará desde el botón Añadir solicitud disponible en el listado inicial del apartado Solicitudes de evaluación [IU-ETI-0060-001 Búsqueda y listado de solicitudes de evaluación - Solicitante](https://confluence.treelogic.com/pages/viewpage.action?pageId=87818959)
 
 La creación de una nueva solicitud de evaluación ética requiera la recogida de los siguientes campos:
 
 * Título del proyecto: caja de texto
 * Tipo de actividad: desplegable con los valores:
-	+ Proyecto de investigación
-	+ Práctica docente
-	+ Investigación tutelada
+  + Proyecto de investigación
+  + Práctica docente
+  + Investigación tutelada
 * Tipo de investigación tutelada
-	+ Tesis doctoral
-	+ Trabajo Fin de Máster
-	+ Trabajo Fin de Grado
+  + Tesis doctoral
+  + Trabajo Fin de Máster
+  + Trabajo Fin de Grado
 * ¿Se dispone de financiación para realizar el proyecto? : Desplegable con dos valores "Sí" o "No". En caso de seleccionar el valor "Si" se mostrarán el resto de campos:  
-
-	+ Órgano financiador: campo de texto libre
-	+ Estado: desplegable con dos valores  
-	
-		- Solicitado
-		- Concedido
-		- Denegado
-	+ Importe financiación
+  + Órgano financiador: campo de texto libre
+  + Estado: desplegable con dos valores  
+    - Solicitado
+    - Concedido
+    - Denegado
+  + Importe financiación
 * Fecha inicio: calendario para marcar el día
 * Fecha fin: calendario para marcar el día
 * Resumen del proyecto: caja de texto
@@ -122,16 +180,10 @@ Además, la solicitud de evaluación ética constará, en la fase de creación d
 
 * Equipo investigador. Permitirá añadir a los miembros del equipo de proyecto. Por defecto, se añadirá siempre a la persona que realiza la solicitud de evaluación.
 
-  
-
-
 La creación de una nueva solicitud de evaluación de ética queda cubierta con los siguientes formularios:
 
-* [IU\-ETI\-0060\-003 \- Creación petición de evaluación \- Datos generales](https://confluence.treelogic.com/pages/viewpage.action?pageId=171409482 "https://confluence.treelogic.com/pages/viewpage.action?pageId=171409482")
-* [IU\-ETI\-0060\-004 \- Creación petición de evaluación \- Equipo investigador](https://confluence.treelogic.com/pages/viewpage.action?pageId=87818985 "https://confluence.treelogic.com/pages/viewpage.action?pageId=87818985")
-
-  
-
+* [IU-ETI-0060-003 - Creación petición de evaluación - Datos generales](https://confluence.treelogic.com/pages/viewpage.action?pageId=171409482)
+* [IU-ETI-0060-004 - Creación petición de evaluación - Equipo investigador](https://confluence.treelogic.com/pages/viewpage.action?pageId=87818985)
 
 La solicitud de evaluación ética se creará con estos datos iniciales (datos generales y equipo) dando posteriormente opción a continuar con la introducción de nuevos apartados:
 
@@ -140,9 +192,9 @@ La solicitud de evaluación ética se creará con estos datos iniciales (datos g
 
 Ambos apartados se explican en al funcionalidad de Edición de solicitud de evaluación.
 
-#### 2\.2 Edición de solicitud de evaluación de ética
+#### 2.2 Edición de solicitud de evaluación de ética
 
-Desde el listado inicial de solicitudes de evaluación de ética [IU\-ETI\-0060\-001 Búsqueda y listado de solicitudes de evaluación \- Solicitante](https://confluence.treelogic.com/pages/viewpage.action?pageId=87818959 "https://confluence.treelogic.com/pages/viewpage.action?pageId=87818959") se permitirá la edición de una solicitud de evaluación.
+Desde el listado inicial de solicitudes de evaluación de ética [IU-ETI-0060-001 Búsqueda y listado de solicitudes de evaluación - Solicitante](https://confluence.treelogic.com/pages/viewpage.action?pageId=87818959) se permitirá la edición de una solicitud de evaluación.
 
 La información de una solicitud de evaluación de ética estará agrupada en los siguientes apartados:
 
@@ -151,7 +203,7 @@ La información de una solicitud de evaluación de ética estará agrupada en lo
 * Asignación de tareas
 * Memorias
 
-##### 2\.2\.1 Solicitud de evaluación \- Datos generales
+##### 2.2.1 Solicitud de evaluación - Datos generales
 
 Los campos del apartado "Datos generales" diferirán según la solicitud de evaluación proceda de la creación desde el módulo de Ética o de la creación directa a través de la autoevaluación de una solicitud de proyecto del módulo de CSP
 
@@ -160,32 +212,27 @@ Si la solicitud de evaluación ética se ha creado desde este módulo, los campo
 * Código petición: será un código con el formato YYYY/secuencia , donde YYYY es el año y secuencia en un código secuencial desde 000 hasta 999 del año. Se generará solo al crear una nueva petición.
 * Título del proyecto.
 * Tipo de actividad: desplegable con los valores:
-	+ Proyecto de investigación
-	+ Práctica docente
-	+ Investigación tutelada
+  + Proyecto de investigación
+  + Práctica docente
+  + Investigación tutelada
 * Tipo de investigación tutelada
-	+ Tesis doctoral
-	+ Trabajo Fin de Máster
-	+ Trabajo Fin de Grado
+  + Tesis doctoral
+  + Trabajo Fin de Máster
+  + Trabajo Fin de Grado
 * ¿Se dispone de financiación para realizar el proyecto? : Desplegable con dos valores "Sí" o "No". En caso de seleccionar el valor "Si" se mostrarán el resto de campos:  
-
-	+ Órgano financiador: campo de texto libre
-	+ Estado: desplegable con dos valores  
-	
-		- Solicitado
-		- Concedido
-		- Denegado
-	+ Importe financiación
+  + Órgano financiador: campo de texto libre
+  + Estado: desplegable con dos valores  
+    - Solicitado
+    - Concedido
+    - Denegado
+  + Importe financiación
 * Fecha inicio.
 * Fecha fin.
 * Resumen del proyecto.
-* Especificar (únicamente aparece si en el desplegable de "Valor social" se ha escogido la opción "10\. Otra finalidad")
+* Especificar (únicamente aparece si en el desplegable de "Valor social" se ha escogido la opción "10. Otra finalidad")
 * Valor social del proyecto.
 * Objetivos científicos del proyecto.
 * Diseño metodológico del proyecto.
-
-  
-
 
 En el caso de que la solicitud de evaluación ética se haya creado desde el formulario de autoevaluación tras crear una solicitud de proyecto en el módulo de CSP, tendrá disponibles los siguientes campos:
 
@@ -193,49 +240,44 @@ En el caso de que la solicitud de evaluación ética se haya creado desde el for
 * Código petición: será un código con el formato YYYY/secuencia , donde YYYY es el año y secuencia en un código secuencial desde 000 hasta 999 del año. Se generará solo al crear una nueva petición.
 * Título del proyecto: en modo lectura, se obtiene de la solicitud de convocatoria cuando se crea la petición de evaluación.
 * Tipo de actividad: desplegable con los valores:
-	+ Proyecto de investigación
-	+ Práctica docente
-	+ Investigación tutelada
+  + Proyecto de investigación
+  + Práctica docente
+  + Investigación tutelada
 * Tipo de investigación tutelada
-	+ Tesis doctoral
-	+ Trabajo Fin de Máster
-	+ Trabajo Fin de Grado
+  + Tesis doctoral
+  + Trabajo Fin de Máster
+  + Trabajo Fin de Grado
 * ¿Se dispone de financiación para realizar el proyecto? : Se pondrá el valor "Si" por venir de una solicitud de convocatoria y se mostrarán el resto de campos:  
-
-	+ Órgano financiador: en modo lectura (se pondrá el nombre de la entidad financiadora de la solicitud de convocatoria)
-	+ Estado: desplegable con dos valores:(se pondrá el valor Solicitado)  
-	
-		- Solicitado
-		- Concedido
-		- Denegado
-	+ Importe financiación (será el campo Importe  financiación de la entidad financiadora de la solicitud de convocatoria), en modo lectura
+  + Órgano financiador: en modo lectura (se pondrá el nombre de la entidad financiadora de la solicitud de convocatoria)
+  + Estado: desplegable con dos valores:(se pondrá el valor Solicitado)  
+    - Solicitado
+    - Concedido
+    - Denegado
+  + Importe financiación (será el campo Importe  financiación de la entidad financiadora de la solicitud de convocatoria), en modo lectura
 * ¿Si se rechaza su solicitud de financiación ejecutará el proyecto con fondos propios?: Desplegable con los valores  Sí o No.
 * Fecha inicio:
 * Fecha fin:
 * Resumen del proyecto: en modo lectura, se obtiene de la solicitud de convocatoria cuando se crea la petición de evaluación.
 * Valor social: desplegable con los valores:
-	+ 1\. Investigación fundamental
-	+ 2\. Investigación aplicada a la prevención, diagnóstico o tratamiento de alteraciones o de enfermedades físicas, psíquicas u otras anomalías o de sus efectos en los seres humanos, los animales o las plantas.
-	+ 3\. Investigación aplicada a la evaluación, detección, regulación o modificación de las condiciones fisiológicas, psicológicas o sociales en los seres humanos, los animales o las plantas
-	+ 4\. Investigación aplicada al desarrollo y la fabricación de aparatos, ayudas técnicas o informáticas, fármacos, alimentos, piensos y otras sustancias o productos, así como la realización de pruebas para comprobar su calidad, eficacia y seguridad
-	+ 5\. Investigación aplicada a la protección o mejora de las condiciones sociales, políticas, económicas o ambientales en interés del bienestar y/o la salud de los seres humanos.
-	+ 6\. Investigación aplicada al bienestar de los animales y/o a la mejora de las condiciones de producción de los animales y las plantas.
-	+ 7\. Investigación dirigida a la protección y conservación de las especies y del medio natural.
-	+ 8\. Enseñanza superior o la formación para la adquisición o mejora de las aptitudes profesionales.
-	+ 9\. Investigación jurídica o médico\-legal.
-	+ 10\. Otra finalidad.
-* Especificar: caja de texto que únicamente aparece si en el desplegable de "Valor social" se ha escogido la opción "10\. Otra finalidad"
+  + 1. Investigación fundamental
+  + 2. Investigación aplicada a la prevención, diagnóstico o tratamiento de alteraciones o de enfermedades físicas, psíquicas u otras anomalías o de sus efectos en los seres humanos, los animales o las plantas.
+  + 3. Investigación aplicada a la evaluación, detección, regulación o modificación de las condiciones fisiológicas, psicológicas o sociales en los seres humanos, los animales o las plantas
+  + 4. Investigación aplicada al desarrollo y la fabricación de aparatos, ayudas técnicas o informáticas, fármacos, alimentos, piensos y otras sustancias o productos, así como la realización de pruebas para comprobar su calidad, eficacia y seguridad
+  + 5. Investigación aplicada a la protección o mejora de las condiciones sociales, políticas, económicas o ambientales en interés del bienestar y/o la salud de los seres humanos.
+  + 6. Investigación aplicada al bienestar de los animales y/o a la mejora de las condiciones de producción de los animales y las plantas.
+  + 7. Investigación dirigida a la protección y conservación de las especies y del medio natural.
+  + 8. Enseñanza superior o la formación para la adquisición o mejora de las aptitudes profesionales.
+  + 9. Investigación jurídica o médico-legal.
+  + 10. Otra finalidad.
+* Especificar: caja de texto que únicamente aparece si en el desplegable de "Valor social" se ha escogido la opción "10. Otra finalidad"
 * Objetivos científicos del proyecto: caja de texto
 * Diseño metodológico del proyecto: caja de texto
 
-  
-
-
 El prototipo de pantalla que da cobertura a la modificación a los datos generales de una solicitud de evaluación ética es:
 
-[IU\-ETI\-0060\-005\-001 \- Modificación petición de evaluación \- Datos generales](https://confluence.treelogic.com/pages/viewpage.action?pageId=171409552 "https://confluence.treelogic.com/pages/viewpage.action?pageId=171409552")
+[IU-ETI-0060-005-001 - Modificación petición de evaluación - Datos generales](https://confluence.treelogic.com/pages/viewpage.action?pageId=171409552)
 
-##### 2\.2\.2 Solicitud de evaluación \- Equipo investigador
+##### 2.2.2 Solicitud de evaluación - Equipo investigador
 
 En este apartado de la solicitud de evaluación ética quedarán recogidos todos los miembros del equipo de investigación del proyecto a evaluar.
 
@@ -255,10 +297,7 @@ En el apartado Equipo investigador de la solicitud de evaluación ética se most
 
 Y se dará la posibilidad de añadir nuevos miembros al equipo.
 
-[IU\-ETI\-0060\-005\-001 \- Modificación petición de evaluación \- Datos generales](https://confluence.treelogic.com/pages/viewpage.action?pageId=171409552 "https://confluence.treelogic.com/pages/viewpage.action?pageId=171409552")
-
-  
-
+[IU-ETI-0060-005-001 - Modificación petición de evaluación - Datos generales](https://confluence.treelogic.com/pages/viewpage.action?pageId=171409552)
 
 ###### Nueva persona del equipo
 
@@ -269,7 +308,7 @@ Para añadir a una persona al equipo de investigación se dispondrá de un busca
 * Vinculación con la universidad
 * Nivel académico
 
-[IU\-ETI\-0060\-006 Equipo investigador \- añadir \- modificar](https://confluence.treelogic.com/pages/viewpage.action?pageId=87819195 "https://confluence.treelogic.com/pages/viewpage.action?pageId=87819195")
+[IU-ETI-0060-006 Equipo investigador - añadir - modificar](https://confluence.treelogic.com/pages/viewpage.action?pageId=87819195)
 
 ###### Eliminar persona del equipo
 
@@ -285,16 +324,13 @@ La persona que realiza la solicitud de evaluación de ética no podrá ser elimi
 
 La acción de eliminar a un miembro del equipo estará disponible en el listado del equipo de investigación de la solicitud de evaluación.
 
-[IU\-ETI\-0060\-005\-002 Modificación petición de evaluación \- Equipo de trabajo](https://confluence.treelogic.com/pages/viewpage.action?pageId=171409579 "https://confluence.treelogic.com/pages/viewpage.action?pageId=171409579")
+[IU-ETI-0060-005-002 Modificación petición de evaluación - Equipo de trabajo](https://confluence.treelogic.com/pages/viewpage.action?pageId=171409579)
 
-  
-
-
-##### 2\.2\.3 Solicitud de evaluación \- Asignación de tareas
+##### 2.2.3 Solicitud de evaluación - Asignación de tareas
 
 Sobre las personas del equipo de investigación podrán asociarse tareas en las distintas memorias incluidas en la misma solicitud de evaluación.
 
-La información de las tareas variará ligeramente en función del tipo de memoria (M10 \- seres humanos, M20 \- experimentación animal, M30 \- agentes biológicos).
+La información de las tareas variará ligeramente en función del tipo de memoria (M10 - seres humanos, M20 - experimentación animal, M30 - agentes biológicos).
 
 En este apartado se listarán las tareas asignadas a cualquiera de las memorias incluidas en la solicitud de evaluación. Se mostrará un listado con las siguientes columnas.
 
@@ -307,7 +343,7 @@ En este apartado se listarán las tareas asignadas a cualquiera de las memorias 
 
 Se permitirá modificar y eliminar cada tarea, así como crear nuevas tareas.
 
-[IU\-ETI\-0060\-005\-003 \- Modificación petición de evaluación \- Asignación tareas](https://confluence.treelogic.com/pages/viewpage.action?pageId=171409664 "https://confluence.treelogic.com/pages/viewpage.action?pageId=171409664")
+[IU-ETI-0060-005-003 - Modificación petición de evaluación - Asignación tareas](https://confluence.treelogic.com/pages/viewpage.action?pageId=171409664)
 
 ###### Nueva tarea
 
@@ -325,18 +361,18 @@ Para las memorias M20 (experimentación animal):
 * Nombre y apellidos: desplegable con el nombre y apellidos de las personas del equipo
 * Memoria: desplegable con las memorias del proyecto
 * Tarea: desplegable con los valores:
-	+ Diseño de proyecto y procedimientos
-	+ Manipulación de animales
-	+ Eutanasia
+  + Diseño de proyecto y procedimientos
+  + Manipulación de animales
+  + Eutanasia
 * Formación: desplegable con los valores:
-	+ A: Cuidado de los animales
-	+ B: Eutanasia de los animales
-	+ C: Realización de los procedimientos
-	+ D: Diseño de los proyectos y procedimientos
-	+ E: Responsable de la supervisión «in situ» del bienestar y cuidado de los animales
-	+ F: Veterinario designado
-	+ G: Sin especificar
-	+ H: No requiere
+  + A: Cuidado de los animales
+  + B: Eutanasia de los animales
+  + C: Realización de los procedimientos
+  + D: Diseño de los proyectos y procedimientos
+  + E: Responsable de la supervisión «in situ» del bienestar y cuidado de los animales
+  + F: Veterinario designado
+  + G: Sin especificar
+  + H: No requiere
 * Organismo: caja de texto
 * Año: caja de texto
 
@@ -349,10 +385,7 @@ Para las memorias M30 (agentes biológicos):
 * Organismo: caja de texto
 * Año: caja de texto
 
-  
-
-
-[IU\-ETI\-0060\-007 Asignación de tareas \- Añadir\-Modificar](https://confluence.treelogic.com/pages/viewpage.action?pageId=87819213 "https://confluence.treelogic.com/pages/viewpage.action?pageId=87819213")
+[IU-ETI-0060-007 Asignación de tareas - Añadir-Modificar](https://confluence.treelogic.com/pages/viewpage.action?pageId=87819213)
 
 ###### Edición tarea
 
@@ -360,7 +393,7 @@ La modificación de una tarea ya creada requiere los mismos datos que su creaci�
 
 La modificación de una tarea está disponible desde el listado de tareas de una solicitud de evaluación:
 
-[IU\-ETI\-0060\-007 Asignación de tareas \- Añadir\-Modificar](https://confluence.treelogic.com/pages/viewpage.action?pageId=87819213 "https://confluence.treelogic.com/pages/viewpage.action?pageId=87819213")
+[IU-ETI-0060-007 Asignación de tareas - Añadir-Modificar](https://confluence.treelogic.com/pages/viewpage.action?pageId=87819213)
 
 ###### Eliminar tarea
 
@@ -374,21 +407,15 @@ Se eliminará una tarea, vinculada a una memoria y una miembro del equipo. Las t
 
 La eliminación de una tarea está disponible desde el listado de tareas de la solicitud de evaluación.
 
-[IU\-ETI\-0060\-005\-003 \- Modificación petición de evaluación \- Asignación tareas](https://confluence.treelogic.com/pages/viewpage.action?pageId=171409664 "https://confluence.treelogic.com/pages/viewpage.action?pageId=171409664")
+[IU-ETI-0060-005-003 - Modificación petición de evaluación - Asignación tareas](https://confluence.treelogic.com/pages/viewpage.action?pageId=171409664)
 
-##### 2\.2\.4 Solicitud de evaluación \- Memorias
+##### 2.2.4 Solicitud de evaluación - Memorias
 
 Una solicitud de evaluación ética podrá incluir una o varias memorias. Cada memorias estará asociada a un comité de evaluación (seres humanos, experimentación animal o agentes biológicos)
 
 Cada memoria tendrá un estado que es relativo al proceso de evaluación de la misma.
 
-  
-
-
-Ver detalle de estados en el apartado [Flujo de estados de memoria](https://confluence.treelogic.com/pages/viewpage.action?pageId=81837061#ETIM%C3%B3dulode%C3%A9tica-flujo_estados_memoria "https://confluence.treelogic.com/pages/viewpage.action?pageId=81837061#ETIM%C3%B3dulode%C3%A9tica-flujo_estados_memoria").
-
-  
-
+Ver detalle de estados en el apartado [Flujo de estados de memoria](https://confluence.treelogic.com/pages/viewpage.action?pageId=81837061#ETIM%C3%B3dulode%C3%A9tica-flujo_estados_memoria).
 
 En el apartado Memorias de una solicitud de evaluación se mostrará el listado de las memorias incluidas en la solicitud, incluyendo las siguientes columnas:
 
@@ -396,49 +423,42 @@ En el apartado Memorias de una solicitud de evaluación se mostrará el listado 
 * Comité
 * Estado.
 * Fecha evaluación, Fecha límite:  
-
-	+ Si el estado de la memoria es **Completada**,  **En secretaría**: La fecha de evaluación y la fecha límite se sacarán se sacará de la próxima convocatoria de reunión de tipo "Ordinaria" o "Extraordinaria" que haya del mismo comité que la memoria, que no tenga el acta asociada a finalizada, y que la fecha límite de la convocatoria sea mayor a la fecha actual y si existe dos o mas, se cogerá la primera, la que tenga la fecha de evaluación menor.
-	+ Si el estado de la memoria es**En evaluación, Pendiente de correcciones, No procede evaluar, Favorable pendiente de revisión mínima, En secretaria revisión mínima, Fin evaluación, Desfavorable**: La fecha de evaluación y la fecha límite se sacarán de la convocatoria de reunión asociada a la evaluación asignada a la memoria de tipo "Memoria" y que sea la última versión (versión mayor)
-	+ Si el estado de la memoria es **Completada****seguimiento anual**,  **En secretaría seguimiento anual**: La fecha de evaluación y la fecha límite se sacarán de la próxima convocatoria de reunión de tipo "Seguimiento" que haya del mismo comité que la memoria, que no tenga el acta asociada a finalizada, y que la fecha límite de la convocatoria sea mayor a la fecha actual y si existe dos o mas, se cogerá la primera, la que tenga la fecha de evaluación menor.
-	+ Si el estado de la memoria es**En evaluación seguimiento anual, Solicitud modificación, Fin evaluación seguimiento anual**: La fecha de evaluación y la fecha límite se sacarán de la convocatoria de reunión asociada a la evaluación asignada a la memoria de tipo "Seguimiento anual" y que sea la última versión (versión mayor)
-	+ Si el estado de la memoria es**Completada seguimiento final**,  **En secretaría seguimiento final**: La fecha de evaluación y la fecha límite se sacarán de la próxima convocatoria de reunión de tipo "Seguimiento" que haya del mismo comité que la memoria, que no tenga el acta asociada a finalizada, y que la fecha límite de la convocatoria sea mayor a la fecha actual y si existe dos o mas, se cogerá la primera, la que tenga la fecha de evaluación menor.
-	+ Si el estado de la memoria es**En evaluación seguimiento final, En secretaría seguimiento final aclaraciones, En aclaración seguimiento final, Fin evaluación seguimiento final**: La fecha de evaluación y la fecha límite se sacarán de la convocatoria de reunión asociada a la evaluación asignada a la memoria de tipo "Seguimiento final" y que sea la última versión (versión mayor)
-	+ Si el estado de la memoria es**Archivado**: se dejan vacías
+  + Si el estado de la memoria es **Completada**,  **En secretaría**: La fecha de evaluación y la fecha límite se sacarán se sacará de la próxima convocatoria de reunión de tipo "Ordinaria" o "Extraordinaria" que haya del mismo comité que la memoria, que no tenga el acta asociada a finalizada, y que la fecha límite de la convocatoria sea mayor a la fecha actual y si existe dos o mas, se cogerá la primera, la que tenga la fecha de evaluación menor.
+  + Si el estado de la memoria es**En evaluación, Pendiente de correcciones, No procede evaluar, Favorable pendiente de revisión mínima, En secretaria revisión mínima, Fin evaluación, Desfavorable**: La fecha de evaluación y la fecha límite se sacarán de la convocatoria de reunión asociada a la evaluación asignada a la memoria de tipo "Memoria" y que sea la última versión (versión mayor)
+  + Si el estado de la memoria es **Completada****seguimiento anual**,  **En secretaría seguimiento anual**: La fecha de evaluación y la fecha límite se sacarán de la próxima convocatoria de reunión de tipo "Seguimiento" que haya del mismo comité que la memoria, que no tenga el acta asociada a finalizada, y que la fecha límite de la convocatoria sea mayor a la fecha actual y si existe dos o mas, se cogerá la primera, la que tenga la fecha de evaluación menor.
+  + Si el estado de la memoria es**En evaluación seguimiento anual, Solicitud modificación, Fin evaluación seguimiento anual**: La fecha de evaluación y la fecha límite se sacarán de la convocatoria de reunión asociada a la evaluación asignada a la memoria de tipo "Seguimiento anual" y que sea la última versión (versión mayor)
+  + Si el estado de la memoria es**Completada seguimiento final**,  **En secretaría seguimiento final**: La fecha de evaluación y la fecha límite se sacarán de la próxima convocatoria de reunión de tipo "Seguimiento" que haya del mismo comité que la memoria, que no tenga el acta asociada a finalizada, y que la fecha límite de la convocatoria sea mayor a la fecha actual y si existe dos o mas, se cogerá la primera, la que tenga la fecha de evaluación menor.
+  + Si el estado de la memoria es**En evaluación seguimiento final, En secretaría seguimiento final aclaraciones, En aclaración seguimiento final, Fin evaluación seguimiento final**: La fecha de evaluación y la fecha límite se sacarán de la convocatoria de reunión asociada a la evaluación asignada a la memoria de tipo "Seguimiento final" y que sea la última versión (versión mayor)
+  + Si el estado de la memoria es**Archivado**: se dejan vacías
 * Acciones: Editar / Eliminar (desactivar) / Enviar a Secretaría / Enviar a Secretaría Retrospectiva
-
-  
-
 
 El prototipo de pantalla del apartado Memorias de una solicitud de evaluación es:
 
-[IU\-ETI\-0060\-005\-004 \- Modificación petición de evaluación \- Memorias](https://confluence.treelogic.com/pages/viewpage.action?pageId=171409683 "https://confluence.treelogic.com/pages/viewpage.action?pageId=171409683")
-
-  
-
+[IU-ETI-0060-005-004 - Modificación petición de evaluación - Memorias](https://confluence.treelogic.com/pages/viewpage.action?pageId=171409683)
 
 ###### Creación de nueva memoria
 
-Solamente se podrán crear memorias asociadas a una solicitud de evaluación. La opción para crear una nueva memoria está disponible en el listado de memorias [IU\-ETI\-0060\-005\-004 \- Modificación petición de evaluación \- Memorias](https://confluence.treelogic.com/pages/viewpage.action?pageId=171409683 "https://confluence.treelogic.com/pages/viewpage.action?pageId=171409683")
+Solamente se podrán crear memorias asociadas a una solicitud de evaluación. La opción para crear una nueva memoria está disponible en el listado de memorias [IU-ETI-0060-005-004 - Modificación petición de evaluación - Memorias](https://confluence.treelogic.com/pages/viewpage.action?pageId=171409683)
 
 Una nueva memoria se creará con unos datos mínimos, agrupados en un apartado de Datos generales, para pasar a permitir la introducción de más bloques de datos en la modificación de la memoria.
 
-####### Datos generales
+###### Datos generales
 
 * Comité: desplegable con los valores de los comités configurados en el SGI. Los nombres de estos comités podrán variar de una Universidad a otra.
-	+ CEISH (nombre ejemplo para el comité de evaluación ética de investigación con seres humanos)
-	+ CEEA (nombre ejemplo para el comité ético de experimentación animal)
-	+ CEIAB (nombre ejemplo para el comité ético de investigación con agente biológicos)
+  + CEISH (nombre ejemplo para el comité de evaluación ética de investigación con seres humanos)
+  + CEEA (nombre ejemplo para el comité ético de experimentación animal)
+  + CEIAB (nombre ejemplo para el comité ético de investigación con agente biológicos)
 * Tipo de memoria: desplegable con los valores dependiendo del tipo de comité:
-	+ Si comité "seres humanos"
-		- Nueva
-		- Ratificación
-		- Modificación
-	+ Si comité "experimentación animal"
-		- Nueva
-		- Modificación
-	+ Si comité "agentes biológicos"
-		- Nueva
-		- Modificación
+  + Si comité "seres humanos"
+    - Nueva
+    - Ratificación
+    - Modificación
+  + Si comité "experimentación animal"
+    - Nueva
+    - Modificación
+  + Si comité "agentes biológicos"
+    - Nueva
+    - Modificación
 * Memoria original:  desplegable con las referencias de las memorias del comité elegido si se ha elegido en Tipo la opción de "Modificación"
 * Título descriptivo: caja de texto. Sólo estará disponible si se está creando una memoria para el comité de experimentación animal.
 * Responsable de memoria: desplegable con las distintas personas del equipo.
@@ -448,26 +468,26 @@ Una vez que se cumplimenten los datos mínimos se podrá crear la memoria. El es
 Se genera la referencia de la memoria de forma automática con el siguiente formato: Mxx/YYYY/secuencia, donde:
 
 * xx tomará el valor 10, 20 ó 30 en función del comité de evaluación al que se asocie la memoria
-	+ 10 \- comité de seres humanos
-	+ 20 \- comité de experimentación animal
-	+ 30 \- comité de agentes biológicos
+  + 10 - comité de seres humanos
+  + 20 - comité de experimentación animal
+  + 30 - comité de agentes biológicos
 * YYYY será el año en curso
 * Secuencia:
-	+ será un código secuencial de tres dígitos que comienza en 000 cada año y comité y va hasta 999
-	+ si la memoria es de tipo "ratificación" se añade una R al final de la secuencia  (Mxx/YYYY/secuenciaR)
-	+ si la memoria es de tipo "modificación" se copia la referencia de la memoria original y se añade la cadena "MRX" al final, siendo X a su vez un secuencial de todas las modificaciones que se hayan realizado sobre la memoria original.
+  + será un código secuencial de tres dígitos que comienza en 000 cada año y comité y va hasta 999
+  + si la memoria es de tipo "ratificación" se añade una R al final de la secuencia  (Mxx/YYYY/secuenciaR)
+  + si la memoria es de tipo "modificación" se copia la referencia de la memoria original y se añade la cadena "MRX" al final, siendo X a su vez un secuencial de todas las modificaciones que se hayan realizado sobre la memoria original.
 
 Si se crea una memoria de tipo Modificación se hace una copia de la memoria (de nueva) tanto del formulario como de los documentos subidos de tipo memoria. Se debe de mostrar un desplegable con las memorias que existan en la solicitud de evaluación para ese comité, y que dispongan de un dictamen favorable.
 
 El prototipo de pantalla para la creación inicial de una memoria dentro de una solicitud de evaluación ética es:
 
-[IU\-ETI\-0060\-008 Memoria \- Datos generales \- Creación](https://confluence.treelogic.com/pages/viewpage.action?pageId=87819233 "https://confluence.treelogic.com/pages/viewpage.action?pageId=87819233")
+[IU-ETI-0060-008 Memoria - Datos generales - Creación](https://confluence.treelogic.com/pages/viewpage.action?pageId=87819233)
 
 ###### Edición de memoria
 
 En la edición de una memoria se muestra la siguiente información.
 
-####### Datos generales
+###### Datos generales
 
 * Comité: en modo consulta.
 * Tipo: en modo consulta.
@@ -475,15 +495,14 @@ En la edición de una memoria se muestra la siguiente información.
 * Título descriptivo: caja de texto
 * Responsable: desplegable con las distintas personas del equipo.
 
-####### Formulario de memoria
+###### Formulario de memoria
 
-Solo se puede modificar el formulario si el estado de la memoria es "En elaboración" o  "Completada" o "Favorable Pendiente de Modificaciones Mínimas" o "Pendiente de correcciones"  
-
+Solo se puede modificar el formulario si el estado de la memoria es "En elaboración" o  "Completada" o "Favorable Pendiente de Modificaciones Mínimas" o "Pendiente de correcciones"
 
 Se mostrará el formulario dependiendo del tipo de comité y tipo de memoria que se haya elegido en la creación de la memoria y en el proyecto:
 
-* Los campos de una memoria de tipo "Nueva" y "Modificación" para el CEISH  se explican en el siguiente enlace [Formulario M10](https://confluence.treelogic.com/display/HERCULES/Formulario+M10 "https://confluence.treelogic.com/display/HERCULES/Formulario+M10").
-* Los campos de una memoria de tipo "Nueva" y "Modificación" para el CEEA  se explican en el siguiente enlace [Formulario M20\.](https://confluence.treelogic.com/display/HERCULES/Formulario+M20 "https://confluence.treelogic.com/display/HERCULES/Formulario+M20")
+* Los campos de una memoria de tipo "Nueva" y "Modificación" para el CEISH  se explican en el siguiente enlace [Formulario M10](https://confluence.treelogic.com/display/HERCULES/Formulario+M10).
+* Los campos de una memoria de tipo "Nueva" y "Modificación" para el CEEA  se explican en el siguiente enlace [Formulario M20.](https://confluence.treelogic.com/display/HERCULES/Formulario+M20)
 * Los campos de una memoria de tipo "Nueva" y "Modificación"  para el CEIAB  se explican en el siguiente enlace "Formulario M30".
 * Las memorias de tipo "Ratificación" no tienen asociado formulario, únicamente se rellena datos generales y equipo investigador.
 
@@ -493,9 +512,9 @@ Todos los campos activos del formulario son obligatorios.
 
 Cuando el  estado de la memoria es "Favorable Pendiente de Revisión Mínima" o "Pendiente de correcciones"  se deben de mostrar los comentarios asociados a los apartados correspondientes y únicamente dejar modificar dichos apartados. Los comentarios serán los creados en la evaluación última de la memoria.
 
-####### Documentación
+###### Documentación
 
-Se muestran los listados de Documentos del formulario de Memoria, del formulario de Seguimiento Anual, del formulario de Seguimiento Final y del formulario de Retrospectiva si es una memoria de animales (M20\).
+Se muestran los listados de Documentos del formulario de Memoria, del formulario de Seguimiento Anual, del formulario de Seguimiento Final y del formulario de Retrospectiva si es una memoria de animales (M20).
 
 Documentos Formulario Memoria
 
@@ -550,8 +569,7 @@ Tipo de documento  requeridos en una memoria M30:
 * Seguro de responsabilidad
 * Otra documentación
 
-Documentos Formulario Seguimiento Anual  
-
+Documentos Formulario Seguimiento Anual
 
 Solo se puede adjuntar o eliminar documentos del formulario de Seguimiento anual si el estado de la memoria es uno de los siguientes:
 
@@ -573,8 +591,7 @@ El eliminar el documento se eliminará el documento del sistema cuando se pulse 
 
 El ver lo que hace es descargarse el documento, para ver un documento debe de estar aportado.
 
-Documentos Formulario Seguimiento Final  
-
+Documentos Formulario Seguimiento Final
 
 Solo se puede adjuntar o eliminar documentos del formulario de Seguimiento final si el estado de la memoria es uno de los siguientes:
 
@@ -596,9 +613,6 @@ El documento se almacenará en el repositorio documental del SGI al pulsar el bo
 El eliminar el documento se eliminará el documento del sistema cuando se pulse el botón Guardar.
 
 El ver lo que hace es descargarse el documento, para ver un documento debe de estar aportado.
-
-  
-
 
 Documentos Formulario Retrospectiva
 
@@ -624,10 +638,7 @@ El eliminar el documento se eliminará el documento del sistema cuando se pulse 
 
 El ver lo que hace es descargarse el documento, para ver un documento debe de estar aportado.
 
-  
-
-
-####### Seguimiento anual
+###### Seguimiento anual
 
 Únicamente se mostrará el formulario activo para edición de Seguimiento anual si la memoria esta en estado "Fin evaluación" y ha pasado 1 año desde la fecha de inicio del proyecto. En otro caso se mostrará en modo consulta.
 
@@ -635,7 +646,7 @@ Se mostrará el formulario de tipo Seguimiento final. Los documentos se adjuntar
 
 Una vez que se cumplimente se cambiará el estado de la memoria a "Completada seguimiento anual".
 
-####### Seguimiento final
+###### Seguimiento final
 
 Únicamente se mostrará el formulario activo para edición de Seguimiento final si la memoria esta en estado "Fin evaluación seguimiento anual" y ha pasado 1 año desde la fecha de fin del proyecto. EEn otro caso se mostrará en modo consulta.
 
@@ -643,7 +654,7 @@ Se mostrará el formulario de tipo Seguimiento final . Los documentos se adjunta
 
 Una vez que se cumplimente se cambiará el estado de la memoria a "Completada seguimiento final".
 
-####### Retrospectiva
+###### Retrospectiva
 
 Únicamente se mostrará el formulario de Retrospectiva si la memoria es de tipo CEEA y el investigador había indicado en la memoria que requería retrospectiva.
 
@@ -661,17 +672,17 @@ Los estados de la retrospectiva son:
 
 Los documentos se adjuntarán desde la opción de "Documentación".
 
-####### Informes
+###### Informes
 
 Se muestra un listado de informes en formato pdf. El informe pdf contiene los datos generales del proyecto junto con los datos de todo el formulario. El nombre sigue un formato NumeroRefenciaMemoria\_vz, donde z es un número de versión (1,2,3,...)
 
 Es un listado porque una misma memoria puede tener varias versiones, la inicial, y luego tantas reevaluaciones como hubiesen hecho falta. Cada vez que el investigador  ha enviado a secretaría su memoria se crea un un fichero en formato pdf con los datos del proyecto y con los datos del formulario y es subido al respositorio documental y el sistema guarda en informes el identificador del documento.
 
-Por ejemplo: M20\_2020\_035\_v1 , M20\_2020\_035\_v2 , M20\_2020\_035\_v3 , porque ha sido enviada a secretaria y evaluada por el comité 3 veces. 
+Por ejemplo: M20\_2020\_035\_v1 , M20\_2020\_035\_v2 , M20\_2020\_035\_v3 , porque ha sido enviada a secretaria y evaluada por el comité 3 veces.
 
 También se mostrará el informe de seguimiento anual con el formato NumeroRefenciaMemoria\_SA\_vz, los informes de seguimiento final con el formato NumeroRefenciaMemoria\_SF\_vz y el informe de retrospectiva en caso de que exista retrospectiva con el formato NumeroRefenciaMemoria\_RETRO\_vz. Igual que los informes de memoria son creados cuando se Enviá a secretaría los informes de seguimiento y/o el de retrospectiva.
 
-####### Evaluaciones
+###### Evaluaciones
 
 Se muestra el listado de la evaluaciones de la memoria. Tendrá las siguientes columnas:
 
@@ -679,9 +690,9 @@ Se muestra el listado de la evaluaciones de la memoria. Tendrá las siguientes c
 * Número de versión
 * Dictamen
 * Enlace al informe de evaluación:
-	+ si la evaluación es de tipo memoria y el dictamen es "Favorable pendiente de revisión mínima" o "Pendiente de correcciones" o "No procede evaluar"
-	+ si la evaluación es de tipo seguimiento anual y el dictamen es "Solicitud de modificaciones"
-	+ si la evaluación es de tipo seguimiento final y el dictamen es "Solicitud de aclaraciones".
+  + si la evaluación es de tipo memoria y el dictamen es "Favorable pendiente de revisión mínima" o "Pendiente de correcciones" o "No procede evaluar"
+  + si la evaluación es de tipo seguimiento anual y el dictamen es "Solicitud de modificaciones"
+  + si la evaluación es de tipo seguimiento final y el dictamen es "Solicitud de aclaraciones".
 * Enlace al informe favorable (si dictamen "Favorable")
 
 ###### Eliminar (desactivar) memoria
@@ -697,11 +708,11 @@ El responsable de la memoria podrá modificar los datos del proyecto y de la mem
 El enviar a secretaría tiene que hacer las siguientes funcionalidades:
 
 * Cambiar el estado de la memoria:
-	+ Si el estado de la memoria es "Completada" , "Pendiente de correcciones" o "No procede evaluar" se cambia a "En secretaría"
-	+ Si el estado de la memoria es  "Favorable pendiente de revisión mínima" se cambia a "En secretaría revisión mínima".
-	+ Si el estado de la memoria es "Completada seguimiento anual"  se cambia a "En secretaría seguimiento anual"
-	+ Si el estado de la memoria es "Completada seguimiento final"  se cambia a "En secretaría seguimiento final"
-	+ Si el estado de la memoria es  "En aclaración seguimiento final" se cambia a "En secretaría seguimiento final aclaraciones".
+  + Si el estado de la memoria es "Completada" , "Pendiente de correcciones" o "No procede evaluar" se cambia a "En secretaría"
+  + Si el estado de la memoria es  "Favorable pendiente de revisión mínima" se cambia a "En secretaría revisión mínima".
+  + Si el estado de la memoria es "Completada seguimiento anual"  se cambia a "En secretaría seguimiento anual"
+  + Si el estado de la memoria es "Completada seguimiento final"  se cambia a "En secretaría seguimiento final"
+  + Si el estado de la memoria es  "En aclaración seguimiento final" se cambia a "En secretaría seguimiento final aclaraciones".
 * Se guarda la fecha de envío a secretaría para que luego no se pueda añadir a una convocatoria de reunión cuya fecha límite haya sobrepasado.
 * Se crea un un fichero en formato pdf con los datos del proyecto y con los datos del formulario y es subido al repositorio documental y el sistema guarda en informes el identificador del documento.
 * En el caso de que sea una memoria en estado "Favorable pendiente de revisión mínima" al enviar a secretaría se le debe de crear ya la evaluación para esa memoria con los datos de la evaluación anterior, es decir, se le asigna a la misma convocatoria de reunión y el mismo par de evaluadores que provocaron el dictamen "Favorable pendiente de revisión mínima" y con el campo de es revisión mínima para poder distinguir las evaluaciones que tienen que pasar por una convocatoria de reunión y las que no.
@@ -744,25 +755,17 @@ Se informan los siguientes datos de la petición de evaluación:
 * Solicitud de convocatoria asociada
 * Título del proyecto
 * ¿Se dispone de financiación para realizar el proyecto?  
-
-	+ Órgano financiador: campo de texto libre (se pondrá el nombre de la entidad financiadora de la solicitud de convocatoria)
-	+ Estado: desplegable con dos valores:(se pondrá el valor Solicitado)  
-	
-		- Solicitado
-		- Concedido
-		- Denegado
-	+ Importe financiación
+  + Órgano financiador: campo de texto libre (se pondrá el nombre de la entidad financiadora de la solicitud de convocatoria)
+  + Estado: desplegable con dos valores:(se pondrá el valor Solicitado)  
+    - Solicitado
+    - Concedido
+    - Denegado
+  + Importe financiación
 * Resumen
 
 Se añade al equipo investigador de la petición  de evaluación al investigador solicitante y en caso de existir mas investigadores en el equipo de investigación se añaden también.
 
-  
-
-
-  
-
-
-### Perfil Gestor (ACT\-ETI\-001\-Gestor)
+### Perfil Gestor (ACT-ETI-001-Gestor)
 
 #### Peticiones de evaluación
 
@@ -776,7 +779,7 @@ Accederán en modo consulta, sin poder modificar los datos, excepto la funcional
 
 ##### Subsanación
 
-Con carácter previo a la inclusión de las memoria en la convocatoria de reunión de evaluación correspondiente, los ACT\-ETI\-001\-Gestor podrán indicar a la persona solicitante que se debe subsanar la memoria. Indicarán a través de un comentario la información a trasladar a la persona solicitante. Cuando una memoria está en estado subsanación, la persona solicitante deberá aportar los cambios indicados y proceder de nuevo a enviar a secretaría.
+Con carácter previo a la inclusión de las memoria en la convocatoria de reunión de evaluación correspondiente, los ACT-ETI-001-Gestor podrán indicar a la persona solicitante que se debe subsanar la memoria. Indicarán a través de un comentario la información a trasladar a la persona solicitante. Cuando una memoria está en estado subsanación, la persona solicitante deberá aportar los cambios indicados y proceder de nuevo a enviar a secretaría.
 
 ##### Volver estado anterior
 
@@ -824,17 +827,16 @@ Para dar de alta una nueva convocatoria se necesitan los siguiente campos obliga
 ###### Datos generales
 
 * Comité: desplegable con los valores:  
-
-	+ CEISH
-	+ CEEA
-	+ CEIAB
+  + CEISH
+  + CEEA
+  + CEIAB
 * Fecha evaluación: calendario para marcar el día
 * Fecha límite: calendario para marcar el día (por defecto una semana antes de la reunión)
 * Convocatoria: desplegable con los valores:
-	+ Ordinaria
-	+ Extraordinaria
-	+ Seguimiento
-* Hora de inicio: reloj para marcar la hora exacta: 00:00\.
+  + Ordinaria
+  + Extraordinaria
+  + Seguimiento
+* Hora de inicio: reloj para marcar la hora exacta: 00:00.
 * Lugar: caja de texto con el lugar de la reunión.
 * Orden del día: caja de texto para escribir el orden del día.
 * Listado de convocantes: será el listado de todos los miembros activos del comité seleccionado (NIF, nombre, apellidos, correo). Se autocompleta automáticamente al seleccionar el comité. Se crea internamente los asistentes de la reunión de convocatoria con todos el check de asistencia a sí.
@@ -855,11 +857,10 @@ La acción eliminar borra la fila del listado de memorias.
 Para dar de alta una nueva memoria se muestra una pantalla con la siguiente información:
 
 * Memoria:  
-
-	+ Si la convocatoria es de tipo "Ordinaria" o "Extraordinaria":
-		- Desplegable con las memorias en estado "En secretaria" y la fecha de envío es igual o menor a la fecha límite de la convocatoria de reunión. También se comprobará que si la petición viene de una solicitud de convocatoria el campo estado de financiación  tiene que tener el valor "Concedido" o bien el valor "Denegado" pero tiene que tener marcada la opción que se se va a financiar con fondos propios del investigador. En caso de no cumplirse esto no se añade en el listado, para no evaluar una memoria de un proyecto denegado sin financiación. También se mostrarán las memorias que tenga una retrospectiva en estado "En secretaría". Las retrospectivas se tratarán como una evaluación de memoria lo único que se evalúa el informe de retrospectiva y no el de memoria.
-	+ Si la convocatoria es de tipo "Seguimiento"
-		- Desplegable con las memorias en estado "En secretaría seguimiento anual" y "En secretaría seguimiento final" y la fecha de envío es igual o menor a la fecha límite de la convocatoria de reunión.
+  + Si la convocatoria es de tipo "Ordinaria" o "Extraordinaria":
+    - Desplegable con las memorias en estado "En secretaria" y la fecha de envío es igual o menor a la fecha límite de la convocatoria de reunión. También se comprobará que si la petición viene de una solicitud de convocatoria el campo estado de financiación  tiene que tener el valor "Concedido" o bien el valor "Denegado" pero tiene que tener marcada la opción que se se va a financiar con fondos propios del investigador. En caso de no cumplirse esto no se añade en el listado, para no evaluar una memoria de un proyecto denegado sin financiación. También se mostrarán las memorias que tenga una retrospectiva en estado "En secretaría". Las retrospectivas se tratarán como una evaluación de memoria lo único que se evalúa el informe de retrospectiva y no el de memoria.
+  + Si la convocatoria es de tipo "Seguimiento"
+    - Desplegable con las memorias en estado "En secretaría seguimiento anual" y "En secretaría seguimiento final" y la fecha de envío es igual o menor a la fecha límite de la convocatoria de reunión.
 * Evaluador 1: desplegable con los evaluadores activos del comité indicado en la convocatoria y que no entre en conflicto de intereses con ningún miembro del equipo investigador de la memoria seleccionada.
 * Evaluador 2: desplegable con los evaluadores activos del comité indicado en la convocatoria y que no entre en conflicto de intereses con ningún miembro del equipo investigador de la memoria seleccionada.
 
@@ -949,27 +950,25 @@ Una vez acabada la evaluación (botón Guardar) se guardará el dictamen y los c
 * Solicitante: en modo consulta
 * Versión: en modo consulta
 * Dictamen:  
-
-	+ Desplegable con los posibles valores si se trata de una evaluación de memoria:  
-	
-		- Favorable
-		- Favorable pendiente de revisión mínima: No es necesario que vuelva a comité de evaluación. Es obligatorio añadir comentarios en la pestaña de "Comentarios"
-		- Pendiente de correcciones: Debe de volver a comité de evaluación. Existe un plazo de 45 días para presentar las correcciones, en caso de no recibir la nueva solicitud con las correcciones en ese plazo, la petición de evaluación pasaría a estado "Archivado", debiendo iniciar una nueva petición para reactivarlo. Es obligatorio añadir comentarios en la pestaña de "Comentarios"
-		- No procede evaluar: Se concluye que el proyecto no es necesario que pase por el comité de ética.
-	+ Desplegable con los posibles valores si se trata de una evaluación de retrospectiva:
-		- Favorable
-		- Desfavorable
+  + Desplegable con los posibles valores si se trata de una evaluación de memoria:  
+    - Favorable
+    - Favorable pendiente de revisión mínima: No es necesario que vuelva a comité de evaluación. Es obligatorio añadir comentarios en la pestaña de "Comentarios"
+    - Pendiente de correcciones: Debe de volver a comité de evaluación. Existe un plazo de 45 días para presentar las correcciones, en caso de no recibir la nueva solicitud con las correcciones en ese plazo, la petición de evaluación pasaría a estado "Archivado", debiendo iniciar una nueva petición para reactivarlo. Es obligatorio añadir comentarios en la pestaña de "Comentarios"
+    - No procede evaluar: Se concluye que el proyecto no es necesario que pase por el comité de ética.
+  + Desplegable con los posibles valores si se trata de una evaluación de retrospectiva:
+    - Favorable
+    - Desfavorable
 * Comentario: únicamente si el dictamen seleccionado es "No procede evaluar"
 * Ver informe: se genera automáticamente un informe pdf dependiendo del valor del dictamen:
-	+ Informe evaluación: si el dictamen es "Favorable pendiente de revisión mínima" o "Pendiente de correcciones" o "No procede evaluar" .  Se genera a partir de una plantilla donde irá los datos de la memoria y los comentarios añadidos en la pestaña de "Comentarios"
-	+ Informe favorable: si el dictamen es "Favorable". Se genera a partir de una plantilla.
+  + Informe evaluación: si el dictamen es "Favorable pendiente de revisión mínima" o "Pendiente de correcciones" o "No procede evaluar" .  Se genera a partir de una plantilla donde irá los datos de la memoria y los comentarios añadidos en la pestaña de "Comentarios"
+  + Informe favorable: si el dictamen es "Favorable". Se genera a partir de una plantilla.
 * Listado con las evaluaciones anteriores mostrando las siguientes columnas:
-	+ Referencia de la memoria
-	+ Versión
-	+ Fecha evaluación
-	+ Dictamen
-	+ Nº de comentarios
-	+ PDF  evaluación: Enlace al informe favorable (dictamen es "Favorable") o al informe evaluación (dictamen "Favorable pendiente de revisión mínima" o "Pendiente de correcciones").
+  + Referencia de la memoria
+  + Versión
+  + Fecha evaluación
+  + Dictamen
+  + Nº de comentarios
+  + PDF  evaluación: Enlace al informe favorable (dictamen es "Favorable") o al informe evaluación (dictamen "Favorable pendiente de revisión mínima" o "Pendiente de correcciones").
 
 ###### Comentarios
 
@@ -1035,22 +1034,23 @@ Una vez acabada la evaluación (botón Guardar) se guardará el dictamen y los c
 * Solicitante: en modo consulta
 * Versión: en modo consulta
 * Dictamen: desplegable con los posibles valores:
+
 * + Si la evaluación es de seguimiento es anual (estado "En evaluación seguimiento anual "):
-	+ - Favorable
-		- Solicitud de modificaciones: Se tendrá que crear una nueva memoria de Modificación. Es obligatorio añadir comentarios en la pestaña de "Comentarios"
-	+ Si la evaluación es de seguimiento es final (estado "En evaluación seguimiento final "):
-		- Favorable
-		- Solicitud de aclaraciones: No es necesario que vuelva a comité de evaluación. Es obligatorio añadir comentarios en la pestaña de "Comentarios"
+  + - Favorable
+    - Solicitud de modificaciones: Se tendrá que crear una nueva memoria de Modificación. Es obligatorio añadir comentarios en la pestaña de "Comentarios"
+  + Si la evaluación es de seguimiento es final (estado "En evaluación seguimiento final "):
+    - Favorable
+    - Solicitud de aclaraciones: No es necesario que vuelva a comité de evaluación. Es obligatorio añadir comentarios en la pestaña de "Comentarios"
 * Ver informe: se genera automáticamente un informe pdf dependiendo del valor del dictamen:
-	+ Informe evaluación: si el dictamen es "Solicitud de modificaciones" o "Solicitud de aclaraciones".  Se genera a partir de una plantilla donde irá los datos de la memoria y los comentarios añadidos en la pestaña de "Comentarios"
-	+ Informe favorable: NO se genera informe
+  + Informe evaluación: si el dictamen es "Solicitud de modificaciones" o "Solicitud de aclaraciones".  Se genera a partir de una plantilla donde irá los datos de la memoria y los comentarios añadidos en la pestaña de "Comentarios"
+  + Informe favorable: NO se genera informe
 * Listado con las evaluaciones anteriores de la memoria mostrando las siguientes columnas:
-	+ - Referencia de la memoria
-		- Versión
-		- Fecha evaluación
-		- Dictamen
-		- Nº de comentarios
-		- PDF  evaluación: Enlace al informe favorable (dictamen es "Favorable") o al informe evaluación (dictamen "Favorable pendiente de revisión mínima" o "Pendiente de correcciones").
+  + - Referencia de la memoria
+    - Versión
+    - Fecha evaluación
+    - Dictamen
+    - Nº de comentarios
+    - PDF  evaluación: Enlace al informe favorable (dictamen es "Favorable") o al informe evaluación (dictamen "Favorable pendiente de revisión mínima" o "Pendiente de correcciones").
 
 ###### Comentarios
 
@@ -1169,10 +1169,7 @@ Para poder finalizar una acta deben de estar evaluadas todas sus evaluaciones de
 
 Se pasa a estado "Finalizada" por lo que ya no se podrá modificar los datos del acta ni realizar ningún cambio en ninguna de las evaluaciones de memorias asociadas a la convocatoria (las que no son de revisión mínima)
 
-El finalizar el acta implica cambiar el estado según el dictamen de la evaluación a todas las memorias implicadas (aquellas que no son de revisión mínima). 
-
-  
-
+El finalizar el acta implica cambiar el estado según el dictamen de la evaluación a todas las memorias implicadas (aquellas que no son de revisión mínima).
 
 #### Evaluadores
 
@@ -1194,9 +1191,8 @@ El resultado serán todas los evaluadores que cumplan con los criterios seleccio
 * Fecha de Alta: fecha a partir de la cual forma parte del comité de ética
 * Fecha de Baja: fecha en la que se dio de baja como perteneciente al comité de ética
 * Estado:  
-
-	+ Activo: si  no tiene fecha baja o fecha baja es mayor a la actual
-	+ Inactivo: si fecha baja es menor a la fecha actual
+  + Activo: si  no tiene fecha baja o fecha baja es mayor a la actual
+  + Inactivo: si fecha baja es menor a la fecha actual
 * Acciones: Editar / Eliminar (desactivar)
 
 También habrá un botón para añadir un nuevo evaluador.
@@ -1208,8 +1204,8 @@ Para dar de alta un nuevo evaluador se necesitan los siguiente campos:
 * Evaluador: caja de texto deshabilitada donde se guardará el nombre y apellidos del evaluador seleccionado. Para ello se buscará con el botón Buscar que abrirá una pantalla para buscar a los evaluadores por diferentes filtros de búsqueda (pantalla común del módulo de usuarios). Se buscará en el sistema de personas y se recuperarán sus datos.
 * Comité: desplegable con los tres comités.
 * Cargo que desempeña en el comité: desplegable con los valores:
-	+ Presidente
-	+ Vocal
+  + Presidente
+  + Vocal
 * Fecha de Alta: calendario para marcar el día
 * Fecha de Baja: calendario para marcar el día
 * Resumen de Actividad: caja de texto
@@ -1228,7 +1224,7 @@ Se desactivará el evaluador. Funcionalidad transversal a toda la aplicación de
 
 No saldrá dicho evaluador en las búsquedas ni podrá evaluar memorias, a no ser que un administrador vuelva a activar dicho evaluador.
 
-### Perfil Evaluador (ACT\-ETI\-004\-Evaluador, ACT\-ETI\-005\-Técnico)
+### Perfil Evaluador (ACT-ETI-004-Evaluador, ACT-ETI-005-Técnico)
 
 #### Evaluaciones
 
@@ -1277,25 +1273,20 @@ Hasta pulsar el botón de Guardar no se harán efectivos los cambios.
 * Solicitante: en modo consulta
 * Versión: en modo consulta
 * Listado con las evaluaciones anteriores mostrando las siguientes columnas:
-	+ Referencia de la memoria
-	+ Versión
-	+ Fecha evaluación
-	+ Dictamen
-	+ Nº de comentarios
-	+ PDF  evaluación: Enlace al informe favorable (dictamen es "Favorable") o al informe evaluación (dictamen "Favorable pendiente de revisión mínima" o "Pendiente de correcciones").
+  + Referencia de la memoria
+  + Versión
+  + Fecha evaluación
+  + Dictamen
+  + Nº de comentarios
+  + PDF  evaluación: Enlace al informe favorable (dictamen es "Favorable") o al informe evaluación (dictamen "Favorable pendiente de revisión mínima" o "Pendiente de correcciones").
 
 Toda la pantalla es de información para el evaluador.
 
-  
-
-
-### Perfil administrador (ACT\-ETI\-007\-Administrador)
+### Perfil administrador (ACT-ETI-007-Administrador)
 
 Únicamente accederá a una opción del menú de Configuración para configurar ciertos tiempos que se usan en el módulo de ética.
 
 El administrador sólo podrá modificar el campos descripción y valor.
-
-
 
 | Código | Descripción | Valor por defecto |
 | --- | --- | --- |
@@ -1319,72 +1310,49 @@ El administrador sólo podrá modificar el campos descripción y valor.
 * Memoria con dictamen "Favorable Pendiente de Modificaciones Mínimas" archivada automáticamente
 * Memoria  con dictamen "Pendiente de correcciones" archivada automáticamente
 
-Ver análisis de este apartado en [ETI \- Comunicados](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-comunicados.md "/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-comunicados.md").
+Ver análisis de este apartado en [ETI - Comunicados](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-comunicados).
 
 ## Informes
 
 Listado de informes a generar a partir de plantillas:
 
-
-
 | Descripción | IU que lo usa | Ejemplo del informe |
 | --- | --- | --- |
-| Informe formulario M10 | [IU\-ETI\-0020\-002 Evaluar memoria \- Gestor](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario/iu-eti-0020-gestion-de-evaluaciones/iu-eti-0020-002-evaluar-memoria.md "/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario/iu-eti-0020-gestion-de-evaluaciones/iu-eti-0020-002-evaluar-memoria.md")(en la pestaña de Documentación)[IU\-ETI\-0050\-002 Evaluar memoria \- Evaluador](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario/iu-eti-0050-evaluaciones-y-seguimientos-evaluador/iu-eti-0050-002-evaluar-memoria.md "/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario/iu-eti-0050-evaluaciones-y-seguimientos-evaluador/iu-eti-0050-002-evaluar-memoria.md")(en la pestaña de Documentación) | [Informe formulario CEISH](https://treetkcom.sharepoint.com/:b:/r/sites/Produccin/Documentos%20compartidos/Innovacion/03_productos/hercules/02_requisitos/etica/info_um/informeFormularioCEISH.pdf?csf=1&web=1&e=PKOcSb "https://treetkcom.sharepoint.com/:b:/r/sites/Produccin/Documentos%20compartidos/Innovacion/03_productos/hercules/02_requisitos/etica/info_um/informeFormularioCEISH.pdf?csf=1&web=1&e=PKOcSb") |
-| Informe formulario M20 | [IU\-ETI\-0020\-002 Evaluar memoria \- Gestor](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario/iu-eti-0020-gestion-de-evaluaciones/iu-eti-0020-002-evaluar-memoria.md "/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario/iu-eti-0020-gestion-de-evaluaciones/iu-eti-0020-002-evaluar-memoria.md")(en la pestaña de Documentación)[IU\-ETI\-0050\-002 Evaluar memoria \- Evaluador](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario/iu-eti-0050-evaluaciones-y-seguimientos-evaluador/iu-eti-0050-002-evaluar-memoria.md "/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario/iu-eti-0050-evaluaciones-y-seguimientos-evaluador/iu-eti-0050-002-evaluar-memoria.md")(en la pestaña de Documentación) | [Informe formulario CEEA](https://treetkcom.sharepoint.com/:b:/r/sites/Produccin/Documentos%20compartidos/Innovacion/03_productos/hercules/02_requisitos/etica/info_um/informeFormularioCEEA.pdf?csf=1&web=1&e=H8WPoh "https://treetkcom.sharepoint.com/:b:/r/sites/Produccin/Documentos%20compartidos/Innovacion/03_productos/hercules/02_requisitos/etica/info_um/informeFormularioCEEA.pdf?csf=1&web=1&e=H8WPoh") |
-| Informe formulario M30 | [IU\-ETI\-0020\-002 Evaluar memoria \- Gestor](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario/iu-eti-0020-gestion-de-evaluaciones/iu-eti-0020-002-evaluar-memoria.md "/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario/iu-eti-0020-gestion-de-evaluaciones/iu-eti-0020-002-evaluar-memoria.md")(en la pestaña de Documentación)[IU\-ETI\-0050\-002 Evaluar memoria \- Evaluador](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario/iu-eti-0050-evaluaciones-y-seguimientos-evaluador/iu-eti-0050-002-evaluar-memoria.md "/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario/iu-eti-0050-evaluaciones-y-seguimientos-evaluador/iu-eti-0050-002-evaluar-memoria.md")(en la pestaña de Documentación) | [Informe formulario CEIAB](https://treetkcom.sharepoint.com/:b:/r/sites/Produccin/Documentos%20compartidos/Innovacion/03_productos/hercules/02_requisitos/etica/info_um/informeFormularioCEIAB.pdf?csf=1&web=1&e=VIKD1V "https://treetkcom.sharepoint.com/:b:/r/sites/Produccin/Documentos%20compartidos/Innovacion/03_productos/hercules/02_requisitos/etica/info_um/informeFormularioCEIAB.pdf?csf=1&web=1&e=VIKD1V") |
-| Informe Ficha evaluador | [IU\-ETI\-0020\-002 Evaluar memoria \- Gestor](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario/iu-eti-0020-gestion-de-evaluaciones/iu-eti-0020-002-evaluar-memoria.md "/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario/iu-eti-0020-gestion-de-evaluaciones/iu-eti-0020-002-evaluar-memoria.md")(en la pestaña de Documentación) | [Ficha evaluador CEEA](https://treetkcom.sharepoint.com/:w:/r/sites/Produccin/Documentos%20compartidos/Innovacion/03_productos/hercules/02_requisitos/etica/info_um/FICHA%20EVALUADOR%20CEEA.docx?d=we947d4c27c414ab7879002a3d2ed0b60&csf=1&web=1&e=Z3cSeA "https://treetkcom.sharepoint.com/:w:/r/sites/Produccin/Documentos%20compartidos/Innovacion/03_productos/hercules/02_requisitos/etica/info_um/FICHA%20EVALUADOR%20CEEA.docx?d=we947d4c27c414ab7879002a3d2ed0b60&csf=1&web=1&e=Z3cSeA")[Ficha evaluador CEIAB](https://treetkcom.sharepoint.com/:w:/r/sites/Produccin/Documentos%20compartidos/Innovacion/03_productos/hercules/02_requisitos/etica/info_um/FICHA%20EVALUADOR%20CEIAB.docx?d=wc8b150e6fefe4356ac3710ecf6005dc4&csf=1&web=1&e=jjPibJ "https://treetkcom.sharepoint.com/:w:/r/sites/Produccin/Documentos%20compartidos/Innovacion/03_productos/hercules/02_requisitos/etica/info_um/FICHA%20EVALUADOR%20CEIAB.docx?d=wc8b150e6fefe4356ac3710ecf6005dc4&csf=1&web=1&e=jjPibJ")[Ficha evaluador CEISH](https://treetkcom.sharepoint.com/:w:/r/sites/Produccin/Documentos%20compartidos/Innovacion/03_productos/hercules/02_requisitos/etica/info_um/FICHA%20EVALUADOR%20CEISH.docx?d=w2a42af26acef4bd1b8341065bc6a26dc&csf=1&web=1&e=yyDoOr "https://treetkcom.sharepoint.com/:w:/r/sites/Produccin/Documentos%20compartidos/Innovacion/03_productos/hercules/02_requisitos/etica/info_um/FICHA%20EVALUADOR%20CEISH.docx?d=w2a42af26acef4bd1b8341065bc6a26dc&csf=1&web=1&e=yyDoOr") |
-| Informe Evaluación | [IU\-ETI\-0020\-002 Evaluar memoria \- Gestor](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario/iu-eti-0020-gestion-de-evaluaciones/iu-eti-0020-002-evaluar-memoria.md "/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario/iu-eti-0020-gestion-de-evaluaciones/iu-eti-0020-002-evaluar-memoria.md")(en la pestaña de Evaluación en el listado de evaluaciones anteriores)[IU\-ETI\-0050\-002 Evaluar memoria \- Evaluador](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario/iu-eti-0050-evaluaciones-y-seguimientos-evaluador/iu-eti-0050-002-evaluar-memoria.md "/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario/iu-eti-0050-evaluaciones-y-seguimientos-evaluador/iu-eti-0050-002-evaluar-memoria.md")(en la pestaña de Evaluación en el listado de evaluaciones anteriores)[IU\-ETI\-0060\-014 Memorias \- Edición evaluaciones \- Investigador](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario/iu-eti-0060-peticiones-de-evaluacion-investigador/iu-eti-0060-014-memorias-edicion-evaluaciones.md "/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario/iu-eti-0060-peticiones-de-evaluacion-investigador/iu-eti-0060-014-memorias-edicion-evaluaciones.md") | [Informe pendiente de correcciones](https://treetkcom.sharepoint.com/:w:/r/sites/Produccin/Documentos%20compartidos/Innovacion/03_productos/hercules/02_requisitos/etica/info_um/INFORME%20PENDIENTE%20DE%20CORRECCIONES.docx?d=w1fe6f80663c8472a903e45b27ef0978f&csf=1&web=1&e=eQfqcJ "https://treetkcom.sharepoint.com/:w:/r/sites/Produccin/Documentos%20compartidos/Innovacion/03_productos/hercules/02_requisitos/etica/info_um/INFORME%20PENDIENTE%20DE%20CORRECCIONES.docx?d=w1fe6f80663c8472a903e45b27ef0978f&csf=1&web=1&e=eQfqcJ") |
-| Informe Favorable | [IU\-ETI\-0020\-002 Evaluar memoria \- Gestor](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario/iu-eti-0020-gestion-de-evaluaciones/iu-eti-0020-002-evaluar-memoria.md "/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario/iu-eti-0020-gestion-de-evaluaciones/iu-eti-0020-002-evaluar-memoria.md")(en la pestaña de Evaluación en el listado de evaluaciones anteriores)[IU\-ETI\-0050\-002 Evaluar memoria \- Evaluador](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario/iu-eti-0050-evaluaciones-y-seguimientos-evaluador/iu-eti-0050-002-evaluar-memoria.md "/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario/iu-eti-0050-evaluaciones-y-seguimientos-evaluador/iu-eti-0050-002-evaluar-memoria.md")(en la pestaña de Evaluación en el listado de evaluaciones anteriores)[IU\-ETI\-0060\-014 Memorias \- Edición evaluaciones \- Investigador](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario/iu-eti-0060-peticiones-de-evaluacion-investigador/iu-eti-0060-014-memorias-edicion-evaluaciones.md "/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario/iu-eti-0060-peticiones-de-evaluacion-investigador/iu-eti-0060-014-memorias-edicion-evaluaciones.md") | [Informe favorable](https://treetkcom.sharepoint.com/:b:/r/sites/Produccin/Documentos%20compartidos/Innovacion/03_productos/hercules/02_requisitos/etica/info_um/INFORME%20FAVORABLE.pdf?csf=1&web=1&e=y4pWca "https://treetkcom.sharepoint.com/:b:/r/sites/Produccin/Documentos%20compartidos/Innovacion/03_productos/hercules/02_requisitos/etica/info_um/INFORME%20FAVORABLE.pdf?csf=1&web=1&e=y4pWca") |
-| Informe Acta | [IU\-ETI\-0030\-001 Búsqueda y listado de actas \- Gestor](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario/iu-eti-0030-gestion-de-actas/iu-eti-0030-001-busqueda-y-listado-de-actas.md "/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario/iu-eti-0030-gestion-de-actas/iu-eti-0030-001-busqueda-y-listado-de-actas.md") | No lo tenemos |
-| Informe seguimiento anual | [IU\-ETI\-0100\-002 Evaluar memoria seguimiento](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario/iu-eti-0100-gestion-de-seguimientos/iu-eti-0100-002-evaluar-memoria-seguimiento.md "/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario/iu-eti-0100-gestion-de-seguimientos/iu-eti-0100-002-evaluar-memoria-seguimiento.md")(en la pestaña de Documentación)[IU\-ETI\-0050\-007 Evaluar memoria seguimiento](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario/iu-eti-0050-evaluaciones-y-seguimientos-evaluador/iu-eti-0050-007-evaluar-memoria-seguimiento.md "/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario/iu-eti-0050-evaluaciones-y-seguimientos-evaluador/iu-eti-0050-007-evaluar-memoria-seguimiento.md")(en la pestaña de Documentación) | [Seguimiento](https://treetkcom.sharepoint.com/:w:/r/sites/Produccin/Documentos%20compartidos/Innovacion/03_productos/hercules/02_requisitos/etica/info_um/SEGUIMIENTO%2014-6-20.docx?d=w64fa8efad06649658428478709158b01&csf=1&web=1&e=MEtcIs "https://treetkcom.sharepoint.com/:w:/r/sites/Produccin/Documentos%20compartidos/Innovacion/03_productos/hercules/02_requisitos/etica/info_um/SEGUIMIENTO%2014-6-20.docx?d=w64fa8efad06649658428478709158b01&csf=1&web=1&e=MEtcIs") |
-| Informe seguimiento final | [IU\-ETI\-0100\-002 Evaluar memoria seguimiento](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario/iu-eti-0100-gestion-de-seguimientos/iu-eti-0100-002-evaluar-memoria-seguimiento.md "/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario/iu-eti-0100-gestion-de-seguimientos/iu-eti-0100-002-evaluar-memoria-seguimiento.md")(en la pestaña de Documentación)[IU\-ETI\-0050\-007 Evaluar memoria seguimiento](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario/iu-eti-0050-evaluaciones-y-seguimientos-evaluador/iu-eti-0050-007-evaluar-memoria-seguimiento.md "/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario/iu-eti-0050-evaluaciones-y-seguimientos-evaluador/iu-eti-0050-007-evaluar-memoria-seguimiento.md")(en la pestaña de Documentación) | [Seguimiento](https://treetkcom.sharepoint.com/:w:/r/sites/Produccin/Documentos%20compartidos/Innovacion/03_productos/hercules/02_requisitos/etica/info_um/SEGUIMIENTO%2014-6-20.docx?d=w64fa8efad06649658428478709158b01&csf=1&web=1&e=MEtcIs "https://treetkcom.sharepoint.com/:w:/r/sites/Produccin/Documentos%20compartidos/Innovacion/03_productos/hercules/02_requisitos/etica/info_um/SEGUIMIENTO%2014-6-20.docx?d=w64fa8efad06649658428478709158b01&csf=1&web=1&e=MEtcIs") |
-| Informe retrospectiva | [IU\-ETI\-0020\-002 Evaluar memoria \- Gestor](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario/iu-eti-0020-gestion-de-evaluaciones/iu-eti-0020-002-evaluar-memoria.md "/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario/iu-eti-0020-gestion-de-evaluaciones/iu-eti-0020-002-evaluar-memoria.md")(en la pestaña de Documentación)[IU\-ETI\-0050\-002 Evaluar memoria \- Evaluador](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario/iu-eti-0050-evaluaciones-y-seguimientos-evaluador/iu-eti-0050-002-evaluar-memoria.md "/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario/iu-eti-0050-evaluaciones-y-seguimientos-evaluador/iu-eti-0050-002-evaluar-memoria.md")(en la pestaña de Documentación) | [Evaluación retrospectiva](https://treetkcom.sharepoint.com/:w:/r/sites/Produccin/Documentos%20compartidos/Innovacion/03_productos/hercules/02_requisitos/etica/info_um/EVALUACIO%CC%81N%20RETROSPECTIVA.docx?d=wc2f12cfa60314588b454c0da84b389e8&csf=1&web=1&e=blaSor "https://treetkcom.sharepoint.com/:w:/r/sites/Produccin/Documentos%20compartidos/Innovacion/03_productos/hercules/02_requisitos/etica/info_um/EVALUACIO%CC%81N%20RETROSPECTIVA.docx?d=wc2f12cfa60314588b454c0da84b389e8&csf=1&web=1&e=blaSor") |
-| Modelo informe evaluación retrospectiva | [IU\-ETI\-0060\-014 Memorias \- Edición evaluaciones \- Investigador](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario/iu-eti-0060-peticiones-de-evaluacion-investigador/iu-eti-0060-014-memorias-edicion-evaluaciones.md "/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario/iu-eti-0060-peticiones-de-evaluacion-investigador/iu-eti-0060-014-memorias-edicion-evaluaciones.md") | [Modelo informe evaluación retrospectiva](https://treetkcom.sharepoint.com/:w:/r/sites/Produccin/Documentos%20compartidos/Innovacion/03_productos/hercules/02_requisitos/etica/info_um/MODELO%20INFORME%20EVALUACI%C3%93N%20RETROSPECTIVA.doc?d=wb3dd5a4f04684e5086d077eeb87ad41d&csf=1&web=1&e=4wg6gc "https://treetkcom.sharepoint.com/:w:/r/sites/Produccin/Documentos%20compartidos/Innovacion/03_productos/hercules/02_requisitos/etica/info_um/MODELO%20INFORME%20EVALUACI%C3%93N%20RETROSPECTIVA.doc?d=wb3dd5a4f04684e5086d077eeb87ad41d&csf=1&web=1&e=4wg6gc") |
-| Informe favorable de ratificación | [U\-ETI\-0020\-002 Evaluar memoria \- Gestor](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario/iu-eti-0020-gestion-de-evaluaciones/iu-eti-0020-002-evaluar-memoria.md "/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario/iu-eti-0020-gestion-de-evaluaciones/iu-eti-0020-002-evaluar-memoria.md")(en la pestaña de Evaluación en el listado de evaluaciones anteriores)[IU\-ETI\-0050\-002 Evaluar memoria \- Evaluador](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario/iu-eti-0050-evaluaciones-y-seguimientos-evaluador/iu-eti-0050-002-evaluar-memoria.md "/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario/iu-eti-0050-evaluaciones-y-seguimientos-evaluador/iu-eti-0050-002-evaluar-memoria.md")(en la pestaña de Evaluación en el listado de evaluaciones anteriores)[IU\-ETI\-0060\-014 Memorias \- Edición evaluaciones \- Investigador](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario/iu-eti-0060-peticiones-de-evaluacion-investigador/iu-eti-0060-014-memorias-edicion-evaluaciones.md "/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario/iu-eti-0060-peticiones-de-evaluacion-investigador/iu-eti-0060-014-memorias-edicion-evaluaciones.md") | [Informe favorable de ratificación](https://treetkcom.sharepoint.com/:w:/r/sites/Produccin/Documentos%20compartidos/Innovacion/03_productos/hercules/02_requisitos/etica/info_um/INFORME%20FAVORABLE%20DE%20RATIFICACI%C3%93N.docx?d=w1568f4f863344bc88645aed5590d4a28&csf=1&web=1&e=18yAmz "https://treetkcom.sharepoint.com/:w:/r/sites/Produccin/Documentos%20compartidos/Innovacion/03_productos/hercules/02_requisitos/etica/info_um/INFORME%20FAVORABLE%20DE%20RATIFICACI%C3%93N.docx?d=w1568f4f863344bc88645aed5590d4a28&csf=1&web=1&e=18yAmz") |
-| Informe favorable de modificación | [U\-ETI\-0020\-002 Evaluar memoria \- Gestor](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario/iu-eti-0020-gestion-de-evaluaciones/iu-eti-0020-002-evaluar-memoria.md "/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario/iu-eti-0020-gestion-de-evaluaciones/iu-eti-0020-002-evaluar-memoria.md")(en la pestaña de Evaluación en el listado de evaluaciones anteriores)[IU\-ETI\-0050\-002 Evaluar memoria \- Evaluador](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario/iu-eti-0050-evaluaciones-y-seguimientos-evaluador/iu-eti-0050-002-evaluar-memoria.md "/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario/iu-eti-0050-evaluaciones-y-seguimientos-evaluador/iu-eti-0050-002-evaluar-memoria.md")(en la pestaña de Evaluación en el listado de evaluaciones anteriores)[IU\-ETI\-0060\-014 Memorias \- Edición evaluaciones \- Investigador](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario/iu-eti-0060-peticiones-de-evaluacion-investigador/iu-eti-0060-014-memorias-edicion-evaluaciones.md "/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario/iu-eti-0060-peticiones-de-evaluacion-investigador/iu-eti-0060-014-memorias-edicion-evaluaciones.md") | [Informe favorable de modificación (primera)](https://treetkcom.sharepoint.com/:w:/r/sites/Produccin/Documentos%20compartidos/Innovacion/03_productos/hercules/02_requisitos/etica/info_um/INFORME%20FAVORABLE%20DE%20MODIFICACI%C3%93N%20RELEVANTE.docx?d=w7c2b3fdf6ee34f9592540f8675480749&csf=1&web=1&e=yJmmSO "https://treetkcom.sharepoint.com/:w:/r/sites/Produccin/Documentos%20compartidos/Innovacion/03_productos/hercules/02_requisitos/etica/info_um/INFORME%20FAVORABLE%20DE%20MODIFICACI%C3%93N%20RELEVANTE.docx?d=w7c2b3fdf6ee34f9592540f8675480749&csf=1&web=1&e=yJmmSO") |
-
-  
-
+| Informe formulario M10 | [IU-ETI-0020-002 Evaluar memoria - Gestor](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario/iu-eti-0020-gestion-de-evaluaciones/iu-eti-0020-002-evaluar-memoria)  (en la pestaña de Documentación)  [IU-ETI-0050-002 Evaluar memoria - Evaluador](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario/iu-eti-0050-evaluaciones-y-seguimientos-evaluador/iu-eti-0050-002-evaluar-memoria)  (en la pestaña de Documentación) | [Informe formulario CEISH](https://treetkcom.sharepoint.com/:b:/r/sites/Produccin/Documentos%20compartidos/Innovacion/03_productos/hercules/02_requisitos/etica/info_um/informeFormularioCEISH.pdf?csf=1&web=1&e=PKOcSb) |
+| Informe formulario M20 | [IU-ETI-0020-002 Evaluar memoria - Gestor](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario/iu-eti-0020-gestion-de-evaluaciones/iu-eti-0020-002-evaluar-memoria)  (en la pestaña de Documentación)  [IU-ETI-0050-002 Evaluar memoria - Evaluador](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario/iu-eti-0050-evaluaciones-y-seguimientos-evaluador/iu-eti-0050-002-evaluar-memoria)  (en la pestaña de Documentación) | [Informe formulario CEEA](https://treetkcom.sharepoint.com/:b:/r/sites/Produccin/Documentos%20compartidos/Innovacion/03_productos/hercules/02_requisitos/etica/info_um/informeFormularioCEEA.pdf?csf=1&web=1&e=H8WPoh) |
+| Informe formulario M30 | [IU-ETI-0020-002 Evaluar memoria - Gestor](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario/iu-eti-0020-gestion-de-evaluaciones/iu-eti-0020-002-evaluar-memoria)  (en la pestaña de Documentación)  [IU-ETI-0050-002 Evaluar memoria - Evaluador](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario/iu-eti-0050-evaluaciones-y-seguimientos-evaluador/iu-eti-0050-002-evaluar-memoria)  (en la pestaña de Documentación) | [Informe formulario CEIAB](https://treetkcom.sharepoint.com/:b:/r/sites/Produccin/Documentos%20compartidos/Innovacion/03_productos/hercules/02_requisitos/etica/info_um/informeFormularioCEIAB.pdf?csf=1&web=1&e=VIKD1V) |
+| Informe Ficha evaluador | [IU-ETI-0020-002 Evaluar memoria - Gestor](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario/iu-eti-0020-gestion-de-evaluaciones/iu-eti-0020-002-evaluar-memoria)  (en la pestaña de Documentación) | [Ficha evaluador CEEA](https://treetkcom.sharepoint.com/:w:/r/sites/Produccin/Documentos%20compartidos/Innovacion/03_productos/hercules/02_requisitos/etica/info_um/FICHA%20EVALUADOR%20CEEA.docx?d=we947d4c27c414ab7879002a3d2ed0b60&csf=1&web=1&e=Z3cSeA)  [Ficha evaluador CEIAB](https://treetkcom.sharepoint.com/:w:/r/sites/Produccin/Documentos%20compartidos/Innovacion/03_productos/hercules/02_requisitos/etica/info_um/FICHA%20EVALUADOR%20CEIAB.docx?d=wc8b150e6fefe4356ac3710ecf6005dc4&csf=1&web=1&e=jjPibJ)  [Ficha evaluador CEISH](https://treetkcom.sharepoint.com/:w:/r/sites/Produccin/Documentos%20compartidos/Innovacion/03_productos/hercules/02_requisitos/etica/info_um/FICHA%20EVALUADOR%20CEISH.docx?d=w2a42af26acef4bd1b8341065bc6a26dc&csf=1&web=1&e=yyDoOr) |
+| Informe Evaluación | [IU-ETI-0020-002 Evaluar memoria - Gestor](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario/iu-eti-0020-gestion-de-evaluaciones/iu-eti-0020-002-evaluar-memoria)  (en la pestaña de Evaluación en el listado de evaluaciones anteriores)  [IU-ETI-0050-002 Evaluar memoria - Evaluador](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario/iu-eti-0050-evaluaciones-y-seguimientos-evaluador/iu-eti-0050-002-evaluar-memoria)  (en la pestaña de Evaluación en el listado de evaluaciones anteriores)  [IU-ETI-0060-014 Memorias - Edición evaluaciones - Investigador](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario/iu-eti-0060-peticiones-de-evaluacion-investigador/iu-eti-0060-014-memorias-edicion-evaluaciones) | [Informe pendiente de correcciones](https://treetkcom.sharepoint.com/:w:/r/sites/Produccin/Documentos%20compartidos/Innovacion/03_productos/hercules/02_requisitos/etica/info_um/INFORME%20PENDIENTE%20DE%20CORRECCIONES.docx?d=w1fe6f80663c8472a903e45b27ef0978f&csf=1&web=1&e=eQfqcJ) |
+| Informe Favorable | [IU-ETI-0020-002 Evaluar memoria - Gestor](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario/iu-eti-0020-gestion-de-evaluaciones/iu-eti-0020-002-evaluar-memoria)  (en la pestaña de Evaluación en el listado de evaluaciones anteriores)  [IU-ETI-0050-002 Evaluar memoria - Evaluador](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario/iu-eti-0050-evaluaciones-y-seguimientos-evaluador/iu-eti-0050-002-evaluar-memoria)  (en la pestaña de Evaluación en el listado de evaluaciones anteriores)  [IU-ETI-0060-014 Memorias - Edición evaluaciones - Investigador](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario/iu-eti-0060-peticiones-de-evaluacion-investigador/iu-eti-0060-014-memorias-edicion-evaluaciones) | [Informe favorable](https://treetkcom.sharepoint.com/:b:/r/sites/Produccin/Documentos%20compartidos/Innovacion/03_productos/hercules/02_requisitos/etica/info_um/INFORME%20FAVORABLE.pdf?csf=1&web=1&e=y4pWca) |
+| Informe Acta | [IU-ETI-0030-001 Búsqueda y listado de actas - Gestor](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario/iu-eti-0030-gestion-de-actas/iu-eti-0030-001-busqueda-y-listado-de-actas) | No lo tenemos |
+| Informe seguimiento anual | [IU-ETI-0100-002 Evaluar memoria seguimiento](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario/iu-eti-0100-gestion-de-seguimientos/iu-eti-0100-002-evaluar-memoria-seguimiento)  (en la pestaña de Documentación)  [IU-ETI-0050-007 Evaluar memoria seguimiento](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario/iu-eti-0050-evaluaciones-y-seguimientos-evaluador/iu-eti-0050-007-evaluar-memoria-seguimiento)  (en la pestaña de Documentación) | [Seguimiento](https://treetkcom.sharepoint.com/:w:/r/sites/Produccin/Documentos%20compartidos/Innovacion/03_productos/hercules/02_requisitos/etica/info_um/SEGUIMIENTO%2014-6-20.docx?d=w64fa8efad06649658428478709158b01&csf=1&web=1&e=MEtcIs) |
+| Informe seguimiento final | [IU-ETI-0100-002 Evaluar memoria seguimiento](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario/iu-eti-0100-gestion-de-seguimientos/iu-eti-0100-002-evaluar-memoria-seguimiento)  (en la pestaña de Documentación)  [IU-ETI-0050-007 Evaluar memoria seguimiento](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario/iu-eti-0050-evaluaciones-y-seguimientos-evaluador/iu-eti-0050-007-evaluar-memoria-seguimiento)  (en la pestaña de Documentación) | [Seguimiento](https://treetkcom.sharepoint.com/:w:/r/sites/Produccin/Documentos%20compartidos/Innovacion/03_productos/hercules/02_requisitos/etica/info_um/SEGUIMIENTO%2014-6-20.docx?d=w64fa8efad06649658428478709158b01&csf=1&web=1&e=MEtcIs) |
+| Informe retrospectiva | [IU-ETI-0020-002 Evaluar memoria - Gestor](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario/iu-eti-0020-gestion-de-evaluaciones/iu-eti-0020-002-evaluar-memoria)  (en la pestaña de Documentación)  [IU-ETI-0050-002 Evaluar memoria - Evaluador](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario/iu-eti-0050-evaluaciones-y-seguimientos-evaluador/iu-eti-0050-002-evaluar-memoria)  (en la pestaña de Documentación) | [Evaluación retrospectiva](https://treetkcom.sharepoint.com/:w:/r/sites/Produccin/Documentos%20compartidos/Innovacion/03_productos/hercules/02_requisitos/etica/info_um/EVALUACIO%CC%81N%20RETROSPECTIVA.docx?d=wc2f12cfa60314588b454c0da84b389e8&csf=1&web=1&e=blaSor) |
+| Modelo informe evaluación retrospectiva | [IU-ETI-0060-014 Memorias - Edición evaluaciones - Investigador](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario/iu-eti-0060-peticiones-de-evaluacion-investigador/iu-eti-0060-014-memorias-edicion-evaluaciones) | [Modelo informe evaluación retrospectiva](https://treetkcom.sharepoint.com/:w:/r/sites/Produccin/Documentos%20compartidos/Innovacion/03_productos/hercules/02_requisitos/etica/info_um/MODELO%20INFORME%20EVALUACI%C3%93N%20RETROSPECTIVA.doc?d=wb3dd5a4f04684e5086d077eeb87ad41d&csf=1&web=1&e=4wg6gc) |
+| Informe favorable de ratificación | [U-ETI-0020-002 Evaluar memoria - Gestor](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario/iu-eti-0020-gestion-de-evaluaciones/iu-eti-0020-002-evaluar-memoria)  (en la pestaña de Evaluación en el listado de evaluaciones anteriores)  [IU-ETI-0050-002 Evaluar memoria - Evaluador](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario/iu-eti-0050-evaluaciones-y-seguimientos-evaluador/iu-eti-0050-002-evaluar-memoria)  (en la pestaña de Evaluación en el listado de evaluaciones anteriores)  [IU-ETI-0060-014 Memorias - Edición evaluaciones - Investigador](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario/iu-eti-0060-peticiones-de-evaluacion-investigador/iu-eti-0060-014-memorias-edicion-evaluaciones) | [Informe favorable de ratificación](https://treetkcom.sharepoint.com/:w:/r/sites/Produccin/Documentos%20compartidos/Innovacion/03_productos/hercules/02_requisitos/etica/info_um/INFORME%20FAVORABLE%20DE%20RATIFICACI%C3%93N.docx?d=w1568f4f863344bc88645aed5590d4a28&csf=1&web=1&e=18yAmz) |
+| Informe favorable de modificación | [U-ETI-0020-002 Evaluar memoria - Gestor](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario/iu-eti-0020-gestion-de-evaluaciones/iu-eti-0020-002-evaluar-memoria) (en la pestaña de Evaluación en el listado de evaluaciones anteriores)  [IU-ETI-0050-002 Evaluar memoria - Evaluador](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario/iu-eti-0050-evaluaciones-y-seguimientos-evaluador/iu-eti-0050-002-evaluar-memoria)  (en la pestaña de Evaluación en el listado de evaluaciones anteriores)  [IU-ETI-0060-014 Memorias - Edición evaluaciones - Investigador](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario/iu-eti-0060-peticiones-de-evaluacion-investigador/iu-eti-0060-014-memorias-edicion-evaluaciones) | [Informe favorable de modificación (primera)](https://treetkcom.sharepoint.com/:w:/r/sites/Produccin/Documentos%20compartidos/Innovacion/03_productos/hercules/02_requisitos/etica/info_um/INFORME%20FAVORABLE%20DE%20MODIFICACI%C3%93N%20RELEVANTE.docx?d=w7c2b3fdf6ee34f9592540f8675480749&csf=1&web=1&e=yJmmSO) |
 
 ## Procesos
 
-
-
-
-
 ### Paso a archivado por inactividad (modificaciones mínimas)
 
-Si han paso X días (cantidad indicada en la variable de configuración "**diasArchivadaInactivo**" definida en [IU\-ETI\-0080\- Configuración)](https://confluence.um.es/confluence/pages/viewpage.action?pageId=597852515 "https://confluence.um.es/confluence/pages/viewpage.action?pageId=597852515") desde la fecha de estado de una memoria cuyos estados son "Favorable Pendiente de Modificaciones Mínimas"  o "No procede evaluar"  o "Solicitud modificación" se deberá de cambiar el estado a "Archivado" y actualizar la fecha de estado. También se debe enviar un comunicado al investigador según lo definido en [ETI \- Comunicados](https://confluence.um.es/confluence/display/HERCULES/ETI+-+Comunicados "https://confluence.um.es/confluence/display/HERCULES/ETI+-+Comunicados") en el comunicado **Memoria con dictamen "Favorable Pendiente de Modificaciones Mínimas" archivada automáticamente**.
+Si han paso X días (cantidad indicada en la variable de configuración "**diasArchivadaInactivo**" definida en [IU-ETI-0080- Configuración)](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario/iu-eti-0080-configuracion) desde la fecha de estado de una memoria cuyos estados son "Favorable Pendiente de Modificaciones Mínimas"  o "No procede evaluar"  o "Solicitud modificación" se deberá de cambiar el estado a "Archivado" y actualizar la fecha de estado. También se debe enviar un comunicado al investigador según lo definido en [ETI - Comunicados](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-comunicados) en el comunicado **Memoria con dictamen "Favorable Pendiente de Modificaciones Mínimas" archivada automáticamente**.
 
 ### Paso a archivado por no presentar de nuevo el informe
 
-Si han paso X meses (cantidad indicada en la variable de configuración "**mesesArchivadaPendienteCorrecciones**" definida en [IU\-ETI\-0080\- Configuración)](https://confluence.um.es/confluence/pages/viewpage.action?pageId=597852515 "https://confluence.um.es/confluence/pages/viewpage.action?pageId=597852515") desde la fecha de estado de una memoria  cuyo estado es  "Pendiente Correcciones" se deberá de cambiar el estado a "Archivado" y actualizar la fecha de estado. También se debe enviar un comunicado al investigador según lo definido en [ETI \- Comunicados](https://confluence.um.es/confluence/display/HERCULES/ETI+-+Comunicados "https://confluence.um.es/confluence/display/HERCULES/ETI+-+Comunicados") en el comunicado **Memoria  con dictamen "Pendiente de correcciones" archivada automáticamente**.  
-
-
-
-
-
-
-
+Si han paso X meses (cantidad indicada en la variable de configuración "**mesesArchivadaPendienteCorrecciones**" definida en [IU-ETI-0080- Configuración)](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario/iu-eti-0080-configuracion) desde la fecha de estado de una memoria  cuyo estado es  "Pendiente Correcciones" se deberá de cambiar el estado a "Archivado" y actualizar la fecha de estado. También se debe enviar un comunicado al investigador según lo definido en [ETI - Comunicados](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-comunicados) en el comunicado **Memoria  con dictamen "Pendiente de correcciones" archivada automáticamente**.
 
 ### Casos de uso relacionados
 
-
-
-
-
-
+![](plugins/servlet/confluence/placeholder/unknown-macro)
 
 ### Interfaces relacionados
 
-
-
-
-
+![](plugins/servlet/confluence/placeholder/unknown-macro)
 
 ## Integraciones
 
-* Módulo de avisos y alertas para los avisos definidos en [ETI \- Comunicados](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-comunicados.md "/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-comunicados.md")
+* Módulo de avisos y alertas para los avisos definidos en [ETI - Comunicados](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-comunicados)
 * Módulo de usuarios para buscar los usuarios en la parte del equipo de investigación de la petición de evaluación
 * Módulo reporting para generar los informes pdf.
 * Módulo CSP: formulario de auto check list tienen que estar en solicitud de convocatoria y si sale que hay que necesita una evaluación de de la comisión de ética se crea directamente la petición de evaluación con los datos de la solicitud de convocatoria. Definir que sacar en el desplegable de tipos de financiación para que sea igual que en CSP.
@@ -1394,9 +1362,6 @@ Si han paso X meses (cantidad indicada en la variable de configuración "**meses
 ## Flujo de estados de una memoria
 
 ![](/attachments/597853840/841089094.bmp)
-
-  
-
 
 Se indica a continuación el significado de cada estado:
 
@@ -1425,16 +1390,6 @@ Se indica a continuación el significado de cada estado:
 * En secretaría seguimiento final aclaraciones: una memoria cuyo estado sea "en aclaración seguimiento final"  tomará el estado "en secretaría seguimiento final" cuando el/la investigador/a solicitante remite nuevamente la memoria a secretaría, tras haber introducido los cambios oportunos en el formulario de seguimiento final. Una memoria en estado  "en secretaría seguimiento final", podrá ser reevaluada por el personal de gestión sin necesidad de incluir la memoria en una nueva convocatoria de reunión de seguimiento.
 * Archivado: es el estado final que adquieren las memorias cuyo estado previo es "desfavorable", "pendiente de correcciones", "pendiente de revisión mínima", "solicitud de modificación" o "en aclaración seguimiento final" y hayan transcurrido un número de días determinado, configurados en el SGI. Una memoria en estado "archivado" no podrá ser modificada. Su ciclo de vida ha concluído.
 
-  
-
-
 ## Modelo lógico
 
 ![](/attachments/597853840/841089095.bmp)
-
-  
-
-
-
-
-

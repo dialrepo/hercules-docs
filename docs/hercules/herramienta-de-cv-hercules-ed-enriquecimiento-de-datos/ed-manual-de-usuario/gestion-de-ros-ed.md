@@ -1,6 +1,4 @@
-# Hércules : Gestión de ROs \- ED
-
-
+# Gestión de ROs - ED
 
 La Gestión de ROs es una pagina de búsqueda con todos los ROs en los que eres investigador principal o secundario.
 
@@ -10,7 +8,7 @@ Se puede acceder desde la pagina principal de ED o desde el menú lateral.
 
 ![](/attachments/598147465/598148026.png) ![](/attachments/598147465/598148021.png)
 
-En la pagina aparecen ROs en lo que se participo como investigador, 
+En la pagina aparecen ROs en lo que se participo como investigador,
 
 Cada uno de estos ROs muestra lo siguiente:
 
@@ -49,10 +47,3 @@ Al clicar en las opciones que están a la derecha aparece el botón de editar qu
 ![](/attachments/598147465/598147977.png)
 
 ![](/attachments/598147465/598147973.png)
-
-  
-
-
-
-
-

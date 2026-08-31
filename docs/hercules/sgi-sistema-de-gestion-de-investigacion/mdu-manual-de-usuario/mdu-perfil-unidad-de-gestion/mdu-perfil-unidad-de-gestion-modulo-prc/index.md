@@ -1,6 +1,4 @@
-# Hércules : MDU\-Perfil unidad de gestión \- Módulo PRC
-
-
+# MDU-Perfil unidad de gestión - Módulo PRC
 
 El módulo de producción científica (PRC) es un módulo integrado en el SGI Hércules que permite tener la base principal y sin duplicados de toda la producción científica de la Universidad.
 
@@ -31,17 +29,11 @@ El SGI dispone de los siguientes perfiles predefinidos de acceso al módulo PRC:
 
 Los bloques funcionales habilitados para cada perfil son:
 
-
-
 | Perfil | Funcionalidad | Restricciones |
 | --- | --- | --- |
-| Perfil gestor | [PRC\-Validación producción científica](https://confluence.um.es/confluence/pages/viewpage.action?pageId=597853641 "https://confluence.um.es/confluence/pages/viewpage.action?pageId=597853641") |  |
-| [PRC\-Informes](https://confluence.um.es/confluence/display/HERCULES/PRC-Informes "https://confluence.um.es/confluence/display/HERCULES/PRC-Informes") |  |
-| [PRC\-Convocatorias](https://confluence.um.es/confluence/display/HERCULES/PRC-Convocatorias "https://confluence.um.es/confluence/display/HERCULES/PRC-Convocatorias") |  |
-| Perfil visor | [PRC\-Validación producción científica](https://confluence.um.es/confluence/pages/viewpage.action?pageId=597853641 "https://confluence.um.es/confluence/pages/viewpage.action?pageId=597853641") |  |
-| [PRC\-Informes](https://confluence.um.es/confluence/display/HERCULES/PRC-Informes "https://confluence.um.es/confluence/display/HERCULES/PRC-Informes") |  |
-| [PRC\-Convocatorias](https://confluence.um.es/confluence/display/HERCULES/PRC-Convocatorias "https://confluence.um.es/confluence/display/HERCULES/PRC-Convocatorias") |  |
-
-
-
-
+| Perfil gestor | [PRC-Validación producción científica](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/mdu-perfil-unidad-de-gestion/mdu-perfil-unidad-de-gestion-modulo-prc/prc-validacion-produccion-cientifica) |  |
+| [PRC-Informes](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/mdu-perfil-unidad-de-gestion/mdu-perfil-unidad-de-gestion-modulo-prc/prc-informes) |  |
+| [PRC-Convocatorias](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/mdu-perfil-unidad-de-gestion/mdu-perfil-unidad-de-gestion-modulo-prc/prc-convocatorias) |  |
+| Perfil visor | [PRC-Validación producción científica](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/mdu-perfil-unidad-de-gestion/mdu-perfil-unidad-de-gestion-modulo-prc/prc-validacion-produccion-cientifica) |  |
+| [PRC-Informes](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/mdu-perfil-unidad-de-gestion/mdu-perfil-unidad-de-gestion-modulo-prc/prc-informes) |  |
+| [PRC-Convocatorias](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/mdu-perfil-unidad-de-gestion/mdu-perfil-unidad-de-gestion-modulo-prc/prc-convocatorias) |  |

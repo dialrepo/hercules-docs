@@ -1,11 +1,17 @@
-# Hércules : CU\-ETI\-0060\-016 \- Enviar a secretaría retrospectiva
+# CU-ETI-0060-016 - Enviar a secretaría retrospectiva
 
+Únicamente el solicitante de la petición de evaluación del proyecto podrá enviar a secretaría la retrospectiva.
 
-
- Únicamente el solicitante de la petición de evaluación del proyecto podrá enviar a secretaría la retrospectiva.
-
-  
-
+|  |  |
+| --- | --- |
+| Cod. CU | ********CU-ETI-0060-016 -Enviar a secretaría retrospectiva******** |
+| Ver. objetivo |  |
+| Ver. CU | 1.0.0 |
+| Estado | LIBERADO\_ |
+| Fec. Aprobación |  |
+| Épica, historia |  |
+| Actores | ACT-ETI-002-Investigador  ACT-ETI-003-Solicitante |
+| Frecuencia | Media |
 
 ### Descripción
 
@@ -15,9 +21,9 @@ Formularios de Búsqueda de peticiones de evaluación
 
 #### Actor principal
 
-ACT\-ETI\-002\-Investigador
+ACT-ETI-002-Investigador
 
-ACT\-ETI\-003\-Solicitante
+ACT-ETI-003-Solicitante
 
 ### Precondiciones
 
@@ -28,9 +34,6 @@ Haber accedido a la opción de  menú Mis peticiones de evaluación y seleccion
 Sólo se muestran las peticiones de evaluación dadas de alta en el sistema y que la persona creadora de la misma sea la persona que se está logando en el sistema
 
 Ésta acción únicamente se muestra cuando la memoria es de tipo CEEA, requiere retrospectiva y el estado de la misma tiene el valor "Completada".
-
-  
-
 
 ### Garantías de éxito (postcondiciones)
 
@@ -49,7 +52,3 @@ En enviar a secretaría la retrospectiva se tienen que hacer las siguientes func
 6. El sistema hace todos los cambios que tienen que hacer (los comentados en las postcondiciones)
 7. El usuario es informado del resultado positivo de la acción.
 8. Se mantienen en la pantalla de listado de memoria.
-
-
-
-

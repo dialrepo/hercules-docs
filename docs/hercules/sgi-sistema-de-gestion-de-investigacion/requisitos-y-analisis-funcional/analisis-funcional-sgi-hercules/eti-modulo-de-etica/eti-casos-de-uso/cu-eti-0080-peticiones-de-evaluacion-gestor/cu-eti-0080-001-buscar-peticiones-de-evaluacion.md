@@ -1,6 +1,15 @@
-# Hércules : CU\-ETI\-0080\-001 \- Buscar Peticiones de evaluación
+# CU-ETI-0080-001 - Buscar Peticiones de evaluación
 
-
+|  |  |
+| --- | --- |
+| Cod. CU | ********CU-ETI-0080-001 - Buscar Peticiones de evaluación******** |
+| Ver. objetivo |  |
+| Ver. CU | 1.0.0 |
+| Estado | LIBERADO\_ |
+| Fec. Aprobación |  |
+| Épica, historia |  |
+| Actores | ACT-ETI-001-Gestor |
+| Frecuencia | Baja |
 
 ### Descripción
 
@@ -28,7 +37,7 @@ El resultado de la búsqueda será un listado de las peticiones del investigador
 
 #### Actor principal
 
-ACT\-ETI\-001\-Gestor
+ACT-ETI-001-Gestor
 
 ### Precondiciones
 
@@ -45,7 +54,3 @@ Se listan las peticiones de evaluación y que cumplan con los criterios del fil
 1. Se presenta la pantalla Peticiones de evaluación con el listado de todos las peticiones de evaluación creadas en el sistema.
 2. El usuario introduce la información de los filtros y realiza la acción de buscar para poder filtrar un subconjunto de Peticiones de evaluación.
 3. Se presenta la pantalla Peticiones de evaluación con el subconjunto de peticiones de evaluación que cumplen las condiciones del filtro.
-
-
-
-

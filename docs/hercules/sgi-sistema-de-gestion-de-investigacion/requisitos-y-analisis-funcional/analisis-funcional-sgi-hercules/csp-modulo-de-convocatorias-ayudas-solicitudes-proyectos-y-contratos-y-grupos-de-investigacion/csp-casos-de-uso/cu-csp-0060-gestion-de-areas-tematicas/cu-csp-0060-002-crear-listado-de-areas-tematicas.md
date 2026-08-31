@@ -1,6 +1,15 @@
-# Hércules : CU\-CSP\-0060\-002 \- Crear listado de áreas temáticas
+# CU-CSP-0060-002 - Crear listado de áreas temáticas
 
-
+|  |  |
+| --- | --- |
+| Cod. CU | **CU-CSP-0060-002 - Crear listado de áreas temáticas** |
+| Ver. objetivo |  |
+| Ver. CU | 1.0.0 |
+| Estado | LIBERADO\_ |
+| Fec. Aprobación |  |
+| Épica, historia |  |
+| Actores | ACT-CSP-004-Administrador, ACT-CSP-003-Gestor |
+| Frecuencia | Media |
 
 ### Descripción
 
@@ -10,24 +19,21 @@ Se añade un listado de áreas temáticas. Se entiende por listado una clasifica
 
 #### Actor principal
 
-ACT\-CSP\-004\-Administrador, ACT\-CSP\-003\-Gestor
+ACT-CSP-004-Administrador, ACT-CSP-003-Gestor
 
 #### Personal involucrado e intereses
 
-ACT\- CSP\-001\-Investigador que requiere que en las convocatorias se identifiquen las áreas temáticas para las que pudieran  estar restringidos, así como indicar el área temática seleccionada en sus solicitudes y proyectos..
+ACT- CSP-001-Investigador que requiere que en las convocatorias se identifiquen las áreas temáticas para las que pudieran  estar restringidos, así como indicar el área temática seleccionada en sus solicitudes y proyectos..
 
 ### Precondiciones
 
-El usuario ACT\-CSP\-004\-Administrador o ACT\-CSP\-003\-Gestor se autentica a través del usuario de dominio corporativo.
+El usuario ACT-CSP-004-Administrador o ACT-CSP-003-Gestor se autentica a través del usuario de dominio corporativo.
 
 A través del servicio de integración con el directorio activo y de la información del usuario almacenada en el propio SGI, se obtiene su rol y las unidades de gestión sobre las que tiene disponible el rol. El usuario está autorizado sobre la funcionalidades asociadas a esta gestión.
 
 ### Garantías de éxito (postcondiciones)
 
 El listado de áreas se ha añadido correctamente y puede ser utilizado en la creación/modificación de convocatorias.
-
-  
-
 
 ### Escenario principal (flujo básico)
 
@@ -38,17 +44,17 @@ El listado de áreas se ha añadido correctamente y puede ser utilizado en la cr
 5. El usuario es informado del resultado positivo de la acción.
 6. Se muestra la tabla de Listados de áreas temáticas
 
-### Extensiones (flujos alternativos) \- Añadir área temática
+### Extensiones (flujos alternativos) - Añadir área temática
 
 1. El usuario accede a la opción Añadir nuevo listado de áreas temáticas
 2. El usuario introduce, en el apartado Datos generales, un Nombre para el listado que no figure aún en la tabla de áreas temáticas entre aquellos listados que estén activos. Dentro de la tabla área temática los listados se identifican como aquellos elementos que sean raíz de un árbol, es decir, cuyo campo "padre" figure a null.
 3. El usuario introduce, en el apartado Datos generales, una descripción para el listado
-4. El usuario accede al apartado de Árbol de áreas y crea el primer área temática ([CU\-CSP\-0060\-003 \- Añadir área temática a un Listado de áreas](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-casos-de-uso/cu-csp-0060-gestion-de-areas-tematicas/cu-csp-0060-003-anadir-area-tematica-a-un-listado-de-areas.md "/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-casos-de-uso/cu-csp-0060-gestion-de-areas-tematicas/cu-csp-0060-003-anadir-area-tematica-a-un-listado-de-areas.md"))
+4. El usuario accede al apartado de Árbol de áreas y crea el primer área temática ([CU-CSP-0060-003 - Añadir área temática a un Listado de áreas](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-casos-de-uso/cu-csp-0060-gestion-de-areas-tematicas/cu-csp-0060-003-anadir-area-tematica-a-un-listado-de-areas))
 5. El usuario pulsa Guardar
 6. El usuario es informado del resultado positivo de la acción.
 7. Se permanece en la pantalla del nuevo listado de áreas temáticas para que el usuario pueda seguir construyendo el árbol de áreas temáticas.
 
-### Extensiones (flujos alternativos) \- Error de unicidad
+### Extensiones (flujos alternativos) - Error de unicidad
 
 1. El usuario ha introducido un Nombre para el Listado de áreas temáticas que ya existía en la tabla de áreas temáticas, es decir, introduce un Nombre que ya está siendo utilizado para un listado de áreas temáticas en estado activo. Dentro de la tabla área temática los listados se identifican como aquellos elementos que sean raíz de un árbol, es decir, cuyo campo "padre" figure a null.
 2. El usuario introduce el resto de datos del Listado de áreas
@@ -66,12 +72,3 @@ N/A
 ### Lista de tecnología y variaciones de datos
 
 N/A
-
-  
-  
-  
-
-
-
-
-

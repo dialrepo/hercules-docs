@@ -1,27 +1,30 @@
-# Hércules : Sistema de Gestión de Empresas(UM \- SGI \- ESB \- SGEMP)
+# Sistema de Gestión de Empresas(UM - SGI - ESB - SGEMP)
 
+---
 
+* [Sistema de gestión de empresas](#SistemadeGestióndeEmpresas(UMSGIESBSGEMP)-Sistemadegestióndeempresas)
+  + [Entidades](#SistemadeGestióndeEmpresas(UMSGIESBSGEMP)-Entidades)
+  + [Modelo lógico](#SistemadeGestióndeEmpresas(UMSGIESBSGEMP)-Modelológico)
+  + [API](#SistemadeGestióndeEmpresas(UMSGIESBSGEMP)-API)
+    - [Definición de los objetos](#SistemadeGestióndeEmpresas(UMSGIESBSGEMP)-Definicióndelosobjetos)
+      * [Empresa](#SistemadeGestióndeEmpresas(UMSGIESBSGEMP)-Empresa)
+      * [TipoIdentificador](#SistemadeGestióndeEmpresas(UMSGIESBSGEMP)-TipoIdentificador)
+      * [DatosTipoEmpresa](#SistemadeGestióndeEmpresas(UMSGIESBSGEMP)-DatosTipoEmpresa)
+      * [TipoTercero](#SistemadeGestióndeEmpresas(UMSGIESBSGEMP)-TipoTercero)
+      * [TipoEmpresa](#SistemadeGestióndeEmpresas(UMSGIESBSGEMP)-TipoEmpresa)
+      * [TipoEmpresaContabilidad](#SistemadeGestióndeEmpresas(UMSGIESBSGEMP)-TipoEmpresaContabilidad)
+      * [TipoTerceroReinoUnido](#SistemadeGestióndeEmpresas(UMSGIESBSGEMP)-TipoTerceroReinoUnido)
+      * [EmpresaClasificacion](#SistemadeGestióndeEmpresas(UMSGIESBSGEMP)-EmpresaClasificacion)
+      * [DatosContacto](#SistemadeGestióndeEmpresas(UMSGIESBSGEMP)-DatosContacto)
+    - [Servicios](#SistemadeGestióndeEmpresas(UMSGIESBSGEMP)-Servicios)
 
-  
+---
 
-
-
-
-
-
-
-
-
-
-
-
-
+---
 
 ## Sistema de gestión de empresas
 
 ### Entidades
-
-
 
 | Entidad | Descripción |
 | --- | --- |
@@ -33,7 +36,7 @@
 | TipoEmpresa | Listado con los tipos de empresa (necesario para las empresas con datos económicos). |
 | TipoEmpresaContabilidad | Listado con los tipos de empresa para contabilidad (necesario para las empresas con datos económicos). |
 | TipoTerceroReinoUnido | Listado con los tipos de tercero para Reino Unido (necesario para las empresas con datos económicos cuyo país es el Reino Unido). |
-| EmpresaClasificacion (EmpresaUMClasificacion) | Listado de relaciones entre empresas y clasificaciones. En principio, únicamente con las del tipo "Código CNAE" también llamado "Sector Industrial". Ver definición de clasificaciones en [Sistema Gestión de Organizaciones (UM \- SGI \- ESB \- SGO)](/hercules/apis-de-integracion/sgi-servicios-de-terceros-que-consume/caso-de-uso-servicios-implementados-por-la-universidad-de-murcia/sistema-gestion-de-organizacionesum-sgi-esb-sgo/index.md "/hercules/apis-de-integracion/sgi-servicios-de-terceros-que-consume/caso-de-uso-servicios-implementados-por-la-universidad-de-murcia/sistema-gestion-de-organizacionesum-sgi-esb-sgo/index.md"). |
+| EmpresaClasificacion (EmpresaUMClasificacion) | Listado de relaciones entre empresas y clasificaciones. En principio, únicamente con las del tipo "Código CNAE" también llamado "Sector Industrial". Ver definición de clasificaciones en [Sistema Gestión de Organizaciones (UM - SGI - ESB - SGO)](/hercules/apis-de-integracion/sgi-servicios-de-terceros-que-consume/caso-de-uso-servicios-implementados-por-la-universidad-de-murcia/sistema-gestion-de-organizacionesum-sgi-esb-sgo). |
 
 ### Modelo lógico
 
@@ -43,17 +46,12 @@
 
 Características generales que todas las API REST deben de cumplir:
 
-* [Consultas filtradas y paginadas](https://confluence.um.es/confluence/display/HERCULES/Consultas+filtradas+y+paginadas "https://confluence.um.es/confluence/display/HERCULES/Consultas+filtradas+y+paginadas")
-* [Formatos de datos API](https://confluence.um.es/confluence/display/HERCULES/Formatos+de+datos+API "https://confluence.um.es/confluence/display/HERCULES/Formatos+de+datos+API")
+* [Consultas filtradas y paginadas](/hercules/sgi-sistema-de-gestion-de-investigacion/desarrollo-y-configuracion/estandares-de-desarrollo/consultas-filtradas-y-paginadas)
+* [Formatos de datos API](/hercules/sgi-sistema-de-gestion-de-investigacion/desarrollo-y-configuracion/estandares-de-desarrollo/formatos-de-datos-api)
 
 #### Definición de los objetos
 
 ##### Empresa
-
-  
-
-
-
 
 | Nombre | Tipo | Descripción |
 | --- | --- | --- |
@@ -65,11 +63,7 @@ Características generales que todas las API REST deben de cumplir:
 | datosEconomicos | Boolean | Indicador de si se trata de una empresa con datos económicos (está dada de alta en GENTE y en JUSTO) o sin datos económicos (está dada de alta solo en GENTE). |
 | padreId | String | Identificador de la empresa padre o entidad principal. Estará informado en el caso de empresas que son subentidad de otra. |
 
-
-
 **Empresa** Ampliar origen
-
-
 
 ```
 {
@@ -86,21 +80,14 @@ Características generales que todas las API REST deben de cumplir:
 }
 ```
 
-
 ##### TipoIdentificador
-
-
 
 | Nombre | Tipo | Descripción |
 | --- | --- | --- |
 | id | String | Identificador de la entidad TipoIdentificador. |
 | nombre | String | Nombre (Posibles valores: CIF, VAT, ...). |
 
-
-
 **TipoIdentificador** Ampliar origen
-
-
 
 ```
 { 
@@ -109,10 +96,7 @@ Características generales que todas las API REST deben de cumplir:
 }
 ```
 
-
 ##### DatosTipoEmpresa
-
-
 
 | Nombre | Tipo | Descripción |
 | --- | --- | --- |
@@ -121,11 +105,7 @@ Características generales que todas las API REST deben de cumplir:
 | tipoEmpresaContabilidad | TipoEmpresaContabilidad | Tipo de tercero. Se devuelve la entidad TipoEmpresaContabilidad con todos sus campos. |
 | tipoTerceroReinoUnido | TipoTerceroReinoUnido | Tipo de tercero para personas físicas (personas actuando como empresas) con dirección en el Reino Unido. Se devuelve la entidad TipoTerceroReinoUnido con todos sus campos. |
 
-
-
 **DatosTipoEmpresa** Ampliar origen
-
-
 
 ```
 { 
@@ -148,10 +128,7 @@ Características generales que todas las API REST deben de cumplir:
 }
 ```
 
-
 ##### TipoTercero
-
-
 
 | Nombre | Tipo | Descripción |
 | --- | --- | --- |
@@ -159,11 +136,7 @@ Características generales que todas las API REST deben de cumplir:
 | nombre | String | Nombre. |
 | clase | String | Clase de tercero Reino Unido. Posibles valores: F (Persona física), J (Persona jurídica). |
 
-
-
 **TipoTercero** Ampliar origen
-
-
 
 ```
 { 
@@ -173,21 +146,14 @@ Características generales que todas las API REST deben de cumplir:
 }
 ```
 
-
 ##### TipoEmpresa
-
-
 
 | Nombre | Tipo | Descripción |
 | --- | --- | --- |
 | id | String | Identificador de la entidad TipoEmpresa. |
 | nombre | String | Nombre. |
 
-
-
 **TipoEmpresa** Ampliar origen
-
-
 
 ```
 { 
@@ -196,21 +162,14 @@ Características generales que todas las API REST deben de cumplir:
 }
 ```
 
-
 ##### TipoEmpresaContabilidad
-
-
 
 | Nombre | Tipo | Descripción |
 | --- | --- | --- |
 | id | String | Identificador de la entidad TipoEmpresaContabilidad. |
 | nombre | String | Nombre. |
 
-
-
 **TipoEmpresaContabilidad** Ampliar origen
-
-
 
 ```
 { 
@@ -219,21 +178,14 @@ Características generales que todas las API REST deben de cumplir:
 }
 ```
 
-
 ##### TipoTerceroReinoUnido
-
-
 
 | Nombre | Tipo | Descripción |
 | --- | --- | --- |
 | id | String | Identificador de la entidad TipoTerceroReinoUnido. Posibles valores: S (Tercero normal), IN (Tercero de Irlanda del Norte). |
 | nombre | String | Nombre. Posibles valores: Tercero normal (S), Tercero de Irlanda del Norte (IN). |
 
-
-
 **TipoTerceroReinoUnido** Ampliar origen
-
-
 
 ```
 { 
@@ -242,10 +194,7 @@ Características generales que todas las API REST deben de cumplir:
 }
 ```
 
-
 ##### EmpresaClasificacion
-
-
 
 | Nombre | Tipo | Descripción |
 | --- | --- | --- |
@@ -254,11 +203,7 @@ Características generales que todas las API REST deben de cumplir:
 | nombre | String | Nombre de la clasificación. |
 | padreId | String | Identificador de la entidad padre de la clasificación. |
 
-
-
-**Empresa\-Clasificación padre** Ampliar origen
-
-
+**Empresa-Clasificación padre** Ampliar origen
 
 ```
    {
@@ -269,12 +214,7 @@ Características generales que todas las API REST deben de cumplir:
     }
 ```
 
-
-
-
-**Empresa\-Clasificación hija de primer nivel** Ampliar origen
-
-
+**Empresa-Clasificación hija de primer nivel** Ampliar origen
 
 ```
    {
@@ -285,23 +225,18 @@ Características generales que todas las API REST deben de cumplir:
     }
 ```
 
-
   
+
 ##### DatosContacto
-
-  
-
-
-
 
 | Nombre | Tipo | Descripción |
 | --- | --- | --- |
-| paisContacto | Pais | Se devuelve la entidad Pais con todos sus campos. Ver definición en [Sistema Gestión de Organizaciones (UM \- SGI \- ESB \- SGO)](/hercules/apis-de-integracion/sgi-servicios-de-terceros-que-consume/caso-de-uso-servicios-implementados-por-la-universidad-de-murcia/sistema-gestion-de-organizacionesum-sgi-esb-sgo/index.md "/hercules/apis-de-integracion/sgi-servicios-de-terceros-que-consume/caso-de-uso-servicios-implementados-por-la-universidad-de-murcia/sistema-gestion-de-organizacionesum-sgi-esb-sgo/index.md"). |
-| comAutonomaContacto | ComunidadAutonoma | Se devuelve la entidad ComunidadAutonoma con todos sus campos. Ver definición en [Sistema Gestión de Organizaciones (UM \- SGI \- ESB \- SGO)](/hercules/apis-de-integracion/sgi-servicios-de-terceros-que-consume/caso-de-uso-servicios-implementados-por-la-universidad-de-murcia/sistema-gestion-de-organizacionesum-sgi-esb-sgo/index.md "/hercules/apis-de-integracion/sgi-servicios-de-terceros-que-consume/caso-de-uso-servicios-implementados-por-la-universidad-de-murcia/sistema-gestion-de-organizacionesum-sgi-esb-sgo/index.md"). |
-| provinciaContacto | Provincia | Se devuelve la entidad Provincia con todos sus campos. Ver definición en [Sistema Gestión de Organizaciones (UM \- SGI \- ESB \- SGO)](/hercules/apis-de-integracion/sgi-servicios-de-terceros-que-consume/caso-de-uso-servicios-implementados-por-la-universidad-de-murcia/sistema-gestion-de-organizacionesum-sgi-esb-sgo/index.md "/hercules/apis-de-integracion/sgi-servicios-de-terceros-que-consume/caso-de-uso-servicios-implementados-por-la-universidad-de-murcia/sistema-gestion-de-organizacionesum-sgi-esb-sgo/index.md"). |
+| paisContacto | Pais | Se devuelve la entidad Pais con todos sus campos. Ver definición en [Sistema Gestión de Organizaciones (UM - SGI - ESB - SGO)](/hercules/apis-de-integracion/sgi-servicios-de-terceros-que-consume/caso-de-uso-servicios-implementados-por-la-universidad-de-murcia/sistema-gestion-de-organizacionesum-sgi-esb-sgo). |
+| comAutonomaContacto | ComunidadAutonoma | Se devuelve la entidad ComunidadAutonoma con todos sus campos. Ver definición en [Sistema Gestión de Organizaciones (UM - SGI - ESB - SGO)](/hercules/apis-de-integracion/sgi-servicios-de-terceros-que-consume/caso-de-uso-servicios-implementados-por-la-universidad-de-murcia/sistema-gestion-de-organizacionesum-sgi-esb-sgo). |
+| provinciaContacto | Provincia | Se devuelve la entidad Provincia con todos sus campos. Ver definición en [Sistema Gestión de Organizaciones (UM - SGI - ESB - SGO)](/hercules/apis-de-integracion/sgi-servicios-de-terceros-que-consume/caso-de-uso-servicios-implementados-por-la-universidad-de-murcia/sistema-gestion-de-organizacionesum-sgi-esb-sgo). |
 | ciudadContacto | String | Ciudad de contacto de la empresa. |
 | codigoPostal | String | Código postal de la empresa. |
-| tipoVia | TipoVia | Tipo de vía de la dirección de contacto de la empersa. Se devuelve la entidad TipoVia con todos sus campos. Ver definición en [Sistema Gestión de Organizaciones (UM \- SGI \- ESB \- SGO)](/hercules/apis-de-integracion/sgi-servicios-de-terceros-que-consume/caso-de-uso-servicios-implementados-por-la-universidad-de-murcia/sistema-gestion-de-organizacionesum-sgi-esb-sgo/index.md "/hercules/apis-de-integracion/sgi-servicios-de-terceros-que-consume/caso-de-uso-servicios-implementados-por-la-universidad-de-murcia/sistema-gestion-de-organizacionesum-sgi-esb-sgo/index.md"). |
+| tipoVia | TipoVia | Tipo de vía de la dirección de contacto de la empersa. Se devuelve la entidad TipoVia con todos sus campos. Ver definición en [Sistema Gestión de Organizaciones (UM - SGI - ESB - SGO)](/hercules/apis-de-integracion/sgi-servicios-de-terceros-que-consume/caso-de-uso-servicios-implementados-por-la-universidad-de-murcia/sistema-gestion-de-organizacionesum-sgi-esb-sgo). |
 | nombreVia | String | Nombre de la vía de la dirección de contacto de la empresa. |
 | numero | String | Número de la vía de la dirección de contacto de la empresa. |
 | ampliacion | String | Campo para ampliar la informaicón de la dirección de contacto de la empresa. |
@@ -310,14 +245,7 @@ Características generales que todas las API REST deben de cumplir:
 | telefono | String | Teléfono de contacto de la empresa. |
 | direccionWeb | String | Dirección web de la empresa. |
 
-  
-
-
-
-
 **DatosContacto** Ampliar origen
-
-
 
 ```
 {
@@ -349,36 +277,29 @@ Características generales que todas las API REST deben de cumplir:
 }
 ```
 
-
 #### Servicios
-
-
 
 | Método | URL | Parámetros | Respuesta | Descripción |
 | --- | --- | --- | --- | --- |
-| GET | /empresasFast | * búsqueda (cadena a buscar en nombre / razón social/ número de identificación). | Lista\[Empresa] | Listado de Empresa.*Ejemplo*:busqueda\=Universidad**NOTA**:La búsqueda no es sensible a mayúsculas ni minúsculas. Los parámetros no deben ir entrecomillados.Se devuelven como máximo 11 registros, al devolver más de 10 registros el buscador indicará que existen más registros y se puede refinar la búsqueda. |
-| GET | /empresas | q\+s (query \+ sort)La query estará formada por:* id * nombre * razonSocial * numeroIdentificacion | Lista\[Empresa] | Listado de Empresa.*Ejemplo*:nombre\=like\=SL, razonSocial\=like\=SL |
+| GET | /empresasFast | * búsqueda (cadena a buscar en nombre / razón social/ número de identificación). | Lista[Empresa] | Listado de Empresa.  *Ejemplo*:  busqueda=Universidad  **NOTA**:  La búsqueda no es sensible a mayúsculas ni minúsculas. Los parámetros no deben ir entrecomillados.  Se devuelven como máximo 11 registros, al devolver más de 10 registros el buscador indicará que existen más registros y se puede refinar la búsqueda. |
+| GET | /empresas | q+s (query + sort)  La query estará formada por:   * id * nombre * razonSocial * numeroIdentificacion | Lista[Empresa] | Listado de Empresa.  *Ejemplo*:  nombre=like=SL, razonSocial=like=SL |
 | GET | /empresas/{id} |  | Empresa | Detalle de los datos generales de una empresa. |
-| POST | /empresas/formly | JSON | idVendrá relleno si la creación es síncrona y no vendrá si es asíncrona. | Recibe como parámetro la respuesta del usuario del formulario de datos de alta (formly) con los campos necesarios para crear una empresa.  **Ejemplo de JSON** Ampliar origen    ``` {   "tipoSedeId": "1",   "datosEconomicos": false,   "entidadRazonSocial": "Entidad",   "tipoIdentificadorFiscalId": "2",   "numeroIdentificadorFiscal": "12312312",   "sectoresIndustriales": [     "4",     "5"   ],   "paisContactoId": "1",   "codigoPostalContacto": "48152",   "ciudadContacto": "Madrid",   "tipoViaContactoId": "1",   "nombreViaContacto": "Gran vía",   "numeroViaContacto": "234",   "ampliacion": "ampliación",   "email": "email@prueba.com",   "telefonoContacto": "66612345",   "faxContacto": "915551234",   "direccionWeb": "http://www.prueba.com",   "tipoTerceroId": "F",   "tipoEmpresaId": "1",   "tipoEmpresaContabilidadId": "1",   "tipoTerceroReinoUnidoId": "S" } ```   Descripción de campos JSON (pulsa para expandir)...* **tipoSedeId**: 0 para tipo 'Entidad' y 1 para tipo 'Subentidad' * **datosEconomicos**: true \| false * **entidadRazonSocial**: Descripción de la entidad o razón social * **tipoIdentificadorFiscalId**: Id de tipo de identificador fiscal procedente del endpoint /tipos\-identificador * **numeroIdentificadorFiscal**: Nº de identificador fiscal * **sectoresIndustriales**:  Array de ids de clasificaciones CNAE procedentes de /empresas\-clasificaciones/empresa/{id} * **paisContactoId**: Id de pais de contacto procedente de endpoint /paises. Ver definición en [Sistema Gestión de Organizaciones (UM \- SGI \- ESB \- SGO)](/hercules/apis-de-integracion/sgi-servicios-de-terceros-que-consume/caso-de-uso-servicios-implementados-por-la-universidad-de-murcia/sistema-gestion-de-organizacionesum-sgi-esb-sgo/index.md "/hercules/apis-de-integracion/sgi-servicios-de-terceros-que-consume/caso-de-uso-servicios-implementados-por-la-universidad-de-murcia/sistema-gestion-de-organizacionesum-sgi-esb-sgo/index.md") * **codigoPostalContacto**: Código postal de dirección de contacto * **ciudadContacto**: Ciudad de contacto * **tipoViaContactoId**: Id de tipo de vía de contacto procedente de endpoint /tipos\-via * **nombreViaContacto**: Nombre de vía de contacto * **numeroViaContacto**: Número de dirección de contacto * **ampliacion**: Descripción de ampliación * **email**: Email de contacto * **telefonoContacto**: Teléfono de contacto * **faxContacto**: Fax de contacto * **direccionWeb**: Web de contacto * **tipoTerceroId**: Id de tipo de tercero procedente de endpoint /tipos\-tercero * **tipoEmpresaId**: Id de tipo de empresa procedente de endpoint /tipos\-empresa * **tipoEmpresaContabilidadId**: Id de tipo de empresa contabilidad procedente de endpoint /tipos\-empresa\-contabilidad * **tipoTerceroReinoUnidoId**: Id de tipo de tercero reino unido procedente de endpoint /tipos\-tercero\-reino\-unido |
-| PUT | /empresas/formly/{id} | JSON |  | Recibe como parámetro la respuesta del usuario del formulario de datos de modificación (formly) con los campos necesarios para actualizar una empresa.  **Ejemplo de JSON** Ampliar origen    ``` {   "empresaId": "1",   "tipoSedeId": "1",   "datosEconomicos": false,   "entidadRazonSocial": "Entidad",   "tipoIdentificadorFiscalId": "2",   "numeroIdentificadorFiscal": "12312312",   "entidadPrincipal": "entidad principal",   "sectoresIndustriales": [     "4",     "5"   ],   "paisContactoId": "1",   "codigoPostalContacto": "48152",   "ciudadContacto": "Madrid",   "tipoViaContactoId": "1",   "nombreViaContacto": "Gran vía",   "numeroViaContacto": "234",   "ampliacion": "ampliación",   "email": "email@prueba.com",   "telefonoContacto": "66612345",   "faxContacto": "915551234",   "direccionWeb": "http://www.prueba.com",   "tipoTerceroId": "1",   "tipoEmpresaId": "1",   "tipoEmpresaContabilidadId": "1",   "tipoTerceroReinoUnidoId": "S" } ```   Descripción de campos JSON (pulsa para expandir)...* **empresaId:** Id de la empresa * **tipoSedeId**: 0 para tipo 'Entidad' y 1 para tipo 'Subentidad' * **datosEconomicos**: true \| false * **entidadRazonSocial**: Descripción de la entidad o razón social * **tipoIdentificadorFiscalId**: Id de tipo de identificador fiscal procedente del endpoint /tipos\-identificador * **numeroIdentificadorFiscal**: Nº de identificador fiscal * **entidadPrincipal**: Nombre de entidad principal * **sectoresIndustriales**:  Array de ids de clasificaciones CNAE procedentes de /empresas\-clasificaciones/empresa/{id} * **paisContactoId**: Id de pais de contacto procedente de endpoint /paises. Ver definición en [Sistema Gestión de Organizaciones (UM \- SGI \- ESB \- SGO)](/hercules/apis-de-integracion/sgi-servicios-de-terceros-que-consume/caso-de-uso-servicios-implementados-por-la-universidad-de-murcia/sistema-gestion-de-organizacionesum-sgi-esb-sgo/index.md "/hercules/apis-de-integracion/sgi-servicios-de-terceros-que-consume/caso-de-uso-servicios-implementados-por-la-universidad-de-murcia/sistema-gestion-de-organizacionesum-sgi-esb-sgo/index.md"). * **codigoPostalContacto**: Código postal de dirección de contacto * **ciudadContacto**: Ciudad de contacto * **tipoViaContactoId**: Id de tipo de vía de contacto procedente de endpoint /tipos\-via * **nombreViaContacto**: Nombre de vía de contacto * **numeroViaContacto**: Número de dirección de contacto * **ampliacion**: Descripción de ampliación * **email**: Email de contacto * **telefonoContacto**: Teléfono de contacto * **faxContacto**: Fax de contacto * **direccionWeb**: Web de contacto * **tipoTerceroId**: Id de tipo de tercero procedente de endpoint /tipos\-tercero * **tipoEmpresaId**: Id de tipo de empresa procedente de endpoint /tipos\-empresa * **tipoEmpresaContabilidadId**: Id de tipo de empresa contabilidad procedente de endpoint /tipos\-empresa\-contabilidad * **tipoTerceroReinoUnidoId**: Id de tipo de tercero reino unido procedente de endpoint /tipos\-tercero\-reino\-unido |
+| POST | /empresas/formly | JSON | id  Vendrá relleno si la creación es síncrona y no vendrá si es asíncrona. | Recibe como parámetro la respuesta del usuario del formulario de datos de alta (formly) con los campos necesarios para crear una empresa.  **Ejemplo de JSON** Ampliar origen  ``` {   "tipoSedeId": "1",   "datosEconomicos": false,   "entidadRazonSocial": "Entidad",   "tipoIdentificadorFiscalId": "2",   "numeroIdentificadorFiscal": "12312312",   "sectoresIndustriales": [     "4",     "5"   ],   "paisContactoId": "1",   "codigoPostalContacto": "48152",   "ciudadContacto": "Madrid",   "tipoViaContactoId": "1",   "nombreViaContacto": "Gran vía",   "numeroViaContacto": "234",   "ampliacion": "ampliación",   "email": "email@prueba.com",   "telefonoContacto": "66612345",   "faxContacto": "915551234",   "direccionWeb": "http://www.prueba.com",   "tipoTerceroId": "F",   "tipoEmpresaId": "1",   "tipoEmpresaContabilidadId": "1",   "tipoTerceroReinoUnidoId": "S" } ```  Descripción de campos JSON (pulsa para expandir)...  * **tipoSedeId**: 0 para tipo 'Entidad' y 1 para tipo 'Subentidad' * **datosEconomicos**: true | false * **entidadRazonSocial**: Descripción de la entidad o razón social * **tipoIdentificadorFiscalId**: Id de tipo de identificador fiscal procedente del endpoint /tipos-identificador * **numeroIdentificadorFiscal**: Nº de identificador fiscal * **sectoresIndustriales**:  Array de ids de clasificaciones CNAE procedentes de /empresas-clasificaciones/empresa/{id} * **paisContactoId**: Id de pais de contacto procedente de endpoint /paises. Ver definición en [Sistema Gestión de Organizaciones (UM - SGI - ESB - SGO)](/hercules/apis-de-integracion/sgi-servicios-de-terceros-que-consume/caso-de-uso-servicios-implementados-por-la-universidad-de-murcia/sistema-gestion-de-organizacionesum-sgi-esb-sgo) * **codigoPostalContacto**: Código postal de dirección de contacto * **ciudadContacto**: Ciudad de contacto * **tipoViaContactoId**: Id de tipo de vía de contacto procedente de endpoint /tipos-via * **nombreViaContacto**: Nombre de vía de contacto * **numeroViaContacto**: Número de dirección de contacto * **ampliacion**: Descripción de ampliación * **email**: Email de contacto * **telefonoContacto**: Teléfono de contacto * **faxContacto**: Fax de contacto * **direccionWeb**: Web de contacto * **tipoTerceroId**: Id de tipo de tercero procedente de endpoint /tipos-tercero * **tipoEmpresaId**: Id de tipo de empresa procedente de endpoint /tipos-empresa * **tipoEmpresaContabilidadId**: Id de tipo de empresa contabilidad procedente de endpoint /tipos-empresa-contabilidad * **tipoTerceroReinoUnidoId**: Id de tipo de tercero reino unido procedente de endpoint /tipos-tercero-reino-unido |
+| PUT | /empresas/formly/{id} | JSON |  | Recibe como parámetro la respuesta del usuario del formulario de datos de modificación (formly) con los campos necesarios para actualizar una empresa.    **Ejemplo de JSON** Ampliar origen  ``` {   "empresaId": "1",   "tipoSedeId": "1",   "datosEconomicos": false,   "entidadRazonSocial": "Entidad",   "tipoIdentificadorFiscalId": "2",   "numeroIdentificadorFiscal": "12312312",   "entidadPrincipal": "entidad principal",   "sectoresIndustriales": [     "4",     "5"   ],   "paisContactoId": "1",   "codigoPostalContacto": "48152",   "ciudadContacto": "Madrid",   "tipoViaContactoId": "1",   "nombreViaContacto": "Gran vía",   "numeroViaContacto": "234",   "ampliacion": "ampliación",   "email": "email@prueba.com",   "telefonoContacto": "66612345",   "faxContacto": "915551234",   "direccionWeb": "http://www.prueba.com",   "tipoTerceroId": "1",   "tipoEmpresaId": "1",   "tipoEmpresaContabilidadId": "1",   "tipoTerceroReinoUnidoId": "S" } ```  Descripción de campos JSON (pulsa para expandir)...  * **empresaId:** Id de la empresa * **tipoSedeId**: 0 para tipo 'Entidad' y 1 para tipo 'Subentidad' * **datosEconomicos**: true | false * **entidadRazonSocial**: Descripción de la entidad o razón social * **tipoIdentificadorFiscalId**: Id de tipo de identificador fiscal procedente del endpoint /tipos-identificador * **numeroIdentificadorFiscal**: Nº de identificador fiscal * **entidadPrincipal**: Nombre de entidad principal * **sectoresIndustriales**:  Array de ids de clasificaciones CNAE procedentes de /empresas-clasificaciones/empresa/{id} * **paisContactoId**: Id de pais de contacto procedente de endpoint /paises. Ver definición en [Sistema Gestión de Organizaciones (UM - SGI - ESB - SGO)](/hercules/apis-de-integracion/sgi-servicios-de-terceros-que-consume/caso-de-uso-servicios-implementados-por-la-universidad-de-murcia/sistema-gestion-de-organizacionesum-sgi-esb-sgo). * **codigoPostalContacto**: Código postal de dirección de contacto * **ciudadContacto**: Ciudad de contacto * **tipoViaContactoId**: Id de tipo de vía de contacto procedente de endpoint /tipos-via * **nombreViaContacto**: Nombre de vía de contacto * **numeroViaContacto**: Número de dirección de contacto * **ampliacion**: Descripción de ampliación * **email**: Email de contacto * **telefonoContacto**: Teléfono de contacto * **faxContacto**: Fax de contacto * **direccionWeb**: Web de contacto * **tipoTerceroId**: Id de tipo de tercero procedente de endpoint /tipos-tercero * **tipoEmpresaId**: Id de tipo de empresa procedente de endpoint /tipos-empresa * **tipoEmpresaContabilidadId**: Id de tipo de empresa contabilidad procedente de endpoint /tipos-empresa-contabilidad * **tipoTerceroReinoUnidoId**: Id de tipo de tercero reino unido procedente de endpoint /tipos-tercero-reino-unido |
 | GET | /empresas/formly/{id} |  | JSON | Devuelve los datos a pintar en el formulario de Ver Detalle/Actualizar en el SGI (formly). Se recibirá el mismo json que en la solicitud de modificación de empresa (/empresas PUT) |
 |  | | | | |
-| GET | /datos\-contacto/empresa/{id} |  | DatosContacto | Contiene los datos de contacto de una empresa. Ver [UM \- SGI \- ESB \- SGEMP \- Adaptaciones integración](https://confluence.treelogic.com/pages/viewpage.action?pageId=108605766 "https://confluence.treelogic.com/pages/viewpage.action?pageId=108605766") para su implementación en el SGI. |
+| GET | /datos-contacto/empresa/{id} |  | DatosContacto | Contiene los datos de contacto de una empresa.  Ver [UM - SGI - ESB - SGEMP - Adaptaciones integración](https://confluence.treelogic.com/pages/viewpage.action?pageId=108605766) para su implementación en el SGI. |
 |  | | | | |
-| GET | /empresas\-clasificaciones/empresa/{id} |  | EmpresaClasificacion | Listado de las clasificaciones de tipo códigos CNAE o sectores industriales asociados a una empresa. |
+| GET | /empresas-clasificaciones/empresa/{id} |  | EmpresaClasificacion | Listado de las clasificaciones de tipo códigos CNAE o sectores industriales asociados a una empresa. |
 |  | | | | |
-| GET | /datos\-tipo\-empresa/empresa/{id} |  | DatosTipoEmpresa | Detalle de los datos de tipo de empresa de una empresa. |
+| GET | /datos-tipo-empresa/empresa/{id} |  | DatosTipoEmpresa | Detalle de los datos de tipo de empresa de una empresa. |
 |  | | | | |
-| GET | /tipos\-identificador |  | Lista\[TipoIdentificador] | Listado de tipos de identificador fiscal para las empresas ordenados alfabéticamente de forma ascendente. |
+| GET | /tipos-identificador |  | Lista[TipoIdentificador] | Listado de tipos de identificador fiscal para las empresas ordenados alfabéticamente de forma ascendente. |
 |  | | | | |
-| GET | /tipos\-tercero |  | Lista\[TipoTercero] | Listado de tipos de tercero ordenados alfabéticamente de forma ascendente. |
-| GET | /tipos\-empresa |  | Lista\[TipoEmpresa] | Listado de tipos de empresa ordenados alfabéticamente de forma ascendente. |
-| GET | /tipos\-empresa\-contabilidad |  | Lista\[TipoEmpresaContabilidad] | Listado de tipos de empresa para contabilidad ordenados alfabéticamente de forma ascendente. |
-| GET | /tipos\-tercero\-reino\-unido |  | Lista\[TipoTerceroReinoUnido] | Listado de tipos de tercero, en caso de que el país sea Reino Unido, ordenados alfabéticamente de forma ascendente. |
+| GET | /tipos-tercero |  | Lista[TipoTercero] | Listado de tipos de tercero ordenados alfabéticamente de forma ascendente. |
+| GET | /tipos-empresa |  | Lista[TipoEmpresa] | Listado de tipos de empresa ordenados alfabéticamente de forma ascendente. |
+| GET | /tipos-empresa-contabilidad |  | Lista[TipoEmpresaContabilidad] | Listado de tipos de empresa para contabilidad ordenados alfabéticamente de forma ascendente. |
+| GET | /tipos-tercero-reino-unido |  | Lista[TipoTerceroReinoUnido] | Listado de tipos de tercero, en caso de que el país sea Reino Unido, ordenados alfabéticamente de forma ascendente. |
 |  | | | | |
 | **Métodos donde el SGI solo hace de pasarela entre Universidad y CVN** | | | | |
-| GET | /empresas/modificadas\-ids | q\+sLa query estará formada por:* fechaModificacion | Lista\[String] | Listado de los identificadores de empresas que han sufrido cambios en los datos de identificativos de la empresa o en sus datos de contacto (entidad Empresa y entidad DatosContacto) |
-
-
-
-
+| GET | /empresas/modificadas-ids | q+s  La query estará formada por:   * fechaModificacion | Lista[String] | Listado de los identificadores de empresas que han sufrido cambios en los datos de identificativos de la empresa o en sus datos de contacto (entidad Empresa y entidad DatosContacto) |

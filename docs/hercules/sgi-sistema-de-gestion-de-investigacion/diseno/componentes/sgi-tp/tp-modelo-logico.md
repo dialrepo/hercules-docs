@@ -1,6 +1,4 @@
-# Hércules : TP \- Modelo lógico
-
-
+# TP - Modelo lógico
 
 ### Modelo  de dominio
 
@@ -9,7 +7,3 @@
 ### Modelo  lógico
 
 ![](/attachments/597852469/597865771.png)
-
-
-
-

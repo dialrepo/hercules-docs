@@ -1,23 +1,20 @@
-# Hércules : REQ\-INT\-0020\-SGP\-0033 \- Consultar datos de vinculación de persona
+# REQ-INT-0020-SGP-0033 - Consultar datos de vinculación de persona
 
-
-
-
-
-
+|  |  |
+| --- | --- |
+| Cod. REQ | **REQ-INT-0020-SGP-0033 - Consultar datos de vinculación de persona** |
+| Ver. Objetivo |  |
+| Ver. REQ | 1.0.0 |
+| Estado | IN PROGRESS |
+| Fec. Aprobación |  |
+| Épica, historia |  |
+| Frecuencia |  |
+| Características |  |
+| M. Consumidor |  |
 
 ### Definición y objetivos
 
 Obtener los datos de vinculación de una persona a la estructura organizativa Universitaria. El ESB recibirá del SGI la solicitud de información de una determinada persona, a partir de su identificador de referencia. El ESB a través de esta referencia derivará la solicitud al sistema universitario correspondiente.
-
-  
-
-
-
-
-
-
-
 
 ### Descripción integración
 
@@ -38,42 +35,18 @@ Salida: se devolverá un registro de datos de vinculación de una persona con la
 
 ### Diseño técnico
 
-En el siguiente enlace se muestra el diseño del modelo lógico y el diseño de la API del Sistema de Gestión de Personas y, en concreto, de los Servicios Básicos: [SGI \- ESB \- SGP \- Servicios Básicos](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sgp/sgi-esb-sgp-servicios-basicos/index.md "/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sgp/sgi-esb-sgp-servicios-basicos/index.md").
+En el siguiente enlace se muestra el diseño del modelo lógico y el diseño de la API del Sistema de Gestión de Personas y, en concreto, de los Servicios Básicos: [SGI - ESB - SGP - Servicios Básicos](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sgp/sgi-esb-sgp-servicios-basicos).
 
-El servicio concreto del API que cubre este requisito es [SGI \- ESB \- SGP \- Personas \- Consultar vinculaciones](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sgp/sgi-esb-sgp-servicios-basicos/sgi-esb-sgp-personas-consultar-vinculaciones.md "/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sgp/sgi-esb-sgp-servicios-basicos/sgi-esb-sgp-personas-consultar-vinculaciones.md")
-
-  
-
-
-
-
-
-
-
+El servicio concreto del API que cubre este requisito es [SGI - ESB - SGP - Personas - Consultar vinculaciones](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sgp/sgi-esb-sgp-servicios-basicos/sgi-esb-sgp-personas-consultar-vinculaciones)
 
 ### Interfaces de usuario relacionados
 
-
-
-
-
-
+![](plugins/servlet/confluence/placeholder/unknown-macro)
 
 ### Informes relacionados
 
-
-
-
-
-
+![](plugins/servlet/confluence/placeholder/unknown-macro)
 
 ### Casos de uso relacionados
 
-
-
-
-
-
-
-
-
+![](plugins/servlet/confluence/placeholder/unknown-macro)

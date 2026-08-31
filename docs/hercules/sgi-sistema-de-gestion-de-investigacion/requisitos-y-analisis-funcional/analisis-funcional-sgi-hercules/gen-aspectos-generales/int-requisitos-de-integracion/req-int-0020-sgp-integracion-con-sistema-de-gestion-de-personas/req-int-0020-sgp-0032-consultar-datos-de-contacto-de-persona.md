@@ -1,23 +1,20 @@
-# Hércules : REQ\-INT\-0020\-SGP\-0032 \- Consultar datos de contacto de persona
+# REQ-INT-0020-SGP-0032 - Consultar datos de contacto de persona
 
-
-
-
-
-
+|  |  |
+| --- | --- |
+| Cod. REQ | **REQ-INT-0020-SGP-0032 - Consultar datos de contacto de persona** |
+| Ver. Objetivo |  |
+| Ver. REQ | 1.0.0 |
+| Estado | IN PROGRESS |
+| Fec. Aprobación |  |
+| Épica, historia |  |
+| Frecuencia |  |
+| Características |  |
+| M. Consumidor |  |
 
 ### Definición y objetivos
 
 Obtener los datos de contacto de una persona a partir de su identificador de referencia en el SGI. El ESB recibirá del SGI la solicitud de información de contacto de una determinada persona. El ESB a través de la referencia de la persona derivará la solicitud al sistema universitario correspondiente.
-
-  
-
-
-
-
-
-
-
 
 ### Descripción integración
 
@@ -38,42 +35,18 @@ Salida: se devolverá un registro de datos de contacto de una persona con la sig
 
 ### Diseño técnico
 
-En el siguiente enlace se muestra el diseño del modelo lógico y el diseño de la API del Sistema de Gestión de Personas y, en concreto, de los Servicios Básicos: [SGI \- ESB \- SGP \- Servicios Básicos](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sgp/sgi-esb-sgp-servicios-basicos/index.md "/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sgp/sgi-esb-sgp-servicios-basicos/index.md").
+En el siguiente enlace se muestra el diseño del modelo lógico y el diseño de la API del Sistema de Gestión de Personas y, en concreto, de los Servicios Básicos: [SGI - ESB - SGP - Servicios Básicos](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sgp/sgi-esb-sgp-servicios-basicos).
 
-El servicio concreto del API que cubre este requisito es [SGI \- ESB \- SGP \- Personas \- Consultar datos contacto](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sgp/sgi-esb-sgp-servicios-basicos/sgi-esb-sgp-personas-consultar-datos-contacto.md "/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sgp/sgi-esb-sgp-servicios-basicos/sgi-esb-sgp-personas-consultar-datos-contacto.md").
-
-  
-
-
-
-
-
-
-
+El servicio concreto del API que cubre este requisito es [SGI - ESB - SGP - Personas - Consultar datos contacto](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sgp/sgi-esb-sgp-servicios-basicos/sgi-esb-sgp-personas-consultar-datos-contacto).
 
 ### Interfaces de usuario relacionados
 
-
-
-
-
-
+![](plugins/servlet/confluence/placeholder/unknown-macro)
 
 ### Informes relacionados
 
-
-
-
-
-
+![](plugins/servlet/confluence/placeholder/unknown-macro)
 
 Casos uso relacionados
 
-
-
-
-
-
-
-
-
+![](plugins/servlet/confluence/placeholder/unknown-macro)

@@ -1,16 +1,16 @@
-# Hércules : REQ\-INT\-0030\-SGO\-0080 \- Listar provincias
+# REQ-INT-0030-SGO-0080 - Listar provincias
 
-
-
-
-
-
-
-
-
-
-
-
+|  |  |
+| --- | --- |
+| Cod. REQ | **REQ-INT-0030-SGO-0080 - Listar provincias** |
+| Ver. Objetivo |  |
+| Ver. REQ | 1.0.0 |
+| Estado | IN PROGRESS |
+| Fec. Aprobación |  |
+| Épica, historia |  |
+| Frecuencia |  |
+| Características |  |
+| M. Consumidor | ESB (Persona) |
 
 ### Definición y objetivos
 
@@ -30,42 +30,18 @@ Parámetros de salida: listado de comunidades autónomas. Para cada elemento se 
 
 ### Diseño técnico
 
-En el siguiente enlace se muestra el diseño del modelo lógico y el diseño de la API del Sistema de Gestión de la estructura Orgánica [SGI \- ESB \- SGO](https://confluence.um.es/confluence/display/HERCULES/SGI+-+ESB+-+SGO "https://confluence.um.es/confluence/display/HERCULES/SGI+-+ESB+-+SGO").
+En el siguiente enlace se muestra el diseño del modelo lógico y el diseño de la API del Sistema de Gestión de la estructura Orgánica [SGI - ESB - SGO](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sgo).
 
-El servicio concreto del API que cubre este requisito es [SGI \- ESB \- SGO \- Provincias \- Buscar](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sgo/sgi-esb-sgo-provincias-buscar.md "/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sgo/sgi-esb-sgo-provincias-buscar.md").
-
-  
-
-
-
-
-
-
-
+El servicio concreto del API que cubre este requisito es [SGI - ESB - SGO - Provincias - Buscar](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sgo/sgi-esb-sgo-provincias-buscar).
 
 ### Interfaces de usuario relacionados
 
-
-
-
-
-
+![](plugins/servlet/confluence/placeholder/unknown-macro)
 
 ### Informes relacionados
 
-
-
-
-
-
+![](plugins/servlet/confluence/placeholder/unknown-macro)
 
 ### casos de uso relacionados
 
-
-
-
-
-
-
-
-
+![](plugins/servlet/confluence/placeholder/unknown-macro)

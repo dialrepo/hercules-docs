@@ -1,6 +1,15 @@
-# Hércules : CU\-CSP\-0005\-003 \- Modificar tipo de fase
+# CU-CSP-0005-003 - Modificar tipo de fase
 
-
+|  |  |
+| --- | --- |
+| Cod. CU | **CU-CSP-0005-003 - Modificar tipo de fase** |
+| Ver. objetivo |  |
+| Ver. CU | 1.0.0 |
+| Estado | LIBERADO\_ |
+| Fec. Aprobación |  |
+| Épica, historia |  |
+| Actores | ACT-CSP-004-Administrador |
+| Frecuencia | Baja |
 
 ### Descripción
 
@@ -10,15 +19,15 @@ Modificación de un tipo de fase.
 
 #### Actor principal
 
-ACT\-CSP\-004\-Administrador
+ACT-CSP-004-Administrador
 
 #### Personal involucrado e intereses
 
-ACT\- CSP\-003\-Gestor que requiere que los tipos de fase estén configurados y vinculados a los modelos de ejecución para poder realizar la gestión de convocatorias y proyectos
+ACT- CSP-003-Gestor que requiere que los tipos de fase estén configurados y vinculados a los modelos de ejecución para poder realizar la gestión de convocatorias y proyectos
 
 ### Precondiciones
 
-El usuario ACT\-CSP\-004\-Administrador se autentica a través del usuario de dominio corporativo.
+El usuario ACT-CSP-004-Administrador se autentica a través del usuario de dominio corporativo.
 
 A través del servicio de integración con el directorio activo y de la información del usuario almacenada en el propio SGI, se obtiene su rol y  la unidades de gestión sobre las que tiene disponible el rol. El usuario está autorizado sobre la funcionalidad asociada a esta operación con permisos de EDICION.
 
@@ -36,7 +45,7 @@ El tipo de fase se modifica correctamente y está disponible para la configuraci
 6. El usuario es informado del resultado positivo de la acción
 7. Se vuelve al listado de Tipos de fase
 
-### Extensiones (flujos alternativos) \- Error de unicidad
+### Extensiones (flujos alternativos) - Error de unicidad
 
 1. El usuario ha introducido un nombre para el Tipo de fase que ya existían en la tabla de Tipos de fase entre aquellos elementos activos (campo "activo" a "true")
 2. El usuario introduce el resto de datos del Tipo de fase
@@ -47,7 +56,7 @@ El tipo de fase se modifica correctamente y está disponible para la configuraci
 7. El usuario es informado del resultado positivo de la acción.
 8. Se muestra el listado de Tipos de fases
 
-### Extensiones (flujos alternativos) \- Desactivar tipo de fase
+### Extensiones (flujos alternativos) - Desactivar tipo de fase
 
 1. El usuario accede al apartado de Tipos de fase del menú de configuración del módulo de CSP
 2. El usuario selecciona la opción Eliminar del listado de tipos de fases para un registro concreto
@@ -58,7 +67,7 @@ El tipo de fase se modifica correctamente y está disponible para la configuraci
 7. El usuario es informado del resultado positivo de la acción.
 8. Se muestra el listado de tipos de fases
 
-### Extensiones (flujos alternativos) \- Reactivar tipo de fase
+### Extensiones (flujos alternativos) - Reactivar tipo de fase
 
 1. El usuario accede al apartado de Tipos de fase del menú de configuración del módulo de CSP
 2. El usuario selecciona la opción Reactivar del listado de tipos de fases para un registro concreto
@@ -69,10 +78,7 @@ El tipo de fase se modifica correctamente y está disponible para la configuraci
 7. El usuario es informado del resultado positivo de la acción.
 8. Se muestra el listado de Tipos de fases
 
-  
-
-
-### Extensiones (flujos alternativos) \- El usuario no confirma la acción
+### Extensiones (flujos alternativos) - El usuario no confirma la acción
 
 1. El usuario accede al apartado de Tipos de fase del menú de configuración del módulo de CSP
 2. El usuario selecciona la opción Eliminar o Reactivar del listado de tipos de fases
@@ -81,9 +87,6 @@ El tipo de fase se modifica correctamente y está disponible para la configuraci
 5. No se realiza ninguna operación en base de datos
 6. Se muestra el listado de tipos de fases
 
-  
-
-
 ### Requisitos especiales
 
 N/A
@@ -91,12 +94,3 @@ N/A
 ### Lista de tecnología y variaciones de datos
 
 N/A
-
-  
-  
-  
-
-
-
-
-

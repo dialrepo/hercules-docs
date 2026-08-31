@@ -1,6 +1,15 @@
-# Hércules : CU\-ETI\-0060\-012 \- Memorias \- Documentación \- Aportar documento
+# CU-ETI-0060-012 - Memorias - Documentación - Aportar documento
 
-
+|  |  |
+| --- | --- |
+| Cod. CU | ********CU-ETI-0060-012 - Memorias - Documentación - Aportar documento******** |
+| Ver. objetivo |  |
+| Ver. CU | 1.0.0 |
+| Estado | LIBERADO\_ |
+| Fec. Aprobación |  |
+| Épica, historia |  |
+| Actores | ACT-ETI-002-Investigador  ACT-ETI-003-Solicitante  ACT-ETI-006-Responsable memoria |
+| Frecuencia | Media |
 
 ### Descripción
 
@@ -10,11 +19,11 @@ Formulario para adjuntar un documento obligatorio a una memoria.
 
 #### Actor principal
 
-ACT\-ETI\-002\-Investigador
+ACT-ETI-002-Investigador
 
-ACT\-ETI\-003\-Solicitante
+ACT-ETI-003-Solicitante
 
-ACT\-ETI\-006\-Responsable memoria
+ACT-ETI-006-Responsable memoria
 
 ### Precondiciones
 
@@ -41,10 +50,9 @@ Se actualiza en el listado de documentos de la memoria el campo "Aportado" a "S�
 3. Se presenta la pantalla de edición de la petición de evaluación.
 4. El usuario va a la pestaña de Memorias.
 5. El usuario selecciona del listado una memoria en uno de los estados:  
-
-	* Completada
-	* Favorable Pendiente de Modificaciones Mínimas
-	* Pendiente de correcciones
+   * Completada
+   * Favorable Pendiente de Modificaciones Mínimas
+   * Pendiente de correcciones
 6. Al usuario se le presenta la pantalla de Datos generales de la memoria.
 7. El usuario selecciona la opción de menú Documentación.
 8. El usuario selecciona la acción de Añadir documento
@@ -52,7 +60,3 @@ Se actualiza en el listado de documentos de la memoria el campo "Aportado" a "S�
 10. Lo adjunta a través del botón Examinar.
 11. El usuario selecciona la acción Añadir.
 12. Se muestra la pantalla con el listado de documentos y en el campo Aportado ahora muestra que sí esta aportado.
-
-
-
-

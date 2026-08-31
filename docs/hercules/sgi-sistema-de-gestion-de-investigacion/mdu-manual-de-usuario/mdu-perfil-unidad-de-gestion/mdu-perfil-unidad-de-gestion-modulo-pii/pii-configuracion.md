@@ -1,6 +1,47 @@
-# Hércules : PII\-Configuración
+# PII-Configuración
 
-
+* [Introducción](#PIIConfiguración-Introducción)
+* [Tipos de protección](#PIIConfiguración-Tiposdeprotección)
+  + [Listado de tipos de protección](#PIIConfiguración-Listadodetiposdeprotección)
+  + [Añadir tipo de protección](#PIIConfiguración-Añadirtipodeprotección)
+  + [Modificar tipo de protección](#PIIConfiguración-Modificartipodeprotección)
+    - [Tipo de protección - Datos generales](#PIIConfiguración-Tipodeprotección-Datosgenerales)
+    - [Tipo de protección - Subtipos de protección](#PIIConfiguración-Tipodeprotección-Subtiposdeprotección)
+      * [Listado de subtipos de protección](#PIIConfiguración-Listadodesubtiposdeprotección)
+      * [Añadir subtipo de protección](#PIIConfiguración-Añadirsubtipodeprotección)
+      * [Eliminar subtipo de protección](#PIIConfiguración-Eliminarsubtipodeprotección)
+      * [Recuperar subtipo de protección](#PIIConfiguración-Recuperarsubtipodeprotección)
+  + [Eliminar tipo de protección](#PIIConfiguración-Eliminartipodeprotección)
+  + [Recuperar tipo de protección](#PIIConfiguración-Recuperartipodeprotección)
+* [Sectores de aplicación](#PIIConfiguración-Sectoresdeaplicación)
+  + [Listado de sectores de aplicación](#PIIConfiguración-Listadodesectoresdeaplicación)
+  + [Añadir sector de aplicación](#PIIConfiguración-Añadirsectordeaplicación)
+  + [Modificar sector de aplicación](#PIIConfiguración-Modificarsectordeaplicación)
+  + [Eliminar sector de aplicación](#PIIConfiguración-Eliminarsectordeaplicación)
+  + [Recuperar tipo de protección](#PIIConfiguración-Recuperartipodeprotección.1)
+* [Resultados de informe de patentabilidad](#PIIConfiguración-Resultadosdeinformedepatentabilidad)
+  + [Listado de resultados de informe de patentabilidad](#PIIConfiguración-Listadoderesultadosdeinformedepatentabilidad)
+  + [Añadir resultado de informe de patentabilidad](#PIIConfiguración-Añadirresultadodeinformedepatentabilidad)
+  + [Modificar resultado de informe de patentabilidad](#PIIConfiguración-Modificarresultadodeinformedepatentabilidad)
+  + [Eliminar resultado de informe de patentabilidad](#PIIConfiguración-Eliminarresultadodeinformedepatentabilidad)
+  + [Recuperar resultado de informe de patentabilidad](#PIIConfiguración-Recuperarresultadodeinformedepatentabilidad)
+* [Tipos de procedimiento](#PIIConfiguración-Tiposdeprocedimiento)
+  + [Listado de tipo de procedimiento](#PIIConfiguración-Listadodetipodeprocedimiento)
+  + [Añadir tipo de procedimiento](#PIIConfiguración-Añadirtipodeprocedimiento)
+  + [Modificar tipo de procedimiento](#PIIConfiguración-Modificartipodeprocedimiento)
+  + [Eliminar tipo de procedimiento](#PIIConfiguración-Eliminartipodeprocedimiento)
+  + [Recuperar tipo de procedimiento](#PIIConfiguración-Recuperartipodeprocedimiento)
+* [Tramos de reparto](#PIIConfiguración-Tramosdereparto)
+  + [Listado de tramos de reparto](#PIIConfiguración-Listadodetramosdereparto)
+  + [Añadir tramo de reparto](#PIIConfiguración-Añadirtramodereparto)
+  + [Modificar tramo de reparto](#PIIConfiguración-Modificartramodereparto)
+  + [Eliminar tramo de reparto](#PIIConfiguración-Eliminartramodereparto)
+* [Vías de protección](#PIIConfiguración-Víasdeprotección)
+  + [Listado de vías de protección](#PIIConfiguración-Listadodevíasdeprotección)
+  + [Añadir vía de protección](#PIIConfiguración-Añadirvíadeprotección)
+  + [Modificar vías de protección](#PIIConfiguración-Modificarvíasdeprotección)
+  + [Eliminar vía de protección](#PIIConfiguración-Eliminarvíadeprotección)
+  + [Recuperar vía de protección](#PIIConfiguración-Recuperarvíadeprotección)
 
 ### Introducción
 
@@ -21,7 +62,7 @@ Vista general del menú Configuración:
 
 ![](/attachments/597853705/597881780.png)
 
-El acceso a la configuración de los maestros de este módulo se comporta siempre de la misma forma. Al ser listados con potencialmente pocos registros, no disponen de la función de buscador, sino que, al acceder, se muestra directamente el listado completo de registros que estén configurados en ese momento. Además, la forma de presentar el listado será también la misma y en línea con el resto de módulos de la aplicación, esto es, el listado que se muestra está compuesto por una tabla paginada, con varias columnas de información y una última columna de acciones. 
+El acceso a la configuración de los maestros de este módulo se comporta siempre de la misma forma. Al ser listados con potencialmente pocos registros, no disponen de la función de buscador, sino que, al acceder, se muestra directamente el listado completo de registros que estén configurados en ese momento. Además, la forma de presentar el listado será también la misma y en línea con el resto de módulos de la aplicación, esto es, el listado que se muestra está compuesto por una tabla paginada, con varias columnas de información y una última columna de acciones.
 
 A continuación se detallan cada una de las opciones de menú del módulo de Protección industrial e intelectual para un usuario con el perfil de un **Administrador/a**.
 
@@ -36,9 +77,8 @@ La información de tipos de protección de la que se dispondrá en el SGI será 
 * Nombre: es el nombre identificativo del tipo de protección, con el que se listará en todos los desplegables.
 * Descripción: es un texto de introducción libre para disponer de una descripción ampliada del tipo de protección.
 * Tipo de propiedad: es el tipo de propiedad asociada al tipo de protección. Podrá tener dos valores:  
-
-	+ Propiedad industrial
-	+ Propiedad intelectual
+  + Propiedad industrial
+  + Propiedad intelectual
 * Activo: indicador de si el registro está activo o no. Tomará uno de estos valores: Sí o No.
 
 #### Listado de tipos de protección
@@ -48,15 +88,14 @@ Al acceder a la opción de menú "Tipos de protección", se mostrará una pantal
 En el momento de implantar el SGI en una Universidad, se deberán definir una lista de tipos de protección a cargar. Por ejemplo, podrían ser los siguientes:
 
 * Tipos de protección para el tipo de propiedad "Propiedad Industrial":
-	+ Patente
-	+ Modelo de utilidad
-	+ Diseño industrial
-	+ Marca
-	+ Secreto industrial. Forman parte de los tipos de protección industrial los acuerdos de secreto industrial. Se basan en un acuerdo privado de confidencialidad y uso del producto o conocimiento desarrollado, vendrían a ser tratados como acuerdos de "know\-how", pero en el marco de tipo de protección industrial. (A veces no interesa lanzar el proceso de registro de patente y directamente se acuerda hacer uso de la misma en base a la firma de un acuerdo privado de uso secreto).
+  + Patente
+  + Modelo de utilidad
+  + Diseño industrial
+  + Marca
+  + Secreto industrial. Forman parte de los tipos de protección industrial los acuerdos de secreto industrial. Se basan en un acuerdo privado de confidencialidad y uso del producto o conocimiento desarrollado, vendrían a ser tratados como acuerdos de "know-how", pero en el marco de tipo de protección industrial. (A veces no interesa lanzar el proceso de registro de patente y directamente se acuerda hacer uso de la misma en base a la firma de un acuerdo privado de uso secreto).
 * Tipos de protección para el tipo de propiedad "Propiedad Intelectual":  
-
-	+ Software
-	+ Know\-how
+  + Software
+  + Know-how
 
 Estos tipos de protección se podrán modificar o dar de baja y, además, también se podrán añadir tipos nuevos.
 
@@ -115,15 +154,15 @@ Hasta que no se cumplimenten los campos obligatorios, no se activará el botón 
 
 Una vez realizados los cambios deseados, se aplicarán las validaciones adicionales a la de obligatoriedad para los campos que las tengan, según se describe en los apartados a continuación.
 
-##### Tipo de protección \- Datos generales
+##### Tipo de protección - Datos generales
 
 Los campos para modificar un tipo de protección en la pestaña "Datos Generales" son:
 
-* Tipo de propiedad: es un campo obligatorio. Es modificable. Si ya existe una invención asociada a ese tipo de protección y esta invención tiene alguna solicitud de protección asociada, no se podrá modificar el tipo de propiedad de este tipo de protección. Esto es así ya que los datos que en el SGI se recogen de las solicitudes de protección difieren entre la propiedad industrial y la intelectual según se describe en [PII\-Invenciones \- Añadir nueva solicitud de protección \- Datos generales](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/mdu-perfil-unidad-de-gestion/mdu-perfil-unidad-de-gestion-modulo-pii/pii-invenciones.md#PIIInvenciones-DatosGenerales.2 "/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/mdu-perfil-unidad-de-gestion/mdu-perfil-unidad-de-gestion-modulo-pii/pii-invenciones.md#PIIInvenciones-DatosGenerales.2").
+* Tipo de propiedad: es un campo obligatorio. Es modificable. Si ya existe una invención asociada a ese tipo de protección y esta invención tiene alguna solicitud de protección asociada, no se podrá modificar el tipo de propiedad de este tipo de protección. Esto es así ya que los datos que en el SGI se recogen de las solicitudes de protección difieren entre la propiedad industrial y la intelectual según se describe en [PII-Invenciones - Añadir nueva solicitud de protección - Datos generales](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/mdu-perfil-unidad-de-gestion/mdu-perfil-unidad-de-gestion-modulo-pii/pii-invenciones#PIIInvenciones-DatosGenerales.2).
 * Nombre: es un campo obligatorio. Es modificable. Debe ser único. No se permite la existencia de dos tipos de protección activos con el mismo nombre.
 * Descripción: es un campo obligatorio. Es modificable.
 
-##### Tipo de protección \- Subtipos de protección
+##### Tipo de protección - Subtipos de protección
 
 La pestaña "Subtipos de protección", dentro de un tipo de protección concreto, da acceso a la gestión de los subtipos de protección para ese tipo de protección.
 
@@ -185,7 +224,7 @@ La entidad subtipo de protección admite "desactivación".
 
 La entidad subtipo de protección admite "recuperación".
 
-Al reactivar un subtipo de protección se validará que no exista otro subtipo de protección activo con el mismo nombre y, si es así, se mostrará un mensaje de error y no se podrá reactivar. 
+Al reactivar un subtipo de protección se validará que no exista otro subtipo de protección activo con el mismo nombre y, si es así, se mostrará un mensaje de error y no se podrá reactivar.
 
 #### Eliminar tipo de protección
 
@@ -201,7 +240,7 @@ Al reactivar un tipo de protección se validará que no exista otro tipo de prot
 
 ### Sectores de aplicación
 
-Las invenciones deben poder ser explotadas y, por tanto, ser "susceptibles de aplicación industrial". Esto ocurre cuando pueden ser fabricadas o utilizadas en cualquier clase de industria. Los sectores de aplicación de una invención serán aquellos sectores industriales  en los que se considera que la invención aplica. No tendrán correlación con los sectores [CNAE](https://www.cnae.com.es/lista-actividades.php "https://www.cnae.com.es/lista-actividades.php"), sino que dispondrán de una gestión propia y específica en el SGI.
+Las invenciones deben poder ser explotadas y, por tanto, ser "susceptibles de aplicación industrial". Esto ocurre cuando pueden ser fabricadas o utilizadas en cualquier clase de industria. Los sectores de aplicación de una invención serán aquellos sectores industriales  en los que se considera que la invención aplica. No tendrán correlación con los sectores [CNAE](https://www.cnae.com.es/lista-actividades.php), sino que dispondrán de una gestión propia y específica en el SGI.
 
 La información de sectores de aplicación de la que se dispondrá en el SGI será la siguiente:
 
@@ -295,8 +334,7 @@ Al reactivar un sector de aplicación se validará que no exista otro sector de 
 
 ### Resultados de informe de patentabilidad
 
-Para evaluar si una invención es "patentable" o susceptible de ser candidata a ser protegida, se suele solicitar a una entidad externa a la Universidad que realice un estudio acerca de la invención que se quiere "patentar" o proteger. Este estudio previo sirve para establecer si la invención cumple con los requisitos de "patentabilidad" o necesarios para solicitar su protección ante un organismo oficial y conocer además qué antecedentes existen respecto al objeto de la pretendida "patente" o invención a proteger. Fruto de ese estudio, se genera un informe, que podrá ser almacenado en el SGI, y ese informe además tendrá un resultado, cuyos posibles valores se podrán gestionar en el SGI.  
-
+Para evaluar si una invención es "patentable" o susceptible de ser candidata a ser protegida, se suele solicitar a una entidad externa a la Universidad que realice un estudio acerca de la invención que se quiere "patentar" o proteger. Este estudio previo sirve para establecer si la invención cumple con los requisitos de "patentabilidad" o necesarios para solicitar su protección ante un organismo oficial y conocer además qué antecedentes existen respecto al objeto de la pretendida "patente" o invención a proteger. Fruto de ese estudio, se genera un informe, que podrá ser almacenado en el SGI, y ese informe además tendrá un resultado, cuyos posibles valores se podrán gestionar en el SGI.
 
 La información de resultados de informe de patentabilidad de la que se dispondrá en el SGI será la siguiente:
 
@@ -348,9 +386,6 @@ Los campos para dar de alta un resultado de informe de patentabilidad son:
 Hasta que no se cumplimenten los campos obligatorios, no se activará el botón "Añadir".
 
 ![](/attachments/597853705/597880590.png)![](/attachments/597853705/597880593.png)
-
-  
-
 
 En caso que se introduzca un nombre para el resultado de informe de patentabilidad que ya exista y esté activo, se mostrará un mensaje de error.
 
@@ -499,20 +534,19 @@ Como resultado de la explotación de las licencias de las invenciones a través 
 
 La información de tramos de reparto de la que se dispondrá en el SGI será la siguiente:
 
-* Tramo de reparto (desde\-hasta): representa el intervalo desde\-hasta, expresado en unidades enteras de la moneda de referencia, que marcan el tramo dinerario para referenciar los % de reparto Universidad\-Equipo inventor. Se almacenará separado en 2 campos de información:  
-
-	+ Tramo Desde: número entero. Marca el inicio del tramo dinerario para referenciar los % de reparto. Ha de ser inferior al valor indicado en Tramo Hasta.
-	+ Tramo Hasta: número entero. Marca el final del tramo dinerario para referenciar los % de reparto. Ha de ser superior al valor indicado en Tramo Desde.
-* % Universidad: número decimal con 2 decimales. Es el porcentaje de los beneficios/reparto que se transfiere a la Universidad. Deberá tener un valor mayor o igual a 0 y menor o igual a 100\.
-* % Equipo inventor: número decimal con 2 decimales. Es el porcentaje de los beneficios/reparto que se reparte entre los miembros del equipo inventor con los que la Universidad ha adquirido la obligación de retribuirles, de manera proporcional a su porcentaje de autoría de invención, estén vinculados o no a la Universidad.  Deberá tener un valor mayor o igual a 0 y menor o igual a 100\.
+* Tramo de reparto (desde-hasta): representa el intervalo desde-hasta, expresado en unidades enteras de la moneda de referencia, que marcan el tramo dinerario para referenciar los % de reparto Universidad-Equipo inventor. Se almacenará separado en 2 campos de información:  
+  + Tramo Desde: número entero. Marca el inicio del tramo dinerario para referenciar los % de reparto. Ha de ser inferior al valor indicado en Tramo Hasta.
+  + Tramo Hasta: número entero. Marca el final del tramo dinerario para referenciar los % de reparto. Ha de ser superior al valor indicado en Tramo Desde.
+* % Universidad: número decimal con 2 decimales. Es el porcentaje de los beneficios/reparto que se transfiere a la Universidad. Deberá tener un valor mayor o igual a 0 y menor o igual a 100.
+* % Equipo inventor: número decimal con 2 decimales. Es el porcentaje de los beneficios/reparto que se reparte entre los miembros del equipo inventor con los que la Universidad ha adquirido la obligación de retribuirles, de manera proporcional a su porcentaje de autoría de invención, estén vinculados o no a la Universidad.  Deberá tener un valor mayor o igual a 0 y menor o igual a 100.
 * Tipo de tramo: desplegable donde se indicará la clase de tramo configurado. Los tipos de tramo entre los que se podrá seleccionar son:
-	+ Inicial: es el tramo que comienza en 1, es decir, con un valor de "Tramo Desde" 1 y finaliza donde el usuario indique como valor de "Tramo Hasta". Solo podrá haber un tramo inicial, pero no es obligatorio que lo haya.
-	+ Intermedio: es un tramo que tiene un límite inferior, marcado por el fin del tramo inmediatamente anterior (si existe). Podrá haber varios tramos intermedios, pero no es obligatorio que los haya.
-	+ Final: es el tramo cuyo valor "Tramo Hasta" lo determina el propio SGI con el máximo valor permitido y cuyo valor "Tramo Desde" tendrá como límite inferior el fin del tramo inmediatamente anterior (si existe). Solo podrá haber un tramo final, pero no es obligatorio que lo haya.
+  + Inicial: es el tramo que comienza en 1, es decir, con un valor de "Tramo Desde" 1 y finaliza donde el usuario indique como valor de "Tramo Hasta". Solo podrá haber un tramo inicial, pero no es obligatorio que lo haya.
+  + Intermedio: es un tramo que tiene un límite inferior, marcado por el fin del tramo inmediatamente anterior (si existe). Podrá haber varios tramos intermedios, pero no es obligatorio que los haya.
+  + Final: es el tramo cuyo valor "Tramo Hasta" lo determina el propio SGI con el máximo valor permitido y cuyo valor "Tramo Desde" tendrá como límite inferior el fin del tramo inmediatamente anterior (si existe). Solo podrá haber un tramo final, pero no es obligatorio que lo haya.
 
 Los tramos de reparto no se podrán solapar entre sí.
 
-Para un tramo de reparto dado, la suma de % Universidad y % Equipo inventor ha de ser 100\.
+Para un tramo de reparto dado, la suma de % Universidad y % Equipo inventor ha de ser 100.
 
 #### Listado de tramos de reparto
 
@@ -526,7 +560,7 @@ Los tramos de reparto se podrán dar de alta, modificar o dar de baja.
 
 Las columnas que se mostrarán en el listado serán:
 
-* Tramo de reparto: en el caso especial de un tipo de tramo inicial, se mostrará el símbolo "\<\=" precediendo al valor del campo "hasta" y no se mostrará el valor "desde", se supone 1\. En el caso especial de un tipo de tramo final, se mostrará el símbolo "\>\=" precediendo al valor del campo "desde" y no se mostrará el valor "hasta", se supone el máximo permitido por el sistema.
+* Tramo de reparto: en el caso especial de un tipo de tramo inicial, se mostrará el símbolo "<=" precediendo al valor del campo "hasta" y no se mostrará el valor "desde", se supone 1. En el caso especial de un tipo de tramo final, se mostrará el símbolo ">=" precediendo al valor del campo "desde" y no se mostrará el valor "hasta", se supone el máximo permitido por el sistema.
 * % Universidad
 * % Equipo inventor
 
@@ -548,9 +582,9 @@ Tras pulsar el botón, se abrirá una ventana emergente para la introducción de
 Los campos para dar de alta un tramo de reparto son:
 
 * Tipo de tramo: es un campo obligatorio. El funcionamiento varía según el tipo de tramo que se seleccione:
-	+ Inicial: si se selecciona, el campo "Tramo Hasta" se mostrará en modo de solo lectura y tomará el valor 1\.
-	+ Intermedio: si se selecciona, el campo "Tramo Desde" se mostrará en modo de solo lectura con el valor siguiente al valor de Tramo Hasta del tramo inicial o, si ya hay tramos intermedios, del último tramo intermedio que se haya configurado hasta el momento, para evitar que haya saltos entre tramos.
-	+ Final: si se selecciona, el campo "Tramo Desde" se mostrará en modo de solo lectura con el valor siguiente al valor de Tramo Hasta del tramo inicial o, si ya hay tramos intermedios, del último tramo intermedio que se haya creado, para evitar que haya saltos entre dicho tramo y el tramo final. El campo "Tramo Hasta" tomará el valor del máximo entero permitido por el SGI, pero no se visualizará dicho valor por pantalla.
+  + Inicial: si se selecciona, el campo "Tramo Hasta" se mostrará en modo de solo lectura y tomará el valor 1.
+  + Intermedio: si se selecciona, el campo "Tramo Desde" se mostrará en modo de solo lectura con el valor siguiente al valor de Tramo Hasta del tramo inicial o, si ya hay tramos intermedios, del último tramo intermedio que se haya configurado hasta el momento, para evitar que haya saltos entre tramos.
+  + Final: si se selecciona, el campo "Tramo Desde" se mostrará en modo de solo lectura con el valor siguiente al valor de Tramo Hasta del tramo inicial o, si ya hay tramos intermedios, del último tramo intermedio que se haya creado, para evitar que haya saltos entre dicho tramo y el tramo final. El campo "Tramo Hasta" tomará el valor del máximo entero permitido por el SGI, pero no se visualizará dicho valor por pantalla.
 * Tramo Desde: es un campo obligatorio.
 * Tramo Hasta: es un campo obligatorio.
 * % Universidad: es un campo obligatorio.
@@ -566,12 +600,11 @@ En caso de que la suma de % Universidad y % Equipo inventor del tramo de reparto
 
 ![](/attachments/597853705/597880578.png)
 
-No existirán saltos ni intersecciones entre los tramos configurados, esto es, un tramo ha de comenzar donde finalice el inmediatamente anterior \+ 1, por tanto, por extensión, los tramos se han de introducir de manera secuencial y ordenada de menor a mayor rango de importes, sin solaparse entre sí. Esto será dirigido de esta forma desde la propia aplicación, evitando así errores de usuario a la hora de configurar los tramos.
+No existirán saltos ni intersecciones entre los tramos configurados, esto es, un tramo ha de comenzar donde finalice el inmediatamente anterior + 1, por tanto, por extensión, los tramos se han de introducir de manera secuencial y ordenada de menor a mayor rango de importes, sin solaparse entre sí. Esto será dirigido de esta forma desde la propia aplicación, evitando así errores de usuario a la hora de configurar los tramos.
 
 Solo puede haber un tramo de tipo inicial y un tramo de tipo final en la lista, si bien, no es obligatorio que se definan ninguno de estos dos tipos de tramos ni tampoco que exista ninguno intermedio. Si no se ha configurado un reparto para algún rango dinerario, la aplicación simplemente no recomendará una distribución por defecto del reparto a la hora de realizarlo. En el caso de que se intenten añadir un tramo de tipo inicial o final habiendo otro del mismo tipo ya en la lista, se mostrará un mensaje de error:
 
-![](/attachments/597853705/597880577.png)  
-
+![](/attachments/597853705/597880577.png)
 
 Hasta que no se cumplimenten los campos obligatorios, y se cumplan las restricciones anteriores, no se activará el botón "Añadir".
 
@@ -628,8 +661,8 @@ La información de vías de protección de la que se dispondrá en el SGI será 
 * Nombre: es el nombre identificativo de la vía de protección, con el que se listará en todos los desplegables.
 * Descripción: es un texto de introducción libre para disponer de una descripción ampliada de la vía de protección.
 * Tipo de Propiedad: es el tipo de propiedad asociada a la vía de protección. El tipo de propiedad que tenga asociada una invención, marcará la lista de vías de protección posibles para sus solicitudes de protección. Tendrá dos valores posibles:
-	+ Propiedad Industrial
-	+ Propiedad Intelectual
+  + Propiedad Industrial
+  + Propiedad Intelectual
 * Meses prioridad / plazo ent. fases nac./reg.: número entero. Representa los meses de prioridad a aplicar, cuando la solicitud es la primera de una invención, o los meses de plazo para la entrada a las fases nacionales / regionales, en el caso concreto de solicitudes que sean extensión internacional (p.ej. vía PCT).
 * País Específico: marca para indicar que al ser seleccionada esta vía, en el desplegable de vías de una solicitud de protección, ha de mostrarse por pantalla el desplegable de países. Esto requerirá al usuario elegir uno específico en el que solicitar proteger la invención. Tomará uno de estos valores: Sí o No.
 * Extensión Internacional: marca para indicar que al ser seleccionada esta vía, en el desplegable de vías de una solicitud de protección, ha de adaptarse el texto para los campos de "Fecha prioridad" y "Fecha fin prioridad" a los adecuados para este tipo de vías, que será respectivamente, "Fecha solicitud" y "F. fin pres. f. nac./reg.". Tomará uno de estos valores: Sí o No.
@@ -745,7 +778,3 @@ La entidad vía de protección admite "recuperación".
 Al reactivar una vía de protección se validará que no exista otra vía de protección activa con el mismo nombre y, si es así, se mostrará un mensaje de error y no se podrá reactivar.
 
 ![](/attachments/597853705/597880670.png)
-
-
-
-

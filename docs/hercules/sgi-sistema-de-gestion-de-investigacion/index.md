@@ -1,6 +1,4 @@
-# Hércules : SGI. Sistema de gestión de investigación
-
-
+# SGI. Sistema de gestión de investigación
 
 ## 
 
@@ -8,17 +6,4 @@ El proyecto SGI dentro del Proyecto HÉRCULES tiene como objetivo crear un Proto
 
 También forma parte del objeto del contrato el posterior desarrollo de un piloto del innovador prototipo SGI desarrollado en la Universidad de Murcia con las correspondientes migraciones de datos e integraciones con otros sistemas de información existentes, tanto internos de la Universidad como externos.
 
-  
-
-
 ![](/attachments/597852519/619839526.jpg)
-
-  
-
-
-  
-
-
-
-
-

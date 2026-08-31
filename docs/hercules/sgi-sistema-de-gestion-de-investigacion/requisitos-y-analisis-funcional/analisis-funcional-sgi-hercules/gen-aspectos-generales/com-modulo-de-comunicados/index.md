@@ -1,6 +1,12 @@
-# Hércules : COM \- Módulo de Comunicados
+# COM - Módulo de Comunicados
 
-
+* [Introducción](#COMMódulodeComunicados-Introducción)
+* [Modelo de dominio](#COMMódulodeComunicados-Modelodedominio)
+* [Descripción funcional](#COMMódulodeComunicados-Descripciónfuncional)
+  + [Tipos de comunicados](#COMMódulodeComunicados-Tiposdecomunicados)
+  + [Configuración de comunicados](#COMMódulodeComunicados-Configuracióndecomunicados)
+  + [Destinatarios](#COMMódulodeComunicados-Destinatarios)
+* [Modelo lógico](#COMMódulodeComunicados-Modelológico)
 
 ### Introducción
 
@@ -41,18 +47,6 @@ En el caso de los envíos programados, dispondrán de interfaz de usuario los av
 
 #### Configuración de comunicados
 
-  
-
-
-  
-
-
-  
-
-
-  
-
-
 #### Destinatarios
 
 Existirán dos grandes tipos de destinatarios:
@@ -63,7 +57,3 @@ Existirán dos grandes tipos de destinatarios:
 ### Modelo lógico
 
 ![](/attachments/597853815/597865760.png)
-
-
-
-

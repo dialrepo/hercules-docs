@@ -1,6 +1,15 @@
-# Hércules : CU\-CSP\-0090\-002 \- Crear concepto de gasto
+# CU-CSP-0090-002 - Crear concepto de gasto
 
-
+|  |  |
+| --- | --- |
+| Cod. CU | **CU-CSP-0090-002 - Crear concepto de gasto** |
+| Ver. objetivo |  |
+| Ver. CU | 1.0.0 |
+| Estado | LIBERADO\_ |
+| Fec. Aprobación |  |
+| Épica, historia |  |
+| Actores | ACT-CSP-004-Administrador |
+| Frecuencia | Baja |
 
 ### Descripción
 
@@ -10,17 +19,17 @@ Se crea el nuevo concepto de gasto pasando a estar disponible en los listados pa
 
 #### Actor principal
 
-ACT\-CSP\-004\-Administrador
+ACT-CSP-004-Administrador
 
 #### Personal involucrado e intereses
 
-ACT\-CSP\-003\-Gestor que requiere que los conceptos de gasto estén correctamente configurados para poder registrar la información de financiación de convocatorias y proyectos.
+ACT-CSP-003-Gestor que requiere que los conceptos de gasto estén correctamente configurados para poder registrar la información de financiación de convocatorias y proyectos.
 
-ACT\- CSP\-001\-Investigador que requiere ver el detalle de información sobre la financiación de convocatorias y proyectos .
+ACT- CSP-001-Investigador que requiere ver el detalle de información sobre la financiación de convocatorias y proyectos .
 
 ### Precondiciones
 
-El usuario ACT\-CSP\-004\-Administrador se autentica a través del usuario de dominio corporativo.
+El usuario ACT-CSP-004-Administrador se autentica a través del usuario de dominio corporativo.
 
 A través del servicio de integración con el directorio activo y de la información del usuario almacenada en el propio SGI, se obtiene su rol y las unidades de gestión sobre las que tiene disponible el rol. El usuario está autorizado sobre la funcionalidad asociada a esta operación con permisos de EDICION.
 
@@ -38,7 +47,7 @@ El concepto de gasto se crea correctamente y está disponible para la configurac
 6. El usuario es informado del resultado positivo de la acción
 7. Se vuelve al listado de Conceptos de gasto
 
-### Extensiones (flujos alternativos) \- Error de unicidad
+### Extensiones (flujos alternativos) - Error de unicidad
 
 1. El usuario ha introducido un Nombre para el concepto de gasto que ya existe en la tabla de Conceptos de gasto con el campo "activo" a true
 2. El usuario introduce el resto de datos del Concepto de gasto
@@ -56,12 +65,3 @@ N/A
 ### Lista de tecnología y variaciones de datos
 
 N/A
-
-  
-  
-  
-
-
-
-
-

@@ -1,10 +1,16 @@
-# Hércules : REQ\-INT\-0010\-SGE\-0102 \- Rechazar gasto
+# REQ-INT-0010-SGE-0102 - Rechazar gasto
 
-
-
-
-
-
+|  |  |
+| --- | --- |
+| Cod. REQ | **REQ-INT-0010-SGE-0102 - Rechazar gasto** |
+| Ver. Objetivo |  |
+| Ver. REQ | 1.0.0 |
+| Estado | IN PROGRESS |
+| Fec. Aprobación |  |
+| Épica, historia |  |
+| Frecuencia |  |
+| Características |  |
+| M. Consumidor |  |
 
 ### Definición y objetivos
 
@@ -12,64 +18,31 @@ El apartado de validación de gastos está destinado a que los funcionales del S
 
 Para cada gasto los funcionales podrán cambiar el estado, pasando el cargo del gasto a "Validado", "Rechazado" o "Bloqueado" y recoger un comentario asociado al cambio de estado. La información del cambio de estado a Rechazado se tendrá que notificar al SGE. Serán ya los procedimientos y flujos del SGE los que operen con el estado de validación remitidos desde el SGI para realizar la contabilización.
 
-  
-
-
-
-
-
-
-
-
 ### Descripción técnica integración
 
-Parámetros de entrada: 
+Parámetros de entrada:
 
 * Identificador del gasto
 * Comentario asociado al cambio de estado de validar
 
-Parámetros de salida: 
+Parámetros de salida:
 
 * No aplica
 
 ### Diseño técnico
 
-En el siguiente enlace se muestra el diseño del modelo lógico y el diseño de la API del Sistema de Gestión Económica y, en concreto, de la Ejecución económica de proyectos: [SGI \- ESB \- SGE \- Ejecución económica](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sge/sgi-esb-sge-ejecucion-economica/index.md "/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sge/sgi-esb-sge-ejecucion-economica/index.md").
+En el siguiente enlace se muestra el diseño del modelo lógico y el diseño de la API del Sistema de Gestión Económica y, en concreto, de la Ejecución económica de proyectos: [SGI - ESB - SGE - Ejecución económica](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sge/sgi-esb-sge-ejecucion-economica).
 
-El servicio concreto del API que cubre este requisito es: [SGI \- ESB \- SGE \- Ejecución económica \- Rechazar gasto](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sge/sgi-esb-sge-ejecucion-economica/sgi-esb-sge-ejecucion-economica-rechazar-gasto.md "/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sge/sgi-esb-sge-ejecucion-economica/sgi-esb-sge-ejecucion-economica-rechazar-gasto.md").
-
-
-
-
-
-
+El servicio concreto del API que cubre este requisito es: [SGI - ESB - SGE - Ejecución económica - Rechazar gasto](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sge/sgi-esb-sge-ejecucion-economica/sgi-esb-sge-ejecucion-economica-rechazar-gasto).
 
 ### Interfaces de usuario relacionados
 
-
-
-  
-
-
-
-
-
+![](plugins/servlet/confluence/placeholder/unknown-macro)
 
 ### Informes relacionados
 
-
-
-
-
-
+![](plugins/servlet/confluence/placeholder/unknown-macro)
 
 ### Casos de uso relacionados
 
-
-
-
-
-
-
-
-
+![](plugins/servlet/confluence/placeholder/unknown-macro)

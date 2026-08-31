@@ -1,6 +1,4 @@
-# Hércules : Formatos de datos API
-
-
+# Formatos de datos API
 
 Es necesario establecer una acuerdo a la hora de intercambiar datos de algunos tipos concretos a través de las APIs cuya representación puede variar según el formato con el que se decidan presentar como String.
 
@@ -18,10 +16,7 @@ Se enviará/recibirá un formato de fecha ISO 8601, sin información horaria.
 }
 ```
 
-  
-
-
-### Campos de tipo Fecha \+ Hora
+### Campos de tipo Fecha + Hora
 
 Se enviará/recibirá un formato de fecha ISO 8601, ajustado a UTC (se debe utilizar el designador UTC especial "Z").
 
@@ -33,7 +28,3 @@ Se enviará/recibirá un formato de fecha ISO 8601, ajustado a UTC (se debe util
   "fechaFin": "2021-01-31T23:59:59Z",
 }
 ```
-
-
-
-

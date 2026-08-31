@@ -1,26 +1,28 @@
-# Hércules : IU\-CSP\-0402\-031 \- Calendario facturación \- Histórico IP
+# IU-CSP-0402-031 - Calendario facturación - Histórico IP
 
+|  |  |
+| --- | --- |
+| Cod. IU | ********IU-CSP-0402-032 - Calendario facturación - Histórico IP******** |
+| Ver. objetivo | 0.4.0 |
+| Ver. IU | 1.0.0 |
+| Estado | IN PROGRESS |
+| Fec. Aprobación |  |
+| Épica, historia |  |
+| Actores | ACT-CSP-003-Gestor, ACT-CSP-004-Administrador |
+| Frecuencia | Media |
 
-
-## Formulario Calendario facturación \- Histórico IP
+## Formulario Calendario facturación - Histórico IP
 
 Formulario que permite visualizar los distintos estados por lo que ha pasado el flujo de validación por parte del IP de un item del calendario de facturación.
 
-
-
-|  | | |
+|  |  |  |
 | --- | --- | --- |
+|  | | |
 | Nombre | Tipo | Características / Notas |
 | Estado | Texto corto | Estado de la validación IP. Nombre del estado extraído de la tabla "tipo estado validacion" a partir de la referencia de la tabla "estado validacion ip"". |
 | Fecha de estado | Fecha | Fecha en la que se ha cambiado de estado,  recuperada de la tabla "estado validacion ip"" |
 | Motivo | Texto | Comentario añadido cuando se produce el cambio de estado, recuperado de la tabla "estado validacion ip". No todos los cambios de estado llevan asociado un comentario. |
 
-
-
 | Acciones | Descripción | Enlace CU. | Permisos |
 | --- | --- | --- | --- |
 | Cancelar | Retorna al formulario de proyecto, sin salvar los posibles cambios |  |  |
-
-
-
-

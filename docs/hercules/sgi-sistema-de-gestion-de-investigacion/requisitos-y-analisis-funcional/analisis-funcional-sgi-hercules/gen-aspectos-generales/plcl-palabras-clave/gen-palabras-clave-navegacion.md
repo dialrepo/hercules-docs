@@ -1,6 +1,12 @@
-# Hércules : GEN \- Palabras Clave \- Navegación
+# GEN - Palabras Clave - Navegación
 
-
+* [Descripción del caso de navegación](#GENPalabrasClaveNavegación-Descripcióndelcasodenavegación)
+* [Paso 1: Añadir palabras clave a un proyecto](#GENPalabrasClaveNavegación-Paso1:Añadirpalabrasclaveaunproyecto)
+  + [Paso 1.1 Añadir palabra clave que está en el diccionario](#GENPalabrasClaveNavegación-Paso1.1Añadirpalabraclavequeestáeneldiccionario)
+  + [Paso 1.2 Añadir palabra clave que no está en el diccionario](#GENPalabrasClaveNavegación-Paso1.2Añadirpalabraclavequenoestáeneldiccionario)
+  + [Paso 1.3 Eliminar palabras clave asociadas a un proyecto](#GENPalabrasClaveNavegación-Paso1.3Eliminarpalabrasclaveasociadasaunproyecto)
+* [Paso 2: Buscar proyecto por palabras clave](#GENPalabrasClaveNavegación-Paso2:Buscarproyectoporpalabrasclave)
+* [Componentes IU](#GENPalabrasClaveNavegación-ComponentesIU)
 
 #### Descripción del caso de navegación
 
@@ -17,7 +23,7 @@ Se parte del supuesto de que el diccionario inicial común a todo el SGI tendrí
 
 Tras las acciones indicadas en los ejemplos, el diccionario pasaría a tener, además de las anteriores, las palabra "vespa velutina".
 
-
+![](plugins/servlet/confluence/placeholder/unknown-macro)
 
 #### Paso 1: Añadir palabras clave a un proyecto
 
@@ -29,7 +35,7 @@ Para ello, ir al menú **Proyectos** y dentro del listado de proyectos seleccion
 
 A continuación, se mostrará la pantalla **Datos Generales → Ficha General** del proyecto seleccionado, donde podremos ver el campo "Palabras clave" bajo los campos "Proyecto coordinado" y "Coordinador externo".
 
-##### Paso 1\.1 Añadir palabra clave que está en el diccionario
+##### Paso 1.1 Añadir palabra clave que está en el diccionario
 
 En primer lugar vamos a añadir una palabra clave que esté en el diccionario.
 
@@ -37,7 +43,7 @@ A la hora de añadir una nueva palabra clave, por ejemplo, "vespertino", al come
 
 ![](/attachments/597852280/597871996.png)
 
-
+![](plugins/servlet/confluence/placeholder/unknown-macro)
 
 Si se decide seleccionar una palabra del diccionario, por ejemplo, "vespertino", la elegimos del despelgable y pulsamos la tecla "enter" y se añadiría la palabra clave a la lista de palabras clave del proyecto.
 
@@ -47,9 +53,9 @@ Vemos a continuación cómo la nueva palabra clave "vespertino" aparece en la li
 
 ![](/attachments/597852280/597872003.png)
 
+![](plugins/servlet/confluence/placeholder/unknown-macro)
 
-
-##### Paso 1\.2 Añadir palabra clave que no está en el diccionario
+##### Paso 1.2 Añadir palabra clave que no está en el diccionario
 
 Ahora vamos a añadir una palabra clave que no esté en el diccionario.
 
@@ -59,7 +65,7 @@ Una vez escrita, pulsamos la tecla "enter" y se añadiría la palabra clave "ves
 
 ![](/attachments/597852280/597872005.png)
 
-
+![](plugins/servlet/confluence/placeholder/unknown-macro)
 
 Vemos a continuación cómo la nueva palabra clave "vespa velutina" aparece en la lista de palabras asociadas al proyecto.
 
@@ -69,13 +75,13 @@ Pulsamos el botón "Guardar proyecto" para que los datos de las nuevas palabras 
 
 ![](/attachments/597852280/597872002.png)
 
-
+![](plugins/servlet/confluence/placeholder/unknown-macro)
 
 El sistema informará de que los cambios han sido guardados y, por tanto, ya se podrá buscar el proyecto modificado usando las nuevas palabras clave añadidas como filtro.
 
 ![](/attachments/597852280/597872009.png)
 
-##### Paso 1\.3 Eliminar palabras clave asociadas a un proyecto
+##### Paso 1.3 Eliminar palabras clave asociadas a un proyecto
 
 Se puede eliminar una o varias de las palabras clave de las asociadas a un proyecto desde la propia pantalla de edición/modificación del proyecto pulsando sobre el botón con un aspa situada al lado de cada una.
 
@@ -85,7 +91,7 @@ Se incluye un Zoom de dicho botón:
 
 Al igual que a la hora de añadir las palabras clave, los cambios realizados no se guardarán hasta que se pulse sobre el botón "Guardar proyecto".
 
-
+![](plugins/servlet/confluence/placeholder/unknown-macro)
 
 #### Paso 2: Buscar proyecto por palabras clave
 
@@ -97,7 +103,7 @@ A la hora de buscar un proyecto por una nueva palabra clave, por ejemplo, "vespa
 
 ![](/attachments/597852280/597872049.png)
 
-
+![](plugins/servlet/confluence/placeholder/unknown-macro)
 
 Si se decide seleccionar una palabra del diccionario, la elegimos del desplegable y pulsamos la tecla "enter" y se añadiría la palabra clave a la lista de palabras clave por las que filtrar los proyectos.
 
@@ -105,7 +111,7 @@ Si se decide seleccionar una palabra del diccionario, la elegimos del desplegabl
 
 La palabra clave "vespa" aparece en la lista de palabras por las que filtrar los proyectos.
 
-
+![](plugins/servlet/confluence/placeholder/unknown-macro)
 
 Podemos además combinar filtros. Además se puede filtrar por una palabra que, como en el ejemplo a continuación, no existe en el diccionario y por tanto, se introduce completa manualmente, como es "avispa asiática".
 
@@ -115,13 +121,13 @@ Una vez escrita la segunda palabra a usar como filtro, "avispa asiática", se de
 
 La nueva palabra clave aparece en la lista de palabras por las que filtrar los proyectos.
 
-
+![](plugins/servlet/confluence/placeholder/unknown-macro)
 
 Pulsamos el botón Buscar y se lanza la búsqueda de proyectos asociados a las palabras clave introducidas. La búsqueda que se realizará será la de que el proyecto esté asociado con la palabra clave "vespa" O con la palabra "avispa asiática".
 
 ![](/attachments/597852280/597872042.png)
 
-
+![](plugins/servlet/confluence/placeholder/unknown-macro)
 
 HAY UN RESULTADO POR "vespa", el proyecto con acrónimo REF003, que saldrá en el resultado aunque no tenga asociada la palabra "avispa asiática". Con la palabra clave "avispa asiática", no hay ningún proyecto.
 
@@ -129,7 +135,7 @@ Se presenta el resultado de la búsqueda.
 
 ![](/attachments/597852280/597872012.png)
 
-
+![](plugins/servlet/confluence/placeholder/unknown-macro)
 
 Se puede también eliminar una o varias de las palabras clave por las que filtrar pulsando sobre el aspa situada al lado de cada una.
 
@@ -139,11 +145,4 @@ Si por ejemplo, eliminamos la palabra "avispa asiática" del filtro y volvemos a
 
 #### Componentes IU
 
-Para implementar esta funcionalidad, se utilizará un nuevo componente cuya operativa se puede probar aquí: [https://material.angular.io/components/chips/overview\#chips\-input](https://material.angular.io/components/chips/overview#chips-input "https://material.angular.io/components/chips/overview#chips-input")
-
-  
-
-
-
-
-
+Para implementar esta funcionalidad, se utilizará un nuevo componente cuya operativa se puede probar aquí: <https://material.angular.io/components/chips/overview#chips-input>

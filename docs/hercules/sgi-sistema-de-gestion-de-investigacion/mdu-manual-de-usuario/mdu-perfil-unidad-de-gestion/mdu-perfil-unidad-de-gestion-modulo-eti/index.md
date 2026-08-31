@@ -1,6 +1,4 @@
-# Hércules : MDU\-Perfil unidad de gestión \- Módulo ETI
-
-
+# MDU-Perfil unidad de gestión - Módulo ETI
 
 El módulo de  ética es un módulo integrado en el SGI  que permite tanto al personal de investigación presentar a evaluar sus proyectos de investigación ante un comité de ética, como a las personas responsables de la ética en la investigación gestionar la evaluación de los mismos.
 
@@ -19,35 +17,25 @@ El SGI dispone de los siguientes perfiles predefinidos de acceso al módulo ETI:
 
 Los bloques funcionales habilitados para cada perfil son:
 
-
-
 | Perfil | Funcionalidad | Restricciones |
 | --- | --- | --- |
-| Perfil administrador | [ETI\-Configuración](https://confluence.um.es/confluence/pages/viewpage.action?pageId=141923880 "https://confluence.um.es/confluence/pages/viewpage.action?pageId=141923880") |  |
-| Perfil gestor | [ETI\-Solicitudes de evaluación y memorias](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/mdu-perfil-unidad-de-gestion/mdu-perfil-unidad-de-gestion-modulo-eti/eti-solicitudes-de-evaluacion-y-memorias.md "/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/mdu-perfil-unidad-de-gestion/mdu-perfil-unidad-de-gestion-modulo-eti/eti-solicitudes-de-evaluacion-y-memorias.md") |  |
-| [ETI\-Gestión de convocatorias de reunión y actas](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/mdu-perfil-unidad-de-gestion/mdu-perfil-unidad-de-gestion-modulo-eti/eti-gestion-de-convocatorias-de-reunion-y-actas.md "/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/mdu-perfil-unidad-de-gestion/mdu-perfil-unidad-de-gestion-modulo-eti/eti-gestion-de-convocatorias-de-reunion-y-actas.md") |  |
-| [ETI\-Gestión de evaluadores](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/mdu-perfil-unidad-de-gestion/mdu-perfil-unidad-de-gestion-modulo-eti/eti-gestion-de-evaluadores.md "/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/mdu-perfil-unidad-de-gestion/mdu-perfil-unidad-de-gestion-modulo-eti/eti-gestion-de-evaluadores.md") |  |
-| [ETI\-Dictamen Evaluaciones y seguimientos](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/mdu-perfil-unidad-de-gestion/mdu-perfil-unidad-de-gestion-modulo-eti/eti-dictamen-evaluaciones-y-seguimientos.md "/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/mdu-perfil-unidad-de-gestion/mdu-perfil-unidad-de-gestion-modulo-eti/eti-dictamen-evaluaciones-y-seguimientos.md") |  |
-| [ETI\-Evaluaciones y seguimientos evaluador (Ficha equipo evaluador \- Perfil "Técnico/a ética")](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/mdu-perfil-unidad-de-gestion/mdu-perfil-unidad-de-gestion-modulo-eti/eti-evaluaciones-y-seguimientos-evaluador-ficha-equipo-evaluador-perfil-tecnicoa-etica.md "/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/mdu-perfil-unidad-de-gestion/mdu-perfil-unidad-de-gestion-modulo-eti/eti-evaluaciones-y-seguimientos-evaluador-ficha-equipo-evaluador-perfil-tecnicoa-etica.md") | Tiene que estar como evaluador en uno de los comités (miembro activo del comité) |
-| Perfil evaluador | [ETI\-Evaluaciones y seguimientos evaluador (Ficha equipo evaluador \- Perfil "Técnico/a ética")](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/mdu-perfil-unidad-de-gestion/mdu-perfil-unidad-de-gestion-modulo-eti/eti-evaluaciones-y-seguimientos-evaluador-ficha-equipo-evaluador-perfil-tecnicoa-etica.md "/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/mdu-perfil-unidad-de-gestion/mdu-perfil-unidad-de-gestion-modulo-eti/eti-evaluaciones-y-seguimientos-evaluador-ficha-equipo-evaluador-perfil-tecnicoa-etica.md") | Tiene que estar como evaluador en uno de los comités (miembro activo del comité) |
-| [ETI\-Actas evaluador](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/mdu-perfil-unidad-de-gestion/mdu-perfil-unidad-de-gestion-modulo-eti/eti-actas-evaluador.md "/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/mdu-perfil-unidad-de-gestion/mdu-perfil-unidad-de-gestion-modulo-eti/eti-actas-evaluador.md") | Tiene que estar como evaluador en uno de los comités (miembro activo del comité) |
+| Perfil administrador | [ETI-Configuración](https://confluence.um.es/confluence/pages/viewpage.action?pageId=141923880) |  |
+| Perfil gestor | [ETI-Solicitudes de evaluación y memorias](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/mdu-perfil-unidad-de-gestion/mdu-perfil-unidad-de-gestion-modulo-eti/eti-solicitudes-de-evaluacion-y-memorias) |  |
+| [ETI-Gestión de convocatorias de reunión y actas](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/mdu-perfil-unidad-de-gestion/mdu-perfil-unidad-de-gestion-modulo-eti/eti-gestion-de-convocatorias-de-reunion-y-actas) |  |
+| [ETI-Gestión de evaluadores](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/mdu-perfil-unidad-de-gestion/mdu-perfil-unidad-de-gestion-modulo-eti/eti-gestion-de-evaluadores) |  |
+| [ETI-Dictamen Evaluaciones y seguimientos](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/mdu-perfil-unidad-de-gestion/mdu-perfil-unidad-de-gestion-modulo-eti/eti-dictamen-evaluaciones-y-seguimientos) |  |
+| [ETI-Evaluaciones y seguimientos evaluador (Ficha equipo evaluador - Perfil "Técnico/a ética")](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/mdu-perfil-unidad-de-gestion/mdu-perfil-unidad-de-gestion-modulo-eti/eti-evaluaciones-y-seguimientos-evaluador-ficha-equipo-evaluador-perfil-tecnicoa-etica) | La persona debe de ser miembro activo de algún comité |
+| Perfil técnico evaluador | [ETI-Evaluaciones y seguimientos evaluador (Ficha equipo evaluador - Perfil "Técnico/a ética")](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/mdu-perfil-unidad-de-gestion/mdu-perfil-unidad-de-gestion-modulo-eti/eti-evaluaciones-y-seguimientos-evaluador-ficha-equipo-evaluador-perfil-tecnicoa-etica) | La persona debe de ser miembro activo de algún comité |
+| [ETI-Actas evaluador](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/mdu-perfil-unidad-de-gestion/mdu-perfil-unidad-de-gestion-modulo-eti/eti-actas-evaluador) | La persona debe de ser miembro activo de algún comité |
 
 Opciones del menú de un usuario con perfil gestor:
 
 ![](/attachments/597853011/597879303.png)
 
-Opciones del menú de un usuario con perfil evaluador:
+Opciones del menú de un usuario con perfil técnico evaluador:
 
 ![](/attachments/597853011/597879316.png)
 
 Opciones del menú de un usuario con perfil administrador:
 
-![](/attachments/597853011/597882556.png)  
-
-
-  
-
-
-
-
-
+![](/attachments/597853011/1347387393.png)

@@ -1,10 +1,5 @@
-# Hércules : Diseño
+# Diseño
 
-
-
-* [Componentes](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/index.md "/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/index.md")
-* [Bases de datos](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/bases-de-datos.md "/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/bases-de-datos.md")
-
-
-
-
+* [Componentes](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes)
+* [Bases de datos](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/bases-de-datos)
+* [Versión multiidioma](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/version-multiidioma)

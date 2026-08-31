@@ -1,6 +1,15 @@
-# Hércules : CU\-ETI\-0060\-004 \- Modificar Petición de evaluación \- Guardar
+# CU-ETI-0060-004 - Modificar Petición de evaluación - Guardar
 
-
+|  |  |
+| --- | --- |
+| Cod. CU | ********CU-ETI-0060-004 - Modificar Petición de evaluación - Guardar******** |
+| Ver. objetivo |  |
+| Ver. CU | 1.0.0 |
+| Estado | LIBERADO\_ |
+| Fec. Aprobación |  |
+| Épica, historia |  |
+| Actores | ACT-ETI-002-Investigador  ACT-ETI-003-Solicitante |
+| Frecuencia | Media |
 
 ### Descripción
 
@@ -10,9 +19,9 @@ Formularios de Datos generales, Equipo investigador, Asignación de tareas y Mem
 
 #### Actor principal
 
-ACT\-ETI\-002\-Investigador
+ACT-ETI-002-Investigador
 
-ACT\-ETI\-003\-Solicitante
+ACT-ETI-003-Solicitante
 
 ### Precondiciones
 
@@ -66,7 +75,7 @@ Se crea una nueva memoria.
 26. El usuario es informado del resultado positivo de la acción.
 27. Se presenta el listado de Mis peticiones evaluación.
 
-### Extensiones (flujos alternativos) \- Petición de evaluación relacionada con solicitud de convocatoria.
+### Extensiones (flujos alternativos) - Petición de evaluación relacionada con solicitud de convocatoria.
 
 1. Se presenta la pantalla Mis peticiones evaluación con el listado de todas las peticiones de evaluación creadas por el usuario logado en el sistema .
 2. Se selecciona la petición de evaluación.
@@ -75,14 +84,10 @@ Se crea una nueva memoria.
 5. El usuario debe de informar de los datos que no vienen de la solicitud y que son obligatorios (fecha inicio, fecha fin, la pregunta ¿Si se rechaza su solicitud de financiación ejecutará el proyecto con fondos propios?, tipo de actividad, valor social, objetivos científicos y diseño metodológico)
 6. Se sigue con el paso 6 del flujo básico
 
-### Extensiones (flujos alternativos) \- Error durante el guardado
+### Extensiones (flujos alternativos) - Error durante el guardado
 
 1. Si se ha producido algún error de validación.
 2. El usuario modifica la información necesaria para realizar de forma correcta la creación de la petición de evaluación.
 3. El usuario selecciona la acción Guardar.
 4. El usuario es informado del resultado positivo de la acción.
 5. Se presenta el listado de Mis peticiones evaluación.
-
-
-
-

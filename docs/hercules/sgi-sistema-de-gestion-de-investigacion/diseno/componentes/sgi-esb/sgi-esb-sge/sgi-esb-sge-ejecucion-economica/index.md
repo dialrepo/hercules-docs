@@ -1,38 +1,68 @@
-# Hércules : SGI \- ESB \- SGE \- Ejecución económica
+# SGI - ESB - SGE - Ejecución económica
 
+---
 
-
-  
-
-
-
-
-
+* [Ejecución económica](#SGIESBSGEEjecucióneconómica-Ejecucióneconómica)
+  + [Entidades](#SGIESBSGEEjecucióneconómica-Entidades)
+  + [Enumerados](#SGIESBSGEEjecucióneconómica-Enumerados)
+  + [Modelo lógico](#SGIESBSGEEjecucióneconómica-Modelológico)
+  + [API](#SGIESBSGEEjecucióneconómica-API)
+    - [Definición de los objetos](#SGIESBSGEEjecucióneconómica-Definicióndelosobjetos)
+      * [DatoEconomico](#SGIESBSGEEjecucióneconómica-DatoEconomico)
+      * [DatoEconomicoDetalle](#SGIESBSGEEjecucióneconómica-DatoEconomicoDetalle)
+      * [Columna](#SGIESBSGEEjecucióneconómica-Columna)
+      * [Documento](#SGIESBSGEEjecucióneconómica-Documento)
+      * [Comentario](#SGIESBSGEEjecucióneconómica-Comentario)
+      * [ClasificacionSGE](#SGIESBSGEEjecucióneconómica-ClasificacionSGE)
+    - [Servicios](#SGIESBSGEEjecucióneconómica-Servicios)
+    - [Columnas Ejecución económica](#SGIESBSGEEjecucióneconómica-ColumnasEjecucióneconómica)
+      * [Ejecución presupuestaria - Estado actual](#SGIESBSGEEjecucióneconómica-Ejecuciónpresupuestaria-Estadoactual)
+      * [Ejecución presupuestaria - Gastos](#SGIESBSGEEjecucióneconómica-Ejecuciónpresupuestaria-Gastos)
+      * [Ejecución presupuestaria - Ingresos](#SGIESBSGEEjecucióneconómica-Ejecuciónpresupuestaria-Ingresos)
+      * [Facturas y justificantes - Facturas y gastos](#SGIESBSGEEjecucióneconómica-Facturasyjustificantes-Facturasygastos)
+      * [Facturas y justificantes - Viajes y dietas](#SGIESBSGEEjecucióneconómica-Facturasyjustificantes-Viajesydietas)
+      * [Facturas y justificantes - Personal contratado](#SGIESBSGEEjecucióneconómica-Facturasyjustificantes-Personalcontratado)
+      * [Detalle operaciones - Gastos](#SGIESBSGEEjecucióneconómica-Detalleoperaciones-Gastos)
+      * [Detalle operaciones - Ingresos](#SGIESBSGEEjecucióneconómica-Detalleoperaciones-Ingresos)
+      * [Detalle operaciones - Modificaciones](#SGIESBSGEEjecucióneconómica-Detalleoperaciones-Modificaciones)
+    - [Columnas Validación de gastos](#SGIESBSGEEjecucióneconómica-ColumnasValidacióndegastos)
+    - [Campos Detalle dato económico](#SGIESBSGEEjecucióneconómica-CamposDetalledatoeconómico)
+      * [Facturas y justificantes - Facturas y gastos](#SGIESBSGEEjecucióneconómica-Facturasyjustificantes-Facturasygastos.1)
+      * [Facturas y justificantes - Viajes y dietas](#SGIESBSGEEjecucióneconómica-Facturasyjustificantes-Viajesydietas.1)
+      * [Facturas y justificantes - Personal contratado](#SGIESBSGEEjecucióneconómica-Facturasyjustificantes-Personalcontratado.1)
+    - [Campos Detalle dato económico - Validación de gastos](#SGIESBSGEEjecucióneconómica-CamposDetalledatoeconómico-Validacióndegastos)
+    - [Ejemplos](#SGIESBSGEEjecucióneconómica-Ejemplos)
+      * [Ejecución presupuestaria - Estado actual - Columnas (/ejecucion-economica/columnas)](#SGIESBSGEEjecucióneconómica-Ejecuciónpresupuestaria-Estadoactual-Columnas(/ejecucion-economica/columnas))
+      * [Ejecución presupuestaria - Estado actual (/ejecucion-economica)](#SGIESBSGEEjecucióneconómica-Ejecuciónpresupuestaria-Estadoactual(/ejecucion-economica))
+      * [Facturas y justificantes - Facturas y gastos - Columnas (reducida false) (/ejecucion-economica/columnas)](#SGIESBSGEEjecucióneconómica-Facturasyjustificantes-Facturasygastos-Columnas(reducidafalse)(/ejecucion-economica/columnas))
+      * [Facturas y justificantes - Facturas y gastos (reducida a false) (/ejecucion-economica)](#SGIESBSGEEjecucióneconómica-Facturasyjustificantes-Facturasygastos(reducidaafalse)(/ejecucion-economica))
+      * [Facturas y justificantes - Facturas y gastos - Detalle (/ejecucion-economica/{id})](#SGIESBSGEEjecucióneconómica-Facturasyjustificantes-Facturasygastos-Detalle(/ejecucion-economica/{id}))
+      * [Validaciones de gastos pendientes - Columnas (con reducida a true) (/gastos/columnas)](#SGIESBSGEEjecucióneconómica-Validacionesdegastospendientes-Columnas(conreducidaatrue)(/gastos/columnas))
+      * [Validaciones de gastos pendientes - Columnas (con reducida a false) (/gastos/columnas)](#SGIESBSGEEjecucióneconómica-Validacionesdegastospendientes-Columnas(conreducidaafalse)(/gastos/columnas))
+      * [Validaciones de gastos pendientes (con reducida a true) (/gastos)](#SGIESBSGEEjecucióneconómica-Validacionesdegastospendientes(conreducidaatrue)(/gastos))
+      * [Validaciones de gastos pendientes (con reducida a false) (/gastos)](#SGIESBSGEEjecucióneconómica-Validacionesdegastospendientes(conreducidaafalse)(/gastos))
+      * [Detalle gasto (/gastos/{id})](#SGIESBSGEEjecucióneconómica-Detallegasto(/gastos/{id}))
 
 ## Ejecución económica
 
 ### Entidades
 
-
-
 | Entidad | Descripción |
 | --- | --- |
-| DatoEconomico | Entidad que representa cualquier dato económico. Tendrá que venir identificado por un identificador único, por el proyecto al que pertenece, anualidad, fecha de devengo, partida presupuestaria, un código económico (opcional en algunos de los casos) y una clasificación SGE.El resto de campos del dato económico se tratarán como columnas dinámicas. Se indicará por cada columna el identificador del campo, el nombre del campo y si es una columna sobre la que se tiene que hacer una suma para mostrarlo en el SGI como un campo totalizador. |
-| Columna | Contiene el listado de columnas que serán mostradas en las pantallas del SGI dependiendo de la pantalla en la que se esta: Ejecución presupuestaria, detalle de operaciones, validación de gastos, etc...Por cada columna se tendrá el identificador del campo, el nombre del campo y si es una columna sobre la que se tiene que hacer una suma para mostrarlo en el SGI como un campo totalizador. |
-| DatoEconomicoDetalle | Entidad que representa el detalle de un dato económico con todos sus campos para mostrarlo en una pantalla de consulta del dato económico.Tendrá unos campos fijos (identificador único, identificador del proyecto al que pertenece, anualidad, fecha de devengo, partida presupuestaria, un código económico y una clasificación SGE) y unos campos dinámicos. Por cada campo se detallará el nombre y el valor del campo para mostrarlo en la pantalla del SGI |
-| Campo | Contiene el listado de campos dinámicos que serán mostradas en las pantallas de detalle de un dato económico.Por cada campo se tendrá el el nombre y el valor del campo |
+| DatoEconomico | Entidad que representa cualquier dato económico. Tendrá que venir identificado por un identificador único, por el proyecto al que pertenece, anualidad, fecha de devengo, partida presupuestaria, un código económico (opcional en algunos de los casos) y una clasificación SGE.  El resto de campos del dato económico se tratarán como columnas dinámicas. Se indicará por cada columna el identificador del campo, el nombre del campo y si es una columna sobre la que se tiene que hacer una suma para mostrarlo en el SGI como un campo totalizador. |
+| Columna | Contiene el listado de columnas que serán mostradas en las pantallas del SGI dependiendo de la pantalla en la que se esta: Ejecución presupuestaria, detalle de operaciones, validación de gastos, etc...  Por cada columna se tendrá el identificador del campo, el nombre del campo y si es una columna sobre la que se tiene que hacer una suma para mostrarlo en el SGI como un campo totalizador. |
+| DatoEconomicoDetalle | Entidad que representa el detalle de un dato económico con todos sus campos para mostrarlo en una pantalla de consulta del dato económico.  Tendrá unos campos fijos (identificador único, identificador del proyecto al que pertenece, anualidad, fecha de devengo, partida presupuestaria, un código económico y una clasificación SGE) y unos campos dinámicos. Por cada campo se detallará el nombre y el valor del campo para mostrarlo en la pantalla del SGI |
+| Campo | Contiene el listado de campos dinámicos que serán mostradas en las pantallas de detalle de un dato económico.  Por cada campo se tendrá el el nombre y el valor del campo |
 | Documento | Entidad que representa los documentos que pueda tener relacionados un dato económico (en este caso los gastos). |
 | ClasificacionSGE | Entidad que representa la clasificación de los gastos en el sistema de gestión económico. |
 
 ### Enumerados
 
-
-
 | Entidad | Descripción |
 | --- | --- |
-| TipoDatoEconomico | Puede tomar los siguientes valores:* Ingreso * Gasto |
-| TipoOperacion | Puede tomar los siguientes valores:* EPA * EPG * EPI * FJF * FJV * FJP * DOG * DOI * DOM |
-| Estado (en validación de gastos) | Puede tomar los siguientes valores:* Pendiente * Validado |
+| TipoDatoEconomico | Puede tomar los siguientes valores:   * Ingreso * Gasto |
+| TipoOperacion | Puede tomar los siguientes valores:   * EPA * EPG * EPI * FJF * FJV * FJP * DOG * DOI * DOM |
+| Estado (en validación de gastos) | Puede tomar los siguientes valores:   * Pendiente * Validado |
 
 ### Modelo lógico
 
@@ -42,17 +72,16 @@
 
 Características generales que todas las API REST deben de cumplir:
 
-* [Consultas filtradas y paginadas](https://confluence.um.es/confluence/display/HERCULES/Consultas+filtradas+y+paginadas "https://confluence.um.es/confluence/display/HERCULES/Consultas+filtradas+y+paginadas")
-* [Formatos de datos API](https://confluence.um.es/confluence/display/HERCULES/Formatos+de+datos+API "https://confluence.um.es/confluence/display/HERCULES/Formatos+de+datos+API")
+* [Consultas filtradas y paginadas](/hercules/sgi-sistema-de-gestion-de-investigacion/desarrollo-y-configuracion/estandares-de-desarrollo/consultas-filtradas-y-paginadas)
+* [Formatos de datos API](/hercules/sgi-sistema-de-gestion-de-investigacion/desarrollo-y-configuracion/estandares-de-desarrollo/formatos-de-datos-api)
 
 #### Definición de los objetos
 
 ##### DatoEconomico
 
-
-
-| **Nombre** | **Tipo** | **Descripción** |
+|  |  |  |
 | --- | --- | --- |
+| **Nombre** | **Tipo** | **Descripción** |
 | id | String | Identificador del dato económico. Tiene que ser un identificador único. |
 | proyectoId | String | Identificador del proyecto económico |
 | partidaPresupuestaria | String | Código de la Partida presupuestaria |
@@ -60,15 +89,14 @@ Características generales que todas las API REST deben de cumplir:
 | clasificacionSGE | ClasificacionSGE | Contiene la entidad ClasificacionSGE |
 | codigoEconomico | CodigoEconomicoGasto/CodigoEconomicoIngreso | Contiene la entidad Código económico Gasto si se trata de un gasto (campo "tipo" es "Gasto" ) o contiene la entidad Código económico Ingreso si se trata de un ingreso (campo "tipo" es "Gasto" ) |
 | anualidad | String | Anualidad |
-| tipo | String | Dos valores:* Gasto * Ingreso |
-| columnas | Map\[clave,valor] | Mapa de propiedadesEl valor será un String salvo en aquellas columnas que sean acumulables (se tenga que hacer sumas sobre ellas) donde será de tipo Numérico (sin separador de miles y como separador decimal el punto) |
+| tipo | String | Dos valores:   * Gasto * Ingreso |
+| columnas | Map[clave,valor] | Mapa de propiedades  El valor será un String salvo en aquellas columnas que sean acumulables (se tenga que hacer sumas sobre ellas) donde será de tipo Numérico (sin separador de miles y como separador decimal el punto) |
 
 ##### DatoEconomicoDetalle
 
-
-
-| **Nombre** | **Tipo** | **Descripción** |
+|  |  |  |
 | --- | --- | --- |
+| **Nombre** | **Tipo** | **Descripción** |
 | id | String | Identificador del dato económico. Tiene que ser un identificador único. |
 | proyectoId | String | Identificador del proyecto económico |
 | partidaPresupuestaria | String | Código de la Partida presupuestaria |
@@ -76,45 +104,38 @@ Características generales que todas las API REST deben de cumplir:
 | clasificacionSGE | ClasificacionSGE | Contiene la entidad ClasificacionSGE |
 | codigoEconomico | CodigoEconomicoGasto/CodigoEconomicoIngreso | Contiene la entidad Código económico Gasto si se trata de un gasto o contiene la entidad Código económico Ingreso si se trata de un ingreso |
 | anualidad | String | Anualidad |
-| campos | Lista\[Campo] | Lista de campos, por cada campo se define el nombre y el valor del campo |
+| campos | Lista[Campo] | Lista de campos, por cada campo se define el nombre y el valor del campo |
 
 ##### Columna
 
-
-
-| **Nombre** | **Tipo** | **Descripción** |
+|  |  |  |
 | --- | --- | --- |
+| **Nombre** | **Tipo** | **Descripción** |
 | id | String | Identificador de la columna |
 | nombre | String | Nombre de la columna |
-| acumulable | Boolean | Indica si se tiene que sumar o no para mostrar los totales en la pantalla del SGI.Dos valores:* true * false |
+| acumulable | Boolean | Indica si se tiene que sumar o no para mostrar los totales en la pantalla del SGI.  Dos valores:   * true * false |
 
 ##### Documento
 
-
-
-| **Nombre** | **Tipo** | **Descripción** |
+|  |  |  |
 | --- | --- | --- |
+| **Nombre** | **Tipo** | **Descripción** |
 | id | String | Identificador único del documento |
 | nombre | String | Nombre del documento a mostrar |
 | nombreFichero | String | Nombre del fichero con extensión |
 
 ##### Comentario
 
-
-
-| **Nombre** | **Tipo** | **Descripción** |
+|  |  |  |
 | --- | --- | --- |
+| **Nombre** | **Tipo** | **Descripción** |
 | comentario | String | Comentario relacionado con el cambio de estado de un gasto |
-
-  
-
 
 ##### ClasificacionSGE
 
-
-
-| **Nombre** | **Tipo** | **Descripción** |
+|  |  |  |
 | --- | --- | --- |
+| **Nombre** | **Tipo** | **Descripción** |
 | id | String | Cadena numérica o alfanumérica que identifica a la clasificación del gasto en el  SGE |
 | nombre | String | Nombre o descripción de la clasificación SGE |
 
@@ -124,24 +145,22 @@ Para componer la URL llamada completa, se debe anteponer a lo indicado en la col
 
 | Servicio | Método | URL | Parámetros | Respuesta | Descripción |
 | --- | --- | --- | --- | --- | --- |
-| [SGI \- ESB \- SGE \- Ejecución económica \- Buscar columnas de datos económicos](https://confluence.um.es/confluence/pages/viewpage.action?pageId=597852975 "/confluence/pages/viewpage.action?pageId=597852975") | GET | /ejecucion\-economica/columnas | q\+s (query \+ sort)La query estará formada por:* proyectoId * anualidad * tipoOperacion * reducida * fechaPago * fechaDevengo * fechaContabilizacion  El campo reducida puede tomar los siguientes valores:* true: sólo se envían las columnas a mostrar en la pantalla principal * false:  se envían todas las columnas (para su exportación)  Si no esta informado el campo reducida se considera false.El tipoOperacion puede tomar los siguientes valores:* EPA (Ejecución presupestaria \- Estado actual) * EPG (Ejecución presupestaria \- Gastos) * EPI (Ejecución presupestaria \- Ingresos) * FJF (Facturas y justificantes \- Facturas y gastos) * FJV (Facturas y justificantes \- Viajes y dietas * FJP (Facturas y justificantes \- Personal contratado) * DOG (Detalle de operaciones \- Gastos) * DOI (Detalle de operaciones \- Ingresos) * DOM (Detalle de operaciones \- Modificaciones) | Lista\[[Columna](https://confluence.um.es/confluence/pages/viewpage.action?pageId=103905017#SGIESBSGEEjecuci%C3%B3necon%C3%B3mica-Columna "https://confluence.um.es/confluence/pages/viewpage.action?pageId=103905017#SGIESBSGEEjecuci%C3%B3necon%C3%B3mica-Columna")] | Listado con las columnas que va a devolver la llamada /ejecucion\-economicaPor cada columna se indica un id, nombre, si es una columna acumulable (se va a hacer una suma de ella en el SGI)Ver el apartado "**Columnas Ejecución económica**" para ver que columnas se deben de mostrar dependiendo del tipo de operación (campo tipoOperacion) y si es reducida o no |
-| [SGI \- ESB \- SGE \- Ejecución económica \- Buscar gastos](https://confluence.um.es/confluence/pages/viewpage.action?pageId=597853459 "/confluence/pages/viewpage.action?pageId=597853459") | GET | /gastos | q\+s (query \+ sort)La query estará formada por:* proyectoId * fecha * id * estado * reducida  El campo estado puede tomar dos valores:* Pendiente * Validado  El campo reducida puede tomar los siguientes valores:* true: sólo se envían las columnas a mostrar en la pantalla principal * false:  se envían todas las columnas (para su exportación)  Si no esta informado el campo reducida se considera false. | Lista\[[DatoEconomico](https://confluence.um.es/confluence/pages/viewpage.action?pageId=141920117#SGIESBSGEEjecuci%C3%B3necon%C3%B3mica-DatoEconomico "https://confluence.um.es/confluence/pages/viewpage.action?pageId=141920117#SGIESBSGEEjecuci%C3%B3necon%C3%B3mica-DatoEconomico")] | Listado de gastos pendientes de pasar por la "Validación de gastos" si en el campo del filtrado estado \= 'Pendiente' o listado de gastos que ya han sido validados (han pasado por la "Validación de gastos") si en el campo del filtrado estado \= 'Validado'Para cada gasto se devolverán los siguientes datos:* Identificador del gasto * Identificador del proyecto SGE * Partida presupuestaria a la que esta asignado el gasto * Fecha de devengo * Clasificación SGE * Código económico asignado al gasto * Anualidad * Tipo: Gasto * Mapa de columnas de clave \- valor (donde la clave será los id definidos en la llamada /gastos/columnas y el valor será el valor de la columna. El valor será un String salvo en aquellas columnas que sean acumulables,se tenga que hacer sumas sobre ellas, donde será de tipo Numérico (sin separador de miles y como separador decimal el punto)). Ver el apartado "**Columnas Validación de gastos**" para ver los id de la columnas que se deben de mostrar dependiendo de si es reducida o no |
-| [SGI \- ESB \- SGE \- Ejecución económica \- Buscar columnas de gastos](https://confluence.um.es/confluence/pages/viewpage.action?pageId=597852972 "/confluence/pages/viewpage.action?pageId=597852972") | GET | /gastos/columnas | q\+s (query \+ sort)La query estará formada por:* proyectoId * fecha * id * estado * reducida  Si no esta informado el campo reducida se considera false.El campo estado puede tomar dos valores:* Pendiente * Validado  El campo reducida puede tomar los siguientes valores:* true: sólo se envían las columnas a mostrar en la pantalla principal * false:  se envían todas las columnas (para su exportación) | Lista\[[Columna](https://confluence.um.es/confluence/pages/viewpage.action?pageId=103905017#SGIESBSGEEjecuci%C3%B3necon%C3%B3mica-Columna "https://confluence.um.es/confluence/pages/viewpage.action?pageId=103905017#SGIESBSGEEjecuci%C3%B3necon%C3%B3mica-Columna")] | Listado con las columnas que va a devolver la llamada /gastosPor cada columna se indica un id, nombre, si es una columna acumulable (se va a hacer una suma de ella en el SGI)Ver el apartado "**Columnas Validación de gastos**" para ver que columnas se deben de mostrar dependiendo de si es reducida o no. |
-| [SGI \- ESB \- SGE \- Ejecución económica \- Buscar datos económicos](https://confluence.um.es/confluence/pages/viewpage.action?pageId=597852976 "/confluence/pages/viewpage.action?pageId=597852976") | GET | /ejecucion\-economica | q\+s (query \+ sort)La query estará formada por:* proyectoId * anualidad * tipoOperacion * reducida * fechaPago * fechaDevengo * fechaContabilizacion  El campo reducida puede tomar los siguientes valores:* true: sólo se envían las columnas a mostrar en la pantalla principal * false:  se envían todas las columnas (para su exportación)  Si no esta informado el campo reducida se considera false.El tipoOperacion puede tomar los siguientes valores:* EPA (Ejecución presupestaria \- Estado actual) * EPG (Ejecución presupestaria \- Gastos) * EPI (Ejecución presupestaria \- Ingresos) * FJF (Facturas y justificantes \- Facturas y gastos) * FJV (Facturas y justificantes \- Viajes y dietas * FJP (Facturas y justificantes \- Personal contratado) * DOG (Detalle de operaciones \- Gastos) * DOI (Detalle de operaciones \- Ingresos) * DOM (Detalle de operaciones \- Modificaciones) | Lista\[[DatoEconomico](https://confluence.um.es/confluence/pages/viewpage.action?pageId=103905017#SGIESBSGEEjecuci%C3%B3necon%C3%B3mica-DatoEconomico "https://confluence.um.es/confluence/pages/viewpage.action?pageId=103905017#SGIESBSGEEjecuci%C3%B3necon%C3%B3mica-DatoEconomico")] | Listado con los datos económicos pedidos según el campo tipoOperacion. Por cada dato económico se devolverán los siguientes campos:* Identificador del dato económico * Identificador del proyecto SGE * Anualidad * Partida presupuestaria * Fecha de devengo * Clasificación SGE * Código económico * Tipo (si es Gasto o Ingreso) * Mapa de columnas de clave \- valor (donde la clave será los id definidos en la llamada /ejecucion\-economica/columnas y el valor será el valor de la columna. El valor será un String salvo en aquellas columnas que sean acumulables,se tenga que hacer sumas sobre ellas, donde será de tipo Numérico (sin separador de miles y como separador decimal el punto)). Ver el apartado "**Columnas Ejecución económica**" para ver los id de la columnas que se deben de mostrar dependiendo del tipo de operación (campo tipoOperacion) y si es reducida o no. |
-| [SGI \- ESB \- SGE \- Ejecución económica \- Descargar documento](https://confluence.um.es/confluence/pages/viewpage.action?pageId=597853069 "/confluence/pages/viewpage.action?pageId=597853069") | GET | /documentos/{id}/archivo |  | Binario (en la cabecera irá el contentType). | Devuelve el binario del documento. |
-| [SGI \- ESB \- SGE \- Ejecución económica \- Validar gasto](https://confluence.um.es/confluence/pages/viewpage.action?pageId=597852974 "/confluence/pages/viewpage.action?pageId=597852974") | PATCH | /gastos/{id}/validar | [Comentario](https://confluence.um.es/confluence/pages/viewpage.action?pageId=103905017#SGIESBSGEEjecuci%C3%B3necon%C3%B3mica-Comentario "https://confluence.um.es/confluence/pages/viewpage.action?pageId=103905017#SGIESBSGEEjecuci%C3%B3necon%C3%B3mica-Comentario") |  | Se valida el gasto y recibe como parámetro el comentario  en caso de que lo tuviese. |
-| [SGI \- ESB \- SGE \- Ejecución económica \- Rechazar gasto](https://confluence.um.es/confluence/pages/viewpage.action?pageId=597853067 "/confluence/pages/viewpage.action?pageId=597853067") | PATCH | /gastos/{id}/rechazar | [Comentario](https://confluence.um.es/confluence/pages/viewpage.action?pageId=103905017#SGIESBSGEEjecuci%C3%B3necon%C3%B3mica-Comentario "https://confluence.um.es/confluence/pages/viewpage.action?pageId=103905017#SGIESBSGEEjecuci%C3%B3necon%C3%B3mica-Comentario") |  | Se rechaza el gasto y recibe como parámetro el comentario  en caso de que lo tuviese. |
-| [SGI \- ESB \- SGE \- Ejecución económica \- Consultar detalle de documento](https://confluence.um.es/confluence/pages/viewpage.action?pageId=597853068 "/confluence/pages/viewpage.action?pageId=597853068") | GET | /documentos/{id} |  | [Documento](https://confluence.um.es/confluence/pages/viewpage.action?pageId=103905017#SGIESBSGEEjecuci%C3%B3necon%C3%B3mica-Documento "https://confluence.um.es/confluence/pages/viewpage.action?pageId=103905017#SGIESBSGEEjecuci%C3%B3necon%C3%B3mica-Documento") | Devuelve el detalle del documento |
-| [SGI \- ESB \- SGE \- Ejecución económica \- Consultar detalle de gasto](https://confluence.um.es/confluence/pages/viewpage.action?pageId=597852973 "/confluence/pages/viewpage.action?pageId=597852973") | GET | /gastos/{id} |  | [DatoEconomicoDetalle](https://confluence.um.es/confluence/pages/viewpage.action?pageId=103905017#SGIESBSGEEjecuci%C3%B3necon%C3%B3mica-DatoEconomicoDetalle "https://confluence.um.es/confluence/pages/viewpage.action?pageId=103905017#SGIESBSGEEjecuci%C3%B3necon%C3%B3mica-DatoEconomicoDetalle") | Detalle de un gasto.Para cada gasto se devolverán los siguientes datos:* Identificador del gasto * Identificador del proyecto SGE * Partida presupuestaria a la que esta asignado el gasto * Fecha de devengo * Clasificación SGE * Código económico asignado al gasto * Anualidad * Listado de campos con su nombre y valor (Ver el apartado "**Campos Detalle dato económico**" para ver que campos se deben de mostrar dependiendo del tipo de operación (campo tipoOperacion). En el detalle se muestran todos la columnas o campos.) * Listado de documentos (identificador, nombre del documento y nombre del fichero, sin el contenido) |
-| [SGI \- ESB \- SGE \- Ejecución económica \- Consultar detalle de dato económico](https://confluence.um.es/confluence/pages/viewpage.action?pageId=597852971 "/confluence/pages/viewpage.action?pageId=597852971") | GET | /ejecucion\-economica/{id} | tipoOperacionEl tipoOperacion puede tomar los siguientes valores (cuando estamos en la llamada de detalle de dato económico):* FJF (Facturas y justificantes \- Facturas y gastos) * FJV (Facturas y justificantes \- Viajes y dietas * FJP (Facturas y justificantes \- Personal contratado) | [DatoEconomicoDetalle](https://confluence.um.es/confluence/pages/viewpage.action?pageId=103905017#SGIESBSGEEjecuci%C3%B3necon%C3%B3mica-DatoEconomicoDetalle "https://confluence.um.es/confluence/pages/viewpage.action?pageId=103905017#SGIESBSGEEjecuci%C3%B3necon%C3%B3mica-DatoEconomicoDetalle") | Detalle del dato económico con todas sus columnas.* Identificador del dato económico * Identificador del proyecto SGE * Anualidad * Partida presupuestaria * Fecha de devengo * Clasificación SGE * Código económico * Listado de campos con su nombre y valor (Ver el apartado "**Campos Detalle dato económico**" para ver que campos se deben de mostrar dependiendo del tipo de operación (campo tipoOperacion). En el detalle se muestran todos la columnas o campos.) * Listado de documentos (identificador, nombre del documento y nombre del fichero, sin el contenido)  El listado de campos a mostrar dependerá de que dato económico sea, si es una factura o gasto, un viaje o dieta o un personal contratado. |
+| [SGI - ESB - SGE - Ejecución económica - Buscar columnas de datos económicos](/confluence/spaces/HERCULES/pages/597852975/SGI+-+ESB+-+SGE+-+Ejecuci%C3%B3n+econ%C3%B3mica+-+Buscar+columnas+de+datos+econ%C3%B3micos) | GET | /ejecucion-economica/columnas | q+s (query + sort)  La query estará formada por:   * proyectoId * anualidad * tipoOperacion * reducida * fechaPago * fechaDevengo * fechaContabilizacion   El campo reducida puede tomar los siguientes valores:   * true: sólo se envían las columnas a mostrar en la pantalla principal * false:  se envían todas las columnas (para su exportación)   Si no esta informado el campo reducida se considera false.  El tipoOperacion puede tomar los siguientes valores:   * EPA (Ejecución presupestaria - Estado actual) * EPG (Ejecución presupestaria - Gastos) * EPI (Ejecución presupestaria - Ingresos) * FJF (Facturas y justificantes - Facturas y gastos) * FJV (Facturas y justificantes - Viajes y dietas * FJP (Facturas y justificantes - Personal contratado) * DOG (Detalle de operaciones - Gastos) * DOI (Detalle de operaciones - Ingresos) * DOM (Detalle de operaciones - Modificaciones) | Lista[[Columna](https://confluence.um.es/confluence/pages/viewpage.action?pageId=103905017#SGIESBSGEEjecuci%C3%B3necon%C3%B3mica-Columna)] | Listado con las columnas que va a devolver la llamada /ejecucion-economica  Por cada columna se indica un id, nombre, si es una columna acumulable (se va a hacer una suma de ella en el SGI)  Ver el apartado "**Columnas Ejecución económica**" para ver que columnas se deben de mostrar dependiendo del tipo de operación (campo tipoOperacion) y si es reducida o no |
+| [SGI - ESB - SGE - Ejecución económica - Buscar gastos](/confluence/spaces/HERCULES/pages/597853459/SGI+-+ESB+-+SGE+-+Ejecuci%C3%B3n+econ%C3%B3mica+-+Buscar+gastos) | GET | /gastos | q+s (query + sort)  La query estará formada por:   * proyectoId * fecha * id * estado * reducida   El campo estado puede tomar dos valores:   * Pendiente * Validado   El campo reducida puede tomar los siguientes valores:   * true: sólo se envían las columnas a mostrar en la pantalla principal * false:  se envían todas las columnas (para su exportación)   Si no esta informado el campo reducida se considera false. | Lista[[DatoEconomico](https://confluence.um.es/confluence/pages/viewpage.action?pageId=141920117#SGIESBSGEEjecuci%C3%B3necon%C3%B3mica-DatoEconomico)] | Listado de gastos pendientes de pasar por la "Validación de gastos" si en el campo del filtrado estado = 'Pendiente' o listado de gastos que ya han sido validados (han pasado por la "Validación de gastos") si en el campo del filtrado estado = 'Validado'  Para cada gasto se devolverán los siguientes datos:   * Identificador del gasto * Identificador del proyecto SGE * Partida presupuestaria a la que esta asignado el gasto * Fecha de devengo * Clasificación SGE * Código económico asignado al gasto * Anualidad * Tipo: Gasto * Mapa de columnas de clave - valor (donde la clave será los id definidos en la llamada /gastos/columnas y el valor será el valor de la columna. El valor será un String salvo en aquellas columnas que sean acumulables,se tenga que hacer sumas sobre ellas, donde será de tipo Numérico (sin separador de miles y como separador decimal el punto)). Ver el apartado "**Columnas Validación de gastos**" para ver los id de la columnas que se deben de mostrar dependiendo de si es reducida o no |
+| [SGI - ESB - SGE - Ejecución económica - Buscar columnas de gastos](/confluence/spaces/HERCULES/pages/597852972/SGI+-+ESB+-+SGE+-+Ejecuci%C3%B3n+econ%C3%B3mica+-+Buscar+columnas+de+gastos) | GET | /gastos/columnas | q+s (query + sort)  La query estará formada por:   * proyectoId * fecha * id * estado * reducida   Si no esta informado el campo reducida se considera false.  El campo estado puede tomar dos valores:   * Pendiente * Validado   El campo reducida puede tomar los siguientes valores:   * true: sólo se envían las columnas a mostrar en la pantalla principal * false:  se envían todas las columnas (para su exportación) | Lista[[Columna](https://confluence.um.es/confluence/pages/viewpage.action?pageId=103905017#SGIESBSGEEjecuci%C3%B3necon%C3%B3mica-Columna)] | Listado con las columnas que va a devolver la llamada /gastos  Por cada columna se indica un id, nombre, si es una columna acumulable (se va a hacer una suma de ella en el SGI)  Ver el apartado "**Columnas Validación de gastos**" para ver que columnas se deben de mostrar dependiendo de si es reducida o no. |
+| [SGI - ESB - SGE - Ejecución económica - Buscar datos económicos](/confluence/spaces/HERCULES/pages/597852976/SGI+-+ESB+-+SGE+-+Ejecuci%C3%B3n+econ%C3%B3mica+-+Buscar+datos+econ%C3%B3micos) | GET | /ejecucion-economica | q+s (query + sort)  La query estará formada por:   * proyectoId * anualidad * tipoOperacion * reducida * fechaPago * fechaDevengo * fechaContabilizacion   El campo reducida puede tomar los siguientes valores:   * true: sólo se envían las columnas a mostrar en la pantalla principal * false:  se envían todas las columnas (para su exportación)   Si no esta informado el campo reducida se considera false.  El tipoOperacion puede tomar los siguientes valores:   * EPA (Ejecución presupestaria - Estado actual) * EPG (Ejecución presupestaria - Gastos) * EPI (Ejecución presupestaria - Ingresos) * FJF (Facturas y justificantes - Facturas y gastos) * FJV (Facturas y justificantes - Viajes y dietas * FJP (Facturas y justificantes - Personal contratado) * DOG (Detalle de operaciones - Gastos) * DOI (Detalle de operaciones - Ingresos) * DOM (Detalle de operaciones - Modificaciones) | Lista[[DatoEconomico](https://confluence.um.es/confluence/pages/viewpage.action?pageId=103905017#SGIESBSGEEjecuci%C3%B3necon%C3%B3mica-DatoEconomico)] | Listado con los datos económicos pedidos según el campo tipoOperacion. Por cada dato económico se devolverán los siguientes campos:   * Identificador del dato económico * Identificador del proyecto SGE * Anualidad * Partida presupuestaria * Fecha de devengo * Clasificación SGE * Código económico * Tipo (si es Gasto o Ingreso) * Mapa de columnas de clave - valor (donde la clave será los id definidos en la llamada /ejecucion-economica/columnas y el valor será el valor de la columna. El valor será un String salvo en aquellas columnas que sean acumulables,se tenga que hacer sumas sobre ellas, donde será de tipo Numérico (sin separador de miles y como separador decimal el punto)). Ver el apartado "**Columnas Ejecución económica**" para ver los id de la columnas que se deben de mostrar dependiendo del tipo de operación (campo tipoOperacion) y si es reducida o no. |
+| [SGI - ESB - SGE - Ejecución económica - Descargar documento](/confluence/spaces/HERCULES/pages/597853069/SGI+-+ESB+-+SGE+-+Ejecuci%C3%B3n+econ%C3%B3mica+-+Descargar+documento) | GET | /documentos/{id}/archivo |  | Binario (en la cabecera irá el contentType). | Devuelve el binario del documento. |
+| [SGI - ESB - SGE - Ejecución económica - Validar gasto](/confluence/spaces/HERCULES/pages/597852974/SGI+-+ESB+-+SGE+-+Ejecuci%C3%B3n+econ%C3%B3mica+-+Validar+gasto) | PATCH | /gastos/{id}/validar | [Comentario](https://confluence.um.es/confluence/pages/viewpage.action?pageId=103905017#SGIESBSGEEjecuci%C3%B3necon%C3%B3mica-Comentario) |  | Se valida el gasto y recibe como parámetro el comentario  en caso de que lo tuviese. |
+| [SGI - ESB - SGE - Ejecución económica - Rechazar gasto](/confluence/spaces/HERCULES/pages/597853067/SGI+-+ESB+-+SGE+-+Ejecuci%C3%B3n+econ%C3%B3mica+-+Rechazar+gasto) | PATCH | /gastos/{id}/rechazar | [Comentario](https://confluence.um.es/confluence/pages/viewpage.action?pageId=103905017#SGIESBSGEEjecuci%C3%B3necon%C3%B3mica-Comentario) |  | Se rechaza el gasto y recibe como parámetro el comentario  en caso de que lo tuviese. |
+| [SGI - ESB - SGE - Ejecución económica - Consultar detalle de documento](/confluence/spaces/HERCULES/pages/597853068/SGI+-+ESB+-+SGE+-+Ejecuci%C3%B3n+econ%C3%B3mica+-+Consultar+detalle+de+documento) | GET | /documentos/{id} |  | [Documento](https://confluence.um.es/confluence/pages/viewpage.action?pageId=103905017#SGIESBSGEEjecuci%C3%B3necon%C3%B3mica-Documento) | Devuelve el detalle del documento |
+| [SGI - ESB - SGE - Ejecución económica - Consultar detalle de gasto](/confluence/spaces/HERCULES/pages/597852973/SGI+-+ESB+-+SGE+-+Ejecuci%C3%B3n+econ%C3%B3mica+-+Consultar+detalle+de+gasto) | GET | /gastos/{id} |  | [DatoEconomicoDetalle](https://confluence.um.es/confluence/pages/viewpage.action?pageId=103905017#SGIESBSGEEjecuci%C3%B3necon%C3%B3mica-DatoEconomicoDetalle) | Detalle de un gasto.  Para cada gasto se devolverán los siguientes datos:   * Identificador del gasto * Identificador del proyecto SGE * Partida presupuestaria a la que esta asignado el gasto * Fecha de devengo * Clasificación SGE * Código económico asignado al gasto * Anualidad * Listado de campos con su nombre y valor (Ver el apartado "**Campos Detalle dato económico**" para ver que campos se deben de mostrar dependiendo del tipo de operación (campo tipoOperacion). En el detalle se muestran todos la columnas o campos.) * Listado de documentos (identificador, nombre del documento y nombre del fichero, sin el contenido) |
+| [SGI - ESB - SGE - Ejecución económica - Consultar detalle de dato económico](/confluence/spaces/HERCULES/pages/597852971/SGI+-+ESB+-+SGE+-+Ejecuci%C3%B3n+econ%C3%B3mica+-+Consultar+detalle+de+dato+econ%C3%B3mico) | GET | /ejecucion-economica/{id} | tipoOperacion  El tipoOperacion puede tomar los siguientes valores (cuando estamos en la llamada de detalle de dato económico):   * FJF (Facturas y justificantes - Facturas y gastos) * FJV (Facturas y justificantes - Viajes y dietas * FJP (Facturas y justificantes - Personal contratado) | [DatoEconomicoDetalle](https://confluence.um.es/confluence/pages/viewpage.action?pageId=103905017#SGIESBSGEEjecuci%C3%B3necon%C3%B3mica-DatoEconomicoDetalle) | Detalle del dato económico con todas sus columnas.   * Identificador del dato económico * Identificador del proyecto SGE * Anualidad * Partida presupuestaria * Fecha de devengo * Clasificación SGE * Código económico * Listado de campos con su nombre y valor (Ver el apartado "**Campos Detalle dato económico**" para ver que campos se deben de mostrar dependiendo del tipo de operación (campo tipoOperacion). En el detalle se muestran todos la columnas o campos.) * Listado de documentos (identificador, nombre del documento y nombre del fichero, sin el contenido)   El listado de campos a mostrar dependerá de que dato económico sea, si es una factura o gasto, un viaje o dieta o un personal contratado. |
 
 #### Columnas Ejecución económica
 
-##### Ejecución presupuestaria  \- Estado actual
+##### Ejecución presupuestaria  - Estado actual
 
-Cuando **tipoOperacion\=\='EPA'** y (**reducida \=\='true'** o **reducida \=\='false')**  (independientemente del campo reducida, ya que siempre se mandan todas las columnas) las columnas a devolver en la Universidad de Murcia serán:
-
-
+Cuando **tipoOperacion=='EPA'** y (**reducida =='true'** o **reducida =='false')**  (independientemente del campo reducida, ya que siempre se mandan todas las columnas) las columnas a devolver en la Universidad de Murcia serán:
 
 | id | nombre | acumulable |
 | --- | --- | --- |
@@ -151,11 +170,9 @@ Cuando **tipoOperacion\=\='EPA'** y (**reducida \=\='true'** o **reducida \=\='
 | 4 | Derechos | true |
 | 5 | Cobros | true |
 
-##### Ejecución presupuestaria  \- Gastos
+##### Ejecución presupuestaria  - Gastos
 
-Cuando **tipoOperacion\=\='EPG'**  y (**reducida \=\='true'** o **reducida \=\='false')**  (independientemente del campo reducida, ya que siempre se mandan todas las columnas) las columnas a devolver en la Universidad de Murcia serán:
-
-
+Cuando **tipoOperacion=='EPG'**  y (**reducida =='true'** o **reducida =='false')**  (independientemente del campo reducida, ya que siempre se mandan todas las columnas) las columnas a devolver en la Universidad de Murcia serán:
 
 | id | nombre | acumulable |
 | --- | --- | --- |
@@ -169,11 +186,9 @@ Cuando **tipoOperacion\=\='EPG'**  y (**reducida \=\='true'** o **reducida \=
 | 8 | Gastos pendientes de pago | true |
 | 9 | Pagos a justificar | true |
 
-##### Ejecución presupuestaria  \- Ingresos
+##### Ejecución presupuestaria  - Ingresos
 
-Cuando **tipoOperacion\=\='EPI'** y (**reducida \=\='true'** o **reducida \=\='false')**  (independientemente del campo reducida, ya que siempre se mandan todas las columnas) las columnas a devolver en la Universidad de Murcia serán:
-
-
+Cuando **tipoOperacion=='EPI'** y (**reducida =='true'** o **reducida =='false')**  (independientemente del campo reducida, ya que siempre se mandan todas las columnas) las columnas a devolver en la Universidad de Murcia serán:
 
 | id | nombre | acumulable |
 | --- | --- | --- |
@@ -182,11 +197,9 @@ Cuando **tipoOperacion\=\='EPI'** y (**reducida \=\='true'** o **reducida \=\=
 | 3 | Derechos | true |
 | 4 | Cobros | true |
 
-##### Facturas y justificantes  \- Facturas y gastos
+##### Facturas y justificantes  - Facturas y gastos
 
-Cuando **tipoOperacion\=\='FJF' y reducida \= "true"** las columnas a devolver en la Universidad de Murcia serán:
-
-
+Cuando **tipoOperacion=='FJF' y reducida = "true"** las columnas a devolver en la Universidad de Murcia serán:
 
 | id | nombre | acumulable |
 | --- | --- | --- |
@@ -195,12 +208,7 @@ Cuando **tipoOperacion\=\='FJF' y reducida \= "true"** las columnas a devolver e
 | 3 | Fecha pago | false |
 | 4 | Importe | true |
 
-  
-
-
-Cuando **tipoOperacion\=\='FJF' y reducida \= "false"** las columnas a devolver en la Universidad de Murcia serán:
-
-
+Cuando **tipoOperacion=='FJF' y reducida = "false"** las columnas a devolver en la Universidad de Murcia serán:
 
 | id | nombre | acumulable |
 | --- | --- | --- |
@@ -216,11 +224,9 @@ Cuando **tipoOperacion\=\='FJF' y reducida \= "false"** las columnas a devolver 
 | 10 | Nº de documento de gasto | false |
 | 11 | Nº de señalamiento | false |
 
-##### Facturas y justificantes  \- Viajes y dietas
+##### Facturas y justificantes  - Viajes y dietas
 
-Cuando **tipoOperacion\=\='FJV'  y redudida \=\= "true"** las columnas a devolver en la Universidad de Murcia serán:
-
-
+Cuando **tipoOperacion=='FJV'  y redudida == "true"** las columnas a devolver en la Universidad de Murcia serán:
 
 | id | nombre | acumulable |
 | --- | --- | --- |
@@ -233,12 +239,7 @@ Cuando **tipoOperacion\=\='FJV'  y redudida \=\= "true"** las columnas a devolv
 
 El campo Perceptor/proveedor será el nombre y apellidos del perceptor o proveedor
 
-  
-
-
-Cuando **tipoOperacion\=\='FJV'  y redudida \=\= "false"** las columnas a devolver en la Universidad de Murcia serán:
-
-
+Cuando **tipoOperacion=='FJV'  y redudida == "false"** las columnas a devolver en la Universidad de Murcia serán:
 
 | id | nombre | acumulable |
 | --- | --- | --- |
@@ -251,7 +252,7 @@ Cuando **tipoOperacion\=\='FJV'  y redudida \=\= "false"** las columnas a devol
 | 7 | Fecha pago | false |
 | 8 | Itinerario viaje | false |
 | 9 | Destino | false |
-| 10 | Fecha salida \- Fecha vuelta | false |
+| 10 | Fecha salida - Fecha vuelta | false |
 | 11 | Medio de locomoción | false |
 | 12 | Importe locomoción | true |
 | 13 | Importe alojamiento | true |
@@ -266,11 +267,9 @@ El campo "Perceptor/proveedor" será el nombre y apellidos del perceptor o prove
 
 El campo "Identificador Perceptor/proveedor" será el NIF/NIE/CIF del perceptor o proveedor
 
-##### Facturas y justificantes  \- Personal contratado
+##### Facturas y justificantes  - Personal contratado
 
-Cuando **tipoOperacion\=\='FJP'  y reducida \=\= "true"** las columnas a devolver en la Universidad de Murcia serán:
-
-
+Cuando **tipoOperacion=='FJP'  y reducida == "true"** las columnas a devolver en la Universidad de Murcia serán:
 
 | id | nombre | acumulable |
 | --- | --- | --- |
@@ -284,9 +283,7 @@ El campo "Nº documento identificación" se refiere al NIF/NIE del contratado
 
 El campo "Nombre  apellidos" se refiere al nombre y apellidos del contratado
 
-Cuando **tipoOperacion\=\='FJP'  y reducida \=\= "false"** las columnas a devolver en la Universidad de Murcia serán:
-
-
+Cuando **tipoOperacion=='FJP'  y reducida == "false"** las columnas a devolver en la Universidad de Murcia serán:
 
 | id | nombre | acumulable |
 | --- | --- | --- |
@@ -305,11 +302,9 @@ El campo "Nº documento identificación" se refiere al NIF/NIE del contratado
 
 El campo "Nombre  apellidos" se refiere al nombre y apellidos del contratado
 
-##### Detalle operaciones  \- Gastos
+##### Detalle operaciones  - Gastos
 
-Cuando **tipoOperacion\=\='DOG'** y (**reducida \=\='true'** o **reducida \=\='false')**  (independientemente del campo reducida, ya que siempre se mandan todas las columnas) las columnas a devolver en la Universidad de Murcia serán:
-
-
+Cuando **tipoOperacion=='DOG'** y (**reducida =='true'** o **reducida =='false')**  (independientemente del campo reducida, ya que siempre se mandan todas las columnas) las columnas a devolver en la Universidad de Murcia serán:
 
 | id | nombre | acumulable |
 | --- | --- | --- |
@@ -323,11 +318,9 @@ Cuando **tipoOperacion\=\='DOG'** y (**reducida \=\='true'** o **reducida \=\='
 | 8 | Gastos | true |
 | 9 | Saldo | true |
 
-##### Detalle operaciones  \- Ingresos
+##### Detalle operaciones  - Ingresos
 
-Cuando **tipoOperacion\=\='DOI'** y(**reducida \=\='true'** o **reducida \=\='false')**  (independientemente del campo reducida, ya que siempre se mandan todas las columnas) l las columnas a devolver en la Universidad de Murcia serán:
-
-
+Cuando **tipoOperacion=='DOI'** y(**reducida =='true'** o **reducida =='false')**  (independientemente del campo reducida, ya que siempre se mandan todas las columnas) l las columnas a devolver en la Universidad de Murcia serán:
 
 | id | nombre | acumulable |
 | --- | --- | --- |
@@ -344,11 +337,9 @@ Cuando **tipoOperacion\=\='DOI'** y(**reducida \=\='true'** o **reducida \=\='f
 
 El campo "Tercero" NIF/NIE/CIF de la persona
 
-##### Detalle operaciones  \- Modificaciones
+##### Detalle operaciones  - Modificaciones
 
-Cuando **tipoOperacion\=\='DOM'** y (**reducida \=\='true'** o **reducida \=\='false')**  (independientemente del campo reducida, ya que siempre se mandan todas las columnas) l  las columnas a devolver en la Universidad de Murcia serán:
-
-
+Cuando **tipoOperacion=='DOM'** y (**reducida =='true'** o **reducida =='false')**  (independientemente del campo reducida, ya que siempre se mandan todas las columnas) l  las columnas a devolver en la Universidad de Murcia serán:
 
 | id | nombre | acumulable |
 | --- | --- | --- |
@@ -361,9 +352,7 @@ Cuando **tipoOperacion\=\='DOM'** y (**reducida \=\='true'** o **reducida \=\='
 
 #### Columnas Validación de gastos
 
-Cuando **reducida \= "true"** las columnas a devolver en la Universidad de Murcia serán:
-
-
+Cuando **reducida = "true"** las columnas a devolver en la Universidad de Murcia serán:
 
 | id | nombre | acumulable |
 | --- | --- | --- |
@@ -371,12 +360,7 @@ Cuando **reducida \= "true"** las columnas a devolver en la Universidad de Murci
 | 2 | Importe imputado | true |
 | 3 | Proveedor | false |
 
-  
-
-
-Cuando **reducida \= "false"** las columnas a devolver en la Universidad de Murcia serán:
-
-
+Cuando **reducida = "false"** las columnas a devolver en la Universidad de Murcia serán:
 
 | id | nombre | acumulable |
 | --- | --- | --- |
@@ -389,9 +373,9 @@ Cuando **reducida \= "false"** las columnas a devolver en la Universidad de Murc
 
 #### Campos Detalle dato económico
 
-##### Facturas y justificantes  \- Facturas y gastos
+##### Facturas y justificantes  - Facturas y gastos
 
-Cuando **tipoOperacion\=\='FJF'**  (el campo reducida dará igual porque en el detalle siempre se muestran todos los campos) los campos a devolver en la Universidad de Murcia serán:
+Cuando **tipoOperacion=='FJF'**  (el campo reducida dará igual porque en el detalle siempre se muestran todos los campos) los campos a devolver en la Universidad de Murcia serán:
 
 * Nº de registro
 * Tipo de operación
@@ -405,9 +389,9 @@ Cuando **tipoOperacion\=\='FJF'**  (el campo reducida dará igual porque en el 
 * Nº de documento de gasto
 * Nº de señalamiento
 
-##### Facturas y justificantes  \- Viajes y dietas
+##### Facturas y justificantes  - Viajes y dietas
 
-Cuando t**ipoOperacion\=\='FJV'** (el campo reducida dará igual porque en el detalle siempre se muestran todos los campos) los campos a devolver en la Universidad de Murcia serán:
+Cuando t**ipoOperacion=='FJV'** (el campo reducida dará igual porque en el detalle siempre se muestran todos los campos) los campos a devolver en la Universidad de Murcia serán:
 
 * Nº de factura
 * Nº de comisión de servicio
@@ -418,7 +402,7 @@ Cuando t**ipoOperacion\=\='FJV'** (el campo reducida dará igual porque en el de
 * Fecha pago
 * Itinerario viaje
 * Destino
-* Fecha salida \- Fecha vuelta
+* Fecha salida - Fecha vuelta
 * Medio de locomoción
 * Importe locomoción
 * Importe alojamiento
@@ -429,9 +413,9 @@ Cuando t**ipoOperacion\=\='FJV'** (el campo reducida dará igual porque en el de
 * Observaciones alojamiento
 * Observaciones dietas
 
-##### Facturas y justificantes  \- Personal contratado
+##### Facturas y justificantes  - Personal contratado
 
-Cuando **tipoOperacion\=\='FJP'** (el campo reducida dará igual porque en el detalle siempre se muestran todos los campos) los campos a devolver en la Universidad de Murcia serán:
+Cuando **tipoOperacion=='FJP'** (el campo reducida dará igual porque en el detalle siempre se muestran todos los campos) los campos a devolver en la Universidad de Murcia serán:
 
 * Nº documento identificación
 * Nombre y apellidos
@@ -444,7 +428,7 @@ Cuando **tipoOperacion\=\='FJP'** (el campo reducida dará igual porque en el de
 * Categoría laboral
 * Jornada semanal o diaria
 
-#### Campos Detalle dato económico \- Validación de gastos
+#### Campos Detalle dato económico - Validación de gastos
 
 Los campos a devolver en la Universidad de Murcia serán:
 
@@ -457,10 +441,7 @@ Los campos a devolver en la Universidad de Murcia serán:
 
 #### Ejemplos
 
-##### Ejecución presupuestaria \- Estado actual \- Columnas (/ejecucion\-economica/columnas)
-
-  
-
+##### Ejecución presupuestaria - Estado actual - Columnas (/ejecucion-economica/columnas)
 
 **Parámetros**
 
@@ -468,7 +449,7 @@ Los campos a devolver en la Universidad de Murcia serán:
 proyectoId=="123456";anualidad=in=("2020","2021");tipoOperacion=="EPA"
 ```
 
-**Respuesta** 
+**Respuesta**
 
 ```
 [
@@ -501,13 +482,7 @@ proyectoId=="123456";anualidad=in=("2020","2021");tipoOperacion=="EPA"
 ]
 ```
 
-  
-
-
-##### Ejecución presupuestaria \- Estado actual  (/ejecucion\-economica)
-
-  
-
+##### Ejecución presupuestaria - Estado actual  (/ejecucion-economica)
 
 **Parámetros**
 
@@ -547,14 +522,9 @@ proyectoId=="123456";anualidad=in=("2020","2021");tipoOperacion=="EPA"
          }
 }
 ]
-
-
 ```
 
-##### Facturas y justificantes \- Facturas y gastos \- Columnas (reducida false) (/ejecucion\-economica/columnas)
-
-  
-
+##### Facturas y justificantes - Facturas y gastos - Columnas (reducida false) (/ejecucion-economica/columnas)
 
 **Parámetros**
 
@@ -562,13 +532,7 @@ proyectoId=="123456";anualidad=in=("2020","2021");tipoOperacion=="EPA"
 proyectoId=="123456";anualidad=in=("2020","2021");fechaPago=bt=("2020-12-01T00:00:00Z","2021-01-31T23:59:59Z");tipoOperacion=="FJF";reducida=="false"
 ```
 
-  
-
-
-  
-
-
-**Respuesta** 
+**Respuesta**
 
 ```
 [
@@ -634,13 +598,7 @@ proyectoId=="123456";anualidad=in=("2020","2021");fechaPago=bt=("2020-12-01T00:0
 ]
 ```
 
-  
-
-
-##### Facturas y justificantes \- Facturas y gastos (reducida a false) (/ejecucion\-economica)
-
-  
-
+##### Facturas y justificantes - Facturas y gastos (reducida a false) (/ejecucion-economica)
 
 **Parámetros**
 
@@ -713,20 +671,15 @@ proyectoId=="123456";anualidad=in=("2020","2021");fechaPago=bt=("2020-12-01","20
   		}
 }
 ]
-
 ```
 
-##### Facturas y justificantes \- Facturas y gastos \- Detalle (/ejecucion\-economica/{id})
+##### Facturas y justificantes - Facturas y gastos - Detalle (/ejecucion-economica/{id})
 
 **Parámetros**
 
 ```
 tipoOperacion=="FGF"
 ```
-
-  
-  
-
 
 **Respueta**
 
@@ -797,13 +750,7 @@ tipoOperacion=="FGF"
 }
 ```
 
-  
-
-
-##### **Validaciones de gastos pendientes \- Columnas (con reducida a true) (/gastos/columnas)**
-
-  
-
+##### **Validaciones de gastos pendientes - Columnas (con reducida a true) (/gastos/columnas)**
 
 **Parámetros**
 
@@ -834,10 +781,7 @@ proyectoId=="123456";estado=="Pendiente";reducida=="true"
 ]
 ```
 
-##### **Validaciones de gastos pendientes \- Columnas (con reducida a false) (/gastos/columnas)**
-
-  
-
+##### **Validaciones de gastos pendientes - Columnas (con reducida a false) (/gastos/columnas)**
 
 **Parámetros**
 
@@ -1009,9 +953,6 @@ proyectoId=="123456";estado=="Pendiente";reducida=="false"
 
 ##### **Detalle gasto (/gastos/{id})**
 
-  
-
-
 **Respuesta**
 
 ```
@@ -1068,16 +1009,4 @@ proyectoId=="123456";estado=="Pendiente";reducida=="false"
     "nombreFichero":"otroDocumento.pdf"
   }
 ]
-
-
 ```
-
-  
-
-
-  
-
-
-
-
-

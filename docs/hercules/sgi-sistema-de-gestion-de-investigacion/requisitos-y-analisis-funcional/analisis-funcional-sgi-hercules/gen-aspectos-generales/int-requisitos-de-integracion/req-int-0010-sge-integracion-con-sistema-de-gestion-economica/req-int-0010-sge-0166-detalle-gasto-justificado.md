@@ -1,23 +1,20 @@
-# Hércules : REQ\-INT\-0010\-SGE\-0166 \- Detalle gasto justificado
+# REQ-INT-0010-SGE-0166 - Detalle gasto justificado
 
-
-
-
-
-
+|  |  |
+| --- | --- |
+| Cod. REQ | **REQ-INT-0010-SGE-0166 - Detalle gasto justificado** |
+| Ver. Objetivo |  |
+| Ver. REQ | 1.0.0 |
+| Estado | IN PROGRESS |
+| Fec. Aprobación |  |
+| Épica, historia |  |
+| Frecuencia |  |
+| Características |  |
+| M. Consumidor |  |
 
 ### Definición y objetivos
 
-Detalle de todos los campos de un justificante/factura, proporcionado por el SGE perteneciente a un periodo de justificación del SGE. Los campos devueltos serán una listado de campos formado por nombre \- valor, donde nombre será el nombre del campo a mostrar y el valor, el propio valor del campo.
-
-  
-
-
-
-
-
-
-
+Detalle de todos los campos de un justificante/factura, proporcionado por el SGE perteneciente a un periodo de justificación del SGE. Los campos devueltos serán una listado de campos formado por nombre - valor, donde nombre será el nombre del campo a mostrar y el valor, el propio valor del campo.
 
 ### Descripción técnica integración
 
@@ -37,42 +34,18 @@ Parámetros de salida:
 
 ### Diseño técnico
 
-En el siguiente enlace se muestra el diseño del modelo lógico y el diseño de la API del  Sistema de Gestión Económica para el seguimiento de la justificación: [SGI \- ESB \- SGE \- Seguimiento justificación](https://confluence.um.es/confluence/pages/viewpage.action?pageId=140641365 "https://confluence.um.es/confluence/pages/viewpage.action?pageId=140641365").
+En el siguiente enlace se muestra el diseño del modelo lógico y el diseño de la API del  Sistema de Gestión Económica para el seguimiento de la justificación: [SGI - ESB - SGE - Seguimiento justificación](https://confluence.um.es/confluence/pages/viewpage.action?pageId=140641365).
 
-El servicios del API que cubre este requisito es: [SGI \- ESB \- SGE \- Seguimiento justificación \- Detalle gasto justificado](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sge/sgi-esb-sge-seguimiento-justificacion/sgi-esb-sge-seguimiento-justificacion-consultar-detalle-gasto-justificado.md "/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sge/sgi-esb-sge-seguimiento-justificacion/sgi-esb-sge-seguimiento-justificacion-consultar-detalle-gasto-justificado.md")
-
-  
-
-
-
-
-
-
-
+El servicios del API que cubre este requisito es: [SGI - ESB - SGE - Seguimiento justificación - Detalle gasto justificado](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sge/sgi-esb-sge-seguimiento-justificacion/sgi-esb-sge-seguimiento-justificacion-consultar-detalle-gasto-justificado)
 
 ### Interfaces de usuario relacionados
 
-
-
-
-
-
+![](plugins/servlet/confluence/placeholder/unknown-macro)
 
 ### Informes relacionados
 
-
-
-
-
-
+![](plugins/servlet/confluence/placeholder/unknown-macro)
 
 ### Casos de uso relacionados
 
-
-
-
-
-
-
-
-
+![](plugins/servlet/confluence/placeholder/unknown-macro)

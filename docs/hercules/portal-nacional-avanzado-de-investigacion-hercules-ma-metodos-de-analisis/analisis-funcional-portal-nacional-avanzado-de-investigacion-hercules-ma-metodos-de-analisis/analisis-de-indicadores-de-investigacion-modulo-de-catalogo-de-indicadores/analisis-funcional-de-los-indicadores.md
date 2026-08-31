@@ -1,22 +1,34 @@
-# Hércules : Análisis funcional de los indicadores
-
-
+# Análisis funcional de los indicadores
 
 La página de indicadores muestra una serie de distintas graficas que representan datos reales sobre distintas categorías.
 
-  
-
+* [Descripción funcional](#Análisisfuncionaldelosindicadores-Descripciónfuncional)
+* [Secciones](#Análisisfuncionaldelosindicadores-Secciones)
+* [Las gráficas](#Análisisfuncionaldelosindicadores-Lasgráficas)
+  + [Conjunto de acciones de las gráficas (Común)](#Análisisfuncionaldelosindicadores-Conjuntodeaccionesdelasgráficas(Común))
+    - [Leyendas de las gráficas](#Análisisfuncionaldelosindicadores-Leyendasdelasgráficas)
+  + [Tipos de gráficas](#Análisisfuncionaldelosindicadores-Tiposdegráficas)
+    - [Grafica circular](#Análisisfuncionaldelosindicadores-Graficacircular)
+    - [Gráfica de barras](#Análisisfuncionaldelosindicadores-Gráficadebarras)
+      * [Acciones de las gráficas de barras](#Análisisfuncionaldelosindicadores-Accionesdelasgráficasdebarras)
+    - [Grafica de Nodos](#Análisisfuncionaldelosindicadores-GraficadeNodos)
+      * [Acciones de las gráficas de nodos](#Análisisfuncionaldelosindicadores-Accionesdelasgráficasdenodos)
+  + [Acciones de las gráficas](#Análisisfuncionaldelosindicadores-Accionesdelasgráficas)
+* [Filtros](#Análisisfuncionaldelosindicadores-Filtros)
+* [Descarga (PDF)](#Análisisfuncionaldelosindicadores-Descarga(PDF))
+* [Indicadores personales](#Análisisfuncionaldelosindicadores-Indicadorespersonales)
+  + [Editar y ordenar gráfica](#Análisisfuncionaldelosindicadores-Editaryordenargráfica)
+* [Opciones de la pagina](#Análisisfuncionaldelosindicadores-Opcionesdelapagina)
+  + [Editar página](#Análisisfuncionaldelosindicadores-Editarpágina)
+  + [Borrar página](#Análisisfuncionaldelosindicadores-Borrarpágina)
 
 Información de desarrollo
 
-[https://github.com/HerculesCRUE/HerculesMA/blob/main/Docs/funcionamiento\-de\-los\-indicadores.md](https://github.com/HerculesCRUE/HerculesMA/blob/main/Docs/funcionamiento-de-los-indicadores.md "https://github.com/HerculesCRUE/HerculesMA/blob/main/Docs/funcionamiento-de-los-indicadores.md")
-
-  
-
+<https://github.com/HerculesCRUE/HerculesMA/blob/main/Docs/funcionamiento-de-los-indicadores.md>
 
 ## Descripción funcional
 
-La página de indicadores, es una página que muestra los diferentes gráficos ofrecidos por el sitio. La sección de los indicadores personales son configurables, siendo generados mediante unos archivos JSON, que son leídos mediante el servicio [HerculesMA/src/Hercules.MA.GraphicEngine at main · HerculesCRUE/HerculesMA (github.com)](https://github.com/HerculesCRUE/HerculesMA/tree/main/src/Hercules.MA.GraphicEngine "https://github.com/HerculesCRUE/HerculesMA/tree/main/src/Hercules.MA.GraphicEngine")
+La página de indicadores, es una página que muestra los diferentes gráficos ofrecidos por el sitio. La sección de los indicadores personales son configurables, siendo generados mediante unos archivos JSON, que son leídos mediante el servicio [HerculesMA/src/Hercules.MA.GraphicEngine at main · HerculesCRUE/HerculesMA (github.com)](https://github.com/HerculesCRUE/HerculesMA/tree/main/src/Hercules.MA.GraphicEngine)
 
 ## Secciones
 
@@ -40,7 +52,7 @@ Todas las gráficas tienen estas opciones en común, arriba a la derecha aparece
 
 ![](/attachments/598147406/598148163.png)
 
-El símbolo de la lupa abre un modal con la gráfica maximizada para mejor visualización de datos. 
+El símbolo de la lupa abre un modal con la gráfica maximizada para mejor visualización de datos.
 
 Respecto al menú de opciones, las opciones son las siguientes.
 
@@ -60,7 +72,7 @@ Si el usuario no tiene páginas de graficas creadas tendrá la opción de crear 
 
 #### Leyendas de las gráficas
 
-En todas las gráficas excepto la de nodos aparece una leyenda encima de la gráfica que representa que datos corresponden al color de las barras/líneas/secciones si haces clic en uno de los datasets de la leyenda se oculta ese dataset en la gráfica: 
+En todas las gráficas excepto la de nodos aparece una leyenda encima de la gráfica que representa que datos corresponden al color de las barras/líneas/secciones si haces clic en uno de los datasets de la leyenda se oculta ese dataset en la gráfica:
 
 ![](/attachments/598147406/598148170.png)
 
@@ -78,9 +90,6 @@ La página de indicadores dispone de un tipo de gráficas de tipo circular, esta
 
 ![](/attachments/598147406/598147831.png)
 
-  
-
-
 #### Gráfica de barras
 
 Nos encontramos con gráficas de barras horizontales y verticales, en éste caso, hay 2 ejes, uno el x y el otro el y, también podemos encontrarnos con que la gráfica contiene 2 representaciones de datos juntas, compartiendo ambos el eje x, pero poseyendo 2 ejes y para los diferentes datos.
@@ -92,9 +101,6 @@ Nos encontramos con gráficas de barras horizontales y verticales, en éste caso
 Debido a que las gráficas (las horizontales) a veces ocupan más que el espacio disponible, dispondremos de una barra de scroll horizontal para poder desplazarnos sobre el eje x. Así mismo dispondremos de un botón que hará que si le seleccionamos la gráfica se ajustará al espacio disponible en el eje x.
 
 ![](/attachments/598147406/598147829.png)
-
-  
-
 
 #### **Grafica de Nodos**
 
@@ -113,13 +119,13 @@ Esta gráfica tiene 2 botones a la izquierda que sirven para ampliar o disminuir
 
 ### Acciones de las gráficas
 
-En algunas de las gráficas nos encontramos con este icono(![](/attachments/598147406/598148172.png)), es un selector de "gráficas", y éste botón corresponde a que se encuentran al menos 2 gráficas agrupadas (que normalmente comparten ciertos datos) y similares. Desde este icono se mostrará las gráficas disponibles para mostrar. 
+En algunas de las gráficas nos encontramos con este icono(![](/attachments/598147406/598148172.png)), es un selector de "gráficas", y éste botón corresponde a que se encuentran al menos 2 gráficas agrupadas (que normalmente comparten ciertos datos) y similares. Desde este icono se mostrará las gráficas disponibles para mostrar.
 
 ![](/attachments/598147406/598147830.png)
 
 ## Filtros
 
-Las facetas son filtros que se les pueden aplicar a los datos de las gráficas. 
+Las facetas son filtros que se les pueden aplicar a los datos de las gráficas.
 
 Como todos las gráficas de una página usan los mismos datos cualquier faceta que añadas afectara a todas las gráficas de la página actual y cada página tiene facetas distintas.
 
@@ -145,9 +151,6 @@ Descargar genera un PDF con las gráficas.
 
 ![](/attachments/598147406/598148157.png)
 
-  
-
-
 ## Indicadores personales
 
 Los indicadores personales permiten guardar las gráficas en un estado determinado gracias a las facetas, se pueden tener varias páginas de indicadores personales, si quieres crear una en la página de indicadores al guardar una gráfica selecciona la opción de página nueva e introduce el título de la nueva página.
@@ -157,9 +160,6 @@ Los indicadores personales permiten guardar las gráficas en un estado determina
 Las gráficas son más configurables en esta página, en el botón de opciones de las gráficas te da la opción de editarla y borrarla.
 
 ![](/attachments/598147406/598148158.png)
-
-  
-
 
 ### Editar y ordenar gráfica
 
@@ -204,13 +204,3 @@ El orden de la página es en el contexto de las otras páginas en las pestañas 
 Si se desea borrar una página se puede hacer pulsando el botón de borrar página.
 
 ![](/attachments/598147406/598148162.png)
-
-  
-
-
-  
-
-
-
-
-

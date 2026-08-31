@@ -1,6 +1,4 @@
-# Hércules : Extracción e identificación de concesiones
-
-
+# Extracción e identificación de concesiones
 
 ![](/attachments/598147412/598148134.png)
 
@@ -27,9 +25,9 @@ Los estados definidos en SGI para una solicitud son los siguientes:
 De los estados anteriores, se consideran finales los siguientes:
 
 * + Desistida.
-	+ Excluida.
-	+ Concedida.
-	+ Denegada.
+  + Excluida.
+  + Concedida.
+  + Denegada.
 
 #### Descripción general del subproceso
 
@@ -54,13 +52,6 @@ A continuación, se detalla el formato que se envía por correo electrónico. Ca
 
 ![](/attachments/598147412/598148135.png)
 
-  
-
-
 ![](/attachments/598147412/598148136.png)
 
 Estas capturas se han sacado del PDF de resoluciones obtenido para esa convocatoria en la BDNS, una vez procesado con nuestro módulo de tecnologías cognitivas y pasado de PDF a tabla Excel. Seguidamente, se procede a extraer y marcar los datos que se necesitan. Se puede ver aquí una columna extra donde aparece un nombre, esa línea corresponde a la solicitud procesada y que se ha encontrado para ese investigador. Adicionalmente se marcan, por si son de interés y como hemos comentado con anterioridad, las líneas que pertenecen a una organización en concreto, en este caso la Universidad de Murcia.
-
-
-
-

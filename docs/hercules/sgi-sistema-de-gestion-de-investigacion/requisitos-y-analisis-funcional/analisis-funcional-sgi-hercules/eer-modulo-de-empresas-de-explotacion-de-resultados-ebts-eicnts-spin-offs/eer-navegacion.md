@@ -1,10 +1,21 @@
-# Hércules : EER \- Navegación
+# EER - Navegación
 
-
+* [Acceso](#EERNavegación-Acceso)
+* [Buscador y listado](#EERNavegación-Buscadorylistado)
+  + [Filtros](#EERNavegación-Filtros)
+  + [Acciones disponibles](#EERNavegación-Accionesdisponibles)
+* [Añadir nueva empresa de explotación de resultados](#EERNavegación-Añadirnuevaempresadeexplotaciónderesultados)
+* [Ver Detalle/Modificar](#EERNavegación-VerDetalle/Modificar)
+  + [Datos generales](#EERNavegación-Datosgenerales)
+  + [Documentos](#EERNavegación-Documentos)
+  + [Equipo empresarial](#EERNavegación-Equipoempresarial)
+    - [Equipo emprendedor](#EERNavegación-Equipoemprendedor)
+    - [Composición sociedad](#EERNavegación-Composiciónsociedad)
+    - [Administración sociedad](#EERNavegación-Administraciónsociedad)
 
 ## Acceso
 
-Las Empresas de Explotación de Resultados disponen de un buscador y listado, al que se accede pulsando sobre la opción de menú "Empresas de Explotación de Resultados" una vez se está logueado en la aplicación con el rol adecuado (gestor\-eer).
+Las Empresas de Explotación de Resultados disponen de un buscador y listado, al que se accede pulsando sobre la opción de menú "Empresas de Explotación de Resultados" una vez se está logueado en la aplicación con el rol adecuado (gestor-eer).
 
 ## Buscador y listado
 
@@ -72,16 +83,16 @@ Se podrán añadir nuevos documentos pulsando sobre la opción "Añadir document
 En función del "Tipo" de documento seleccionado, se cargarán diferentes "Subtipos" de documentos:
 
 * Documentos de procedimiento:
-	+ Solicitud de creación
-	+ Solicitud de incorporación
-	+ Informe de viabilidad de la OTRI
-	+ ...
+  + Solicitud de creación
+  + Solicitud de incorporación
+  + Informe de viabilidad de la OTRI
+  + ...
 * Documentos corporativos:
-	+ Informe anual de cuentas.
-	+ Acta de reunión.
+  + Informe anual de cuentas.
+  + Acta de reunión.
 * Estatutos sociales:
-	+ Modificación composición sociedad
-	+ ...
+  + Modificación composición sociedad
+  + ...
 
 Una vez completada la información y pulsando a continuación el botón "Aceptar", el nuevo documento aparecerá en el árbol de documentos a la izquierda de la pantalla. Para almacenar los cambios, será necesario pulsar el botón "Guardar Empresa de Explotación de Resultados".
 
@@ -142,7 +153,3 @@ Al pulsar sobre "Añadir miembro administración sociedad" se mostrará una vent
 ![](/attachments/597852866/597855056.png)
 
 Se podrán además modificar los datos o eliminar personas miembros de la administración de la sociedad.
-
-
-
-

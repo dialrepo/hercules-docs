@@ -1,6 +1,15 @@
-# Hércules : CU\-CSP\-0090\-003 \- Modificar concepto de gasto
+# CU-CSP-0090-003 - Modificar concepto de gasto
 
-
+|  |  |
+| --- | --- |
+| Cod. CU | **CU-CSP-0090-003 - Modificar concepto de gasto** |
+| Ver. objetivo |  |
+| Ver. CU | 1.0.0 |
+| Estado | LIBERADO\_ |
+| Fec. Aprobación |  |
+| Épica, historia |  |
+| Actores | ACT-CSP-004-Administrador |
+| Frecuencia | Baja |
 
 ### Descripción
 
@@ -10,17 +19,17 @@ Modificación de un concepto de gasto.
 
 #### Actor principal
 
-ACT\-CSP\-004\-Administrador
+ACT-CSP-004-Administrador
 
 #### Personal involucrado e intereses
 
-ACT\-CSP\-003\-Gestor que requiere que los conceptos de gasto esté correctamente configurados para poder registrar la información de convocatorias y proyectos (elegibilidad y presupuestto).
+ACT-CSP-003-Gestor que requiere que los conceptos de gasto esté correctamente configurados para poder registrar la información de convocatorias y proyectos (elegibilidad y presupuestto).
 
-ACT\- CSP\-001\-Investigador que requiere ver el detalle de información de convocatorias y proyectos .
+ACT- CSP-001-Investigador que requiere ver el detalle de información de convocatorias y proyectos .
 
 ### Precondiciones
 
-El usuario ACT\-CSP\-004\-Administrador se autentica a través del usuario de dominio corporativo.
+El usuario ACT-CSP-004-Administrador se autentica a través del usuario de dominio corporativo.
 
 A través del servicio de integración con el directorio activo y de la información del usuario almacenada en el propio SGI, se obtiene su rol y  la unidades de gestión sobre las que tiene disponible el rol. El usuario está autorizado sobre la funcionalidad asociada a esta operación.
 
@@ -38,7 +47,7 @@ El concepto de gasto se modifica correctamente y está disponible para la gesti�
 6. El usuario es informado del resultado positivo de la acción
 7. Se vuelve al listado de Conceptos de gasto
 
-### Extensiones (flujos alternativos) \- Error de unicidad
+### Extensiones (flujos alternativos) - Error de unicidad
 
 1. El usuario accede al apartado de Conceptos de gasto del menú de configuración del módulo de CSP
 2. El usuario selecciona la opción Modificar del listado de Conceptos de gasto para un registro concreto
@@ -58,12 +67,3 @@ N/A
 ### Lista de tecnología y variaciones de datos
 
 N/A
-
-  
-  
-  
-
-
-
-
-

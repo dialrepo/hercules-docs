@@ -1,6 +1,15 @@
-# Hércules : CU\-ETI\-0030\-001 \- Buscar Actas
+# CU-ETI-0030-001 - Buscar Actas
 
-
+|  |  |
+| --- | --- |
+| Cod. CU | ********CU-ETI-0030-001 - Buscar Actas******** |
+| Ver. objetivo |  |
+| Ver. CU | 1.0.0 |
+| Estado | LIBERADO\_ |
+| Fec. Aprobación |  |
+| Épica, historia |  |
+| Actores | ACT-ETI-001-Gestor |
+| Frecuencia | Media |
 
 ### Descripción
 
@@ -30,14 +39,11 @@ El estado de una acta puede tomar dos valores:
 * En elaboración: cuando se crea el acta y se esta modificando.
 * Finalizada: cuando todas las memorias han sido evaluadas (tienen un dictamen asignado) y se ha seleccionado la acción de Finalizar.
 
-  
-
-
 ### Actores
 
 #### Actor principal
 
-ACT\-ETI\-001\-Gestor
+ACT-ETI-001-Gestor
 
 ### Precondiciones
 
@@ -54,7 +60,3 @@ Se listan las actas dadas de alta en el sistema y que cumplan con los criterios 
 1. Se presenta la pantalla Actas con el listado de las actas dadas de alta en el sistema.
 2. El gestor introduce la información de los filtros y realiza la acción de buscar para poder filtrar un subconjunto de actas.
 3. Se presenta la pantalla Actas con el subconjunto de actas que cumplen las condiciones del filtro.
-
-
-
-

@@ -1,16 +1,12 @@
-# Hércules : MA. ROs vinculados
+# MA. ROs vinculados
 
-
-
-  
-
+* [Casos de uso](#MA.ROsvinculados-Casosdeuso)
+* [Listado de los ROs vinculados](#MA.ROsvinculados-ListadodelosROsvinculados)
+* [Vincular un RO a otro RO](#MA.ROsvinculados-VincularunROaotroRO)
 
 Información de desarrollo
 
-[https://github.com/HerculesCRUE/HerculesMA/blob/main/Docs/funcionamiento\-de\-los\-ros\-vinculados.md](https://github.com/HerculesCRUE/HerculesMA/blob/main/Docs/funcionamiento-de-los-ros-vinculados.md "https://github.com/HerculesCRUE/HerculesMA/blob/main/Docs/funcionamiento-de-los-ros-vinculados.md")
-
-  
-
+<https://github.com/HerculesCRUE/HerculesMA/blob/main/Docs/funcionamiento-de-los-ros-vinculados.md>
 
 En las siguientes líneas trataremos de explicar adecuadamente el funcionamiento y el diseño funcional de los ROs vinculados, desde los casos de uso a la creación y borrado de los mismos.
 
@@ -26,33 +22,14 @@ El diseño corresponderá de un buscador de ROs, con el objetivo de no romper la
 
 ![](/attachments/598147394/598147900.png)
 
-  
-
-
 ### Vincular un RO a otro RO
 
-Para vincular un RO a otro, es necesario haber iniciado sesión en la plataforma como investigador, y encontrarte en un RO (Publicación o Research Object) en el que eres autor, una vez que te encuentras en esta situación, podrás iniciar el menú del RO la acción de vincular un RO lanzando un popup que mostrará un campo de texto de autocompletado para la búsqueda por texto de los ROs de los que eres autor, **ya estén validados o no**, y que podrás seleccionar para vincularlos al momento. 
+Para vincular un RO a otro, es necesario haber iniciado sesión en la plataforma como investigador, y encontrarte en un RO (Publicación o Research Object) en el que eres autor, una vez que te encuentras en esta situación, podrás iniciar el menú del RO la acción de vincular un RO lanzando un popup que mostrará un campo de texto de autocompletado para la búsqueda por texto de los ROs de los que eres autor, **ya estén validados o no**, y que podrás seleccionar para vincularlos al momento.
 
 ![](/attachments/598147394/598147898.png)
 
 Una vez que se ha buscado un RO y se hace click sobre una de las opciones, se añadirá el mismo al final del listado de los ROs vinculados al recurso de la ficha sobre la que te encuentras.
 
-  
-
-
 Eliminar un vínculo entre ROs
 
 Para la eliminación de un vínculo entre ROs, debes de acceder de nuevo al popup de vincular ROs. Cuando se abre el popup, se muestra un listado de los ROs vinculados al mismo (bidireccionalmente). Además se mostrará icónicamente si el RO se encuentra visible (validado) o no, junto a la opción de eliminarse mediante un icono de "una basura" y en el que haciendo click, el elemento se eliminará y los ROs ya no se encontrarán vinculados.
-
-  
-
-
-  
-
-
-  
-
-
-
-
-

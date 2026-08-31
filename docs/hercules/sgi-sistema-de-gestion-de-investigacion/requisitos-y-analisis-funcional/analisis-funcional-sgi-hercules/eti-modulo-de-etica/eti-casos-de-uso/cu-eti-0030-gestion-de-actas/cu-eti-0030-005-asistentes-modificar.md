@@ -1,6 +1,15 @@
-# Hércules : CU\-ETI\-0030\-005 \- Asistentes \- Modificar
+# CU-ETI-0030-005 - Asistentes - Modificar
 
-
+|  |  |
+| --- | --- |
+| Cod. CU | ********CU-ETI-0030-005 - Asistentes - Modificar******** |
+| Ver. objetivo |  |
+| Ver. CU | 1.0.0 |
+| Estado | LIBERADO\_ |
+| Fec. Aprobación |  |
+| Épica, historia |  |
+| Actores | ACT-ETI-001-Gestor |
+| Frecuencia | Media |
 
 ### Descripción
 
@@ -10,7 +19,7 @@ Formulario de modificación de asistencia de un evaluador en una convocatoria de
 
 #### Actor principal
 
-ACT\-ETI\-001\-Gestor
+ACT-ETI-001-Gestor
 
 ### Precondiciones
 
@@ -40,13 +49,9 @@ Los cambios únicamente se realizan en memoria.
 8. Se realizan las validaciones en cuanto a formato, obligatoriedad habituales.
 9. Se presenta el asistente seleccionado con los datos modificados en el  listado de asistentes de convocatoria de reunión asociada al acta..
 
-### Extensiones (flujos alternativos) \- Error durante el guardado
+### Extensiones (flujos alternativos) - Error durante el guardado
 
 1. Si se ha producido algún error de validación.
 2. El usuario modifica la información necesaria para realizar de forma correcta la modificación del asistente.
 3. El usuario selecciona la acción Modificar.
 4. Se presenta el listado de asistentes con los datos modificados
-
-
-
-

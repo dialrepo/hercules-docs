@@ -1,13 +1,5 @@
-# Hércules : COM \- Glosario de Términos
-
-
-
-
+# COM - Glosario de Términos
 
 | Término | Descripción |
 | --- | --- |
 |  |  |
-
-
-
-

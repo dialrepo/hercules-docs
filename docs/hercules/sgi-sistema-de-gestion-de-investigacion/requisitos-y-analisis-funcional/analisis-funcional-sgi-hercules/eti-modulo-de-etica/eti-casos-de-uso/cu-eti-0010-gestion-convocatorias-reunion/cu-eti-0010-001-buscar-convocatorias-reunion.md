@@ -1,6 +1,15 @@
-# Hércules : CU\-ETI\-0010\-001 \- Buscar Convocatorias reunión
+# CU-ETI-0010-001 - Buscar Convocatorias reunión
 
-
+|  |  |
+| --- | --- |
+| Cod. CU | ********CU-ETI-0010-001 - Buscar Convocatorias reunión******** |
+| Ver. objetivo |  |
+| Ver. CU | 1.0.0 |
+| Estado | LIBERADO\_ |
+| Fec. Aprobación |  |
+| Épica, historia |  |
+| Actores | ACT-ETI-001-Gestor |
+| Frecuencia | Alta |
 
 ### Descripción
 
@@ -27,7 +36,7 @@ El resultado serán todas las convocatorias de reunión que cumplan con los crit
 
 #### Actor principal
 
-ACT\-ETI\-001\-Gestor
+ACT-ETI-001-Gestor
 
 ### Precondiciones
 
@@ -44,7 +53,3 @@ Se listan las convocatorias de reunión dadas de alta en el sistema y que cumpla
 1. Se presenta la pantalla Convocatorias con el listado de todos las convocatorias existentes en el sistema.
 2. El gestor introduce la información de los filtros y realiza la acción de buscar para poder filtrar un subconjunto de Convocatorias de reunión.
 3. Se presenta la pantalla Convocatorias reunión con el subconjunto de convocatorias de reunión que cumplen las condiciones del filtro.
-
-
-
-

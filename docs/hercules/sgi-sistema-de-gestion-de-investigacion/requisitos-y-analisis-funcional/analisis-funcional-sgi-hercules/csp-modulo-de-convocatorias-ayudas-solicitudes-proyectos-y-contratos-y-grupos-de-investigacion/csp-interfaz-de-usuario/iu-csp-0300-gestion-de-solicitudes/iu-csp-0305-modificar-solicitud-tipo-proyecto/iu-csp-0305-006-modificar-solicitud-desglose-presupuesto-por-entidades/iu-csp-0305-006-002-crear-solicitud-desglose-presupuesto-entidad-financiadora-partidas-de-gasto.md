@@ -1,17 +1,25 @@
-# Hércules : IU\-CSP\-0305\-006\-002 \- Crear solicitud \- Desglose presupuesto \- Entidad financiadora \- Partidas de gasto
-
-
+# IU-CSP-0305-006-002 - Crear solicitud - Desglose presupuesto - Entidad financiadora - Partidas de gasto
 
 presupuestado
 
-## Formulario Crear solicitud \- Desglose presupuesto \- Entidad financiadora \- Partidas de gasto
+|  |  |
+| --- | --- |
+| Cod. IU | ********IU-CSP-0305-006-002 - Crear solicitud - Desglose presupuesto - Entidad financiadora - Partidas de gasto******** |
+| Ver. objetivo |  |
+| Ver. IU | 1.0.0 |
+| Estado | IN PROGRESS |
+| Fec. Aprobación |  |
+| Épica, historia |  |
+| Actores | ACT-CSP-003-Gestor, ACT-CSP-004-Administrador |
+| Frecuencia | Media |
+
+## Formulario Crear solicitud - Desglose presupuesto - Entidad financiadora - Partidas de gasto
 
 Formulario que permitirá indicar en la entidad financiadora de proyecto el desglose presupuestario del proyecto en solicitud.
 
-
-
-|  | | |
+|  |  |  |
 | --- | --- | --- |
+|  | | |
 | Nombre | Tipo | Características / Notas |
 | Listado de registros de la tabla "SolicitudProyectoPresupuesto" de la entidad seleccionada | | |
 | Concepto de gasto | Texto corto | Nombre del concepto de gasto recuperado de la tabla "Conceptos de gasto" |
@@ -25,32 +33,16 @@ Formulario que permitirá indicar en la entidad financiadora de proyecto el desg
 | Eliminar | Icono de acción | Acción "Eliminar (Presupuesto entidad financiadora)" |
 | Añadir nueva partida de gasto | Icono de acción | Acción "Añadir nueva partida de gasto (Presupuesto entidad financiadora)" |
 
-
-
 | Acciones | Descripción | Enlace CU. |
 | --- | --- | --- |
-| Modificar (Presupuesto entidad financiadora) | Muestra la pantalla de modificación del concepto de gasto para la entidad financiadora de la convocatoria | Si la entidad es de la convocatoria (financiadora o gestora, campo "convocatoriaEntidadFinanciadora" o "convocatoriaEntidadGestora" informados del objeto "solicitudProyectoEntidad"):Se resuelve con la pantalla [IU\-CSP\-0302\-010 \- Añadir partida de gasto a entidad financiadora de la convocatoria](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-interfaz-de-usuario/iu-csp-0300-gestion-de-solicitudes/iu-csp-0305-modificar-solicitud-tipo-proyecto/iu-csp-0302-011-anadir-modificar-partida-de-gasto-a-entidad-financiadora-de-la-convocatoria.md "/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-interfaz-de-usuario/iu-csp-0300-gestion-de-solicitudes/iu-csp-0305-modificar-solicitud-tipo-proyecto/iu-csp-0302-011-anadir-modificar-partida-de-gasto-a-entidad-financiadora-de-la-convocatoria.md")Si la entidad es ajena a la convocatoria (campo ajena a la convocatoria, campo "solicitudProyectoEntidadFinanciadoraAjena" informado del objeto "solicitudProyectoEntidad"):Se resuelve con la pantalla [IU\-CSP\-0302\-011 \- Añadir partida de gasto a entidad financiadora ajena a la convocatoria](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-interfaz-de-usuario/iu-csp-0300-gestion-de-solicitudes/iu-csp-0305-modificar-solicitud-tipo-proyecto/iu-csp-0302-012-anadir-modificar-partida-de-gasto-a-entidad-financiadora-ajena-a-la-convocatoria.md "/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-interfaz-de-usuario/iu-csp-0300-gestion-de-solicitudes/iu-csp-0305-modificar-solicitud-tipo-proyecto/iu-csp-0302-012-anadir-modificar-partida-de-gasto-a-entidad-financiadora-ajena-a-la-convocatoria.md") |
+| Modificar (Presupuesto entidad financiadora) | Muestra la pantalla de modificación del concepto de gasto para la entidad financiadora de la convocatoria | Si la entidad es de la convocatoria (financiadora o gestora, campo "convocatoriaEntidadFinanciadora" o "convocatoriaEntidadGestora" informados del objeto "solicitudProyectoEntidad"):  Se resuelve con la pantalla [IU-CSP-0302-010 - Añadir partida de gasto a entidad financiadora de la convocatoria](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-interfaz-de-usuario/iu-csp-0300-gestion-de-solicitudes/iu-csp-0305-modificar-solicitud-tipo-proyecto/iu-csp-0302-011-anadir-modificar-partida-de-gasto-a-entidad-financiadora-de-la-convocatoria)  Si la entidad es ajena a la convocatoria (campo ajena a la convocatoria, campo "solicitudProyectoEntidadFinanciadoraAjena" informado del objeto "solicitudProyectoEntidad"):  Se resuelve con la pantalla [IU-CSP-0302-011 - Añadir partida de gasto a entidad financiadora ajena a la convocatoria](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-interfaz-de-usuario/iu-csp-0300-gestion-de-solicitudes/iu-csp-0305-modificar-solicitud-tipo-proyecto/iu-csp-0302-012-anadir-modificar-partida-de-gasto-a-entidad-financiadora-ajena-a-la-convocatoria) |
 | Eliminar (Presupuesto entidad financiadora) | Elimina el concepto de gasto de la entidad financiadora |  |
 | Paginación | Componente estándar de paginación sobre la tabla de lista de resultados |  |
-| Añadir nueva partida de gasto (Presupuesto entidad financiadora) | Muestra la pantalla de creación del concepto de gasto para la entidad financiadora de la convocatoria | Si la entidad es de la convocatoria (financiadora o gestora, campo "convocatoriaEntidadFinanciadora" o "convocatoriaEntidadGestora" informados del objeto "solicitudProyectoEntidad"):Se resuelve con la pantalla [IU\-CSP\-0302\-010 \- Añadir partida de gasto a entidad financiadora de la convocatoria](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-interfaz-de-usuario/iu-csp-0300-gestion-de-solicitudes/iu-csp-0305-modificar-solicitud-tipo-proyecto/iu-csp-0302-011-anadir-modificar-partida-de-gasto-a-entidad-financiadora-de-la-convocatoria.md "/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-interfaz-de-usuario/iu-csp-0300-gestion-de-solicitudes/iu-csp-0305-modificar-solicitud-tipo-proyecto/iu-csp-0302-011-anadir-modificar-partida-de-gasto-a-entidad-financiadora-de-la-convocatoria.md")Si la entidad es ajena a la convocatoria (campo ajena a la convocatoria, campo "solicitudProyectoEntidadFinanciadoraAjena" informado del objeto "solicitudProyectoEntidad"):Se resuelve con la pantalla [IU\-CSP\-0302\-011 \- Añadir partida de gasto a entidad financiadora ajena a la convocatoria](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-interfaz-de-usuario/iu-csp-0300-gestion-de-solicitudes/iu-csp-0305-modificar-solicitud-tipo-proyecto/iu-csp-0302-012-anadir-modificar-partida-de-gasto-a-entidad-financiadora-ajena-a-la-convocatoria.md "/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-interfaz-de-usuario/iu-csp-0300-gestion-de-solicitudes/iu-csp-0305-modificar-solicitud-tipo-proyecto/iu-csp-0302-012-anadir-modificar-partida-de-gasto-a-entidad-financiadora-ajena-a-la-convocatoria.md") |
+| Añadir nueva partida de gasto (Presupuesto entidad financiadora) | Muestra la pantalla de creación del concepto de gasto para la entidad financiadora de la convocatoria | Si la entidad es de la convocatoria (financiadora o gestora, campo "convocatoriaEntidadFinanciadora" o "convocatoriaEntidadGestora" informados del objeto "solicitudProyectoEntidad"):  Se resuelve con la pantalla [IU-CSP-0302-010 - Añadir partida de gasto a entidad financiadora de la convocatoria](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-interfaz-de-usuario/iu-csp-0300-gestion-de-solicitudes/iu-csp-0305-modificar-solicitud-tipo-proyecto/iu-csp-0302-011-anadir-modificar-partida-de-gasto-a-entidad-financiadora-de-la-convocatoria)  Si la entidad es ajena a la convocatoria (campo ajena a la convocatoria, campo "solicitudProyectoEntidadFinanciadoraAjena" informado del objeto "solicitudProyectoEntidad"):  Se resuelve con la pantalla [IU-CSP-0302-011 - Añadir partida de gasto a entidad financiadora ajena a la convocatoria](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-interfaz-de-usuario/iu-csp-0300-gestion-de-solicitudes/iu-csp-0305-modificar-solicitud-tipo-proyecto/iu-csp-0302-012-anadir-modificar-partida-de-gasto-a-entidad-financiadora-ajena-a-la-convocatoria) |
 
 ### Botones generales a la pantalla
 
-
-
 | Acciones | Descripción | Enlace CU. |
 | --- | --- | --- |
-| Guardar | Crea la entidad financiadora con la información introducida en el formulario.Al guardar una entidad financiadora se guardar la información de todos los apartados de definición de la entidad. |  |
-| Cancelar | Retorna al listado de Entidades financiadoras sin salvar los posibles cambios.Al cancelar una entidad se cancela la información de todas las pestañas de la pantalla, sin salvar los posibles cambios. |  |
-
-  
-  
-  
-  
-  
-  
-
-
-
-
-
+| Guardar | Crea la entidad financiadora con la información introducida en el formulario.  Al guardar una entidad financiadora se guardar la información de todos los apartados de definición de la entidad. |  |
+| Cancelar | Retorna al listado de Entidades financiadoras sin salvar los posibles cambios.  Al cancelar una entidad se cancela la información de todas las pestañas de la pantalla, sin salvar los posibles cambios. |  |

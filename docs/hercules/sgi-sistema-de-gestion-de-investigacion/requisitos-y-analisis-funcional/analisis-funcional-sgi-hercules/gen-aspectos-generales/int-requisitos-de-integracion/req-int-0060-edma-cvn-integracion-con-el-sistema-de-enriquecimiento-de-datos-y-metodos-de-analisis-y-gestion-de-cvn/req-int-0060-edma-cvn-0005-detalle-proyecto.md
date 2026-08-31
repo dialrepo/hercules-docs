@@ -1,10 +1,16 @@
-# Hércules : REQ\-INT\-0060\-EDMA\-CVN\-0005 \- Detalle Proyecto
+# REQ-INT-0060-EDMA-CVN-0005 - Detalle Proyecto
 
-
-
-
-
-
+|  |  |
+| --- | --- |
+| Cod. REQ | **REQ-INT-0060-EDMA-CVN-0005 - Detalle Proyecto** |
+| Ver. Objetivo |  |
+| Ver. REQ | 1.0.0 |
+| Estado | IN PROGRESS |
+| Fec. Aprobación |  |
+| Épica, historia |  |
+| Frecuencia |  |
+| Características |  |
+| M. Consumidor |  |
 
 ### Definición y objetivos
 
@@ -34,13 +40,9 @@ Parámetros de salida:
 * Listado de anualidades (Se obtiene de la entidad ProyectoAnualidadResumen)
 * Listado de notificaciones de proyectos externos del CVN asociados al proyecto (Se obtiene de la entidad NotificacionProyectoExternoCVN)
 
-  
-
-
 ### Diseño técnico
 
-En el siguiente enlace se muestra el diseño del modelo lógico y el diseño del API  [ESB \- SGI \- Proyectos](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/esb-sgi/esb-sgi-proyectos.md "/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/esb-sgi/esb-sgi-proyectos.md")  
-
+En el siguiente enlace se muestra el diseño del modelo lógico y el diseño del API  [ESB - SGI - Proyectos](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/esb-sgi/esb-sgi-proyectos)
 
 La forma de recuperar el detalle de un proyecto al ser una entidad compleja es a partir de varios servicios:
 
@@ -54,47 +56,14 @@ La forma de recuperar el detalle de un proyecto al ser una entidad compleja es a
 * GET /proyectos/{id}/anualidades
 * GET /proyectos/{id}/notificacionesproyectos
 
-  
-
-
-
-
-
-
-
-
 ### Interfaces de usuario relacionados
 
-
-
-
-
-
+![](plugins/servlet/confluence/placeholder/unknown-macro)
 
 ### Informes relacionados
 
-
-
-
-
-
+![](plugins/servlet/confluence/placeholder/unknown-macro)
 
 ### Casos de uso relacionados
 
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
+![](plugins/servlet/confluence/placeholder/unknown-macro)

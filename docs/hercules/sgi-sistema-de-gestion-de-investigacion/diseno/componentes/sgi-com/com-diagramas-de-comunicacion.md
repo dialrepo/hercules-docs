@@ -1,6 +1,4 @@
-# Hércules : COM \- Diagramas de comunicación
-
-
+# COM - Diagramas de comunicación
 
 ### Comunicados de envío inmediato
 
@@ -17,10 +15,3 @@
 #### Programados y preconfigurados en el sistema
 
 ![](/attachments/597852857/597874110.png)
-
-  
-
-
-
-
-

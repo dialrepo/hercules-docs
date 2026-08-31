@@ -1,6 +1,2 @@
-# Hércules : Gobernanza. Evolutivos
-
-
-
-
+# Gobernanza. Evolutivos
 

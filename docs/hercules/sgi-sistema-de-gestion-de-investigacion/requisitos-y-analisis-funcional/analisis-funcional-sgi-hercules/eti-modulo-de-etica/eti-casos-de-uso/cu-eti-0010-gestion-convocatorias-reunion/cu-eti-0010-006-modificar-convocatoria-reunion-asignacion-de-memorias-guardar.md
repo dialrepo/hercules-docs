@@ -1,6 +1,15 @@
-# Hércules : CU\-ETI\-0010\-006 \- Modificar Convocatoria reunión \- Asignación de memorias \- Guardar
+# CU-ETI-0010-006 - Modificar Convocatoria reunión - Asignación de memorias - Guardar
 
-
+|  |  |
+| --- | --- |
+| Cod. CU | ********CU-ETI-0010-006 - Modificar Convocatoria reunión - Asignación de memorias-  Guardar******** |
+| Ver. objetivo |  |
+| Ver. CU | 1.0.0 |
+| Estado | LIBERADO\_ |
+| Fec. Aprobación |  |
+| Épica, historia |  |
+| Actores | ACT-ETI-001-Gestor |
+| Frecuencia | Media |
 
 ### Descripción
 
@@ -10,7 +19,7 @@ Formularios de datos generales  y  de asignación de memorias a una convocator
 
 #### Actor principal
 
-ACT\-ETI\-001\-Gestor
+ACT-ETI-001-Gestor
 
 ### Precondiciones
 
@@ -43,19 +52,14 @@ Las memorias asignadas nuevas se cambian de estado a "En evaluación", "En evalu
 11. Se presentan la memoria añadida en el  listado de memorias de la reunión de convocatoria.
 12. El usuario selecciona la acción Guardar.
 13. Se añade la nueva memoria a la reunión de convocatoria y se modifican su estado a "En evaluación" o "En evaluación seguimiento anual" o "En evaluación seguimiento final".
-14. Se notifica  al investigador/solicitante de la fecha de convocatoria de su evaluación [CU\-COM\-0020 \- Generar comunicado](https://confluence.um.es/confluence/display/HERCULES/CU-COM-0020+-+Generar+comunicado "https://confluence.um.es/confluence/display/HERCULES/CU-COM-0020+-+Generar+comunicado").
+14. Se notifica  al investigador/solicitante de la fecha de convocatoria de su evaluación [CU-COM-0020 - Generar comunicado](https://confluence.um.es/confluence/display/HERCULES/CU-COM-0020+-+Generar+comunicado).
 
-### Extensiones (flujos alternativos) \- Error en negocio
+### Extensiones (flujos alternativos) - Error en negocio
 
 1. Si se ha producido algún error de validación en negocio:  
-
-	* Nueva memoria: Conflicto de intereses
-	* Eliminar memoria: Fecha actual igual o posterior a la fecha de evaluación
+   * Nueva memoria: Conflicto de intereses
+   * Eliminar memoria: Fecha actual igual o posterior a la fecha de evaluación
 2. El usuario modifica la información necesaria para realizar de forma correcta la asignación de memorias
 3. El usuario selecciona la acción Guardar.
 4. El usuario es informado del resultado positivo de la acción.
 5. Se presenta el listado de Convocatorias de reunión.
-
-
-
-

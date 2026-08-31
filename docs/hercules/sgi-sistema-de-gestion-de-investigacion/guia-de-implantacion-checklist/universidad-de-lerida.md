@@ -1,6 +1,2 @@
-# Hércules : Universidad de Lérida
-
-
-
-
+# Universidad de Lérida
 

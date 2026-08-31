@@ -1,6 +1,21 @@
-# Hércules : ETI\-Actas evaluador
+# ETI-Actas evaluador
 
-
+* [Actas](#ETIActasevaluador-Actas)
+  + [Editar acta](#ETIActasevaluador-Editaracta)
+    - [Datos generales](#ETIActasevaluador-Datosgenerales)
+    - [Memorias](#ETIActasevaluador-Memorias)
+    - [Asistentes](#ETIActasevaluador-Asistentes)
+    - [Comentarios](#ETIActasevaluador-Comentarios)
+      * [Añadir comentario](#ETIActasevaluador-Añadircomentario)
+      * [Editar comentario](#ETIActasevaluador-Editarcomentario)
+      * [Eliminar comentario](#ETIActasevaluador-Eliminarcomentario)
+  + [Enviar comentarios a secretaría](#ETIActasevaluador-Enviarcomentariosasecretaría)
+  + [Ver acta](#ETIActasevaluador-Veracta)
+    - [Datos generales](#ETIActasevaluador-Datosgenerales.1)
+    - [Memorias](#ETIActasevaluador-Memorias.1)
+    - [Asistentes](#ETIActasevaluador-Asistentes.1)
+    - [Comentarios](#ETIActasevaluador-Comentarios.1)
+  + [Exportar](#ETIActasevaluador-Exportar)
 
 ## Actas
 
@@ -8,28 +23,20 @@ Esta opción del menú permite al evaluador/a, acceder al listado de actas de su
 
 La opción del menú "Actas" muestra en la parte superior de la pantalla el buscador y en la parte inferior el resultado de la búsqueda sin aplicar ningún filtro tal como muestra la siguiente imagen.
 
-![](/attachments/597853573/842039335.png)  
-
-
-  
-
-
-  
-
+![](/attachments/597853573/842039335.png)
 
 Los campos disponibles en el formulario de la búsqueda son:
 
 * **Comité**: es un desplegable con las siguiente opciones:
-	+ CEI
-	+ CEEA
-	+ CBE
+  + CEI
+  + CEEA
+  + CBE
 * **Fecha evaluación inicio:** campo para introducir la fecha la cual se va a tomar como referencia para obtener las actas cuya fecha de evaluación sea mayor o igual a esta fecha.
 * **Fecha evaluación fin:** campo para introducir la fecha la cual se va a tomar como referencia para obtener las actas cuya fecha de evaluación sea menor o igual a esta fecha.
 * **Nº Acta:** número del acta que se quiere buscar
 * **Estado**: estado del acta, los posibles valores son:  
-
-	+ En elaboración: se pueden realizar cambios en el acta, en la convocatoria de reunión y en las evaluaciones/seguimientos asociadas a ella.
-	+ Finalizada: no se pueden realizar cambios en el acta, ni en la convocatoria de reunión ni en las evaluaciones/seguimientos asociadas a ella.
+  + En elaboración: se pueden realizar cambios en el acta, en la convocatoria de reunión y en las evaluaciones/seguimientos asociadas a ella.
+  + Finalizada: no se pueden realizar cambios en el acta, ni en la convocatoria de reunión ni en las evaluaciones/seguimientos asociadas a ella.
 * **Comentarios enviados**: Indica si los comentarios realizados sobre el acta han sido remitidos a Secretaría.
 
 Tras pulsar el botón “Buscar”, se muestra el listado de actas que cumplan con los parámetros introducidos en el formulario y que sean actas pertenecientes al comité donde la persona que ha introducido sus credenciales en la aplicación sea un miembro activo del comité.
@@ -44,25 +51,21 @@ Desde este listado el evaluador/a puede realizar las siguientes acciones:
 * **Enviar comentarios a secretaría**: representada por el icono ![](/attachments/597853573/842039336.png) esta acción permite remitir a Secretaría los comentarios aportados al acta. La acción solo estará disponible una vez que se hubieran añadido uno o más comentarios sobre el acta.
 * **Exportar**: este botón representado por el icono  ![](/attachments/597853573/597879935.png) y situado en la parte inferior  de la pantalla en el "Área de acciones", permite la generación del informe asociado al listado de actas.
 
-  
-
-
 A continuación se detalla el significado de cada una de las columnas de información del listado:
 
 * **Comité:** comité que va a realizar la evaluación de le memoria.
 * **Fecha evaluación:** fecha de la convocatoria de reunión.
 * **Nº acta:** número del acta.
 * **Convocatoria:** tipo de convocatoria, puede tener uno de los siguientes valores:
-	+ Ordinaria: si una convocatoria es de este tipo únicamente se evaluarán formularios de memoria y retrospectivas.
-	+ Extraordinaria: si una convocatoria es de este tipo únicamente se evaluarán formularios de memoria y retrospectivas.
-	+ Seguimiento: si una convocatoria es de este tipo únicamente se evaluarán formularios de seguimiento anual o final de las memorias.
-* **Nº iniciales:** número de memorias iniciales (nuevas) que se van a revisar o se han revisado en la reunión de evaluación asociada a la acta**,** es decir, las de revisión 1\.
-* **Nº revisiones:** número de memorias reevaluadas que se van a revisar o se han revisado en la reunión de evaluación asociada a la acta, tienen una versión mayor que 1\.
+  + Ordinaria: si una convocatoria es de este tipo únicamente se evaluarán formularios de memoria y retrospectivas.
+  + Extraordinaria: si una convocatoria es de este tipo únicamente se evaluarán formularios de memoria y retrospectivas.
+  + Seguimiento: si una convocatoria es de este tipo únicamente se evaluarán formularios de seguimiento anual o final de las memorias.
+* **Nº iniciales:** número de memorias iniciales (nuevas) que se van a revisar o se han revisado en la reunión de evaluación asociada a la acta**,** es decir, las de revisión 1.
+* **Nº revisiones:** número de memorias reevaluadas que se van a revisar o se han revisado en la reunión de evaluación asociada a la acta, tienen una versión mayor que 1.
 * **Nº total:** número de iniciales mas el número de revisiones.
 * **Estado:** estado del acta, los posibles valores son:  
-
-	+ En elaboración: se pueden realizar cambios en el acta y en las evaluaciones/seguimientos asociadas a ella.
-	+ Finalizada: no se pueden realizar cambios en el acta ni en las evaluaciones asociadas a ella.
+  + En elaboración: se pueden realizar cambios en el acta y en las evaluaciones/seguimientos asociadas a ella.
+  + Finalizada: no se pueden realizar cambios en el acta ni en las evaluaciones asociadas a ella.
 
 ### Editar acta
 
@@ -71,12 +74,6 @@ La edición de un acta por parte de un evaluador/a (el botón del icono del láp
 La edición de una acta esta formada por los siguientes bloques de información:
 
 ![](/attachments/597853573/842039337.png)
-
-  
-
-
-  
-
 
 * **Datos generales**: conjunto de datos de información general sobre el acta. El evaluador/a no podrá modificar ningún dato de esta pantalla, siempre la visualiza en modo consulta.
 * **Memorias**: conjunto de memorias que se van a evaluar o se han evaluado en la convocatoria de reunión asociada al acta. El evaluador/a no podrá modificar ningún dato de esta pantalla, siempre la visualiza en modo consulta.
@@ -107,20 +104,20 @@ A continuación se detalla el significado de cada una de las columnas del listad
 * **Referencia memoria:** código identificativo de la memoria.
 * **Versión:** versión de la memoria.
 * **Dictamen:** dictamen obtenido por la memoria. Dependiendo del tipo de evaluación el valor del dictamen podrá ser.
-	+ Si el tipo de evaluación es Memoria:
-		- Favorable
-		- Favorable pendiente de revisión mínima
-		- Pendiente de correcciones
-		- No procede evaluar
-	+ Si el tipo de evaluación es Retrospectiva:
-		- Favorable
-		- Desfavorable
-	+ Si el tipo de evaluación es Seguimiento anual:
-		- Favorable
-		- Solicitud de modificaciones
-	+ Si el tipo de evaluación es Seguimiento final:
-		- Favorable
-		- Solicitud de aclaraciones
+  + Si el tipo de evaluación es Memoria:
+    - Favorable
+    - Favorable pendiente de revisión mínima
+    - Pendiente de correcciones
+    - No procede evaluar
+  + Si el tipo de evaluación es Retrospectiva:
+    - Favorable
+    - Desfavorable
+  + Si el tipo de evaluación es Seguimiento anual:
+    - Favorable
+    - Solicitud de modificaciones
+  + Si el tipo de evaluación es Seguimiento final:
+    - Favorable
+    - Solicitud de aclaraciones
 * **Informe:**pdf con el informe de evaluación o con el informe favorable dependiendo del dictamen de la memoria.
 
 #### Asistentes
@@ -131,7 +128,7 @@ Listado con los miembros del comité indicando la asistencia o no a la reunión 
 
 A continuación se detalla el significado de cada una de las columnas del listado:
 
-* **E\-mail:** correo electrónico del miembro del comité.
+* **E-mail:** correo electrónico del miembro del comité.
 * **Nombre y apellidos:** nombre y apellidos del miembro del comité.
 * **Asistencia:** se indica con el valor "Sí" la asistencia a la reunión y con un valor "No" la no asistencia.
 * **Motivo:** motivo de la ausencia o no asistencia del miembro del equipo a la reunión.
@@ -145,15 +142,17 @@ Listado de comentarios aportados por los evaluadores/as posteriores a la reunió
 Desde este listado el evaluador/a puede realizar las siguientes acciones:
 
 1. **Añadir comentario**:
-	1. Este botón se encuentra en la parte inferior del listado de comentarios, permite al evaluador/a introducir un nuevo comentario al acta. El botón estará activo cuando se den las dos circunstancias siguientes
-		* Todas las memorias incluidas en la convocatoria de reunión con la que se corresponde el acta  deben tener un dictamen asignado.
-		* El/la evaluador/a aún no enviado los comentarios añadidos al acta a Secretaría.En caso de que alguna memoria incluida en la convocatoria de reunión a la que pertenece el acta aún no disponga de dictamen o en el caso en que el/la evaluador/a ya haya enviado los comentarios del acta a secretaría, el botón se mostrará deshabilitado:
+   1. Este botón se encuentra en la parte inferior del listado de comentarios, permite al evaluador/a introducir un nuevo comentario al acta. El botón estará activo cuando se den las dos circunstancias siguientes
+      * Todas las memorias incluidas en la convocatoria de reunión con la que se corresponde el acta  deben tener un dictamen asignado.
+      * El/la evaluador/a aún no enviado los comentarios añadidos al acta a Secretaría.
+
+   En caso de que alguna memoria incluida en la convocatoria de reunión a la que pertenece el acta aún no disponga de dictamen o en el caso en que el/la evaluador/a ya haya enviado los comentarios del acta a secretaría, el botón se mostrará deshabilitado:
 
 ![](/attachments/597853573/597879922.png)
 
-**2\. Editar:** este botón representado por el icono ![](/attachments/597853573/597879931.png) y situado en la última columna "Acciones" de la tabla, permite al evaluador/a modificar los datos del comentario. Los comentarios solamente podrán ser modificados mientras no hubieran sido remitidos a secretaría. La acción sólo está disponible sobre los comentarios introducidos por el/la propio/a evaluador/a. Los comentarios aportados por otros miembros del equipo evaluador no podrán ser modificados. Para los comentarios de otros miembros o en el caso de que el/la evaluador/a ya hubiera remitido sus comentarios a secretaría la acción editar pasará a ser consultar ![](/attachments/597853573/597879978.png)
+**2. Editar:** este botón representado por el icono ![](/attachments/597853573/597879931.png) y situado en la última columna "Acciones" de la tabla, permite al evaluador/a modificar los datos del comentario. Los comentarios solamente podrán ser modificados mientras no hubieran sido remitidos a secretaría. La acción sólo está disponible sobre los comentarios introducidos por el/la propio/a evaluador/a. Los comentarios aportados por otros miembros del equipo evaluador no podrán ser modificados. Para los comentarios de otros miembros o en el caso de que el/la evaluador/a ya hubiera remitido sus comentarios a secretaría la acción editar pasará a ser consultar ![](/attachments/597853573/597879978.png)
 
-**3\. Eliminar**: este botón representado por el icono ![](/attachments/597853573/597879920.png)y situado en la última columna "Acciones" de la tabla, permite evaluador/a eliminar el comentario. Los comentarios solamente podrán ser eliminados mientras no hubieran sido remitidos a secretaría. La acción sólo está disponible sobre los comentarios introducidos por el/la propio/a evaluador/a. Los comentarios aportados por otros miembros del equipo evaluador no podrán ser eliminados. 
+**3. Eliminar**: este botón representado por el icono ![](/attachments/597853573/597879920.png)y situado en la última columna "Acciones" de la tabla, permite evaluador/a eliminar el comentario. Los comentarios solamente podrán ser eliminados mientras no hubieran sido remitidos a secretaría. La acción sólo está disponible sobre los comentarios introducidos por el/la propio/a evaluador/a. Los comentarios aportados por otros miembros del equipo evaluador no podrán ser eliminados. 
 
 A continuación se detalla el significado de cada una de las columnas del listado:
 
@@ -181,19 +180,17 @@ A continuación se describe cada uno de los campos solicitados en este formulari
 
 Al pulsar sobre el botón "Añadir" el comentario se añadirá al listado de comentarios de la acta mostrando el icono de la admiración en el menú de "Comentarios" y el mensaje de información en la parte de abajo de la pantalla en la zona del "Área de acciones" para recordar al evaluador/a que debe de pulsar el botón GUARDAR para que los cambios realizados (en este caso un nuevo comentario) se consoliden.
 
- ![](/attachments/597853573/597879917.png)  
-
+ ![](/attachments/597853573/597879917.png)
 
 Si se pulsa el botón "GUARDAR" se modifica la acta con los cambios realizados en la pantalla Comentarios (única pantalla donde el evaluador/a puede realizar cambios)
 
 Se muestra un mensaje de que la acta se ha modificado correctamente igual que el de la siguiente imagen.
 
-![](/attachments/597853573/597879916.png)  
-
+![](/attachments/597853573/597879916.png)
 
 ##### Editar comentario
 
-Se abre una pantalla que muestra un formulario con los datos del comentario, es idéntico al utilizado durante el alta de un comentario, dejando la posibilidad de modificar cualquiera de los campos del formulario (ver funcionalidad descrita en el apartado [Añadir comentario](https://confluence.um.es/confluence/display/HERCULES/ETI-Actas+evaluador#ETIActasevaluador-A%C3%B1adircomentario "https://confluence.um.es/confluence/display/HERCULES/ETI-Actas+evaluador#ETIActasevaluador-A%C3%B1adircomentario") para mas detalle).
+Se abre una pantalla que muestra un formulario con los datos del comentario, es idéntico al utilizado durante el alta de un comentario, dejando la posibilidad de modificar cualquiera de los campos del formulario (ver funcionalidad descrita en el apartado [Añadir comentario](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/mdu-perfil-unidad-de-gestion/mdu-perfil-unidad-de-gestion-modulo-eti/eti-actas-evaluador#ETIActasevaluador-A%C3%B1adircomentario) para mas detalle).
 
 En la siguiente imagen se muestra el formulario de edición de un comentario.
 
@@ -217,48 +214,27 @@ Cuando se pulsa el icono de eliminar comentario se muestra una ventana emergente
 
 En caso de responder afirmativamente (botón "Aceptar") el comentario desaparecerá del listado de comentarios. Se muestra el icono de la admiración en el menú de "Comentarios" y el mensaje de información en la parte de abajo de la pantalla en la zona del "Área de acciones" para recordar al evaluador/a que debe de pulsar el botón GUARDAR para que los cambios realizados (en este caso la eliminación de un comentario) se consoliden.
 
-  
-
-
 ### Enviar comentarios a secretaría
 
 Una vez que se añaden los comentarios sobre un acta, éstos deberán ser remitidos a secretaría. Para ello desde la pantalla inicial del listado de actas se dispone del botón de acción "enviar comentarios a secretaría" ![](/attachments/597853573/842039336.png)
 
 ![](/attachments/597853573/842039341.png)
 
-  
-
-
 Tras pulsar el icono de acción ![](/attachments/597853573/842039336.png)![](https://confluence.treelogic.com/download/thumbnails/141927523/enviar_secretaria.png?version=1&modificationDate=1697728564602&api=v2)se mostrará un mensaje de confirmación:
 
 ![](/attachments/597853573/842039344.png)
-
-  
-
 
 Si pulsa el botón Aceptar los comentarios son remitidos a Secretaría, pasando con ello a ser visibles para el personal de gestión (Secretaría) y para el resto de miembros del equipo evaluador. Se mostrará un mensaje informativo cuando la acción de enviar haya finalizado.
 
 ![](/attachments/597853573/842039345.png)
 
-  
-
-
 Una vez que han sido enviados los comentarios al acta, ésta pasará a estar solamente en modo consulta para el/la evaluador/a. La columna "Comentarios enviados" pasará a tomar el valor "Sí" recordando que los comentarios ya han sido remitida a secretaría.
 
 ![](/attachments/597853573/842039346.png)
 
-  
-
-
 Al acceder al detalle del actas se podrán ver los comentarios remitidos pero no se podrán ni modificar ni eliminar, así como tampoco añadir nuevos comentarios.
 
 ![](/attachments/597853573/842039347.png)
-
-  
-
-
-  
-
 
 ### Ver acta
 
@@ -297,20 +273,20 @@ A continuación se detalla el significado de cada una de las columnas del listad
 * **Referencia memoria:** código identificativo de la memoria.
 * **Versión:** versión de la memoria.
 * **Dictamen:** dictamen obtenido por la memoria. Dependiendo del tipo de evaluación el valor del dictamen podrá ser.
-	+ Si el tipo de evaluación es Memoria:
-		- Favorable
-		- Favorable pendiente de revisión mínima
-		- Pendiente de correcciones
-		- No procede evaluar
-	+ Si el tipo de evaluación es Retrospectiva:
-		- Favorable
-		- Desfavorable
-	+ Si el tipo de evaluación es Seguimiento anual:
-		- Favorable
-		- Solicitud de modificaciones
-	+ Si el tipo de evaluación es Seguimiento final:
-		- Favorable
-		- Solicitud de aclaraciones
+  + Si el tipo de evaluación es Memoria:
+    - Favorable
+    - Favorable pendiente de revisión mínima
+    - Pendiente de correcciones
+    - No procede evaluar
+  + Si el tipo de evaluación es Retrospectiva:
+    - Favorable
+    - Desfavorable
+  + Si el tipo de evaluación es Seguimiento anual:
+    - Favorable
+    - Solicitud de modificaciones
+  + Si el tipo de evaluación es Seguimiento final:
+    - Favorable
+    - Solicitud de aclaraciones
 * **Informe:**pdf con el informe de evaluación o con el informe favorable dependiendo del dictamen de la memoria.
 
 #### Asistentes
@@ -321,7 +297,7 @@ Listado con los miembros del comité indicando la asistencia o no a la reunión 
 
 A continuación se detalla el significado de cada una de las columnas del listado:
 
-* **E\-mail:** correo electrónico del miembro del comité.
+* **E-mail:** correo electrónico del miembro del comité.
 * **Nombre y apellidos:** nombre y apellidos del miembro del comité.
 * **Asistencia:** se indica con el valor "Sí" la asistencia a la reunión y con un valor "No" la no asistencia.
 * **Motivo:** motivo de la ausencia o no asistencia del miembro del equipo a la reunión.
@@ -345,45 +321,37 @@ A continuación se detalla el significado de cada una de las columnas del listad
 
 Si se pulsa el icono "Exportar" ![](/attachments/597853573/597879935.png) situado en la parte inferior  de la pantalla en el "Área de acciones", se muestra una ventana emergente que permite seleccionar el formato de exportación y la información a incluir en la generación del informe asociado al listado de actas.
 
-![](/attachments/597853573/597879945.png)  
-
+![](/attachments/597853573/597879945.png)
 
 A continuación se detalla el significado de cada uno de los campos del formulario:
 
 * **Seleccione el tipo de exportación**: indica el tipo del formato del fichero exportado. Se permite dos posibles formatos:
-	+ XLSX
-	+ CSV
+  + XLSX
+  + CSV
 * **Seleccione los apartado a incluir en el informe**: por defecto se incluyen todos los apartados de información que forman una acta:
-	+ **Datos generales**: conjunto de datos de información general sobre la acta. Este apartado no se muestra para marcar o desmarcar porque siempre se incluye en la exportación. Contiene los siguientes campos:  
-	
-		- Comité**:**comité que va a realizar las evaluaciones de las memorias asignadas a la convocatoria de reunión asociada al acta.
-		- Fecha evaluación**:** fecha de celebración de la convocatoria de reunión.
-		- Nº acta: número de la acta.
-		- Tipo convocatoria: indica el tipo de la convocatoria. Campo con tres posibles valores:
-			* Ordinaria
-			* Extraordinaria
-			* Seguimiento
-		- Nº iniciales: número de memorias iniciales (nuevas) que se van a revisar o se han revisado en la reunión de evaluación asociada al acta.
-		- Nº revisiones: Número de memorias reevaluadas que se van a revisar o se han revisado en la reunión de evaluación asociada a la acta.
-		- Nº total: la suma suma del número de iniciales y número de revisiones
-		- Estado: estado de la acta. campos con dos posibles valores:
-			* En elaboración
-			* Finalizada
-	+ **Memorias**: conjunto de memorias evaluadas en la acta. Por cada memoria se exportan los siguientes campos:  
-	
-		- Referencia: código identificativo de la memoria.
-		- Versión: versión de la evaluación.
-		- Dictamen: dictamen obtenido por la memoria en la evaluación.
+  + **Datos generales**: conjunto de datos de información general sobre la acta. Este apartado no se muestra para marcar o desmarcar porque siempre se incluye en la exportación. Contiene los siguientes campos:  
+    - Comité**:**comité que va a realizar las evaluaciones de las memorias asignadas a la convocatoria de reunión asociada al acta.
+    - Fecha evaluación**:** fecha de celebración de la convocatoria de reunión.
+    - Nº acta: número de la acta.
+    - Tipo convocatoria: indica el tipo de la convocatoria. Campo con tres posibles valores:
+      * Ordinaria
+      * Extraordinaria
+      * Seguimiento
+    - Nº iniciales: número de memorias iniciales (nuevas) que se van a revisar o se han revisado en la reunión de evaluación asociada al acta.
+    - Nº revisiones: Número de memorias reevaluadas que se van a revisar o se han revisado en la reunión de evaluación asociada a la acta.
+    - Nº total: la suma suma del número de iniciales y número de revisiones
+    - Estado: estado de la acta. campos con dos posibles valores:
+      * En elaboración
+      * Finalizada
+  + **Memorias**: conjunto de memorias evaluadas en la acta. Por cada memoria se exportan los siguientes campos:  
+    - Referencia: código identificativo de la memoria.
+    - Versión: versión de la evaluación.
+    - Dictamen: dictamen obtenido por la memoria en la evaluación.
 
 Se puede desmarcar la opción  "Memorias" sino se desea que se exporten los datos de las memorias incluidas en la acta. Los datos generales de la acta siempre se exportarán.
 
-![](/attachments/597853573/597879950.png)  
-
+![](/attachments/597853573/597879950.png)
 
 Una vez seleccionado el formato y los bloques de información al pulsar sobre el botón "**Exportar**" se genera el informe asociado al listado de acuerdo al formato de exportación seleccionado. A continuación se muestra una imagen del fichero exportado.
 
 ![](/attachments/597853573/597879948.png)
-
-
-
-

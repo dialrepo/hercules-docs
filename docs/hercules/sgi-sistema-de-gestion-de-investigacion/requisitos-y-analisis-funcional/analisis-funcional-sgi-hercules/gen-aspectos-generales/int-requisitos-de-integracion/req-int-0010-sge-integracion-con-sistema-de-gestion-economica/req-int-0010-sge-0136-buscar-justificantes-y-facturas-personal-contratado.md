@@ -1,25 +1,22 @@
-# Hércules : REQ\-INT\-0010\-SGE\-0136 \- Buscar justificantes y facturas \- Personal contratado
+# REQ-INT-0010-SGE-0136 - Buscar  justificantes y facturas - Personal contratado
 
-
-
-
-
-
+|  |  |
+| --- | --- |
+| Cod. REQ | **REQ-INT-0010-SGE-0136 - Buscar justificantes y facturas - Personal contratado** |
+| Ver. Objetivo |  |
+| Ver. REQ | 1.0.0 |
+| Estado | IN PROGRESS |
+| Fec. Aprobación |  |
+| Épica, historia |  |
+| Frecuencia |  |
+| Características |  |
+| M. Consumidor |  |
 
 ### Definición y objetivos
 
 Consultar los justificantes de gastos asociados al personal contratado y que procederán de la integración con el SGE. Toda la información económica del proyecto se presentará agrupada por anualidad (siempre que en el proyecto se hubiera recogido el desglose por anualidad), de forma que  se podrán seleccionar una o varias anualidades para las que recuperar el detalle de los gastos asociados a personal  contratado
 
 El detalle de campos a recoger de cada gastos asociados a personal contratado será común a todos ellos y deberá ser configurado en tiempo de implantación, pues esta información debe ser recuperada desde el SGE por medio de los mecanismos de integración disponibles.
-
-  
-
-
-
-
-
-
-
 
 ### Descripción técnica integración
 
@@ -42,60 +39,40 @@ Parámetros de salida: listado de facturas y gasto donde para cada una se muest
 * Clasificación SGE
 * Código económico
 * Listado de columnas a mostrar de cada gasto. Las columnas serán devueltas por el SGE y estarán formadas por dos campos:
-	+ Id: Indica la columna que es (previamente se llamará a otro método de la API que devuelve el listado de columnas con los valores, id, nombre, acumulable)
-	+ Valor: Valor a mostrar en dicha columna
+  + Id: Indica la columna que es (previamente se llamará a otro método de la API que devuelve el listado de columnas con los valores, id, nombre, acumulable)
+  + Valor: Valor a mostrar en dicha columna
 
 ### Diseño técnico
 
-En el siguiente enlace se muestra el diseño del modelo lógico y el diseño de la API del Sistema de Gestión Económica y, en concreto, de la Ejecución económica de proyectos: [SGI \- ESB \- SGE \- Ejecución económica](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sge/sgi-esb-sge-ejecucion-economica/index.md "/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sge/sgi-esb-sge-ejecucion-economica/index.md").
+En el siguiente enlace se muestra el diseño del modelo lógico y el diseño de la API del Sistema de Gestión Económica y, en concreto, de la Ejecución económica de proyectos: [SGI - ESB - SGE - Ejecución económica](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sge/sgi-esb-sge-ejecucion-economica).
 
 Los servicios concretos del API que cubren este requisito son:
 
-* [SGI \- ESB \- SGE \- Ejecución económica \- Consultar columnas](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sge/sgi-esb-sge-ejecucion-economica/sgi-esb-sge-ejecucion-economica-buscar-columnas-de-datos-economicos.md "/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sge/sgi-esb-sge-ejecucion-economica/sgi-esb-sge-ejecucion-economica-buscar-columnas-de-datos-economicos.md") pasando por parámetro:
-	+ proyectoId (identificador del proyecto económico)
-	+ anualidad (se enviaría un anualidad in () con las anualidades seleccionadas en la pantalla)
-	+ tipoOperacion (FJP)
-	+ fechaDevengo
-	+ fechaContabilizacion
-	+ fechaPago
-	+ reducida (será true para el botón Mostrar y cuando sea el botón Exportar será false)
-* [SGI \- ESB \- SGE \- Ejecución económica \- Consultar datos económicos](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sge/sgi-esb-sge-ejecucion-economica/sgi-esb-sge-ejecucion-economica-buscar-datos-economicos.md "/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sge/sgi-esb-sge-ejecucion-economica/sgi-esb-sge-ejecucion-economica-buscar-datos-economicos.md") pasando por parámetro:
-	+ proyectoId (identificador del proyecto económico)
-	+ anualidad (se enviaría un anualidad in () con las anualidades seleccionadas en la pantalla)
-	+ tipoOperacion (FJP)
-	+ fechaDevengo
-	+ fechaContabilizacion
-	+ fechaPago
-	+ reducida (será true para el botón Mostrar y cuando sea el botón Exportar será false)
-
-
-
-
-
+* [SGI - ESB - SGE - Ejecución económica - Consultar columnas](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sge/sgi-esb-sge-ejecucion-economica/sgi-esb-sge-ejecucion-economica-buscar-columnas-de-datos-economicos) pasando por parámetro:
+  + proyectoId (identificador del proyecto económico)
+  + anualidad (se enviaría un anualidad in () con las anualidades seleccionadas en la pantalla)
+  + tipoOperacion (FJP)
+  + fechaDevengo
+  + fechaContabilizacion
+  + fechaPago
+  + reducida (será true para el botón Mostrar y cuando sea el botón Exportar será false)
+* [SGI - ESB - SGE - Ejecución económica - Consultar datos económicos](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sge/sgi-esb-sge-ejecucion-economica/sgi-esb-sge-ejecucion-economica-buscar-datos-economicos) pasando por parámetro:
+  + proyectoId (identificador del proyecto económico)
+  + anualidad (se enviaría un anualidad in () con las anualidades seleccionadas en la pantalla)
+  + tipoOperacion (FJP)
+  + fechaDevengo
+  + fechaContabilizacion
+  + fechaPago
+  + reducida (será true para el botón Mostrar y cuando sea el botón Exportar será false)
 
 ### Interfaces de usuario relacionados
 
-
-
-
-
-
+![](plugins/servlet/confluence/placeholder/unknown-macro)
 
 ### Informes relacionados
 
-
-
-
-
-
+![](plugins/servlet/confluence/placeholder/unknown-macro)
 
 ### Casos de uso relacionados
 
-
-
-
-
-
-
-
-
+![](plugins/servlet/confluence/placeholder/unknown-macro)

@@ -1,10 +1,16 @@
-# Hércules : REQ\-INT\-0100\-SGDOC\-0050 \- Consultar documento
+# REQ-INT-0100-SGDOC-0050 - Consultar documento
 
-
-
-
-
-
+|  |  |
+| --- | --- |
+| Cod. REQ | **REQ-INT-0100-SGDOC-0050 - Consultar documento** |
+| Ver. Objetivo |  |
+| Ver. REQ | 1.0.0 |
+| Estado |  |
+| Fec. Aprobación |  |
+| Épica, historia |  |
+| Frecuencia |  |
+| Características |  |
+| M. Consumidor |  |
 
 ### Definición y objetivos
 
@@ -28,34 +34,14 @@ Parámetros de salida: se devolverá el registro del documento con sus metadatos
 
 ### Diseño técnico
 
-En el siguiente enlace se muestra el diseño del modelo lógico y el diseño de la API del Sistema de Gestión Documental [SGI \- ESB \- SGDOC](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sgdoc/index.md "/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sgdoc/index.md").
+En el siguiente enlace se muestra el diseño del modelo lógico y el diseño de la API del Sistema de Gestión Documental [SGI - ESB - SGDOC](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sgdoc).
 
-El servicio del API que cubre este requisito es [ESB \- SGI \- Documentos \- Consultar detalle](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sgdoc/esb-sgi-documentos-consultar-detalle.md "/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sgdoc/esb-sgi-documentos-consultar-detalle.md").
-
-  
-
-
-
-
-
-
-
+El servicio del API que cubre este requisito es [ESB - SGI - Documentos - Consultar detalle](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sgdoc/esb-sgi-documentos-consultar-detalle).
 
 ### Interfaces de usuario relacionados
 
-
-
-
-
-
+![](plugins/servlet/confluence/placeholder/unknown-macro)
 
 ### Casos de uso relacionados
 
-
-
-
-
-
-
-
-
+![](plugins/servlet/confluence/placeholder/unknown-macro)

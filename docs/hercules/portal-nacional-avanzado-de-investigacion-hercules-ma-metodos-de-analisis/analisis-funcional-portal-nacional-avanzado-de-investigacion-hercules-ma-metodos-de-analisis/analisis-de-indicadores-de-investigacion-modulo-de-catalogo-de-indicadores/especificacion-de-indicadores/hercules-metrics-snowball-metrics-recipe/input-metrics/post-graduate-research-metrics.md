@@ -1,6 +1,6 @@
-# Hércules : Post\-Graduate Research Metrics
+# Post-Graduate Research Metrics
 
-
+* [Research Student Funding](#PostGraduateResearchMetrics-ResearchStudentFunding)
 
 ### Research Student Funding
 
@@ -10,13 +10,12 @@ To define:
 
 Data source: University systems
 
-
-
-|  | User | Privacy | Ranking |
+|  |  |  |  |
 | --- | --- | --- | --- |
+|  | User | Privacy | Ranking |
 | **Snowball metrics** |  |  |  |
-| Number of active students per quarter\-year | Any | Public |  |
-| Proportion of active students per quarter\-year | Any | Public |  |
+| Number of active students per quarter-year | Any | Public |  |
+| Proportion of active students per quarter-year | Any | Public |  |
 | **Data breakdown or filters** |  |  |  |
 | Funder type (Snowball denominator) | Any | Public |  |
 | Funding type (Snowball denominator) | Any | Public |  |
@@ -27,9 +26,5 @@ Data source: University systems
 | Nationality | Any | Public |  |
 | Region | Any | Public |  |
 | Type of student: athlete, disabled, from highschool, from professional training | Any | Public |  |
-| Tutor knowledge area | Non\-researcher staffStaff from public administration | Restricted |  |
-| Student knowledge area | Non\-researcher staffStaff from public administration | Restricted |  |
-
-
-
-
+| Tutor knowledge area | Non-researcher staff  Staff from public administration | Restricted |  |
+| Student knowledge area | Non-researcher staff  Staff from public administration | Restricted |  |

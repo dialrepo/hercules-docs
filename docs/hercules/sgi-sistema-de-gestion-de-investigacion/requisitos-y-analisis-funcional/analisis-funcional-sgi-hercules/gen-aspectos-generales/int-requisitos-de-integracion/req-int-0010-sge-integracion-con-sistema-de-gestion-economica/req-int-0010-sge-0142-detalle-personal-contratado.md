@@ -1,23 +1,20 @@
-# Hércules : REQ\-INT\-0010\-SGE\-0142 \- Detalle personal contratado
+# REQ-INT-0010-SGE-0142 - Detalle personal contratado
 
-
-
-
-
-
+|  |  |
+| --- | --- |
+| Cod. REQ | **REQ-INT-0010-SGE-0142 - Detalle personal contratado** |
+| Ver. Objetivo |  |
+| Ver. REQ | 1.0.0 |
+| Estado | IN PROGRESS |
+| Fec. Aprobación |  |
+| Épica, historia |  |
+| Frecuencia |  |
+| Características |  |
+| M. Consumidor |  |
 
 ### Definición y objetivos
 
-Detalle de todos los campos de un justificante/factura asociado a un contrato, proporcionado por el SGE. Los campos devueltos serán una listado de campos formado por nombre \- valor, donde nombre será el nombre del campo a mostrar y el valor, el propio valor del campo.
-
-  
-
-
-
-
-
-
-
+Detalle de todos los campos de un justificante/factura asociado a un contrato, proporcionado por el SGE. Los campos devueltos serán una listado de campos formado por nombre - valor, donde nombre será el nombre del campo a mostrar y el valor, el propio valor del campo.
 
 ### Descripción técnica integración
 
@@ -40,44 +37,20 @@ Parámetros de salida:
 
 ### Diseño técnico
 
-En el siguiente enlace se muestra el diseño del modelo lógico y el diseño de la API del Sistema de Gestión Económica y, en concreto, de la Ejecución económica de proyectos: [SGI \- ESB \- SGE \- Ejecución económica](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sge/sgi-esb-sge-ejecucion-economica/index.md "/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sge/sgi-esb-sge-ejecucion-economica/index.md").
+En el siguiente enlace se muestra el diseño del modelo lógico y el diseño de la API del Sistema de Gestión Económica y, en concreto, de la Ejecución económica de proyectos: [SGI - ESB - SGE - Ejecución económica](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sge/sgi-esb-sge-ejecucion-economica).
 
-El servicio concreto del API que cubre este requisito es [SGI \- ESB \- SGE \- Ejecución económica \- Consultar detalle de dato económico](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sge/sgi-esb-sge-ejecucion-economica/sgi-esb-sge-ejecucion-economica-consultar-detalle-de-dato-economico.md "/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sge/sgi-esb-sge-ejecucion-economica/sgi-esb-sge-ejecucion-economica-consultar-detalle-de-dato-economico.md") pasando el identificador del justificante/factura y como parámetro:
+El servicio concreto del API que cubre este requisito es [SGI - ESB - SGE - Ejecución económica - Consultar detalle de dato económico](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sge/sgi-esb-sge-ejecucion-economica/sgi-esb-sge-ejecucion-economica-consultar-detalle-de-dato-economico) pasando el identificador del justificante/factura y como parámetro:
 
-* tipoOperacion \=\= "FJP"
-
-  
-
-
-
-
-
-
-
+* tipoOperacion == "FJP"
 
 ### Interfaces de usuario relacionados
 
-
-
-
-
-
+![](plugins/servlet/confluence/placeholder/unknown-macro)
 
 ### Informes relacionados
 
-
-
-
-
-
+![](plugins/servlet/confluence/placeholder/unknown-macro)
 
 ### Casos de uso relacionados
 
-
-
-
-
-
-
-
-
+![](plugins/servlet/confluence/placeholder/unknown-macro)

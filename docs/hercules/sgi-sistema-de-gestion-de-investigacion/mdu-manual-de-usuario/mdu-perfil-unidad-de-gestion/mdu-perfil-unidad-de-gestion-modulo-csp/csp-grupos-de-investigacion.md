@@ -1,24 +1,73 @@
-# Hércules : CSP\-Grupos de investigación
+# CSP-Grupos de investigación
 
+* [1. Introducción](#CSPGruposdeinvestigación-1.Introducción)
+  + [1.1 Detalle de un grupo de investigación](#CSPGruposdeinvestigación-1.1Detalledeungrupodeinvestigación)
+* [2. Listado y búsqueda de grupos de investigación](#CSPGruposdeinvestigación-2.Listadoybúsquedadegruposdeinvestigación)
+  + [2.1 Buscador simple](#CSPGruposdeinvestigación-2.1Buscadorsimple)
+  + [2.2 Buscador ampliado](#CSPGruposdeinvestigación-2.2Buscadorampliado)
+  + [2.3 Exportación de grupos de investigación](#CSPGruposdeinvestigación-2.3Exportacióndegruposdeinvestigación)
+* [3. Añadir nuevo grupo de investigación](#CSPGruposdeinvestigación-3.Añadirnuevogrupodeinvestigación)
+* [4. Modificar un grupo de investigación](#CSPGruposdeinvestigación-4.Modificarungrupodeinvestigación)
+  + [4.1 Datos generales](#CSPGruposdeinvestigación-4.1Datosgenerales)
+    - [4.1.1 Identificación del grupo en el Sistema de gestión económica](#CSPGruposdeinvestigación-4.1.1IdentificacióndelgrupoenelSistemadegestióneconómica)
+      * [4.1.1.1 Ver detalle del identificador SGE](#CSPGruposdeinvestigación-4.1.1.1VerdetalledelidentificadorSGE)
+      * [4.1.1.2 Eliminar relación entre el grupo y el identificador SGE](#CSPGruposdeinvestigación-4.1.1.2EliminarrelaciónentreelgrupoyelidentificadorSGE)
+  + [4.2 Equipo investigación](#CSPGruposdeinvestigación-4.2Equipoinvestigación)
+    - [4.2.1 Añadir un nuevo miembro](#CSPGruposdeinvestigación-4.2.1Añadirunnuevomiembro)
+    - [4.2.2 Modificar miembro del equipo](#CSPGruposdeinvestigación-4.2.2Modificarmiembrodelequipo)
+    - [4.2.3 Eliminar miembro del equipo](#CSPGruposdeinvestigación-4.2.3Eliminarmiembrodelequipo)
+    - [Exportar miembros](#CSPGruposdeinvestigación-Exportarmiembros)
+  + [4.3 Responsable económico](#CSPGruposdeinvestigación-4.3Responsableeconómico)
+    - [4.3.1 Añadir un responsable económico](#CSPGruposdeinvestigación-4.3.1Añadirunresponsableeconómico)
+    - [4.3.2 Modificar responsable económico](#CSPGruposdeinvestigación-4.3.2Modificarresponsableeconómico)
+    - [4.3.3 Eliminar responsable económico](#CSPGruposdeinvestigación-4.3.3Eliminarresponsableeconómico)
+  + [4.4 Persona autorizada](#CSPGruposdeinvestigación-4.4Personaautorizada)
+    - [4.4.1 Añadir una persona autorizada](#CSPGruposdeinvestigación-4.4.1Añadirunapersonaautorizada)
+    - [4.4.2 Modificar persona autorizada](#CSPGruposdeinvestigación-4.4.2Modificarpersonaautorizada)
+    - [4.4.3 Eliminar persona autorizada](#CSPGruposdeinvestigación-4.4.3Eliminarpersonaautorizada)
+  + [4.5 Equipos instrumentales](#CSPGruposdeinvestigación-4.5Equiposinstrumentales)
+    - [4.5.1 Añadir un nuevo equipo instrumental](#CSPGruposdeinvestigación-4.5.1Añadirunnuevoequipoinstrumental)
+    - [4.5.2 Modificar equipo instrumental](#CSPGruposdeinvestigación-4.5.2Modificarequipoinstrumental)
+    - [4.5.3 Eliminar equipo instrumental](#CSPGruposdeinvestigación-4.5.3Eliminarequipoinstrumental)
+  + [4.6 Enlaces](#CSPGruposdeinvestigación-4.6Enlaces)
+    - [4.6.1 Añadir un nuevo enlace](#CSPGruposdeinvestigación-4.6.1Añadirunnuevoenlace)
+    - [4.6.2 Modificar enlace](#CSPGruposdeinvestigación-4.6.2Modificarenlace)
+    - [4.6.3 Eliminar enlace](#CSPGruposdeinvestigación-4.6.3Eliminarenlace)
+  + [4.7 Líneas investigación](#CSPGruposdeinvestigación-4.7Líneasinvestigación)
+    - [4.7.1 Añadir una nueva línea de investigación](#CSPGruposdeinvestigación-4.7.1Añadirunanuevalíneadeinvestigación)
+    - [4.7.2 Modificar línea de investigación](#CSPGruposdeinvestigación-4.7.2Modificarlíneadeinvestigación)
+      * [4.7.2.1 Datos generales](#CSPGruposdeinvestigación-4.7.2.1Datosgenerales)
+      * [4.7.2.2 Miembros adscritos](#CSPGruposdeinvestigación-4.7.2.2Miembrosadscritos)
+        + [4.7.2.2.1 Añadir un miembro adscrito](#CSPGruposdeinvestigación-4.7.2.2.1Añadirunmiembroadscrito)
+        + [4.7.2.2.2 Modificar un miembro adscrito](#CSPGruposdeinvestigación-4.7.2.2.2Modificarunmiembroadscrito)
+        + [4.7.2.2.3 Eliminar un miembro adscrito](#CSPGruposdeinvestigación-4.7.2.2.3Eliminarunmiembroadscrito)
+      * [4.7.2.3 Clasificaciones](#CSPGruposdeinvestigación-4.7.2.3Clasificaciones)
+        + [4.7.2.3.1 Añadir una clasificación](#CSPGruposdeinvestigación-4.7.2.3.1Añadirunaclasificación)
+        + [4.7.2.3.2 Eliminar una clasificación](#CSPGruposdeinvestigación-4.7.2.3.2Eliminarunaclasificación)
+      * [4.7.2.4 Equipos instrumentales](#CSPGruposdeinvestigación-4.7.2.4Equiposinstrumentales)
+        + [4.7.2.4.1 Añadir un equipo instrumental](#CSPGruposdeinvestigación-4.7.2.4.1Añadirunequipoinstrumental)
+        + [4.7.2.4.2 Eliminar un equipo instrumental](#CSPGruposdeinvestigación-4.7.2.4.2Eliminarunequipoinstrumental)
+    - [4.7.3 Eliminar línea de investigación](#CSPGruposdeinvestigación-4.7.3Eliminarlíneadeinvestigación)
+* [5. Eliminar un grupo de investigación](#CSPGruposdeinvestigación-5.Eliminarungrupodeinvestigación)
+* [6. Recuperar un grupo de investigación](#CSPGruposdeinvestigación-6.Recuperarungrupodeinvestigación)
 
-
-### 1\. Introducción
+### 1. Introducción
 
 Los Grupos de investigación son agrupaciones estables de personal investigador que coopera en una o varias líneas de investigación. Forman equipos de trabajo específicos para realizar proyectos de investigación que pueden durar varios años.
 
 La gestión de Grupos de Investigación es una funcionalidad integrada en el módulo de CSP del SGI Hércules que incluye el ciclo de vida completo, desde la solicitud de constitución mediante la correspondiente convocatoria hasta su mantenimiento histórico de sus miembros y de sus líneas de investigación.
 
-El/la investigador/a principal del grupo de investigación realizará la solicitud de constitución  a través de la funcionalidad de "Solicitudes" del módulo de CSP. (Ver [CSP\-Solicitudes](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/mdu-perfil-unidad-de-gestion/mdu-perfil-unidad-de-gestion-modulo-csp/csp-solicitudes.md "/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/mdu-perfil-unidad-de-gestion/mdu-perfil-unidad-de-gestion-modulo-csp/csp-solicitudes.md")). Deberá de adjuntar en la pantalla de "Documentos" el formulario de constitución del grupo con toda la información requerida.
+El/la investigador/a principal del grupo de investigación realizará la solicitud de constitución  a través de la funcionalidad de "Solicitudes" del módulo de CSP. (Ver [CSP-Solicitudes](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/mdu-perfil-unidad-de-gestion/mdu-perfil-unidad-de-gestion-modulo-csp/csp-solicitudes)). Deberá de adjuntar en la pantalla de "Documentos" el formulario de constitución del grupo con toda la información requerida.
 
 La solicitud al igual que cualquier otra solicitud seguirá su curso y el personal de gestión irá cambiando al estado o estados correspondientes. Una vez que la solicitud este en estado "Concedida"  el personal de gestión tendrá la posibilidad de crear el grupo desde la propia pantalla de solicitud.  La opción de creación del grupo estará disponible desde la solicitud concedida (listado disponible en opción de menú Solicitudes) o desde la opción de menú de "Grupos de investigación".
 
 El personal de gestión deberá introducir los datos del grupo de investigación en el SGI a partir de la información aportada por el investigador/a en el documento de formulario de constitución del grupo.
 
-Una vez creado el grupo de investigación el/la investigador/a principal  o la persona autorizada podrá solicitar una modificación del mismo bien porque se ha añadido un nuevo miembro al grupo o una nueva línea de investigación o cualquier otra modificación que sea necesaria registrar en el SGI. Para ello deberá crear una solicitud de modificación de grupo a través de la funcionalidad de "Solicitudes" del módulo de CSP. (Ver [CSP\-Solicitudes](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/mdu-perfil-unidad-de-gestion/mdu-perfil-unidad-de-gestion-modulo-csp/csp-solicitudes.md "/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/mdu-perfil-unidad-de-gestion/mdu-perfil-unidad-de-gestion-modulo-csp/csp-solicitudes.md")).
+Una vez creado el grupo de investigación el/la investigador/a principal  o la persona autorizada podrá solicitar una modificación del mismo bien porque se ha añadido un nuevo miembro al grupo o una nueva línea de investigación o cualquier otra modificación que sea necesaria registrar en el SGI. Para ello deberá crear una solicitud de modificación de grupo a través de la funcionalidad de "Solicitudes" del módulo de CSP. (Ver [CSP-Solicitudes](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/mdu-perfil-unidad-de-gestion/mdu-perfil-unidad-de-gestion-modulo-csp/csp-solicitudes)).
 
 La solicitud de modificación seguirá su curso al igual que cualquier otra solicitud y el personal de gestión irá cambiando al estado o estados correspondientes. Una vez que la solicitud esté en estado "Concedida", el personal de gestión dispondrá de la opción que permita acceder a la pantalla de edición del grupo desde el listado de solicitudes. El personal de gestión tendrá acceso a la modificación de los datos del grupo desde el listado de solicitudes  (siempre que esté en estado concedida) o desde la opción de menú de "Grupos de investigación". Solamente el personal de gestión podrá introducir cambios en los datos del grupo de investigación a partir de la información aportada por el investigador/a principal o la persona autorizada en el documento de formulario adjuntado en la solicitud de modificación de grupo.
 
-#### 1\.1 Detalle de un grupo de investigación
+#### 1.1 Detalle de un grupo de investigación
 
 La entidad "Grupo de investigación" es una entidad de las consideradas complejas. El detalle de un grupo de investigación se encuentra estructurado en varios apartados:
 
@@ -32,15 +81,15 @@ La entidad "Grupo de investigación" es una entidad de las consideradas compleja
 
 Cada uno de estos apartados constituye una pestaña o menú. Se verán con detalle en el apartado de modificación de un grupo de investigación.
 
-![](/attachments/597853547/597879744.png)
+![](https://treetk.atlassian.net/wiki/download/thumbnails/178768084/01_datos_generales_sin_sge.png?version=1&modificationDate=1751367882353&cacheVersion=1&api=v2&width=1000&height=474)
 
-### 2\. Listado y búsqueda de grupos de investigación
+### 2. Listado y búsqueda de grupos de investigación
 
-El acceso a la gestión de grupos de investigación ocupa la quinta posición en el menú del módulo CSP.  Siguiendo la estructura general del SGI, tras pulsar en el menú "Grupos Investigación" se accede a la página inicial que contiene el listado de grupos de investigación y su buscador, que sigue las normas básicas descritas en [MDU\-Manual de usuario \- 3\.2 Buscadores y listados](https://confluence.um.es/confluence/display/HERCULES/MDU+-+Manual+de+usuario#MDUManualdeusuario-3.2Buscadoresylistados "https://confluence.um.es/confluence/display/HERCULES/MDU+-+Manual+de+usuario#MDUManualdeusuario-3.2Buscadoresylistados").
+El acceso a la gestión de grupos de investigación ocupa la quinta posición en el menú del módulo CSP.  Siguiendo la estructura general del SGI, tras pulsar en el menú "Grupos Investigación" se accede a la página inicial que contiene el listado de grupos de investigación y su buscador, que sigue las normas básicas descritas en [MDU-Manual de usuario - 3.2 Buscadores y listados](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario#MDUManualdeusuario-3.2Buscadoresylistados).
 
 ![](/attachments/597853547/597879738.png)
 
-Por defecto, se listan todos los grupos de investigación disponibles sobre una tabla de resultados paginada, [MDU\-Manual de usuario \- 3\.5 Paginación de listados](https://confluence.um.es/confluence/display/HERCULES/MDU+-+Manual+de+usuario#MDUManualdeusuario-3.5Paginaci%C3%B3ndelistados "https://confluence.um.es/confluence/display/HERCULES/MDU+-+Manual+de+usuario#MDUManualdeusuario-3.5Paginaci%C3%B3ndelistados").  La tabla muestra una serie de campos significativos:
+Por defecto, se listan todos los grupos de investigación disponibles sobre una tabla de resultados paginada, [MDU-Manual de usuario - 3.5 Paginación de listados](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario#MDUManualdeusuario-3.5Paginaci%C3%B3ndelistados).  La tabla muestra una serie de campos significativos:
 
 * Nombre: Nombre del grupo de investigación.
 * Investigador/a principal: Nombre y apellidos del investigador/a que tiene el "rol principal". En caso de existir mas de uno, se mostrarán separados por comas.
@@ -56,18 +105,18 @@ El apartado de grupos de investigación incluye dos buscadores:
 * Buscador simple
 * Buscador ampliado
 
-Por defecto, se muestra visible el buscador simple. 
+Por defecto, se muestra visible el buscador simple.
 
 A través del botón "Limpiar" se eliminará cualquier criterio de búsqueda que hubiese sido introducido en el buscador activo en cada momento.
 
-#### 2\.1 Buscador simple
+#### 2.1 Buscador simple
 
 Es el buscador mostrado por defecto. Dispone de cuatro campos de búsqueda:
 
 * Nombre:  Si se introduce una cadena en este filtro, se mostrarán los grupos de investigación que contengan la cadena introducida en cualquier parte del campo "nombre".
 * Código. Si se introduce una cadena en este filtro, se mostrarán los grupos de investigación que contengan la cadena introducida en cualquier parte del campo "código".
-* Miembro del equipo: Este campo permite especificar una persona. Se realizará la búsqueda de los grupos de investigación que contengan a la persona indicada como miembro del equipo de investigación. Para indicar la persona se utilizará el buscador común de personas [MDU\-Manual de usuario \- 8\.1 Personas](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/index.md#MDUManualdeusuario-8.1Personas "/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/index.md#MDUManualdeusuario-8.1Personas")
-* Código identificación SGE: Si se introduce una cadena en este filtro, se mostrarán los grupos de investigación que contengan la cadena introducida en cualquier parte del campo "código identificación SGE". Este campo sólo se mostrará si la variable de configuración de CSP "[Ejecución económica de Grupos de investigación](https://confluence.um.es/confluence/pages/viewpage.action?pageId=721420329#MDUPerfildeAdministraci%C3%B3ndelsistema-1.2Configuraci%C3%B3nCSP "https://confluence.um.es/confluence/pages/viewpage.action?pageId=721420329#MDUPerfildeAdministraci%C3%B3ndelsistema-1.2Configuraci%C3%B3nCSP")" tiene el valor "Sí".
+* Miembro del equipo: Este campo permite especificar una persona. Se realizará la búsqueda de los grupos de investigación que contengan a la persona indicada como miembro del equipo de investigación. Para indicar la persona se utilizará el buscador común de personas [MDU-Manual de usuario - 8.1 Personas](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario#MDUManualdeusuario-8.1Personas)
+* Código identificación SGE: Si se introduce una cadena en este filtro, se mostrarán los grupos de investigación que contengan la cadena introducida en cualquier parte del campo "código identificación SGE". Este campo sólo se mostrará si la variable de configuración de CSP "[Ejecución económica de Grupos de investigación](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/mdu-perfil-de-administracion-del-sistema#MDUPerfildeAdministraci%C3%B3ndelsistema-1.2Configuraci%C3%B3nCSP)" tiene el valor "Sí".
 
 Una vez introducidos los filtros de búsqueda se debe pulsar el botón "Buscar". Los resultados coincidentes se mostrarán en el listado de resultados. Todos los filtros de búsqueda actuarán como una conjunción "y", es decir, los grupos de investigación que se muestren en el listado de resultados deberán cumplir todos los filtros especificados.
 
@@ -75,7 +124,7 @@ Se puede utilizar el botón "Limpiar" para vaciar cualquier valor introducido en
 
 Si se pulsa el botón "Buscador ampliado" se cambiará a la búsqueda avanzada.
 
-#### 2\.2 Buscador ampliado
+#### 2.2 Buscador ampliado
 
 Al pulsar el botón "Buscador ampliado" se mostrarán todos los filtros de este buscador. El aspecto de la ventana de grupos de investigación pasa a ser:
 
@@ -85,14 +134,14 @@ El buscador ampliado contiene los siguientes campos:
 
 * Nombre:  Si se introduce una cadena en este filtro, se mostrarán los grupos de investigación que contengan la cadena introducida en cualquier parte del campo "nombre".
 * Código. Si se introduce una cadena en este filtro, se mostrarán los grupos de investigación que contengan la cadena introducida en cualquier parte del campo "código".
-* Miembro del equipo: Este campo permite especificar una persona. Se realizará la búsqueda de los grupos de investigación que contengan a la persona indicada como miembro del equipo de investigación. Para indicar la persona se utilizará el buscador común de personas [MDU\-Manual de usuario \- 8\.1 Personas](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/index.md#MDUManualdeusuario-8.1Personas "/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/index.md#MDUManualdeusuario-8.1Personas")
-* Código identificación SGE: Si se introduce una cadena en este filtro, se mostrarán los grupos de investigación que contengan la cadena introducida en cualquier parte del campo "código identificación SGE". Este campo sólo se mostrará si la variable de configuración de CSP "[Ejecución económica de Grupos de investigación](https://confluence.um.es/confluence/pages/viewpage.action?pageId=721420329#MDUPerfildeAdministraci%C3%B3ndelsistema-1.2Configuraci%C3%B3nCSP "https://confluence.um.es/confluence/pages/viewpage.action?pageId=721420329#MDUPerfildeAdministraci%C3%B3ndelsistema-1.2Configuraci%C3%B3nCSP")" tiene el valor "Sí".
-* Fecha inicio desde \- hasta: Con los campos "desde" y "hasta", ambos del tipo fecha, se puede establecer un periodo que permitirá buscar los grupos de investigación cuya fecha de inicio esté comprendida en el mismo. Ambos campos disponen de un control calendario a través del que se podrá seleccionar la fecha deseada.
-* Activo: Es un desplegable con los valores "sí", "no", "todos". La entidad "grupo investigación" admite eliminación con recuperación ([MDU\-Manual de usuario \- 3\.10 Eliminar elemento](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/index.md#MDUManualdeusuario-3.10Eliminarelemento "/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/index.md#MDUManualdeusuario-3.10Eliminarelemento")), con el campo "activo" se permite realizar búsquedas sobre los grupos de investigación que hubieran sido eliminados. Por defecto el filtro está precargado con el valor "sí", para que de partida solo se muestren los grupos de investigación activos. Para mostrar los grupos de investigación que hubieran sido eliminados se debe establecer el valor de este filtro a:
-	+ "No": se muestran solo los grupos de investigación que hubieran sido desactivados (eliminados).
-	+ "Todas": se muestran todos los grupos de investigación, tanto los activos como los desactivados (eliminados).
-* Palabras clave: Este filtro actúa sobre las palabras clave del grupo de investigación. Se pueden incluir una o varias palabras. Este campo sigue el comportamiento general descrito en [MDU\-Manual de usuario \- 9 Palabras clave](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/index.md#MDUManualdeusuario-9.Palabrasclave "/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/index.md#MDUManualdeusuario-9.Palabrasclave")
-* Líneas investigación: Con este filtro se limita la búsqueda de los grupos de investigación que trabajen en una determinada línea de investigación. La línea de investigación deberá seleccionarse a partir del desplegable disponible en este campo, que contendrá todas las líneas de investigación configuradas en el SGI. Para más información sobre la configuración de las líneas de investigación se puede consultar [CSP\-Configuración \- 13 Líneas de investigación](https://confluence.um.es/confluence/pages/viewpage.action?pageId=134296892#CSPConfiguraci%C3%B3n-13.L%C3%ADneasdeinvestigaci%C3%B3n "https://confluence.um.es/confluence/pages/viewpage.action?pageId=134296892#CSPConfiguraci%C3%B3n-13.L%C3%ADneasdeinvestigaci%C3%B3n").
+* Miembro del equipo: Este campo permite especificar una persona. Se realizará la búsqueda de los grupos de investigación que contengan a la persona indicada como miembro del equipo de investigación. Para indicar la persona se utilizará el buscador común de personas [MDU-Manual de usuario - 8.1 Personas](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario#MDUManualdeusuario-8.1Personas)
+* Código identificación SGE: Si se introduce una cadena en este filtro, se mostrarán los grupos de investigación que contengan la cadena introducida en cualquier parte del campo "código identificación SGE". Este campo sólo se mostrará si la variable de configuración de CSP "[Ejecución económica de Grupos de investigación](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/mdu-perfil-de-administracion-del-sistema#MDUPerfildeAdministraci%C3%B3ndelsistema-1.2Configuraci%C3%B3nCSP)" tiene el valor "Sí".
+* Fecha inicio desde - hasta: Con los campos "desde" y "hasta", ambos del tipo fecha, se puede establecer un periodo que permitirá buscar los grupos de investigación cuya fecha de inicio esté comprendida en el mismo. Ambos campos disponen de un control calendario a través del que se podrá seleccionar la fecha deseada.
+* Activo: Es un desplegable con los valores "sí", "no", "todos". La entidad "grupo investigación" admite eliminación con recuperación ([MDU-Manual de usuario - 3.10 Eliminar elemento](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario#MDUManualdeusuario-3.10Eliminarelemento)), con el campo "activo" se permite realizar búsquedas sobre los grupos de investigación que hubieran sido eliminados. Por defecto el filtro está precargado con el valor "sí", para que de partida solo se muestren los grupos de investigación activos. Para mostrar los grupos de investigación que hubieran sido eliminados se debe establecer el valor de este filtro a:
+  + "No": se muestran solo los grupos de investigación que hubieran sido desactivados (eliminados).
+  + "Todas": se muestran todos los grupos de investigación, tanto los activos como los desactivados (eliminados).
+* Palabras clave: Este filtro actúa sobre las palabras clave del grupo de investigación. Se pueden incluir una o varias palabras. Este campo sigue el comportamiento general descrito en [MDU-Manual de usuario - 9 Palabras clave](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario#MDUManualdeusuario-9.Palabrasclave)
+* Líneas investigación: Con este filtro se limita la búsqueda de los grupos de investigación que trabajen en una determinada línea de investigación. La línea de investigación deberá seleccionarse a partir del desplegable disponible en este campo, que contendrá todas las líneas de investigación configuradas en el SGI. Para más información sobre la configuración de las líneas de investigación se puede consultar [CSP-Configuración - 13 Líneas de investigación](https://confluence.um.es/confluence/pages/viewpage.action?pageId=134296892#CSPConfiguraci%C3%B3n-13.L%C3%ADneasdeinvestigaci%C3%B3n).
 
 Una vez introducidos los filtros de búsqueda se debe pulsar el botón "Buscar". Los resultados coincidentes se mostrarán en el listado de resultados. Todos los filtros de búsqueda actuarán como una conjunción "y", es decir, los grupos de investigación que se muestren en el listado de resultados deberán cumplir todos los filtros especificados.
 
@@ -100,24 +149,15 @@ Se puede utilizar el botón "Limpiar" para vaciar cualquier valor introducido en
 
 Si se pulsa el botón "Buscador simple" se cambiará a la versión básica del buscador.
 
-#### 2\.3 Exportación de grupos de investigación
+#### 2.3 Exportación de grupos de investigación
 
-El listado de grupos de investigación obtenido del buscador puede ser exportado siguiendo los criterios generales indicados en [MDU\-Manual de usuario \- 3\.6 Exportación de listados](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/index.md#MDUManualdeusuario-3.6Exportaci%C3%B3ndelistados "/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/index.md#MDUManualdeusuario-3.6Exportaci%C3%B3ndelistados")
+El listado de grupos de investigación obtenido del buscador puede ser exportado siguiendo los criterios generales indicados en [MDU-Manual de usuario - 3.6 Exportación de listados](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario#MDUManualdeusuario-3.6Exportaci%C3%B3ndelistados)
 
 ![](/attachments/597853547/597879827.png)
 
-  
-
-
 Al pulsar el icono de exportación situado a pie del listado de resultados, se mostrarán las opciones de exportación propias de los grupos de investigación:
 
-  
-
-
 ![](/attachments/597853547/841089190.png)
-
-  
-
 
 Se debe seleccionar el formato de exportación. Los disponibles son:
 
@@ -129,50 +169,45 @@ El detalle de un grupo de investigación se encuentra agrupado en diferentes apa
 * Se se pulsa sobre la casilla "todos" estando marcada, se desmarcarán todas las casillas, pudiendo pasar a seleccionar individualmente cada una de ellas.
 * Si la casilla "todos" está marcada, se podrán desmarcar una a una las casillas de aquellos apartados que no se desea incluir en la exportación.
 
-Una vez introducidos todos los criterios de la exportación se deberá pulsar el botón "Exportar", se generará el documento asociado que podrá ser nombrado y descargado a la unidad de disco deseada. 
+Una vez introducidos todos los criterios de la exportación se deberá pulsar el botón "Exportar", se generará el documento asociado que podrá ser nombrado y descargado a la unidad de disco deseada.
 
-  
-
-
-### 3\. Añadir nuevo grupo de investigación
+### 3. Añadir nuevo grupo de investigación
 
 Desde el listado de grupos de investigación se dispondrá del botón "Añadir grupo de investigación".
 
 ![](/attachments/597853547/597879824.png)
 
-  
-
-
 Al pulsar este botón se mostrará la ventana de introducción de "Datos generales" de un grupo de investigación, que presenta el siguiente aspecto:
 
-![](/attachments/597853547/597879825.png)
+![](https://treetk.atlassian.net/wiki/download/thumbnails/178768084/02_nuevo_grupo.png?version=1&modificationDate=1751367997777&cacheVersion=1&api=v2&width=1000&height=473)
 
-Para la creación de un nuevo grupo de investigación únicamente es necesario informar los datos del apartado de "Datos generales", el resto de apartados se podrán informar desde la edición o modificación del grupo (ver apartado del manual [Modificar un grupo de investigación](#CSPGruposdeinvestigación-4.Modificarungrupodeinvestigaci%C3%B3n "#CSPGruposdeinvestigación-4.Modificarungrupodeinvestigaci%C3%B3n")).
+Para la creación de un nuevo grupo de investigación únicamente es necesario informar los datos del apartado de "Datos generales", el resto de apartados se podrán informar desde la edición o modificación del grupo (ver apartado del manual [Modificar un grupo de investigación](#CSPGruposdeinvestigación-4.Modificarungrupodeinvestigaci%C3%B3n)).
 
 A continuación se describe cada uno de los campos solicitados en este formulario o pantalla:
 
 * Nombre: Campo de texto para introducir el nombre por el que se conoce al grupo de investigación.  Es un campo obligatorio.
-* Investigador/a principal**:** Campo para buscar a la persona que es el investigador/a principal del nuevo grupo de investigación que se quiere constituir. Para indicar la persona se utiliza el buscador común de personas [MDU\-Manual de usuario \- 8\.1 Personas](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/index.md#MDUManualdeusuario-8.1Personas "/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/index.md#MDUManualdeusuario-8.1Personas"). Es un campo obligatorio.
+* Investigador/a principal**:** Campo para buscar a la persona que es el investigador/a principal del nuevo grupo de investigación que se quiere constituir. Para indicar la persona se utiliza el buscador común de personas [MDU-Manual de usuario - 8.1 Personas](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario#MDUManualdeusuario-8.1Personas). Es un campo obligatorio.
 * Departamento: Es un campo de información para el usuario. Se muestra el nombre del departamento al que esta adscrito la persona seleccionada en el campo "Investigador/a principal".
 * Código: Código automático, que incluye el código del departamento al que esta adscrito el investigador/a principal y un secuencial por departamento. Este código es único por grupo de investigación y podrá ser utilizado posteriormente en listados con fines identificativos del grupo. Es un campo obligatorio y puede ser modificado por el personal de gestión en caso necesario, siempre y cuando siga siendo único, es decir, no pueden existir dos grupos de investigación activos con el mismo código.
-* Código de identificación SGE: Campo de texto para introducir el código con el que se identifica el grupo de investigación en el SGE (Sistema de gestión económico). Para su introducción se hará uso del buscador común de proyectos económicos (Ver [MDU\-Manual de usuario \- 8\.3\.1 Buscar proyecto económico del SGE](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/index.md#MDUManualdeusuario-8.3.1Buscarproyectoecon%C3%B3micodelSGE "/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/index.md#MDUManualdeusuario-8.3.1Buscarproyectoecon%C3%B3micodelSGE")). Es un campo opcional. Este campo sólo se mostrará si la variable de configuración de CSP "[Ejecución económica de Grupos de investigación](https://confluence.um.es/confluence/pages/viewpage.action?pageId=721420329#MDUPerfildeAdministraci%C3%B3ndelsistema-1.2Configuraci%C3%B3nCSP "https://confluence.um.es/confluence/pages/viewpage.action?pageId=721420329#MDUPerfildeAdministraci%C3%B3ndelsistema-1.2Configuraci%C3%B3nCSP")" tiene el valor "Sí".
+* Código de identificación SGE: Campo de texto para introducir el código con el que se identifica el grupo de investigación en el SGE (Sistema de gestión económico). Para su introducción se hará uso del buscador común de proyectos económicos (Ver [MDU-Manual de usuario - 8.3.1 Buscar proyecto económico del SGE](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario#MDUManualdeusuario-8.3.1Buscarproyectoecon%C3%B3micodelSGE)). Es un campo opcional. Este campo sólo se mostrará si la variable de configuración de CSP "[Ejecución económica de Grupos de investigación](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/mdu-perfil-de-administracion-del-sistema#MDUPerfildeAdministraci%C3%B3ndelsistema-1.2Configuraci%C3%B3nCSP)" tiene el valor "Sí".
 * Fecha inicio: Campo de tipo fecha para introducir la fecha de inicio del grupo de investigación. Se puede introducir la fecha de forma manual o con la ayuda del calendario. Es un campo obligatorio.
 * Fecha fin: Campo de tipo fecha para introducir la fecha de fin del grupo de investigación. Se puede introducir la fecha de forma manual o con la ayuda del calendario. Es un campo opcional.
-* Palabras clave: Campo de texto para ir introduciendo el listado de palabras clave. Una palabra clave es una cadena de texto, formada por una una o varias palabras. Una vez introducida una palabra clave se debe pulsar la tecla "enter" del teclado para añadirla a la lista de palabras clave. Se pueden añadir todas las palabras clave deseadas. (Ver funcionalidad de creación de palabras clave en [MDU\-Manual de usuario \- 9\.1\.1 Añadir nueva palabra clave](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/index.md#MDUManualdeusuario-9.1.1A%C3%B1adirnuevapalabraclave "/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/index.md#MDUManualdeusuario-9.1.1A%C3%B1adirnuevapalabraclave"))
+* Resumen: Campo de tipo texto enriquecido para introducir el objetivo de la creación del grupo de investigación. Es un campo opcional.
+* Palabras clave: Campo de texto para ir introduciendo el listado de palabras clave. Una palabra clave es una cadena de texto, formada por una una o varias palabras. Una vez introducida una palabra clave se debe pulsar la tecla "enter" del teclado para añadirla a la lista de palabras clave. Se pueden añadir todas las palabras clave deseadas. (Ver funcionalidad de creación de palabras clave en [MDU-Manual de usuario - 9.1.1 Añadir nueva palabra clave](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario#MDUManualdeusuario-9.1.1A%C3%B1adirnuevapalabraclave))
 * Tipo grupo: Campo de tipo desplegable que indica el grado de madurez del grupo de investigación. Se guardará el histórico con la fechas en las que se realiza un cambio del campo. Es un campo opcional. Puede tomar los valores:
-	+ Emergente,
-	+ Consolidado
-	+ Precompetitivo
-	+ Grupo de alto rendimiento.
+  + Emergente,
+  + Consolidado
+  + Precompetitivo
+  + Grupo de alto rendimiento.
 * Grupo especial de investigación: Campo de tipo desplegable que  indica si el grupo de investigación en un "Grupo especial de investigación" o no. Podrá tomar valor afirmativo o negativo, se tomará como valor por defecto el valor "No" por lo que estará inicializado a dicho valor. Si el campo es afirmativo no se tendrá en cuenta en la baremación de ese año. Es un campo opcional.
 
 Una vez introducidos todos los campos obligatorios del formulario de "Datos generales" se activa el botón "Guardar" y se muestra el icono del signo de admiración en los "Datos generales"  y en el pie de página a lado del botón "Guardar".  Este icono indica que se han introducido cambios en el formulario (se han informado los campos) pero no se ha dado a "Guardar".
 
-![](/attachments/597853547/597879852.png)
+![](https://treetk.atlassian.net/wiki/download/thumbnails/178768084/03_nuevo_grupo_sin_guardar.png?version=1&modificationDate=1751368312551&cacheVersion=1&api=v2&width=1000&height=475)
 
 Si se pulsa el botón "Guardar" se crea el grupo de investigación con los datos generales del grupo.
 
-Cuando se crea el grupo, si se selecciona que es un grupo especial de investigación se muestra el siguiente mensaje de validación:[Borde](https://confluence.um.es/confluence/pages/resumedraft.action?draftId=645857355&draftShareId=a412a4ca-3c3e-4bd1-a207-980685b605c7& "https://confluence.um.es/confluence/pages/resumedraft.action?draftId=645857355&draftShareId=a412a4ca-3c3e-4bd1-a207-980685b605c7&")
+Cuando se crea el grupo, si se selecciona que es un grupo especial de investigación se muestra el siguiente mensaje de validación:[Borde](https://confluence.um.es/confluence/pages/resumedraft.action?draftId=645857355&draftShareId=a412a4ca-3c3e-4bd1-a207-980685b605c7&)
 
 ![](/attachments/597853547/1077968899.png)
 
@@ -182,17 +217,16 @@ En el caso de que no se haya seleccionado que es un grupo especial el mensaje de
 
 Una vez aceptado el mensaje de la condición o no de "grupo especial", se muestra el mensaje de que el grupo de investigación se ha creado correctamente igual que el de la siguiente imagen.
 
-![](/attachments/597853547/597879857.png)  
+![](/attachments/597853547/597879857.png)
 
+Una vez creado el grupo te lleva a la edición o modificación del grupo donde se muestran el resto de apartados que pueden ser cumplimentados. Ver [Modificar un grupo de investigación](#CSPGruposdeinvestigación-4.Modificarungrupodeinvestigaci%C3%B3n)
 
-Una vez creado el grupo te lleva a la edición o modificación del grupo donde se muestran el resto de apartados que pueden ser cumplimentados. Ver [Modificar un grupo de investigación](#CSPGruposdeinvestigación-4.Modificarungrupodeinvestigaci%C3%B3n "#CSPGruposdeinvestigación-4.Modificarungrupodeinvestigaci%C3%B3n")
-
-### 4\. Modificar un grupo  de investigación
+### 4. Modificar un grupo  de investigación
 
 Se puede llegar a la modificación o edición de un grupo de investigación desde tres accesos diferentes de la aplicación del SGI (todas ellas dentro del módulo de CSP):
 
-* Una vez creado el grupo de investigación desde el botón "Nuevo grupo de investigación" (ver apartado del manual [Añadir nuevo grupo de investigación](#CSPGruposdeinvestigación-3.A%C3%B1adirnuevogrupodeinvestigaci%C3%B3n "#CSPGruposdeinvestigación-3.A%C3%B1adirnuevogrupodeinvestigaci%C3%B3n"))
-* Desde el icono de acción de "crear grupo de investigación"  ![](/attachments/597853547/597879907.png) en el listado de solicitudes, cuando la solicitud esta en estado "concedida". (ver apartado del manual [CSP\-Solicitudes \- 9 Crear grupo de investigación desde solicitud concedida](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/mdu-perfil-unidad-de-gestion/mdu-perfil-unidad-de-gestion-modulo-csp/csp-solicitudes.md#CSPSolicitudes-9.Creargrupodeinvestigaci%C3%B3ndesdesolicitudconcedida "/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/mdu-perfil-unidad-de-gestion/mdu-perfil-unidad-de-gestion-modulo-csp/csp-solicitudes.md#CSPSolicitudes-9.Creargrupodeinvestigaci%C3%B3ndesdesolicitudconcedida"))
+* Una vez creado el grupo de investigación desde el botón "Nuevo grupo de investigación" (ver apartado del manual [Añadir nuevo grupo de investigación](#CSPGruposdeinvestigación-3.A%C3%B1adirnuevogrupodeinvestigaci%C3%B3n))
+* Desde el icono de acción de "crear grupo de investigación"  ![](/attachments/597853547/597879907.png) en el listado de solicitudes, cuando la solicitud esta en estado "concedida". (ver apartado del manual [CSP-Solicitudes - 9 Crear grupo de investigación desde solicitud concedida](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/mdu-perfil-unidad-de-gestion/mdu-perfil-unidad-de-gestion-modulo-csp/csp-solicitudes#CSPSolicitudes-9.Creargrupodeinvestigaci%C3%B3ndesdesolicitudconcedida))
 
 ![](/attachments/597853547/597879909.png)
 
@@ -202,7 +236,7 @@ Se puede llegar a la modificación o edición de un grupo de investigación desd
 
 En los tres casos se mostrará el detalle de la convocatoria, en su apartado inicial "Datos generales". Se podrán introducir cambios sobre los campos del apartado "datos generales". Del mismo modo, accediendo a través del menú lateral izquierdo, se podrán realizar modificaciones sobre los campos del resto de apartados.
 
-![](/attachments/597853547/597879799.png)
+![](https://treetk.atlassian.net/wiki/download/thumbnails/178768084/04_editar_grupo_datos_generales.png?version=3&modificationDate=1751368680726&cacheVersion=1&api=v2&width=1000&height=536)
 
 La edición de un grupo de investigación esta formada por los siguientes bloques de información o apartados:
 
@@ -218,31 +252,63 @@ Una vez introducidos los datos que se desean modificar o añadir en cualquiera d
 
 Se mostrará un mensaje informativo confirmando que el grupo de investigación ha sido modificado correctamente.
 
-![](/attachments/597853547/597879555.png)  
+![](/attachments/597853547/597879555.png)
 
-
-#### 4\.1 Datos generales
+#### 4.1 Datos generales
 
 Apartado con los datos de información básica o general de un grupo de investigación.
 
-![](/attachments/597853547/1077968900.png)
+![](https://treetk.atlassian.net/wiki/download/thumbnails/178768084/04_editar_grupo_datos_generales.png?version=3&modificationDate=1751368680726&cacheVersion=1&api=v2&width=1000&height=536)
 
-En el apartado del manual [Añadir nuevo grupo de investigación](#CSPGruposdeinvestigación-3.A%C3%B1adirnuevogrupodeinvestigaci%C3%B3n "#CSPGruposdeinvestigación-3.A%C3%B1adirnuevogrupodeinvestigaci%C3%B3n") se puede ver la descripción detallada de cada campo. A parte de los mencionados en dicho apartado, en la modificación se puede ver la siguiente información adicional a la creación:
+En el apartado del manual [Añadir nuevo grupo de investigación](#CSPGruposdeinvestigación-3.A%C3%B1adirnuevogrupodeinvestigaci%C3%B3n) se puede ver la descripción detallada de cada campo. A parte de los mencionados en dicho apartado, en la modificación se puede ver la siguiente información adicional a la creación:
 
 * Histórico tipo grupo: Tabla con la información del momento en que el grupo cambia de "Tipo grupo". Por cada cambio del valor del campo "Tipo grupo" se guarda la fecha para así poder mostrar el histórico de todos su cambios.
+* Identificación del grupo en el Sistema de gestión económica
 
 El campo "Investigador/a principal" que es un dato obligatorio durante la creación del grupo de investigación, en la modificación o edición de un grupo de investigación pasa a estar en el apartado "Equipo investigador" con "rol principal" y con "jornada" completa, desde donde se puede modificar sus datos.
 
 El campo "Grupo especial de investigación" una vez creado el grupo no se podrá modificar su valor.
 
-#### 4\.2 Equipo investigación
+##### 4.1.1 Identificación del grupo en el Sistema de gestión económica
+
+En este bloque se realiza la vinculación del grupo de investigación con un identificador del Sistema de gestión económica. El término de identificador del SGE es un término que tiene  carácter general y que hace referencia a un concepto que será particular dad cada sistema de gestión económica. Un identificador SGE hace referencia a un proyecto económico, una orgánica, un centro de coste, etc. desde el cual se gestionan los datos económicos del grupo de investigación (sus gastos e ingresos). A partir de este identificador SGE se podrán recuperar los datos económicos del grupo  en el apartado Ejecución Económica del SGI.
+
+Este bloque Identificación del grupo en el Sistema de gestión económica sólo estará disponible si el parámetro de configuración "Ejecución económica de Grupos de investigación" está habilitado.
+
+Para vincular el Grupo de investigación con un identificador SGE se debe de pulsar el botón "Añadir identificador SGE". Se mostrará el buscador común de proyectos económicos (Ver [MDU-Manual de usuario - 8.3.1 Buscar proyecto económico del SGE](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario#MDUManualdeusuario-8.3.1Buscarproyectoecon%C3%B3micodelSGE)).
+
+Una vez vinculado el Grupo a un identificador SGE, éste se mostrará en la tabla Identificación del grupo en el Sistema de gestión económica
+
+![](https://treetk.atlassian.net/wiki/download/thumbnails/178768084/06_editar_grupo_datos_generales_SGE.png?version=1&modificationDate=1751369967486&cacheVersion=1&api=v2&width=1000&height=563)
+
+El grupo solamente puede estar vinculado a un "Identificador SGE" simultáneamente. Una vez que el grupo está vinculado a un identificador SGE el botón "Añadir identificador SGE" se mostrará deshabilitado.
+
+Una vez establecida la relación del grupo con un identificador SGE se dispondrá de dos acciones asociadas:
+
+* Ver detalle del identificador SGE
+* Eliminar la relación del grupo con el identificador SGE
+
+###### 4.1.1.1 Ver detalle del identificador SGE
+
+Desde esta acción se mostrará la información del SGE. Son los datos más representativos del identificador en el SGE. Es información devuelta por el SGE.
+
+![](https://treetk.atlassian.net/wiki/download/thumbnails/178768084/07_grupo_datos_generales_verSGE.png?version=1&modificationDate=1751370528116&cacheVersion=1&api=v2&width=1000&height=476)
+
+En caso que el parámetro de configuración "Modificación proyecto SGE" esté habilitado los campos que se determinen estarán habilitados para que desde el SGI se puedan solicitar modificaciones de estos datos sobre el SGE.
+
+###### 4.1.1.2 Eliminar relación entre el grupo y el identificador SGE
+
+Para que esta acción esté disponible, debe de estar habilitado el parámetro de configuración "Habilitar la acción eliminar relación proyecto SGI - proyecto SGE". Al pulsar la acción eliminar sobre el identificador SGE se desvincula la relación con el grupo. El grupo ya no estará vinculado al proyecto económico, orgánica, centro de coste etc. del SGE que represente el identificador. 
+
+Al pulsar la acción eliminar se mostrará un mensaje de confirmación. Si se confirma, el grupo quedará desvinculado del identificador SGE. Se solicitará al SGE que aplique esta desvinculación a través del servicio de integración correspondiente.
+
+Tras eliminar la relación establecida, se podrá proceder a añadir vinculación con un nuevo identificador SGE a través del botón "Añadir Identificador SGE" que pasará a estar habilitado.
+
+#### 4.2 Equipo investigación
 
 Este apartado muestra en una tabla paginada los miembros del grupo de investigación.
 
-![](/attachments/597853547/857473221.png)
-
-  
-
+![](/attachments/597853547/1170341932.png)
 
 Se dispone de un filtro "Listado de miembros" que permite filtrar el listado de miembros de equipo que se mostrarán. Los valores disponibles sobre este filtro son:
 
@@ -250,12 +316,9 @@ Se dispone de un filtro "Listado de miembros" que permite filtrar el listado de 
 * No activos. Se listarán únicamente los miembros que no estén activos a fecha actual, que serán aquellos para los que su "fecha de fin" tome un valor inferior a la fecha actual.
 * Todos. Se listarán todos los miembros del equipo, independientemente que estén o no activos a fecha actual.
 
-  
-
-
 A continuación se detalla el significado de cada una de las columnas de la tabla:
 
-* E\-mail: Correo electrónico del miembro del grupo de investigación. Dato recuperado de los datos almacenados en la Universidad.
+* E-mail: Correo electrónico del miembro del grupo de investigación. Dato recuperado de los datos almacenados en la Universidad.
 * Nombre:Nombre del miembro del grupo de investigación. Datos recuperados de los datos almacenados en la Universidad.
 * Apellidos:Apellidos del miembro del grupo de investigación. Datos recuperados de los datos almacenados en la Universidad.
 * Rol: Rol con el que participará el miembro en el grupo.
@@ -270,8 +333,9 @@ Desde este listado el personal de gestión puede realizar las siguientes accione
 * Añadir un nuevo miembro al grupo
 * Editar o modificar los datos de uno de los miembros
 * Eliminar a un miembro del grupo
+* Exportar los miembros del grupo
 
-##### 4\.2\.1 Añadir un nuevo miembro
+##### 4.2.1 Añadir un nuevo miembro
 
 El botón "añadir miembro" permite dar de alta a un nuevo miembro al equipo investigador del grupo de investigación. Tras pulsar el botón se muestra la ventana para la introducción de datos:
 
@@ -280,20 +344,19 @@ El botón "añadir miembro" permite dar de alta a un nuevo miembro al equipo inv
 Los campos de un miembro del equipo son:
 
 * Rol de Participación: Campo de tipo desplegable que indica el rol con el que participará el miembro en el equipo de grupo. Los roles disponibles en el desplegable serán los definidos durante la implantación de la aplicación en la Universidad. Es un campo obligatorio.
-* Miembro: Campo para buscar a la persona que se quiere añadir al grupo. Para indicar la persona se utiliza el buscador común de personas [MDU\-Manual de usuario \- 8\.1 Personas](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/index.md#MDUManualdeusuario-8.1Personas "/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/index.md#MDUManualdeusuario-8.1Personas"). Es un campo obligatorio.
-* Periodo de participación \- Fecha inicio: Campo de tipo fecha para introducir la fecha de inicio del miembro en el grupo de investigación con el rol especificado en el campo "Rol". Se puede introducir la fecha de forma manual o con la ayuda del calendario. Es un campo obligatorio.
-* Periodo de participación \- Fecha fin: Campo de tipo fecha para introducir la fecha de finalización del miembro en el grupo de investigación con el rol especificado en el campo "Rol". Se puede introducir la fecha de forma manual o con la ayuda del calendario. Es un campo opcional.
+* Miembro: Campo para buscar a la persona que se quiere añadir al grupo. Para indicar la persona se utiliza el buscador común de personas [MDU-Manual de usuario - 8.1 Personas](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario#MDUManualdeusuario-8.1Personas). Es un campo obligatorio.
+* Periodo de participación - Fecha inicio: Campo de tipo fecha para introducir la fecha de inicio del miembro en el grupo de investigación con el rol especificado en el campo "Rol". Se puede introducir la fecha de forma manual o con la ayuda del calendario. Es un campo obligatorio.
+* Periodo de participación - Fecha fin: Campo de tipo fecha para introducir la fecha de finalización del miembro en el grupo de investigación con el rol especificado en el campo "Rol". Se puede introducir la fecha de forma manual o con la ayuda del calendario. Es un campo opcional.
 * Dedicación: Campo de tipo desplegable que indica el tiempo de dedicación del miembro en el grupo. En el caso de que el grupo tenga marcada la condición de "grupo especial" este campo estará deshabilitado. Lo valores disponibles son:  
-
-	+ Completa
-	+ Parcial
-* % Participación: Campo de tipo numérico que indica el porcentaje de dedicación del miembro en el equipo. Si en el campo "Dedicación" se ha seleccionado "Completa", deberá de ser el 100% (se pondrá el valor 100 y no se podrá modificar). Si en el campo "Dedicación" se ha seleccionado "Parcial", se deberá de comprobar que el número introducido en este campo sea mayor o igual a la dedicación mínima configurada en el campo "dedicación mínima grupo" en la implantación del aplicativo en la Universidad y menor que 100\. En caso de que el campo "dedicación mínima grupo" sea 0, se comprobará que sea mayor a 0 y menor de 100\. En el caso de que el grupo tenga marcada la condición de "grupo especial" este campo estará deshabilitado.
+  + Completa
+  + Parcial
+* % Participación: Campo de tipo numérico que indica el porcentaje de dedicación del miembro en el equipo. Si en el campo "Dedicación" se ha seleccionado "Completa", deberá de ser el 100% (se pondrá el valor 100 y no se podrá modificar). Si en el campo "Dedicación" se ha seleccionado "Parcial", se deberá de comprobar que el número introducido en este campo sea mayor o igual a la dedicación mínima configurada en el campo "dedicación mínima grupo" en la implantación del aplicativo en la Universidad y menor que 100. En caso de que el campo "dedicación mínima grupo" sea 0, se comprobará que sea mayor a 0 y menor de 100. En el caso de que el grupo tenga marcada la condición de "grupo especial" este campo estará deshabilitado.
 
 Adicionalmente a las validaciones de la obligatoriedad se aplican las siguientes validaciones:
 
-* Periodo de participación \- Fecha inicio  y Periodo de participación \- Fecha Fin  deben de estar dentro del rango de duración del grupo de investigación, es decir, entre las fecha inicio y fin del grupo.
+* Periodo de participación - Fecha inicio  y Periodo de participación - Fecha Fin  deben de estar dentro del rango de duración del grupo de investigación, es decir, entre las fecha inicio y fin del grupo.
 * La misma persona no puede estar dos veces en el mismo grupo en las mismas fechas, si puede estar en rangos de fechas distintas, no se pueden solapar las fechas.
-* El % Participación no puede ser superior a 100\.
+* El % Participación no puede ser superior a 100.
 * Si en un periodo solo se define la fecha inicio se considerará que la vigencia, desde esa fecha inicial, es permanente. La persona no podrá figurar dos veces en el equipo con una fecha inicio determinada salvo que exista otro registro con una fecha fin inferior a esa fecha inicio.
 * Una misma persona no puede superar el 100% de participación entre los distintos grupos al que pertenece que no tengan marcada la condición de "grupo especial".
 
@@ -305,18 +368,15 @@ Hasta que no se cumplimente todos los datos obligatorios y no existan errores de
 
 ![](/attachments/597853547/597879390.png)
 
-  
-
-
 Al pulsar sobre el botón "Añadir" la persona se añadirá al equipo mostrando en la tabla de miembros del equipo de investigación del grupo un fila mas que representa a la persona que se acaba de añadir.
 
-![](/attachments/597853547/857473222.png)
+![](/attachments/597853547/1170341933.png)
 
 Para que se consoliden los datos el personal de gestión deberá pulsar sobre el botón "Guardar" situado en la parte inferior de la pantalla en el pie de página para actualizar el grupo de investigación, sino se pulsa sobre el botón "Guardar" todos los cambios realizados se perderán.
 
-##### 4\.2\.2 Modificar miembro del equipo
+##### 4.2.2 Modificar miembro del equipo
 
-El icono "modificar miembro" permite modificar los datos de uno de los miembros del equipo investigador del grupo de investigación. Tras pulsar el botón se muestra la ventana para la modificación de datos, la pantalla es idéntica a la utilizada durante el alta, dejando la posibilidad de modificar cualquiera de los campos del formulario (ver funcionalidad descrita en el apartado [Añadir un nuevo miembro](#CSPGruposdeinvestigación-4.2.1A%C3%B1adirunnuevomiembro "#CSPGruposdeinvestigación-4.2.1A%C3%B1adirunnuevomiembro") para mas detalle).
+El icono "modificar miembro" permite modificar los datos de uno de los miembros del equipo investigador del grupo de investigación. Tras pulsar el botón se muestra la ventana para la modificación de datos, la pantalla es idéntica a la utilizada durante el alta, dejando la posibilidad de modificar cualquiera de los campos del formulario (ver funcionalidad descrita en el apartado [Añadir un nuevo miembro](#CSPGruposdeinvestigación-4.2.1A%C3%B1adirunnuevomiembro) para mas detalle).
 
 En la siguiente imagen se muestra la pantalla de edición de un miembro del equipo de un grupo:
 
@@ -326,20 +386,30 @@ El botón "Aceptar" no se habilitará hasta que se introduzca algún cambio en u
 
 Al pulsar sobre el botón "Aceptar" el miembro del equipo se modificará y los cambios se verán reflejados en la tabla de miembros del equipo de investigación del grupo mostrando el icono de la admiración en el menú de "Equipo investigación" y el mensaje de información en la parte de abajo de la pantalla en el pie de página para recordar al personal de gestión que debe de pulsar el botón "Guardar" para que los cambios realizados (en este caso un cambio de un miembro del equipo) se consoliden.
 
-##### 4\.2\.3 Eliminar miembro del equipo
+##### 4.2.3 Eliminar miembro del equipo
 
 Tras pulsar el icono eliminar se mostrará un mensaje de confirmación.
 
-![](/attachments/597853547/597879402.png)  
-
+![](/attachments/597853547/597879402.png)
 
 Si se pulsa el botón Cancelar se cerrará la ventana del mensaje de confirmación y el miembro del equipo no será borrado.
 
 Si se pulsa el botón Aceptar el miembro del equipo desaparecerá de la tabla de miembros del equipo de investigación del grupo como se puede ver en la siguiente imagen mostrando el icono de la admiración en el menú de "Equipo investigación" y el mensaje de información en la parte de abajo de la pantalla en el pie de página para recordar al personal de gestión que debe de pulsar el botón "Guardar" para que los cambios realizados (en este caso un borrado de un miembro del equipo) se consoliden.
 
-![](/attachments/597853547/857473223.png)
+![](/attachments/597853547/1170341933.png)
 
-#### 4\.3 Responsable económico
+##### Exportar miembros
+
+El listado de miembros del equipo de un grupo de investigación puede ser exportado a los formatos:
+
+* XLSX
+* CSV
+
+Para ello se dispondrá de dos iconos situados debajo de la tabla de resultados que permitirán generar el documento asociado bien en formato XLSX o CSV dependiendo del icono pulsado. Dicho documento podrá ser nombrado y descargado a la unidad de disco deseada.
+
+![](/attachments/597853547/1170341932.png)
+
+#### 4.3 Responsable económico
 
 Este apartado muestra en una tabla paginada al responsable económico actual del grupo de investigación junto con el listado de responsables económicos que ha tenido el grupo (su histórico). Sólo puede existir una persona responsable económica en cada momento.
 
@@ -347,7 +417,7 @@ Este apartado muestra en una tabla paginada al responsable económico actual del
 
 A continuación se detalla el significado de cada una de las columnas de la tabla:
 
-* E\-mail: Correo electrónico del responsable económico del grupo de investigación. Dato recuperado de los datos almacenados en la Universidad.
+* E-mail: Correo electrónico del responsable económico del grupo de investigación. Dato recuperado de los datos almacenados en la Universidad.
 * Nombre:Nombre del responsable económico del grupo de investigación. Datos recuperados de los datos almacenados en la Universidad.
 * Apellidos:Apellidos del responsable económico del grupo de investigación. Datos recuperados de los datos almacenados en la Universidad.
 * Fecha inicio: Fecha de inicio del responsable económico en el grupo.
@@ -359,7 +429,7 @@ Desde este listado el personal de gestión puede realizar las siguientes accione
 * Editar o modificar los datos de uno de los responsables económicos
 * Eliminar a un responsable económico
 
-##### 4\.3\.1 Añadir un responsable económico
+##### 4.3.1 Añadir un responsable económico
 
 El botón "añadir responsable económico" permite dar de alta a un nuevo responsable económico del grupo de investigación. Tras pulsar el botón se muestra la ventana para la introducción de datos:
 
@@ -367,7 +437,7 @@ El botón "añadir responsable económico" permite dar de alta a un nuevo respon
 
 Los campos de un responsable económico son:
 
-* Responsable económico: Campo para buscar a la persona que se quiere añadir al grupo como responsable económico. Para indicar la persona se utiliza el buscador común de personas [MDU\-Manual de usuario \- 8\.1 Personas](https://confluence.um.es/confluence/display/HERCULES/MDU+-+Manual+de+usuario#MDUManualdeusuario-8.1Personas "https://confluence.um.es/confluence/display/HERCULES/MDU+-+Manual+de+usuario#MDUManualdeusuario-8.1Personas"). Es un campo obligatorio.
+* Responsable económico: Campo para buscar a la persona que se quiere añadir al grupo como responsable económico. Para indicar la persona se utiliza el buscador común de personas [MDU-Manual de usuario - 8.1 Personas](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario#MDUManualdeusuario-8.1Personas). Es un campo obligatorio.
 * Fecha inicio: Campo de tipo fecha para introducir la fecha de inicio del responsable económico en el grupo. Se puede introducir la fecha de forma manual o con la ayuda del calendario. Es un campo obligatorio.
 * Fecha fin: Campo de tipo fecha para introducir la fecha de finalización de la persona como responsable económica del grupo de investigación. Se puede introducir la fecha de forma manual o con la ayuda del calendario. Es un campo opcional.
 
@@ -386,14 +456,13 @@ Hasta que no se cumplimente todos los datos obligatorios y no existan errores de
 
 Al pulsar sobre el botón "Añadir" la persona se añadirá como responsable económico mostrando en la tabla de responsables económicos del grupo un fila mas que representa a la persona que se acaba de añadir.
 
-![](/attachments/597853547/597879398.png)  
-
+![](/attachments/597853547/597879398.png)
 
 Para que se consoliden los datos el personal de gestión deberá pulsar sobre el botón "Guardar" situado en la parte inferior de la pantalla en el pie de página para actualizar el grupo de investigación, sino se pulsa sobre el botón "Guardar" todos los cambios realizados se perderán.
 
-##### 4\.3\.2 Modificar responsable económico
+##### 4.3.2 Modificar responsable económico
 
-El icono "modificar responsable económico" permite modificar los datos de uno de los responsables económicos del grupo de investigación. Tras pulsar el botón se muestra la ventana para la modificación de datos, la pantalla es idéntica a la utilizada durante el alta, dejando la posibilidad de modificar cualquiera de los campos del formulario (ver funcionalidad descrita en el apartado [Añadir un responsable económico](#CSPGruposdeinvestigación-4.3.1A%C3%B1adirunresponsableecon%C3%B3mico "#CSPGruposdeinvestigación-4.3.1A%C3%B1adirunresponsableecon%C3%B3mico") para mas detalle).
+El icono "modificar responsable económico" permite modificar los datos de uno de los responsables económicos del grupo de investigación. Tras pulsar el botón se muestra la ventana para la modificación de datos, la pantalla es idéntica a la utilizada durante el alta, dejando la posibilidad de modificar cualquiera de los campos del formulario (ver funcionalidad descrita en el apartado [Añadir un responsable económico](#CSPGruposdeinvestigación-4.3.1A%C3%B1adirunresponsableecon%C3%B3mico) para mas detalle).
 
 En la siguiente imagen se muestra la pantalla de edición de un responsable económico de un grupo:
 
@@ -403,21 +472,19 @@ El botón "Aceptar" no se habilitará hasta que se introduzca algún cambio en u
 
 Al pulsar sobre el botón "Aceptar" el responsable económico se modificará y los cambios se verán reflejados en la tabla de responsables económicos del grupo mostrando el icono de la admiración en el menú de "Responsable económico" y el mensaje de información en la parte de abajo de la pantalla en el pie de página para recordar al personal de gestión que debe de pulsar el botón "Guardar" para que los cambios realizados (en este caso un cambio de un responsable económico) se consoliden.
 
-##### 4\.3\.3 Eliminar responsable económico
+##### 4.3.3 Eliminar responsable económico
 
 Tras pulsar el icono eliminar se mostrará un mensaje de confirmación.
 
-![](/attachments/597853547/597879486.png)  
-
+![](/attachments/597853547/597879486.png)
 
 Si se pulsa el botón Cancelar se cerrará la ventana del mensaje de confirmación y el responsable económico no será borrado.
 
 Si se pulsa el botón Aceptar el responsable económico desaparecerá de la tabla de responsables económicos del grupo como se puede ver en la siguiente imagen mostrando el icono de la admiración en el menú de "Responsable económico" y el mensaje de información en la parte de abajo de la pantalla en el pie de página para recordar al personal de gestión que debe de pulsar el botón "Guardar" para que los cambios realizados (en este caso el borrado del responsable económico) se consoliden.
 
-![](/attachments/597853547/597879484.png)  
+![](/attachments/597853547/597879484.png)
 
-
-#### 4\.4 Persona autorizada
+#### 4.4 Persona autorizada
 
 Este apartado muestra en una tabla paginada a la persona autorizada actual del grupo de validar/rechazar items de producción científica y de realizar la solicitud de modificación junto con el listado de personas autorizadas que ha tenido el grupo (su histórico). Sólo puede existir una persona autorizada en cada momento.
 
@@ -425,7 +492,7 @@ Este apartado muestra en una tabla paginada a la persona autorizada actual del g
 
 A continuación se detalla el significado de cada una de las columnas de la tabla:
 
-* E\-mail: Correo electrónico de la persona autorizada del grupo de investigación. Dato recuperado de los datos almacenados en la Universidad.
+* E-mail: Correo electrónico de la persona autorizada del grupo de investigación. Dato recuperado de los datos almacenados en la Universidad.
 * Nombre:Nombre de la persona autorizada del grupo de investigación. Datos recuperados de los datos almacenados en la Universidad.
 * Apellidos:Apellidos de la persona autorizada del grupo de investigación. Datos recuperados de los datos almacenados en la Universidad.
 * Fecha inicio: Fecha de inicio de la persona autorizada en el grupo.
@@ -437,16 +504,15 @@ Desde este listado el personal de gestión puede realizar las siguientes accione
 * Editar o modificar los datos de una de las personas autorizadas
 * Eliminar a una persona autorizada
 
-##### 4\.4\.1 Añadir una persona autorizada
+##### 4.4.1 Añadir una persona autorizada
 
 El botón "añadir persona autorizada" permite dar de alta a una nueva persona autorizada del grupo de investigación. Tras pulsar el botón se muestra la ventana para la introducción de datos:
 
-![](/attachments/597853547/597879437.png)  
-
+![](/attachments/597853547/597879437.png)
 
 Los campos de una persona autorizada son:
 
-* Persona autorizada: Campo para buscar a la persona que se quiere añadir al grupo como persona autorizada. Para indicar la persona se utiliza el buscador común de personas [MDU\-Manual de usuario \- 8\.1 Personas](https://confluence.um.es/confluence/display/HERCULES/MDU+-+Manual+de+usuario#MDUManualdeusuario-8.1Personas "https://confluence.um.es/confluence/display/HERCULES/MDU+-+Manual+de+usuario#MDUManualdeusuario-8.1Personas"). Es un campo obligatorio.
+* Persona autorizada: Campo para buscar a la persona que se quiere añadir al grupo como persona autorizada. Para indicar la persona se utiliza el buscador común de personas [MDU-Manual de usuario - 8.1 Personas](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario#MDUManualdeusuario-8.1Personas). Es un campo obligatorio.
 * Fecha inicio: Campo de tipo fecha para introducir la fecha de inicio de la persona autorizada en el grupo. Se puede introducir la fecha de forma manual o con la ayuda del calendario. Es un campo obligatorio.
 * Fecha fin: Campo de tipo fecha para introducir la fecha de finalización de la persona autorizada del grupo de investigación. Se puede introducir la fecha de forma manual o con la ayuda del calendario. Es un campo opcional.
 
@@ -457,49 +523,43 @@ Adicionalmente a las validaciones de la obligatoriedad se aplican las siguientes
 
 El error de validación se mostrará debajo del campo en color rojo. En la siguiente imagen se muestra alguno de los errores:
 
-![](/attachments/597853547/597879439.png)  
-
+![](/attachments/597853547/597879439.png)
 
 Hasta que no se cumplimente todos los datos obligatorios y no existan errores de validación no se activará el botón "Añadir".
 
-![](/attachments/597853547/597879438.png)  
-
+![](/attachments/597853547/597879438.png)
 
 Al pulsar sobre el botón "Añadir" la persona se añadirá como persona autorizada mostrando en la tabla de personas autorizadas del grupo un fila mas que representa a la persona que se acaba de añadir.
 
-![](/attachments/597853547/597879430.png)  
-
+![](/attachments/597853547/597879430.png)
 
 Para que se consoliden los datos el personal de gestión deberá pulsar sobre el botón "Guardar" situado en la parte inferior de la pantalla en el pie de página para actualizar el grupo de investigación, sino se pulsa sobre el botón "Guardar" todos los cambios realizados se perderán.
 
-##### 4\.4\.2 Modificar persona autorizada
+##### 4.4.2 Modificar persona autorizada
 
-El icono "modificar persona autorizada" permite modificar los datos de una de las personas autorizadas del grupo de investigación. Tras pulsar el botón se muestra la ventana para la modificación de datos, la pantalla es idéntica a la utilizada durante el alta, dejando la posibilidad de modificar cualquiera de los campos del formulario (ver funcionalidad descrita en el apartado [Añadir una persona autorizada](#CSPGruposdeinvestigación-4.4.1A%C3%B1adirunapersonaautorizada "#CSPGruposdeinvestigación-4.4.1A%C3%B1adirunapersonaautorizada") para mas detalle).
+El icono "modificar persona autorizada" permite modificar los datos de una de las personas autorizadas del grupo de investigación. Tras pulsar el botón se muestra la ventana para la modificación de datos, la pantalla es idéntica a la utilizada durante el alta, dejando la posibilidad de modificar cualquiera de los campos del formulario (ver funcionalidad descrita en el apartado [Añadir una persona autorizada](#CSPGruposdeinvestigación-4.4.1A%C3%B1adirunapersonaautorizada) para mas detalle).
 
 En la siguiente imagen se muestra la pantalla de edición de una persona autorizada de un grupo:
 
-![](/attachments/597853547/597879435.png)  
-
+![](/attachments/597853547/597879435.png)
 
 El botón "Aceptar" no se habilitará hasta que se introduzca algún cambio en uno de los datos de la pantalla. Se realizarán las misma validaciones que en la creación de una nueva persona autorizada.
 
 Al pulsar sobre el botón "Aceptar" la persona autorizada se modificará y los cambios se verán reflejados en la tabla de personas autorizadas del grupo mostrando el icono de la admiración en el menú de "Persona autorizada" y el mensaje de información en la parte de abajo de la pantalla en el pie de página para recordar al personal de gestión que debe de pulsar el botón "Guardar" para que los cambios realizados (en este caso un cambio de una persona autorizada) se consoliden.
 
-##### 4\.4\.3 Eliminar persona autorizada
+##### 4.4.3 Eliminar persona autorizada
 
 Tras pulsar el icono eliminar se mostrará un mensaje de confirmación.
 
-![](/attachments/597853547/597879426.png)  
-
+![](/attachments/597853547/597879426.png)
 
 Si se pulsa el botón Cancelar se cerrará la ventana del mensaje de confirmación y la persona autorizada no será borrada.
 
 Si se pulsa el botón Aceptar la persona autorizada desaparecerá de la tabla de personas autorizadas del grupo como se puede ver en la siguiente imagen mostrando el icono de la admiración en el menú de "Persona autorizada" y el mensaje de información en la parte de abajo de la pantalla en el pie de página para recordar al personal de gestión que debe de pulsar el botón "Guardar" para que los cambios realizados (en este caso el borrado de la persona autorizada) se consoliden.
 
-![](/attachments/597853547/597879427.png)  
+![](/attachments/597853547/597879427.png)
 
-
-#### 4\.5 Equipos instrumentales
+#### 4.5 Equipos instrumentales
 
  Este apartado muestra en una tabla paginada los equipos instrumentales con los que trabaja el grupo de investigación.
 
@@ -517,12 +577,11 @@ Desde este listado el personal de gestión puede realizar las siguientes accione
 * Editar o modificar los datos de uno de los equipos instrumentales.
 * Eliminar un equipo instrumental.
 
-##### 4\.5\.1 Añadir un nuevo equipo instrumental
+##### 4.5.1 Añadir un nuevo equipo instrumental
 
 El botón "añadir equipo instrumental" permite dar de alta a un nuevo equipo instrumental utilizado por el grupo de investigación. Tras pulsar el botón se muestra la ventana para la introducción de datos:
 
-![](/attachments/597853547/597879562.png)  
-
+![](/attachments/597853547/597879562.png)
 
 Los campos de un equipo instrumental son:
 
@@ -532,44 +591,39 @@ Los campos de un equipo instrumental son:
 
 Hasta que no se cumplimente todos los datos obligatorios no se activará el botón "Añadir".
 
-![](/attachments/597853547/597879558.png)  
-
+![](/attachments/597853547/597879558.png)
 
 Al pulsar sobre el botón "Añadir" el equipo instrumental se añadirá en la tabla de equipos instrumentales del grupo un fila mas que representa al equipo instrumental que se acaba de añadir.
 
-![](/attachments/597853547/597879560.png)  
-
+![](/attachments/597853547/597879560.png)
 
 Para que se consoliden los datos el personal de gestión deberá pulsar sobre el botón "Guardar" situado en la parte inferior de la pantalla en el pie de página para actualizar el grupo de investigación, sino se pulsa sobre el botón "Guardar" todos los cambios realizados se perderán.
 
-##### 4\.5\.2 Modificar equipo instrumental
+##### 4.5.2 Modificar equipo instrumental
 
-El icono "modificar equipo instrumental" permite modificar los datos de uno de los equipos instrumentales del grupo de investigación. Tras pulsar el botón se muestra la ventana para la modificación de datos, la pantalla es idéntica a la utilizada durante el alta, dejando la posibilidad de modificar cualquiera de los campos del formulario (ver funcionalidad descrita en el apartado [Añadir un nuevo equipo instrumental](#CSPGruposdeinvestigación-4.5.1A%C3%B1adirunnuevoequipoinstrumental "#CSPGruposdeinvestigación-4.5.1A%C3%B1adirunnuevoequipoinstrumental") para mas detalle).
+El icono "modificar equipo instrumental" permite modificar los datos de uno de los equipos instrumentales del grupo de investigación. Tras pulsar el botón se muestra la ventana para la modificación de datos, la pantalla es idéntica a la utilizada durante el alta, dejando la posibilidad de modificar cualquiera de los campos del formulario (ver funcionalidad descrita en el apartado [Añadir un nuevo equipo instrumental](#CSPGruposdeinvestigación-4.5.1A%C3%B1adirunnuevoequipoinstrumental) para mas detalle).
 
 En la siguiente imagen se muestra la pantalla de edición de un equipo instrumental de un grupo:
 
-![](/attachments/597853547/597879553.png)  
-
+![](/attachments/597853547/597879553.png)
 
 El botón "Aceptar" no se habilitará hasta que se introduzca algún cambio en uno de los datos de la pantalla. Se realizarán las misma validaciones que en la creación de un nuevo equipo instrumental.
 
 Al pulsar sobre el botón "Aceptar" el equipo instrumental se modificará y los cambios se verán reflejados en la tabla de equipos instrumentales del grupo mostrando el icono de la admiración en el menú de "Equipos instrumentales" y el mensaje de información en la parte de abajo de la pantalla en el pie de página para recordar al personal de gestión que debe de pulsar el botón "Guardar" para que los cambios realizados (en este caso un cambio de un equipo instrumental) se consoliden.
 
-##### 4\.5\.3 Eliminar equipo instrumental
+##### 4.5.3 Eliminar equipo instrumental
 
 Tras pulsar el icono eliminar se mostrará un mensaje de confirmación.
 
-![](/attachments/597853547/597879557.png)  
-
+![](/attachments/597853547/597879557.png)
 
 Si se pulsa el botón Cancelar se cerrará la ventana del mensaje de confirmación y el equipo instrumental no será borrado.
 
 Si se pulsa el botón Aceptar el equipo instrumental desaparecerá de la tabla de equipos instrumentales del grupo como se puede ver en la siguiente imagen mostrando el icono de la admiración en el menú de "Equipos instrumentales" y el mensaje de información en la parte de abajo de la pantalla en el pie de página para recordar al personal de gestión que debe de pulsar el botón "Guardar" para que los cambios realizados (en este caso un borrado de un equipo instrumental) se consoliden.
 
-![](/attachments/597853547/597879556.png)  
+![](/attachments/597853547/597879556.png)
 
-
-#### 4\.6 Enlaces
+#### 4.6 Enlaces
 
 Este apartado muestra en una tabla paginada los enlaces o direcciones web que se consideran útil o necesario recoger para el grupo de investigación.
 
@@ -585,55 +639,49 @@ Desde este listado el personal de gestión puede realizar las siguientes accione
 * Editar o modificar los datos de uno de los enlaces
 * Eliminar a un enlace del grupo
 
-##### 4\.6\.1 Añadir un nuevo enlace
+##### 4.6.1 Añadir un nuevo enlace
 
 El botón "añadir enlace" permite dar de alta a un nuevo enlace de interés para el grupo de investigación. Tras pulsar el botón se muestra la ventana para la introducción de datos:
 
-![](/attachments/597853547/597879575.png)  
-
+![](/attachments/597853547/597879575.png)
 
 El único campo para dar de alta un enlace es la propia dirección web del enlace. Es un campo obligatorio y no se valida el formato de la dirección web, es decir, es un campo de texto libre donde se puede introducir cualquier cadena, sin comprobar que la dirección existe o que sea correcta.
 
 Hasta que no se cumplimente el enlace no se activará el botón "Añadir"
 
-![](/attachments/597853547/597879570.png)  
-
+![](/attachments/597853547/597879570.png)
 
 Al pulsar sobre el botón "Añadir" el enlace se añadirá en la tabla de enlaces del grupo un fila mas que representa al enlace que se acaba de añadir.
 
-![](/attachments/597853547/597879569.png)  
-
+![](/attachments/597853547/597879569.png)
 
 Para que se consoliden los datos el personal de gestión deberá pulsar sobre el botón "Guardar" situado en la parte inferior de la pantalla en el pie de página para actualizar el grupo de investigación, sino se pulsa sobre el botón "Guardar" todos los cambios realizados se perderán.
 
-##### 4\.6\.2 Modificar enlace
+##### 4.6.2 Modificar enlace
 
-El icono "modificar enlace" permite modificar los datos de uno de los enlaces del grupo de investigación. Tras pulsar el botón se muestra la ventana para la modificación de datos, la pantalla es idéntica a la utilizada durante el alta, dejando la posibilidad de modificar el único campo del formulario (ver funcionalidad descrita en el apartado [Añadir un nuevo enlace](#CSPGruposdeinvestigación-4.6.1A%C3%B1adirunnuevoenlace "#CSPGruposdeinvestigación-4.6.1A%C3%B1adirunnuevoenlace") para mas detalle).
+El icono "modificar enlace" permite modificar los datos de uno de los enlaces del grupo de investigación. Tras pulsar el botón se muestra la ventana para la modificación de datos, la pantalla es idéntica a la utilizada durante el alta, dejando la posibilidad de modificar el único campo del formulario (ver funcionalidad descrita en el apartado [Añadir un nuevo enlace](#CSPGruposdeinvestigación-4.6.1A%C3%B1adirunnuevoenlace) para mas detalle).
 
 En la siguiente imagen se muestra la pantalla de edición de un enlace de un grupo:
 
-![](/attachments/597853547/597879573.png)  
-
+![](/attachments/597853547/597879573.png)
 
 El botón "Aceptar" no se habilitará hasta que se introduzca algún cambio en el enlace.
 
 Al pulsar sobre el botón "Aceptar" el enlace se modificará y los cambios se verán reflejados en la tabla de enlaces del grupo mostrando el icono de la admiración en el menú de "Enlaces" y el mensaje de información en la parte de abajo de la pantalla en el pie de página para recordar al personal de gestión que debe de pulsar el botón "Guardar" para que los cambios realizados (en este caso un cambio de un enlace) se consoliden.
 
-##### 4\.6\.3 Eliminar enlace
+##### 4.6.3 Eliminar enlace
 
 Tras pulsar el icono eliminar se mostrará un mensaje de confirmación.
 
-![](/attachments/597853547/597879571.png)  
-
+![](/attachments/597853547/597879571.png)
 
 Si se pulsa el botón Cancelar se cerrará la ventana del mensaje de confirmación y el enlace no será borrado.
 
 Si se pulsa el botón Aceptar el enlace desaparecerá de la tabla de enlaces del grupo como se puede ver en la siguiente imagen mostrando el icono de la admiración en el menú de "Enlaces" y el mensaje de información en la parte de abajo de la pantalla en el pie de página para recordar al personal de gestión que debe de pulsar el botón "Guardar" para que los cambios realizados (en este caso un borrado de un enlace) se consoliden.
 
-![](/attachments/597853547/597879568.png)  
+![](/attachments/597853547/597879568.png)
 
-
-#### 4\.7 Líneas investigación
+#### 4.7 Líneas investigación
 
 Este apartado muestra en una tabla paginada las líneas de investigación en las que trabaja o se desarrolla el grupo de investigación.
 
@@ -653,7 +701,7 @@ Desde este listado el personal de gestión puede realizar las siguientes accione
 
 La línea de investigación se considera una entidad "compleja", debido a su número alto de campos y de diferente tipología que se tienen de presentar en diferentes apartados o pestañas necesitando su propio flujo de navegación, lo que obliga al personal de gestión primero guardar los datos del grupo de investigación antes de ir a realizar cualquier cambio en una línea de investigación.
 
-##### 4\.7\.1 Añadir una nueva línea de investigación
+##### 4.7.1 Añadir una nueva línea de investigación
 
 El botón "añadir línea investigación" permite asignar una nueva línea de investigación al grupo de investigación.
 
@@ -669,11 +717,11 @@ Si se pulsa el botón "Continuar y perder los datos" no se guardarán los cambio
 
 ![](/attachments/597853547/597879611.png)
 
-Para la creación de una nueva línea de investigación de un grupo únicamente es necesario informar los datos del apartado de "Datos generales", el resto de apartados se podrán informar desde la edición o modificación de la línea de investigación (ver apartado del manual [Modificar línea de investigación](#CSPGruposdeinvestigación-4.7.1Modificarl%C3%ADneadeinvestigaci%C3%B3n "#CSPGruposdeinvestigación-4.7.1Modificarl%C3%ADneadeinvestigaci%C3%B3n")).
+Para la creación de una nueva línea de investigación de un grupo únicamente es necesario informar los datos del apartado de "Datos generales", el resto de apartados se podrán informar desde la edición o modificación de la línea de investigación (ver apartado del manual [Modificar línea de investigación](#CSPGruposdeinvestigación-4.7.1Modificarl%C3%ADneadeinvestigaci%C3%B3n)).
 
 A continuación se describe cada uno de los campos solicitados en este formulario o pantalla:
 
-* Línea investigación: Campo de tipo desplegable que indica la línea de investigación sobre la que trabaja el grupo de investigación. La línea de investigación deberá seleccionarse a partir del desplegable disponible en este campo, que contendrá todas las líneas de investigación configuradas en el SGI. Para más información sobre este componente se puede consultar [MDU\-Manual de usuario \- 3\.17 Controles sobre campos desplegables o selectores](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/index.md#MDUManualdeusuario-3.17Controlessobrecamposdesplegablesoselectores "/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/index.md#MDUManualdeusuario-3.17Controlessobrecamposdesplegablesoselectores") donde se explica como crear una nueva línea de investigación para ser utilizada por el grupo en caso de que no exista en el desplegable.
+* Línea investigación: Campo de tipo desplegable que indica la línea de investigación sobre la que trabaja el grupo de investigación. La línea de investigación deberá seleccionarse a partir del desplegable disponible en este campo, que contendrá todas las líneas de investigación configuradas en el SGI. Para más información sobre este componente se puede consultar [MDU-Manual de usuario - 3.17 Controles sobre campos desplegables o selectores](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario#MDUManualdeusuario-3.17Controlessobrecamposdesplegablesoselectores) donde se explica como crear una nueva línea de investigación para ser utilizada por el grupo en caso de que no exista en el desplegable.
 * Fecha inicio: Campo de tipo fecha para introducir la fecha de inicio de actuación de la línea de investigación en el grupo. Se puede introducir la fecha de forma manual o con la ayuda del calendario. Por defecto, en la creación, se inicializa al valor de la fecha de inicio del grupo. Se comprobará que sea una fecha mayor o igual a la fecha de inicio del grupo. Es un campo obligatorio.
 * Fecha fin: Campo de tipo fecha para introducir la fecha de fin de actuación de la línea de investigación en el grupo. Se puede introducir la fecha de forma manual o con la ayuda del calendario. Se comprobará que sea una fecha menor o igual a la fecha de fin del grupo en caso de estar informada. Es un campo opcional.
 
@@ -685,12 +733,11 @@ Si se pulsa el botón "Guardar" se vincula la línea de investigación al grupo 
 
 Se muestra un mensaje de que la línea de investigación se ha creado correctamente en el grupo  igual que el de la siguiente imagen.
 
-![](/attachments/597853547/597879608.png)  
+![](/attachments/597853547/597879608.png)
 
+Una vez creada la vinculación de la línea de investigación al grupo te lleva a la edición o modificación de la línea de investigación donde se muestran el resto de apartados que pueden ser cumplimentados. Ver [Modificar línea de investigación](https://confluence.um.es/confluence/pages/viewpage.action?pageId=141926817#CSPGruposdeinvestigaci%C3%B3n-4.7.2Modificarl%C3%ADneadeinvestigaci%C3%B3n).
 
-Una vez creada la vinculación de la línea de investigación al grupo te lleva a la edición o modificación de la línea de investigación donde se muestran el resto de apartados que pueden ser cumplimentados. Ver [Modificar línea de investigación](https://confluence.um.es/confluence/pages/viewpage.action?pageId=141926817#CSPGruposdeinvestigaci%C3%B3n-4.7.2Modificarl%C3%ADneadeinvestigaci%C3%B3n "https://confluence.um.es/confluence/pages/viewpage.action?pageId=141926817#CSPGruposdeinvestigaci%C3%B3n-4.7.2Modificarl%C3%ADneadeinvestigaci%C3%B3n").
-
-##### 4\.7\.2 Modificar línea de investigación
+##### 4.7.2 Modificar línea de investigación
 
 La modificación de los datos de una línea de investigación vinculada a un grupo puede realizarse a través del icono de acción editar ![](/attachments/597853547/597879905.png)del listado de líneas de investigación del grupo.
 
@@ -721,15 +768,15 @@ Se mostrará un mensaje informativo confirmando que la línea de investigación 
 
 ![](/attachments/597853547/597879603.png)
 
-###### 4\.7\.2\.1 Datos generales
+###### 4.7.2.1 Datos generales
 
 Apartado con los datos de información básica o general de una línea de investigación vinculada a un grupo de investigación.
 
 ![](/attachments/597853547/597879604.png)
 
-En el apartado del manual [Añadir una nueva línea de investigación](#CSPGruposdeinvestigación-4.7.1A%C3%B1adirunanueval%C3%ADneadeinvestigaci%C3%B3n "#CSPGruposdeinvestigación-4.7.1A%C3%B1adirunanueval%C3%ADneadeinvestigaci%C3%B3n") se puede ver la descripción detallada de cada campo.
+En el apartado del manual [Añadir una nueva línea de investigación](#CSPGruposdeinvestigación-4.7.1A%C3%B1adirunanueval%C3%ADneadeinvestigaci%C3%B3n) se puede ver la descripción detallada de cada campo.
 
-###### 4\.7\.2\.2 Miembros adscritos
+###### 4.7.2.2 Miembros adscritos
 
 Este apartado muestra en una tabla paginada con los Investigadores/as que forman parte del grupo de investigación adscritos a una o varias líneas de investigación del grupo.
 
@@ -737,7 +784,7 @@ Este apartado muestra en una tabla paginada con los Investigadores/as que forman
 
 A continuación se detalla el significado de cada una de las columnas de la tabla:
 
-* E\-mail: Correo electrónico del miembro del grupo de investigación vinculado a la línea de investigación. Dato recuperado de los datos almacenados en la Universidad.
+* E-mail: Correo electrónico del miembro del grupo de investigación vinculado a la línea de investigación. Dato recuperado de los datos almacenados en la Universidad.
 * Nombre:Nombre del miembro del grupo de investigación vinculado a la línea de investigación. Datos recuperados de los datos almacenados en la Universidad.
 * Apellidos:Apellidos del miembro del grupo de investigación vinculado a la línea de investigación. Datos recuperados de los datos almacenados en la Universidad.
 * Fecha inicio: Fecha de inicio del miembro del equipo adscrito a la línea de investigación.
@@ -749,12 +796,11 @@ Desde este listado el personal de gestión puede realizar las siguientes accione
 * Editar o modificar los datos de uno de los miembros adscrito
 * Eliminar a un miembro adscrito a una línea
 
-####### 4\.7\.2\.2\.1 Añadir un miembro adscrito
+###### 4.7.2.2.1 Añadir un miembro adscrito
 
 El botón "añadir miembro adscrito" permite asociar un miembro del equipo investigador del grupo de investigación a una línea de investigación. Tras pulsar el botón se muestra la ventana para la introducción de datos:
 
-![](/attachments/597853547/597879617.png)  
-
+![](/attachments/597853547/597879617.png)
 
 Los campos de un miembro adscrito son:
 
@@ -783,7 +829,7 @@ Al pulsar sobre el botón "Añadir" la persona se añadirá como miembro adscrit
 
 Para que se consoliden los datos el personal de gestión deberá pulsar sobre el botón "Guardar" situado en la parte inferior de la pantalla en el pie de página para actualizar la línea de investigación, sino se pulsa sobre el botón "Guardar" todos los cambios realizados se perderán.
 
-####### 4\.7\.2\.2\.2 Modificar un miembro adscrito
+###### 4.7.2.2.2 Modificar un miembro adscrito
 
 El icono "modificar miembro adscrito" permite modificar los datos de uno de los miembros adscritos a una línea de investigación. Tras pulsar el botón se muestra la ventana para la modificación de datos, la pantalla es idéntica a la utilizada durante el alta, dejando la posibilidad de modificar cualquiera de los campos del formulario (ver funcionalidad descrita en el apartado  para mas detalle).
 
@@ -795,7 +841,7 @@ El botón "Aceptar" no se habilitará hasta que se introduzca algún cambio en u
 
 Al pulsar sobre el botón "Aceptar" el miembro adscrito a la línea de investigación se modificará y los cambios se verán reflejados en la tabla de miembros adscritos a una línea de investigación mostrando el icono de la admiración en el menú de "Miembros adscritos" y el mensaje de información en la parte de abajo de la pantalla en el pie de página para recordar al personal de gestión que debe de pulsar el botón "Guardar" para que los cambios realizados (en este caso un cambio de un miembro adscrito a la línea de investigación) se consoliden.
 
-####### 4\.7\.2\.2\.3 Eliminar un miembro adscrito
+###### 4.7.2.2.3 Eliminar un miembro adscrito
 
 Tras pulsar el icono eliminar se mostrará un mensaje de confirmación.
 
@@ -807,12 +853,11 @@ Si se pulsa el botón Aceptar el miembro adscrito a la línea de investigación 
 
 ![](/attachments/597853547/597883502.png)
 
-###### 4\.7\.2\.3 Clasificaciones
+###### 4.7.2.3 Clasificaciones
 
 Este apartado muestra en una tabla paginada las distintas clasificaciones con las que se identifica la línea de investigación vinculada al grupo.
 
-![](/attachments/597853547/597879592.png)  
-
+![](/attachments/597853547/597879592.png)
 
 A continuación se detalla el significado de cada una de las columnas de la tabla:
 
@@ -825,12 +870,11 @@ Desde este listado el personal de gestión puede realizar las siguientes accione
 * Añadir una nueva clasificación
 * Eliminar una clasificación de la línea de investigación
 
-####### 4\.7\.2\.3\.1 Añadir una clasificación
+###### 4.7.2.3.1 Añadir una clasificación
 
 El botón "añadir clasificación" permite clasificar a una línea de investigación dentro de una tipología.
 
-![](/attachments/597853547/597879589.png)  
-
+![](/attachments/597853547/597879589.png)
 
 El primer campo a cumplimentar de forma obligatoria será la "clasificación". Una clasificación se entiende como una organización jerárquica conformada por un conjunto de códigos a los que diferentes entidades dentro del SGI se podrán asociar. Inicialmente se identifican en el SGI cuatro clasificaciones distintas: UNESCO, NABS, ANEP y CNAE, si bien la lista de clasificaciones podrá ser extendida por parte de la Universidad con otras adicionales en tiempo de implantación.
 
@@ -838,9 +882,9 @@ El primer campo a cumplimentar de forma obligatoria será la "clasificación". U
 
 Una vez seleccionada la clasificación, se muestra el primer nivel de la jerarquía asociada a la clasificación seleccionada (en este caso UNESCO).
 
-Se pueden ir desplegando categorías por niveles. Ver [MDU\-Manual de usuario \- 7\.5 Selector de clasificaciones](https://confluence.um.es/confluence/display/HERCULES/MDU+-+Manual+de+usuario#MDUManualdeusuario-7.5Selectordeclasificaciones "https://confluence.um.es/confluence/display/HERCULES/MDU+-+Manual+de+usuario#MDUManualdeusuario-7.5Selectordeclasificaciones") para mas detalle del funcionamiento de esta pantalla.
+Se pueden ir desplegando categorías por niveles. Ver [MDU-Manual de usuario - 7.5 Selector de clasificaciones](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario#MDUManualdeusuario-7.5Selectordeclasificaciones) para mas detalle del funcionamiento de esta pantalla.
 
-Una vez seleccionada el código de clasificación que se quiere vincular a la línea de investigación se habilita el botón "Aceptar". 
+Una vez seleccionada el código de clasificación que se quiere vincular a la línea de investigación se habilita el botón "Aceptar".
 
 ![](/attachments/597853547/597879590.png)
 
@@ -850,7 +894,7 @@ Al pulsar sobre el botón "Aceptar" la clasificación se añadirá como clasific
 
 Para que se consoliden los datos el personal de gestión deberá pulsar sobre el botón "Guardar" situado en la parte inferior de la pantalla en el pie de página para actualizar la línea de investigación, sino se pulsa sobre el botón "Guardar" todos los cambios realizados se perderán.
 
-####### 4\.7\.2\.3\.2 Eliminar una clasificación
+###### 4.7.2.3.2 Eliminar una clasificación
 
 Tras pulsar el icono eliminar se mostrará un mensaje de confirmación.
 
@@ -862,7 +906,7 @@ Si se pulsa el botón Aceptar la clasificación vinculada a la línea de investi
 
 ![](/attachments/597853547/597880177.png)
 
-###### 4\.7\.2\.4 Equipos instrumentales
+###### 4.7.2.4 Equipos instrumentales
 
 Este apartado muestra en una tabla paginada con los equipos instrumentales definidos en el grupo de investigación y que van a ser utilizados por la línea de investigación.
 
@@ -879,12 +923,11 @@ Desde este listado el personal de gestión puede realizar las siguientes accione
 * Añadir un nuevo equipo instrumental asociado a la línea de investigación
 * Eliminar la vinculación del equipo instrumental con la línea de investigación
 
-####### 4\.7\.2\.4\.1 Añadir un equipo instrumental
+###### 4.7.2.4.1 Añadir un equipo instrumental
 
 El botón "añadir equipo instrumental" permite vincular un equipos instrumental del grupo de investigación a una línea de investigación. Tras pulsar el botón se muestra la ventana para la introducción de datos:
 
-![](/attachments/597853547/597880164.png)  
-
+![](/attachments/597853547/597880164.png)
 
 El único campo que se debe de introducir de forma obligatoria es el equipo instrumental. Para ello se muestra un campo de tipo desplegable con los equipos instrumentales definidos en el grupo de investigación al que pertenece la línea de investigación.
 
@@ -898,7 +941,7 @@ Al pulsar sobre el botón "Añadir" el equipo instrumental se vincula a la líne
 
 Para que se consoliden los datos el personal de gestión deberá pulsar sobre el botón "Guardar" situado en la parte inferior de la pantalla en el pie de página para actualizar la línea de investigación, sino se pulsa sobre el botón "Guardar" todos los cambios realizados se perderán.
 
-####### 4\.7\.2\.4\.2 Eliminar un equipo instrumental
+###### 4.7.2.4.2 Eliminar un equipo instrumental
 
 Tras pulsar el icono eliminar se mostrará un mensaje de confirmación.
 
@@ -910,7 +953,7 @@ Si se pulsa el botón Aceptar el equipo instrumental vinculado a la línea de in
 
 ![](/attachments/597853547/597880190.png)
 
-##### 4\.7\.3 Eliminar línea de investigación
+##### 4.7.3 Eliminar línea de investigación
 
 La eliminación de los datos de una línea de investigación vinculada a un grupo de investigación puede realizarse a través del icono de acción eliminar ![](/attachments/597853547/597879564.png) del listado de líneas de investigación.
 
@@ -926,7 +969,7 @@ Si se pulsa el botón Aceptar línea de investigación vinculada al grupo de inv
 
 ![](/attachments/597853547/597880134.png)
 
-### 5\. Eliminar un grupo de investigación
+### 5. Eliminar un grupo de investigación
 
 Grupo de investigación es una de las entidades del SGI que admite desactivación, por lo que posteriormente podrá ser recuperada. La eliminación de los datos de un grupo de investigación puede realizarse a través del icono de acción eliminar ![](/attachments/597853547/597879564.png) del listado de grupos de investigación.
 
@@ -936,20 +979,15 @@ La acción eliminar solo estará disponible sobre los grupos de investigación a
 
 Tras pulsar el icono eliminar se mostrará un mensaje de confirmación.
 
-![](/attachments/597853547/597879531.png)  
-
-
-  
-
+![](/attachments/597853547/597879531.png)
 
 Si se pulsa el botón Cancelar se cerrará la ventana del mensaje de confirmación y el grupo de investigación no será eliminado (desactivado).
 
 Si se pulsa el botón Aceptar el grupo de investigación será desactivado, mostrándose un mensaje informativo al finalizar la operación:
 
-![](/attachments/597853547/597879528.png)  
+![](/attachments/597853547/597879528.png)
 
-
-### 6\. Recuperar un grupo de investigación
+### 6. Recuperar un grupo de investigación
 
 Un grupo de investigación eliminado puede ser recuperado. La acción recuperar ![](/attachments/597853547/597879534.png) está disponible desde el listado de grupos de investigación. Para que los grupos de investigación desactivados se muestren en el listado de grupos de investigación se debe de hacer uso del filtro "activo" del buscador ampliado. Por defecto, el buscador de grupos de investigación muestra los grupos de investigación activados (filtro activo está preseleccionado al valor "sí"). Para mostrar los grupos de investigación desactivados se deberá establecer el valor "no" o "todos" en el filtro "activo".
 
@@ -959,19 +997,8 @@ Tras pulsar el icono recuperar se mostrará un mensaje de confirmación
 
 ![](/attachments/597853547/597879533.png)
 
-  
-
-
 Si se pulsa el botón Cancelar el grupo de investigación no será recuperado continuando desactivado.
 
 Si se pulsa el botón  Aceptar se recuperará la el grupo de investigación, pasando de nuevo a estar activo. Cuando la operación se haya realizado se mostrará un mensaje informativo.
 
-![](/attachments/597853547/597879525.png)  
-
-
-  
-
-
-
-
-
+![](/attachments/597853547/597879525.png)

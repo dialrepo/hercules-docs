@@ -1,6 +1,4 @@
-# Hércules : Diseño de base de datos para proceso 4
-
-
+# Diseño de base de datos para proceso 4
 
 El proceso 4 almacena en una base de datos interna datos relacionados con:
 
@@ -10,11 +8,4 @@ El proceso 4 almacena en una base de datos interna datos relacionados con:
 
 El esquema de relación de las tablas utilizadas para este proceso es el siguiente:
 
-  
-
-
 ![](/attachments/598147405/598148141.png)
-
-
-
-

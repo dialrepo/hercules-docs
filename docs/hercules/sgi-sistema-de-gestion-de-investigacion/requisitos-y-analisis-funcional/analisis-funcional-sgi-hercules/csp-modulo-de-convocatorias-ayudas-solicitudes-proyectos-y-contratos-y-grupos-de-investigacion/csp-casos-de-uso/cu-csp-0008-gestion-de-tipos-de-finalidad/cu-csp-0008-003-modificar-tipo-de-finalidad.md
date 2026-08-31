@@ -1,6 +1,15 @@
-# Hércules : CU\-CSP\-0008\-003 \- Modificar tipo de finalidad
+# CU-CSP-0008-003 - Modificar tipo de finalidad
 
-
+|  |  |
+| --- | --- |
+| Cod. CU | **CU-CSP-0008-003 - Modificar tipo de finalidad** |
+| Ver. objetivo |  |
+| Ver. CU | 1.0.0 |
+| Estado | LIBERADO\_ |
+| Fec. Aprobación |  |
+| Épica, historia |  |
+| Actores | ACT-CSP-004-Administrador |
+| Frecuencia | Baja |
 
 ### Descripción
 
@@ -10,17 +19,17 @@ Modificación de un tipo de finalidad.
 
 #### Actor principal
 
-ACT\-CSP\-004\-Administrador
+ACT-CSP-004-Administrador
 
 #### Personal involucrado e intereses
 
-Personal gestor (ACT\-CSP\-003\-Gestor) de las unidades de gestión con acceso al módulo CSP, que requieren disponer de los tipos de finalidad para poder clasificar de acuerdo al tipo de acción a desarrollar las convocatorias y proyectos.
+Personal gestor (ACT-CSP-003-Gestor) de las unidades de gestión con acceso al módulo CSP, que requieren disponer de los tipos de finalidad para poder clasificar de acuerdo al tipo de acción a desarrollar las convocatorias y proyectos.
 
-Personal investigador (ACT\- CSP\-001\-Investigador, ACT\-CSP\-002\-InvestigadorExterno) que requiere ver toda la información de las convocatorias  y proyectos.
+Personal investigador (ACT- CSP-001-Investigador, ACT-CSP-002-InvestigadorExterno) que requiere ver toda la información de las convocatorias  y proyectos.
 
 ### Precondiciones
 
-El usuario ACT\-CSP\-004\-Administrador se autentica a través del usuario de dominio corporativo.
+El usuario ACT-CSP-004-Administrador se autentica a través del usuario de dominio corporativo.
 
 A través del servicio de integración con el directorio activo y de la información del usuario almacenada en el propio SGI, se obtiene su rol y  la unidades de gestión sobre las que tiene disponible el rol. El usuario está autorizado sobre la funcionalidad asociada a esta operación.
 
@@ -38,7 +47,7 @@ El tipo de finalidad se modifica correctamente y está disponible para la config
 6. El usuario es informado del resultado positivo de la acción
 7. Se vuelve al listado de Tipos de finalidad
 
-### Extensiones (flujos alternativos) \- Error de unicidad
+### Extensiones (flujos alternativos) - Error de unicidad
 
 1. El usuario ha introducido un nombre para el Tipo de finalidad que ya existe en la tabla de Tipos de finalidad para un elemento activo
 2. El usuario introduce el resto de datos del Tipo de finalidad
@@ -49,7 +58,7 @@ El tipo de finalidad se modifica correctamente y está disponible para la config
 7. El usuario es informado del resultado positivo de la acción.
 8. Se muestra el listado de Tipos de finalidad
 
-### Extensiones (flujos alternativos) \- Desactivar tipo de finalidad
+### Extensiones (flujos alternativos) - Desactivar tipo de finalidad
 
 1. El usuario accede al apartado de Tipos de finalidad del menú de configuración del módulo de CSP
 2. El usuario selecciona la opción Eliminar del listado de Tipos de finalidad para un registro concreto
@@ -60,7 +69,7 @@ El tipo de finalidad se modifica correctamente y está disponible para la config
 7. El usuario es informado del resultado positivo de la acción.
 8. Se muestra el listado de Tipos de finalidad
 
-### Extensiones (flujos alternativos) \- Reactivar tipo de finalidad
+### Extensiones (flujos alternativos) - Reactivar tipo de finalidad
 
 1. El usuario accede al apartado de Tipos de finalidad del menú de configuración del módulo de CSP
 2. El usuario selecciona la opción reactivar del listado de Tipos de finalidad para un registro concreto
@@ -71,10 +80,7 @@ El tipo de finalidad se modifica correctamente y está disponible para la config
 7. El usuario es informado del resultado positivo de la acción.
 8. Se muestra el listado de Tipos de finalidad
 
-  
-
-
-### Extensiones (flujos alternativos) \- El usuario no confirma la acción
+### Extensiones (flujos alternativos) - El usuario no confirma la acción
 
 1. El usuario accede al apartado de Tipos de finalidad del menú de configuración del módulo de CSP
 2. El usuario selecciona la opción Eliminar o  Reactivar del listado de Tipos de finalidad para un registro concreto
@@ -83,9 +89,6 @@ El tipo de finalidad se modifica correctamente y está disponible para la config
 5. No se realiza ninguna operación en base de datos
 6. Se muestra el listado de Tipos de finalidad
 
-  
-
-
 ### Requisitos especiales
 
 N/A
@@ -93,12 +96,3 @@ N/A
 ### Lista de tecnología y variaciones de datos
 
 N/A
-
-  
-  
-  
-
-
-
-
-

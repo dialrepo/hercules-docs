@@ -1,17 +1,20 @@
-# Hércules : MA. Creación y edición del cluster
+# MA. Creación y edición del cluster
 
-
-
-  
-
+* [Creación del cluster](#MA.Creaciónyedicióndelcluster-Creacióndelcluster)
+  + [Asistente](#MA.Creaciónyedicióndelcluster-Asistente)
+    - [Paso 1 (Definir cluster)](#MA.Creaciónyedicióndelcluster-Paso1(Definircluster))
+    - [Paso 2 (Definir perfiles y áreas de investigación)](#MA.Creaciónyedicióndelcluster-Paso2(Definirperfilesyáreasdeinvestigación))
+    - [Paso 3 (Recomendaciones y selección de investigadores)](#MA.Creaciónyedicióndelcluster-Paso3(Recomendacionesyseleccióndeinvestigadores))
+    - [Guardado del cluster](#MA.Creaciónyedicióndelcluster-Guardadodelcluster)
+* [Edición del cluster](#MA.Creaciónyedicióndelcluster-Edicióndelcluster)
 
 Información de desarrollo
 
-[https://github.com/HerculesCRUE/HerculesMA/blob/main/Docs/funcionamiento\-de\-los\-cluster.md](https://github.com/HerculesCRUE/HerculesMA/blob/main/Docs/funcionamiento-de-los-cluster.md "https://github.com/HerculesCRUE/HerculesMA/blob/main/Docs/funcionamiento-de-los-cluster.md")
+<https://github.com/HerculesCRUE/HerculesMA/blob/main/Docs/funcionamiento-de-los-cluster.md>
 
 ## Creación del cluster
 
-Para la creación del cluster, debes de haber iniciado sesión en el portal como personal investigador y acceder al menú lateral derecho \> "Gestión de clusters" \> "Nuevo Cluster".
+Para la creación del cluster, debes de haber iniciado sesión en el portal como personal investigador y acceder al menú lateral derecho > "Gestión de clusters" > "Nuevo Cluster".
 
 ### Asistente
 
@@ -51,9 +54,6 @@ Una parte importante de ésta pantalla es una segunda pestaña mostrando los inv
 
 ![](/attachments/598147448/598148113.png?effects=drop-shadow)
 
-  
-
-
 #### Guardado del cluster
 
 En el último paso, cuando se quiere terminar la creación del cluster, se podrá hacer click en el botón de "Guardar y terminar" y se guardará el cluster. Una vez guardado el cluster, se accederá a la ficha del cluster
@@ -62,11 +62,4 @@ En el último paso, cuando se quiere terminar la creación del cluster, se podr�
 
 ## Edición del cluster
 
-Para la edición de un cluster, se tendrá que acceder desde el listado de "mis clusters" o desde la ficha del cluster, y seleccionando "editar". La página de edición del cluster es la misma de la página de creación del cluster, pero con los datos del cluster pre\-cargados, listos para ser modificados.
-
-  
-
-
-
-
-
+Para la edición de un cluster, se tendrá que acceder desde el listado de "mis clusters" o desde la ficha del cluster, y seleccionando "editar". La página de edición del cluster es la misma de la página de creación del cluster, pero con los datos del cluster pre-cargados, listos para ser modificados.

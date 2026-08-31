@@ -1,6 +1,15 @@
-# Hércules : CU\-CSP\-0005\-002 \- Crear tipo de fase
+# CU-CSP-0005-002 - Crear tipo de fase
 
-
+|  |  |
+| --- | --- |
+| Cod. CU | **CU-CSP-0005-002 - Crear tipo de fase** |
+| Ver. objetivo |  |
+| Ver. CU | 1.0.0 |
+| Estado | LIBERADO\_ |
+| Fec. Aprobación |  |
+| Épica, historia |  |
+| Actores | ACT-CSP-004-Administrador |
+| Frecuencia | Baja |
 
 ### Descripción
 
@@ -10,15 +19,15 @@ Se crea el nuevo tipo de fase pasando a estar disponible en los listados de gest
 
 #### Actor principal
 
-ACT\-CSP\-004\-Administrador
+ACT-CSP-004-Administrador
 
 #### Personal involucrado e intereses
 
-ACT\- CSP\-003\-Gestor que requiere que los tipos de fase estén configurados y vinculados a los modelos de ejecución para poder realizar la gestión de convocatorias y proyectos
+ACT- CSP-003-Gestor que requiere que los tipos de fase estén configurados y vinculados a los modelos de ejecución para poder realizar la gestión de convocatorias y proyectos
 
 ### Precondiciones
 
-El usuario ACT\-CSP\-004\-Administrador se autentica a través del usuario de dominio corporativo.
+El usuario ACT-CSP-004-Administrador se autentica a través del usuario de dominio corporativo.
 
 A través del servicio de integración con el directorio activo y de la información del usuario almacenada en el propio SGI, se obtiene su rol y  la unidades de gestión sobre las que tiene disponible el rol. El usuario está autorizado sobre la funcionalidad asociada a esta operación con permisos de Creación.
 
@@ -36,7 +45,7 @@ El tipo de fase se crea correctamente y está disponible para la configuración 
 6. El usuario es informado del resultado positivo de la acción
 7. Se vuelve al listado de tipos de fase
 
-### Extensiones (flujos alternativos) \- Error de unicidad
+### Extensiones (flujos alternativos) - Error de unicidad
 
 1. El usuario ha introducido un nombre para el Tipo de fase que ya existe en la tabla de Tipos de fase como elemento activo (campo "activo" a "true")
 2. El usuario introduce el resto de datos del Tipo de fase
@@ -54,12 +63,3 @@ N/A
 ### Lista de tecnología y variaciones de datos
 
 N/A
-
-  
-  
-  
-
-
-
-
-

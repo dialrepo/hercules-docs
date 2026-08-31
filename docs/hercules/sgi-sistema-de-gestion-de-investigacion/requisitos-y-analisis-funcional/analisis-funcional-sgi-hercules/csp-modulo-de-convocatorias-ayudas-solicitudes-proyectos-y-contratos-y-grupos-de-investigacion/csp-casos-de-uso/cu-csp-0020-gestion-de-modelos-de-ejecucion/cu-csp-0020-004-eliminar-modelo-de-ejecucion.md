@@ -1,6 +1,15 @@
-# Hércules : CU\-CSP\-0020\-004 \- Eliminar modelo de ejecución
+# CU-CSP-0020-004 - Eliminar modelo de ejecución
 
-
+|  |  |
+| --- | --- |
+| Cod. CU | **CU-CSP-0020-004 - Eliminar modelo de ejecución** |
+| Ver. objetivo |  |
+| Ver. CU | 1.0.0 |
+| Estado | LIBERADO\_ |
+| Fec. Aprobación |  |
+| Épica, historia |  |
+| Actores | ACT-CSP-004-Administrador |
+| Frecuencia | Baja |
 
 ### Descripción
 
@@ -10,23 +19,17 @@ Eliminación de un modelo de ejecución.
 
 #### Actor principal
 
-ACT\-CSP\-004\-Administrador.  Deberá pertenecer a una unidad de gestión que tenga habilitada la acción de EDITAR sobre esta funcionalidad. Normalmente se tratará de las unidades UGI, OTRI, OPE.
+ACT-CSP-004-Administrador.  Deberá pertenecer a una unidad de gestión que tenga habilitada la acción de EDITAR sobre esta funcionalidad. Normalmente se tratará de las unidades UGI, OTRI, OPE.
 
 #### Personal involucrado e intereses
 
-ACT\-CSP\-003\-Gestor de las unidades que tengan habilitadas las funcionalidades de EDICION sobre Convocatorias y proyectos. Ver [CU\-USR\-0020\-003 \- Asignar funcionalidad a unidad de gestión y perfil de usuario](https://confluence.um.es/confluence/pages/viewpage.action?pageId=81841613 "https://confluence.um.es/confluence/pages/viewpage.action?pageId=81841613"). Normalmente se tratará de las unidades UGI, OTRI, OPE.
+ACT-CSP-003-Gestor de las unidades que tengan habilitadas las funcionalidades de EDICION sobre Convocatorias y proyectos. Ver [CU-USR-0020-003 - Asignar funcionalidad a unidad de gestión y perfil de usuario](https://confluence.um.es/confluence/pages/viewpage.action?pageId=81841613). Normalmente se tratará de las unidades UGI, OTRI, OPE.
 
-Personal investigador (ACT\- CSP\-001\-Investigador, ACT\-CSP\-002\-InvestigadorExterno) que requiere que se creen las convocatorias para presentar solicitudes sobre las mismas.
-
-  
-
+Personal investigador (ACT- CSP-001-Investigador, ACT-CSP-002-InvestigadorExterno) que requiere que se creen las convocatorias para presentar solicitudes sobre las mismas.
 
 Precondiciones
 
-El administrador de datos (ACT\-CSP\-004\-Administrador) se autentica a través del usuario de dominio corporativo. A través del servicio de integración con el directorio activo y la información del usuario, se obtiene su rol en el SGI y las unidades de gestión a las que pertenece. el usuario está autorizado sobre la funcionalidad asociad a esta operación con permisos de Borrado.
-
-  
-
+El administrador de datos (ACT-CSP-004-Administrador) se autentica a través del usuario de dominio corporativo. A través del servicio de integración con el directorio activo y la información del usuario, se obtiene su rol en el SGI y las unidades de gestión a las que pertenece. el usuario está autorizado sobre la funcionalidad asociad a esta operación con permisos de Borrado.
 
 ### Garantías de éxito (postcondiciones)
 
@@ -41,10 +44,7 @@ El modelo de ejecución se desactiva correctamente y no está disponible para l
 5. El usuario es informado del resultado positivo de la acción
 6. Se vuelve al listado de Modelos de ejecución
 
-  
-
-
-### Escenario principal (flujo básico) \- No se confirma la acción
+### Escenario principal (flujo básico) - No se confirma la acción
 
 1. El usuario accede al apartado de Modelos de ejecución del menú de configuración del módulo de CSP
 2. El usuario selecciona la opción Eliminar del listado de Modelos  para un registro concreto
@@ -59,12 +59,3 @@ N/A
 ### Lista de tecnología y variaciones de datos
 
 N/A
-
-  
-  
-  
-
-
-
-
-

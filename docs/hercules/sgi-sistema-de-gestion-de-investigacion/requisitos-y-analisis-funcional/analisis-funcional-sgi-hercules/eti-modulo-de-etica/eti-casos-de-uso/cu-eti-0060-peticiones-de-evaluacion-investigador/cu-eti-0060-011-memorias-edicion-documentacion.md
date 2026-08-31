@@ -1,6 +1,15 @@
-# Hércules : CU\-ETI\-0060\-011 \- Memorias \- Edición documentación
+# CU-ETI-0060-011 - Memorias - Edición documentación
 
-
+|  |  |
+| --- | --- |
+| Cod. CU | ********CU-ETI-0060-011 - Memorias - Edición documentación******** |
+| Ver. objetivo |  |
+| Ver. CU | 1.0.0 |
+| Estado | LIBERADO\_ |
+| Fec. Aprobación |  |
+| Épica, historia |  |
+| Actores | ACT-ETI-002-Investigador  ACT-ETI-003-Solicitante  ACT-ETI-006-Responsable memoria |
+| Frecuencia | Media |
 
 ### Descripción
 
@@ -10,11 +19,11 @@ Formulario para aportar la documentación a la memoria necesaria para la evaluac
 
 #### Actor principal
 
-ACT\-ETI\-002\-Investigador
+ACT-ETI-002-Investigador
 
-ACT\-ETI\-003\-Solicitante
+ACT-ETI-003-Solicitante
 
-ACT\-ETI\-006\-Responsable memoria
+ACT-ETI-006-Responsable memoria
 
 ### Precondiciones
 
@@ -47,11 +56,10 @@ Los documentos aportados como nuevos son añadidos al repositorio documental y a
 3. Se presenta la pantalla de edición de la petición de evaluación.
 4. El usuario va a la pestaña de Memorias.
 5. El usuario selecciona del listado una memoria en uno de los estados:  
-
-	* Completada
-	* Favorable Pendiente de Modificaciones Mínimas
-	* Pendiente de correcciones
-	* No procede evaluar
+   * Completada
+   * Favorable Pendiente de Modificaciones Mínimas
+   * Pendiente de correcciones
+   * No procede evaluar
 6. Al usuario se le presenta la pantalla de Datos generales de la memoria.
 7. El usuario selecciona la opción de menú Documentación.
 8. El usuario selecciona la acción de Añadir documento y elige uno de los documentos que no tiene aportados y adjunta el fichero.
@@ -63,13 +71,9 @@ Los documentos aportados como nuevos son añadidos al repositorio documental y a
 14. El usuario es informado del resultado positivo de la acción.
 15. Se mantienen en misma pantalla de edición.
 
-### Extensiones (flujos alternativos) \- Error durante el guardado
+### Extensiones (flujos alternativos) - Error durante el guardado
 
 1. En el punto 13 del flujo básico se produce algún error al intentar guardar el documento en el repositorio documental.
 2. El usuario es informado del resultado negativo de la acción.
 3. Se vuelve a poner el documento como no aportado para que lo intente en otra ocasión.
 4. Se mantienen en misma pantalla de edición.
-
-
-
-

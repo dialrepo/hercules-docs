@@ -1,33 +1,37 @@
-# Hércules : IU\-CSP\-0205\-009 \- Ver convocatoria \- Documentos
+# IU-CSP-0205-009 - Ver convocatoria - Documentos
 
+|  |  |
+| --- | --- |
+| Cod. IU | ********IU-CSP-0205-009 - Ver convocatoria - Documentos******** |
+| Ver. objetivo |  |
+| Ver. IU | 1.0.0 |
+| Estado | LIBERADO\_ |
+| Fec. Aprobación |  |
+| Épica, historia |  |
+| Actores | ACT- CSP-001-Investigador, ACT-CSP-005-Visor  Usuario externo |
+| Frecuencia | Media |
 
-
-## Formulario Ver convocatoria \- Documentos
+## Formulario Ver convocatoria - Documentos
 
 Formulario para ver y descargar los documentos de una convocatoria.
 
-
-
-|  | | |
+|  |  |  |
 | --- | --- | --- |
+|  | | |
 | Nombre | Tipo | Características / Notas |
-| Listado de documentos de la convocatoria. Para ACT\- CSP\-001\-Investigador solo contendrá el listado de documentos marcados "públicos". | | |
-| Documento | Texto corto | Nombre del documento. Para ACT\- CSP\-001\-Investigador solo se mostrarán los documentos que tenga el campo "público" a true. |
+| Listado de documentos de la convocatoria. Para ACT- CSP-001-Investigador solo contendrá el listado de documentos marcados "públicos". | | |
+| Documento | Texto corto | Nombre del documento. Para ACT- CSP-001-Investigador solo se mostrarán los documentos que tenga el campo "público" a true. |
 | Descargar | Icono de acción | Acción descargar |
 | Fase | Texto corto | Tipo de fase de gestión del documento. |
 | Tipo de documento | Texto corto | Tipo del documento |
 | Observaciones | Texto largo | Observaciones del documento |
-| Público | Texto corto | Tomará los valores Sí/No. Indica si el documento va a ser visible para los ACT\- CSP\-001\-Investigador. En caso que el usuario que accede sea un ACT\- CSP\-001\-Investigador, no se mostrará esta columna |
-
-
+| Público | Texto corto | Tomará los valores Sí/No. Indica si el documento va a ser visible para los ACT- CSP-001-Investigador. En caso que el usuario que accede sea un ACT- CSP-001-Investigador, no se mostrará esta columna |
 
 | Acciones | Descripción | Enlace CU. |
 | --- | --- | --- |
 | Descargar | Descargar el fichero seleccionado del listado de documentos de la convocatoria. |  |
 
 ### Botones generales a la pantalla
-
-
 
 | Acciones | Descripción | Enlace CU. |
 | --- | --- | --- |
@@ -37,8 +41,14 @@ Formulario para ver y descargar los documentos de una convocatoria.
 
 #### Por actor
 
+|  |  |
+| --- | --- |
+| ACT-CSP-001-Investigador | CSP-CON-INV-V |
+| ACT-CSP-005-Visor | CSP-CON-V |
+| Usuario externo | Sin permisos |
+
 #### Todos los permisos de acceso
 
-
-
-
+|  |  |
+| --- | --- |
+| Permisos | CSP-CON-INV-V, CSP-CON-V |

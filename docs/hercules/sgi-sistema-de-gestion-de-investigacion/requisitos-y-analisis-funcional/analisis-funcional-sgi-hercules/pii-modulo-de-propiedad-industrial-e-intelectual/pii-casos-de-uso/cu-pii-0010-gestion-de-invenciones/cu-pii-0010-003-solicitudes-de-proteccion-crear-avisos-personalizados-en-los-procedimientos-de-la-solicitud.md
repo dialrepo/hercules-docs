@@ -1,20 +1,25 @@
-# Hércules : CU\-PII\-0010\-003 \- Solicitudes de protección \- Crear avisos personalizados en los procedimientos de la solicitud
+# CU-PII-0010-003 - Solicitudes de protección - Crear avisos personalizados en los procedimientos de la solicitud
 
-
-
-
-
-
+|  |  |
+| --- | --- |
+| Cod. CU | ********CU-PII-0010-003 - Solicitudes de protección - Crear avisos personalizados en los procedimientos de la solicitud******** |
+| Ver. objetivo |  |
+| Ver. CU | 1.0.0 |
+| Estado | LIBERADO\_ |
+| Fec. Aprobación |  |
+| Épica, historia |  |
+| Actores | ACT-PII-001-Gestor |
+| Frecuencia | Media |
 
 ### Descripción
 
-Cuando el usuario va gestionando una solicitud de protección y se generan procedimientos el usuario va dejando constancia en la misma. Este procedimiento que el usuario registra, normalmente, requerirá de unas acciones a tomar que si no son de manera inmediata o no son para el usuario que está haciendo el registro requieren de un aviso en una fecha y a unos usuarios determinados ([\_\_NO USAR CU\-COM\-0020 \- Generar comunicado automático \- Original con enlaces de AFs fuera de PMV](https://confluence.um.es/confluence/pages/createpage.action?spaceKey=HERCULES&title=__NO+USAR+CU-COM-0020+-+Generar+comunicado+autom%C3%A1tico+-+Original+con+enlaces+de+AFs+fuera+de+PMV&linkCreation=true&fromPageId=597853204 "/confluence/pages/createpage.action?spaceKey=HERCULES&title=__NO+USAR+CU-COM-0020+-+Generar+comunicado+autom%C3%A1tico+-+Original+con+enlaces+de+AFs+fuera+de+PMV&linkCreation=true&fromPageId=597853204") \- [IU\-COM\-0020\-001 \- Generación de comunicados](https://confluence.um.es/confluence/pages/createpage.action?spaceKey=HERCULES&title=__IU-COM-0020-001+-+Generaci%C3%B3n+de+comunicados&linkCreation=true&fromPageId=597853204 "/confluence/pages/createpage.action?spaceKey=HERCULES&title=__IU-COM-0020-001+-+Generaci%C3%B3n+de+comunicados&linkCreation=true&fromPageId=597853204")).
+Cuando el usuario va gestionando una solicitud de protección y se generan procedimientos el usuario va dejando constancia en la misma. Este procedimiento que el usuario registra, normalmente, requerirá de unas acciones a tomar que si no son de manera inmediata o no son para el usuario que está haciendo el registro requieren de un aviso en una fecha y a unos usuarios determinados ([\_\_NO USAR CU-COM-0020 - Generar comunicado automático - Original con enlaces de AFs fuera de PMV](/confluence/pages/createpage.action?spaceKey=HERCULES&title=__NO+USAR+CU-COM-0020+-+Generar+comunicado+autom%C3%A1tico+-+Original+con+enlaces+de+AFs+fuera+de+PMV&linkCreation=true&fromPageId=597853204) - [IU-COM-0020-001 - Generación de comunicados](/confluence/pages/createpage.action?spaceKey=HERCULES&title=__IU-COM-0020-001+-+Generaci%C3%B3n+de+comunicados&linkCreation=true&fromPageId=597853204)).
 
 ### Actores
 
 #### Actor principal
 
-ACT\-PII\-001\-Gestor
+ACT-PII-001-Gestor
 
 ### Precondiciones
 
@@ -48,33 +53,14 @@ N/A
 
 ### Acciones
 
-  
-
-
-  
-
-
-
-
-
-
-
+|  |  |
+| --- | --- |
+| ACT-PII-001-Gestor | PII-INVENCION-EDITAR |
 
 ### Casos de uso relacionados
 
-
-
-
-
-
+![](plugins/servlet/confluence/placeholder/unknown-macro)
 
 ### Interfaces relacionados
 
-
-
-
-
-
-
-
-
+![](plugins/servlet/confluence/placeholder/unknown-macro)

@@ -1,6 +1,15 @@
-# Hércules : CU\-ETI\-0010\-007 \- Asignación de memorias \- Modificar
+# CU-ETI-0010-007 - Asignación de memorias - Modificar
 
-
+|  |  |
+| --- | --- |
+| Cod. CU | ********CU-ETI-0010-007 - Asignación de memorias - Modificar******** |
+| Ver. objetivo |  |
+| Ver. CU | 1.0.0 |
+| Estado | LIBERADO\_ |
+| Fec. Aprobación |  |
+| Épica, historia |  |
+| Actores | ACT-ETI-001-Gestor |
+| Frecuencia | Media |
 
 ### Descripción
 
@@ -10,7 +19,7 @@ Formulario de modificación de asignación de memorias y par de evaluadores a la
 
 #### Actor principal
 
-ACT\-ETI\-001\-Gestor
+ACT-ETI-001-Gestor
 
 ### Precondiciones
 
@@ -26,35 +35,31 @@ Seleccionar una de las memorias del listado.
 
 ### Garantías de éxito (postcondiciones)
 
-Se modifican los datos de la asignación, o bien la memoria, el evaluador 1 o el evaluador 2\.
+Se modifican los datos de la asignación, o bien la memoria, el evaluador 1 o el evaluador 2.
 
 Los cambios únicamente se realizan en memoria.
 
-### Escenario principal (flujo básico \- modificar memoria)
+### Escenario principal (flujo básico - modificar memoria)
 
 1. Se presenta la pantalla Convocatorias reunión con el listado de todas las Convocatorias de reunión dadas de alta en el sistema.
 2. Se selecciona la convocatoria de reunión.
 3. Se presenta la pantalla de edición de convocatoria de reunión.
 4. El usuario va a la pestaña de Asignación de memorias.
 5. El usuario selecciona una memoria del listado de memorias.
-6. El usuario en la pantalla de Modificar memoria modifica el evaluador 1\.
+6. El usuario en la pantalla de Modificar memoria modifica el evaluador 1.
 7. El usuario selecciona la acción Modificar.
 8. Se realizan las validaciones en cuanto a formato, obligatoriedad habituales.
 9. Se presenta la memoria seleccionada con los datos modificados en el listado de memorias de la reunión de convocatoria.
 
-### Extensiones (flujos alternativos) \- Conflicto de intereses
+### Extensiones (flujos alternativos) - Conflicto de intereses
 
 1. Se presenta la pantalla Convocatorias reunión con el listado de todas las Convocatorias de reunión dadas de alta en el sistema y que no se hayan borrado.
 2. Se selecciona la convocatoria de reunión.
 3. Se presenta la pantalla de edición de convocatoria de reunión.
 4. El usuario va a la pestaña de Asignación de memorias.
 5. El usuario selecciona una memoria del listado de memorias.
-6. El usuario en la pantalla de Modificar memoria modifica el evaluador 1\.
+6. El usuario en la pantalla de Modificar memoria modifica el evaluador 1.
 7. El usuario selecciona la acción Modificar.
 8. Se realizan las validaciones en cuanto a formato, obligatoriedad habituales. Como el evaluador esta dentro de los investigadores con conflicto del equipo investigador de la memoria se muestra mensaje de que no se puede asignar dicho evaluador.
 9. El usuario modifica al evaluador.
 10. Se sigue con el paso 6 del flujo básico.
-
-
-
-

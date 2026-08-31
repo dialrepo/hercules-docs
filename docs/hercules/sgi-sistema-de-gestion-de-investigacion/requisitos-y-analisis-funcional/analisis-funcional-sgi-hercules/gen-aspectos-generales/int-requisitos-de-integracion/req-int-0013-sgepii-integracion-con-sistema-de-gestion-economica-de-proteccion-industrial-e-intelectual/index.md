@@ -1,6 +1,15 @@
-# Hércules : REQ\-INT\-0013\-SGEPII \- Integración con Sistema de Gestión Económica de Protección Industrial e Intelectual
+# REQ-INT-0013-SGEPII - Integración con Sistema de Gestión Económica de Protección Industrial e Intelectual
 
-
+|  |  |
+| --- | --- |
+| Cod. REQ | **REQ-INT-0013-SGEPII - Integración con Sistema de Gestión Económica de Protección Industrial e Intelectual** |
+| Ver. Objetivo |  |
+| Ver. REQ |  |
+| Estado | IN PROGRESS |
+| Fec. Aprobación |  |
+| Épica, historia |  |
+| Frecuencia |  |
+| Características |  |
 
 ### Definición y objetivos
 
@@ -14,17 +23,7 @@ A grandes rasgos el objetivo de esta integración será:
 
 ### Requisitos identificados
 
-
-
 | Título | Épica, historia | Características | Cod. REQ | Estado | Fec. Aprobación | Frecuencia | M. Consumidor | Ver. Objetivo | Ver. REQ |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| [REQ\-INT\-0013\-SGEPII\-0020 \- Buscar facturas emitidas \- Ingresos](/confluence/display/HERCULES/REQ-INT-0013-SGEPII-0020+-+Buscar+facturas+emitidas+-+Ingresos "/confluence/display/HERCULES/REQ-INT-0013-SGEPII-0020+-+Buscar+facturas+emitidas+-+Ingresos") |  |  | **REQ\-INT\-0013\-SGEPII\-0020 \- Buscar facturas emitidas\-ingresos** | IN PROGRESS |  |  |  |  | 1\.0\.0 |
-| [REQ\-INT\-0013\-SGEPII\-0010 \- Buscar detalle de operaciones \- Gastos](/confluence/display/HERCULES/REQ-INT-0013-SGEPII-0010+-+Buscar++detalle+de+operaciones+-+Gastos "/confluence/display/HERCULES/REQ-INT-0013-SGEPII-0010+-+Buscar++detalle+de+operaciones+-+Gastos") |  |  | **REQ\-INT\-0013\-SGE\-0010 \- Buscar detalle de operaciones \- Gastos** | IN PROGRESS |  |  |  |  | 1\.0\.0 |
-
-  
-  
-
-
-
-
-
+| [REQ-INT-0013-SGEPII-0020 - Buscar facturas emitidas - Ingresos](/confluence/spaces/HERCULES/pages/597852546/REQ-INT-0013-SGEPII-0020+-+Buscar+facturas+emitidas+-+Ingresos) |  |  | **REQ-INT-0013-SGEPII-0020 - Buscar facturas emitidas-ingresos** | IN PROGRESS |  |  |  |  | 1.0.0 |
+| [REQ-INT-0013-SGEPII-0010 - Buscar detalle de operaciones - Gastos](/confluence/spaces/HERCULES/pages/597852547/REQ-INT-0013-SGEPII-0010+-+Buscar+detalle+de+operaciones+-+Gastos) |  |  | **REQ-INT-0013-SGE-0010 - Buscar detalle de operaciones - Gastos** | IN PROGRESS |  |  |  |  | 1.0.0 |

@@ -1,6 +1,15 @@
-# Hércules : CU\-ETI\-0060\-015 \- Memorias \- Edición formulario retrospectiva
+# CU-ETI-0060-015 - Memorias - Edición formulario retrospectiva
 
-
+|  |  |
+| --- | --- |
+| Cod. CU | ********CU-ETI-0060-015 - Memorias - Edición formulario retrospectiva******** |
+| Ver. objetivo |  |
+| Ver. CU | 1.0.0 |
+| Estado | LIBERADO\_ |
+| Fec. Aprobación |  |
+| Épica, historia |  |
+| Actores | ACT-ETI-002-Investigador  ACT-ETI-003-Solicitante  ACT-ETI-006-Responsable memoria |
+| Frecuencia | Media |
 
 ### Descripción
 
@@ -10,11 +19,11 @@ Formulario para rellenar el formulario de retrospectiva
 
 #### Actor principal
 
-ACT\-ETI\-002\-Investigador
+ACT-ETI-002-Investigador
 
-ACT\-ETI\-003\-Solicitante
+ACT-ETI-003-Solicitante
 
-ACT\-ETI\-006\-Responsable memoria
+ACT-ETI-006-Responsable memoria
 
 ### Precondiciones
 
@@ -38,9 +47,6 @@ Los estados de la retrospectiva son:
 
 Se guardan las respuestas del formulario y se cambia el estado de la retrospectiva a "Completada".
 
-  
-
-
 ### Escenario principal (flujo básico)
 
 1. Se presenta la pantalla Mis peticiones de evaluación con el listado de todas las peticiones de evaluación dadas de alta en el sistema y que la persona creadora de la misma sea la persona que se está logando en el sistema o bien este como responsable de la memoria de la petición de evaluación.
@@ -57,7 +63,3 @@ Se guardan las respuestas del formulario y se cambia el estado de la retrospecti
 12. El usuario es informado del resultado positivo de la acción.
 13. Se mantienen en misma pantalla de edición.
 14. Se cambia el estado de la retrospectiva a "Completada".
-
-
-
-

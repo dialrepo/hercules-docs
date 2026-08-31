@@ -1,19 +1,2 @@
-# Hércules : Enriquecimiento. Casos de uso (eliminar)
-
-
-
-  
-
-
-  
-
-
-  
-
-
-  
-
-
-
-
+# Enriquecimiento. Casos de uso (eliminar)
 

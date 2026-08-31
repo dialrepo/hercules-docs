@@ -1,34 +1,37 @@
-# Hércules : CU\-CSP\-1000\-003 \- Ver convocatoria
+# CU-CSP-1000-003 - Ver convocatoria
 
-
+|  |  |
+| --- | --- |
+| Cod. CU | ****************CU-CSP-1000-003 - Ver******** convocatoria******** |
+| Ver. objetivo |  |
+| Ver. CU |  |
+| Estado | IN PROGRESS |
+| Fec. Aprobación |  |
+| Épica, historia |  |
+| Actores | ACT-CSP-005-Visor, ACP-CSP-001-Investigador |
+| Frecuencia | Media |
 
 ### Descripción
 
-Acceso al detalle de una convocatoria en modo solo lectura. 
+Acceso al detalle de una convocatoria en modo solo lectura.
 
 ### Actores
 
 #### Actor principal
 
- ACP\-CSP\-001\-Investigador será el actor principal.
+ ACP-CSP-001-Investigador será el actor principal.
 
-También los ACT\-CSP\-005\-Visor  de las unidades de gestión UGI, OTRI u OPE.
+También los ACT-CSP-005-Visor  de las unidades de gestión UGI, OTRI u OPE.
 
 #### Personal involucrado e intereses
 
-ACT\-CSP\-001\-Investigador que  precisan que las convocatorias estén registradas para poder presentar solicitudes sobre las mismas.
-
-  
-
+ACT-CSP-001-Investigador que  precisan que las convocatorias estén registradas para poder presentar solicitudes sobre las mismas.
 
 ### Precondiciones
 
-ACP\-CSP\-001\-Investigador se autentica a través del usuario de dominio corporativo. La convocatoria está en estado "Registrada" y tiene habilitado en configuración de solicitud el flag "tramitar sgi" a "true".
+ACP-CSP-001-Investigador se autentica a través del usuario de dominio corporativo. La convocatoria está en estado "Registrada" y tiene habilitado en configuración de solicitud el flag "tramitar sgi" a "true".
 
-ACP\-CSP\-005\-Visor se autentica a través del usuario de dominio corporativo. Solamente tiene permisos de lectura sobre la Unidad de gestión a la que pertenece la convocatoria. 
-
-  
-
+ACP-CSP-005-Visor se autentica a través del usuario de dominio corporativo. Solamente tiene permisos de lectura sobre la Unidad de gestión a la que pertenece la convocatoria.
 
 Garantías de éxito (postcondiciones)
 
@@ -36,9 +39,9 @@ Se muestra el detalle de la convocatoria.
 
 ### Escenario principal
 
-1\. El usuario pulsa el botón  Ver asociado a la convocatoria, desde el listado de convocatorias.
+1. El usuario pulsa el botón  Ver asociado a la convocatoria, desde el listado de convocatorias.
 
-2\. Se carga el detalle de la convocatoria, mostrando los siguientes apartados. 
+2. Se carga el detalle de la convocatoria, mostrando los siguientes apartados.
 
 * Datos generales. Todos los campos se mostrarán en modo lectura.
 * Entidades convocantes. Todos los campos se mostrarán en modo lectura. No se permitirá añadir una nueva entidad convocante. Sobre la tabla del listado de entidades de convocantes solo estará disponible la acción Ver. Desde este botón se mostrará el detalle del registro en modo solo lectura.
@@ -52,16 +55,6 @@ Se muestra el detalle de la convocatoria.
 * Requisitos Equipo. Todos los campos se mostrarán en modo lectura.
 * Elegibilidad.  Todos los campos se mostrarán en modo lectura. Las tablas de listados solo tendrán disponible la acción Ver. Desde este botón se mostrará el detalle correspondiente, en modo solo lectura. No se permitirá añadir nuevos conceptos de gasto, ni modificar la información relativa al concepto de gasto que representa los costes indirectos.
 
-3\. El usuario pulsa el botón Cancelar. Se retorna al listado de convocatorias.
+3. El usuario pulsa el botón Cancelar. Se retorna al listado de convocatorias.
 
-  
-
-
-### 
-
-  
-
-
-
-
-
+##

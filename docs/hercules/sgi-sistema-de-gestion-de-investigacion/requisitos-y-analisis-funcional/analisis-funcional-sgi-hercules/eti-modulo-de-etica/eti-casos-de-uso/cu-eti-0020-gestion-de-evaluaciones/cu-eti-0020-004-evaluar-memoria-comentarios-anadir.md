@@ -1,6 +1,15 @@
-# Hércules : CU\-ETI\-0020\-004 \- Evaluar memoria \- Comentarios \- Añadir
+# CU-ETI-0020-004 - Evaluar memoria - Comentarios - Añadir
 
-
+|  |  |
+| --- | --- |
+| Cod. CU | ********CU-ETI-0020-004 - Evaluar memoria - Comentarios - Añadir******** |
+| Ver. objetivo |  |
+| Ver. CU | 1.0.0 |
+| Estado | LIBERADO\_ |
+| Fec. Aprobación |  |
+| Épica, historia |  |
+| Actores | ACT-ETI-001-Gestor |
+| Frecuencia | Media |
 
 ### Descripción
 
@@ -10,7 +19,7 @@ Formulario de Nuevo comentario en una evaluación de memoria
 
 #### Actor principal
 
-ACT\-ETI\-001\-Gestor
+ACT-ETI-001-Gestor
 
 ### Precondiciones
 
@@ -28,7 +37,7 @@ Se añade el comentario a la lista de comentarios de la evaluación.
 
 Los cambios únicamente se realizan en memoria.
 
-### Escenario principal (flujo básico \- añadir nuevo comentario)
+### Escenario principal (flujo básico - añadir nuevo comentario)
 
 1. Se presenta la pantalla Evaluaciones con el listado de memoria en estado "En evaluación"
 2. Se selecciona la memoria.
@@ -39,7 +48,3 @@ Los cambios únicamente se realizan en memoria.
 7. El usuario selecciona la acción Añadir.
 8. Se realizan las validaciones en cuanto a formato, obligatoriedad habituales.
 9. Se añade el comentario en el  listado de comentarios.
-
-
-
-

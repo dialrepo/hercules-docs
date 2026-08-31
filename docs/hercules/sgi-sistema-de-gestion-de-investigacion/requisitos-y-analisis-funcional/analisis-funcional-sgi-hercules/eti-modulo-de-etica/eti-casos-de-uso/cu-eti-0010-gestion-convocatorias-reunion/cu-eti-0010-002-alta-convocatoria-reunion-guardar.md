@@ -1,23 +1,31 @@
-# Hércules : CU\-ETI\-0010\-002 \- Alta Convocatoria reunión \- Guardar
+# CU-ETI-0010-002 - Alta Convocatoria reunión - Guardar
 
-
+|  |  |
+| --- | --- |
+| Cod. CU | ********CU-ETI-0010-002 - Alta Convocatoria reunión - Guardar******** |
+| Ver. objetivo |  |
+| Ver. CU | 1.0.0 |
+| Estado | LIBERADO\_ |
+| Fec. Aprobación |  |
+| Épica, historia |  |
+| Actores | ACT-ETI-001-Gestor |
+| Frecuencia | Media |
 
 ### Descripción
 
 Para dar de alta una nueva convocatoria de reunión se necesitan los siguiente campos:
 
 * Comité: desplegable con los valores:   
-
-	+ CEISH
-	+ CEEA
-	+ CEIAB
+  + CEISH
+  + CEEA
+  + CEIAB
 * Fecha evaluación: calendario para marcar el día
 * Fecha límite: calendario para marcar el día (por defecto una semana antes de la reunión)
 * Convocatoria: desplegable con los valores:
-	+ Ordinaria
-	+ Extraordinaria
-	+ Seguimiento
-* Hora de inicio: reloj para marcar la hora exacta: 00:00\.
+  + Ordinaria
+  + Extraordinaria
+  + Seguimiento
+* Hora de inicio: reloj para marcar la hora exacta: 00:00.
 * Lugar: caja de texto con el lugar de la reunión.
 * Orden del día: caja de texto para escribir el orden del día.
 * Listado de convocantes: será el listado de todos los miembros activos del comité seleccionado (NIF, nombre, apellidos). Se autocompleta automáticamente al seleccionar el comité. Aunque se deja poder modificar sobre dicha lista por si se necesita borrar a alguien del listado.
@@ -32,7 +40,7 @@ Al crear la convocatoria se genera un código de convocatoria con el formato AC
 
 #### Actor principal
 
-ACT\-ETI\-001\-Gestor
+ACT-ETI-001-Gestor
 
 ### Precondiciones
 
@@ -55,7 +63,7 @@ Se da de alta una nueva convocatoria en el sistema.
 7. El usuario es informado del resultado positivo de la acción.
 8. Se presenta el listado de Convocatorias de reunión.
 
-### Escenario principal (flujos alternativos) \- Se introducen los datos en asignación de memorias
+### Escenario principal (flujos alternativos) - Se introducen los datos en asignación de memorias
 
 1. Se presenta la pantalla Convocatorias reunión con el listado de todas las Convocatorias de reunión dadas de alta en el sistema y que no se hayan borrado.
 2. El gestor pulsa sobre el botón de Nueva convocatoria
@@ -70,18 +78,14 @@ Se da de alta una nueva convocatoria en el sistema.
 11. El usuario selecciona la acción Guardar.
 12. Se realizan las validaciones en cuanto a formato, obligatoriedad habituales.
 13. Se modifica el estado de la memoria a "En evaluación".
-14. Se notifica  al investigador/solicitante de la fecha de convocatoria de su evaluación [CU\-COM\-0020 \- Generar comunicado](https://confluence.um.es/confluence/display/HERCULES/CU-COM-0020+-+Generar+comunicado "https://confluence.um.es/confluence/display/HERCULES/CU-COM-0020+-+Generar+comunicado").
+14. Se notifica  al investigador/solicitante de la fecha de convocatoria de su evaluación [CU-COM-0020 - Generar comunicado](https://confluence.um.es/confluence/display/HERCULES/CU-COM-0020+-+Generar+comunicado).
 15. El usuario es informado del resultado positivo de la acción.
 16. Se presenta el listado de Convocatorias de reunión.
 
-### Extensiones (flujos alternativos) \- Error durante el guardado
+### Extensiones (flujos alternativos) - Error durante el guardado
 
 1. Si se ha producido algún error de validación.
 2. El usuario modifica la información necesaria para realizar de forma correcta la creación de la Convocatoria.
 3. El usuario selecciona la acción Guardar.
 4. El usuario es informado del resultado positivo de la acción.
 5. Se presenta el listado de Convocatorias de reunión.
-
-
-
-

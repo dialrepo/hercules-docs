@@ -1,6 +1,15 @@
-# Hércules : CU\-CSP\-0070\-003 \- Modificar fuente de financiación
+# CU-CSP-0070-003 - Modificar fuente de financiación
 
-
+|  |  |
+| --- | --- |
+| Cod. CU | **CU-CSP-0070-003 - Modificar tipo de finalidad** |
+| Ver. objetivo |  |
+| Ver. CU | 1.0.0 |
+| Estado | LIBERADO\_ |
+| Fec. Aprobación |  |
+| Épica, historia |  |
+| Actores | ACT-CSP-004-Administrador, , ACT-CSP-003-Gestor |
+| Frecuencia | Baja |
 
 ### Descripción
 
@@ -10,18 +19,15 @@ Modificación de una fuente de financiación. Las fuentes de financiación que 
 
 #### Actor principal
 
-ACT\-CSP\-004\-Administrador, ACT\-CSP\-003\-Gestor
+ACT-CSP-004-Administrador, ACT-CSP-003-Gestor
 
 #### Personal involucrado e intereses
 
-ACT\- CSP\-001\-Investigador que requiere que en convocatorias y proyectos se identifiquen las fuentes de financiación.
-
-  
-
+ACT- CSP-001-Investigador que requiere que en convocatorias y proyectos se identifiquen las fuentes de financiación.
 
 ### Precondiciones
 
-El usuario ACT\-CSP\-004\-Administrador o ACT\-CSP\-003\-Gestor se autentica a través del usuario de dominio corporativo.
+El usuario ACT-CSP-004-Administrador o ACT-CSP-003-Gestor se autentica a través del usuario de dominio corporativo.
 
 A través del servicio de integración con el directorio activo y de la información del usuario almacenada en el propio SGI, se obtiene su rol y  la unidades de gestión sobre las que tiene disponible el rol. El usuario está autorizado sobre la funcionalidades asociadas a esta gestión, con permisos de EDICION o VER.
 
@@ -47,11 +53,11 @@ La fuente de financiación se ha modificado correctamente y está disponible par
 9. El usuario es informado del resultado positivo de la acción
 10. Se vuelve al listado de Fuentes de financiación
 
-### Extensiones (flujos alternativos) \- Error de unicidad
+### Extensiones (flujos alternativos) - Error de unicidad
 
 1. El usuario accede al apartado de Fuentes de financiación del menú de configuración del módulo de CSP
 2. El usuario selecciona la opción Modificar del listado de Fuentes de financiación para un registro concreto
-3. El usuario ha introducido un Nombre para la Fuente de financiación que ya existían en la tabla de Fuentes de financiación para algún elemento activo (campo "activo" \= "true")
+3. El usuario ha introducido un Nombre para la Fuente de financiación que ya existían en la tabla de Fuentes de financiación para algún elemento activo (campo "activo" = "true")
 4. El usuario introduce el resto de datos de la Fuente de financiación
 5. El usuario pulsa Guardar
 6. Se muestra un error al usuario
@@ -67,12 +73,3 @@ N/A
 ### Lista de tecnología y variaciones de datos
 
 N/A
-
-  
-  
-  
-
-
-
-
-

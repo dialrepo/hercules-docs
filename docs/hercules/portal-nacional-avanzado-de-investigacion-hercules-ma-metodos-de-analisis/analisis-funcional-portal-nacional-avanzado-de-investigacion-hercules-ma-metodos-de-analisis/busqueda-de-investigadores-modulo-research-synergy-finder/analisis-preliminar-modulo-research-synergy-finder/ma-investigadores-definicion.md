@@ -1,6 +1,16 @@
-# Hércules : MA. Investigadores. Definición
+# MA. Investigadores. Definición
 
-
+* [Buscador Personal Investigador](#MA.Investigadores.Definición-BuscadorPersonalInvestigador)
+  + [Facetas](#MA.Investigadores.Definición-Facetas)
+  + [Minificha buscador](#MA.Investigadores.Definición-Minifichabuscador)
+* [Ficha Investigador](#MA.Investigadores.Definición-FichaInvestigador)
+  + [Pestañas del investigador](#MA.Investigadores.Definición-Pestañasdelinvestigador)
+    - [Publicaciones](#MA.Investigadores.Definición-Publicaciones)
+    - [Proyectos](#MA.Investigadores.Definición-Proyectos)
+    - [Otros resultados (antes ROs)](#MA.Investigadores.Definición-Otrosresultados(antesROs))
+    - [Áreas temáticas (calculadas de las publicaciones).](#MA.Investigadores.Definición-Áreastemáticas(calculadasdelaspublicaciones).)
+    - [Colaboraciones](#MA.Investigadores.Definición-Colaboraciones)
+    - [Otros méritos (antes CV).](#MA.Investigadores.Definición-Otrosméritos(antesCV).)
 
 ## Buscador Personal Investigador
 
@@ -37,49 +47,36 @@ En el buscador, deben estar todos los investigadores que participan tanto en los
 
 * ### Publicaciones
 
-
-	+ Facetas y minificha. Las indicadas para el [buscador de publicaciones](/hercules/portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/analisis-funcional-portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/busqueda-de-investigadores-modulo-research-synergy-finder/analisis-preliminar-modulo-research-synergy-finder/ma-publicaciones-definicion.md "/hercules/portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/analisis-funcional-portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/busqueda-de-investigadores-modulo-research-synergy-finder/analisis-preliminar-modulo-research-synergy-finder/ma-publicaciones-definicion.md")
-	+ Gráfica.
-		- Publicaciones por año
-		- Citas por año (cuando podamos obtener el dato)
-		- La gráfica se actualiza al aplicar una faceta.
+  + Facetas y minificha. Las indicadas para el [buscador de publicaciones](/hercules/portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/analisis-funcional-portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/busqueda-de-investigadores-modulo-research-synergy-finder/analisis-preliminar-modulo-research-synergy-finder/ma-publicaciones-definicion)
+  + Gráfica.
+    - Publicaciones por año
+    - Citas por año (cuando podamos obtener el dato)
+    - La gráfica se actualiza al aplicar una faceta.
 * ### Proyectos
 
-
-	+ Facetas y minificha, las indicadas en [buscador proyectos](/hercules/portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/analisis-funcional-portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/analisis-de-proyectos-de-investigacion-modulo-de-gestion-y-analisis-de-proyectos/analisis-inicial-modulo-de-gestion-y-analisis-de-proyectos/ma-projects-definicion-funcional.md "/hercules/portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/analisis-funcional-portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/analisis-de-proyectos-de-investigacion-modulo-de-gestion-y-analisis-de-proyectos/analisis-inicial-modulo-de-gestion-y-analisis-de-proyectos/ma-projects-definicion-funcional.md")
-	+ Gráfica
-		- Proyectos por año (fecha de inicio y de fin)
-		- La gráfica se actualiza al aplicar una faceta.
+  + Facetas y minificha, las indicadas en [buscador proyectos](/hercules/portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/analisis-funcional-portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/analisis-de-proyectos-de-investigacion-modulo-de-gestion-y-analisis-de-proyectos/analisis-inicial-modulo-de-gestion-y-analisis-de-proyectos/ma-projects-definicion-funcional)
+  + Gráfica
+    - Proyectos por año (fecha de inicio y de fin)
+    - La gráfica se actualiza al aplicar una faceta.
 * ### Otros resultados (antes ROs)
 
-
-	+ Facetas (las indicadas para el [buscador de ROs](https://confluence.um.es/confluence/pages/createpage.action?spaceKey=TEMP001&title=Gesti%C3%B3n+FAIR+RO "/confluence/pages/createpage.action?spaceKey=TEMP001&title=Gesti%C3%B3n+FAIR+RO")).
-	+ Minificha (las indicadas para el [buscador de ROs](https://confluence.um.es/confluence/pages/createpage.action?spaceKey=TEMP001&title=Gesti%C3%B3n+FAIR+RO "/confluence/pages/createpage.action?spaceKey=TEMP001&title=Gesti%C3%B3n+FAIR+RO")).
-	+ Gráfica
-		- ROs por año
-		- Citas por año (cuando podamos obtener el dato)
-		- La gráfica se actualiza al aplicar una faceta.
+  + Facetas (las indicadas para el [buscador de ROs](/confluence/pages/createpage.action?spaceKey=TEMP001&title=Gesti%C3%B3n+FAIR+RO)).
+  + Minificha (las indicadas para el [buscador de ROs](/confluence/pages/createpage.action?spaceKey=TEMP001&title=Gesti%C3%B3n+FAIR+RO)).
+  + Gráfica
+    - ROs por año
+    - Citas por año (cuando podamos obtener el dato)
+    - La gráfica se actualiza al aplicar una faceta.
 * ### Áreas temáticas (calculadas de las publicaciones).
 
-
-	+ Gráfica de nodos de las áreas temáticas de las publicaciones del investigador, con sus relaciones (cuando tengamos varias áreas por cada publicación).
-		- Vista opcional: Gráfica de tópicos específicos de las publicaciones del investigador, con sus relaciones (cuando tengamos los tópicos de las publicaciones)
-	+ Gráfica de barras con el volumen (en porcentaje) de publicaciones para cada área temática
+  + Gráfica de nodos de las áreas temáticas de las publicaciones del investigador, con sus relaciones (cuando tengamos varias áreas por cada publicación).
+    - Vista opcional: Gráfica de tópicos específicos de las publicaciones del investigador, con sus relaciones (cuando tengamos los tópicos de las publicaciones)
+  + Gráfica de barras con el volumen (en porcentaje) de publicaciones para cada área temática
 * ### Colaboraciones
 
-
-	+ Facetas y minifichas indicadas en el [buscador de Personal investigador](/hercules/portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/analisis-funcional-portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/busqueda-de-investigadores-modulo-research-synergy-finder/analisis-preliminar-modulo-research-synergy-finder/ma-investigadores-definicion.md "/hercules/portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/analisis-funcional-portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/busqueda-de-investigadores-modulo-research-synergy-finder/analisis-preliminar-modulo-research-synergy-finder/ma-investigadores-definicion.md"))
-	+ Gráfica.
-		- 10 investigadores con más publicaciones en común, con las relaciones entre ellos.
-		- La gráfica se actualiza al aplicar una faceta.
+  + Facetas y minifichas indicadas en el [buscador de Personal investigador](/hercules/portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/analisis-funcional-portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/busqueda-de-investigadores-modulo-research-synergy-finder/analisis-preliminar-modulo-research-synergy-finder/ma-investigadores-definicion))
+  + Gráfica.
+    - 10 investigadores con más publicaciones en común, con las relaciones entre ellos.
+    - La gráfica se actualiza al aplicar una faceta.
 * ### Otros méritos (antes CV).
 
-
-	+ Minifichas agrupadas por tipo (pte. definir campos de cada tipo)
-
-  
-
-
-
-
-
+  + Minifichas agrupadas por tipo (pte. definir campos de cada tipo)

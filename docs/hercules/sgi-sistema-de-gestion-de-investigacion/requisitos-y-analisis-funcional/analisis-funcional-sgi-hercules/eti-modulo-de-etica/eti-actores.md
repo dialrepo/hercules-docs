@@ -1,6 +1,12 @@
-# Hércules : ETI \- Actores
+# ETI - Actores
 
-
-
-
-
+|  |  |  |
+| --- | --- | --- |
+| **Nombre** | **Descripción** | **Notas / Características** |
+| ACT-ETI-001-Gestor | Personal de gestión encargado de la gestión de las convocatorias de reunión, de las reuniones de evaluación distribuyendo los pares de evaluadores, gestión de los evaluadores, seguimiento anual, final y cierre de los expedientes. | Unidad de gestión ÉTICA |
+| ACT-ETI-002-Investigador | Personal de investigación que crea las peticiones de evaluación de proyectos en los que se incluyen una o varias memorias que serán evaluadas por un comité o comités correspondientes. | * Personal investigador y docente perteneciente a la Universidad * Alumnos/as que realicen másteres o trabajos de tesis o grado |
+| ACT-ETI-003-Solicitante | Personal externo a la Universidad que por motivo justificado quiera que su proyecto sea evaluado por alguno de los comités de la Universidad | Deberá darse de alta como usuario externo y tener acceso a la aplicación con credenciales. |
+| ACT-ETI-004-Evaluador | Personal de investigación dado de alta como evaluador que va a realizar la evaluación de memorias de investigación entregadas por los investigadores. | Cada evaluador está activo durante un periodo máximo de ocho años. Tiene una fecha de alta y de baja.  Tienen que estar asignados a la memoria que pueden evaluar. Es uno del par de evaluadores. |
+| ACT-ETI-005-Técnico | Personal técnico que accede a un módulo y entidades concretas para participar en un flujo concreto de las mismas. | Tienen que estar asignados a la memoria que pueden evaluar. Es uno del par de evaluadores. |
+| ACT-ETI-006-Responsable memoria | Personal de investigación de la Universidad que se le ha puesto como responsable de una memoria. | Podrá modificar los datos generales sobre el proyecto de la petición de evaluación y la memoria que tiene asignada. No podrá Enviar a secretaria la  memoria, eso debe de hacerlo el ACT-ETI-002-Investigador o ACT-ETI-003-Solicitante |
+| ACT-ETI-007-Administrador | Personal de gestión que puede realizar la gestión de datos maestros asociados a un determinado módulo del SGI.  Tendrá permisos para poder realizar la configuración de los datos del módulo de ética.  Podrá tener permisos (en el SGI) sobre más de una unidad de gestión. Sobre cada una de las unidades podrán actuar como gestores (ACT-ETI-001-Gestor) |  |

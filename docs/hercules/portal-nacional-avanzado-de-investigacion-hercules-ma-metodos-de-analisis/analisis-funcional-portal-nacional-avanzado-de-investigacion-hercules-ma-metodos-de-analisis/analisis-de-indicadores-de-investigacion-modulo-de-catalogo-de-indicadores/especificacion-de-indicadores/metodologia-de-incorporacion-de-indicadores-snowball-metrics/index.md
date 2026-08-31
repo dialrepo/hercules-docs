@@ -1,23 +1,44 @@
-# Hércules : Metodología de incorporación de indicadores. Snowball Metrics
+# Metodología de incorporación de indicadores. Snowball Metrics
 
-
+* [Snowball Metrics.](#Metodologíadeincorporacióndeindicadores.SnowballMetrics-SnowballMetrics.)
+* [The Snowball Metrics Exchange service](#Metodologíadeincorporacióndeindicadores.SnowballMetrics-TheSnowballMetricsExchangeservice)
+* [Snowball Metrics Landscape](#Metodologíadeincorporacióndeindicadores.SnowballMetrics-SnowballMetricsLandscape)
+* [Snowball Metrics recipes](#Metodologíadeincorporacióndeindicadores.SnowballMetrics-SnowballMetricsrecipes)
+  + [The hierarchy of the original set of 10 Snowball Metrics](#Metodologíadeincorporacióndeindicadores.SnowballMetrics-Thehierarchyoftheoriginalsetof10SnowballMetrics)
+* [The recommended use of Snowball Metrics](#Metodologíadeincorporacióndeindicadores.SnowballMetrics-TherecommendeduseofSnowballMetrics)
+* [Overview and denominators](#Metodologíadeincorporacióndeindicadores.SnowballMetrics-Overviewanddenominators)
+  + [Display of Snowball Metrics](#Metodologíadeincorporacióndeindicadores.SnowballMetrics-DisplayofSnowballMetrics)
+  + [Primary data sources](#Metodologíadeincorporacióndeindicadores.SnowballMetrics-Primarydatasources)
+    - [Granularity of denominators](#Metodologíadeincorporacióndeindicadores.SnowballMetrics-Granularityofdenominators)
+  + [Counting](#Metodologíadeincorporacióndeindicadores.SnowballMetrics-Counting)
+  + [Outputs included in the calculation of a Snowball Metric](#Metodologíadeincorporacióndeindicadores.SnowballMetrics-OutputsincludedinthecalculationofaSnowballMetric)
+  + [Currency conversion](#Metodologíadeincorporacióndeindicadores.SnowballMetrics-Currencyconversion)
+  + [Denominators](#Metodologíadeincorporacióndeindicadores.SnowballMetrics-Denominators)
+    - [Institution denominator](#Metodologíadeincorporacióndeindicadores.SnowballMetrics-Institutiondenominator)
+    - [Discipline denominator](#Metodologíadeincorporacióndeindicadores.SnowballMetrics-Disciplinedenominator)
+    - [Researcher denominator](#Metodologíadeincorporacióndeindicadores.SnowballMetrics-Researcherdenominator)
+    - [FTE (full-time equivalent) count denominator](#Metodologíadeincorporacióndeindicadores.SnowballMetrics-FTE(full-timeequivalent)countdenominator)
+    - [Research student denominator](#Metodologíadeincorporacióndeindicadores.SnowballMetrics-Researchstudentdenominator)
+    - [Funder-type denominator](#Metodologíadeincorporacióndeindicadores.SnowballMetrics-Funder-typedenominator)
+    - [Funding-type denominator](#Metodologíadeincorporacióndeindicadores.SnowballMetrics-Funding-typedenominator)
+    - [Time period denominator](#Metodologíadeincorporacióndeindicadores.SnowballMetrics-Timeperioddenominator)
+    - [Full-time or part-time research students denominator](#Metodologíadeincorporacióndeindicadores.SnowballMetrics-Full-timeorpart-timeresearchstudentsdenominator)
+    - [Home or overseas research students denominator](#Metodologíadeincorporacióndeindicadores.SnowballMetrics-Homeoroverseasresearchstudentsdenominator)
+    - [Gender denominator](#Metodologíadeincorporacióndeindicadores.SnowballMetrics-Genderdenominator)
 
 En este apartado se resume la información relevante acerca de Snowball Metrics. Tras una revisión del proyecto Snowball, hemos considerado que es una aproximación metodológica y práctica muy completa, que se ha puesto a prueba y que ha contado con respaldo de empresas como Elsevier y organizaciones como Eurocris. Snowball no obliga a disponer de métricas con un cálculo y un origen de datos concreto, sino que propone una definición general de las métricas, agrupadas en categorías, para que se decida en cada caso en qué consiste la métrica en un ámbito determinado y con unos acuerdos concretos.
 
-En conclusión, Snowball Metrics proporciona el marco para conseguir los objetivos del módulo de indicadores\-
+En conclusión, Snowball Metrics proporciona el marco para conseguir los objetivos del módulo de indicadores-
 
 Los documentos base de los que se ha extraído esta información se encuentran disponibles a continuación:
 
-[/attachments/598147285/Snowball_Metrics_Recipe_Book.pdf?version=1&modificationDate=1644339796000&api=v2 "/confluence/download/attachments/598147285/Snowball_Metrics_Recipe_Book.pdf?version=1&modificationDate=1644339796000&api=v2"](/attachments/598147285/Snowball_Metrics_Recipe_Book.pdf?version=1&modificationDate=1644339796000&api=v2 "/confluence/download/attachments/598147285/Snowball_Metrics_Recipe_Book.pdf?version=1&modificationDate=1644339796000&api=v2")
+[![](rest/documentConversion/latest/conversion/thumbnail/598147685/1)](/confluence/download/attachments/598147285/Snowball_Metrics_Recipe_Book.pdf?version=1&modificationDate=1644339796000&api=v2)
 
-[/attachments/598147285/las_metricas_de_investigacion_25032019.pdf?version=1&modificationDate=1644339796000&api=v2 "/confluence/download/attachments/598147285/las_metricas_de_investigacion_25032019.pdf?version=1&modificationDate=1644339796000&api=v2"](/attachments/598147285/las_metricas_de_investigacion_25032019.pdf?version=1&modificationDate=1644339796000&api=v2 "/confluence/download/attachments/598147285/las_metricas_de_investigacion_25032019.pdf?version=1&modificationDate=1644339796000&api=v2")
+[![](rest/documentConversion/latest/conversion/thumbnail/598147696/1)](/confluence/download/attachments/598147285/las_metricas_de_investigacion_25032019.pdf?version=1&modificationDate=1644339796000&api=v2)
 
-[/attachments/598147285/Snowball-Metrics-Landscape-1.pdf?version=1&modificationDate=1644339796000&api=v2 "/confluence/download/attachments/598147285/Snowball-Metrics-Landscape-1.pdf?version=1&modificationDate=1644339796000&api=v2"](/attachments/598147285/Snowball-Metrics-Landscape-1.pdf?version=1&modificationDate=1644339796000&api=v2 "/confluence/download/attachments/598147285/Snowball-Metrics-Landscape-1.pdf?version=1&modificationDate=1644339796000&api=v2")
+[![](rest/documentConversion/latest/conversion/thumbnail/598147691/1)](/confluence/download/attachments/598147285/Snowball-Metrics-Landscape-1.pdf?version=1&modificationDate=1644339796000&api=v2)
 
-[/attachments/598147285/20140616_Snowball_Metrics_for_CERIF_XML_version_1.1.zip?version=1&modificationDate=1644339796000&api=v2 "/confluence/download/attachments/598147285/20140616_Snowball_Metrics_for_CERIF_XML_version_1.1.zip?version=1&modificationDate=1644339796000&api=v2"](/attachments/598147285/20140616_Snowball_Metrics_for_CERIF_XML_version_1.1.zip?version=1&modificationDate=1644339796000&api=v2 "/confluence/download/attachments/598147285/20140616_Snowball_Metrics_for_CERIF_XML_version_1.1.zip?version=1&modificationDate=1644339796000&api=v2")
-
-  
-
+[![](rest/documentConversion/latest/conversion/thumbnail/598147683/1)](/confluence/download/attachments/598147285/20140617_Snowball_Metrics_for_CERIF_XML_version_1.1.pdf?version=1&modificationDate=1644339796000&api=v2)[![](download/resources/com.atlassian.confluence.plugins.confluence-view-file-macro:view-file-macro-resources/images/placeholder-medium-zip.png)20140616\_Snowball\_Metrics\_for\_CERIF\_XML\_version\_1.1.zip](/confluence/download/attachments/598147285/20140616_Snowball_Metrics_for_CERIF_XML_version_1.1.zip?version=1&modificationDate=1644339796000&api=v2)
 
 ### Snowball Metrics.
 
@@ -66,16 +87,13 @@ Triangulate the decision.
 
 ![](/attachments/598147285/598147682.png)
 
-  
-
-
 Snowball Metrics offers a balanced scorecard based on a broad set of metrics:
 
 * It is strongly advisable to “triangulate” within the quantitative input into a decision. Every metric has weaknesses, but these can be compensated for by the strengths of (an)other metric(s). It is the responsibility of the user of Snowball Metrics to ensure that a metric’s weaknesses are compensated for by another metric or input.
 * There is a broad diversity of questions that metrics could be used to help address. Existing scorecards often tend to be based upon output and citation metrics, largely since comprehensive commercial databases are readily available, and / or financial metrics, since they are relatively easy for universities to measure. Snowball Metrics draw a much more comprehensive and rounded view of institutional performance across the full range of research activities.
 * They are unlikely to distort the research process in unanticipated ways through encouraging too much focus on a particular activity. For example, it is well known that rewarding researchers solely for publishing a high volume of output encourages researchers to slice their work in more, smaller pieces to be able to publish a higher volume24, which is probably not a true reflection of the desired outcome. Snowball Metrics offers the option to select several metrics to encourage a balanced outcome for universities.
 * Some metrics may be more or less relevant to different disciplines. Many metrics, such as Applications Volume and Awards Volume, are equally useful across all fields, when the disciplinary denominator is used and an appropriate selection of peers for benchmarking is made. Other metrics, such as Citation Count and Collaboration may be more valuable in STEM25 areas and less so in the social sciences and arts and humanities.
-* Some practitioners of metrics prefer simple, straightforward metrics, often based on total counts, such as Citation Count and Altmetrics. Others prefer more complex metrics, that often inherently correct for variables such as those between disciplines, for instance Field\-Weighted Citation Impact.
+* Some practitioners of metrics prefer simple, straightforward metrics, often based on total counts, such as Citation Count and Altmetrics. Others prefer more complex metrics, that often inherently correct for variables such as those between disciplines, for instance Field-Weighted Citation Impact.
 
 ### Overview and denominators
 
@@ -84,12 +102,12 @@ Denominator definitions:
 * Institution
 * Discipline
 * Researcher
-* FTE (full\-time equivalent) count
+* FTE (full-time equivalent) count
 * Research student
-* Funder\-type
-* Funding\-type
+* Funder-type
+* Funding-type
 * Time period
-* Full\-time or part\-time research students
+* Full-time or part-time research students
 * Home or overseas research students
 * Gender
 
@@ -131,24 +149,21 @@ The *physical location of a campus* does not define whether something is or is n
 
 ##### Discipline denominator
 
-The discipline denominator enables benchmarking between institutions at a more granular level than that of the entire institution. A meaningful discipline\-level denominator has the following characteristics:
+The discipline denominator enables benchmarking between institutions at a more granular level than that of the entire institution. A meaningful discipline-level denominator has the following characteristics:
 
 * It is a structure that has the same meaning at all institutions.
 * It draws on data that are readily available to an institution.
 * It uses information that is reasonably current.
 
-  
-
-
 ##### Researcher denominator
 
-A researcher is any faculty or staff member who could act as the principal investigator of a funding application and who spends \>0% time on research.
+A researcher is any faculty or staff member who could act as the principal investigator of a funding application and who spends >0% time on research.
 
-This definition includes all those working in research\-focused universities who have time allocated to research of any kind.
+This definition includes all those working in research-focused universities who have time allocated to research of any kind.
 
-This definition excludes trainees including undergraduate and graduate students, post\-doctoral researchers, and staff or faculty with limited\-term or temporary appointments such as visiting scholars. Will it be like this in Hercules?
+This definition excludes trainees including undergraduate and graduate students, post-doctoral researchers, and staff or faculty with limited-term or temporary appointments such as visiting scholars. Will it be like this in Hercules?
 
-##### FTE (full\-time equivalent) count denominator
+##### FTE (full-time equivalent) count denominator
 
 FTE count indicates the extent of a researcher’s workload that is focused on research.
 
@@ -156,11 +171,11 @@ FTE count is used to provide the option to normalize for different sizes of inst
 
 ##### Research student denominator
 
-A research student is any student studying for either a doctoral award or a masters degree by research, having achieved a first degree as a condition of entry. A research\-based higher degree is a postgraduate programme comprising a research component (including a requirement to produce original work) that is larger than any accompanying taught component when measured by student effort.
+A research student is any student studying for either a doctoral award or a masters degree by research, having achieved a first degree as a condition of entry. A research-based higher degree is a postgraduate programme comprising a research component (including a requirement to produce original work) that is larger than any accompanying taught component when measured by student effort.
 
-This definition excludes trainees including graduate students undertaking taught courses, post\-doctoral researchers, and staff or faculty with limited\-term or temporary appointments such as visiting scholars.
+This definition excludes trainees including graduate students undertaking taught courses, post-doctoral researchers, and staff or faculty with limited-term or temporary appointments such as visiting scholars.
 
-##### Funder\-type denominator
+##### Funder-type denominator
 
 This denominator is applied to:
 
@@ -169,15 +184,15 @@ This denominator is applied to:
 * Income Volume: to the income spent.
 * Market Share: to research income.
 
-##### Funding\-type denominator
+##### Funding-type denominator
 
-Funding\-type is a denominator for the Research Student Funding recipe
+Funding-type is a denominator for the Research Student Funding recipe
 
 ##### Time period denominator
 
 Calendar year, Financial year, Quarter
 
-##### Full\-time or part\-time research students denominator
+##### Full-time or part-time research students denominator
 
 This is the method by which a student is being taught their course
 
@@ -188,28 +203,3 @@ This provides the option to look at the student population at a more granular le
 ##### Gender denominator
 
 The gender denominator is used to monitor equal opportunities issues.
-
-  
-
-
-  
-
-
-  
-
-
-  
-
-
-  
-
-
-  
-
-
-  
-
-
-
-
-

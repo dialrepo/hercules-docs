@@ -1,9 +1,5 @@
-# Hércules : Output and Outcome Metrics
+# Output and Outcome Metrics
 
-
-
-.
-
-
-
-
+- [Research Metrics for Output and Outcome](/hercules/portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/analisis-funcional-portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/analisis-de-indicadores-de-investigacion-modulo-de-catalogo-de-indicadores/especificacion-de-indicadores/hercules-metrics-snowball-metrics-recipe/output-and-outcome-metrics/research-metrics-for-output-and-outcome)
+- [Enterprise activities for Output and Outcome](/hercules/portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/analisis-funcional-portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/analisis-de-indicadores-de-investigacion-modulo-de-catalogo-de-indicadores/especificacion-de-indicadores/hercules-metrics-snowball-metrics-recipe/output-and-outcome-metrics/enterprise-activities-for-output-and-outcome)
+- [Post-graduate Research Metrics for Output and Outcome](/hercules/portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/analisis-funcional-portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/analisis-de-indicadores-de-investigacion-modulo-de-catalogo-de-indicadores/especificacion-de-indicadores/hercules-metrics-snowball-metrics-recipe/output-and-outcome-metrics/post-graduate-research-metrics-for-output-and-outcome)

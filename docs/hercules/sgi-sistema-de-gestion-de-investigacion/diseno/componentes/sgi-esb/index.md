@@ -1,6 +1,4 @@
-# Hércules : SGI \- ESB
-
-
+# SGI - ESB
 
 ## Introducción
 
@@ -12,37 +10,28 @@ El perfil ESB proporciona sus servicios fundamentales a través de un motor de m
 
 ### Requisitos
 
-
-
-| Memoria | \~ 2 GB mínimo\~ 1 GB tamaño heap. Por lo general, esto es suficiente para procesar los típicos mensajes SOAP, pero los requisitos varían con los tamaños de los mensajes más grandes y el número de mensajes procesados |
+|  |  |
 | --- | --- |
-| Disco | \~ 1 GB  excluyendo el espacio asignado para los archivos de registro y las bases de datos. |
+| Memoria | ~ 2 GB mínimo ~ 1 GB tamaño heap. Por lo general, esto es suficiente para procesar los típicos mensajes SOAP, pero los requisitos varían con los tamaños de los mensajes más grandes y el número de mensajes procesados |
+| Disco | ~ 1 GB  excluyendo el espacio asignado para los archivos de registro y las bases de datos. |
 
 #### Compatibilidad del entorno
 
-* Todos los productos basados en el WSO2 Carbon  son aplicaciones Java que se pueden ejecutar en cualquier plataforma que sea compatible con Oracle JDK 1\.8\.\*.
+* Todos los productos basados en el WSO2 Carbon  son aplicaciones Java que se pueden ejecutar en cualquier plataforma que sea compatible con Oracle JDK 1.8.\*.
 * Todos los productos basados en WSO2 Carbon son generalmente compatibles con la mayoría de los SGBD comunes. La base de datos H2 incorporada es adecuada para el desarrollo, las pruebas y algunos entornos de producción. Sin embargo, para la mayoría de los entornos de producción de las empresas, se utilizar un SGBD estándar de la industria como Oracle, PostgreSQL, MySQL, MS SQL, etc.
 * No se recomienda utilizar el Apache DS en un entorno de producción debido a problemas de escalabilidad. En su lugar, utilice un LDAP como OpenLDAP para la gestión de usuarios.
 
 ##### JDK
 
-
-
 | Producto | Versión | JDK | S.O. |
 | --- | --- | --- | --- |
-| WSO2 Enterprise Integrator (EI) | 6\.6\.0 | CorrettoJDK 8AdoptOpenJDK 8AdoptOpenJDK 11OpenJDK 8Oracle JDK 8Oracle JDK 11 | Ubuntu 18\.04CentOS 7\.4, 7\.5Red Hat Enterprise Linux 7\.0SUSE Linux 12Windows Server 2016 |
+| WSO2 Enterprise Integrator (EI) | 6.6.0 | CorrettoJDK 8 AdoptOpenJDK 8 AdoptOpenJDK 11 OpenJDK 8 Oracle JDK 8 Oracle JDK 11 | Ubuntu 18.04 CentOS 7.4, 7.5 Red Hat Enterprise Linux 7.0 SUSE Linux 12 Windows Server 2016 |
 
 **SGBD**
 
-
-
 | Producto | Versión | JDK |
 | --- | --- | --- |
-| WSO2 Enterprise Integrator (EI) | 6\.6\.06\.5\.06\.4\.0 | Oracle 12cMySQL 5\.7Microsoft SQL Server 2016 |
-| WSO2 Enterprise Integrator (EI) | 6\.3\.0 | Oracle 11g/12cMySQL 5\.6/5\.7Microsoft SQL Server 2014 |
+| WSO2 Enterprise Integrator (EI) | 6.6.0  6.5.0  6.4.0 | Oracle 12c MySQL 5.7 Microsoft SQL Server 2016 |
+| WSO2 Enterprise Integrator (EI) | 6.3.0 | Oracle 11g/12c  MySQL 5.6/5.7  Microsoft SQL Server 2014 |
 
- [https://docs.wso2\.com/display/EI600/Installation\+Prerequisites](https://docs.wso2.com/display/EI600/Installation+Prerequisites "https://docs.wso2.com/display/EI600/Installation+Prerequisites")
-
-
-
-
+<https://docs.wso2.com/display/EI600/Installation+Prerequisites>

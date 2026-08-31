@@ -1,6 +1,15 @@
-# Hércules : CU\-ETI\-0030\-004 \- Modificar Acta \- Asistentes \- Guardar
+# CU-ETI-0030-004 - Modificar Acta - Asistentes - Guardar
 
-
+|  |  |
+| --- | --- |
+| Cod. CU | ********CU-ETI-0030-004 - Modificar Acta - Asistentes -  Guardar******** |
+| Ver. objetivo |  |
+| Ver. CU | 1.0.0 |
+| Estado |  |
+| Fec. Aprobación |  |
+| Épica, historia |  |
+| Actores | ACT-ETI-001-Gestor |
+| Frecuencia | Media |
 
 ### Descripción
 
@@ -10,7 +19,7 @@ Formularios de datos generales, memorias  y asistentes.
 
 #### Actor principal
 
-ACT\-ETI\-001\-Gestor
+ACT-ETI-001-Gestor
 
 ### Precondiciones
 
@@ -43,14 +52,10 @@ Los datos de los asistentes son modificados.
 11. El usuario selecciona la acción Guardar.
 12. Se modifica el dato del asistente.
 
-### Extensiones (flujos alternativos) \- Error durante el guardado
+### Extensiones (flujos alternativos) - Error durante el guardado
 
 1. Si se ha producido algún error de validación.
 2. El usuario modifica la información necesaria para realizar de forma correcta la modificación de la Acta.
 3. El usuario selecciona la acción Guardar.
 4. El usuario es informado del resultado positivo de la acción.
 5. Se presenta el listado de Actas
-
-
-
-

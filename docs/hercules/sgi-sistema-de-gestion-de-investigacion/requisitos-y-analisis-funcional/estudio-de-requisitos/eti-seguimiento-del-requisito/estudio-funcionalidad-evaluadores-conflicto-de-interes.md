@@ -1,6 +1,19 @@
-# Hércules : Estudio Funcionalidad Evaluadores \- Conflicto de interés
+# Estudio Funcionalidad Evaluadores - Conflicto de interés
 
-
+* [Introducción](#EstudioFuncionalidadEvaluadoresConflictodeinterés-Introducción)
+* [Cambios en pantallas](#EstudioFuncionalidadEvaluadoresConflictodeinterés-Cambiosenpantallas)
+  + [Perfil evaluador (gestor, técnico o investigador)](#EstudioFuncionalidadEvaluadoresConflictodeinterés-Perfilevaluador(gestor,técnicooinvestigador))
+    - [Pantalla Informar Conflicto de interés](#EstudioFuncionalidadEvaluadoresConflictodeinterés-PantallaInformarConflictodeinterés)
+    - [Pantalla Histórico Conflicto de interés](#EstudioFuncionalidadEvaluadoresConflictodeinterés-PantallaHistóricoConflictodeinterés)
+    - [Evaluaciones](#EstudioFuncionalidadEvaluadoresConflictodeinterés-Evaluaciones)
+    - [Seguimientos](#EstudioFuncionalidadEvaluadoresConflictodeinterés-Seguimientos)
+  + [Específico perfil gestor](#EstudioFuncionalidadEvaluadoresConflictodeinterés-Específicoperfilgestor)
+    - [Reordenar menú](#EstudioFuncionalidadEvaluadoresConflictodeinterés-Reordenarmenú)
+    - [Evaluadores](#EstudioFuncionalidadEvaluadoresConflictodeinterés-Evaluadores)
+    - [Convocatoria de reunión](#EstudioFuncionalidadEvaluadoresConflictodeinterés-Convocatoriadereunión)
+  + [Específico Perfil investigador](#EstudioFuncionalidadEvaluadoresConflictodeinterés-EspecíficoPerfilinvestigador)
+  + [Comunicados](#EstudioFuncionalidadEvaluadoresConflictodeinterés-Comunicados)
+* [Cambios en base de datos](#EstudioFuncionalidadEvaluadoresConflictodeinterés-Cambiosenbasededatos)
 
 ## Introducción
 
@@ -124,10 +137,6 @@ Añadir en la tabla "ConflictoInteres" los campos:
 
 * memoria: para almacenar el identificador de la memoria con la que el evaluador tiene el conflicto de interés.
 * conflicto interés: un enumerado con tres posibles valores:
-	+ Sí
-	+ No
-	+ Sin responder
-
-
-
-
+  + Sí
+  + No
+  + Sin responder

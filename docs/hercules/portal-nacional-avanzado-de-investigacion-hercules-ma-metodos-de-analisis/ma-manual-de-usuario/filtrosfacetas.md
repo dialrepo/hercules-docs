@@ -1,6 +1,4 @@
-# Hércules : Filtros/Facetas
-
-
+# Filtros/Facetas
 
 Para filtrar una búsqueda o unos resultados en Hércules se utiliza una sección de facetas las cuales pueden aplicar filtros fácilmente sobre la búsqueda que hemos realizado.
 
@@ -47,10 +45,3 @@ Los filtros de áreas temáticas o tesauro tienen esta estructura en la que nos 
 También cuenta con la opción de Ver todos la cual nos mostrará una ventana para buscar el área temática específica.
 
 ![](/attachments/598147473/598147905.png)
-
-  
-
-
-
-
-

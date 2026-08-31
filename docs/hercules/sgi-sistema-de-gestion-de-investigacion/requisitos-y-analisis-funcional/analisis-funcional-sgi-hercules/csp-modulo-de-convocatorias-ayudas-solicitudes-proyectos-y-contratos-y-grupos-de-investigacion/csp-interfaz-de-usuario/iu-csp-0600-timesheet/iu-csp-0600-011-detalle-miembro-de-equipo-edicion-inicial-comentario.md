@@ -1,28 +1,31 @@
-# Hércules : IU\-CSP\-0600\-011 \- Detalle \- Miembro de equipo \- Edición inicial \- Comentario
+# IU-CSP-0600-011 - Detalle - Miembro de equipo - Edición inicial - Comentario
 
+|  |  |
+| --- | --- |
+| Cod. IU | ********IU-CSP-0600-011 - Detalle - Miembro de equipo - Edición inicial - Comentario******** |
+| Ver. objetivo | 0.4.0 |
+| Ver. IU | 1.0.0 |
+| Estado | IN PROGRESS |
+| Fec. Aprobación |  |
+| Épica, historia |  |
+| Actores | ACT- CSP-001-Investigador |
+| Frecuencia | Media |
 
+## Formulario Timesheet - Detalle
 
-## Formulario Timesheet \- Detalle
+Formulario que muestra el timesheet para un  mes al  ACT-CSP-001-Investigador titular del mismo. Para que el ACT-CSP-001-Investigador titular del timesheet pueda modificar las horas del mismo, el timesheet deberá figurar en estado "Abierto".
 
-Formulario que muestra el timesheet para un  mes al  ACT\-CSP\-001\-Investigador titular del mismo. Para que el ACT\-CSP\-001\-Investigador titular del timesheet pueda modificar las horas del mismo, el timesheet deberá figurar en estado "Abierto". 
+El ACT-CSP-001-Investigador podrá modificar las horas en tantas ocasiones como desee hasta que Guarde el formulario modificando el estado del timesheet a "Validado IM". En este momento el timesheet quedará disponible para que los ACT-CSP-001-Investigador con rol principal de cada uno de los proyectos incluidos en el TS lo validen. Sobre cada uno de los proyectos el ACT-CSP-001-Investigador titular del timesheet podrá añadir un comentario destinado al  ACT-CSP-001-Investigador con rol principal del proyecto.
 
-El ACT\-CSP\-001\-Investigador podrá modificar las horas en tantas ocasiones como desee hasta que Guarde el formulario modificando el estado del timesheet a "Validado IM". En este momento el timesheet quedará disponible para que los ACT\-CSP\-001\-Investigador con rol principal de cada uno de los proyectos incluidos en el TS lo validen. Sobre cada uno de los proyectos el ACT\-CSP\-001\-Investigador titular del timesheet podrá añadir un comentario destinado al  ACT\-CSP\-001\-Investigador con rol principal del proyecto.
-
-
-
-|  | | | |
+|  |  |  |  |
 | --- | --- | --- | --- |
+|  | | | |
 | Nombre | | Tipo | Características / Notas |
 | Añadir comentario sobre proyecto | | | |
-| Proyecto | | TextoSolo lectura | Título del proyecto sobre el que se añade el comentario |
-| Comentario | | TextoObligatorio | Campo de texto para añadir comentario |
-
-  
-
+| Proyecto | | Texto  Solo lectura | Título del proyecto sobre el que se añade el comentario |
+| Comentario | | Texto  Obligatorio | Campo de texto para añadir comentario |
 
 ### Botones generales a la pantalla
-
-
 
 | Acciones | Descripción | Descripción CU |
 | --- | --- | --- |
@@ -31,14 +34,6 @@ El ACT\-CSP\-001\-Investigador podrá modificar las horas en tantas ocasiones c
 
 ### Acciones
 
-  
-  
-  
-  
-  
-  
-
-
-
-
-
+|  |  |
+| --- | --- |
+| ACT- CSP-001-Investigador | CSP-TSHCOM-C |

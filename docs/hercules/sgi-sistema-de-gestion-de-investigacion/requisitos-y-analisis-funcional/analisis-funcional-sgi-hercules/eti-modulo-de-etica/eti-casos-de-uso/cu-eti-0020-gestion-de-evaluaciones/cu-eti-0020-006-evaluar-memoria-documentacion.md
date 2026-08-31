@@ -1,6 +1,15 @@
-# Hércules : CU\-ETI\-0020\-006 \- Evaluar memoria \- Documentación
+# CU-ETI-0020-006 - Evaluar memoria - Documentación
 
-
+|  |  |
+| --- | --- |
+| Cod. CU | ********CU-ETI-0020-006 - Evaluar memoria - Documentación******** |
+| Ver. objetivo |  |
+| Ver. CU | 1.0.0 |
+| Estado | LIBERADO\_ |
+| Fec. Aprobación |  |
+| Épica, historia |  |
+| Actores | ACT-ETI-001-Gestor |
+| Frecuencia | Media |
 
 ### Descripción
 
@@ -14,7 +23,7 @@ La ficha del evaluador es un informe que se genera al vuelo,  a partir de una p
 
 #### Actor principal
 
-ACT\-ETI\-001\-Gestor
+ACT-ETI-001-Gestor
 
 ### Precondiciones
 
@@ -30,7 +39,7 @@ Existe al menos un documento en el listado de documentos.
 
 Se descarga o se visualiza el documento.
 
-### Escenario principal (flujo básico \- descarga documento)
+### Escenario principal (flujo básico - descarga documento)
 
 1. Se presenta la pantalla Evaluaciones con el listado de memoria en estado "En evaluación"
 2. Se selecciona la memoria.
@@ -42,7 +51,3 @@ Se descarga o se visualiza el documento.
 8. Se descarga dicho documento para su visualización.
 9. El usuario selecciona la ficha del evaluador
 10. Se genera automáticamente a partir de la plantilla y los comentarios del evaluador.
-
-
-
-

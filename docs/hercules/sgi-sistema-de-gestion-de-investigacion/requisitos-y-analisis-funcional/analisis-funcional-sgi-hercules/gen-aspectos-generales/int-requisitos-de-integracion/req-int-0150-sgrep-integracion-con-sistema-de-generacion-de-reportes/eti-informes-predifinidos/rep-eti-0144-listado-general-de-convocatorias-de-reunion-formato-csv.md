@@ -1,10 +1,14 @@
-# Hércules : REP\-ETI\-0144 \- Listado general de convocatorias de reunión \- Formato csv
+# REP-ETI-0144 - Listado general de convocatorias de reunión - Formato csv
 
-
-
-
-
-
+|  |  |
+| --- | --- |
+| Cod. REP | **REP-ETI-0144 - Listado general de convocatorias de reunión - Formato csv** |
+| Ver. Objetivo |  |
+| Ver. REP | 1.0.0 |
+| Estado | PENDIENTE |
+| Fec. Aprobación |  |
+| Épica, historia |  |
+| Frecuencia |  |
 
 ### Diseño Informe
 
@@ -12,12 +16,7 @@ Se debe de generar un informe en formato csv que reciba como parámetro de entra
 
 Los nombres de las columnas en el fichero csv que formen parte de un bloque que se repita, deberán llevar en su nombre un número cardinal representativo del número de repetición, de forma que se permita la distinción del título de la columna. En la siguiente tabla se identifican también los bloques de datos susceptibles de repetirse. El fichero resultante contendrá las columnas necesarias, sobre cada bloque de repetición, de acuerdo a la convocatoria de reunión que más elementos contenga para ese bloque. Para las convocatorias de reunión que no contengan tantos elementos sobre cada bloque como marque el máximo, se mostrarán las columnas sin contenido.
 
-Ejemplo: [convocatoria\_reunion\_with\_columns\_repeated.csv](/attachments/597852861/597874102.csv "attachments/597852861/597874102.csv")
-
-  
-
-
-
+Ejemplo: [convocatoria\_reunion\_with\_columns\_repeated.csv](/attachments/597852861/597874102.csv)
 
 | Bloque de datos | Columna informe | Campo SGI | Repetición |
 | --- | --- | --- | --- |
@@ -28,50 +27,21 @@ Ejemplo: [convocatoria\_reunion\_with\_columns\_repeated.csv](/attachments/59785
 |  | Orden del día | Campo "ordenDia" de la tabla "ConvocatoriaReunion" |  |
 | Memorias |  | Se mostrará las distintas memorias que se van a evaluar en la convocatoria de reunión. Para ello se obtendrán las evaluaciones de la convocatoria de reunión que no son revisión mínima (tabla "Evaluacion" con el campo "esRevMinima" a false y que en el campo "convocatoriaReunion" tenga referenciada la convocatoria de reunión) | Sí |
 |  | MemoriaX: Referencia | Campo "numReferencia" de la tabla "Memoria" referenciado por el campo "memoria" de la tabla "Evaluacion" |  |
-|  | MemoriaX: Solicitante Nombre | Campo "nombre" recuperado a través de [REQ\-INT\-0020\-SGP\-0030 \- Consultar datos generales de persona](https://confluence.um.es/confluence/display/HERCULES/REQ-INT-0020-SGP-0030+-+Consultar+datos+generales+de+persona "https://confluence.um.es/confluence/display/HERCULES/REQ-INT-0020-SGP-0030+-+Consultar+datos+generales+de+persona") para la referenciada indicada en el campo "personaRef" de la tabla "PeticionEvaluacion" referenciado por el campo "peticionEvaluacion" de la tabla "Memoria" referenciada a su vez por el campo "memoria" de la tabla "Evaluacion" |  |
-|  | MemoriaX: Solicitante Apellidos | Campo "apellidos" recuperado a través de [REQ\-INT\-0020\-SGP\-0030 \- Consultar datos generales de persona](https://confluence.um.es/confluence/display/HERCULES/REQ-INT-0020-SGP-0030+-+Consultar+datos+generales+de+persona "https://confluence.um.es/confluence/display/HERCULES/REQ-INT-0020-SGP-0030+-+Consultar+datos+generales+de+persona") para la referenciada indicada en el campo "personaRef" de la tabla "PeticionEvaluacion" referenciado por el campo "peticionEvaluacion" de la tabla "Memoria" referenciada a su vez por el campo "memoria" de la tabla "Evaluacion" |  |
-|  | MemoriaX: Evaluador 1 Nombre | Campo "nombre" recuperado a través de [REQ\-INT\-0020\-SGP\-0030 \- Consultar datos generales de persona](https://confluence.um.es/confluence/display/HERCULES/REQ-INT-0020-SGP-0030+-+Consultar+datos+generales+de+persona "https://confluence.um.es/confluence/display/HERCULES/REQ-INT-0020-SGP-0030+-+Consultar+datos+generales+de+persona") para la referenciada indicada en el campo "usuarioRef" de la tabla "Evaluador" referenciado por el campo "evaluador1" de la tabla "Evaluacion" |  |
-|  | MemoriaX: Evaluador 1 Apellidos | Campo "apellidos" recuperado a través de [REQ\-INT\-0020\-SGP\-0030 \- Consultar datos generales de persona](https://confluence.um.es/confluence/display/HERCULES/REQ-INT-0020-SGP-0030+-+Consultar+datos+generales+de+persona "https://confluence.um.es/confluence/display/HERCULES/REQ-INT-0020-SGP-0030+-+Consultar+datos+generales+de+persona") para la referenciada indicada en el campo "usuarioRef" de la tabla "Evaluador" referenciado por el campo "evaluador1" de la tabla "Evaluacion" |  |
-|  | MemoriaX: Evaluador 2 Nombre | Campo "nombre" recuperado a través de [REQ\-INT\-0020\-SGP\-0030 \- Consultar datos generales de persona](https://confluence.um.es/confluence/display/HERCULES/REQ-INT-0020-SGP-0030+-+Consultar+datos+generales+de+persona "https://confluence.um.es/confluence/display/HERCULES/REQ-INT-0020-SGP-0030+-+Consultar+datos+generales+de+persona") para la referenciada indicada en el campo "usuarioRef" de la tabla "Evaluador" referenciado por el campo "evaluador2" de la tabla "Evaluacion" |  |
-|  | MemoriaX: Evaluador 2 Apellidos | Campo "apellidos" recuperado a través de [REQ\-INT\-0020\-SGP\-0030 \- Consultar datos generales de persona](https://confluence.um.es/confluence/display/HERCULES/REQ-INT-0020-SGP-0030+-+Consultar+datos+generales+de+persona "https://confluence.um.es/confluence/display/HERCULES/REQ-INT-0020-SGP-0030+-+Consultar+datos+generales+de+persona") para la referenciada indicada en el campo "usuarioRef" de la tabla "Evaluador" referenciado por el campo "evaluador2" de la tabla "Evaluacion" |  |
-
-  
-  
-
-
-  
-
-
-
-
-
-
-
+|  | MemoriaX: Solicitante Nombre | Campo "nombre" recuperado a través de [REQ-INT-0020-SGP-0030 - Consultar datos generales de persona](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0020-sgp-integracion-con-sistema-de-gestion-de-personas/req-int-0020-sgp-0030-consultar-datos-generales-de-persona) para la referenciada indicada en el campo "personaRef" de la tabla "PeticionEvaluacion" referenciado por el campo "peticionEvaluacion" de la tabla "Memoria" referenciada a su vez por el campo "memoria" de la tabla "Evaluacion" |  |
+|  | MemoriaX: Solicitante Apellidos | Campo "apellidos" recuperado a través de [REQ-INT-0020-SGP-0030 - Consultar datos generales de persona](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0020-sgp-integracion-con-sistema-de-gestion-de-personas/req-int-0020-sgp-0030-consultar-datos-generales-de-persona) para la referenciada indicada en el campo "personaRef" de la tabla "PeticionEvaluacion" referenciado por el campo "peticionEvaluacion" de la tabla "Memoria" referenciada a su vez por el campo "memoria" de la tabla "Evaluacion" |  |
+|  | MemoriaX: Evaluador 1 Nombre | Campo "nombre" recuperado a través de [REQ-INT-0020-SGP-0030 - Consultar datos generales de persona](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0020-sgp-integracion-con-sistema-de-gestion-de-personas/req-int-0020-sgp-0030-consultar-datos-generales-de-persona) para la referenciada indicada en el campo "usuarioRef" de la tabla "Evaluador" referenciado por el campo "evaluador1" de la tabla "Evaluacion" |  |
+|  | MemoriaX: Evaluador 1 Apellidos | Campo "apellidos" recuperado a través de [REQ-INT-0020-SGP-0030 - Consultar datos generales de persona](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0020-sgp-integracion-con-sistema-de-gestion-de-personas/req-int-0020-sgp-0030-consultar-datos-generales-de-persona) para la referenciada indicada en el campo "usuarioRef" de la tabla "Evaluador" referenciado por el campo "evaluador1" de la tabla "Evaluacion" |  |
+|  | MemoriaX: Evaluador 2 Nombre | Campo "nombre" recuperado a través de [REQ-INT-0020-SGP-0030 - Consultar datos generales de persona](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0020-sgp-integracion-con-sistema-de-gestion-de-personas/req-int-0020-sgp-0030-consultar-datos-generales-de-persona) para la referenciada indicada en el campo "usuarioRef" de la tabla "Evaluador" referenciado por el campo "evaluador2" de la tabla "Evaluacion" |  |
+|  | MemoriaX: Evaluador 2 Apellidos | Campo "apellidos" recuperado a través de [REQ-INT-0020-SGP-0030 - Consultar datos generales de persona](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0020-sgp-integracion-con-sistema-de-gestion-de-personas/req-int-0020-sgp-0030-consultar-datos-generales-de-persona) para la referenciada indicada en el campo "usuarioRef" de la tabla "Evaluador" referenciado por el campo "evaluador2" de la tabla "Evaluacion" |  |
 
 ### Interfaces de usuario relacionados
 
-
-
-
-
-
+![](plugins/servlet/confluence/placeholder/unknown-macro)
 
 ### Casos de uso relacionados
 
+![](plugins/servlet/confluence/placeholder/unknown-macro)
 
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+|  |  |
+| --- | --- |
+| ACT-ETI-001-Gestor | ETI-CNV-E, ETI-CNV-V |

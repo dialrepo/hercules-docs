@@ -1,102 +1,105 @@
-# Hércules : SGI \- ESB \- SGE \- Calendario facturación
+# SGI - ESB - SGE - Calendario facturación
 
+---
 
-
-  
-
-
-
-
-
+* [Ejecución económica](#SGIESBSGECalendariofacturación-Ejecucióneconómica)
+  + [Entidades](#SGIESBSGECalendariofacturación-Entidades)
+  + [Modelo lógico](#SGIESBSGECalendariofacturación-Modelológico)
+  + [API](#SGIESBSGECalendariofacturación-API)
+    - [Definición de los objetos](#SGIESBSGECalendariofacturación-Definicióndelosobjetos)
+      * [FacturaEmitida](#SGIESBSGECalendariofacturación-FacturaEmitida)
+      * [FacturaEmitidaDetalle](#SGIESBSGECalendariofacturación-FacturaEmitidaDetalle)
+      * [Detalle](#SGIESBSGECalendariofacturación-Detalle)
+      * [Columna](#SGIESBSGECalendariofacturación-Columna)
+      * [Documento](#SGIESBSGECalendariofacturación-Documento)
+      * [FacturaPrevistaEmitida](#SGIESBSGECalendariofacturación-FacturaPrevistaEmitida)
+    - [Servicios](#SGIESBSGECalendariofacturación-Servicios)
+    - [Columnas Facturas emitidas](#SGIESBSGECalendariofacturación-ColumnasFacturasemitidas)
+    - [Campos Factura emitida](#SGIESBSGECalendariofacturación-CamposFacturaemitida)
+    - [Ejemplos](#SGIESBSGECalendariofacturación-Ejemplos)
+      * [Columnas Facturas emitidas (/facturas-emitidas/columnas)](#SGIESBSGECalendariofacturación-ColumnasFacturasemitidas(/facturas-emitidas/columnas))
+      * [Facturas emitidas (/facturas-emitidas)](#SGIESBSGECalendariofacturación-Facturasemitidas(/facturas-emitidas))
+      * [Detalle factura emitida (/facturas-emitidas/{id})](#SGIESBSGECalendariofacturación-Detallefacturaemitida(/facturas-emitidas/{id}))
+      * [Consulta facturas previstas de emitir (/facturas-previstas-emitidas)](#SGIESBSGECalendariofacturación-Consultafacturasprevistasdeemitir(/facturas-previstas-emitidas))
 
 ## Ejecución económica
 
 ### Entidades
 
-
-
 | Entidad | Descripción |
 | --- | --- |
-| FacturaEmitida | Entidad que representa una factura emitida del SGE. Tendrá que venir identificado por un identificador único, por el proyecto al que pertenece y la anualidad.El resto de campos de la factura emitida se tratarán como columnas dinámicas. Se indicará por cada columna el identificador del campo, el nombre del campo y si es una columna sobre la que se tiene que hacer una suma para mostrarlo en el SGI como un campo totalizador. |
-| Columna | Contiene el listado de columnas que serán mostradas en la pantalla del SGI de Factura emitidas.Por cada columna se tendrá el identificador del campo, el nombre del campo y si es una columna sobre la que se tiene que hacer una suma para mostrarlo en el SGI como un campo totalizador. |
-| FacturaEmitidaDetalle | Entidad que representa el detalle de una factura emitida con todos sus campos para mostrarlo en una pantalla de consulta de la factura emitida.Tendrá unos campos fijos (identificador único, identificador del proyecto al que pertenece y anualidad) y unos campos dinámicos. Por cada campo se detallará el nombre y el valor del campo para mostrarlo en la pantalla del SGI |
-| Campo | Contiene el listado de campos dinámicos que serán mostradas en las pantallas de detalle de una factura emitida.Por cada campo se tendrá el el nombre y el valor del campo |
+| FacturaEmitida | Entidad que representa una factura emitida del SGE. Tendrá que venir identificado por un identificador único, por el proyecto al que pertenece y la anualidad.  El resto de campos de la factura emitida se tratarán como columnas dinámicas. Se indicará por cada columna el identificador del campo, el nombre del campo y si es una columna sobre la que se tiene que hacer una suma para mostrarlo en el SGI como un campo totalizador. |
+| Columna | Contiene el listado de columnas que serán mostradas en la pantalla del SGI de Factura emitidas.  Por cada columna se tendrá el identificador del campo, el nombre del campo y si es una columna sobre la que se tiene que hacer una suma para mostrarlo en el SGI como un campo totalizador. |
+| FacturaEmitidaDetalle | Entidad que representa el detalle de una factura emitida con todos sus campos para mostrarlo en una pantalla de consulta de la factura emitida.  Tendrá unos campos fijos (identificador único, identificador del proyecto al que pertenece y anualidad) y unos campos dinámicos. Por cada campo se detallará el nombre y el valor del campo para mostrarlo en la pantalla del SGI |
+| Campo | Contiene el listado de campos dinámicos que serán mostradas en las pantallas de detalle de una factura emitida.  Por cada campo se tendrá el el nombre y el valor del campo |
 | Documento | Entidad que representa los documentos que pueda tener relacionados una factura emitida |
 | FacturaPrevistaEmitida | Entidad que representa una factura emitida del SGE pero con menos información que la entidad "FacturaEmitida". Únicamente tiene la información sobre el "número de factura del SGE" y del "número de previsión". Es para poder mostrar en la pantalla de Calendario facturación del SGI el número de factura. |
 
 ### Modelo lógico
 
-[https://confluence.um.es/confluence/display/HERCULES/Consultas+filtradas+y+paginadas "https://confluence.um.es/confluence/display/HERCULES/Consultas+filtradas+y+paginadas"](https://confluence.um.es/confluence/display/HERCULES/Consultas+filtradas+y+paginadas "https://confluence.um.es/confluence/display/HERCULES/Consultas+filtradas+y+paginadas")
+[![](/attachments/597852437/597866184.jpg)](/hercules/sgi-sistema-de-gestion-de-investigacion/desarrollo-y-configuracion/estandares-de-desarrollo/consultas-filtradas-y-paginadas)
 
 ### API
 
 Características generales que todas las API REST deben de cumplir:
 
-* [Consultas filtradas y paginadas](https://confluence.um.es/confluence/display/HERCULES/Consultas+filtradas+y+paginadas "https://confluence.um.es/confluence/display/HERCULES/Consultas+filtradas+y+paginadas")
-* [Formatos de datos API](https://confluence.um.es/confluence/display/HERCULES/Formatos+de+datos+API "https://confluence.um.es/confluence/display/HERCULES/Formatos+de+datos+API")
+* [Consultas filtradas y paginadas](/hercules/sgi-sistema-de-gestion-de-investigacion/desarrollo-y-configuracion/estandares-de-desarrollo/consultas-filtradas-y-paginadas)
+* [Formatos de datos API](/hercules/sgi-sistema-de-gestion-de-investigacion/desarrollo-y-configuracion/estandares-de-desarrollo/formatos-de-datos-api)
 
 #### Definición de los objetos
 
 ##### FacturaEmitida
 
-
-
-| **Nombre** | **Tipo** | **Descripción** |
+|  |  |  |
 | --- | --- | --- |
+| **Nombre** | **Tipo** | **Descripción** |
 | id | String | Identificador de la factura emitida. Tiene que ser un identificador único. |
 | proyectoId | String | Identificador del proyecto económico |
 | anualidad | String | Anualidad |
 | numeroFactura | String | Número de la factura emitida (en el SGE) |
-| columnas | Map\[clave,valor] | Mapa de propiedadesEl valor será un String salvo en aquellas columnas que sean acumulables (se tenga que hacer sumas sobre ellas) donde será de tipo Numérico (sin separador de miles y como separador decimal el punto) |
+| columnas | Map[clave,valor] | Mapa de propiedades  El valor será un String salvo en aquellas columnas que sean acumulables (se tenga que hacer sumas sobre ellas) donde será de tipo Numérico (sin separador de miles y como separador decimal el punto) |
 
 ##### FacturaEmitidaDetalle
 
 ##### Detalle
 
-
-
-| **Nombre** | **Tipo** | **Descripción** |
+|  |  |  |
 | --- | --- | --- |
+| **Nombre** | **Tipo** | **Descripción** |
 | id | String | Identificador de la factura emitida. Tiene que ser un identificador único. |
 | proyectoId | String | Identificador del proyecto económico |
 | anualidad | String | Anualidad |
 | numeroFactura | String | Número de la factura emitida (en el SGE) |
-| campos | Lista\[Campo] | Lista de campos, por cada campo se define el nombre y el valor del campo |
-| documentos | Lista\[Documento] | Lista de documentos asociados a la factura emitida (sin el contenido binario del fichero). |
+| campos | Lista[Campo] | Lista de campos, por cada campo se define el nombre y el valor del campo |
+| documentos | Lista[Documento] | Lista de documentos asociados a la factura emitida (sin el contenido binario del fichero). |
 
 ##### Columna
 
-
-
-| **Nombre** | **Tipo** | **Descripción** |
+|  |  |  |
 | --- | --- | --- |
+| **Nombre** | **Tipo** | **Descripción** |
 | id | String | Identificador de la columna |
 | nombre | String | Nombre de la columna |
-| acumulable | Boolean | Indica si se tiene que sumar o no para mostrar los totales en la pantalla del SGI.Dos valores:* true * false |
+| acumulable | Boolean | Indica si se tiene que sumar o no para mostrar los totales en la pantalla del SGI.  Dos valores:   * true * false |
 
 ##### Documento
 
-
-
-| **Nombre** | **Tipo** | **Descripción** |
+|  |  |  |
 | --- | --- | --- |
+| **Nombre** | **Tipo** | **Descripción** |
 | id | String | Identificador único del documento |
 | nombre | String | Nombre del documento a mostrar |
 | nombreFichero | String | Nombre del fichero con extensión |
 
 ##### FacturaPrevistaEmitida
 
-
-
-| **Nombre** | **Tipo** | **Descripción** |
+|  |  |  |
 | --- | --- | --- |
+| **Nombre** | **Tipo** | **Descripción** |
 | id | String | Identificador de la factura emitida. Tiene que ser un identificador único. |
 | proyectoIdSGI | String | Identificador del proyecto SGI. |
 | numeroFactura | String | Número de la factura emitida (en el SGE) |
-| numeroPrevision | String | Es el campo que establece la relación entre el ítem del calendario de facturación y las facturas emitidas en el SGE.Junto con el identificador del proyecto SGI identificarán un item del calendario de facturación del SGI. |
-
-  
-
+| numeroPrevision | String | Es el campo que establece la relación entre el ítem del calendario de facturación y las facturas emitidas en el SGE.  Junto con el identificador del proyecto SGI identificarán un item del calendario de facturación del SGI. |
 
 #### Servicios
 
@@ -104,16 +107,14 @@ Para componer la URL llamada completa, se debe anteponer a lo indicado en la col
 
 | Servicio | Método | URL | Parámetros | Respuesta | Descripción |
 | --- | --- | --- | --- | --- | --- |
-| [SGI \- ESB \- SGE \- Calendario facturación \- Facturas emitidas \- Buscar columnas](https://confluence.um.es/confluence/pages/viewpage.action?pageId=597853065 "/confluence/pages/viewpage.action?pageId=597853065") | GET | /facturas\-emitidas/columnas | q\+s (query \+ sort)La query estará formada por:* proyectoId * reducida * fechaFactura  El campo reducida puede tomar los siguientes valores:* true: sólo se envían las columnas a mostrar en la pantalla principal * false:  se envían todas las columnas (para su exportación)  Si no esta informado el campo reducida se considera false. | Lista\[[Columna](https://confluence.um.es/confluence/pages/viewpage.action?pageId=113050871#SGIESBSGECalendariofacturaci%C3%B3n-Columna "https://confluence.um.es/confluence/pages/viewpage.action?pageId=113050871#SGIESBSGECalendariofacturaci%C3%B3n-Columna")] | Listado con las columnas que va a devolver la llamada /facturas\-emitidasPor cada columna se indica un id, nombre, si es una columna acumulable (se va a hacer una suma de ella en el SGI)Ver el apartado "**Columnas Factura Emitida**" para ver que columnas se deben de mostrar. |
-| [SGI \- ESB \- SGE \- Calendario facturación \- Facturas emitidas \- Buscar](https://confluence.um.es/confluence/pages/viewpage.action?pageId=597853066 "/confluence/pages/viewpage.action?pageId=597853066") | GET | /facturas\-emitidas | q\+s (query \+ sort)La query estará formada por:* proyectoId * reducida * fechaFactura  El campo reducida puede tomar los siguientes valores:* true: sólo se envían las columnas a mostrar en la pantalla principal * false:  se envían todas las columnas (para su exportación)  Si no esta informado el campo reducida se considera false. | Lista\[[FacturaEmitida](https://confluence.um.es/confluence/pages/viewpage.action?pageId=113050871#SGIESBSGECalendariofacturaci%C3%B3n-FacturaEmitida "https://confluence.um.es/confluence/pages/viewpage.action?pageId=113050871#SGIESBSGECalendariofacturaci%C3%B3n-FacturaEmitida")] | Listado con las facturas emitidas del SGE. Por cada factura emitida se devolverán los siguientes campos:* Identificador de la factura emitida * Identificador del proyecto SGE * Anualidad * Número de factura * Mapa de columnas de clave \- valor (donde la clave será los id definidos en la llamada /facturas\-emitidas/columnas y el valor será el valor de la columna. El valor será un String salvo en aquellas columnas que sean acumulables,se tenga que hacer sumas sobre ellas, donde será de tipo Numérico (sin separador de miles y como separador decimal el punto)). Ver el apartado "**Columnas Factura Emitida**" para ver los id de la columnas que se deben de mostrar. |
-| [SGI \- ESB \- SGE \- Calendario facturación \- Facturas previstas emitidas \- Buscar](https://confluence.um.es/confluence/pages/viewpage.action?pageId=597853063 "/confluence/pages/viewpage.action?pageId=597853063") | GET | /facturas\-previstas\-emitidas | q\+s (query \+ sort)La query estará formada por:* proyectoIdSGI * numeroPrevision * numeroFactura  proyectoIdSGI: identificador del proyecto en el SGI | Lista\[[FacturaPrevistaEmitida](https://confluence.um.es/confluence/pages/viewpage.action?pageId=113050871#SGIESBSGECalendariofacturaci%C3%B3n-FacturaPrevistaEmitida "https://confluence.um.es/confluence/pages/viewpage.action?pageId=113050871#SGIESBSGECalendariofacturaci%C3%B3n-FacturaPrevistaEmitida")] | Listado con las facturas emitidas del SGE. Por cada factura emitida se devolverán los siguientes campos:* Identificador de la factura emitida * Identificador del proyecto SGI * Número factura * Número previsión |
-| [SGI \- ESB \- SGE \- Calendario facturación \- Facturas emitidas \- Consultar detalle](https://confluence.um.es/confluence/pages/viewpage.action?pageId=597853064 "/confluence/pages/viewpage.action?pageId=597853064") | GET | /facturas\-emitidas/{id} |  | [FacturaEmitidaDetalle](https://confluence.um.es/confluence/pages/viewpage.action?pageId=113050871#SGIESBSGECalendariofacturaci%C3%B3n-FacturaEmitidaDetalle "https://confluence.um.es/confluence/pages/viewpage.action?pageId=113050871#SGIESBSGECalendariofacturaci%C3%B3n-FacturaEmitidaDetalle") | Detalle de la factura emitida con todas sus columnas.* Identificador de la factura emitida * Identificador del proyecto SGE * Anualidad * Listado de campos con su nombre y valor (Ver el apartado "**Campos Detalle factura emitida**" para ver que campos se deben de mostrar. En el detalle se muestran todos la columnas o campos.) * Listado de documentos (identificador, nombre del documento y nombre del fichero, sin el contenido) |
+| [SGI - ESB - SGE - Calendario facturación - Facturas emitidas - Buscar columnas](/confluence/spaces/HERCULES/pages/597853065/SGI+-+ESB+-+SGE+-+Calendario+facturaci%C3%B3n+-+Facturas+emitidas+-+Buscar+columnas) | GET | /facturas-emitidas/columnas | q+s (query + sort)  La query estará formada por:   * proyectoId * reducida * fechaFactura   El campo reducida puede tomar los siguientes valores:   * true: sólo se envían las columnas a mostrar en la pantalla principal * false:  se envían todas las columnas (para su exportación)   Si no esta informado el campo reducida se considera false. | Lista[[Columna](https://confluence.um.es/confluence/pages/viewpage.action?pageId=113050871#SGIESBSGECalendariofacturaci%C3%B3n-Columna)] | Listado con las columnas que va a devolver la llamada /facturas-emitidas  Por cada columna se indica un id, nombre, si es una columna acumulable (se va a hacer una suma de ella en el SGI)  Ver el apartado "**Columnas Factura Emitida**" para ver que columnas se deben de mostrar. |
+| [SGI - ESB - SGE - Calendario facturación - Facturas emitidas - Buscar](/confluence/spaces/HERCULES/pages/597853066/SGI+-+ESB+-+SGE+-+Calendario+facturaci%C3%B3n+-+Facturas+emitidas+-+Buscar) | GET | /facturas-emitidas | q+s (query + sort)  La query estará formada por:   * proyectoId * reducida * fechaFactura   El campo reducida puede tomar los siguientes valores:   * true: sólo se envían las columnas a mostrar en la pantalla principal * false:  se envían todas las columnas (para su exportación)   Si no esta informado el campo reducida se considera false. | Lista[[FacturaEmitida](https://confluence.um.es/confluence/pages/viewpage.action?pageId=113050871#SGIESBSGECalendariofacturaci%C3%B3n-FacturaEmitida)] | Listado con las facturas emitidas del SGE. Por cada factura emitida se devolverán los siguientes campos:   * Identificador de la factura emitida * Identificador del proyecto SGE * Anualidad * Número de factura * Mapa de columnas de clave - valor (donde la clave será los id definidos en la llamada /facturas-emitidas/columnas y el valor será el valor de la columna. El valor será un String salvo en aquellas columnas que sean acumulables,se tenga que hacer sumas sobre ellas, donde será de tipo Numérico (sin separador de miles y como separador decimal el punto)). Ver el apartado "**Columnas Factura Emitida**" para ver los id de la columnas que se deben de mostrar. |
+| [SGI - ESB - SGE - Calendario facturación - Facturas previstas emitidas - Buscar](/confluence/spaces/HERCULES/pages/597853063/SGI+-+ESB+-+SGE+-+Calendario+facturaci%C3%B3n+-+Facturas+previstas+emitidas+-+Buscar) | GET | /facturas-previstas-emitidas | q+s (query + sort)  La query estará formada por:   * proyectoIdSGI * numeroPrevision * numeroFactura   proyectoIdSGI: identificador del proyecto en el SGI | Lista[[FacturaPrevistaEmitida](https://confluence.um.es/confluence/pages/viewpage.action?pageId=113050871#SGIESBSGECalendariofacturaci%C3%B3n-FacturaPrevistaEmitida)] | Listado con las facturas emitidas del SGE. Por cada factura emitida se devolverán los siguientes campos:   * Identificador de la factura emitida * Identificador del proyecto SGI * Número factura * Número previsión |
+| [SGI - ESB - SGE - Calendario facturación - Facturas emitidas - Consultar detalle](/confluence/spaces/HERCULES/pages/597853064/SGI+-+ESB+-+SGE+-+Calendario+facturaci%C3%B3n+-+Facturas+emitidas+-+Consultar+detalle) | GET | /facturas-emitidas/{id} |  | [FacturaEmitidaDetalle](https://confluence.um.es/confluence/pages/viewpage.action?pageId=113050871#SGIESBSGECalendariofacturaci%C3%B3n-FacturaEmitidaDetalle) | Detalle de la factura emitida con todas sus columnas.   * Identificador de la factura emitida * Identificador del proyecto SGE * Anualidad * Listado de campos con su nombre y valor (Ver el apartado "**Campos Detalle factura emitida**" para ver que campos se deben de mostrar. En el detalle se muestran todos la columnas o campos.) * Listado de documentos (identificador, nombre del documento y nombre del fichero, sin el contenido) |
 
 #### Columnas Facturas emitidas
 
-(**reducida \=\='true'** o **reducida \=\='false')**  (independientemente del campo reducida, ya que siempre se mandan todas las columnas) las columnas a devolver en la Universidad de Murcia serán:
-
-
+(**reducida =='true'** o **reducida =='false')**  (independientemente del campo reducida, ya que siempre se mandan todas las columnas) las columnas a devolver en la Universidad de Murcia serán:
 
 | id | nombre | acumulable |
 | --- | --- | --- |
@@ -145,10 +146,7 @@ Los campos a devolver en la Universidad de Murcia serán:
 
 #### Ejemplos
 
-##### Columnas Facturas emitidas (/facturas\-emitidas/columnas)
-
-  
-
+##### Columnas Facturas emitidas (/facturas-emitidas/columnas)
 
 **Parámetros**
 
@@ -156,7 +154,7 @@ Los campos a devolver en la Universidad de Murcia serán:
 proyectoId=="123456";fechaFactura=bt=("2020-12-01T00:00:00Z","2021-01-31T23:59:59Z")
 ```
 
-**Respuesta** 
+**Respuesta**
 
 ```
 [
@@ -217,13 +215,7 @@ proyectoId=="123456";fechaFactura=bt=("2020-12-01T00:00:00Z","2021-01-31T23:59:5
 ]
 ```
 
-  
-
-
-##### Facturas emitidas (/facturas\-emitidas)
-
-  
-
+##### Facturas emitidas (/facturas-emitidas)
 
 **Parámetros**
 
@@ -272,13 +264,9 @@ proyectoId=="123456";fechaFactura=bt=("2020-12-01T00:00:00Z","2021-01-31T23:59:5
   		}
 }
 ]
-
 ```
 
-  
-
-
-##### Detalle factura emitida (/facturas\-emitidas/{id})
+##### Detalle factura emitida (/facturas-emitidas/{id})
 
 {
 
@@ -343,12 +331,9 @@ proyectoId=="123456";fechaFactura=bt=("2020-12-01T00:00:00Z","2021-01-31T23:59:5
 }
 ```
 
-##### Consulta facturas previstas de emitir  (/facturas\-previstas\-emitidas)
+##### Consulta facturas previstas de emitir  (/facturas-previstas-emitidas)
 
 Las registradas en el SGE y que debe consultar el SGI para obtener el "número de factura" para mostrarlo en la pantalla de calendario facturación
-
-  
-
 
 **Parámetros**
 
@@ -374,9 +359,4 @@ proyectoIdSGI=="11";
      }
 
 ]
-
 ```
-
-
-
-

@@ -1,26 +1,34 @@
-# Hércules : IU\-CSP\-0560\-010 \- Añadir gasto a periodo de justificación
+# IU-CSP-0560-010 - Añadir gasto a periodo de justificación
 
-
+|  |  |
+| --- | --- |
+| Cod. IU | ********IU-CSP-0560-010 - Añadir gasto a periodo de justificación******** |
+| Ver. objetivo | 0.4.0 |
+| Ver. IU | 1.0.0 |
+| Estado | IN PROGRESS |
+| Fec. Aprobación |  |
+| Épica, historia |  |
+| Actores | ACT-CSP-003-Gestor, ACT-CSP-004-Administrador |
+| Frecuencia | Media |
 
 ## Formulario Añadir gasto a periodo de justificación
 
 Formulario que permitirá añadir un o varios gastos a la justificación del periodo.
 
-Los gastos disponibles serán los que figuren en el apartado "Facturas y justificantes" \- "Facturas y gastos" de la "Ejecución económica" del proyecto. En el apartado "Facturas y justificantes" \- "Facturas y gastos" de la "Ejecución económica" del proyecto se dispondrá de todas las facturas y justificantes de gastos recuperados del SGE, de forma que en este apartado de "Justificaciones" se pueda seleccionar cuáles de ellos van a ser incluidos en la justificación.
+Los gastos disponibles serán los que figuren en el apartado "Facturas y justificantes" - "Facturas y gastos" de la "Ejecución económica" del proyecto. En el apartado "Facturas y justificantes" - "Facturas y gastos" de la "Ejecución económica" del proyecto se dispondrá de todas las facturas y justificantes de gastos recuperados del SGE, de forma que en este apartado de "Justificaciones" se pueda seleccionar cuáles de ellos van a ser incluidos en la justificación.
 
-
-
-|  | | | |
+|  |  |  |  |
 | --- | --- | --- | --- |
+|  | | | |
 | Nombre | | Tipo | Características / Notas |
 | Añadir gasto a la justificación del periodo | | | |
-| Anualidad | | SelectorNumérico entero genéricoOpcional | Listado de todas anualidades del/de los proyecto/s que tengan vinculado el identificador del SGE para el que se está viendo la ejecución económica |
-| Núm. justificante | | Texto cortoOpcional | Número justificante del gasto |
-| Núm. factura | | Texto cortoOpcional | Número factura del gasto |
-| Fecha gasto | | FechaOpcional | Fecha del gasto |
+| Anualidad | | Selector  Numérico entero genérico  Opcional | Listado de todas anualidades del/de los proyecto/s que tengan vinculado el identificador del SGE para el que se está viendo la ejecución económica |
+| Núm. justificante | | Texto corto  Opcional | Número justificante del gasto |
+| Núm. factura | | Texto corto  Opcional | Número factura del gasto |
+| Fecha gasto | | Fecha  Opcional | Fecha del gasto |
 | Filtrar | | Icono de acción | Acción "Filtrar" |
 | Listado de facturas y justificantes | | | |
-|  | | CheckBooleano | Permite seleccionar los gastos a incluir en el periodo de justificación de forma individual, marcando el check de la columna, o seleccionar todos los gastos, marcando el check de la cabecera de la tabla. |
+|  | | Check  Booleano | Permite seleccionar los gastos a incluir en el periodo de justificación de forma individual, marcando el check de la columna, o seleccionar todos los gastos, marcando el check de la cabecera de la tabla. |
 | Anualidad | | Numérico entero genérico | Año de la anualidad |
 | Agrupación gasto | | Texto corto | Agrupación de gasto asociada a la anualidad |
 | Concepto de gasto | | Texto corto | Concepto de gasto asociado a la agrupación de gasto |
@@ -33,8 +41,6 @@ Los gastos disponibles serán los que figuren en el apartado "Facturas y justif
 | Importe total | | Económico | Importe total de la factura |
 | Importe imputado | | Económico | Importe imputado de la factura |
 
-
-
 | Acciones | Descripción | Enlace CU. |
 | --- | --- | --- |
 | Filtrar | Aplica los filtros introducidos sobre la lista de facturas y justificantes mostrando las que cumplen las condiciones |  |
@@ -43,14 +49,7 @@ Los gastos disponibles serán los que figuren en el apartado "Facturas y justif
 
 ### Acciones
 
-  
-  
-  
-  
-  
-  
-
-
-
-
-
+|  |  |
+| --- | --- |
+| ACT-CSP-003-Gestor | CSP-PROYECTO-CREAR, CSP-PROYECTO-EDITAR |
+| ACT-CSP-004-Administrador | CSP-PROYECTO-CREAR, CSP-PROYECTO-EDITAR |

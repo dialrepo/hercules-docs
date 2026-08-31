@@ -1,15 +1,8 @@
-# Hércules : ETI \- Modelo lógico
-
-
+# ETI - Modelo lógico
 
 ### Modelo lógico
 
 ![](/attachments/597852355/841089090.bmp)
-
-  
-
-
-
 
 | Entidad | Borrado lógico | Vigencia | Histórico |
 | --- | --- | --- | --- |
@@ -48,19 +41,6 @@
 | TipoMemoria | X |  |  |
 | TipoMemoriaTipoComite | X |  |  |
 
-  
-
-
-  
-
-
 ### Diagrama de estados de una memoria
 
 ![](/attachments/597852355/841089089.bmp)
-
-  
-
-
-
-
-

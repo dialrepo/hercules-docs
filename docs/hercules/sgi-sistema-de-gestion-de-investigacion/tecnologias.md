@@ -1,38 +1,35 @@
-# Hércules : Tecnologías
-
-
+# Tecnologías
 
 ### **Librerías**
 
 Para poder acceder a la información es necesario tener conocimientos básicos de programación.
 
-Se parte de [https://confluence.um.es/confluence/pages/viewpage.action?pageId\=662438145](https://confluence.um.es/confluence/pages/viewpage.action?pageId=662438145 "https://confluence.um.es/confluence/pages/viewpage.action?pageId=662438145") que es una referencia a la tecnologías del SGI Hércules y  del conocimiento de los proyectos de Spring Boot para back y de Angular para el front en el sentido de que ambos utilizan gestores de paquetes/dependencias que en un archivo te identifica todas las librerías que usa.
+Se parte de </hercules/sgi-sistema-de-gestion-de-investigacion/tecnologias> que es una referencia a la tecnologías del SGI Hércules y  del conocimiento de los proyectos de Spring Boot para back y de Angular para el front en el sentido de que ambos utilizan gestores de paquetes/dependencias que en un archivo te identifica todas las librerías que usa.
 
 A continuación se proporcionan dos ejemplos de como se obtiene la información, uno de back y otro de front:
 
-1\.\- En eGithub está  el pom de csp [https://github.com/HerculesCRUE/SGI/blob/main/sgi\-csp\-service/pom.xml](https://urldefense.com/v3/__https:/github.com/HerculesCRUE/SGI/blob/main/sgi-csp-service/pom.xml__;!!D9dNQwwGXtA!Q8c7VzfC1K7ncTDJQIIdODRWYVD3WGWHHCO1bGZVxks6OqfK0zhXCr9gIUkqkT0W6jItRWZMkqwtbZ2bqsalDQg$ "https://urldefense.com/v3/__https:/github.com/HerculesCRUE/SGI/blob/main/sgi-csp-service/pom.xml__;!!D9dNQwwGXtA!Q8c7VzfC1K7ncTDJQIIdODRWYVD3WGWHHCO1bGZVxks6OqfK0zhXCr9gIUkqkT0W6jItRWZMkqwtbZ2bqsalDQg$")
+1.- En eGithub está  el pom de csp [https://github.com/HerculesCRUE/SGI/blob/main/sgi-csp-service/pom.xml](https://urldefense.com/v3/__https:/github.com/HerculesCRUE/SGI/blob/main/sgi-csp-service/pom.xml__;!!D9dNQwwGXtA!Q8c7VzfC1K7ncTDJQIIdODRWYVD3WGWHHCO1bGZVxks6OqfK0zhXCr9gIUkqkT0W6jItRWZMkqwtbZ2bqsalDQg$)
 
-y en las  dependencias están los artefactos que usa este servicio: commons\-lang3, hibernate\-jpamodelgen, hibernate\-validator, …
+y en las  dependencias están los artefactos que usa este servicio: commons-lang3, hibernate-jpamodelgen, hibernate-validator, …
 
-2\.\- En los proyectos de angular las dependencias estan en el archivo package.json [https://github.com/HerculesCRUE/SGI/blob/main/sgi\-framework\-angular/package.json](https://urldefense.com/v3/__https:/github.com/HerculesCRUE/SGI/blob/main/sgi-framework-angular/package.json__;!!D9dNQwwGXtA!Q8c7VzfC1K7ncTDJQIIdODRWYVD3WGWHHCO1bGZVxks6OqfK0zhXCr9gIUkqkT0W6jItRWZMkqwtbZ2brZTCjDo$ "https://urldefense.com/v3/__https:/github.com/HerculesCRUE/SGI/blob/main/sgi-framework-angular/package.json__;!!D9dNQwwGXtA!Q8c7VzfC1K7ncTDJQIIdODRWYVD3WGWHHCO1bGZVxks6OqfK0zhXCr9gIUkqkT0W6jItRWZMkqwtbZ2brZTCjDo$")
+2.- En los proyectos de angular las dependencias estan en el archivo package.json [https://github.com/HerculesCRUE/SGI/blob/main/sgi-framework-angular/package.json](https://urldefense.com/v3/__https:/github.com/HerculesCRUE/SGI/blob/main/sgi-framework-angular/package.json__;!!D9dNQwwGXtA!Q8c7VzfC1K7ncTDJQIIdODRWYVD3WGWHHCO1bGZVxks6OqfK0zhXCr9gIUkqkT0W6jItRWZMkqwtbZ2brZTCjDo$)
 
 Por ejemplo:
 
-
-
-| "@angular/animations":\~11\.1\.1", |  |
+|  |  |
 | --- | --- |
-| "@angular/common": "\~11\.1\.1", | |
-| "@angular/compiler": "\~11\.1\.1", | |
-| "@angular/core": "\~11\.1\.1", | |
-| "@angular/forms": "\~11\.1\.1", | |
-| "@angular/platform\-browser": "\~11\.1\.1", | |
-| "@angular/platform\-browser\-dynamic": "\~11\.1\.1", | |
-| "@angular/router": "\~11\.1\.1", | |
-| "keycloak\-js": "^11\.0\.0", | |
-| "rxjs": "^6\.5\.5", | |
-| "tslib": "^2\.0\.0", | |
-| "zone.js": "\~0\.10\.2" | |
+| "@angular/animations":~11.1.1", |  |
+| "@angular/common": "~11.1.1", | |
+| "@angular/compiler": "~11.1.1", | |
+| "@angular/core": "~11.1.1", | |
+| "@angular/forms": "~11.1.1", | |
+| "@angular/platform-browser": "~11.1.1", | |
+| "@angular/platform-browser-dynamic": "~11.1.1", | |
+| "@angular/router": "~11.1.1", | |
+| "keycloak-js": "^11.0.0", | |
+| "rxjs": "^6.5.5", | |
+| "tslib": "^2.0.0", | |
+| "zone.js": "~0.10.2" | |
 
 ### Conceptos principales
 
@@ -60,7 +57,7 @@ Modelo: Esta es la representación específica de la información con la cual el
 
 el fin de independizarse del sistema de gestión de bases de datos (SGBD) subyacente y facilitar
 
-la implantación del sistema se utilizará un ORM (Object\-Relational Mapping) como Hibernate.
+la implantación del sistema se utilizará un ORM (Object-Relational Mapping) como Hibernate.
 
 De esta manera, se permite de forma transparente el uso de diferentes bases de datos (Oracle,
 
@@ -68,7 +65,7 @@ PostgreSQL, SQLServer, …) como unidad de persistencia.
 
 Vista: Esta presenta el modelo en un formato adecuado para interactuar, usualmente la interfaz
 
-de usuario. Para la vista web se propone usar Angular (comúnmente llamado "Angular 2\+" o
+de usuario. Para la vista web se propone usar Angular (comúnmente llamado "Angular 2+" o
 
 "Angular 2"), es un framework para aplicaciones web desarrollado en TypeScript, de código
 
@@ -111,14 +108,12 @@ Facilidad de cambio, logrando la transparencia de la tecnología y, en la medida
 de estándares industriales para interfaces clave.
 
 * Uso de estándares abiertos, evitando formatos y protocolos privativos.
+
 * Utilización de componentes y productos de terceros publicados bajo licencias Open Source y gratuitas.
 
 En general la arquitectura de la aplicación propuesta a alto nivel seria la siguiente:
 
 ![](/attachments/662438145/662438156.png)
-
-  
-
 
 * Gateway – Puerta de entrada al sistema que se encarga de manejar el tráfico web del sistema, servir el
 
@@ -128,9 +123,9 @@ contenido estático de la aplicación Angular.
 
 existentes en el despliegue.
 
-* Servidor de autenticación y autorización \- UAA \- se encarga de autenticar y autorizar a los usuarios en el
+* Servidor de autenticación y autorización - UAA - se encarga de autenticar y autorizar a los usuarios en el
 
-sistema siguiendo un protocolo OAuth2\.
+sistema siguiendo un protocolo OAuth2.
 
 * Microservicios – Son aplicaciones autocontenidas construidas con Spring Boot y dockerizadas que se
 
@@ -141,7 +136,3 @@ lanzarse en paralelo para soportar carga extra.
 * Con el fin de monitorizar, auditar y gestionar el sistema se utiliza el stack tecnológico ELK (ElastichSearch,
 
 Logstash y Kibana).
-
-
-
-

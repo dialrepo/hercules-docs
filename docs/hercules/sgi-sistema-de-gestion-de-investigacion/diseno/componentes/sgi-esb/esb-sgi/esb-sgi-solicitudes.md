@@ -1,20 +1,28 @@
-# Hércules : ESB \- SGI \- Solicitudes
+# ESB - SGI - Solicitudes
 
+---
 
+* [Sistema de Gestión Investigación](#ESBSGISolicitudes-SistemadeGestiónInvestigación)
+  + [Entidades](#ESBSGISolicitudes-Entidades)
+  + [Enumerados](#ESBSGISolicitudes-Enumerados)
+  + [Modelo lógico](#ESBSGISolicitudes-Modelológico)
+  + [API](#ESBSGISolicitudes-API)
+    - [Definición de los objetos](#ESBSGISolicitudes-Definicióndelosobjetos)
+      * [Solicitud](#ESBSGISolicitudes-Solicitud)
+      * [Estado](#ESBSGISolicitudes-Estado)
+      * [SolicitudProyecto](#ESBSGISolicitudes-SolicitudProyecto)
+      * [PalabraClave](#ESBSGISolicitudes-PalabraClave)
+      * [AreaTematica](#ESBSGISolicitudes-AreaTematica)
+      * [SolicitudAreaConocimiento](#ESBSGISolicitudes-SolicitudAreaConocimiento)
+      * [SolicitudClasificacion](#ESBSGISolicitudes-SolicitudClasificacion)
+    - [Servicios](#ESBSGISolicitudes-Servicios)
+      * [Consultar solicitudes](#ESBSGISolicitudes-Consultarsolicitudes)
 
-
-
-
-
-
-
-
+---
 
 ## Sistema de Gestión Investigación
 
 ### Entidades
-
-
 
 | Entidad | Descripción |
 | --- | --- |
@@ -27,38 +35,34 @@
 
 ### Enumerados
 
-
-
 | Entidad | Descripción |
 | --- | --- |
-| TipoFormularioSolicitud | Puede tomar los siguientes valores:* PROYECTO * GRUPO * RRHH |
-| TipoSolicitudGrupo | Puede tomar los siguientes valores:* MODIFICACION (Modificación grupo) * CONSTITUCION (Constitución de grupo) |
-| TipoEstadoSolicitud | Puede tomar los siguientes valores:* ADMITIDA\_DEFINITIVA * ADMITIDA\_PROVISIONAL * ALEGACION\_FASE\_ADMISION * ALEGACION\_FASE\_PROVISIONAL * BORRADOR * CONCEDIDA * CONCEDIDA\_PROVISIONAL * CONCEDIDA\_PROVISIONAL\_ALEGADA * CONCEDIDA\_PROVISIONAL\_NO\_ALEGADA * DENEGADA * DENEGADA\_PROVISIONAL * DENEGADA\_PROVISIONAL\_ALEGADA * DENEGADA\_PROVISIONAL\_NO\_ALEGADA * DESISTIDA * EXCLUIDA\_DEFINITIVA * EXCLUIDA\_PROVISIONAL * FIRMADA * NEGOCIACION * PRESENTADA\_SUBSANACION * RECURSO\_FASE\_ADMISION * RECURSO\_FASE\_CONCESION * RENUNCIADA * RESERVA * RESERVA\_PROVISIONAL * SOLICITADA * SUBSANACION |
-| TipoPresupuesto | Puede tomar los siguientes valores:* GLOBAL (El presupuesto del proyecto solicitado se indicará de manera global, sin distinguir el presupuesto para cada entidad financiadora) * INDIVIDUAL (Se detallará el presupuesto solicitado a cada una de las entidades financiadoras, tanto las entidades que participan en la convocatoria como e otras entidades ajenas a la convocatoria a las que se solicite financiación) * MIXTO (Se detallará un presupuesto único para todas las entidades financiadoras de la convocatoria y un presupuesto individual por cada entidad financiadora ajena a la convocatoria. El presupuesto de las entidades financiadoras de la convocatoria se asociará a la entidad que figure como entidad gestora de la convocatoria) |
+| TipoFormularioSolicitud | Puede tomar los siguientes valores:   * PROYECTO * GRUPO * RRHH |
+| TipoSolicitudGrupo | Puede tomar los siguientes valores:   * MODIFICACION (Modificación grupo) * CONSTITUCION (Constitución de grupo) |
+| TipoEstadoSolicitud | Puede tomar los siguientes valores:   * ADMITIDA\_DEFINITIVA * ADMITIDA\_PROVISIONAL * ALEGACION\_FASE\_ADMISION * ALEGACION\_FASE\_PROVISIONAL * BORRADOR * CONCEDIDA * CONCEDIDA\_PROVISIONAL * CONCEDIDA\_PROVISIONAL\_ALEGADA * CONCEDIDA\_PROVISIONAL\_NO\_ALEGADA * DENEGADA * DENEGADA\_PROVISIONAL * DENEGADA\_PROVISIONAL\_ALEGADA * DENEGADA\_PROVISIONAL\_NO\_ALEGADA * DESISTIDA * EXCLUIDA\_DEFINITIVA * EXCLUIDA\_PROVISIONAL * FIRMADA * NEGOCIACION * PRESENTADA\_SUBSANACION * RECURSO\_FASE\_ADMISION * RECURSO\_FASE\_CONCESION * RENUNCIADA * RESERVA * RESERVA\_PROVISIONAL * SOLICITADA * SUBSANACION |
+| TipoPresupuesto | Puede tomar los siguientes valores:   * GLOBAL (El presupuesto del proyecto solicitado se indicará de manera global, sin distinguir el presupuesto para cada entidad financiadora) * INDIVIDUAL (Se detallará el presupuesto solicitado a cada una de las entidades financiadoras, tanto las entidades que participan en la convocatoria como e otras entidades ajenas a la convocatoria a las que se solicite financiación) * MIXTO (Se detallará un presupuesto único para todas las entidades financiadoras de la convocatoria y un presupuesto individual por cada entidad financiadora ajena a la convocatoria. El presupuesto de las entidades financiadoras de la convocatoria se asociará a la entidad que figure como entidad gestora de la convocatoria) |
 
 ### Modelo lógico
 
-[CSP\-SOL \- Modelo lógico \- Diagrama](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-csp/csp-sol-solicitudes/csp-sol-modelo-logico-diagrama.md "/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-csp/csp-sol-solicitudes/csp-sol-modelo-logico-diagrama.md")
+[CSP-SOL - Modelo lógico - Diagrama](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-csp/csp-sol-solicitudes/csp-sol-modelo-logico-diagrama)
 
 ### API
 
 Características generales que todas las API REST deben de cumplir:
 
-* [Consultas filtradas y paginadas](/hercules/sgi-sistema-de-gestion-de-investigacion/desarrollo-y-configuracion/estandares-de-desarrollo/consultas-filtradas-y-paginadas.md "/hercules/sgi-sistema-de-gestion-de-investigacion/desarrollo-y-configuracion/estandares-de-desarrollo/consultas-filtradas-y-paginadas.md")
-* [Formatos de datos API](/hercules/sgi-sistema-de-gestion-de-investigacion/desarrollo-y-configuracion/estandares-de-desarrollo/formatos-de-datos-api.md "/hercules/sgi-sistema-de-gestion-de-investigacion/desarrollo-y-configuracion/estandares-de-desarrollo/formatos-de-datos-api.md")
+* [Consultas filtradas y paginadas](/hercules/sgi-sistema-de-gestion-de-investigacion/desarrollo-y-configuracion/estandares-de-desarrollo/consultas-filtradas-y-paginadas)
+* [Formatos de datos API](/hercules/sgi-sistema-de-gestion-de-investigacion/desarrollo-y-configuracion/estandares-de-desarrollo/formatos-de-datos-api)
 
 #### Definición de los objetos
 
 ##### Solicitud
 
-
-
 | Nombre | Tipo | Descripción |
 | --- | --- | --- |
 | createdBy | String | Referencia al usuario creador del registro en los sistemas de la Universidad. |
-| creationDate | Fecha \+ Hora | Fecha y hora de creación del registro.Formato UTC. |
+| creationDate | Fecha + Hora | Fecha y hora de creación del registro.  Formato UTC. |
 | lastModifiedBy | String | Referencia al último usuario que modificó el registro en los sistemas de la Universidad. |
-| lastModifiedDate | Fecha \+ Hora | Fecha y hora de creación del registro.Formato UTC. |
+| lastModifiedDate | Fecha + Hora | Fecha y hora de creación del registro.  Formato UTC. |
 | id | Long | Identificador único de la solicitud |
 | titulo | String | Título de la solicitud |
 | convocatoriaId | Long | Identificador de la convocatoria a la que corresponde la solicitud. |
@@ -74,11 +78,7 @@ Características generales que todas las API REST deben de cumplir:
 | tipoSolicitudGrupo | String | Subtipo de la solicitud en caso de que la solicitud sea de tipo grupo (valor del campo formularioSolicitud). Es un valor del enumerado TipoSolicitudGrupo. |
 | activo | Booleano | Indicador de si la solicitud está activa o no en el SGI. |
 
-
-
 **Solicitud** Ampliar origen
-
-
 
 ```
 {
@@ -113,28 +113,21 @@ Características generales que todas las API REST deben de cumplir:
 }
 ```
 
-
 ##### Estado
-
-
 
 | Nombre | Tipo | Descripción |
 | --- | --- | --- |
 | createdBy | String | Referencia al usuario creador del registro en los sistemas de la Universidad. |
-| creationDate | Fecha \+ Hora | Fecha y hora de creación del registro.Formato UTC. |
+| creationDate | Fecha + Hora | Fecha y hora de creación del registro.  Formato UTC. |
 | lastModifiedBy | String | Referencia al último usuario que modificó el registro en los sistemas de la Universidad. |
-| lastModifiedDate | Fecha \+ Hora | Fecha y hora de creación del registro.Formato UTC. |
+| lastModifiedDate | Fecha + Hora | Fecha y hora de creación del registro.  Formato UTC. |
 | id | Long | Identificador único del estado de la solicitud. |
 | solicitudId | Long | Referencia a la solicitud a la que corresponde el estado. |
 | estado | String | Estado de la solicitud. Toma un valor del enumerado TipoEstadoSolicitud. |
-| fechaEstado | Fecha \+ Hora | Fecha en la que la solicitud alcanza el estado.Formato UTC. |
+| fechaEstado | Fecha + Hora | Fecha en la que la solicitud alcanza el estado.  Formato UTC. |
 | comentario | String | Comentario incluido al realizar el cambio de estado. |
 
-
-
 **Estado** Ampliar origen
-
-
 
 ```
 {
@@ -150,24 +143,21 @@ Características generales que todas las API REST deben de cumplir:
 }
 ```
 
-
 ##### SolicitudProyecto
-
-
 
 | Nombre | Tipo | Descripción |
 | --- | --- | --- |
 | createdBy | String | Referencia al usuario creador del registro en los sistemas de la Universidad. |
-| creationDate | Fecha \+ Hora | Fecha y hora de creación del registro.Formato UTC. |
+| creationDate | Fecha + Hora | Fecha y hora de creación del registro.  Formato UTC. |
 | lastModifiedBy | String | Referencia al último usuario que modificó el registro en los sistemas de la Universidad. |
-| lastModifiedDate | Fecha \+ Hora | Fecha y hora de creación del registro.Formato UTC. |
+| lastModifiedDate | Fecha + Hora | Fecha y hora de creación del registro.  Formato UTC. |
 | id | Long | Identificador único de la solicitud. |
 | acronimo | String | Acrónimo del proyecto solicitado. |
 | codExterno | String | Código alfanumérico que la entidad convocante asigna al proyecto solicitado. A partir de este campo se informa el campo "código externo" de la tabla "proyecto" (modelo lógico CSP Proyecto). |
 | duracion | Numérico entero | Duración del proyecto solicitado expresada en meses. |
 | colaborativo | Booleano | Indica si un proyecto coordinado es además colaborativo (alguno de los socios participantes es una empresa privada). |
 | coordinadorExterno | Booleano | Indica qué socio (entidad) actuará como coordinador del proyecto solicitado. Un valor "false" indica que será la propia Universidad quien actuará en calidad de coordinador del proyecto. Un valor "true" indicará que el coordinador será uno de los socios que participará en el proyecto. |
-| coordinado | Booleano | Indica si el proyecto se realizará de forma coordinada con otros socios. Un valor "true" en este campo activará la disponibilidad de los campos: * coordinador externo * colaborativo * y del apartado "socios proyecto" |
+| coordinado | Booleano | Indica si el proyecto se realizará de forma coordinada con otros socios. Un valor "true" en este campo activará la disponibilidad de los campos:    * coordinador externo * colaborativo * y del apartado "socios proyecto" |
 | objetivos | String | Objetivos del proyecto solicitado. |
 | intereses | String | Intereses perseguidos con el proyecto solicitado. |
 | resultadosPrevistos | String | Resultados esperados del proyecto. |
@@ -184,11 +174,7 @@ Características generales que todas las API REST deben de cumplir:
 | totalImporteSolicitado | BigDecimal | Es el importe total que se solicita a las entidades financiadoras para el proyecto solicitado incluyendo tanto el presupuesto de la Universidad como el del resto de socios participantes. Este valor está desvinculado del presupuesto detallado del proyecto que se hubiera podido introducir. El campo es de utilidad en caso de el usuario prefiera no introducir el detalle del presupuesto |
 | totalImportePresupuestado | BigDecimal | Es el importe total presupuestado para el proyecto solicitado incluyendo tanto el presupuesto de la Universidad como el del resto de socios participantes. Este valor está desvinculado del presupuesto detallado del proyecto que se hubiera podido introducir. El campo es de utilidad en caso de el usuario prefiera no introducir el detalle del presupuesto. |
 
-
-
 **SolicitudProyecto** Ampliar origen
-
-
 
 ```
 {
@@ -251,22 +237,16 @@ Características generales que todas las API REST deben de cumplir:
 }
 ```
 
-
 ##### PalabraClave
 
-
-
-| **Nombre** | **Tipo** | **Descripción** |
+|  |  |  |
 | --- | --- | --- |
+| **Nombre** | **Tipo** | **Descripción** |
 | id | Long | Identificador único autogenerado de la palabra clave. |
 | solicitudId | Long | Identificador de la solicitud a la que se asocia la palabra clave. |
 | palabraClaveRef | String | Referencia a la palabra clave. Coincide con el texto de la palabra clave por ser único en el diccionario de todo el SGI. |
 
-
-
 **PalabraClave** Ampliar origen
-
-
 
 ```
 {
@@ -276,28 +256,21 @@ Características generales que todas las API REST deben de cumplir:
 }
 ```
 
-
 ##### AreaTematica
-
-
 
 | Nombre | Tipo | Descripción |
 | --- | --- | --- |
 | createdBy | String | Referencia al usuario creador del registro en los sistemas de la Universidad. |
-| creationDate | Fecha \+ Hora | Fecha y hora de creación del registro.Formato UTC. |
+| creationDate | Fecha + Hora | Fecha y hora de creación del registro.  Formato UTC. |
 | lastModifiedBy | String | Referencia al último usuario que modificó el registro en los sistemas de la Universidad. |
-| lastModifiedDate | Fecha \+ Hora | Fecha y hora de creación del registro.Formato UTC. |
+| lastModifiedDate | Fecha + Hora | Fecha y hora de creación del registro.  Formato UTC. |
 | id | Long | Identificador único del área temática. |
 | nombre | String | Nombre del área temática. Será el campo mostrado en los árboles y tablas donde se presente. |
 | descripcion | String | Descripción del área temática. |
 | padre | AreaTematica | Área temática padre en el caso de que disponga de uno (si no es un nodo raíz). |
 | activo | Booleano | Indicador de si el área temática está activa o no en el SGI. |
 
-
-
 **AreaTematica** Ampliar origen
-
-
 
 ```
 {
@@ -333,26 +306,19 @@ Características generales que todas las API REST deben de cumplir:
 }
 ```
 
-
 ##### SolicitudAreaConocimiento
-
-
 
 | Nombre | Tipo | Descripción |
 | --- | --- | --- |
 | createdBy | String | Referencia al usuario creador del registro en los sistemas de la Universidad. |
-| creationDate | Fecha \+ Hora | Fecha y hora de creación del registro.Formato UTC. |
+| creationDate | Fecha + Hora | Fecha y hora de creación del registro.  Formato UTC. |
 | lastModifiedBy | String | Referencia al último usuario que modificó el registro en los sistemas de la Universidad. |
-| lastModifiedDate | Fecha \+ Hora | Fecha y hora de creación del registro.Formato UTC. |
+| lastModifiedDate | Fecha + Hora | Fecha y hora de creación del registro.  Formato UTC. |
 | id | Long | Identificador único del estado de la solicitud. |
 | solicitudProyectoId | Long | Referencia a la extensión de información para una solicitud de tipo proyecto. |
 | areaConocimientoRef | String | Referencia al área de conocimiento en los sistemas de la Universidad. |
 
-
-
 **SolicitudAreaConocimiento** Ampliar origen
-
-
 
 ```
  {
@@ -366,26 +332,19 @@ Características generales que todas las API REST deben de cumplir:
 }
 ```
 
-
 ##### SolicitudClasificacion
-
-
 
 | Nombre | Tipo | Descripción |
 | --- | --- | --- |
 | createdBy | String | Referencia al usuario creador del registro en los sistemas de la Universidad. |
-| creationDate | Fecha \+ Hora | Fecha y hora de creación del registro.Formato UTC. |
+| creationDate | Fecha + Hora | Fecha y hora de creación del registro.  Formato UTC. |
 | lastModifiedBy | String | Referencia al último usuario que modificó el registro en los sistemas de la Universidad. |
-| lastModifiedDate | Fecha \+ Hora | Fecha y hora de creación del registro.Formato UTC. |
+| lastModifiedDate | Fecha + Hora | Fecha y hora de creación del registro.  Formato UTC. |
 | id | Long | Identificador único del estado de la solicitud. |
 | solicitudProyectoId | Long | Referencia a la extensión de información para una solicitud de tipo proyecto. |
 | clasificacionRef | String | Referencia a la clasificación en los sistemas de la Universidad o en el SGI, según el caso. |
 
-
-
 **SolicitudClasificacion** Ampliar origen
-
-
 
 ```
 {
@@ -399,23 +358,20 @@ Características generales que todas las API REST deben de cumplir:
 }
 ```
 
-
 #### Servicios
 
-Para componer la URL llamada completa, se debe anteponer a lo indicado en la columna URL lo siguiente: **{HOST}/api/sgicsp**, donde **{HOST}** de deberá sustituir el dominio correspondiente al entorno al que se está accediendo y dicho acceso será por http o https según el caso.#### Consultar solicitudes
+Para componer la URL llamada completa, se debe anteponer a lo indicado en la columna URL lo siguiente: **{HOST}/api/sgicsp**, donde **{HOST}** de deberá sustituir el dominio correspondiente al entorno al que se está accediendo y dicho acceso será por http o https según el caso.
 
-
+##### Consultar solicitudes
 
 | Método | URL | Parámetros | Respuesta | Descripción |
 | --- | --- | --- | --- | --- |
-| GET | /solicitudes | q\+s (query \+ sort)La query estará formada por:* cualquiera de los campos del objeto Solicitud | Lista\[Solicitud] | Listado de solicitudes.*Ejemplo*:/solicitudes/todos?q\=formularioSolicitud\=\=PROYECTO;codigoExterno\=ik\=COD;solicitanteRef\=\=01889311 |
-| GET | /solicitudes/{id} |  | Solicitud | Detalle de la solicitud.*Ejemplo*:/solicitud/1 |
-| GET | /solicitudproyecto/{id} |  | SolicitudProyecto | Detalle extendido de la solicitud con los datos generales adicionales para las solicitudes de tipo proyecto.*Ejemplo*:/solicitudproyecto/1 |
-| GET | /solicitudes/{id}/palabrasclave |  | Lista\[PalabraClave] | Listado de palabras clave de una solicitud de tipo proyecto. |
+| GET | /solicitudes | q+s (query + sort)  La query estará formada por:   * cualquiera de los campos del objeto Solicitud | Lista[Solicitud] | Listado de solicitudes.  *Ejemplo*:  /solicitudes/todos?q=formularioSolicitud==PROYECTO;codigoExterno=ik=COD;solicitanteRef==01889311 |
+| GET | /solicitudes/{id} |  | Solicitud | Detalle de la solicitud.  *Ejemplo*:  /solicitud/1 |
+| GET | /solicitudproyecto/{id} |  | SolicitudProyecto | Detalle extendido de la solicitud con los datos generales adicionales para las solicitudes de tipo proyecto.  *Ejemplo*:  /solicitudproyecto/1 |
+| GET | /solicitudes/{id}/palabrasclave |  | Lista[PalabraClave] | Listado de palabras clave de una solicitud de tipo proyecto. |
 |  | | | | |
-| GET | /solicitudes/{id}/solicitud\-proyecto\-areas\-conocimiento |  | Lista\[SolicitudAreaConocimiento] | Listado de las áreas de conocimiento de la solicitud. |
-| GET | /solicitudes/{id}/solicitud\-proyecto\-clasificaciones |  | Lista\[SolicitudClasificacion] | Listado de las clasificaciones de la solicitud. |
-
-
-
-
+| GET | /solicitudes/{id}/solicitud-proyecto-areas-conocimiento |  | Lista[SolicitudAreaConocimiento] | Listado de las áreas de conocimiento de la solicitud. |
+| GET | /solicitudes/{id}/solicitud-proyecto-clasificaciones |  | Lista[SolicitudClasificacion] | Listado de las clasificaciones de la solicitud. |
+| GET | /solicitudes/eliminadas-ids | q+s  La query estará formada por:   * fechaEliminacion | Lista[Long] | Listado de Identificadores de Solicitudes que han sido eliminadas (campo activo = false) a partir de una fecha.  Se utilizará el siguiente parámetro en la llamada al servicio:   * fechaEliminacion: se le pasará la fecha a partir de la cual se quieren ver las solicitudes eliminadas o bien un rango entre las que se quiere buscar   Ejemplo1:   * fechaEliminacion=ge="2024-01-01T22:00:00Z";   Ejemplo2:   * fechaEliminacion=ge="2024-01-01T22:00:00Z";fechaEliminacion=le="2024-12-31T22:00:00Z" |
+| GET | /solicitudes/modificados-ids | q+s  La query estará formada por:   * fechaModificacion | Lista[Long] | Listado de identificadores de solicitudes activas que han sido modificadas (tanto la entidad SOLICITUD) como las siguientes entidades relacionadas:   * SOLICITUD\_DOCUMENTO * SOLICITUD\_MODALIDAD * SOLICITUD\_PROYECTO * SOLICITUD\_PROYECTO\_ENTIDAD * SOLICITUD\_PROYECTO\_EQUIPO * SOLICITUD\_PROYECTO\_PRESUPUESTO * SOLICITUD\_PROYECTO\_RESPONSABLE\_ECONOMICO * SOLICITUD\_PROYECTO\_SOCIO * SOLICITUD\_PROYECTO\_SOCIO\_EQUIPO * SOLICITUD\_RRHH   Ejemplo:   * fechaModificacion=ge="2021-08-18T22:00:00Z" |

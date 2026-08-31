@@ -1,19 +1,19 @@
-# Hércules : Amortización fondos (UM \- SGI \- ESB \- SGE)
-
-
-
-  
-
-
-
+# Amortización fondos (UM - SGI - ESB - SGE)
 
 ---
+
+* [Ejecución económica](#Amortizaciónfondos(UMSGIESBSGE)-Ejecucióneconómica)
+  + [Entidades](#Amortizaciónfondos(UMSGIESBSGE)-Entidades)
+  + [API](#Amortizaciónfondos(UMSGIESBSGE)-API)
+    - [Definición de los objetos](#Amortizaciónfondos(UMSGIESBSGE)-Definicióndelosobjetos)
+      * [PeriodoAmortizacion](#Amortizaciónfondos(UMSGIESBSGE)-PeriodoAmortizacion)
+      * [TipoFinanciacion](#Amortizaciónfondos(UMSGIESBSGE)-TipoFinanciacion)
+      * [FuenteFinanciacion](#Amortizaciónfondos(UMSGIESBSGE)-FuenteFinanciacion)
+    - [Servicios](#Amortizaciónfondos(UMSGIESBSGE)-Servicios)
 
 ## Ejecución económica
 
 ### Entidades
-
-
 
 | Entidad | Descripción |
 | --- | --- |
@@ -25,17 +25,16 @@
 
 Características generales que todas las API REST deben de cumplir:
 
-* [Consultas filtradas y paginadas](https://confluence.um.es/confluence/pages/createpage.action?spaceKey=TEMP001&title=Consultas+filtradas+y+paginadas "/confluence/pages/createpage.action?spaceKey=TEMP001&title=Consultas+filtradas+y+paginadas")
-* [Formatos de datos API](https://confluence.um.es/confluence/pages/createpage.action?spaceKey=TEMP001&title=Formatos+de+datos+API "/confluence/pages/createpage.action?spaceKey=TEMP001&title=Formatos+de+datos+API")
+* [Consultas filtradas y paginadas](/confluence/pages/createpage.action?spaceKey=TEMP001&title=Consultas+filtradas+y+paginadas)
+* [Formatos de datos API](/confluence/pages/createpage.action?spaceKey=TEMP001&title=Formatos+de+datos+API)
 
 #### Definición de los objetos
 
 ##### PeriodoAmortizacion
 
-
-
-| **Nombre** | **Tipo** | **Descripción** |
+|  |  |  |
 | --- | --- | --- |
+| **Nombre** | **Tipo** | **Descripción** |
 | id | String | Identificador interno del SGI del periodo de amortización. Debe de ser único. |
 | proyectoId | String | Identificación del proyecto SGE |
 | anualidad | String | Anualidad |
@@ -68,35 +67,24 @@ Características generales que todas las API REST deben de cumplir:
 
 ##### TipoFinanciacion
 
-
-
-| **Nombre** | **Tipo** | **Descripción** |
+|  |  |  |
 | --- | --- | --- |
+| **Nombre** | **Tipo** | **Descripción** |
 | id | String | Identificador interno del SGI del tipo de financiación. |
 | nombre | String | Nombre del tipo de financiación |
 
 ##### FuenteFinanciacion
 
-
-
-| **Nombre** | **Tipo** | **Descripción** |
+|  |  |  |
 | --- | --- | --- |
+| **Nombre** | **Tipo** | **Descripción** |
 | id | String | Identificador interno del SGI de la fuente de financiación. |
 | nombre | String | Nombre de la fuente de financiación |
 
 #### Servicios
 
-  
-
-
-
-
 | Método | URL | Parámetros | Respuesta | Descripción |
 | --- | --- | --- | --- | --- |
-| POST | /periodos\-amortizacion | PeriodoAmortizacion |  | Crea un periodo de amortización |
-| PUT | /periodos\-amortizacion/{id} | PeriodoAmortizacion |  | Modifica un periodo de amortización. Se pasa por url el identificador del periodo de amortización. |
-| DELETE | /periodos\-amortizacion/{id} |  |  | Elimina un periodo de amortización. Se pasa por url el identificador del periodo de amortización. |
-
-
-
-
+| POST | /periodos-amortizacion | PeriodoAmortizacion |  | Crea un periodo de amortización |
+| PUT | /periodos-amortizacion/{id} | PeriodoAmortizacion |  | Modifica un periodo de amortización. Se pasa por url el identificador del periodo de amortización. |
+| DELETE | /periodos-amortizacion/{id} |  |  | Elimina un periodo de amortización. Se pasa por url el identificador del periodo de amortización. |

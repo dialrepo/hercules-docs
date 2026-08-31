@@ -1,6 +1,15 @@
-# Hércules : CU\-ETI\-0010\-004 \- Asignación de memorias \- Añadir
+# CU-ETI-0010-004 - Asignación de memorias - Añadir
 
-
+|  |  |
+| --- | --- |
+| Cod. CU | ********CU-ETI-0010-004 - Asignación de memorias - Añadir******** |
+| Ver. objetivo |  |
+| Ver. CU | 1.0.0 |
+| Estado | LIBERADO\_ |
+| Fec. Aprobación |  |
+| Épica, historia |  |
+| Actores | ACT-ETI-001-Gestor |
+| Frecuencia | Media |
 
 ### Descripción
 
@@ -10,7 +19,7 @@ Formulario de asignación de memorias y par de evaluadores a las reuniones de co
 
 #### Actor principal
 
-ACT\-ETI\-001\-Gestor
+ACT-ETI-001-Gestor
 
 ### Precondiciones
 
@@ -32,31 +41,27 @@ Los evaluadores no pueden tener conflictos de intereses con los investigadores d
 
 Los cambios únicamente se realizan en memoria.
 
-### Escenario principal (flujo básico \- añadir nueva memoria)
+### Escenario principal (flujo básico - añadir nueva memoria)
 
 1. Se presenta la pantalla Convocatorias reunión con el listado de todas las Convocatorias de reunión dadas de alta en el sistema y que no se hayan borrado.
 2. Se selecciona la convocatoria de reunión.
 3. Se presenta la pantalla de edición de convocatoria de reunión.
 4. El usuario va a la pestaña de Asignación de memorias.
 5. El usuario selecciona Añadir nueva memoria.
-6. El usuario en la pantalla de Nueva memoria selecciona una memoria, un evaluador 1 y un evaluador 2\.
+6. El usuario en la pantalla de Nueva memoria selecciona una memoria, un evaluador 1 y un evaluador 2.
 7. El usuario selecciona la acción Añadir.
 8. Se realizan las validaciones en cuanto a formato, obligatoriedad habituales.
 9. Se presenta la memoria seleccionada en el  listado de memorias de la reunión de convocatoria.
 
-### Extensiones (flujos alternativos) \- Conflicto de intereses
+### Extensiones (flujos alternativos) - Conflicto de intereses
 
 1. Se presenta la pantalla Convocatorias reunión con el listado de todas las Convocatorias de reunión dadas de alta en el sistema y que no se hayan borrado.
 2. Se selecciona la convocatoria de reunión.
 3. Se presenta la pantalla de edición de convocatoria de reunión.
 4. El usuario va a la pestaña de Asignación de memorias.
 5. El usuario selecciona Añadir nueva memoria.
-6. El usuario en la pantalla de Nueva memoria selecciona una memoria, un evaluador 1 y un evaluador 2\.
+6. El usuario en la pantalla de Nueva memoria selecciona una memoria, un evaluador 1 y un evaluador 2.
 7. El usuario selecciona la acción Añadir.
 8. Se realizan las validaciones en cuanto a formato, obligatoriedad habituales. Como uno de los evaluadores esta dentro de los investigadores con conflicto del equipo investigador de la memoria se muestra mensaje de que no se puede asignar dicho evaluador.
 9. El usuario modifica al evaluador.
 10. Se sigue con el paso 6 del flujo básico.
-
-
-
-

@@ -1,6 +1,7 @@
-# Hércules : Denominators
+# Denominators
 
-
+* [Snowball](#Denominators-Snowball)
+* [SGI. Includes CRUE, OTRI and UGI](#Denominators-SGI.IncludesCRUE,OTRIandUGI)
 
 Denominators are data dimensions that serve to:
 
@@ -12,18 +13,18 @@ Denominators are data dimensions that serve to:
 * Institution
 * Discipline
 * Researcher
-* FTE (full\-time equivalent) count
+* FTE (full-time equivalent) count
 * Research student
-* Funder\-type
-* Funding\-type
+* Funder-type
+* Funding-type
 * Time period
-* Full\-time or part\-time research students
+* Full-time or part-time research students
 * Home or overseas research students
 * Gender
 
 ### SGI. Includes CRUE, OTRI and UGI
 
-* Type of Researcher\-PDI
+* Type of Researcher-PDI
 * Teaching area
 * Type of award (including internal financing project)
 * State of award
@@ -53,7 +54,3 @@ Denominators are data dimensions that serve to:
 * OTRI: Industrial sector (CNAE)
 * UGI: Type of project
 * UGI: Project state
-
-
-
-

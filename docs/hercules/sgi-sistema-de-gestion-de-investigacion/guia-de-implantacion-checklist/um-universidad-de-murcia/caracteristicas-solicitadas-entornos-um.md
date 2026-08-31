@@ -1,9 +1,6 @@
-# Hércules : Características solicitadas entornos UM
-
-
+# Características solicitadas entornos UM
 
 Desarrollo :
-
 
 ```
 - 12 GB Ram
@@ -16,11 +13,8 @@ Desarrollo :
 ```
 - 20 GB Almacenamiento
 ```
-  
-
 
 Test:
-
 
 ```
 - 24 GB Ram
@@ -33,11 +27,8 @@ Test:
 ```
 - 500 GB Almacenamiento
 ```
-  
-
 
 Producción:
-
 
 ```
 - 32 GB Ram
@@ -50,6 +41,3 @@ Producción:
 ```
 - 1 TB Almacenamiento
 ```
-
-
-

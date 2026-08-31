@@ -1,22 +1,22 @@
-# Hércules : REQ\-INT\-0010\-SGE\-0081 \- Solicitar alta proyecto económico
+# REQ-INT-0010-SGE-0081 - Solicitar alta proyecto económico
 
-
-
-
-
-
+|  |  |
+| --- | --- |
+| Cod. REQ | **REQ-INT-0010-SGE-0081 - Solicitar alta proyecto económico** |
+| Ver. Objetivo |  |
+| Ver. REQ | 1.0.0 |
+| Estado | IN PROGRESS |
+| Fec. Aprobación |  |
+| Épica, historia |  |
+| Frecuencia |  |
+| Características |  |
+| M. Consumidor |  |
 
 ### Definición y objetivos
 
 Para cada proyecto del SGI se debe de recoger el o los códigos de correspondencia con proyectos en el SGE. Esta información deberá ser recogida manualmente en el SGI. El SGI remitirá al ESB esta información para que pueda ser publicada y remitida al sistema de gestión económica correspondiente. Según la política de cada Universidad se hará uso de esta información para crear directamente el proyecto en el SGE o simplemente para publicar la información a través de cualquier mecanismo propio de la Universidad.
 
 Dependiendo de la Universidad los datos necesarios para dar de alta un nuevo proyecto en el SGE podrán ser unos datos u otros.
-
-
-
-
-
-
 
 ### Descripción técnica integración
 
@@ -49,43 +49,23 @@ Parámetros de salida:
 
 ### Diseño técnico
 
-En el siguiente enlace se muestra el diseño del modelo lógico y el diseño de la API del Sistema de Gestión Económica y, en concreto, de la relativa a proyectos del SGE y presupuestos: [SGI \- ESB \- SGE \- Proyecto económico y presupuesto](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sge/sgi-esb-sge-proyecto-sge-y-presupuesto/index.md "/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sge/sgi-esb-sge-proyecto-sge-y-presupuesto/index.md").
+En el siguiente enlace se muestra el diseño del modelo lógico y el diseño de la API del Sistema de Gestión Económica y, en concreto, de la relativa a proyectos del SGE y presupuestos: [SGI - ESB - SGE - Proyecto económico y presupuesto](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sge/sgi-esb-sge-proyecto-sge-y-presupuesto).
 
 Los servicios concretos del API que cubren este requisito son:
 
-* [SGI \- ESB \- SGE \- Proyecto SGE y presupuesto \- Obtener campos dar de alta proyecto](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sge/sgi-esb-sge-proyecto-sge-y-presupuesto/sgi-esb-sge-proyecto-sge-y-presupuesto-servicios-formly/sgi-esb-sge-proyecto-sge-y-presupuesto-obtener-campos-dar-de-alta-proyecto.md "/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sge/sgi-esb-sge-proyecto-sge-y-presupuesto/sgi-esb-sge-proyecto-sge-y-presupuesto-servicios-formly/sgi-esb-sge-proyecto-sge-y-presupuesto-obtener-campos-dar-de-alta-proyecto.md")
-	+ Se ha de llamar en primer lugar para poder pintar por pantalla el formulario de introducción de datos de alta.
-* [SGI \- ESB \- SGE \- Proyecto SGE y presupuesto \- Dar de alta proyecto](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sge/sgi-esb-sge-proyecto-sge-y-presupuesto/sgi-esb-sge-proyecto-sge-y-presupuesto-servicios-formly/sgi-esb-sge-proyecto-sge-y-presupuesto-dar-de-alta-proyecto.md "/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sge/sgi-esb-sge-proyecto-sge-y-presupuesto/sgi-esb-sge-proyecto-sge-y-presupuesto-servicios-formly/sgi-esb-sge-proyecto-sge-y-presupuesto-dar-de-alta-proyecto.md")
-	+ Se llamará una vez el usuario completa los datos del formulario de alta.
-
-
-
-
-
+* [SGI - ESB - SGE - Proyecto SGE y presupuesto - Obtener campos dar de alta proyecto](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sge/sgi-esb-sge-proyecto-sge-y-presupuesto/sgi-esb-sge-proyecto-sge-y-presupuesto-servicios-formly/sgi-esb-sge-proyecto-sge-y-presupuesto-obtener-campos-dar-de-alta-proyecto)
+  + Se ha de llamar en primer lugar para poder pintar por pantalla el formulario de introducción de datos de alta.
+* [SGI - ESB - SGE - Proyecto SGE y presupuesto - Dar de alta proyecto](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sge/sgi-esb-sge-proyecto-sge-y-presupuesto/sgi-esb-sge-proyecto-sge-y-presupuesto-servicios-formly/sgi-esb-sge-proyecto-sge-y-presupuesto-dar-de-alta-proyecto)
+  + Se llamará una vez el usuario completa los datos del formulario de alta.
 
 ### Interfaces de usuario relacionados
 
-
-
-
-
-
+![](plugins/servlet/confluence/placeholder/unknown-macro)
 
 ### Informes relacionados
 
-
-
-
-
-
+![](plugins/servlet/confluence/placeholder/unknown-macro)
 
 ### Casos de uso relacionados
 
-
-
-
-
-
-
-
-
+![](plugins/servlet/confluence/placeholder/unknown-macro)

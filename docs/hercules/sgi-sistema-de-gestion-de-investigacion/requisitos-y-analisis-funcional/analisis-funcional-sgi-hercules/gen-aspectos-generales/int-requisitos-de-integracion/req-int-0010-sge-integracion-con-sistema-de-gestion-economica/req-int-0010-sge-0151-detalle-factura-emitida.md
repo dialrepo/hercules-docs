@@ -1,23 +1,20 @@
-# Hércules : REQ\-INT\-0010\-SGE\-0151 \- Detalle factura emitida
+# REQ-INT-0010-SGE-0151 - Detalle factura emitida
 
-
-
-
-
-
+|  |  |
+| --- | --- |
+| Cod. REQ | **REQ-INT-0010-SGE-0151 - Detalle factura emitida** |
+| Ver. Objetivo |  |
+| Ver. REQ | 1.0.0 |
+| Estado | IN PROGRESS |
+| Fec. Aprobación |  |
+| Épica, historia |  |
+| Frecuencia |  |
+| Características |  |
+| M. Consumidor |  |
 
 ### Definición y objetivos
 
-Detalle de todos los campos de una factura emitida proporcionados por el SGE. Los campos devueltos serán una listado de campos formado por nombre \- valor, donde nombre será el nombre del campo a mostrar y el valor, el propio valor del campo.
-
-  
-
-
-
-
-
-
-
+Detalle de todos los campos de una factura emitida proporcionados por el SGE. Los campos devueltos serán una listado de campos formado por nombre - valor, donde nombre será el nombre del campo a mostrar y el valor, el propio valor del campo.
 
 ### Descripción técnica integración
 
@@ -36,42 +33,18 @@ Parámetros de salida:
 
 ### Diseño técnico
 
-En el siguiente enlace se muestra el diseño del modelo lógico y el diseño de la API del Sistema de Gestión Económica y, en concreto, del Calendario de facturación: [SGI \- ESB \- SGE \- Calendario facturación](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sge/sgi-esb-sge-calendario-facturacion/index.md "/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sge/sgi-esb-sge-calendario-facturacion/index.md").
+En el siguiente enlace se muestra el diseño del modelo lógico y el diseño de la API del Sistema de Gestión Económica y, en concreto, del Calendario de facturación: [SGI - ESB - SGE - Calendario facturación](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sge/sgi-esb-sge-calendario-facturacion).
 
-El servicio concreto del API que cubre este servicio es [SGI \- ESB \- SGE \- Calendario facturación \- Consultar detalle factura emitida](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sge/sgi-esb-sge-calendario-facturacion/sgi-esb-sge-calendario-facturacion-facturas-emitidas-consultar-detalle.md "/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sge/sgi-esb-sge-calendario-facturacion/sgi-esb-sge-calendario-facturacion-facturas-emitidas-consultar-detalle.md").
-
-  
-
-
-
-
-
-
-
+El servicio concreto del API que cubre este servicio es [SGI - ESB - SGE - Calendario facturación - Consultar detalle factura emitida](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sge/sgi-esb-sge-calendario-facturacion/sgi-esb-sge-calendario-facturacion-facturas-emitidas-consultar-detalle).
 
 ### Interfaces de usuario relacionados
 
-
-
-
-
-
+![](plugins/servlet/confluence/placeholder/unknown-macro)
 
 ### Informes relacionados
 
-
-
-
-
-
+![](plugins/servlet/confluence/placeholder/unknown-macro)
 
 ### Casos de uso relacionados
 
-
-
-
-
-
-
-
-
+![](plugins/servlet/confluence/placeholder/unknown-macro)

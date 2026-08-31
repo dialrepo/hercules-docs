@@ -1,12 +1,10 @@
-# Hércules : Elsevier. Guía de incorporación de métricas. Snowball
-
-
+# Elsevier. Guía de incorporación de métricas. Snowball
 
 ### Métricas de investigación y uso responsable.
 
 Se incluye un resumen del documento
 
- [/attachments/598147285/las_metricas_de_investigacion_25032019.pdf?version=1&modificationDate=1644339796000&api=v2 "/confluence/download/attachments/598147285/las_metricas_de_investigacion_25032019.pdf?version=1&modificationDate=1644339796000&api=v2"](/attachments/598147285/las_metricas_de_investigacion_25032019.pdf?version=1&modificationDate=1644339796000&api=v2 "/confluence/download/attachments/598147285/las_metricas_de_investigacion_25032019.pdf?version=1&modificationDate=1644339796000&api=v2")
+[![](rest/documentConversion/latest/conversion/thumbnail/598147696/1)](/confluence/download/attachments/598147285/las_metricas_de_investigacion_25032019.pdf?version=1&modificationDate=1644339796000&api=v2)
 
 #### Los indicadores bibliométricos:
 
@@ -27,16 +25,13 @@ Un **uso responsable de las métricas requiere**:
 
 **Uso Responsable**: Las diferencias entre las disciplinas deben ser consideradas
 
-  
-
-
 Métricas de revistas ponderadas por campo disciplinario: SJR
 
 SJR Scimago Journal Rank es una métrica de prestigio, cuya metodología es similar a la de Google PageRank. El peso de una cita depende del campo, la calidad y la reputación de la revista de la que proviene la cita, de modo que "todas las citas no son iguales"
 
 Métricas de revistas ponderadas por campo disciplinario: SNIP
 
-SNIP Source\-Normalized Impact for Paper: es la relación entre el "impacto bruto por publicación“ recibido por una revista concreta (basado en las citas por publicación) y las citas previstas para todas las publicaciones del campo de la revista
+SNIP Source-Normalized Impact for Paper: es la relación entre el "impacto bruto por publicación“ recibido por una revista concreta (basado en las citas por publicación) y las citas previstas para todas las publicaciones del campo de la revista
 
 **Uso Responsable:** Tanto SJR como SNIP pueden usarse para comparar revistas en diferentes campos. El valor promedio de SJR o SNIP para todas las revistas en Scopus es 1
 
@@ -65,15 +60,8 @@ Las instituciones con alto índice FWCI reciben una puntuación de citas más al
 
 #### Métricas de impacto de citas
 
-* Miden la capacidad de una institución de crear redes de colaboración científica basándose en el nivel de co\-autoría de las publicaciones
+* Miden la capacidad de una institución de crear redes de colaboración científica basándose en el nivel de co-autoría de las publicaciones
 * Las colaboraciones se pueden identificar y evaluar a varios niveles (países, CCAA, instituciones, autores).
 * Se pueden clasificar en internacionales (según el número de publicaciones que incluyen más de un país), nacionales, institucionales y corporativas (según el número de publicaciones que incluyen una organización corporativa en el campo afiliación)
 
 ![](/attachments/598147311/598147687.png)
-
-  
-
-
-
-
-

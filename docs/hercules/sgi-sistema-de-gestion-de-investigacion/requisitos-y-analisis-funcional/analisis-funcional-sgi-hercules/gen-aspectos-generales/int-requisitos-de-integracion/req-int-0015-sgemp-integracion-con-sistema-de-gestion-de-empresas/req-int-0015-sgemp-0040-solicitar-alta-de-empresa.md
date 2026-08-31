@@ -1,27 +1,24 @@
-# Hércules : REQ\-INT\-0015\-SGEMP\-0040 \- Solicitar alta de empresa
+# REQ-INT-0015-SGEMP-0040 - Solicitar alta de empresa
 
-
-
-
-
-
+|  |  |
+| --- | --- |
+| Cod. REQ | **REQ-INT-0015-SGEMP-0040 - Solicitar alta de empresa** |
+| Ver. Objetivo |  |
+| Ver. REQ | 1.0.0 |
+| Estado | IN PROGRESS |
+| Fec. Aprobación |  |
+| Épica, historia |  |
+| Frecuencia |  |
+| Características |  |
+| M. Consumidor | CSP |
 
 ### Definición y objetivos
 
 El ESB proporcionará el interface de integración para que desde el SGI se solicite a los sistemas de gestión de empresas universitarios el alta de aquellas empresas que se quieran vincular con la Universidad a través de una vía por la que actualmente no lo estén o que directamente no estaban previamente vinculadas con la Universidad. A través del formulario correspondiente el SGI recogerá los campos necesarios y/o de interés para la creación de la empresa en el sistema o los sistemas de gestión de empresas de la universidad en la que se esté haciendo la implantación.
 
-  
-
-
-
-
-
-
-
-
 ### Descripción integración
 
-El SGI no dispondrá de un formulario propio para recoger los datos de creación de una empresa sino uno específico por implantación/universidad tal y como se describe en [IU\-GEN\-0081 \- Solicitar alta de empresa](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/sha-buscadores-y-listados-comunes/iu-gen-0081-solicitar-alta-de-empresa.md "/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/sha-buscadores-y-listados-comunes/iu-gen-0081-solicitar-alta-de-empresa.md").
+El SGI no dispondrá de un formulario propio para recoger los datos de creación de una empresa sino uno específico por implantación/universidad tal y como se describe en [IU-GEN-0081 - Solicitar alta de empresa](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/sha-buscadores-y-listados-comunes/iu-gen-0081-solicitar-alta-de-empresa).
 
 Los parámetros de entrada y salida a la hora de integrarse con los sistemas universitarios para el alta de empresas serán definidos en cada implantación/universidad en particular, puesto que dependen de las necesidades y restricciones tanto de sus usuarios finales como de sus sistemas de gestión de la información de empresas.
 
@@ -31,55 +28,31 @@ Como salida se tratará de tender a tener una respuesta más estandarizada o com
 
 ### Diseño técnico
 
-En el siguiente enlace se muestra el diseño del modelo lógico y el diseño de la API del Sistema de Gestión de Empresas y, en concreto, de la relativa a servicios Formly: [SGI \- ESB \- SGEMP \- Servicios Formly](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sgemp/sgi-esb-sgemp-servicios-formly/index.md "/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sgemp/sgi-esb-sgemp-servicios-formly/index.md").
+En el siguiente enlace se muestra el diseño del modelo lógico y el diseño de la API del Sistema de Gestión de Empresas y, en concreto, de la relativa a servicios Formly: [SGI - ESB - SGEMP - Servicios Formly](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sgemp/sgi-esb-sgemp-servicios-formly).
 
 Los servicios concretos del API que cubren este requisito son:
 
-* [SGI \- ESB \- SGEMP \- Empresas \- Consultar campos alta](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sgemp/sgi-esb-sgemp-servicios-formly/sgi-esb-sgemp-empresas-consultar-campos-alta.md "/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sgemp/sgi-esb-sgemp-servicios-formly/sgi-esb-sgemp-empresas-consultar-campos-alta.md")  
-
-	+ Se ha de llamar en primer lugar para poder pintar por pantalla el formulario de introducción de datos de alta.
-* [SGI \- ESB \- SGEMP \- Empresas \- Dar de alta](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sgemp/sgi-esb-sgemp-servicios-formly/sgi-esb-sgemp-empresas-dar-de-alta.md "/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sgemp/sgi-esb-sgemp-servicios-formly/sgi-esb-sgemp-empresas-dar-de-alta.md")  
-
-	+ Se llamará una vez el usuario completa los datos del formulario de alta.
+* [SGI - ESB - SGEMP - Empresas - Consultar campos alta](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sgemp/sgi-esb-sgemp-servicios-formly/sgi-esb-sgemp-empresas-consultar-campos-alta)  
+  + Se ha de llamar en primer lugar para poder pintar por pantalla el formulario de introducción de datos de alta.
+* [SGI - ESB - SGEMP - Empresas - Dar de alta](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sgemp/sgi-esb-sgemp-servicios-formly/sgi-esb-sgemp-empresas-dar-de-alta)  
+  + Se llamará una vez el usuario completa los datos del formulario de alta.
 
   
+
 Para cada implantación en particular se implementará un API específico o a medida, pero tendiendo a que sea igual o compatible en la medida de lo posible al propio del SGI, para así poder agilizar las integraciones.
 
-El dinamismo o adaptación de los formularios dinámicos de solicitud de alta para las empresas se logrará mediante una definición del interface de comunicación entre el ESB del SGI y las APIs universitarias donde se intercambien mensajes en formato JSON, manteniendo así la firma de los servicios constante aunque el contenido del mensaje pudiese variar.  
+El dinamismo o adaptación de los formularios dinámicos de solicitud de alta para las empresas se logrará mediante una definición del interface de comunicación entre el ESB del SGI y las APIs universitarias donde se intercambien mensajes en formato JSON, manteniendo así la firma de los servicios constante aunque el contenido del mensaje pudiese variar.
 
-
-En el siguiente enlace se muestra el diseño del modelo lógico y el diseño de la API del Sistema de Gestión de Empresas para la implantación específica en la Universidad de Murcia: [IU\-GEN\-0081\-UM \- Formulario Solicitar alta de empresa](/hercules/sgi-sistema-de-gestion-de-investigacion/guia-de-implantacion-checklist/um-universidad-de-murcia/um-formularios-especificos/um-formularios-de-gestion-de-empresas-sgemp/iu-gen-0081-um-formulario-solicitar-alta-de-empresa.md "/hercules/sgi-sistema-de-gestion-de-investigacion/guia-de-implantacion-checklist/um-universidad-de-murcia/um-formularios-especificos/um-formularios-de-gestion-de-empresas-sgemp/iu-gen-0081-um-formulario-solicitar-alta-de-empresa.md").  
-
-
-
-
-
-
-
+En el siguiente enlace se muestra el diseño del modelo lógico y el diseño de la API del Sistema de Gestión de Empresas para la implantación específica en la Universidad de Murcia: [IU-GEN-0081-UM - Formulario Solicitar alta de empresa](/hercules/sgi-sistema-de-gestion-de-investigacion/guia-de-implantacion-checklist/um-universidad-de-murcia/um-formularios-especificos/um-formularios-de-gestion-de-empresas-sgemp/iu-gen-0081-um-formulario-solicitar-alta-de-empresa).
 
 ### Interfaces de usuario relacionados
 
-
-
-
-
-
+![](plugins/servlet/confluence/placeholder/unknown-macro)
 
 ### Informes relacionados
 
-
-
-
-
-
+![](plugins/servlet/confluence/placeholder/unknown-macro)
 
 ### Casos de uso relacionados
 
-
-
-
-
-
-
-
-
+![](plugins/servlet/confluence/placeholder/unknown-macro)

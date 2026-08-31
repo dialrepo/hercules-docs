@@ -1,6 +1,15 @@
-# Hércules : CU\-ETI\-0090\-001 \- Buscar Seguimientos memoria
+# CU-ETI-0090-001 - Buscar Seguimientos memoria
 
-
+|  |  |
+| --- | --- |
+| Cod. CU | ********CU-ETI-0090-001 - Buscar Seguimientos memoria******** |
+| Ver. objetivo |  |
+| Ver. CU | 1.0.0 |
+| Estado | LIBERADO\_ |
+| Fec. Aprobación |  |
+| Épica, historia |  |
+| Actores | ACT-ETI-001-Gestor |
+| Frecuencia | Media |
 
 ### Descripción
 
@@ -28,7 +37,7 @@ El resultado serán todas las memorias que cumplan con los criterios seleccionad
 
 #### Actor principal
 
-ACT\-ETI\-001\-Gestor
+ACT-ETI-001-Gestor
 
 ### Precondiciones
 
@@ -45,7 +54,3 @@ Se listan las evaluaciones de tipo Seguimiento cuyas memorias este en un en esta
 1. Se presenta la pantalla Evaluaciones con el listado de las memorias en estado "En evaluación seguimiento anual" o "En evaluación seguimiento final" o "En secretaría seguimiento final aclaraciones" dadas de alta en el sistema.
 2. El gestor introduce la información de los filtros y realiza la acción de buscar para poder filtrar un subconjunto de memorias para evaluar.
 3. Se presenta la pantalla Evaluaciones con el subconjunto de memorias que cumplen las condiciones del filtro.
-
-
-
-

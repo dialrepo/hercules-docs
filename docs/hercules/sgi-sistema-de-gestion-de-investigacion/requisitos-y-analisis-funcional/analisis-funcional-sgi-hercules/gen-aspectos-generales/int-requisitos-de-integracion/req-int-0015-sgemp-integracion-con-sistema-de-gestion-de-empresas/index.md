@@ -1,6 +1,16 @@
-# Hércules : REQ\-INT\-0015\-SGEMP \- Integración con Sistema de gestión de empresas
+# REQ-INT-0015-SGEMP - Integración con Sistema de gestión de empresas
 
-
+|  |  |
+| --- | --- |
+| Cod. REQ | **REQ-INT-0015-SGEMP - Integración con Sistema de gestión de empresas** |
+| Ver. Objetivo |  |
+| Ver. REQ |  |
+| Estado | IN PROGRESS |
+| Fec. Aprobación |  |
+| Épica, historia |  |
+| Frecuencia |  |
+| Características |  |
+| M. Consumidor |  |
 
 ### Definición y objetivos
 
@@ -14,20 +24,14 @@ La integración con los sistemas de gestión de empresas tiene por objetivo apor
 
 ### Requisitos identificados
 
-
-
 | Título | Épica, historia | Características | Cod. REQ | Estado | Fec. Aprobación | Frecuencia | M. Consumidor | Ver. Objetivo | Ver. REQ |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| [REQ\-INT\-0015\-SGEMP\-0050 \- Solicitar modificación de empresa](https://confluence.um.es/confluence/pages/viewpage.action?pageId=597853088 "/confluence/pages/viewpage.action?pageId=597853088") |  |  | **REQ\-INT\-0015\-SGEMP\-0050 \- Solicitar modificación de empresa** | IN PROGRESS |  |  | CSP |  | 1\.0\.0 |
-| [REQ\-INT\-0015\-SGEMP\-0051 \- Empresas modificadas](/confluence/display/HERCULES/REQ-INT-0015-SGEMP-0051+-+Empresas+modificadas "/confluence/display/HERCULES/REQ-INT-0015-SGEMP-0051+-+Empresas+modificadas") |  |  | **REQ\-INT\-0015\-SGEMP\-0051 \- Empresas modificadas** | IN PROGRESS |  |  |  |  | 1\.0\.0 |
-| [REQ\-INT\-0015\-SGEMP\-0040 \- Solicitar alta de empresa](/confluence/display/HERCULES/REQ-INT-0015-SGEMP-0040+-+Solicitar+alta+de+empresa "/confluence/display/HERCULES/REQ-INT-0015-SGEMP-0040+-+Solicitar+alta+de+empresa") |  |  | **REQ\-INT\-0015\-SGEMP\-0040 \- Solicitar alta de empresa** | IN PROGRESS |  |  | CSP |  | 1\.0\.0 |
-| [REQ\-INT\-0015\-SGEMP\-0011 \- Listar tipos de identificadores fiscales](/confluence/display/HERCULES/REQ-INT-0015-SGEMP-0011+-+Listar+tipos+de+identificadores+fiscales "/confluence/display/HERCULES/REQ-INT-0015-SGEMP-0011+-+Listar+tipos+de+identificadores+fiscales") |  |  | **REQ\-INT\-0015\-SGEMP\-0011 \- Listar tipos de identificadores fiscales** | IN PROGRESS |  |  | ESB (Empresa) |  | 1\.0\.0 |
-| [REQ\-INT\-0015\-SGEMP\-0032 \- Consultar datos de contacto de empresa](/confluence/display/HERCULES/REQ-INT-0015-SGEMP-0032+-+Consultar+datos+de+contacto+de+empresa "/confluence/display/HERCULES/REQ-INT-0015-SGEMP-0032+-+Consultar+datos+de+contacto+de+empresa") |  |  | **REQ\-INT\-0015\-SGEMP\-0032 \- Consultar datos de contacto de empresa** | IN PROGRESS |  |  | ESB (Empresa), CSP |  | 1\.0\.0 |
-| [REQ\-INT\-0015\-SGEMP\-0030 \- Consultar datos generales de empresa](/confluence/display/HERCULES/REQ-INT-0015-SGEMP-0030+-+Consultar+datos+generales+de+empresa "/confluence/display/HERCULES/REQ-INT-0015-SGEMP-0030+-+Consultar+datos+generales+de+empresa") |  |  | **REQ\-INT\-0015\-SGEMP\-0030 \- Consultar datos generales de empresa** | IN PROGRESS |  |  | ESB (Empresa), CSP, PII, RCL |  | 1\.0\.0 |
-| [REQ\-INT\-0015\-SGEMP\-0020 \- Buscar empresa](/confluence/display/HERCULES/REQ-INT-0015-SGEMP-0020+-+Buscar+empresa "/confluence/display/HERCULES/REQ-INT-0015-SGEMP-0020+-+Buscar+empresa") |  |  | **REQ\- INT\-0015\-SGEMP\-0020 \- Buscar empresa** | IN PROGRESS |  |  | ESB (Empresa), CSP, PII, RCL |  | 1\.0\.0 |
-| [REQ\-INT\-0020\-SGP\-0018 \- Listar niveles académicos](https://confluence.um.es/confluence/pages/viewpage.action?pageId=597853156 "/confluence/pages/viewpage.action?pageId=597853156") |  |  | **REQ\-INT\-0020\-SGP\-0018 \- Listar niveles académicos** | IN PROGRESS |  |  |  |  | 1\.0\.0 |
-| [REQ\-INT\-0015\-SGEMP\-0033 \- Consultar datos de tipo de empresa](/confluence/display/HERCULES/REQ-INT-0015-SGEMP-0033+-+Consultar+datos+de+tipo+de+empresa "/confluence/display/HERCULES/REQ-INT-0015-SGEMP-0033+-+Consultar+datos+de+tipo+de+empresa") |  |  | **REQ\-INT\-0015\-SGEMP\-0033 \- Consultar datos de tipo de empresa** | IN PROGRESS |  |  | CSP, ESB (Empresa) |  | 1\.0\.0 |
-
-
-
-
+| [REQ-INT-0015-SGEMP-0050 - Solicitar modificación de empresa](/confluence/spaces/HERCULES/pages/597853088/REQ-INT-0015-SGEMP-0050+-+Solicitar+modificaci%C3%B3n+de+empresa) |  |  | **REQ-INT-0015-SGEMP-0050 - Solicitar modificación de empresa** | IN PROGRESS |  |  | CSP |  | 1.0.0 |
+| [REQ-INT-0015-SGEMP-0051 - Empresas modificadas](/confluence/spaces/HERCULES/pages/597852704/REQ-INT-0015-SGEMP-0051+-+Empresas+modificadas) |  |  | **REQ-INT-0015-SGEMP-0051 - Empresas modificadas** | IN PROGRESS |  |  |  |  | 1.0.0 |
+| [REQ-INT-0015-SGEMP-0040 - Solicitar alta de empresa](/confluence/spaces/HERCULES/pages/597853240/REQ-INT-0015-SGEMP-0040+-+Solicitar+alta+de+empresa) |  |  | **REQ-INT-0015-SGEMP-0040 - Solicitar alta de empresa** | IN PROGRESS |  |  | CSP |  | 1.0.0 |
+| [REQ-INT-0015-SGEMP-0011 - Listar tipos de identificadores fiscales](/confluence/spaces/HERCULES/pages/597852841/REQ-INT-0015-SGEMP-0011+-+Listar+tipos+de+identificadores+fiscales) |  |  | **REQ-INT-0015-SGEMP-0011 - Listar tipos de identificadores fiscales** | IN PROGRESS |  |  | ESB (Empresa) |  | 1.0.0 |
+| [REQ-INT-0015-SGEMP-0032 - Consultar datos de contacto de empresa](/confluence/spaces/HERCULES/pages/597853173/REQ-INT-0015-SGEMP-0032+-+Consultar+datos+de+contacto+de+empresa) |  |  | **REQ-INT-0015-SGEMP-0032 - Consultar datos de contacto de empresa** | IN PROGRESS |  |  | ESB (Empresa), CSP |  | 1.0.0 |
+| [REQ-INT-0015-SGEMP-0030 - Consultar datos generales de empresa](/confluence/spaces/HERCULES/pages/597852534/REQ-INT-0015-SGEMP-0030+-+Consultar+datos+generales+de+empresa) |  |  | **REQ-INT-0015-SGEMP-0030 - Consultar datos generales de empresa** | IN PROGRESS |  |  | ESB (Empresa), CSP, PII, RCL |  | 1.0.0 |
+| [REQ-INT-0015-SGEMP-0020 - Buscar empresa](/confluence/spaces/HERCULES/pages/597852912/REQ-INT-0015-SGEMP-0020+-+Buscar+empresa) |  |  | **REQ- INT-0015-SGEMP-0020 - Buscar empresa** | IN PROGRESS |  |  | ESB (Empresa), CSP, PII, RCL |  | 1.0.0 |
+| [REQ-INT-0020-SGP-0018 - Listar niveles académicos](/confluence/spaces/HERCULES/pages/597853156/REQ-INT-0020-SGP-0018+-+Listar+niveles+acad%C3%A9micos) |  |  | **REQ-INT-0020-SGP-0018 - Listar niveles académicos** | IN PROGRESS |  |  |  |  | 1.0.0 |
+| [REQ-INT-0015-SGEMP-0033 - Consultar datos de tipo de empresa](/confluence/spaces/HERCULES/pages/597853172/REQ-INT-0015-SGEMP-0033+-+Consultar+datos+de+tipo+de+empresa) |  |  | **REQ-INT-0015-SGEMP-0033 - Consultar datos de tipo de empresa** | IN PROGRESS |  |  | CSP, ESB (Empresa) |  | 1.0.0 |

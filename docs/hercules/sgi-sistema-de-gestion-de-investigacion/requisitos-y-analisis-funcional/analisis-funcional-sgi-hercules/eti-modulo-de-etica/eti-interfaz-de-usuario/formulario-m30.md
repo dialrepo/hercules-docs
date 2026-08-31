@@ -1,116 +1,147 @@
-# Hércules : Formulario M30
-
-
+# Formulario M30
 
 Para pasar de bloque hay que introducir todos los datos obligatorios del anterior y guardar.
 
 Todos los apartados son obligatorios rellenarlos a no ser que este desactivado. Hay apartados que se activan si se responde que Sí a apartados anteriores.
 
+* [I. VALOR SOCIAL Y JUSTIFICACIÓN](#FormularioM30-I.VALORSOCIALYJUSTIFICACIÓN)
+  + [1.1 Valor social del proyecto](#FormularioM30-1.1Valorsocialdelproyecto)
+  + [1.2 Justificación del uso de agentes biológicos, OMG, Sustancias Químicas Peligrosas, Sustancias Radiactivas y/o Nanoparticulas](#FormularioM30-1.2Justificacióndelusodeagentesbiológicos,OMG,SustanciasQuímicasPeligrosas,SustanciasRadiactivasy/oNanoparticulas)
+* [II. CUALIFICACIÓN DEL EQUIPO INVESTIGADOR CAMBIOS TEXTO](#FormularioM30-II.CUALIFICACIÓNDELEQUIPOINVESTIGADORCAMBIOSTEXTO)
+  + [2.1 Personal que llevará a cabo las tareas con agentes biológicos, OMG, Sustancias Químicas Peligrosas, Sustancias Radiactivas y/o Nanoparticulas.](#FormularioM30-2.1Personalquellevaráacabolastareasconagentesbiológicos,OMG,SustanciasQuímicasPeligrosas,SustanciasRadiactivasy/oNanoparticulas.)
+* [III. VALIDEZ CIENTÍFICA Y METODOLÓGICA](#FormularioM30-III.VALIDEZCIENTÍFICAYMETODOLÓGICA)
+  + [3.1 Objetivos científicos del proyecto](#FormularioM30-3.1Objetivoscientíficosdelproyecto)
+* + [3.2 Diseño metodológico del proyecto](#FormularioM30-3.2Diseñometodológicodelproyecto)
+  + [3.3 Referencias de publicaciones científicas](#FormularioM30-3.3Referenciasdepublicacionescientíficas)
+  + [3.4 Tipo de exposición](#FormularioM30-3.4Tipodeexposición)
+    - [3.4.1 Exposición no intencionada o incidental](#FormularioM30-3.4.1Exposiciónnointencionadaoincidental)
+    - [3.4.2 Exposición deliberada](#FormularioM30-3.4.2Exposicióndeliberada)
+    - [3.4.3 Uso confinado de OMG](#FormularioM30-3.4.3UsoconfinadodeOMG)
+    - [3.4.4 SUSTANCIAS QUÍMICAS PELIGROSAS](#FormularioM30-3.4.4SUSTANCIASQUÍMICASPELIGROSAS)
+    - [3.4.5 SUSTANCIAS RADIACTIVAS](#FormularioM30-3.4.5SUSTANCIASRADIACTIVAS)
+  + [3.5 Datos referentes a los agentes biológicos, Sustancias Químicas Peligrosas , Sustancias Radiactivas y/o Nanopartículas](#FormularioM30-3.5Datosreferentesalosagentesbiológicos,SustanciasQuímicasPeligrosas,SustanciasRadiactivasy/oNanopartículas)
+    - [3.5.1 Microorganismos /parásitos](#FormularioM30-3.5.1Microorganismos/parásitos)
+    - [3.5.2 Cultivos celulares](#FormularioM30-3.5.2Cultivoscelulares)
+    - [3.5.3 Material biológico](#FormularioM30-3.5.3Materialbiológico)
+    - [3.5.4 Organismo modificado genéticamente](#FormularioM30-3.5.4Organismomodificadogenéticamente)
+    - [3.5.5 SUSTANCIAS QUÍMICAS PELIGROSAS](#FormularioM30-3.5.5SUSTANCIASQUÍMICASPELIGROSAS)
+    - [3.5.6 SUSTANCIAS RADIACTIVAS, EQUIPO RADIOLÓGICO, INSTALACIÓN RADIACTIVA](#FormularioM30-3.5.6SUSTANCIASRADIACTIVAS,EQUIPORADIOLÓGICO,INSTALACIÓNRADIACTIVA)
+  + [3.6 Frecuencia y periodicidad de uso](#FormularioM30-3.6Frecuenciayperiodicidaddeuso)
+  + [3.7 Trayectoria completa de los agentes biológicos, OMG, Sustancias Químicas Peligrosas , Sustancias Radiactivas y/o Nanopartículas](#FormularioM30-3.7Trayectoriacompletadelosagentesbiológicos,OMG,SustanciasQuímicasPeligrosas,SustanciasRadiactivasy/oNanopartículas)
+* [IV Aspectos éticos específicos](#FormularioM30-IVAspectoséticosespecíficos)
+  + [4.1 Evaluación del riesgo](#FormularioM30-4.1Evaluacióndelriesgo)
+    - [4.1.1 NIVEL DE RIESGO](#FormularioM30-4.1.1NIVELDERIESGO)
+    - [4.1.2 Características del riesgo de los agentes biológicos y/o material biológico, Sustancias Químicas Peligrosas , Sustancias Radiactivas y/o Nanopartículas](#FormularioM30-4.1.2Característicasdelriesgodelosagentesbiológicosy/omaterialbiológico,SustanciasQuímicasPeligrosas,SustanciasRadiactivasy/oNanopartículas)
+    - [4.1.3 Características del riesgo de los OMG](#FormularioM30-4.1.3CaracterísticasdelriesgodelosOMG)
+    - [4.1.4 Efectos nocivos que puedan derivarse del uso de agentes, material biológico, Sustancias Químicas Peligrosas , Sustancias Radiactivas y/o Nanopartículas](#FormularioM30-4.1.4Efectosnocivosquepuedanderivarsedelusodeagentes,materialbiológico,SustanciasQuímicasPeligrosas,SustanciasRadiactivasy/oNanopartículas)
+    - [4.1.5 Tratamiento profiláctico disponible](#FormularioM30-4.1.5Tratamientoprofilácticodisponible)
+  + [4.2 Medidas técnicas de seguridad](#FormularioM30-4.2Medidastécnicasdeseguridad)
+    - [4.2.1 Lugar en el que se realizará el manejo de agentes biológicos, OMG, Sustancias Químicas Peligrosas , Sustancias Radiactivas y/o Nanopartículas](#FormularioM30-4.2.1Lugarenelqueserealizaráelmanejodeagentesbiológicos,OMG,SustanciasQuímicasPeligrosas,SustanciasRadiactivasy/oNanopartículas)
+      * [4.2.1.1 Laboratorio de la Universidad](#FormularioM30-4.2.1.1LaboratoriodelaUniversidad)
+        + [4.2.1.1.1 Medidas de contención](#FormularioM30-4.2.1.1.1Medidasdecontención)
+        + [4.2.1.1.2 Equipos de seguridad](#FormularioM30-4.2.1.1.2Equiposdeseguridad)
+        + [4.2.1.1.3 Buenas prácticas de laboratorio](#FormularioM30-4.2.1.1.3Buenasprácticasdelaboratorio)
+        + [4.2.1.1.4 Instalaciones](#FormularioM30-4.2.1.1.4Instalaciones)
+      * [4.2.1.2 Otro centro o lugar ajeno a la Universidad](#FormularioM30-4.2.1.2OtrocentroolugarajenoalaUniversidad)
+    - [4.2.2 Sustitución](#FormularioM30-4.2.2Sustitución)
+    - [4.2.3 Reducción de riesgos](#FormularioM30-4.2.3Reducciónderiesgos)
+      * [4.2.3.1 Control de la exposición](#FormularioM30-4.2.3.1Controldelaexposición)
+      * [4.2.3.2 Medidas de reducción de la exposición](#FormularioM30-4.2.3.2Medidasdereduccióndelaexposición)
+      * [4.2.3.3 Medidas de protección](#FormularioM30-4.2.3.3Medidasdeprotección)
+      * [4.2.3.4 Métodos de descontaminación/desinfección](#FormularioM30-4.2.3.4Métodosdedescontaminación/desinfección)
+      * [4.2.3.5 Gestión de residuos](#FormularioM30-4.2.3.5Gestiónderesiduos)
+  + [4.3 Vigilancia y protección de la salud](#FormularioM30-4.3Vigilanciayproteccióndelasalud)
+    - [4.3.1 Vacunación](#FormularioM30-4.3.1Vacunación)
+    - [4.3.2 Medidas especiales de protección](#FormularioM30-4.3.2Medidasespecialesdeprotección)
+* [V. Cumplimiento de documentación](#FormularioM30-V.Cumplimientodedocumentación)
+  + [5.1 Acreditaciones](#FormularioM30-5.1Acreditaciones)
+  + [5.2 COMUNICACIÓN DE USO DE AGENTES BIOLÓGICOS, SUSTANCIAS QUÍMICAS PELIGROSAS, SUSTANCIAS RADIACTIVAS Y/O NANOPARTÍCULAS Y AUTORIZACIÓN PARA LLEVAR A CABO UTILIZACIÓN CONFINADA DE OMG](#FormularioM30-5.2COMUNICACIÓNDEUSODEAGENTESBIOLÓGICOS,SUSTANCIASQUÍMICASPELIGROSAS,SUSTANCIASRADIACTIVASY/ONANOPARTÍCULASYAUTORIZACIÓNPARALLEVARACABOUTILIZACIÓNCONFINADADEOMG)
+    - [5.2.1 COMUNICACIÓN DE USO DE AGENTES BIOLÓGICOS, SUSTANCIAS QUÍMICAS PELIGROSAS, SUSTANCIAS RADIACTIVAS Y/O NANOPARTÍCULAS](#FormularioM30-5.2.1COMUNICACIÓNDEUSODEAGENTESBIOLÓGICOS,SUSTANCIASQUÍMICASPELIGROSAS,SUSTANCIASRADIACTIVASY/ONANOPARTÍCULAS)
+    - [5.2.2 AUTORIZACIÓN PARA LLEVAR A CABO UTILIZACIÓN CONFINADA DE OMG](#FormularioM30-5.2.2AUTORIZACIÓNPARALLEVARACABOUTILIZACIÓNCONFINADADEOMG)
+  + [5.3 Seguro de accidentes y responsabilidad civil](#FormularioM30-5.3Segurodeaccidentesyresponsabilidadcivil)
+  + [5.4 Protocolo de actuación en caso de accidente biológico](#FormularioM30-5.4Protocolodeactuaciónencasodeaccidentebiológico)
+  + [5.5 Documentación adicional](#FormularioM30-5.5Documentaciónadicional)
+  + [5.6 Aclaraciones al comité](#FormularioM30-5.6Aclaracionesalcomité)
+
 ## I. VALOR SOCIAL Y JUSTIFICACIÓN
 
-### 1\.1 Valor social del proyecto
+### 1.1 Valor social del proyecto
 
 Viene de datos generales, es de solo lectura
 
 ![](/attachments/597853153/597858470.png)
 
-### 1\.2 Justificación del uso de agentes biológicos, OMG, Sustancias Químicas Peligrosas, Sustancias Radiactivas y/o Nanoparticulas
+### 1.2 Justificación del uso de agentes biológicos, OMG, Sustancias Químicas Peligrosas, Sustancias Radiactivas y/o Nanoparticulas
 
 ![](/attachments/597853153/597858471.png)
 
-  
-
-
 ## II. CUALIFICACIÓN DEL EQUIPO INVESTIGADOR CAMBIOS TEXTO
 
-### 2\.1 Personal que llevará a cabo las tareas con agentes biológicos, OMG, Sustancias Químicas Peligrosas, Sustancias Radiactivas y/o Nanoparticulas.
+### 2.1 Personal que llevará a cabo las tareas con agentes biológicos, OMG, Sustancias Químicas Peligrosas, Sustancias Radiactivas y/o Nanoparticulas.
 
 Se cambia el nombre de la columna "Formación específica o experiencia" por "Formación en riesgo biológico"
 
 ![](/attachments/597853153/597858472.png)![](/attachments/597853153/597858473.png)
 
-  
-
-
-  
-
-
 ## III. VALIDEZ CIENTÍFICA Y METODOLÓGICA
 
-### 3\.1 Objetivos científicos del proyecto
+### 3.1 Objetivos científicos del proyecto
 
 Viene de datos generales, es de solo lectura![](/attachments/597853153/597858474.png)![](/attachments/597853153/597858465.png)
 
 ## 
 
-  
-
-
-### 3\.2 Diseño metodológico del proyecto
+### 3.2 Diseño metodológico del proyecto
 
 Viene de datos generales, es de solo lectura
 
 ![](/attachments/597853153/597858467.png)
 
-### 3\.3 Referencias de publicaciones científicas
+### 3.3 Referencias de publicaciones científicas
 
 ![](/attachments/597853153/597862162.png)
 
-### 3\.4 Tipo de exposición
+### 3.4 Tipo de exposición
 
 ![](/attachments/597853153/597862161.png)
 
-#### 3\.4\.1 Exposición no intencionada o incidental
+#### 3.4.1 Exposición no intencionada o incidental
 
 Al seleccionar Sí se muestra la parte de abajo y es obligatorio seleccionar una opción de los checkbox.
 
-  
-
-
 ![](/attachments/597853153/597862160.png)
 
-#### 3\.4\.2 Exposición deliberada
+#### 3.4.2 Exposición deliberada
 
 Al seleccionar Sí se muestra la parte de abajo y es obligatorio seleccionar una opción de los checkbox.
 
 ![](/attachments/597853153/597858468.png)
 
-  
+#### 3.4.3 Uso confinado de OMG
 
-
-#### 3\.4\.3 Uso confinado de OMG
-
-Al seleccionar Sí se muestra la parte de abajo y es obligatorio seleccionar una opción de los checkbox.  
-
+Al seleccionar Sí se muestra la parte de abajo y es obligatorio seleccionar una opción de los checkbox.
 
 ![](/attachments/597853153/597862159.png)
 
-  
-
-
-#### **3\.4\.4 SUSTANCIAS QUÍMICAS PELIGROSAS**
+#### **3.4.4 SUSTANCIAS QUÍMICAS PELIGROSAS**
 
 ![](/attachments/597853153/597858469.png)
 
-  
 Lo del tipo saldrá si se selecciona que Sí
 
 Si se selecciona Otra saldrá una caja de texto para indicar cual es
 
-#### **3\.4\.5 SUSTANCIAS RADIACTIVAS**
+#### **3.4.5 SUSTANCIAS RADIACTIVAS**
 
 ![](/attachments/597853153/597858391.png)
 
-  
-
-
-### 3\.5 Datos referentes a los agentes biológicos**,**Sustancias Químicas Peligrosas , Sustancias Radiactivas y/o Nanopartículas
+### 3.5 Datos referentes a los agentes biológicos**,**Sustancias Químicas Peligrosas , Sustancias Radiactivas y/o Nanopartículas
 
 **![](/attachments/597853153/597858392.png)**
 
-#### 3\.5\.1 Microorganismos /parásitos
+#### 3.5.1 Microorganismos /parásitos
 
-Solo se mostrará/activará si se marca el valor "Si" en el apartado **3\.4\.2 EXPOSICIÓN DELIBERADA**
+Solo se mostrará/activará si se marca el valor "Si" en el apartado **3.4.2 EXPOSICIÓN DELIBERADA**
 
 No es necesario comprobar que se haya insertado ninguna fila.
 
@@ -130,9 +161,9 @@ Grupo de riesgo: combo con los siguientes valores:
 
 **![](/attachments/597853153/597862156.png)**
 
-#### 3\.5\.2 Cultivos celulares
+#### 3.5.2 Cultivos celulares
 
-Solo se mostrará/activará si se marca el valor "Si" en el apartado **3\.4\.2 EXPOSICIÓN DELIBERADA**
+Solo se mostrará/activará si se marca el valor "Si" en el apartado **3.4.2 EXPOSICIÓN DELIBERADA**
 
 No es necesario comprobar que se haya insertado ninguna fila.
 
@@ -155,12 +186,9 @@ Grupo de riesgo: combo con los siguientes valores:
 
 ![](/attachments/597853153/597862115.png)
 
-  
+#### 3.5.3 Material biológico
 
-
-#### 3\.5\.3 Material biológico
-
-Solo se mostrará/activará si se marca el valor "Si" en el apartado **3\.4\.1 EXPOSICIÓN NO INTENCIONADA O INCIDENTAL**\*\*
+Solo se mostrará/activará si se marca el valor "Si" en el apartado **3.4.1 EXPOSICIÓN NO INTENCIONADA O INCIDENTAL**\*\*
 
 No es necesario comprobar que se haya insertado ninguna fila.
 
@@ -180,9 +208,9 @@ Grupo de riesgo: combo con los siguientes valores:
 
 ![](/attachments/597853153/597862113.png)
 
-#### 3\.5\.4 Organismo modificado genéticamente
+#### 3.5.4 Organismo modificado genéticamente
 
-Solo se mostrará/activará si se marca el valor "Si" en el apartado **3\.4\.3 USO CONFINADO DE OMG**
+Solo se mostrará/activará si se marca el valor "Si" en el apartado **3.4.3 USO CONFINADO DE OMG**
 
 Se pasará a un listado con los campos:
 
@@ -193,105 +221,85 @@ Se pasará a un listado con los campos:
 * Proteína que codifica
 * Grupo de riesgo: combo con los siguientes valores:
 
-
-	+ Grupo 1
-	+ Grupo 2
-	+ Grupo 3
-	+ Grupo 4
+  + Grupo 1
+  + Grupo 2
+  + Grupo 3
+  + Grupo 4
 * Estimación de volumen semanal  de muestra que se maneja
 
 ![](/attachments/597853153/597862111.png)
 
-  
-
-
-#### 3\.5\.5 SUSTANCIAS QUÍMICAS PELIGROSAS
+#### 3.5.5 SUSTANCIAS QUÍMICAS PELIGROSAS
 
 ![](/attachments/597853153/597858393.png)
 
-#### 3\.5\.6 SUSTANCIAS RADIACTIVAS, EQUIPO RADIOLÓGICO, INSTALACIÓN RADIACTIVA
+#### 3.5.6 SUSTANCIAS RADIACTIVAS, EQUIPO RADIOLÓGICO, INSTALACIÓN RADIACTIVA
 
-![](/attachments/597853153/597858394.png)![](/attachments/597853153/597858395.png)  
+![](/attachments/597853153/597858394.png)![](/attachments/597853153/597858395.png)
 
-
-Sustancias radiactivas (tabla con los siguientes campos) : 
+Sustancias radiactivas (tabla con los siguientes campos) :
 
 * Radioisótopo (s)
 * Compuestos marcados
 * Actividad por experimento (μCi o kBq)
 
-Equipos radiológicos (tabla con los siguientes campos) : 
+Equipos radiológicos (tabla con los siguientes campos) :
 
 * Equipo radiológico
 * Ubicación
 
-Instalaciones radiactivas (tabla con los siguientes campos) :   
-
+Instalaciones radiactivas (tabla con los siguientes campos) :
 
 * Instalación radiactiva
 * Ubicación
 
-### 3\.6 Frecuencia y periodicidad de uso
+### 3.6 Frecuencia y periodicidad de uso
 
 ![](/attachments/597853153/597858396.png)
 
-  
-
-
-### 3\.7 Trayectoria completa de los agentes biológicos, OMG, Sustancias Químicas Peligrosas , Sustancias Radiactivas y/o Nanopartículas
+### 3.7 Trayectoria completa de los agentes biológicos, OMG, Sustancias Químicas Peligrosas , Sustancias Radiactivas y/o Nanopartículas
 
 ![](/attachments/597853153/597858397.png)
 
-  
-
-
 ## IV Aspectos éticos específicos
 
-### 4\.1 Evaluación del riesgo
+### 4.1 Evaluación del riesgo
 
-#### 4\.1\.1 NIVEL DE RIESGO
+#### 4.1.1 NIVEL DE RIESGO
 
 ![](/attachments/597853153/597862101.png)
 
-#### 4\.1\.2 Características del riesgo de los agentes biológicos y/o material biológico, Sustancias Químicas Peligrosas , Sustancias Radiactivas y/o Nanopartículas
+#### 4.1.2 Características del riesgo de los agentes biológicos y/o material biológico, Sustancias Químicas Peligrosas , Sustancias Radiactivas y/o Nanopartículas
 
 ![](/attachments/597853153/597858386.png)
 
 Al pulsar el Sí se activa la parte de Grupo diana y Tipo de efecto nocivo.
 
-#### 4\.1\.3 Características del riesgo de los OMG
+#### 4.1.3 Características del riesgo de los OMG
 
-Solo se mostrará/activará si se marcar el valor "Si" en el apartado **3\.4\.3 USO CONFINADO DE OMG**
+Solo se mostrará/activará si se marcar el valor "Si" en el apartado **3.4.3 USO CONFINADO DE OMG**
 
 ![](/attachments/597853153/597862098.png)
 
-#### 4\.1\.4 Efectos nocivos que puedan derivarse del uso de agentes, material biológico, Sustancias Químicas Peligrosas , Sustancias Radiactivas y/o Nanopartículas
-
-  
-
+#### 4.1.4 Efectos nocivos que puedan derivarse del uso de agentes, material biológico, Sustancias Químicas Peligrosas , Sustancias Radiactivas y/o Nanopartículas
 
 ![](/attachments/597853153/597858387.png)
 
-#### 4\.1\.5 Tratamiento profiláctico disponible
+#### 4.1.5 Tratamiento profiláctico disponible
 
-Si se selecciona que Sí se activa la caja de Especificar.  
-
+Si se selecciona que Sí se activa la caja de Especificar.
 
 ![](/attachments/597853153/597862095.png)
 
-### 4\.2 Medidas técnicas de seguridad
+### 4.2 Medidas técnicas de seguridad
 
-#### 4\.2\.1 Lugar en el que se realizará el manejo de agentes biológicos, OMG, Sustancias Químicas Peligrosas , Sustancias Radiactivas y/o Nanopartículas
+#### 4.2.1 Lugar en el que se realizará el manejo de agentes biológicos, OMG, Sustancias Químicas Peligrosas , Sustancias Radiactivas y/o Nanopartículas
 
-**![](/attachments/597853153/597858388.png)**  
+**![](/attachments/597853153/597858388.png)**
 
+##### 4.2.1.1 Laboratorio de la Universidad
 
-  
-
-
-##### 4\.2\.1\.1 Laboratorio de la Universidad
-
-Los apartados 4\.2\.1\.1\.1 MEDIDAS DE CONTENCIÓN, 4\.2\.1\.1\.2 EQUIPOS DE SEGURIDAD , 4\.2\.1\.1\.3 BUENAS PRÁCTICAS DE LABORATORIO  Y 4\.2\.1\.1\.4 INSTALACIONES solo se mostrará/activará si en el apartado 4\.2\.1\.1 LABORATORIO DE LA UNIVERSIDAD se ha indicado un laboratorio con nivel de contención \>\= C2, es decir, si existe un laboratorio con nivel de contención C2 o C3 o C4\.
+Los apartados 4.2.1.1.1 MEDIDAS DE CONTENCIÓN, 4.2.1.1.2 EQUIPOS DE SEGURIDAD , 4.2.1.1.3 BUENAS PRÁCTICAS DE LABORATORIO  Y 4.2.1.1.4 INSTALACIONES solo se mostrará/activará si en el apartado 4.2.1.1 LABORATORIO DE LA UNIVERSIDAD se ha indicado un laboratorio con nivel de contención >= C2, es decir, si existe un laboratorio con nivel de contención C2 o C3 o C4.
 
 ![](/attachments/597853153/597858389.png)
 
@@ -307,12 +315,9 @@ Certificado idoneidad: combo con los siguientes valores:
 * Sí
 * No
 
-  
+###### **4.2.1.1.1 Medidas de contención**
 
-
-###### **4\.2\.1\.1\.1 Medidas de contención**
-
-Solo se mostrará/activará si en el apartado 4\.2\.1\.1 LABORATORIO DE LA UNIVERSIDAD se ha indicado un laboratorio con nivel de contención \>\= C2, es decir, si existe un laboratorio con nivel de contención C2 o C3 o C4\.
+Solo se mostrará/activará si en el apartado 4.2.1.1 LABORATORIO DE LA UNIVERSIDAD se ha indicado un laboratorio con nivel de contención >= C2, es decir, si existe un laboratorio con nivel de contención C2 o C3 o C4.
 
 **![](/attachments/597853153/597858382.png)**
 
@@ -322,18 +327,15 @@ Solo se mostrará/activará si en el apartado 4\.2\.1\.1 LABORATORIO DE LA UNIVE
 
 ![](/attachments/597853153/597858390.png)
 
-  
+###### ****4.2.1.1.2** Equipos de seguridad**
 
-
-###### ****4\.2\.1\.1\.2** Equipos de seguridad**
-
-Solo se mostrará/activará si en el apartado 4\.2\.1\.1 LABORATORIO DE LA UNIVERSIDAD se ha indicado un laboratorio con nivel de contención \>\= C2, es decir, si existe un laboratorio con nivel de contención C2 o C3 o C4\.
+Solo se mostrará/activará si en el apartado 4.2.1.1 LABORATORIO DE LA UNIVERSIDAD se ha indicado un laboratorio con nivel de contención >= C2, es decir, si existe un laboratorio con nivel de contención C2 o C3 o C4.
 
 ![](/attachments/597853153/597858385.png)
 
-###### ******4\.2\.1\.1\.3**** Buenas prácticas de laboratorio**
+###### ******4.2.1.1.3**** Buenas prácticas de laboratorio**
 
-Solo se mostrará/activará si en el apartado 4\.2\.1\.1 LABORATORIO DE LA UNIVERSIDAD se ha indicado un laboratorio con nivel de contención \>\= C2, es decir, si existe un laboratorio con nivel de contención C2 o C3 o C4\.
+Solo se mostrará/activará si en el apartado 4.2.1.1 LABORATORIO DE LA UNIVERSIDAD se ha indicado un laboratorio con nivel de contención >= C2, es decir, si existe un laboratorio con nivel de contención C2 o C3 o C4.
 
 ![](/attachments/597853153/597858378.png)
 
@@ -341,74 +343,45 @@ Solo se mostrará/activará si en el apartado 4\.2\.1\.1 LABORATORIO DE LA UNIVE
 
 ![](/attachments/597853153/597858380.png)
 
-###### ********4\.2\.1\.1\.4****** Instalaciones**
+###### ********4.2.1.1.4****** Instalaciones**
 
-Solo se mostrará/activará si en el apartado 4\.2\.1\.1 LABORATORIO DE LA UNIVERSIDAD se ha indicado un laboratorio con nivel de contención \>\= C2, es decir, si existe un laboratorio con nivel de contención C2 o C3 o C4\.
+Solo se mostrará/activará si en el apartado 4.2.1.1 LABORATORIO DE LA UNIVERSIDAD se ha indicado un laboratorio con nivel de contención >= C2, es decir, si existe un laboratorio con nivel de contención C2 o C3 o C4.
 
 ![](/attachments/597853153/597858381.png)
 
-##### 4\.2\.1\.2 Otro centro o lugar ajeno a la Universidad
+##### 4.2.1.2 Otro centro o lugar ajeno a la Universidad
 
-Si se selecciona el valor Sí, se activan las cajas de texto y la fecha  
+Si se selecciona el valor Sí, se activan las cajas de texto y la fecha
 
+![](/attachments/597853153/597858374.png)
 
-![](/attachments/597853153/597858374.png)  
-
-
-  
-
-
-#### 4\.2\.2 Sustitución
+#### 4.2.2 Sustitución
 
 ![](/attachments/597853153/597858375.png)
 
-  
+#### 4.2.3 Reducción de riesgos
 
-
-#### 4\.2\.3 Reducción de riesgos
-
-##### 4\.2\.3\.1 Control de la exposición
+##### 4.2.3.1 Control de la exposición
 
 ![](/attachments/597853153/597858377.png)
 
-  
-
-
-  
-
-
-  
-
-
 Al seleccionar el Si se activa la caja de texto.
 
-##### 4\.2\.3\.2 Medidas de reducción de la exposición
-
-  
-
+##### 4.2.3.2 Medidas de reducción de la exposición
 
 ![](/attachments/597853153/597862130.png)
 
-##### 4\.2\.3\.3 Medidas de protección
-
-  
-
+##### 4.2.3.3 Medidas de protección
 
 ![](/attachments/597853153/597858372.png)
 
-  
-
-
-##### 4\.2\.3\.4 Métodos de descontaminación/desinfección
+##### 4.2.3.4 Métodos de descontaminación/desinfección
 
 ![](/attachments/597853153/597862128.png)
 
-##### 4\.2\.3\.5 Gestión de residuos
+##### 4.2.3.5 Gestión de residuos
 
 ![](/attachments/597853153/597858370.png)
-
-  
-
 
 Si "¿Se contempla gestión externa de residuos peligrosos o biológicos?" tiene valor Si, mostrar:  
   
@@ -422,12 +395,9 @@ Especificar gestión externa o justificar en caso **positivo \***
 
 Otros. Especificar \* (caja de texto en caso de seleccionar Otros. Especificar)
 
-### 4\.3 Vigilancia y protección de la salud
+### 4.3 Vigilancia y protección de la salud
 
-#### 4\.3\.1 Vacunación
-
-  
-
+#### 4.3.1 Vacunación
 
 ![](/attachments/597853153/597858371.png)
 
@@ -435,22 +405,19 @@ Por petición de Murcia se debe de añadir la opción "No es necesaria vacunaci�
 
 En el caso de que se seleccione esta nueva opción de "No es necesaria vacunación" el otro campo "Organismo sanitario responsable de la vacunación" no se mostrará y no será obligatorio. Es decir, el campo "Organismo sanitario responsable de la vacunación" solo se muestra y es obligatorio se seleccionan "Tétanos", "Hepatitis" o "Otras"
 
-#### 4\.3\.2 Medidas especiales de protección
+#### 4.3.2 Medidas especiales de protección
 
 **![](/attachments/597853153/597862124.png)**
 
 ## V. Cumplimiento de documentación
 
-### 5\.1 Acreditaciones
+### 5.1 Acreditaciones
 
 ![](/attachments/597853153/597862123.png)
 
-  
+### 5.2 COMUNICACIÓN DE USO DE AGENTES BIOLÓGICOS, SUSTANCIAS QUÍMICAS PELIGROSAS, SUSTANCIAS RADIACTIVAS Y/O NANOPARTÍCULAS Y AUTORIZACIÓN PARA LLEVAR A CABO UTILIZACIÓN CONFINADA DE OMG
 
-
-### 5\.2 COMUNICACIÓN DE USO DE AGENTES BIOLÓGICOS, SUSTANCIAS QUÍMICAS PELIGROSAS, SUSTANCIAS RADIACTIVAS Y/O NANOPARTÍCULAS Y AUTORIZACIÓN PARA LLEVAR A CABO UTILIZACIÓN CONFINADA DE OMG
-
-#### 5\.2\.1 COMUNICACIÓN DE USO DE AGENTES BIOLÓGICOS, SUSTANCIAS QUÍMICAS PELIGROSAS, SUSTANCIAS RADIACTIVAS Y/O NANOPARTÍCULAS
+#### 5.2.1 COMUNICACIÓN DE USO DE AGENTES BIOLÓGICOS, SUSTANCIAS QUÍMICAS PELIGROSAS, SUSTANCIAS RADIACTIVAS Y/O NANOPARTÍCULAS
 
 ![](/attachments/597853153/597858367.png)
 
@@ -458,7 +425,7 @@ Si se contesta que "Sí" en vez de pedir la Justificación, se pide una fecha:
 
 ![](/attachments/597853153/597858368.png)
 
-#### 5\.2\.2 AUTORIZACIÓN PARA LLEVAR A CABO UTILIZACIÓN CONFINADA DE OMG
+#### 5.2.2 AUTORIZACIÓN PARA LLEVAR A CABO UTILIZACIÓN CONFINADA DE OMG
 
 ![](/attachments/597853153/597858369.png)
 
@@ -466,32 +433,18 @@ Si se contesta que "Sí" en vez de pedir la Justificación, se pide una fecha:
 
 ![](/attachments/597853153/597858433.png)
 
-### 5\.3 Seguro de accidentes y responsabilidad civil
+### 5.3 Seguro de accidentes y responsabilidad civil
 
 ![](/attachments/597853153/597858435.png)
 
-### 5\.4 Protocolo de actuación en caso de accidente biológico
+### 5.4 Protocolo de actuación en caso de accidente biológico
 
 ![](/attachments/597853153/597858437.png)
 
-  
+### 5.5 Documentación adicional
 
+![](/attachments/597853153/597858439.png)
 
-### 5\.5 Documentación adicional
+### 5.6 Aclaraciones al comité
 
-![](/attachments/597853153/597858439.png)  
-
-
-### 5\.6 Aclaraciones al comité
-
-### 
-
-  
-
-
-  
-
-
-
-
-
+##

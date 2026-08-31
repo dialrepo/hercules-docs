@@ -1,6 +1,4 @@
-# Hércules : Enumerados
-
-
+# Enumerados
 
 ## Reglas generales
 
@@ -21,13 +19,11 @@ Siempre deberán ser enumerados básicos, sin ningún tipo de extensión o méto
 
 Cuando el ámbito del enumerado sea el de la clase, como por ejemplo el **Estado**, se declararía dentro de clase a continuación de cualquier constante o atributo estático.
 
-Cuando el ámbito sea más amplio y se utilice en más de una clase, se declararía dentro del paquete **org.crue.hercules.sgi.\<modulo\>.enums**
+Cuando el ámbito sea más amplio y se utilice en más de una clase, se declararía dentro del paquete **org.crue.hercules.sgi.<modulo>.enums**
 
 El mapping de un atributo de la entidad hacía el enumerado se realizará mediante la anotación  *@Enumerated(EnumType.STRING)*
 
 Ejemplo:
-
-
 
 ```
 public class Entidad {
@@ -53,13 +49,11 @@ Cuando el ámbito sea más amplio y se utilice en más de una clase, se declarar
 
 En la declaración se deberá asignar como valor el string que represente valor y deberá coincidir con la declaración realizada en el backend.
 
-Adicionalmente, se deberá crear el mapping de asignación de los valores a un código de internacionalización. Esto se realiza mediante un Map\<T, string\> en donde T es el enumerado.
+Adicionalmente, se deberá crear el mapping de asignación de los valores a un código de internacionalización. Esto se realiza mediante un Map<T, string> en donde T es el enumerado.
 
-Para la asignación de los códigos de internacionalización, ver [i18n](https://confluence.treelogic.com/display/HERCULES/i18n "https://confluence.treelogic.com/display/HERCULES/i18n")
+Para la asignación de los códigos de internacionalización, ver [i18n](https://confluence.treelogic.com/display/HERCULES/i18n)
 
 Ejemplo:
-
-
 
 ```
 export interface Entidad {
@@ -78,10 +72,3 @@ export const ESTADO_MAP: Map<Estado, string> = new Map([
   [Estado.REGISTRADA, marker('<modulo>.entidad.estado.REGISTRADA')]
 ]);
 ```
-
-  
-
-
-
-
-

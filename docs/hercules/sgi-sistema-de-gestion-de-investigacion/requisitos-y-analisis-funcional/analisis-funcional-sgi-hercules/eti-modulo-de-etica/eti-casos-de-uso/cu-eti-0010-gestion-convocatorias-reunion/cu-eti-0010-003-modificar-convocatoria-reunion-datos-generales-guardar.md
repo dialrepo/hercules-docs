@@ -1,6 +1,15 @@
-# Hércules : CU\-ETI\-0010\-003 \- Modificar Convocatoria reunión \- Datos generales \- Guardar
+# CU-ETI-0010-003 - Modificar Convocatoria reunión - Datos generales - Guardar
 
-
+|  |  |
+| --- | --- |
+| Cod. CU | ********CU-ETI-0010-003 - Modificar Convocatoria reunión - Datos generales - Guardar******** |
+| Ver. objetivo |  |
+| Ver. CU | 1.0.0 |
+| Estado | LIBERADO\_ |
+| Fec. Aprobación |  |
+| Épica, historia |  |
+| Actores | ACT-ETI-001-Gestor |
+| Frecuencia | Media |
 
 ### Descripción
 
@@ -10,7 +19,7 @@ Formularios de datos generales  y  de asignación de memorias a una convocator
 
 #### Actor principal
 
-ACT\-ETI\-001\-Gestor
+ACT-ETI-001-Gestor
 
 ### Precondiciones
 
@@ -38,14 +47,10 @@ No se modifican los datos de la pestaña de Asignación de memorias
 8. El usuario es informado del resultado positivo de la acción.
 9. Se presenta el listado de Convocatorias reunión.
 
-### Extensiones (flujos alternativos) \- Error durante el guardado
+### Extensiones (flujos alternativos) - Error durante el guardado
 
 1. Si se ha producido algún error de validación.
 2. El usuario modifica la información necesaria para realizar de forma correcta la creación de la Convocatoria.
 3. El usuario selecciona la acción Guardar.
 4. El usuario es informado del resultado positivo de la acción.
 5. Se presenta el listado de Convocatorias reunión.
-
-
-
-

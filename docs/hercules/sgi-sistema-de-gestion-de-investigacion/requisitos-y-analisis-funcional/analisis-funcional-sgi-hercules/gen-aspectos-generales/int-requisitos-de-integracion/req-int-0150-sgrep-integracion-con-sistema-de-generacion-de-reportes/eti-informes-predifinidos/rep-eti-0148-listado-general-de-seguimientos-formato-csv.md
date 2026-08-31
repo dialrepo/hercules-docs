@@ -1,10 +1,14 @@
-# Hércules : REP\-ETI\-0148 \- Listado general de seguimientos \- Formato csv
+# REP-ETI-0148 - Listado general de seguimientos - Formato csv
 
-
-
-
-
-
+|  |  |
+| --- | --- |
+| Cod. REP | **REP-ETI-0148 - Listado general de seguimientos - Formato csv** |
+| Ver. Objetivo |  |
+| Ver. REP | 1.0.0 |
+| Estado | PENDIENTE |
+| Fec. Aprobación |  |
+| Épica, historia |  |
+| Frecuencia |  |
 
 ### Diseño Informe
 
@@ -12,12 +16,7 @@ Se debe de generar un informe en formato csv que reciba como parámetro de entra
 
 Los nombres de las columnas en el fichero csv que formen parte de un bloque que se repita, deberán llevar en su nombre un número cardinal representativo del número de repetición, de forma que se permita la distinción del título de la columna. En la siguiente tabla se identifican también los bloques de datos susceptibles de repetirse. El fichero resultante contendrá las columnas necesarias, sobre cada bloque de repetición, de acuerdo a al seguimiento que más elementos contenga para ese bloque. Para los seguimientos que no contengan tantos elementos sobre cada bloque como marque el máximo, se mostrarán las columnas sin contenido.
 
-Ejemplo: [seguimiento\_with\_columns\_repeated.csv](/attachments/597852838/597865638.csv "attachments/597852838/597865638.csv")
-
-  
-
-
-
+Ejemplo: [seguimiento\_with\_columns\_repeated.csv](/attachments/597852838/597865638.csv)
 
 | Bloque de datos | Columna informe | Campo SGI | Repetición |
 | --- | --- | --- | --- |
@@ -26,8 +25,8 @@ Ejemplo: [seguimiento\_with\_columns\_repeated.csv](/attachments/597852838/59786
 |  | Tipo memoria | Campo "nombre" de la tabla "TipoMemoria" referenciado por el campo "tipoMemoria" de la tabla "Memoria" referenciado por el campo "memoria" de la tabla "Evaluacion" |  |
 |  | Fecha evaluación | Campo "fechaDictamen" de la tabla "Evaluacion" |  |
 |  | Memoria | Campo  "numReferencia" de la tabla "Memoria" referenciado por el campo "memoria" de la tabla "Evaluacion" |  |
-|  | Solicitante: Nombre | Campo "nombre" recuperado a través de [REQ\-INT\-0020\-SGP\-0030 \- Consultar datos generales de persona](https://confluence.um.es/confluence/display/HERCULES/REQ-INT-0020-SGP-0030+-+Consultar+datos+generales+de+persona "https://confluence.um.es/confluence/display/HERCULES/REQ-INT-0020-SGP-0030+-+Consultar+datos+generales+de+persona") para la referenciada indicada en el campo "personaRef" de la tabla "PeticionEvaluacion" referenciado por el campo "peticionEvaluacion" de la tabla "Memoria" referenciada a su vez por el campo "memoria" de la tabla "Evaluacion" |  |
-|  | Solicitante: Apellidos | Campo "apellidos" recuperado a través de [REQ\-INT\-0020\-SGP\-0030 \- Consultar datos generales de persona](https://confluence.um.es/confluence/display/HERCULES/REQ-INT-0020-SGP-0030+-+Consultar+datos+generales+de+persona "https://confluence.um.es/confluence/display/HERCULES/REQ-INT-0020-SGP-0030+-+Consultar+datos+generales+de+persona") para la referenciada indicada en el campo "personaRef" de la tabla "PeticionEvaluacion" referenciado por el campo "peticionEvaluacion" de la tabla "Memoria" referenciada a su vez por el campo "memoria" de la tabla "Evaluacion" |  |
+|  | Solicitante: Nombre | Campo "nombre" recuperado a través de [REQ-INT-0020-SGP-0030 - Consultar datos generales de persona](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0020-sgp-integracion-con-sistema-de-gestion-de-personas/req-int-0020-sgp-0030-consultar-datos-generales-de-persona) para la referenciada indicada en el campo "personaRef" de la tabla "PeticionEvaluacion" referenciado por el campo "peticionEvaluacion" de la tabla "Memoria" referenciada a su vez por el campo "memoria" de la tabla "Evaluacion" |  |
+|  | Solicitante: Apellidos | Campo "apellidos" recuperado a través de [REQ-INT-0020-SGP-0030 - Consultar datos generales de persona](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0020-sgp-integracion-con-sistema-de-gestion-de-personas/req-int-0020-sgp-0030-consultar-datos-generales-de-persona) para la referenciada indicada en el campo "personaRef" de la tabla "PeticionEvaluacion" referenciado por el campo "peticionEvaluacion" de la tabla "Memoria" referenciada a su vez por el campo "memoria" de la tabla "Evaluacion" |  |
 |  | Dictamen | Campo "nombre" de la tabla "Dictamen" referenciado por el campo "dictamen" de la tabla "Evaluacion" |  |
 |  | Versión | Campo "version" de la tabla "Evaluacion" |  |
 | Evaluaciones anteriores |  | Se mostrará las evaluaciones anteriores de la misma memoria y del mismo tipo de evaluación (registros de la tabla "Evaluacion" que en el campo "memoria" tengan la "memoria" de la evaluación y que en "tipoEvaluacion" tenga el mismo "tipoEvaluacion" que el de la evaluación) | Sí |
@@ -35,43 +34,16 @@ Ejemplo: [seguimiento\_with\_columns\_repeated.csv](/attachments/597852838/59786
 |  | EvaluaciónX: Fecha evaluación | Campo "fechaDictamen" de la tabla "Evaluacion" |  |
 |  | EvaluaciónX: Dictamen | Campo "nombre" de la tabla "Dictamen" referenciado por el campo "dictamen" de la tabla "Evaluacion" |  |
 
-  
-  
-
-
-  
-
-
-
-
-
-
-
-
 ### Interfaces de usuario relacionados
 
-
-
-
-
-
+![](plugins/servlet/confluence/placeholder/unknown-macro)
 
 ### Casos de uso relacionados
 
+![](plugins/servlet/confluence/placeholder/unknown-macro)
 
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+|  |  |
+| --- | --- |
+| ACT-ETI-001-Gestor | ETI-EVC-V, ETI-EVC-EVAL |
+| **ACT-ETI-004-Evaluador** | ETI-EVC-INV-VR, ETI-EVC-INV-EVALR |
+| **ACT-ETI-005-Técnico** | ETI-EVC-VR, ETI-EVC-EVALR |

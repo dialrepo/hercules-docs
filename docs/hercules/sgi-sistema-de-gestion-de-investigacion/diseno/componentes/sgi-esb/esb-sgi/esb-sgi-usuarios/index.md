@@ -1,20 +1,20 @@
-# Hércules : ESB \- SGI \- Usuarios
+# ESB - SGI - Usuarios
 
+---
 
+* [Sistema de Gestión Investigación](#ESBSGIUsuarios-SistemadeGestiónInvestigación)
+  + [Entidades](#ESBSGIUsuarios-Entidades)
+  + [Modelo lógico](#ESBSGIUsuarios-Modelológico)
+  + [API](#ESBSGIUsuarios-API)
+    - [Definición de los objetos](#ESBSGIUsuarios-Definicióndelosobjetos)
+      * [Unidad](#ESBSGIUsuarios-Unidad)
+    - [Servicios](#ESBSGIUsuarios-Servicios)
 
-
-
-
-
-
-
-
+---
 
 ## Sistema de Gestión Investigación
 
 ### Entidades
-
-
 
 | Entidad | Descripción |
 | --- | --- |
@@ -22,27 +22,25 @@
 
 ### Modelo lógico
 
-[USR \- Modelo lógico](https://confluence.um.es/confluence/pages/createpage.action?spaceKey=HERCULES&title=USR+-+Modelo+l%C3%B3gico&linkCreation=true&fromPageId=597853116 "/confluence/pages/createpage.action?spaceKey=HERCULES&title=USR+-+Modelo+l%C3%B3gico&linkCreation=true&fromPageId=597853116")
+[USR - Modelo lógico](/confluence/pages/createpage.action?spaceKey=HERCULES&title=USR+-+Modelo+l%C3%B3gico&linkCreation=true&fromPageId=597853116)
 
 ### API
 
 Características generales que todas las API REST deben de cumplir:
 
-* [Consultas filtradas y paginadas](/hercules/sgi-sistema-de-gestion-de-investigacion/desarrollo-y-configuracion/estandares-de-desarrollo/consultas-filtradas-y-paginadas.md "/hercules/sgi-sistema-de-gestion-de-investigacion/desarrollo-y-configuracion/estandares-de-desarrollo/consultas-filtradas-y-paginadas.md")
-* [Formatos de datos API](/hercules/sgi-sistema-de-gestion-de-investigacion/desarrollo-y-configuracion/estandares-de-desarrollo/formatos-de-datos-api.md "/hercules/sgi-sistema-de-gestion-de-investigacion/desarrollo-y-configuracion/estandares-de-desarrollo/formatos-de-datos-api.md")
+* [Consultas filtradas y paginadas](/hercules/sgi-sistema-de-gestion-de-investigacion/desarrollo-y-configuracion/estandares-de-desarrollo/consultas-filtradas-y-paginadas)
+* [Formatos de datos API](/hercules/sgi-sistema-de-gestion-de-investigacion/desarrollo-y-configuracion/estandares-de-desarrollo/formatos-de-datos-api)
 
 #### Definición de los objetos
 
 ##### Unidad
 
-
-
 | Nombre | Tipo | Descripción |
 | --- | --- | --- |
 | createdBy | String | Referencia al usuario creador del registro en los sistemas de la Universidad. |
-| creationDate | Fecha \+ Hora | Fecha y hora de creación del registro.Formato UTC. |
+| creationDate | Fecha + Hora | Fecha y hora de creación del registro.  Formato UTC. |
 | lastModifiedBy | String | Referencia al último usuario que modificó el registro en los sistemas de la Universidad. |
-| lastModifiedDate | Fecha \+ Hora | Fecha y hora de creación del registro.Formato UTC. |
+| lastModifiedDate | Fecha + Hora | Fecha y hora de creación del registro.  Formato UTC. |
 | id | Long | Identificador único de la Unidad de gestión. |
 | nombre | String | Nombre de la unidad de gestión. |
 | acronimo | String | Acrónimo de la unidad de gestión. |
@@ -55,9 +53,5 @@ Para componer la URL llamada completa, se debe anteponer a lo indicado en la col
 
 | Servicio | Método | URL | Parámetros | Respuesta | Descripción |
 | --- | --- | --- | --- | --- | --- |
-| [ESB \- SGI \- Usuarios \- Unidades \- Consultar detalle](/confluence/display/HERCULES/ESB+-+SGI+-+Usuarios+-+Unidades+-+Consultar+detalle "/confluence/display/HERCULES/ESB+-+SGI+-+Usuarios+-+Unidades+-+Consultar+detalle") | GET | /unidades/{id} |  | [Unidad](https://confluence.um.es/confluence/display/HERCULES/ESB+-+SGI+-+Usuarios#ESBSGIUsuarios-Unidad "https://confluence.um.es/confluence/display/HERCULES/ESB+-+SGI+-+Usuarios#ESBSGIUsuarios-Unidad") | Retorna el detalle de una Unidad de gestión. |
-| [ESB \- SGI \- Usuarios \- Unidades \- Buscar](/confluence/display/HERCULES/ESB+-+SGI+-+Usuarios+-+Unidades+-+Buscar "/confluence/display/HERCULES/ESB+-+SGI+-+Usuarios+-+Unidades+-+Buscar") | GET | /unidades | q\+s (query \+ sort)La query estará formada por:* cualquiera de los campos del objeto Unidad | Lista\[[Unidad](https://confluence.um.es/confluence/display/HERCULES/ESB+-+SGI+-+Usuarios#ESBSGIUsuarios-Unidad "https://confluence.um.es/confluence/display/HERCULES/ESB+-+SGI+-+Usuarios#ESBSGIUsuarios-Unidad")] | Busca / Lista Unidades de gestión. |
-
-
-
-
+| [ESB - SGI - Usuarios - Unidades - Consultar detalle](/confluence/spaces/HERCULES/pages/597853419/ESB+-+SGI+-+Usuarios+-+Unidades+-+Consultar+detalle) | GET | /unidades/{id} |  | [Unidad](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/esb-sgi/esb-sgi-usuarios#ESBSGIUsuarios-Unidad) | Retorna el detalle de una Unidad de gestión. |
+| [ESB - SGI - Usuarios - Unidades - Buscar](/confluence/spaces/HERCULES/pages/597853418/ESB+-+SGI+-+Usuarios+-+Unidades+-+Buscar) | GET | /unidades | q+s (query + sort)  La query estará formada por:   * cualquiera de los campos del objeto Unidad | Lista[[Unidad](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/esb-sgi/esb-sgi-usuarios#ESBSGIUsuarios-Unidad)] | Busca / Lista Unidades de gestión. |

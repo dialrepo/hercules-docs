@@ -1,6 +1,7 @@
-# Hércules : Post\-graduate Research Metrics for Process
+# Post-graduate Research Metrics for Process
 
-
+* [Research Student to Academic Staff Ratio](#PostgraduateResearchMetricsforProcess-ResearchStudenttoAcademicStaffRatio)
+* [Academic Staff](#PostgraduateResearchMetricsforProcess-AcademicStaff)
 
 ### Research Student to Academic Staff Ratio
 
@@ -10,35 +11,30 @@ To define:
 
 Data source: SGI, National reports (to be found).
 
-
-
-|  | User | Privacy | Ranking |
+|  |  |  |  |
 | --- | --- | --- | --- |
+|  | User | Privacy | Ranking |
 | **Snowball metrics** |  |  |  |
-| Ratio of research students : researchers per quarter\-year | Non\-researcher staffStaff from public administration | Restricted |  |
+| Ratio of research students : researchers per quarter-year | Non-researcher staff  Staff from public administration | Restricted |  |
 | **Data breakdown or filters** |  |  |  |
-| Gender (Snowball denominator) | Non\-researcher staffStaff from public administration | Restricted |  |
+| Gender (Snowball denominator) | Non-researcher staff  Staff from public administration | Restricted |  |
 | **Hércules SGI (CRIS) metrics** |  |  |  |
 |  |  |  |  |
-
-  
-
 
 ### Academic Staff
 
 To define:
 
 * University staff.
-	+ People. Who are considered in this category?
-	+ PDI. Teaching and research staff.
-	+ Chairs.
+  + People. Who are considered in this category?
+  + PDI. Teaching and research staff.
+  + Chairs.
 
 Data source: SGI, National reports (to be found).
 
-
-
-|  | User | Privacy | Ranking |
+|  |  |  |  |
 | --- | --- | --- | --- |
+|  | User | Privacy | Ranking |
 | **Snowball metrics** |  |  |  |
 |  |  |  |  |
 | **Data breakdown or filters** |  |  |  |
@@ -55,13 +51,3 @@ Data source: SGI, National reports (to be found).
 | Teaching area | Any | Public |  |
 | CRUE: Type of staff | Any | Public |  |
 | CRUE: Type of salary | Any | Public |  |
-
-  
-
-
-  
-
-
-
-
-

@@ -1,47 +1,68 @@
-# Hércules : ESB \- SGI \- Proyectos
+# ESB - SGI - Proyectos
 
+---
 
+* [Sistema de Gestión Investigación](#ESBSGIProyectos-SistemadeGestiónInvestigación)
+  + [Entidades](#ESBSGIProyectos-Entidades)
+  + [Modelo lógico](#ESBSGIProyectos-Modelológico)
+  + [API](#ESBSGIProyectos-API)
+    - [Definición de los objetos](#ESBSGIProyectos-Definicióndelosobjetos)
+      * [Proyecto](#ESBSGIProyectos-Proyecto)
+      * [EstadoProyecto](#ESBSGIProyectos-EstadoProyecto)
+      * [ModeloEjecucion](#ESBSGIProyectos-ModeloEjecucion)
+      * [TipoFinalidad](#ESBSGIProyectos-TipoFinalidad)
+      * [TipoAmbitoGeografico](#ESBSGIProyectos-TipoAmbitoGeografico)
+      * [ProyectoIva](#ESBSGIProyectos-ProyectoIva)
+      * [ProyectoContexto](#ESBSGIProyectos-ProyectoContexto)
+      * [AreaTematica](#ESBSGIProyectos-AreaTematica)
+      * [ProyectoEquipo](#ESBSGIProyectos-ProyectoEquipo)
+      * [RolProyecto](#ESBSGIProyectos-RolProyecto)
+      * [ProyectoEntidadGestora](#ESBSGIProyectos-ProyectoEntidadGestora)
+      * [ProyectoEntidadConvocante](#ESBSGIProyectos-ProyectoEntidadConvocante)
+      * [Programa](#ESBSGIProyectos-Programa)
+      * [ProyectoEntidadFinancidora](#ESBSGIProyectos-ProyectoEntidadFinancidora)
+      * [FuenteFinanciacion](#ESBSGIProyectos-FuenteFinanciacion)
+      * [TipoOrigenFuenteFinanciacion](#ESBSGIProyectos-TipoOrigenFuenteFinanciacion)
+      * [TipoFinanciacion](#ESBSGIProyectos-TipoFinanciacion)
+      * [ProyectoAnualidadResumen](#ESBSGIProyectos-ProyectoAnualidadResumen)
+      * [ProyectoPresupuestoTotales](#ESBSGIProyectos-ProyectoPresupuestoTotales)
+      * [ProyectoClasificacion](#ESBSGIProyectos-ProyectoClasificacion)
+      * [NotificacionProyecto](#ESBSGIProyectos-NotificacionProyecto)
+      * [EntidadFinanciadora](#ESBSGIProyectos-EntidadFinanciadora)
+      * [PalabraClave](#ESBSGIProyectos-PalabraClave)
+      * [ProyectoAreaConocimiento](#ESBSGIProyectos-ProyectoAreaConocimiento)
+    - [Servicios](#ESBSGIProyectos-Servicios)
 
-
-
-
-
-
-
-
+---
 
 ## Sistema de Gestión Investigación
 
 ### Entidades
 
-
-
 | Entidad | Descripción |
 | --- | --- |
-| Proyecto | Contiene los datos generales de un proyecto. De esta entidad se pueden obtener los campos:* Nombre del proyecto * Fecha de inicio * Fecha de finalización * Ámbito geográfico * Cod. según financiadora * Tipo de proyecto |
-| ContextoProyecto | Contiene información del contexto del proyecto. De esta entidad se puede obtener el campo:* Resultados relevantes |
-| ProyectoEquipo | Contiene la información de las personas que forman parte del equipo del proyecto. De esta entidad de puede obtener los campos:* Número de investigadores/as participantes * Grado de contribución * Tipo de participación * Posición * Nombre * Apellidos |
-| ProyectoEntidadGestora | Contiene los datos de una entidad gestora. Un proyecto sólo se le permite tener una entidad gestora. De esta entidad se puede obtener el campo:* Entidad realización |
-| ProyectoEntidadConvocante | Contiene los datos de una entidad convocante. Un proyecto puede tener varian entidades convocantes. De esta entidad de puede obtener los campos:* Nombre del programa * Entidad |
-| ProyectoEntidadFinanciadora | Contiene los datos de una entidad financiadora. Un proyecto puede tener varian entidades financiadoras. De esta entidad de puede obtener los campos:* Porcentaje en subvención * Porcentaje en crédito * Porcentaje mixto * Entidad |
+| Proyecto | Contiene los datos generales de un proyecto. De esta entidad se pueden obtener los campos:   * Nombre del proyecto * Fecha de inicio * Fecha de finalización * Ámbito geográfico * Cod. según financiadora * Tipo de proyecto |
+| ContextoProyecto | Contiene información del contexto del proyecto. De esta entidad se puede obtener el campo:   * Resultados relevantes |
+| ProyectoEquipo | Contiene la información de las personas que forman parte del equipo del proyecto. De esta entidad de puede obtener los campos:   * Número de investigadores/as participantes * Grado de contribución * Tipo de participación * Posición * Nombre * Apellidos |
+| ProyectoEntidadGestora | Contiene los datos de una entidad gestora. Un proyecto sólo se le permite tener una entidad gestora. De esta entidad se puede obtener el campo:   * Entidad realización |
+| ProyectoEntidadConvocante | Contiene los datos de una entidad convocante. Un proyecto puede tener varian entidades convocantes. De esta entidad de puede obtener los campos:   * Nombre del programa * Entidad |
+| ProyectoEntidadFinanciadora | Contiene los datos de una entidad financiadora. Un proyecto puede tener varian entidades financiadoras. De esta entidad de puede obtener los campos:   * Porcentaje en subvención * Porcentaje en crédito * Porcentaje mixto * Entidad |
 | ProyectoClasificacion | Contiene la referencia a la clasificación. Para ver el detalle de la clasificación habria que consultar al SGO (sgo/clasificaciones/{refencia}) |
 
 ### Modelo lógico
 
-[CSP \- PRO \- Modelo lógico](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-csp/csp-pro-proyectos/csp-pro-modelo-logico-diagrama.md "/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-csp/csp-pro-proyectos/csp-pro-modelo-logico-diagrama.md")
+[CSP - PRO - Modelo lógico](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-csp/csp-pro-proyectos/csp-pro-modelo-logico-diagrama)
 
 ### API
 
 Características generales que todas las API REST deben de cumplir:
 
-* [Consultas filtradas y paginadas](/hercules/sgi-sistema-de-gestion-de-investigacion/desarrollo-y-configuracion/estandares-de-desarrollo/consultas-filtradas-y-paginadas.md "/hercules/sgi-sistema-de-gestion-de-investigacion/desarrollo-y-configuracion/estandares-de-desarrollo/consultas-filtradas-y-paginadas.md")
-* [Formatos de datos API](/hercules/sgi-sistema-de-gestion-de-investigacion/desarrollo-y-configuracion/estandares-de-desarrollo/formatos-de-datos-api.md "/hercules/sgi-sistema-de-gestion-de-investigacion/desarrollo-y-configuracion/estandares-de-desarrollo/formatos-de-datos-api.md")
+* [Consultas filtradas y paginadas](/hercules/sgi-sistema-de-gestion-de-investigacion/desarrollo-y-configuracion/estandares-de-desarrollo/consultas-filtradas-y-paginadas)
+* [Formatos de datos API](/hercules/sgi-sistema-de-gestion-de-investigacion/desarrollo-y-configuracion/estandares-de-desarrollo/formatos-de-datos-api)
 
 #### Definición de los objetos
 
 ##### Proyecto
-
-
 
 | Nombre | Tipo | Descripción |
 | --- | --- | --- |
@@ -65,16 +86,16 @@ Características generales que todas las API REST deben de cumplir:
 | convocatoriaExterna | String | Permite mostrar o recoger la identificación externa de la convocatoria, dependiendo si el proyecto se asocia o no a una convocatoria registrada en el SGI. |
 | ambitoGeografico | TipoAmbitoGeografico | Entidad que representa el ámbito geográfico. |
 | confidencial | Boolean | Indica si el proyecto es confidencial. |
-| clasificacionCVN | String | Indica el apartado del CVN al que correspondería el proyecto. Tiene los siguientes valores:* AYUDAS * COMPETITIVOS * NO\_COMPETITIVOS |
+| clasificacionCVN | String | Indica el apartado del CVN al que correspondería el proyecto. Tiene los siguientes valores:   * AYUDAS * COMPETITIVOS  * NO\_COMPETITIVOS |
 | coordinado | Boolean | Indica si el proyecto se realizará de forma coordinada con otros socios. |
 | colaborativo | Boolean | Indica si un proyecto coordinado es además colaborativo (alguno de los socios participantes es una empresa privada). |
 | coordinadorExterno | Boolean | Indica quién actúa como coordinador del proyecto. Un valor "false" indica que es la propia universidad quien actúa en calidad de coordinador del proyecto. En caso que quien coordine el proyecto no sea la universidad sino uno de los socios, se indicará en este campo el valor "true". |
 | timesheet | Boolean | Indica si el proyecto requiere gestión de Timesheet. |
 | permitePaquetesTrabajo | Boolean | Indica si el proyecto requiere gestión de paquetes de trabajo en los Timesheet. |
 | costeHora | Boolean | Indica si el proyecto requerirá realizar el cálculo de coste de hora de personal. |
-| tipoHorasAnuales | String | Sólo se informará si se el campo "costeHora" tiene valor "true".Indica el criterio de las horas anuales para el cálculo del coste/hora.Tiene los siguientes valores:* CATEGORIA * FIJO * REAL |
+| tipoHorasAnuales | String | Sólo se informará si se el campo "costeHora" tiene valor "true".Indica el criterio de las horas anuales para el cálculo del coste/hora.Tiene los siguientes valores:  * CATEGORIA * FIJO * REAL |
 | iva | ProyectoIva | Entidad que representa el IVA del proyecto. |
-| causaExencion | String | Indica la causa de exención de IVA.Tiene los siguientes valores:* NO\_SUJETO * NO\_SUJETO\_CON\_DEDUCCION * NO\_SUJETO\_SIN\_DEDUCCION * SUJETO\_EXENTO |
+| causaExencion | String | Indica la causa de exención de IVA.Tiene los siguientes valores:  * NO\_SUJETO * NO\_SUJETO\_CON\_DEDUCCION * NO\_SUJETO\_SIN\_DEDUCCION * SUJETO\_EXENTO |
 | observaciones | String | Observaciones de carácter interno del proyecto. |
 | anualidades | Boolean | Indica si en el presupuesto se va a introducir por anualidades o no. |
 | importePresupuesto | Numérico | Es el importe presupuesto correspondiente al proyecto a desarrollar por la Universidad en caso de que lo deseen introducir de forma manual y no a través del detalle del presupuesto (entidad "AnualidadGasto"). |
@@ -87,8 +108,6 @@ Características generales que todas las API REST deben de cumplir:
 
 ##### EstadoProyecto
 
-
-
 | Nombre | Tipo | Descripción |
 | --- | --- | --- |
 | id | Long | Identificador del estado del proyecto |
@@ -97,13 +116,11 @@ Características generales que todas las API REST deben de cumplir:
 | lastModifiedBy | String | Nombre del usuario que ha modificado por última vez la entidad. |
 | lastModifiedDate | String | Fecha de la última modificación de la entidad. |
 | proyectoId | Long | Identificador del proyecto. |
-| estado | String | Estado del proyecto. Tiene los siguientes valores:* BORRADO * CONCEDIDO * RENUNCIADO * RESCINDIDO |
+| estado | String | Estado del proyecto. Tiene los siguientes valores:   * BORRADO * CONCEDIDO * RENUNCIADO * RESCINDIDO |
 | fechaEstado | String | Fecha en la que se alcanzó el estado. |
 | comentario | String | Comentario que se pude añadir cuando se produce el cambio de estado para recoger cualquier observación. |
 
 ##### ModeloEjecucion
-
-
 
 | Nombre | Tipo | Descripción |
 | --- | --- | --- |
@@ -120,8 +137,6 @@ Características generales que todas las API REST deben de cumplir:
 
 ##### TipoFinalidad
 
-
-
 | Nombre | Tipo | Descripción |
 | --- | --- | --- |
 | id | Long | Identificador del tipo de finalidad. |
@@ -135,8 +150,6 @@ Características generales que todas las API REST deben de cumplir:
 
 ##### TipoAmbitoGeografico
 
-
-
 | Nombre | Tipo | Descripción |
 | --- | --- | --- |
 | id | Long | Identificador del tipo de ámbito geográfico. |
@@ -148,8 +161,6 @@ Características generales que todas las API REST deben de cumplir:
 | activo | Boolean | Campo utilizado para dar soporte al borrado lógico de los registros de esta entidad. Un ámbito geográfico no activo no se está disponible para su selección a nivel de interface de usuario. |
 
 ##### ProyectoIva
-
-
 
 | Nombre | Tipo | Descripción |
 | --- | --- | --- |
@@ -163,11 +174,7 @@ Características generales que todas las API REST deben de cumplir:
 | fechaInicio | String | Fecha de inicio en la que empieza a aplicarse el porcentaje de IVA al que refiere el registro. |
 | fechaFin | String | Fecha de fin en la que deja de aplicarse el porcentaje de IVA al que refiere el registro. |
 
-
-
 **Proyecto** Ampliar origen
-
-
 
 ```
 {
@@ -262,10 +269,7 @@ Características generales que todas las API REST deben de cumplir:
 }
 ```
 
-
 ##### ProyectoContexto
-
-
 
 | Nombre | Tipo | Descripción |
 | --- | --- | --- |
@@ -277,16 +281,11 @@ Características generales que todas las API REST deben de cumplir:
 | objetivos | String | Texto libre para recoger cuales serán los objetivos del proyecto. |
 | intereses | String | Texto libre para recoger los motivos que justifican el desarrollo del proyecto y/o los intereses del mismo. |
 | resultadosPrevistos | String | Texto libre para recoger los resultados esperados del proyecto. |
-| propiedadResultados | String | Permitirá recoger quién es el propietario de los resultados que se generen a raíz de la ejecución del proyecto.Tiene los siguientes valores:* COMPARTIDA * ENTIDAD\_FINANCIADORA * SIN\_RESULTADOS * UNIVERSIDAD |
+| propiedadResultados | String | Permitirá recoger quién es el propietario de los resultados que se generen a raíz de la ejecución del proyecto.Tiene los siguientes valores:  * COMPARTIDA * ENTIDAD\_FINANCIADORA * SIN\_RESULTADOS * UNIVERSIDAD |
 | areaTematicaConvocatoria | AreaTematica | Entidad que representa el área temática elegida en la convocatoria en caso de que el proyecto este relacionado con una convocatoria del SGI. |
 | areaTematica | AreaTematica | Entidad que representa el área temática en la que se enmarca el proyecto. |
 
-  
-
-
 ##### AreaTematica
-
-
 
 | Nombre | Tipo | Descripción |
 | --- | --- | --- |
@@ -297,14 +296,10 @@ Características generales que todas las API REST deben de cumplir:
 | lastModifiedDate | String | Fecha de la última modificación de la entidad. |
 | nombre | String | Nombre del área temática. El nombre del nodo raíz del árbol da el nombre al listado de áreas temáticas. |
 | descripcion | String | Descripción del área temática. |
-| padre | AreaTematica | Entidad que representa el área temática padre.El listado de áreas temáticas se implementa con una estructura de árbol jerárquico. Este campo establece la jerarquía del registro actual con su superior. El registro para el que este campo tome el valor "null" será el nodo raíz y será el que otorgue el nombre al listado de áreas temáticas |
+| padre | AreaTematica | Entidad que representa el área temática padre.  El listado de áreas temáticas se implementa con una estructura de árbol jerárquico. Este campo establece la jerarquía del registro actual con su superior. El registro para el que este campo tome el valor "null" será el nodo raíz y será el que otorgue el nombre al listado de áreas temáticas |
 | activo | Boolean | Flag a través del que se implementa el borrado lógico de los registros de esta tabla. Un elemento con el flag "activo" a "false" no estará disponible para su vinculación a las convocatorias, solicitudes y proyectos. Si el elemento que no está activo es el nodo raíz del árbol será el listado completo que no esté visible. Si el elemento que no está activo es un nodo interno, será este nodo y todos sus descendientes los que no estén disponibles. |
 
-
-
 **ContextoProyecto** Ampliar origen
-
-
 
 ```
 {
@@ -373,10 +368,7 @@ Características generales que todas las API REST deben de cumplir:
 }
 ```
 
-
 ##### ProyectoEquipo
-
-
 
 | Nombre | Tipo | Descripción |
 | --- | --- | --- |
@@ -387,14 +379,12 @@ Características generales que todas las API REST deben de cumplir:
 | lastModifiedDate | String | Fecha de la última modificación de la entidad. |
 | proyectoId | Long | Identifcador del proyecto. |
 | personaRef | String | Identificador o Referencia de la persona miembro del equipo de proyecto. Es el identificador de la persona en el sistema de personas de la Universidad. |
-| rolProyecto | RolProyecto | Entidad que representa el rol. Son los roles que puede tener el equipo de proyecto.Ejemplos:* Investigador/a principal * Co\-Investigador/a PrincipalColaborador * Asesor científico * Colaborador E.I. |
+| rolProyecto | RolProyecto | Entidad que representa el rol. Son los roles que puede tener el equipo de proyecto.  Ejemplos:   * Investigador/a principal * Co-Investigador/a PrincipalColaborador * Asesor científico * Colaborador E.I. |
 | fechaInicio | String | Fecha de inicio para la participación del miembro del equipo de proyecto con el rol seleccionado. |
 | fechaFin | String | Fecha de inicio para la participación del miembro del equipo de proyecto con el rol seleccionado. |
 | horasDedicacion | Numérico | Horas totales de dedicación al proyecto. Se utiliza para realizar la propuesta de distribución del timesheet. |
 
 ##### RolProyecto
-
-
 
 | Nombre | Tipo | Descripción |
 | --- | --- | --- |
@@ -407,15 +397,11 @@ Características generales que todas las API REST deben de cumplir:
 | nombre | String | Nombre identificativo del rol. |
 | descripcion | String | Campo de texto de introducción libre para descripción ampliada. |
 | rolPrincipal | Boolean | Indica si el rol es el rol principal. No se limita el número de roles para los que se marque el indicador de rol principal, pudiendo estar mas de un rol con el indicador marcado. |
-| equipo | String | Tipo Equipo Proyecto. Tiene los siguientes valores:* INVESTIGACION * TRABAJO |
-| orden | String | Tipo de Orden. El orden sólo se indica para aquellos roles que tengan marcado el flag de investigador principal, para indicar si es de orden 1 o de orden 2\. Tiene los siguientes valores:* PRIMARIO * SECUNDARIO |
+| equipo | String | Tipo Equipo Proyecto. Tiene los siguientes valores:  * INVESTIGACION * TRABAJO |
+| orden | String | Tipo de Orden. El orden sólo se indica para aquellos roles que tengan marcado el flag de investigador principal, para indicar si es de orden 1 o de orden 2. Tiene los siguientes valores:  * PRIMARIO * SECUNDARIO |
 | activo | Boolean | Indica si esta activo o no. En caso de no estar activo no se podrá asignar a ningún miembro del equipo de una solicitud ni a los miembros del equipo de los socios de una solicitud. |
 
-
-
 **ProyectoEquipo** Ampliar origen
-
-
 
 ```
 	{
@@ -444,13 +430,9 @@ Características generales que todas las API REST deben de cumplir:
 		"fechaFin": null,
 		"horasDedicacion": null
 	}
-
 ```
 
-
 ##### ProyectoEntidadGestora
-
-
 
 | Nombre | Tipo | Descripción |
 | --- | --- | --- |
@@ -460,13 +442,9 @@ Características generales que todas las API REST deben de cumplir:
 | lastModifiedBy | String | Nombre del usuario que ha modificado por última vez la entidad. |
 | lastModifiedDate | String | Fecha de la última modificación de la entidad. |
 | proyectoId | Long | Identifcador del proyecto. |
-| entidadRef | String | Referencia o Identificador de la entidad en el sistema externo de Empresas.Ver diseño del API de empresas para obtener el detalle de una empresa a a partir de su identificador: [SGI \- ESB \- SGEMP](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sgemp/index.md "/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sgemp/index.md") |
-
-
+| entidadRef | String | Referencia o Identificador de la entidad en el sistema externo de Empresas.  Ver diseño del API de empresas para obtener el detalle de una empresa a a partir de su identificador: [SGI - ESB - SGEMP](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sgemp) |
 
 **ProyectoEntidadGestora** Ampliar origen
-
-
 
 ```
 	{
@@ -478,17 +456,9 @@ Características generales que todas las API REST deben de cumplir:
 		"proyectoId": 1,
 		"entidadRef": "G0021150"
 	}
-
-
 ```
 
-
-  
-
-
 ##### ProyectoEntidadConvocante
-
-
 
 | Nombre | Tipo | Descripción |
 | --- | --- | --- |
@@ -498,13 +468,11 @@ Características generales que todas las API REST deben de cumplir:
 | lastModifiedBy | String | Nombre del usuario que ha modificado por última vez la entidad. |
 | lastModifiedDate | String | Fecha de la última modificación de la entidad. |
 | proyectoId | Long | Identifcador del proyecto. |
-| entidadRef | String | Referencia o Identificador de la entidad en el sistema externo de Empresas.Ver diseño del API de empresas para obtener el detalle de una empresa a a partir de su identificador: [SGI \- ESB \- SGEMP](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sgemp/index.md "/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sgemp/index.md") |
+| entidadRef | String | Referencia o Identificador de la entidad en el sistema externo de Empresas.  Ver diseño del API de empresas para obtener el detalle de una empresa a a partir de su identificador: [SGI - ESB - SGEMP](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sgemp) |
 | programaConvocatoria | Programa | Entidad que representa el Programa al que se asocia la entidad convocante en la Convocatoria. En el caso de que el proyecto este relacionado con una convocatoria del SGI, en este campo se guarda el programa que se haya definido en la convocatoria para la entidad convocante. |
 | programa | Programa | Entidad que representa el del Programa al que se asocia la entidad convocante en el proyecto. |
 
 ##### Programa
-
-
 
 | Nombre | Tipo | Descripción |
 | --- | --- | --- |
@@ -515,14 +483,10 @@ Características generales que todas las API REST deben de cumplir:
 | lastModifiedDate | String | Fecha de la última modificación de la entidad. |
 | nombre | String | Nombre del programa, el que se mostrará en la visualización del árbol del plan de investigación en la gestión de convocatorias y proyectos. |
 | descripcion | String | Descripción del programa. |
-| padre | Programa | Entidad que representa el programa padre.Los planes de investigación se implementan con una estructura de árbol jerárquico. Este campo establece la jerarquía del registro actual con su superior. El registro para el que este campo tome el valor "null" será el nodo raíz y será el que otorgue el nombre al plan de investigación. |
+| padre | Programa | Entidad que representa el programa padre.  Los planes de investigación se implementan con una estructura de árbol jerárquico. Este campo establece la jerarquía del registro actual con su superior. El registro para el que este campo tome el valor "null" será el nodo raíz y será el que otorgue el nombre al plan de investigación. |
 | activo | Boolean | Flag con el que se da cobertura al borrado lógico de los registros de esta tabla. Un programa con el flag "activo" a "false" no estará disponible para ser seleccionado en convocatorias/proyectos. Si un elemento del árbol no está activo no estará disponible ni el propio elemento ni ninguno de sus descendientes. Si el elemento no activo es el nodo raíz del árbol el será el plan de investigación al completo el que no esté disponible. |
 
-
-
 **ProyectoEntidadConvocante** Ampliar origen
-
-
 
 ```
 	{
@@ -626,10 +590,7 @@ Características generales que todas las API REST deben de cumplir:
 		
 ```
 
-
 ##### ProyectoEntidadFinancidora
-
-
 
 | Nombre | Tipo | Descripción |
 | --- | --- | --- |
@@ -639,19 +600,14 @@ Características generales que todas las API REST deben de cumplir:
 | lastModifiedBy | String | Nombre del usuario que ha modificado por última vez la entidad. |
 | lastModifiedDate | String | Fecha de la última modificación de la entidad. |
 | proyectoId | Long | Identifcador del proyecto. |
-| entidadRef | String | Referencia o Identificador de la entidad en el sistema externo de Empresas.Ver diseño del API de empresas para obtener el detalle de una empresa a a partir de su identificador: [SGI \- ESB \- SGEMP](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sgemp/index.md "/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sgemp/index.md") |
+| entidadRef | String | Referencia o Identificador de la entidad en el sistema externo de Empresas.  Ver diseño del API de empresas para obtener el detalle de una empresa a a partir de su identificador: [SGI - ESB - SGEMP](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sgemp) |
 | fuenteFinanciacion | FuenteFinanciacion | Entidad que representa una fuente de financiación. |
 | tipoFinanciacion | TipoFinanciacion | Entidad que representa un tipo de financiación. |
 | porcentajeFinanciacion | Numérico | Porcentaje de financiación de la entidad financiadora. |
 | importeFinanciacion | Numérico | Importe de financiación de la entidad. |
 | ajena | Boolean | Indica si se trata de una entidad financiadora ajena a la convocatoria o no. |
 
-  
-
-
 ##### FuenteFinanciacion
-
-
 
 | Nombre | Tipo | Descripción |
 | --- | --- | --- |
@@ -669,8 +625,6 @@ Características generales que todas las API REST deben de cumplir:
 
 ##### TipoOrigenFuenteFinanciacion
 
-
-
 | Nombre | Tipo | Descripción |
 | --- | --- | --- |
 | id | Long | Identificador del tipo de origen de fuente de financiación |
@@ -683,8 +637,6 @@ Características generales que todas las API REST deben de cumplir:
 
 ##### TipoFinanciacion
 
-
-
 | Nombre | Tipo | Descripción |
 | --- | --- | --- |
 | id | Long | Identificador del tipo de financiación. |
@@ -696,11 +648,7 @@ Características generales que todas las API REST deben de cumplir:
 | descripcion | String | Descripción del tipo de financiación. |
 | activo | Boolean | Flag a través del que se implementa el borrado lógico de los registros de esta tabla. |
 
-
-
 **ProyectoEntidadFinancidora** Ampliar origen
-
-
 
 ```
 	{
@@ -754,14 +702,9 @@ Características generales que todas las API REST deben de cumplir:
 		"importeFinanciacion": null,
 		"ajena": false
 	}
-
-
 ```
 
-
 ##### ProyectoAnualidadResumen
-
-
 
 | Nombre | Tipo | Descripción |
 | --- | --- | --- |
@@ -775,11 +718,7 @@ Características generales que todas las API REST deben de cumplir:
 | presupuestar | Boolean | Indica si es necesario notificar al sistema de gestión económica el presupuesto de la anualidad. Si toma el valor "Sí" indica que se debe de notificar al sistema de gestión económica el detalle del presupuesto para la anualidad. |
 | enviadoSge | Boolean | Indica si el presupuesto de la anualidad ha sido notificado o no al sistema de gestión económica. |
 
-
-
 **ProyectoAnualidadResumen** Ampliar origen
-
-
 
 ```
 	{
@@ -793,14 +732,9 @@ Características generales que todas las API REST deben de cumplir:
 		"presupuestar": false,
         "enviadoSge": false
 	}
-
-
 ```
 
-
 ##### ProyectoPresupuestoTotales
-
-
 
 | Nombre | Tipo | Descripción |
 | --- | --- | --- |
@@ -813,11 +747,7 @@ Características generales que todas las API REST deben de cumplir:
 | importeTotalPresupuestoUniversidadCostesIndirectos | BigDecimal | Importe total (suma del importe de todas las anualidades) presupuestado a la Universidad para el desarrollo del proyecto, asociado a conceptos de gasto que representan costes indirectos. |
 | importeTotalConcedidoUniversidadCostesIndirectos | BigDecimal | Importe total (suma del importe de todas las anualidades) concedido a la Universidad para el desarrollo del proyecto, asociado a conceptos de gasto que representan costes indirectos. |
 
-
-
 **ProyectoPresupuestoTotales** Ampliar origen
-
-
 
 ```
 {
@@ -832,10 +762,7 @@ Características generales que todas las API REST deben de cumplir:
 }
 ```
 
-
 ##### ProyectoClasificacion
-
-
 
 | Nombre | Tipo | Descripción |
 | --- | --- | --- |
@@ -845,59 +772,52 @@ Características generales que todas las API REST deben de cumplir:
 | lastModifiedBy | String | Nombre del usuario que ha modificado por última vez la entidad. |
 | lastModifiedDate | String | Fecha de la última modificación de la entidad. |
 | proyectoId | Long | Identificador del proyecto. |
-| clasificacionRef | String | Identificador de la clasificación.Ver diseño del API de SGO para obtener el detalle de una clasificación a a partir de su identificador: [SGI \- ESB \- SGO](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sgo/index.md "/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sgo/index.md") |
+| clasificacionRef | String | Identificador de la clasificación.  Ver diseño del API de SGO para obtener el detalle de una clasificación a a partir de su identificador: [SGI - ESB - SGO](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sgo) |
 
 ##### NotificacionProyecto
 
-
-
-| **Nombre** | **Tipo** | **Descripción** |
+|  |  |  |
 | --- | --- | --- |
+| **Nombre** | **Tipo** | **Descripción** |
 | id | Long | Identificador de la entidad NotificacionProyectoExternoCVN |
 | proyectoId | Long | Identificador del proyecto. |
 | proyectoCVNId | String | Identificador único o referencia del proyecto/contrato registrado en el CVN |
 | solicitanteRef | String | Referencia de la persona dentro del sistema de gestión de personas corporativo a la que pertenece el ítem proyecto/contrato registrado en CVN. |
 | autorizacionId | Long | Identificador de la solicitud de autorización previamente remitido por el SGI |
-| titulo | String | Campo título del ítem proyecto/contrato registrado en CVN.La correspondencia con la norma FECYT de CVN es: se corresponderá con el campo 050\.020\.010\.010 \- Nombre del proyecto, en el caso de que el proyecto se registre en el epígrafe 050\.020\.010\.000 \- Proyectos de I\+D\+i financiados en convocatorias competitivas de Administraciones o entidades públicas y privadas, o con el campo 050\.020\.020\.010 \- Nombre del proyecto, en el caso de que el proyecto se registre en el epígrafe 050\.020\.020\.000 \- Contratos, convenios o proyectos de I\+D\+i no competitivos con Administraciones o entidades públicas o privadas. |
-| codExterno | String | Referencia que se le ha dado el proyecto en la entidad convocante/financiadora recogida en CVN.La correspondencia con la norma FECYT de CVN es: se corresponderá con el campo 050\.020\.010\.260 \- Código de proyecto según la entidad financiadora, en el caso de que el proyecto se registre en el epígrafe 050\.020\.010\.000 \- Proyectos de I\+D\+i financiados en convocatorias competitivas de Administraciones o entidades públicas y privadas, o con el campo 050\.020\.020\.110 \- Código de proyecto según la entidad financiadora, en el caso de que el proyecto se registre en el epígrafe 050\.020\.020\.000 \- Contratos, convenios o proyectos de I\+D\+i no competitivos con Administraciones o entidades públicas o privadas. |
-| fechaInicio | String | Fecha de inicio del proyecto/contrato recogido en CVN.La correspondencia con la norma FECYT de CVN es: se corresponderá con el campo 050\.020\.010\.270 \- Fecha de inicio del proyecto, en el caso de que el proyecto se registre en el epígrafe 050\.020\.010\.000 \- Proyectos de I\+D\+i financiados en convocatorias competitivas de Administraciones o entidades públicas y privadas, o con el campo 050\.020\.020\.180 \- Fecha de inicio del proyecto, en el caso de que el proyecto se registre en el epígrafe 050\.020\.020\.000 \- Contratos, convenios o proyectos de I\+D\+i no competitivos con Administraciones o entidades públicas o privadas. |
-| fechaFin | String | Fecha de fin del proyecto/contrato recogido en CVN.La correspondencia con la norma FECYT de CVN es: se corresponderá con el campo 050\.020\.010\.410 \- Fecha de finalización, en el caso de que el proyecto se registre en el epígrafe 050\.020\.010\.000 \- Proyectos de I\+D\+i financiados en convocatorias competitivas de Administraciones o entidades públicas y privadas. En el caso de que el proyecto se registre bajo el epígrafe 050\.020\.020\.000 \- Contratos, convenios o proyectos de I\+D\+i no competitivos con Administraciones o entidades públicas o privadas, este campo no estará disponible, al no estar contemplado en la norma CVN. |
-| ambitoGeografico | String | Ámbito geográfico del proyecto/contrato recogido en CVN.La correspondencia con la norma FECYT de CVN es: se corresponde con el campo 050\.020\.010\.040 \- Ámbito del proyecto (o 050\.020\.010\.050 Ámbito del proyecto, otros si el valor es OTHERS) en el caso de que el proyecto se registre en el epígrafe 050\.020\.010\.000 \- Proyectos de I\+D\+i financiados en convocatorias competitivas de Administraciones o entidades públicas y privadas, o con el campo 050\.020\.020\.040 Ámbito del proyecto (050\.020\.020\.050 Ámbito del proyecto, otros) , en el caso de que el proyecto se registre en el epígrafe 050\.020\.020\.000 \- Contratos, convenios o proyectos de I\+D\+i no competitivos con Administraciones o entidades públicas o privadas.Se enviará el texto, no el código. Es decir:* Autonómica * Nacional * Unión Europea * Internacional no UE * (texto del campo "Ámbito del proyecto, otros") |
-| responsableRef | String | Referencia de la persona dentro del Sistema de gestión de personas corporativo asociado al dato recogido sobre el campo IP de CVN. La correspondencia con la norma FECYT de CVN es: se corresponderá con el campo 050\.020\.010\.140 Nombre del/de la investigador/a principal (IP, Co\-IP,...), en el caso de que el proyecto se registre en el epígrafe 050\.020\.010\.000 \- Proyectos de I\+D\+i financiados en convocatorias competitivas de Administraciones o entidades públicas y privadas, o con el campo 050\.020\.020\.250 Nombre del/de la investigador/a principal (IP, Co\-IP,...), en el caso de que el proyecto se registre en el epígrafe 050\.020\.020\.000 \- Contratos, convenios o proyectos de I\+D\+i no competitivos con Administraciones o entidades públicas o privadas. |
-| datosResponsable | String | Nombre de la persona que ocupa el cargo de IP del proyecto, recogida en CVN. En caso de que el IP del proyecto no este dado de alta en el Sistema de gestión de personas.La correspondencia con la norma FECYT de CVN es: se corresponderá con el campo 050\.020\.010\.140 Nombre del/de la investigador/a principal (IP, Co\-IP,...), en el caso de que el proyecto se registre en el epígrafe 050\.020\.010\.000 \- Proyectos de I\+D\+i financiados en convocatorias competitivas de Administraciones o entidades públicas y privadas, o con el campo 050\.020\.020\.250 Nombre del/de la investigador/a principal (IP, Co\-IP,...), en el caso de que el proyecto se registre en el epígrafe 050\.020\.020\.000 \- Contratos, convenios o proyectos de I\+D\+i no competitivos con Administraciones o entidades públicas o privadas. |
-| entidadParticipacionRef | String | Referencia de la entidad dentro del Sistema de gestión de empresas corporativo asociado al dato recogido sobre el campo Entidad donde se desarrolla del CVN.La correspondencia con la norma FECYT será: campo  050\.020\.010\.100 Entidad donde se desarrolla, en el caso de que el proyecto se registre en el epígrafe 050\.020\.010\.000 \- Proyectos de I\+D\+i financiados en convocatorias competitivas de Administraciones o entidades públicas y privadas, o con el campo 050\.020\.020\.370 Entidad donde se desarrolla, en el caso de que el proyecto se registre en el epígrafe 050\.020\.020\.000 \- Contratos, convenios o proyectos de I\+D\+i no competitivos con Administraciones o entidades públicas o privadas. |
-| datosEntidadParticipacion | String | Nombre de la entidad recogido sobre el campo Entidad donde se desarrolla del CVN. En caso de que la entidad no este dada de alta en el Sistema de gestión de empresas.La correspondencia con la norma FECYT será: campo  050\.020\.010\.100 Entidad donde se desarrolla, en el caso de que el proyecto se registre en el epígrafe 050\.020\.010\.000 \- Proyectos de I\+D\+i financiados en convocatorias competitivas de Administraciones o entidades públicas y privadas, o con el campo 050\.020\.020\.370 Entidad donde se desarrolla, en el caso de que el proyecto se registre en el epígrafe 050\.020\.020\.000 \- Contratos, convenios o proyectos de I\+D\+i no competitivos con Administraciones o entidades públicas o privadas. |
-| nombrePrograma | String | Nombre del programa de financiación recogido en el CVN. Se corresponde con el campo 050\.020\.010\.250 Nombre del programa de financiación, en el caso de que el proyecto se registre en el epígrafe 050\.020\.010\.000 \- Proyectos de I\+D\+i financiados en convocatorias competitivas de Administraciones o entidades públicas y privadas, o con el campo 050\.020\.020\.170 Nombre del programa asociado al proyecto, en el caso de que el proyecto se registre en el epígrafe 050\.020\.020\.000 \- Contratos, convenios o proyectos de I\+D\+i no competitivos con Administraciones o entidades públicas o privadas. |
-| importeTotal | Numérico | Importe total del proyecto/programa recogido en el CVN. Se corresponde con el campo 050\.020\.010\.290 Financiación del proyecto, cuantía total, en el caso de que el proyecto se registre en el epígrafe 050\.020\.010\.000 \- Proyectos de I\+D\+i financiados en convocatorias competitivas de Administraciones o entidades públicas y privadas, o con el campo 050\.020\.020\.200 Financiación del proyecto, cuantía total, en el caso de que el proyecto se registre en el epígrafe 050\.020\.020\.000 \- Contratos, convenios o proyectos de I\+D\+i no competitivos con Administraciones o entidades públicas o privadas. |
-| porcentajeSubvencion | Numérico | Porcentaje subvencionado recogido en el CVN.Se corresponde con el campo 050\.020\.010\.310 Financiación del proyecto, porcentaje en subvención, en el caso de que el proyecto se registre en el epígrafe 050\.020\.010\.000 \- Proyectos de I\+D\+i financiados en convocatorias competitivas de Administraciones o entidades públicas y privadas, o con el campo 050\.020\.020\.220 Financiación del proyecto, porcentaje en subvención, en el caso de que el proyecto se registre en el epígrafe 050\.020\.020\.000 \- Contratos, convenios o proyectos de I\+D\+i no competitivos con Administraciones o entidades públicas o privadas. |
+| titulo | String | Campo título del ítem proyecto/contrato registrado en CVN.  La correspondencia con la norma FECYT de CVN es: se corresponderá con el campo 050.020.010.010 - Nombre del proyecto, en el caso de que el proyecto se registre en el epígrafe 050.020.010.000 - Proyectos de I+D+i financiados en convocatorias competitivas de Administraciones o entidades públicas y privadas, o con el campo 050.020.020.010 - Nombre del proyecto, en el caso de que el proyecto se registre en el epígrafe 050.020.020.000 - Contratos, convenios o proyectos de I+D+i no competitivos con Administraciones o entidades públicas o privadas. |
+| codExterno | String | Referencia que se le ha dado el proyecto en la entidad convocante/financiadora recogida en CVN.  La correspondencia con la norma FECYT de CVN es: se corresponderá con el campo 050.020.010.260 - Código de proyecto según la entidad financiadora, en el caso de que el proyecto se registre en el epígrafe 050.020.010.000 - Proyectos de I+D+i financiados en convocatorias competitivas de Administraciones o entidades públicas y privadas, o con el campo 050.020.020.110 - Código de proyecto según la entidad financiadora, en el caso de que el proyecto se registre en el epígrafe 050.020.020.000 - Contratos, convenios o proyectos de I+D+i no competitivos con Administraciones o entidades públicas o privadas. |
+| fechaInicio | String | Fecha de inicio del proyecto/contrato recogido en CVN.  La correspondencia con la norma FECYT de CVN es: se corresponderá con el campo 050.020.010.270 - Fecha de inicio del proyecto, en el caso de que el proyecto se registre en el epígrafe 050.020.010.000 - Proyectos de I+D+i financiados en convocatorias competitivas de Administraciones o entidades públicas y privadas, o con el campo 050.020.020.180 - Fecha de inicio del proyecto, en el caso de que el proyecto se registre en el epígrafe 050.020.020.000 - Contratos, convenios o proyectos de I+D+i no competitivos con Administraciones o entidades públicas o privadas. |
+| fechaFin | String | Fecha de fin del proyecto/contrato recogido en CVN.  La correspondencia con la norma FECYT de CVN es: se corresponderá con el campo 050.020.010.410 - Fecha de finalización, en el caso de que el proyecto se registre en el epígrafe 050.020.010.000 - Proyectos de I+D+i financiados en convocatorias competitivas de Administraciones o entidades públicas y privadas. En el caso de que el proyecto se registre bajo el epígrafe 050.020.020.000 - Contratos, convenios o proyectos de I+D+i no competitivos con Administraciones o entidades públicas o privadas, este campo no estará disponible, al no estar contemplado en la norma CVN. |
+| ambitoGeografico | String | Ámbito geográfico del proyecto/contrato recogido en CVN.  La correspondencia con la norma FECYT de CVN es: se corresponde con el campo 050.020.010.040 - Ámbito del proyecto (o 050.020.010.050 Ámbito del proyecto, otros si el valor es OTHERS) en el caso de que el proyecto se registre en el epígrafe 050.020.010.000 - Proyectos de I+D+i financiados en convocatorias competitivas de Administraciones o entidades públicas y privadas, o con el campo 050.020.020.040 Ámbito del proyecto (050.020.020.050 Ámbito del proyecto, otros) , en el caso de que el proyecto se registre en el epígrafe 050.020.020.000 - Contratos, convenios o proyectos de I+D+i no competitivos con Administraciones o entidades públicas o privadas.  Se enviará el texto, no el código. Es decir:   * Autonómica * Nacional * Unión Europea * Internacional no UE * (texto del campo "Ámbito del proyecto, otros") |
+| responsableRef | String | Referencia de la persona dentro del Sistema de gestión de personas corporativo asociado al dato recogido sobre el campo IP de CVN.  La correspondencia con la norma FECYT de CVN es: se corresponderá con el campo 050.020.010.140 Nombre del/de la investigador/a principal (IP, Co-IP,...), en el caso de que el proyecto se registre en el epígrafe 050.020.010.000 - Proyectos de I+D+i financiados en convocatorias competitivas de Administraciones o entidades públicas y privadas, o con el campo 050.020.020.250 Nombre del/de la investigador/a principal (IP, Co-IP,...), en el caso de que el proyecto se registre en el epígrafe 050.020.020.000 - Contratos, convenios o proyectos de I+D+i no competitivos con Administraciones o entidades públicas o privadas. |
+| datosResponsable | String | Nombre de la persona que ocupa el cargo de IP del proyecto, recogida en CVN. En caso de que el IP del proyecto no este dado de alta en el Sistema de gestión de personas.  La correspondencia con la norma FECYT de CVN es: se corresponderá con el campo 050.020.010.140 Nombre del/de la investigador/a principal (IP, Co-IP,...), en el caso de que el proyecto se registre en el epígrafe 050.020.010.000 - Proyectos de I+D+i financiados en convocatorias competitivas de Administraciones o entidades públicas y privadas, o con el campo 050.020.020.250 Nombre del/de la investigador/a principal (IP, Co-IP,...), en el caso de que el proyecto se registre en el epígrafe 050.020.020.000 - Contratos, convenios o proyectos de I+D+i no competitivos con Administraciones o entidades públicas o privadas. |
+| entidadParticipacionRef | String | Referencia de la entidad dentro del Sistema de gestión de empresas corporativo asociado al dato recogido sobre el campo Entidad donde se desarrolla del CVN.  La correspondencia con la norma FECYT será: campo  050.020.010.100 Entidad donde se desarrolla, en el caso de que el proyecto se registre en el epígrafe 050.020.010.000 - Proyectos de I+D+i financiados en convocatorias competitivas de Administraciones o entidades públicas y privadas, o con el campo 050.020.020.370 Entidad donde se desarrolla, en el caso de que el proyecto se registre en el epígrafe 050.020.020.000 - Contratos, convenios o proyectos de I+D+i no competitivos con Administraciones o entidades públicas o privadas. |
+| datosEntidadParticipacion | String | Nombre de la entidad recogido sobre el campo Entidad donde se desarrolla del CVN. En caso de que la entidad no este dada de alta en el Sistema de gestión de empresas.  La correspondencia con la norma FECYT será: campo  050.020.010.100 Entidad donde se desarrolla, en el caso de que el proyecto se registre en el epígrafe 050.020.010.000 - Proyectos de I+D+i financiados en convocatorias competitivas de Administraciones o entidades públicas y privadas, o con el campo 050.020.020.370 Entidad donde se desarrolla, en el caso de que el proyecto se registre en el epígrafe 050.020.020.000 - Contratos, convenios o proyectos de I+D+i no competitivos con Administraciones o entidades públicas o privadas. |
+| nombrePrograma | String | Nombre del programa de financiación recogido en el CVN.  Se corresponde con el campo 050.020.010.250 Nombre del programa de financiación, en el caso de que el proyecto se registre en el epígrafe 050.020.010.000 - Proyectos de I+D+i financiados en convocatorias competitivas de Administraciones o entidades públicas y privadas, o con el campo 050.020.020.170 Nombre del programa asociado al proyecto, en el caso de que el proyecto se registre en el epígrafe 050.020.020.000 - Contratos, convenios o proyectos de I+D+i no competitivos con Administraciones o entidades públicas o privadas. |
+| importeTotal | Numérico | Importe total del proyecto/programa recogido en el CVN.  Se corresponde con el campo 050.020.010.290 Financiación del proyecto, cuantía total, en el caso de que el proyecto se registre en el epígrafe 050.020.010.000 - Proyectos de I+D+i financiados en convocatorias competitivas de Administraciones o entidades públicas y privadas, o con el campo 050.020.020.200 Financiación del proyecto, cuantía total, en el caso de que el proyecto se registre en el epígrafe 050.020.020.000 - Contratos, convenios o proyectos de I+D+i no competitivos con Administraciones o entidades públicas o privadas. |
+| porcentajeSubvencion | Numérico | Porcentaje subvencionado recogido en el CVN.  Se corresponde con el campo 050.020.010.310 Financiación del proyecto, porcentaje en subvención, en el caso de que el proyecto se registre en el epígrafe 050.020.010.000 - Proyectos de I+D+i financiados en convocatorias competitivas de Administraciones o entidades públicas y privadas, o con el campo 050.020.020.220 Financiación del proyecto, porcentaje en subvención, en el caso de que el proyecto se registre en el epígrafe 050.020.020.000 - Contratos, convenios o proyectos de I+D+i no competitivos con Administraciones o entidades públicas o privadas. |
 | documentoRef | String | Identificador del documento acreditativo de la concesión del proyecto |
 | urlAcreditativa | String | URL acreditativa en repositorios ajenos a la Universidad |
-| entidadesFinanciadoras | Lista\[EntidadFinanciadora] | Listado de entidades financiadoras del CVN. |
+| entidadesFinanciadoras | Lista[EntidadFinanciadora] | Listado de entidades financiadoras del CVN. |
 
 ##### EntidadFinanciadora
 
-
-
-| **Nombre** | **Tipo** | **Descripción** |
+|  |  |  |
 | --- | --- | --- |
-| entidadFinanciadoraRef | String | Referencia de la entidad dentro del Sistema de gestión de empresas corporativo asociado al dato recogido sobre el campo Entidades financiadoras del CVN. Se corresponde con el campo 050\.020\.010\.190 Entidad/es financiadora/s, en el caso de que el proyecto se registre en el epígrafe 050\.020\.010\.000 \- Proyectos de I\+D\+i financiados en convocatorias competitivas de Administraciones o entidades públicas y privadas, o con el campo 050\.020\.020\.120 Nombre/s entidad/es financiadora/s, en el caso de que el proyecto se registre en el epígrafe 050\.020\.020\.000 \- Contratos, convenios o proyectos de I\+D\+i no competitivos con Administraciones o entidades públicas o privadas. |
-| datosEntidadFinanciadora | String | Nombre de la entidad recogido sobre el campo Entidades financiadoras del CVN. En caso de que la entidad no este dada de alta en el Sistema de gestión de empresas.Se corresponde con el campo 050\.020\.010\.190 Entidad/es financiadora/s, en el caso de que el proyecto se registre en el epígrafe 050\.020\.010\.000 \- Proyectos de I\+D\+i financiados en convocatorias competitivas de Administraciones o entidades públicas y privadas, o con el campo 050\.020\.020\.120 Nombre/s entidad/es financiadora/s, en el caso de que el proyecto se registre en el epígrafe 050\.020\.020\.000 \- Contratos, convenios o proyectos de I\+D\+i no competitivos con Administraciones o entidades públicas o privadas. |
+| **Nombre** | **Tipo** | **Descripción** |
+| entidadFinanciadoraRef | String | Referencia de la entidad dentro del Sistema de gestión de empresas corporativo asociado al dato recogido sobre el campo Entidades financiadoras del CVN.  Se corresponde con el campo 050.020.010.190 Entidad/es financiadora/s, en el caso de que el proyecto se registre en el epígrafe 050.020.010.000 - Proyectos de I+D+i financiados en convocatorias competitivas de Administraciones o entidades públicas y privadas, o con el campo 050.020.020.120 Nombre/s entidad/es financiadora/s, en el caso de que el proyecto se registre en el epígrafe 050.020.020.000 - Contratos, convenios o proyectos de I+D+i no competitivos con Administraciones o entidades públicas o privadas. |
+| datosEntidadFinanciadora | String | Nombre de la entidad recogido sobre el campo Entidades financiadoras del CVN. En caso de que la entidad no este dada de alta en el Sistema de gestión de empresas.  Se corresponde con el campo 050.020.010.190 Entidad/es financiadora/s, en el caso de que el proyecto se registre en el epígrafe 050.020.010.000 - Proyectos de I+D+i financiados en convocatorias competitivas de Administraciones o entidades públicas y privadas, o con el campo 050.020.020.120 Nombre/s entidad/es financiadora/s, en el caso de que el proyecto se registre en el epígrafe 050.020.020.000 - Contratos, convenios o proyectos de I+D+i no competitivos con Administraciones o entidades públicas o privadas. |
 
 ##### PalabraClave
 
-
-
-| **Nombre** | **Tipo** | **Descripción** |
+|  |  |  |
 | --- | --- | --- |
+| **Nombre** | **Tipo** | **Descripción** |
 | id | Long | Identificador único autogenerado de la palabra clave. |
 | proyectoId | Long | Identificador del proyecto al que se asocia la palabra clave. |
 | palabraClaveRef | String | Referencia a la palabra clave. Coincide con el texto de la palabra clave por ser único en el diccionario de todo el SGI. |
 
-
-
 **PalabraClave** Ampliar origen
-
-
 
 ```
 {
@@ -907,26 +827,19 @@ Características generales que todas las API REST deben de cumplir:
 }
 ```
 
-
 ##### ProyectoAreaConocimiento
-
-
 
 | Nombre | Tipo | Descripción |
 | --- | --- | --- |
 | createdBy | String | Referencia al usuario creador del registro en los sistemas de la Universidad. |
-| creationDate | Fecha \+ Hora | Fecha y hora de creación del registro.Formato UTC. |
+| creationDate | Fecha + Hora | Fecha y hora de creación del registro.  Formato UTC. |
 | lastModifiedBy | String | Referencia al último usuario que modificó el registro en los sistemas de la Universidad. |
-| lastModifiedDate | Fecha \+ Hora | Fecha y hora de creación del registro.Formato UTC. |
+| lastModifiedDate | Fecha + Hora | Fecha y hora de creación del registro.  Formato UTC. |
 | id | Long | Identificador único del área de conocimiento del proyecto. |
 | proyectoId | Long | Referencia al proyecto. |
 | areaConocimientoRef | String | Referencia al área de conocimiento en los sistemas de la Universidad. |
 
-
-
 **SolicitudAreaConocimiento** Ampliar origen
-
-
 
 ```
  {
@@ -940,28 +853,23 @@ Características generales que todas las API REST deben de cumplir:
 }
 ```
 
-
 #### Servicios
 
 Para componer la URL llamada completa, se debe anteponer a lo indicado en la columna URL lo siguiente: **{HOST}/api/sgicsp**, donde **{HOST}** de deberá sustituir el dominio correspondiente al entorno al que se está accediendo y dicho acceso será por http o https según el caso.
 
 | Método | URL | Parámetros | Respuesta | Descripción |
 | --- | --- | --- | --- | --- |
-| GET | /proyectos/modificados\-ids | q\+sLa query estará formada por:* fechaModificacion | Lista\[Long] | Listado de Identificadores de Proyecto activos y que no sean confidenciales que han sido modificados, tanto la entidad Proyecto como en las siguientes entidades relacionadas:* ProyectoEquipo * ContextoProyecto * ProyectoEntidadGestora * ProyectoEntidadConvocante * ProyectoEntidadFinanciadora * ProyectoAnualidad * AnualidadGasto * EstadoProyecto * ProyectoArea * ProyectoConceptoGasto * ProyectoDocumento * ProyectoFacturacion * ProyectoFase * ProyectoHito * ProyectoPartida * ProyectoPeriodoJustificacion * ProyectoPeriodoSeguimiento * ProyectoProrroga * ProyectoProyectoSGE * ProyectoResponsableEconomico * ProyectoSocio  Se utilizarán los siguiente parámetros en la llamada al servicio* fechaModificacion: se le pasará la fecha a partir de la cual se quieren ver los cambios * estado: igual a concedido * clasificacionCVN: que tengan informado este campo con uno de los tres valores posibles  Ejemplo:* fechaModificacion\=ge\="2021\-08\-18T22:00:00Z";estado\=\="CONCEDIDO";clasificacionCVN\=in\=("COMPETITIVOS","NO\_COMPETITIVOS","AYUDAS") |
-| GET | /proyectos | q\+s (query \+ sort)La query estará formada por:* cualquiera de los campos del objeto Proyecto | Lista\[Proyecto] | Listado de proyectos.*Ejemplo*:activo\=\=true |
+| GET | /proyectos/modificados-ids | q+s  La query estará formada por:   * fechaModificacion | Lista[Long] | Listado de Identificadores de Proyecto activos que han sido modificados, tanto la entidad Proyecto como en las siguientes entidades relacionadas:   * ProyectoEquipo * ContextoProyecto * ProyectoEntidadGestora * ProyectoEntidadConvocante * ProyectoEntidadFinanciadora * ProyectoAnualidad * AnualidadGasto * EstadoProyecto * ProyectoArea * ProyectoConceptoGasto * ProyectoDocumento * ProyectoFacturacion * ProyectoFase * ProyectoHito * ProyectoPartida * ProyectoPeriodoJustificacion * ProyectoPeriodoSeguimiento * ProyectoProrroga * ProyectoProyectoSGE * ProyectoResponsableEconomico * ProyectoSocio   Se utilizarán los siguiente parámetros en la llamada al servicio   * fechaModificacion: se le pasará la fecha a partir de la cual se quieren ver los cambios * estado: igual a concedido * clasificacionCVN: que tengan informado este campo con uno de los tres valores posibles   Ejemplo:   * fechaModificacion=ge="2021-08-18T22:00:00Z";estado=="CONCEDIDO";clasificacionCVN=in=("COMPETITIVOS","NO\_COMPETITIVOS","AYUDAS") |
+| GET | /proyectos | q+s (query + sort)  La query estará formada por:   * cualquiera de los campos del objeto Proyecto | Lista[Proyecto] | Listado de proyectos.  *Ejemplo*:  activo==true |
 | GET | /proyectos/{id} |  | Proyecto | Datos generales de un Proyecto |
 | GET | /proyectos/{id}/contexto |  | ProyectoContexto | Datos del contexto de un Proyecto |
-| GET | /proyectos/{id}/equipo |  | Lista\[ProyectoEquipo] | Listado de miembros del equipo de un Proyecto |
-| GET | /proyectos/{id}/entidadgestoras |  | Lista\[ProyectoEntidadGestora] | Listado de entidades gestoras de un Proyecto |
-| GET | /proyectos/{id}/entidadconvocantes |  | Lista\[ProyectoEntidadConvocante] | Listado de entidades convocantes de un Proyecto |
-| GET | /proyectos/{id}/entidadfinanciadoras |  | Lista\[ProyectoEntidadFinanciadora] | Listado de entidades financiadoras de un Proyecto |
-| GET | /proyectos/{id}/anualidades |  | Lista\[ProyectoAnualidadResumen] | Listado de anualidades de un Proyecto |
-| GET | /proyectos/{id}/presupuesto\-totales |  | ProyectoPresupuestoTotales | Importes totales obtenidos de las anualidades de un proyecto (los importes del presupuesto introducidos manualmente se encuentran dentro del objeto Proyecto).*Ejemplo*:/proyectos/1/presupuesto\-totales |
-| GET | /proyectos/{id}/proyectoclasificaciones |  | Lista\[ProyectoClasificacion] | Listado de clasificaciones de un Proyecto |
-| GET | /proyectos/{id}/notificacionesproyectos |  | Lista\[NotificacionProyectoExternoCVN] | Listado de notificaciones de proyectos exterons del CVN asociados a un Proyecto del SGI |
-| GET | /proyectos/{id}/areasconocimento |  | Lista\[ProyectoAreaConocimiento] | Listado de áreas de conocimiento de un Proyecto. |
-| GET | /proyectos/{id}/palabrasclave |  | Lista\[PalabraClave] | Listado de palabras clave de un Proyecto. |
-
-
-
-
+| GET | /proyectos/{id}/equipo |  | Lista[ProyectoEquipo] | Listado de miembros del equipo de un Proyecto |
+| GET | /proyectos/{id}/entidadgestoras |  | Lista[ProyectoEntidadGestora] | Listado de entidades gestoras de un Proyecto |
+| GET | /proyectos/{id}/entidadconvocantes |  | Lista[ProyectoEntidadConvocante] | Listado de entidades convocantes de un Proyecto |
+| GET | /proyectos/{id}/entidadfinanciadoras |  | Lista[ProyectoEntidadFinanciadora] | Listado de entidades financiadoras de un Proyecto |
+| GET | /proyectos/{id}/anualidades |  | Lista[ProyectoAnualidadResumen] | Listado de anualidades de un Proyecto |
+| GET | /proyectos/{id}/presupuesto-totales |  | ProyectoPresupuestoTotales | Importes totales obtenidos de las anualidades de un proyecto (los importes del presupuesto introducidos manualmente se encuentran dentro del objeto Proyecto).  *Ejemplo*:  /proyectos/1/presupuesto-totales |
+| GET | /proyectos/{id}/proyectoclasificaciones |  | Lista[ProyectoClasificacion] | Listado de clasificaciones de un Proyecto |
+| GET | /proyectos/{id}/notificacionesproyectos |  | Lista[NotificacionProyectoExternoCVN] | Listado de notificaciones de proyectos exterons del CVN asociados a un Proyecto del SGI |
+| GET | /proyectos/{id}/areasconocimento |  | Lista[ProyectoAreaConocimiento] | Listado de áreas de conocimiento de un Proyecto. |
+| GET | /proyectos/{id}/palabrasclave |  | Lista[PalabraClave] | Listado de palabras clave de un Proyecto. |

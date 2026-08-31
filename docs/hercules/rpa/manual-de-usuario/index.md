@@ -1,8 +1,6 @@
-# Hércules : Manual de Usuario
+# Manual de Usuario
 
-
-
-## **1\. Acceso a Hércules\-RPA Dashboard**
+## **1. Acceso a Hércules-RPA Dashboard**
 
 Antes de acceder al Dashboard hay que registrarse en la pantalla de “Log In”, siendo necesario introducir el nombre de usuario y contraseña facilitados por el equipo. Una vez introducido las credenciales hay que pulsar el botón LOGIN.
 
@@ -16,7 +14,7 @@ Si las credenciales introducidas son correctas se tendrá acceso a la vista prin
 
 ![](/attachments/621019186/621903987.png)
 
-## **2\. Vista principal del Dashboard**
+## **2. Vista principal del Dashboard**
 
 Esta vista principal muestra las estadísticas de funcionamiento en distintos rangos de tiempo, información de los robots que actualmente se encuentran conectados, listado de errores, procesos completados y últimas ejecuciones de procesos entre otros campos. Cada componente dispone de un acceso directo a su sección concreta al que se accederá mediante un sistema de routing transparente a los usuarios de la interfaz.
 
@@ -48,16 +46,13 @@ Por último, también se puede visualizar desde la vista principal en forma de t
 
 ![](/attachments/621019186/622821467.png)
 
-  
-
-
-## **3\. Nuevo proceso**
+## **3. Nuevo proceso**
 
 Esta vista ofrece información de todos los procesos disponibles para ser ejecutados por los robots incluyendo el listado de robots capacitados para ejecutar cada uno de los procesos. Al seleccionar alguno de los elementos del listado mediante doble clic, se redirige al usuario a la siguiente sección del proceso, donde se muestra un formulario, adaptado a las necesidades concretas de cada uno de los procesos, para poder parametrizar y facilitar la información necesaria, si procede, para llevar a cabo la ejecución del proceso.
 
 ![](/attachments/621019186/621903996.png)
 
-## **4\. Formulario de un proceso**
+## **4. Formulario de un proceso**
 
 Esta vista muestra un formulario para rellenar los datos de entrada que va a necesitar el proceso. En la siguiente imagen se puede ver un ejemplo de formulario asociado al proceso 3, específicamente el subproceso de extracción de convocatorias.
 
@@ -71,9 +66,9 @@ En “opciones generales” se permite establecer la planificación de detalles,
 
 ![](/attachments/621019186/621903999.png)
 
-El formulario detallado para cada uno de los procesos aparece especificado en [Ejecución de los procesos](/hercules/rpa/manual-de-usuario/ejecucion-de-los-procesos/index.md "/hercules/rpa/manual-de-usuario/ejecucion-de-los-procesos/index.md").
+El formulario detallado para cada uno de los procesos aparece especificado en [Ejecución de los procesos](/hercules/rpa/manual-de-usuario/ejecucion-de-los-procesos).
 
-## **5\. Información de los robots**
+## **5. Información de los robots**
 
 **![](/attachments/621019186/621903991.png)**
 
@@ -97,10 +92,7 @@ Y dispone de información sobre estadísticas de CPU, memoria y disco usado por 
 
 ![](/attachments/621019186/621904112.png)
 
-  
-
-
-## **6\. Historial de ejecuciones**
+## **6. Historial de ejecuciones**
 
 A través de la vista principal del Dashboard pinchando en la tarjeta recuadrada que aparece en la siguiente imagen, se puede acceder a información sobre el historial de ejecuciones.
 
@@ -110,7 +102,7 @@ Esta vista muestra una tabla con el histórico de todos los procesos que se han 
 
 ![](/attachments/621019186/621904026.png)
 
-Haciendo doble clic sobre cualquier proceso, el usuario es redireccionado hacia la vista que contiene la información completa de esa ejecución. Asimismo, también podrá hacer clic sobre los router\-links marcados en azul para ir directamente a la ventana pertinente del elemento seleccionado, permitiendo obtener información sobre el robot que ha ejecutado el proceso o información sobre la planificación.
+Haciendo doble clic sobre cualquier proceso, el usuario es redireccionado hacia la vista que contiene la información completa de esa ejecución. Asimismo, también podrá hacer clic sobre los router-links marcados en azul para ir directamente a la ventana pertinente del elemento seleccionado, permitiendo obtener información sobre el robot que ha ejecutado el proceso o información sobre la planificación.
 
 ![](/attachments/621019186/621904030.png)
 
@@ -120,20 +112,17 @@ Por último, dispone de un botón que permite descargar en un fichero el log gen
 
 ![](/attachments/621019186/621904032.png)
 
-  
-
-
-## **7\. Planificaciones activas**
+## **7. Planificaciones activas**
 
 Esta vista muestra, en formato de tabla, las planificaciones que actualmente están activas en el sistema, es decir, aquellas que no se han borrado, cancelado o terminado. El usuario dispone de información relevante sobre la planificación, como qué robot la lleva a cabo, la fecha de creación, a qué proceso pertenece y cuál es la siguiente ejecución programada.
 
 ![](/attachments/621019186/621904033.png)
 
-Adicionalmente, el usuario puede borrar o editar la planificación usando los botones correspondientes desde la misma ventana y hacer doble clic para dirigirse a la ventana en la que se muestra toda la información de la planificación en cuestión. 
+Adicionalmente, el usuario puede borrar o editar la planificación usando los botones correspondientes desde la misma ventana y hacer doble clic para dirigirse a la ventana en la que se muestra toda la información de la planificación en cuestión.
 
-## **8\. Planificación individual**
+## **8. Planificación individual**
 
-Para poder acceder a la información de la planificación de un determinado proceso, hay que acceder al historial de ejecuciones y pinchar sobre el router\-link del campo "Planificación" del proceso que se quiere consultar dicha información. 
+Para poder acceder a la información de la planificación de un determinado proceso, hay que acceder al historial de ejecuciones y pinchar sobre el router-link del campo "Planificación" del proceso que se quiere consultar dicha información.
 
 ![](/attachments/621019186/622821417.png)
 
@@ -141,16 +130,13 @@ Esta vista ofrece información sobre la planificación de un proceso, como cada 
 
 ![](/attachments/621019186/622821412.png)
 
-  
-
-
-## **9\. Problemas y errores**
+## **9. Problemas y errores**
 
 Desde el menú principal se puede acceder al listado de problemas de ejecución. Esta vista permite al usuario visualizar toda la información relativa a los distintos avisos y errores que se hayan producido dentro del sistema durante su funcionamiento. Haciendo doble clic sobre el proceso se abre la vista con la información del log del proceso, proporcionando al usuario la información necesaria sobre el error en cuestión.
 
 ![](/attachments/621019186/622821421.png)
 
-## **10\. Configurador de procesos**
+## **10. Configurador de procesos**
 
 Esta vista contiene una lista con todos los configuradores de los procesos que existen en el sistema.
 
@@ -164,15 +150,8 @@ Haciendo doble clic sobre el proceso de interés se puede editar los configurado
 
 ![](/attachments/621019186/622821429.png)
 
-  
-
-
-## **11\. Configuración general de la aplicación**
+## **11. Configuración general de la aplicación**
 
 En esta vista se puede editar y comprobar la configuración de los distintos ajustes globales que tiene la aplicación, como direcciones de bases de datos, configuración AMQP, etc.
 
 ![](/attachments/621019186/622821465.png)
-
-
-
-

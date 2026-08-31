@@ -1,6 +1,4 @@
-# Hércules : Home de ED
-
-
+# Home de ED
 
 En esta página nos encontramos con la página de inicio para la sección de enriquecimiento de datos del proyecto de Hércules.
 
@@ -10,7 +8,7 @@ La Home de ED se divide en tres secciones, alertas, publicaciones de interés y 
 
 Esta sección se coloca en la parte izquierda superior de la home.
 
-La sección de alertas sigue el diseño de las alertas de Hércules, el cual se explica en profundidad en este apartado: [Alertas](/hercules/herramienta-de-cv-hercules-ed-enriquecimiento-de-datos/ed-manual-de-usuario/alertas.md "/hercules/herramienta-de-cv-hercules-ed-enriquecimiento-de-datos/ed-manual-de-usuario/alertas.md")
+La sección de alertas sigue el diseño de las alertas de Hércules, el cual se explica en profundidad en este apartado: [Alertas](/hercules/herramienta-de-cv-hercules-ed-enriquecimiento-de-datos/ed-manual-de-usuario/alertas)
 
 Las alertas será el lugar donde el usuario recibirá distintas notificaciones relacionadas, entre otros, con:
 
@@ -26,7 +24,7 @@ Esta sección está dividida en apartados distintivos por los cuales se pueden n
 
 En la parte inferior de las alertas podemos encontrar una sección que nos mostrará distintas publicaciones de posible interés para el usuario.
 
-Este listado de publicaciones es similar al que podemos encontrar en este apartado: [Búsqueda de publicaciones](/hercules/portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/ma-manual-de-usuario/paginas-de-busqueda/busqueda-de-publicaciones.md "/hercules/portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/ma-manual-de-usuario/paginas-de-busqueda/busqueda-de-publicaciones.md")
+Este listado de publicaciones es similar al que podemos encontrar en este apartado: [Búsqueda de publicaciones](/hercules/portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/ma-manual-de-usuario/paginas-de-busqueda/busqueda-de-publicaciones)
 
 ![](/attachments/598147454/598148080.png)
 
@@ -42,15 +40,11 @@ En la parte superior de este menú encontramos la foto de perfil del usuario jun
 
 Más abajo se encuentra todo el listado de acciones y zonas por las que navegar en Hércules, cada una explicada en su correspondiente sección:
 
-* [Herramienta de CV](/hercules/herramienta-de-cv-hercules-ed-enriquecimiento-de-datos/ed-manual-de-usuario/herramienta-de-cv/index.md "/hercules/herramienta-de-cv-hercules-ed-enriquecimiento-de-datos/ed-manual-de-usuario/herramienta-de-cv/index.md")
-	+ [Editor de CV](/hercules/herramienta-de-cv-hercules-ed-enriquecimiento-de-datos/ed-manual-de-usuario/herramienta-de-cv/editor-de-cv.md "/hercules/herramienta-de-cv-hercules-ed-enriquecimiento-de-datos/ed-manual-de-usuario/herramienta-de-cv/editor-de-cv.md")
-	+ [Importación de CV](/hercules/herramienta-de-cv-hercules-ed-enriquecimiento-de-datos/ed-manual-de-usuario/herramienta-de-cv/importacion-de-cv.md "/hercules/herramienta-de-cv-hercules-ed-enriquecimiento-de-datos/ed-manual-de-usuario/herramienta-de-cv/importacion-de-cv.md")
-	+ [Exportación de CV](/hercules/herramienta-de-cv-hercules-ed-enriquecimiento-de-datos/ed-manual-de-usuario/herramienta-de-cv/exportacion-de-cv.md "/hercules/herramienta-de-cv-hercules-ed-enriquecimiento-de-datos/ed-manual-de-usuario/herramienta-de-cv/exportacion-de-cv.md")
-* [Gestión de clusters (Equipos de proyecto)](/hercules/portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/ma-manual-de-usuario/gestion-de-clusters-equipos-de-proyecto.md "/hercules/portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/ma-manual-de-usuario/gestion-de-clusters-equipos-de-proyecto.md")
-* [Gestión de ofertas tecnológicas](/hercules/portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/ma-manual-de-usuario/gestion-de-ofertas-tecnologicas.md "/hercules/portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/ma-manual-de-usuario/gestion-de-ofertas-tecnologicas.md")
-* [Fuentes externas de información](/hercules/herramienta-de-cv-hercules-ed-enriquecimiento-de-datos/ed-manual-de-usuario/fuentes-externas-de-informacion.md "/hercules/herramienta-de-cv-hercules-ed-enriquecimiento-de-datos/ed-manual-de-usuario/fuentes-externas-de-informacion.md")
-* [Alertas](/hercules/herramienta-de-cv-hercules-ed-enriquecimiento-de-datos/ed-manual-de-usuario/alertas.md "/hercules/herramienta-de-cv-hercules-ed-enriquecimiento-de-datos/ed-manual-de-usuario/alertas.md")
-
-
-
-
+* [Herramienta de CV](/hercules/herramienta-de-cv-hercules-ed-enriquecimiento-de-datos/ed-manual-de-usuario/herramienta-de-cv)
+  + [Editor de CV](/hercules/herramienta-de-cv-hercules-ed-enriquecimiento-de-datos/ed-manual-de-usuario/herramienta-de-cv/editor-de-cv)
+  + [Importación de CV](/hercules/herramienta-de-cv-hercules-ed-enriquecimiento-de-datos/ed-manual-de-usuario/herramienta-de-cv/importacion-de-cv)
+  + [Exportación de CV](/hercules/herramienta-de-cv-hercules-ed-enriquecimiento-de-datos/ed-manual-de-usuario/herramienta-de-cv/exportacion-de-cv)
+* [Gestión de clusters (Equipos de proyecto)](/hercules/portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/ma-manual-de-usuario/gestion-de-clusters-equipos-de-proyecto)
+* [Gestión de ofertas tecnológicas](/hercules/portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/ma-manual-de-usuario/gestion-de-ofertas-tecnologicas)
+* [Fuentes externas de información](/hercules/herramienta-de-cv-hercules-ed-enriquecimiento-de-datos/ed-manual-de-usuario/fuentes-externas-de-informacion)
+* [Alertas](/hercules/herramienta-de-cv-hercules-ed-enriquecimiento-de-datos/ed-manual-de-usuario/alertas)

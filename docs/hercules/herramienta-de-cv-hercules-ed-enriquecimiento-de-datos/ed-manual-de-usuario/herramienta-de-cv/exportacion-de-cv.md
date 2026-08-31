@@ -1,6 +1,4 @@
-# Hércules : Exportación de CV
-
-
+# Exportación de CV
 
 A esta sección se accede a partir del menú de ED, en concreto en el apartado de Currículum Vitae.
 
@@ -17,14 +15,14 @@ En el caso de querer exportar un CV desde la pestaña de exportar, el usuario de
 
 El tipo de exportación:
 
-* CVN \- Tipo por defecto, Curriculum vitae normalizado
-* CVA\-ISCIII \- Curriculum vitae abreviado (ISCIII)
-* CVA\-AEI \- Curriculum vitae abreviado (AEI)
+* CVN - Tipo por defecto, Curriculum vitae normalizado
+* CVA-ISCIII - Curriculum vitae abreviado (ISCIII)
+* CVA-AEI - Curriculum vitae abreviado (AEI)
 
 La versión de exportación:
 
-* 1\.4\.0
-* 1\.4\.3
+* 1.4.0
+* 1.4.3
 
 ![](https://github.com/HerculesCRUE/HerculesED/raw/main/Docs/media/ImportExportCV/exportacionPaso1.png)
 
@@ -47,13 +45,3 @@ Aquí el usuario podrá guardar perfiles de exportación para guardar los elemen
 Tras seleccionar los ítems que se desean exportar, se debe seleccionar el botón "EXPORTAR", tras el cual se redirigirá al usuario a la pagina inicial con un nuevo elemento a exportar que estará en el estado "Pendiente" hasta que se haya creado el PDF, momento en el cual pasará a "Procesado" o "Error" en el caso de que se haya producido algún problema en el excepción del fichero.
 
 ![](https://github.com/HerculesCRUE/HerculesED/raw/main/Docs/media/ImportExportCV/exportacionCVNGenerados.png)
-
-  
-
-
-  
-
-
-
-
-

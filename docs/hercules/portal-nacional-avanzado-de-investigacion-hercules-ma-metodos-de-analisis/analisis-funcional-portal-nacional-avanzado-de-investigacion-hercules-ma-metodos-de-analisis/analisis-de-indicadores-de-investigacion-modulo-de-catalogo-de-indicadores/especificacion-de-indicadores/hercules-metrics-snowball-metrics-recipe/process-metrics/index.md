@@ -1,9 +1,5 @@
-# Hércules : Process Metrics
+# Process Metrics
 
-
-
-.
-
-
-
-
+- [Research Metrics for Process](/hercules/portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/analisis-funcional-portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/analisis-de-indicadores-de-investigacion-modulo-de-catalogo-de-indicadores/especificacion-de-indicadores/hercules-metrics-snowball-metrics-recipe/process-metrics/research-metrics-for-process)
+- [Enterprise activities for Process](/hercules/portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/analisis-funcional-portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/analisis-de-indicadores-de-investigacion-modulo-de-catalogo-de-indicadores/especificacion-de-indicadores/hercules-metrics-snowball-metrics-recipe/process-metrics/enterprise-activities-for-process)
+- [Post-graduate Research Metrics for Process](/hercules/portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/analisis-funcional-portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/analisis-de-indicadores-de-investigacion-modulo-de-catalogo-de-indicadores/especificacion-de-indicadores/hercules-metrics-snowball-metrics-recipe/process-metrics/post-graduate-research-metrics-for-process)

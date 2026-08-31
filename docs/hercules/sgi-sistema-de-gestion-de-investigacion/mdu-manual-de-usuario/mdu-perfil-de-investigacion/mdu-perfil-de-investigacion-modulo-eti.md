@@ -1,8 +1,79 @@
-# Hércules : MDU\-Perfil de investigación \- Módulo ETI
+# MDU-Perfil de investigación - Módulo ETI
 
+* [1. Introducción](#MDUPerfildeinvestigaciónMóduloETI-1.Introducción)
+* [2. Autoevaluación](#MDUPerfildeinvestigaciónMóduloETI-2.Autoevaluación)
+* [3. Solicitudes de evaluación](#MDUPerfildeinvestigaciónMóduloETI-3.Solicitudesdeevaluación)
+  + [3.1 Añadir solicitud de evaluación](#MDUPerfildeinvestigaciónMóduloETI-3.1Añadirsolicituddeevaluación)
+    - [3.1.1 Datos generales](#MDUPerfildeinvestigaciónMóduloETI-3.1.1Datosgenerales)
+    - [3.1.2 Equipo investigador](#MDUPerfildeinvestigaciónMóduloETI-3.1.2Equipoinvestigador)
+      * [3.1.2.1 Añadir persona](#MDUPerfildeinvestigaciónMóduloETI-3.1.2.1Añadirpersona)
+  + [3.2 Editar solicitud de evaluación](#MDUPerfildeinvestigaciónMóduloETI-3.2Editarsolicituddeevaluación)
+    - [3.2.1 Datos generales](#MDUPerfildeinvestigaciónMóduloETI-3.2.1Datosgenerales)
+    - [3.2.2 Equipo investigador](#MDUPerfildeinvestigaciónMóduloETI-3.2.2Equipoinvestigador)
+      * [3.2.2.1 Añadir persona](#MDUPerfildeinvestigaciónMóduloETI-3.2.2.1Añadirpersona)
+      * [3.2.2.2 Eliminar persona](#MDUPerfildeinvestigaciónMóduloETI-3.2.2.2Eliminarpersona)
+    - [3.2.3 Asignación de tareas](#MDUPerfildeinvestigaciónMóduloETI-3.2.3Asignacióndetareas)
+      * [3.2.3.1 Añadir tarea](#MDUPerfildeinvestigaciónMóduloETI-3.2.3.1Añadirtarea)
+      * [3.2.3.2 Editar tarea](#MDUPerfildeinvestigaciónMóduloETI-3.2.3.2Editartarea)
+      * [3.2.3.3 Eliminar tarea](#MDUPerfildeinvestigaciónMóduloETI-3.2.3.3Eliminartarea)
+    - [3.2.4 Memorias](#MDUPerfildeinvestigaciónMóduloETI-3.2.4Memorias)
+      * [3.2.4.1 Añadir memoria](#MDUPerfildeinvestigaciónMóduloETI-3.2.4.1Añadirmemoria)
+      * [3.2.4.2 Editar memoria](#MDUPerfildeinvestigaciónMóduloETI-3.2.4.2Editarmemoria)
+        + [3.2.4.2.1 Datos generales](#MDUPerfildeinvestigaciónMóduloETI-3.2.4.2.1Datosgenerales)
+        + [3.2.4.2.2 Formulario](#MDUPerfildeinvestigaciónMóduloETI-3.2.4.2.2Formulario)
+        + [3.2.4.2.3 Documentación](#MDUPerfildeinvestigaciónMóduloETI-3.2.4.2.3Documentación)
+        + [3.2.4.2.4 Seguimiento anual](#MDUPerfildeinvestigaciónMóduloETI-3.2.4.2.4Seguimientoanual)
+        + [3.2.4.2.5 Seguimiento final](#MDUPerfildeinvestigaciónMóduloETI-3.2.4.2.5Seguimientofinal)
+        + [3.2.4.2.6 Retrospectiva](#MDUPerfildeinvestigaciónMóduloETI-3.2.4.2.6Retrospectiva)
+        + [3.2.4.2.7 Evaluaciones](#MDUPerfildeinvestigaciónMóduloETI-3.2.4.2.7Evaluaciones)
+        + [3.2.4.2.8 Versiones](#MDUPerfildeinvestigaciónMóduloETI-3.2.4.2.8Versiones)
+      * [3.2.4.3 Eliminar memoria](#MDUPerfildeinvestigaciónMóduloETI-3.2.4.3Eliminarmemoria)
+      * [3.2.4.4 Enviar secretaría](#MDUPerfildeinvestigaciónMóduloETI-3.2.4.4Enviarsecretaría)
+      * [3.2.4.5 Enviar secretaría retrospectiva](#MDUPerfildeinvestigaciónMóduloETI-3.2.4.5Enviarsecretaríaretrospectiva)
+  + [3.3 Eliminar solicitud de evaluación](#MDUPerfildeinvestigaciónMóduloETI-3.3Eliminarsolicituddeevaluación)
+* [4. Memorias](#MDUPerfildeinvestigaciónMóduloETI-4.Memorias)
+  + [4.1 Editar memoria](#MDUPerfildeinvestigaciónMóduloETI-4.1Editarmemoria)
+  + [4.2 Eliminar memoria](#MDUPerfildeinvestigaciónMóduloETI-4.2Eliminarmemoria)
+  + [4.3 Enviar a secretaría](#MDUPerfildeinvestigaciónMóduloETI-4.3Enviarasecretaría)
+  + [4.4 Enviar a secretaría retrospectiva](#MDUPerfildeinvestigaciónMóduloETI-4.4Enviarasecretaríaretrospectiva)
+* [5. Actas](#MDUPerfildeinvestigaciónMóduloETI-5.Actas)
+  + [5.1 Editar acta](#MDUPerfildeinvestigaciónMóduloETI-5.1Editaracta)
+    - [5.1.1 Datos generales](#MDUPerfildeinvestigaciónMóduloETI-5.1.1Datosgenerales)
+    - [5.1.2 Memorias](#MDUPerfildeinvestigaciónMóduloETI-5.1.2Memorias)
+    - [5.1.3 Asistentes](#MDUPerfildeinvestigaciónMóduloETI-5.1.3Asistentes)
+    - [5.1.4 Comentarios](#MDUPerfildeinvestigaciónMóduloETI-5.1.4Comentarios)
+      * [5.1.4.1 Añadir comentario](#MDUPerfildeinvestigaciónMóduloETI-5.1.4.1Añadircomentario)
+      * [5.1.4.2 Editar comentario](#MDUPerfildeinvestigaciónMóduloETI-5.1.4.2Editarcomentario)
+      * [5.1.4.3 Eliminar comentario](#MDUPerfildeinvestigaciónMóduloETI-5.1.4.3Eliminarcomentario)
+    - [5.1.5 Enviar comentarios a secretaría](#MDUPerfildeinvestigaciónMóduloETI-5.1.5Enviarcomentariosasecretaría)
+  + [5.2 Ver acta](#MDUPerfildeinvestigaciónMóduloETI-5.2Veracta)
+    - [5.2.1 Datos generales](#MDUPerfildeinvestigaciónMóduloETI-5.2.1Datosgenerales)
+    - [5.2.2 Memorias](#MDUPerfildeinvestigaciónMóduloETI-5.2.2Memorias)
+    - [5.2.3 Asistentes](#MDUPerfildeinvestigaciónMóduloETI-5.2.3Asistentes)
+    - [5.2.4 Comentarios](#MDUPerfildeinvestigaciónMóduloETI-5.2.4Comentarios)
+* [6. Realizar evaluaciones](#MDUPerfildeinvestigaciónMóduloETI-6.Realizarevaluaciones)
+  + [6.1 Evaluar](#MDUPerfildeinvestigaciónMóduloETI-6.1Evaluar)
+    - [6.1.1 Memoria](#MDUPerfildeinvestigaciónMóduloETI-6.1.1Memoria)
+    - [6.1.2 Documentación](#MDUPerfildeinvestigaciónMóduloETI-6.1.2Documentación)
+    - [6.1.3 Comentarios](#MDUPerfildeinvestigaciónMóduloETI-6.1.3Comentarios)
+      * [6.1.3.1 Añadir comentario](#MDUPerfildeinvestigaciónMóduloETI-6.1.3.1Añadircomentario)
+      * [6.1.3.2 Añadir comentario general](#MDUPerfildeinvestigaciónMóduloETI-6.1.3.2Añadircomentariogeneral)
+      * [6.1.3.3 Editar comentario](#MDUPerfildeinvestigaciónMóduloETI-6.1.3.3Editarcomentario)
+      * [6.1.3.4 Eliminar comentario](#MDUPerfildeinvestigaciónMóduloETI-6.1.3.4Eliminarcomentario)
+    - [6.1.4 Enviar comentarios y cerrar evaluación](#MDUPerfildeinvestigaciónMóduloETI-6.1.4Enviarcomentariosycerrarevaluación)
+* [7. Realizar seguimientos](#MDUPerfildeinvestigaciónMóduloETI-7.Realizarseguimientos)
+  + [7.1 Evaluar](#MDUPerfildeinvestigaciónMóduloETI-7.1Evaluar)
+    - [7.1.1 Datos seguimiento](#MDUPerfildeinvestigaciónMóduloETI-7.1.1Datosseguimiento)
+    - [7.1.2 Documentación](#MDUPerfildeinvestigaciónMóduloETI-7.1.2Documentación)
+    - [7.1.3 Comentarios](#MDUPerfildeinvestigaciónMóduloETI-7.1.3Comentarios)
+      * [7.1.3.1 Añadir comentario](#MDUPerfildeinvestigaciónMóduloETI-7.1.3.1Añadircomentario)
+      * [7.1.3.2 Añadir comentario general](#MDUPerfildeinvestigaciónMóduloETI-7.1.3.2Añadircomentariogeneral)
+      * [7.1.3.3 Editar comentario](#MDUPerfildeinvestigaciónMóduloETI-7.1.3.3Editarcomentario)
+      * [7.1.3.4 Eliminar comentario](#MDUPerfildeinvestigaciónMóduloETI-7.1.3.4Eliminarcomentario)
+    - [7.1.4 Enviar comentarios de seguimiento a secretaría y cerrar evaluación](#MDUPerfildeinvestigaciónMóduloETI-7.1.4Enviarcomentariosdeseguimientoasecretaríaycerrarevaluación)
+* [8. Anexo - Estados de una memoria](#MDUPerfildeinvestigaciónMóduloETI-8.Anexo-Estadosdeunamemoria)
 
-
-## 1\. Introducción
+## 1. Introducción
 
 El módulo de Ética es un módulo integrado dentro de SGI Hércules que permite al personal investigador /o docente gestionar las solicitudes de evaluación de sus proyectos de investigación (o prácticas docentes)  donde va a trabajar con seres humanos, animales o con agentes biológicos para obtener el dictamen favorable del comité correspondiente. El SGI contempla los siguientes comités de ética:
 
@@ -13,12 +84,6 @@ El módulo de Ética es un módulo integrado dentro de SGI Hércules que permite
 A continuación se detallan cada una de las opciones de menú del módulo de Ética del perfil investigador. Para acceder a cada una de ellas se tiene que expandir el menú "Ética" a través del icono de la flecha para abajo.
 
 ![](/attachments/597852717/597879369.png)
-
-  
-
-
-  
-
 
 Una vez expandido el menú de "Ética" las opciones del submenú son:
 
@@ -39,7 +104,7 @@ En el caso que el personal de investigación es a su vez una persona pertenecien
 
 ![](/attachments/597852717/597879370.png)
 
-## 2\. Autoevaluación
+## 2. Autoevaluación
 
 Esta opción del menú permite al personal investigador comprobar si es necesario que presente su proyecto de investigación ante la Comisión de Ética de investigación.
 
@@ -51,11 +116,11 @@ Al pulsar sobre el botón "Comprobar" en caso de que a una de las preguntas haya
 
 ![](/attachments/597852717/597861139.png)
 
-En caso de que el personal de investigación pulse el botón "Aceptar" de la ventana emergente le cambiará automáticamente a la pantalla de "Nueva solicitud de evaluación" para que empiece a rellenar el formulario de datos generales de solicitud de evaluación (Ver apartado [Añadir solicitud evaluación](#MDUPerfildeinvestigaciónMóduloETI-A%C3%B1adirsolicituddeevaluaci%C3%B3n "#MDUPerfildeinvestigaciónMóduloETI-A%C3%B1adirsolicituddeevaluaci%C3%B3n"))
+En caso de que el personal de investigación pulse el botón "Aceptar" de la ventana emergente le cambiará automáticamente a la pantalla de "Nueva solicitud de evaluación" para que empiece a rellenar el formulario de datos generales de solicitud de evaluación (Ver apartado [Añadir solicitud evaluación](#MDUPerfildeinvestigaciónMóduloETI-A%C3%B1adirsolicituddeevaluaci%C3%B3n))
 
 En caso de que el personal de investigación pulse el botón "Cancelar" no se hará ninguna acción, se cierra la venta emergente y se vuelve a la pantalla de Autoevaluación (checklist).
 
-## 3\. Solicitudes de evaluación
+## 3. Solicitudes de evaluación
 
 Las solicitudes de evaluación serán creadas por el personal de investigación de la Universidad para solicitar la evaluación de su proyecto de investigación ante una comisión de ética debido a que en su proyecto se trabaja con seres humanos, con animales o con agentes biológicos. El personal de investigación dependiendo con lo que vaya a trabajar tendrá que crear dentro de la solicitud de evaluación, la memoria o memorias correspondientes. Son las memorias las que se envían al comité de ética para su evaluación.
 
@@ -65,12 +130,12 @@ La segunda opción del submenú dentro del menú principal de Ética es "Solicit
 
 Los campos disponibles en el formulario de la búsqueda son:
 
-* **Código**: código de referencia de la solicitud de evaluación. Tiene el formato YYYY/secuencia, donde YYYY es el año en el que ha dado de alta la solicitud de evaluación y secuencia en un código secuencia desde 001 hasta 999 relativo al año. Cuando se cambie de año se vuelve a empezar en 001\.
+* **Código**: código de referencia de la solicitud de evaluación. Tiene el formato YYYY/secuencia, donde YYYY es el año en el que ha dado de alta la solicitud de evaluación y secuencia en un código secuencia desde 001 hasta 999 relativo al año. Cuando se cambie de año se vuelve a empezar en 001.
 * **Título del proyecto**: nombre o título del proyecto de investigación el cual se va a someter a la evaluación por parte del comité de ética.
 * **Comité**: es un desplegable en el que el personal de investigación puede seleccionar entra las siguiente opciones:
-	+ CEI
-	+ CEEA
-	+ CBE
+  + CEI
+  + CEEA
+  + CBE
 
 Tras pulsar el botón “Buscar”, se muestra el listado de solicitudes de evaluación que cumplan con los parámetros introducidos en el formulario y que sean solicitudes dadas de alta por el propio personal o aquellas en las que esta como responsable de una de sus memorias. Los responsables de memoria pueden modificar los datos de la memoria y de su solicitud de evaluación.
 
@@ -84,7 +149,7 @@ Desde este listado el personal de investigación puede realizar las siguientes a
 2. **Editar**: este botón representado por el icono ![](/attachments/597852717/597861043.png) y situado en la última columna "Acciones" de la tabla, permite al personal de investigación modificar los datos de una solicitud de evaluación.
 3. **Eliminar**: este botón representado por el icono ![](/attachments/597852717/597861045.png)y situado en la última columna "Acciones" de la tabla, permite al personal de investigación eliminar la solicitud de evaluación. Sólo se puede eliminar una solicitud de evaluación sino se ha creado todavía la memoria o si la memoria o memorias asociadas están en los estados "En elaboración" o en "Completada", es decir, no se han enviado a "Secretaría" para su evaluación.
 
-### 3\.1 Añadir solicitud de evaluación
+### 3.1 Añadir solicitud de evaluación
 
 Tras pulsar este botón "AÑADIR SOLICITUD DE EVALUACIÓN" se carga en pantalla el formulario de "Datos generales" de una solicitud de evaluación. A esta pantalla también se llega desde la pantalla de autoevaluación cuando se muestra la ventana emergente informando de que el proyecto de investigación se tiene que someter a una comisión de ética y se le pregunta al personal de investigación si desea empezar a rellenar en ese momento la solicitud de evaluación y le da al botón de "Aceptar".
 
@@ -95,47 +160,38 @@ En la creación de una nueva solicitud de evaluación se deben de informar los s
 
 ![](/attachments/597852717/841089237.png)
 
-  
-
-
 Una vez introducidos todos los datos obligatorios de los dos formularios, se activará el botón "Guardar" situado en la parte inferior de la pantalla en el "Área de acciones". Este botón guarda toda la información aportada tanto en el apartado "Datos generales" como en el apartado "Equipo investigador".
 
-#### 3\.1\.1 Datos generales
+#### 3.1.1 Datos generales
 
 A continuación se describe cada uno de los campos solicitados en este formulario:
 
 * **Título**: campo obligatorio donde se debe de introducir el título del proyecto para el que se presenta la solicitud de evaluación de ética. Es un campo de texto libre con un máximo de 250 caracteres.
 * **Tipo de actividad**: campo obligatorio donde se debe de seleccionar uno de los tres posibles valores:
-	+ Investigación tutelada: si se selecciona Investigación tutelada se mostrará un nuevo campo "Tipo de investigación tutelada"
-	+ Práctica docente
-	+ Proyecto de investigación
+  + Investigación tutelada: si se selecciona Investigación tutelada se mostrará un nuevo campo "Tipo de investigación tutelada"
+  + Práctica docente
+  + Proyecto de investigación
 * **Tipo de investigación tutelada:**sólo es visible en el caso de que en el campo "Tipo de actividad" se escoja la opción de "Investigación tutelada". En este caso este campo es obligatorio y se debe de  seleccionar uno de los tres posibles valores:
-	+ Tesis Doctoral
-	+ Trabajo Fin de Grado
-	+ Trabajo Fin de Máster
+  + Tesis Doctoral
+  + Trabajo Fin de Grado
+  + Trabajo Fin de Máster
 
 ![](/attachments/597852717/734461996.png)
 
-* **Director/a o Tutor/a:**campo sólo disponible si en "Tipo de actividad" se selecciona "Investigación tutelada". Es un campo obligatorio en este caso y debe cumplimentarse seleccionando una persona disponible a través del buscador proporcionado ([buscador de personas](https://confluence.um.es/confluence/display/HERCULES/MDU+-+Manual+de+usuario#MDUManualdeusuario-8.1Personas "https://confluence.um.es/confluence/display/HERCULES/MDU+-+Manual+de+usuario#MDUManualdeusuario-8.1Personas")).
+* **Director/a o Tutor/a:**campo sólo disponible si en "Tipo de actividad" se selecciona "Investigación tutelada". Es un campo obligatorio en este caso y debe cumplimentarse seleccionando una persona disponible a través del buscador proporcionado ([buscador de personas](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario#MDUManualdeusuario-8.1Personas)).
 * **¿Se dispone de financiación para realizar el proyecto?**: campo obligatorio donde se debe de seleccionar el valor "Sí" o "No" dependiendo de si el proyecto dispone de financiación o no. En caso de que el proyecto disponga de financiación se mostrarán tres nuevos campos obligatorios: "Órgano financiador", "Estado" e "Importe financiación"
 
 ![](/attachments/597852717/734461998.png)
-
-  
-
 
 En caso de que se indique que el proyecto no dispone de financiación, se mostrarán los tres campos "Órgano financiador", "Estado" e "Importe financiación", pero su cumplimentación será opcional:
 
 ![](/attachments/597852717/734461999.png)
 
-  
-
-
 * **Órgano financiador:** campo obligatorio en el caso de que en el campo "¿Se dispone de financiación para realizar el proyecto?" se escoja la opción de "Sí" y opcional en el caso se seleccione el valor "No". Se puede introducir el nombre del órgano financiador del proyecto. Es un campo de texto libre con un máximo de 250 caracteres.
 * **Estado:** campo obligatorio en el caso de que en el campo "¿Se dispone de financiación para realizar el proyecto?" se escoja la opción de "Sí" y opcional en el caso se seleccione el valor "No". Se puede seleccionar uno de los tres posibles estados:
-	+ Concedido
-	+ Denegado
-	+ Solicitado
+  + Concedido
+  + Denegado
+  + Solicitado
 * **Importe financiación:** campo obligatorio en el caso de que en el campo "¿Se dispone de financiación para realizar el proyecto?" se escoja la opción de "Sí" y opcional en el caso se seleccione el valor "No". Se puede introducir el importe de la financiación del proyecto. Es un campo numérico que admite dos decimales. Los decimales van separados por la coma. No se usa separados de miles.
 * **Fecha inicio**: campo obligatorio donde se debe de introducir la fecha de inicio del proyecto. Se puede introducir la fecha de forma manual o con la ayuda del calendario.
 * **Fecha fin**: campo obligatorio donde se debe de introducir la fecha de finalización del proyecto. Se puede introducir la fecha de forma manual o con la ayuda del calendario. La duración del proyecto no podrá ser superior a 5 años (esta duración es configurable para el personal de administración del SGI).
@@ -144,66 +200,45 @@ En caso de que se indique que el proyecto no dispone de financiación, se mostra
 
 * **Resumen**: campo obligatorio donde se debe de introducir el resumen del proyecto. Es un campo de texto libre con un máximo de 4000 caracteres. El personal de investigación puede modificar el tamaño de la caja de texto de este campo, para ello deberá situar el cursor sobre su esquina inferior izquierda (rayado gris), cuando el cursor cambie de aspecto, deberá pulsar con el botón izquierdo del ratón y arrastrar sin soltar.
 * **Valor social**: campo obligatorio donde se debe seleccionar uno de los siguientes valores:
-	+ Investigación fundamental
-	+ Investigación aplicada a la prevención, diagnóstico o tratamiento de alteraciones o de enfermedades físicas, psíquicas u otras anomalías o de sus efectos en los seres humanos, los animales o las plantas.
-	+ Investigación aplicada a la evaluación, detección, regulación o modificación de las condiciones fisiológicas, psicológicas o sociales en los seres humanos, los animales o las plantas
-	+ Investigación aplicada al desarrollo y la fabricación de aparatos, ayudas técnicas o informáticas, fármacos, alimentos, piensos y otras sustancias o productos, así como la realización de pruebas para comprobar su calidad, eficacia y seguridad
-	+ Investigación aplicada a la protección o mejora de las condiciones sociales, políticas, económicas o ambientales en interés del bienestar y/o la salud de los seres humanos.
-	+ Investigación aplicada al bienestar de los animales y/o a la mejora de las condiciones de producción de los animales y las plantas.
-	+ Investigación dirigida a la protección y conservación de las especies y del medio natural.
-	+ Enseñanza superior o la formación para la adquisición o mejora de las aptitudes profesionales.
-	+ Investigación jurídica o médico\-legal.
-	+ Otra finalidad.
+  + Investigación fundamental
+  + Investigación aplicada a la prevención, diagnóstico o tratamiento de alteraciones o de enfermedades físicas, psíquicas u otras anomalías o de sus efectos en los seres humanos, los animales o las plantas.
+  + Investigación aplicada a la evaluación, detección, regulación o modificación de las condiciones fisiológicas, psicológicas o sociales en los seres humanos, los animales o las plantas
+  + Investigación aplicada al desarrollo y la fabricación de aparatos, ayudas técnicas o informáticas, fármacos, alimentos, piensos y otras sustancias o productos, así como la realización de pruebas para comprobar su calidad, eficacia y seguridad
+  + Investigación aplicada a la protección o mejora de las condiciones sociales, políticas, económicas o ambientales en interés del bienestar y/o la salud de los seres humanos.
+  + Investigación aplicada al bienestar de los animales y/o a la mejora de las condiciones de producción de los animales y las plantas.
+  + Investigación dirigida a la protección y conservación de las especies y del medio natural.
+  + Enseñanza superior o la formación para la adquisición o mejora de las aptitudes profesionales.
+  + Investigación jurídica o médico-legal.
+  + Otra finalidad.
 
 En caso de que se seleccione el valor "Otra finalidad" se debe de introducir de forma obligatoria el campo "Especificar"
 
-Este campo corresponderá con el apartado 1\.1 VALOR SOCIAL DEL PROYECTO del formulario de la memoria, siendo únicamente modificable desde esta pantalla de datos generales. En el formulario de memoria se mostrará en modo consulta tomando el valor introducido en esta pantalla de datos generales
+Este campo corresponderá con el apartado 1.1 VALOR SOCIAL DEL PROYECTO del formulario de la memoria, siendo únicamente modificable desde esta pantalla de datos generales. En el formulario de memoria se mostrará en modo consulta tomando el valor introducido en esta pantalla de datos generales
 
 * **Especificar**: sólo es visible en el campo de que en el campo "Valor social" se escoja la opción "Otra finalidad". En este caso este campo es obligatorio y de debe de introducir un campo de texto libre con un máximo de 2000 caracteres. El personal de investigación puede modificar el tamaño de la caja de texto de este campo, para ello deberá situar el cursor sobre su esquina inferior izquierda (rayado gris), cuando el cursor cambie de aspecto, deberá pulsar con el botón izquierdo del ratón y arrastrar sin soltar.
 
-  
+* **Objetivos científicos**: campo obligatorio donde se debe de introducir los principales objetivos científicos del proyecto. Es un campo de texto libre con un máximo de 2000 caracteres. Este campo corresponderá con el apartado 3.1 OBJETIVOS CIENTÍFICOS DEL PROYECTO del formulario de la memoria, siendo únicamente modificable desde esta pantalla de datos generales. En el formulario de memoria se mostrará en modo consulta tomando el valor introducido en esta pantalla de datos generales.
+* **Diseño metodológico**: campo obligatorio donde se debe de introducir una descripción del diseño metodológico del proyecto. Es un campo de texto libre con un máximo de 2000 caracteres. Este campo corresponderá con el apartado 3.2 DISEÑO METODOLÓGICO DEL PROYECTO del formulario de la memoria, siendo únicamente modificable desde esta pantalla de datos generales. En el formulario de memoria se mostrará en modo consulta tomando el valor introducido en esta pantalla de datos generales.
 
-
-* **Objetivos científicos**: campo obligatorio donde se debe de introducir los principales objetivos científicos del proyecto. Es un campo de texto libre con un máximo de 2000 caracteres. Este campo corresponderá con el apartado 3\.1 OBJETIVOS CIENTÍFICOS DEL PROYECTO del formulario de la memoria, siendo únicamente modificable desde esta pantalla de datos generales. En el formulario de memoria se mostrará en modo consulta tomando el valor introducido en esta pantalla de datos generales.
-* **Diseño metodológico**: campo obligatorio donde se debe de introducir una descripción del diseño metodológico del proyecto. Es un campo de texto libre con un máximo de 2000 caracteres. Este campo corresponderá con el apartado 3\.2 DISEÑO METODOLÓGICO DEL PROYECTO del formulario de la memoria, siendo únicamente modificable desde esta pantalla de datos generales. En el formulario de memoria se mostrará en modo consulta tomando el valor introducido en esta pantalla de datos generales.
-
-  
-
-
-Una vez introducidos todos los campos obligatorios del formulario de "Datos generales", se activará el botón "GUARDAR". Se mostrará el icono de aviso de cambios sin guardar, tanto en el apartados "Datos generales" como en "Equipo investigador". 
+Una vez introducidos todos los campos obligatorios del formulario de "Datos generales", se activará el botón "GUARDAR". Se mostrará el icono de aviso de cambios sin guardar, tanto en el apartados "Datos generales" como en "Equipo investigador".
 
 ![](/attachments/597852717/841089238.png)
-
-  
-
 
 Aunque hasta el momento solo se hayan informado los datos del formulario de "Datos generales", sin haber introducido ningún dato en el apartado "Equipo investigador" se muestra con el icono aviso de cambios sin guardar sobre este apartado debido a que de forma automática se introduce en el Equipo investigador a la persona que está realizando la solicitud de evaluación
 
 ![](/attachments/597852717/734462007.png)
 
-  
-
-
-Si se pulsa el botón "Guardar" se crea la solicitud de evaluación con los datos generales del proyecto (que serán comunes para todas las memorias que se vayan a crear relacionadas con la solicitud) y con una persona en el equipo investigador (la persona que ha creado la solicitud de evaluación). Adicionalmente se deberán añadir al equipo todas las personas que van a formar parte del proyecto y que van a realizar alguna tarea en alguna de las memorias. Se describe este punto en el apartado  [Equipo investigador](https://confluence.treelogic.com/pages/viewpage.action?pageId=134293341#MDUPerfildeinvestigaci%C3%B3nM%C3%B3duloETI-Equipoinvestigador "https://confluence.treelogic.com/pages/viewpage.action?pageId=134293341#MDUPerfildeinvestigaci%C3%B3nM%C3%B3duloETI-Equipoinvestigador").
+Si se pulsa el botón "Guardar" se crea la solicitud de evaluación con los datos generales del proyecto (que serán comunes para todas las memorias que se vayan a crear relacionadas con la solicitud) y con una persona en el equipo investigador (la persona que ha creado la solicitud de evaluación). Adicionalmente se deberán añadir al equipo todas las personas que van a formar parte del proyecto y que van a realizar alguna tarea en alguna de las memorias. Se describe este punto en el apartado  [Equipo investigador](https://confluence.treelogic.com/pages/viewpage.action?pageId=134293341#MDUPerfildeinvestigaci%C3%B3nM%C3%B3duloETI-Equipoinvestigador).
 
 Tras pulsar el botón "Guardar" se muestra un mensaje de confirmación.
 
 ![](/attachments/597852717/734462009.png)
 
-  
-
-
-#### 3\.1\.2 Equipo investigador
+#### 3.1.2 Equipo investigador
 
 Muestra en una tabla el listado de miembros del equipo investigador del proyecto para el que solicita la evaluación ética. Por defecto, cuando se crea una solicitud de evaluación se añade automáticamente al equipo a la persona que está realizando la solicitud:
 
 ![](/attachments/597852717/734462007.png)
-
-  
-
-
-  
-
 
 La persona solicitante puede añadir al resto de personas del equipo de investigación en el momento de creación de la solicitud o bien introducir esta información posteriormente. Para crear una solicitud de evaluación solamente es necesario que la persona solicitante figure en el equipo, y esto se realiza de forma automática.
 
@@ -212,10 +247,7 @@ Desde este listado se pueden realizar las siguientes acciones:
 * **Añadir persona**: Acción disponible a través del botón situado en la parte inferior  del listado de miembro del equipo.
 * **Eliminar**: Acción representada por el icono ![](https://confluence.treelogic.com/download/thumbnails/134293341/IconoEliminar.png?version=3&modificationDate=1653049655535&api=v2)situado en la última columna "Acciones" de la tabla. Permite eliminar a  un miembro del equipo. En la creación de una solicitud de evaluación de pueden eliminar todas las personas excepto a la persona que esta creando la solicitud de evaluación.
 
-  
-
-
-##### 3\.1\.2\.1 Añadir persona
+##### 3.1.2.1 Añadir persona
 
 Se pueden añadir nuevos miembros pulsando el botón "**Añadir Persona**". Se abrirá un formulario que requerirá únicamente como campo obligatorio la selección de la persona. El resto de campos (Nombre y apellidos, Vinculación y Nivel académico son datos informativos obtenidos de la persona seleccionada y de los datos almacenados en la Universidad)
 
@@ -229,36 +261,21 @@ El personal de investigación podrá seleccionar a la persona pulsando sobre el 
 
 ![](/attachments/597852717/597861555.png)
 
-  
-
-
 Al pulsar sobre el botón "Añadir" la persona se añadirá al equipo mostrando en la tabla de miembros del equipo de investigación del proyecto un fila mas que representa a la persona que se acaba de añadir.
 
 ![](/attachments/597852717/734462010.png)
-
-  
-
 
 Si se pulsa el botón "Guardar" se crea la solicitud de evaluación con los datos generales del proyecto (que serán comunes para todas las memorias que se vayan a crear relacionadas con la solicitud) y con las personas del equipo investigador.
 
 Se muestra un mensaje confirmando que la solicitud de evaluación se ha creado correctamente.
 
-  
-
-
 ![](/attachments/597852717/734462009.png)
 
-### 3\.2 Editar solicitud de evaluación
+### 3.2 Editar solicitud de evaluación
 
 La edición de una solicitud de evaluación está disponible a través del botón editar ![](/attachments/597852717/734462014.png)desde el listado de solicitudes de evaluación.
 
 ![](/attachments/597852717/734462018.png)
-
-  
-
-
-  
-
 
 Tras pulsar la acción editar se muestra el detalle de la solicitud de evaluación, mostrando el apartado "Datos generales" y dando acceso al resto de apartados de la solicitud de evaluación:
 
@@ -266,63 +283,39 @@ Tras pulsar la acción editar se muestra el detalle de la solicitud de evaluaci�
 * Equipo investigador: conjunto de personas que forman parte del equipo investigador del proyecto. Esta información también fue aportada durante la creación de la solicitud, pero pueden introducirse cambios sobre la misma, añadiendo, modificando o eliminando personas al equipo.
 * Asignación de tareas: conjunto de tareas a realizar por cada una de las personas del equipo investigador. Las tareas se añaden a nivel de memoria, es decir, se indicará qué tareas realiza a cada persona para cada una de las memorias que se incluyen en la solicitud.
 * Memorias: Una solicitud podrá contener más de una memoria en función de la naturaleza del proyecto, pues éste podrá requerir que sea evaluada  por uno o más de los comités éticos. Un proyecto podrá requerir, por ejemplo, que sea evaluado por el Comité ético de investigación con seres humanos y por el comité ético en bioseguridad. Las memorias recogen el detalle de información que requieren los comités de investigación para valorar el proyecto. Existe un tipo de memoria para cada uno de los tres comités:
-	+ Comité de ética para las investigaciones relacionadas con seres humanos, muestras humanas y/o datos procedentes de población humana que requieren protección, llamada memoria M10\.
-	+ Comité de ética de experimentación animal, llamada memoria M20\.
-	+ Comités ético de bioseguridad en la experimentación, llamada memoria M30\.
-
-  
-
+  + Comité de ética para las investigaciones relacionadas con seres humanos, muestras humanas y/o datos procedentes de población humana que requieren protección, llamada memoria M10.
+  + Comité de ética de experimentación animal, llamada memoria M20.
+  + Comités ético de bioseguridad en la experimentación, llamada memoria M30.
 
 ![](/attachments/597852717/841089239.png)
 
-  
-
-
 Antes de proceder a añadir una memoria en la solicitud de evaluación deben guardarse todas las modificaciones que se hubieran introducido en los apartados datos generales, equipos investigador o asignación de tareas. Las memorias son formularios con un gran volumen de datos y con un flujo de navegación propio. Por ello cuando se añade una memoria se produce un cambio de contexto en las pantallas del SGI, debiendo guardar todos los cambios de la solicitud de evaluación modificados hasta el momento.
-
-  
-
 
 Se explican a continuación cada uno de los apartados de los que consta el detalle de una solicitud de evaluación y sobre los que se pueden aportar modificaciones o nueva información una vez que la solicitud ya ha sido creada con sus datos iniciales.
 
-#### 3\.2\.1 Datos generales
+#### 3.2.1 Datos generales
 
 Apartado con los datos de información básica de una solicitud de evaluación.
 
 ![](/attachments/597852717/841089239.png)
 
-  
+En el apartado [Datos generales](#MDUPerfildeinvestigaciónMóduloETI-Datosgenerales) descrito para el proceso de creación de una nueva solicitud de evaluación se puede ver la descripción detallada de cada campo. Aparte de los mencionados en el proceso de la creación, cuando se accede a los Datos generales de una solicitud de evaluación para  modificación se observan los siguiente campos adicionales:
 
-
-En el apartado [Datos generales](#MDUPerfildeinvestigaciónMóduloETI-Datosgenerales "#MDUPerfildeinvestigaciónMóduloETI-Datosgenerales") descrito para el proceso de creación de una nueva solicitud de evaluación se puede ver la descripción detallada de cada campo. Aparte de los mencionados en el proceso de la creación, cuando se accede a los Datos generales de una solicitud de evaluación para  modificación se observan los siguiente campos adicionales:
-
-* **Código**: código de referencia de la solicitud de evaluación. Tiene el formato YYYY/secuencia, donde YYYY es el año en el que ha dado de alta la solicitud de evaluación y secuencia en un código secuencia desde 001 hasta 999 relativo al año. Cuando se cambie de año se vuelve a empezar en 001\.
+* **Código**: código de referencia de la solicitud de evaluación. Tiene el formato YYYY/secuencia, donde YYYY es el año en el que ha dado de alta la solicitud de evaluación y secuencia en un código secuencia desde 001 hasta 999 relativo al año. Cuando se cambie de año se vuelve a empezar en 001.
 * **Código solicitud convocatoria**: sólo es visible si la solicitud de convocatoria ha sido creada automáticamente a partir de una solicitud de convocatoria (módulo CSP del SGI). Representa al código interno de la solicitud de convocatoria. Es un campo de consulta, únicamente se muestra como información adicional.
 * **¿Si se rechaza su solicitud de financiación ejecutará el proyecto con fondos propios?**: sólo es visible si la solicitud de convocatoria ha sido creada automáticamente a partir de una solicitud de convocatoria (módulo CSP del SGI). En estos casos es un campo obligatorio.
 
 ![](/attachments/597852717/841089241.png)
 
-  
-
-
 El proceso de creación de una solicitud de evaluación de ética puede iniciarse de forma automática en el momento de tramitar una solicitud de proyecto desde el módulo CSP. En las solicitudes de proyecto del módulo CSP se dispone de un apartado "Autoevaluación ética" que contiene unas preguntas básicas que permiten determinar si el proyecto deberá someterse a evaluación por parte de alguno de los comités de ética. En esta situación, cuando la solicitud de proyecto pasa de estado "Borrador" a estado "solicitada" (o un estado superior a éste"), se crea de forma automática una solicitud de evaluación de ética, siempre y cuando alguna de las respuestas dadas al formulario de Autoevaluación de ética hubiera sido afirmativa. En la siguiente imagen se muestra los datos generales de una solicitud de evaluación generada a partir de una solicitud de convocatoria del módulo de CSP del SGI.
 
 ![](/attachments/597852717/734462021.png)
 
-  
-
-
 Como la solicitud de proyecto del módulo de CSP no contiene toda la información necesaria para crear la solicitud de evaluación de ética, ésta debe ser completada aportando todos los campos obligatorios. La siguiente imagen muestra en color rojo todos los campos que deben ser aportados para finalizar la cumplimentación de la solicitud de evaluación de ética una vez que su creación se ha iniciado de forma automática desde el módulo CSP.
-
-  
-
 
 ![](/attachments/597852717/734462022.png)
 
-  
-
-
-#### 3\.2\.2 Equipo investigador
+#### 3.2.2 Equipo investigador
 
 Muestra en una tabla el listado de miembros del equipo investigador del proyecto.
 
@@ -332,16 +325,17 @@ En la pantalla "Equipo investigador" se puede ver y gestionar el listado de miem
 
 1. **Añadir persona**: este botón se encuentra en la parte inferior  del listado de miembro del equipo, permite al personal de investigación introducir un nueva persona el equipo investigado.
 2. **Eliminar**: este botón representado por el icono ![](/attachments/597852717/597861045.png)y situado en la última columna "Acciones" de la tabla, permite al personal de investigación eliminar la persona del equipo. Únicamente se puede eliminar una persona si todas las memorias en las que este asignada en la propia solicitud de evaluación se encuentra en uno de estos estados:
+
 * + En elaboración
-	+ Completada
-	+ Favorable Pendiente de Modificaciones Mínimas
-	+ Pendiente de correcciones
+  + Completada
+  + Favorable Pendiente de Modificaciones Mínimas
+  + Pendiente de correcciones
 
-##### 3\.2\.2\.1 Añadir persona
+##### 3.2.2.1 Añadir persona
 
-Ver funcionalidad descrita en el apartado [Añadir persona](#MDUPerfildeinvestigaciónMóduloETI-A%C3%B1adirpersona "#MDUPerfildeinvestigaciónMóduloETI-A%C3%B1adirpersona") de "Nueva solicitud evaluación"**.**
+Ver funcionalidad descrita en el apartado [Añadir persona](#MDUPerfildeinvestigaciónMóduloETI-A%C3%B1adirpersona) de "Nueva solicitud evaluación"**.**
 
-##### 3\.2\.2\.2 Eliminar persona
+##### 3.2.2.2 Eliminar persona
 
 Cuando se pulsa el icono de eliminar persona se muestra una ventana emergente con un mensaje de confirmación.
 
@@ -359,11 +353,11 @@ Se muestra un mensaje de que la solicitud de evaluación del proyecto se ha modi
 
 ![](/attachments/597852717/597861728.png)
 
-#### 3\.2\.3 Asignación de tareas
+#### 3.2.3 Asignación de tareas
 
 Muestra el listado de tareas asignadas a las personas que forman parte del equipo en la memoria o memorias de la solicitud de evaluación.
 
-Los datos introducidos en esta pantalla corresponderán con el apartado 2\.1 PERSONAL QUE LLEVARÁ A CABO LAS TAREAS del formulario de la memoria, únicamente se podrá modificar desde esta pantalla, en el formulario se mostrará en modo consulta sacando los valores introducidos de este listado.
+Los datos introducidos en esta pantalla corresponderán con el apartado 2.1 PERSONAL QUE LLEVARÁ A CABO LAS TAREAS del formulario de la memoria, únicamente se podrá modificar desde esta pantalla, en el formulario se mostrará en modo consulta sacando los valores introducidos de este listado.
 
 ![](/attachments/597852717/597861615.png)
 
@@ -373,7 +367,7 @@ Desde este listado el personal de investigación puede realizar las siguientes a
 2. **Editar:** este botón representado por el icono ![](/attachments/597852717/597861043.png) y situado en la última columna "Acciones" de la tabla, permite al personal de investigación modificar los datos de una tarea asignada a un miembro del equipo.
 3. **Eliminar**: este botón representado por el icono ![](/attachments/597852717/597861045.png)y situado en la última columna "Acciones" de la tabla, permite al personal de investigación eliminar la tarea asignada a un miembro del equipo.
 
-##### 3\.2\.3\.1 Añadir tarea
+##### 3.2.3.1 Añadir tarea
 
 Para poder añadir una tarea a un persona es necesario que previamente:
 
@@ -389,45 +383,32 @@ A continuación se describe cada uno de los campos solicitados en este formulari
 * **Persona del equipo**: campo obligatorio donde se debe de seleccionar uno de los miembros del equipo dados de alta en la pantalla "Equipo investigador". Se muestra un listado con el nombre y apellidos de los miembros del equipo investigador de la solicitud de evaluación.
 * **Memoria**: campo obligatorio donde se debe de seleccionar una de las memorias dadas de alta en la pantalla "Memorias". Se muestra un listado con la referencia de las distintas memorias de la solicitud de evaluación.
 * **Tarea:** campo obligatorio de texto libre donde se debe de introducir la descripción de la tarea que va a realizar la persona cuando la asignación de la tarea es para una memoria del comité CEI o CBE. Si la memoria es del comité CEEA el campo "Tarea" no será un campo de texto libre sino que se mostrará un desplegable con los siguientes valores donde el personal de investigación debe de seleccionar uno de ellos:
-	+ Diseño de proyecto y procedimientos
-	+ Manipulación de animales o realización de procedimientos
-	+ Eutanasia
+  + Diseño de proyecto y procedimientos
+  + Manipulación de animales o realización de procedimientos
+  + Eutanasia
 * **Experiencia/Formación**: campo obligatorio de texto libre donde se debe de introducir la experiencia que tiene la persona haciendo la tarea encomendada cuando la memoria es del comité CEI. Si la memoria es del comité CBE se debe de introducir la formación de la persona. Y si la memoria es del comité CEEA el campo "Experiencia/Formación" no será un campo de texto libre sino que se mostrará un desplegable con los siguientes valores donde el personal de investigación debe de seleccionar uno de ellos desplegable con los valores:
-	+ A: Cuidado de los animales
-	+ B: Eutanasia de los animales
-	+ C: Realización de los procedimientos
-	+ D: Diseño de los proyectos y procedimientos
-	+ E: Responsable de la supervisión «in situ» del bienestar y cuidado de los animales
-	+ F: Veterinario designado
-	+ G: Sin especificar
-	+ H: No requiere
+  + A: Cuidado de los animales
+  + B: Eutanasia de los animales
+  + C: Realización de los procedimientos
+  + D: Diseño de los proyectos y procedimientos
+  + E: Responsable de la supervisión «in situ» del bienestar y cuidado de los animales
+  + F: Veterinario designado
+  + G: Sin especificar
+  + H: No requiere
 * **Organismo**: campo obligatorio para las tareas asignadas a memorias del comité CEEA y CBE donde se debe de introducir el organismo donde se ha formado la persona. Para las taras del comité CEI no será visible dicho campo.
 * **Año**: campo obligatorio para las tareas asignadas a memorias del comité CEEA y CBE donde se debe de introducir el año de obtención de la formación de la persona. Para las taras del comité CEI no será visible dicho campo.
 
 En la siguiente imagen se muestra los campos del formulario pedidos para dar de alta una tarea del comité CEI
 
-![](/attachments/597852717/597861733.png)  
-
-
-  
-
+![](/attachments/597852717/597861733.png)
 
 En la siguiente imagen se muestra los campos del formulario pedidos para dar de alta una tarea del comité CEEA. En este caso la tarea se debe seleccionar del listado proporcinado:
 
 ![](/attachments/597852717/841089128.png)
 
-  
-
-
 Del mismo modo la experiencia/formación también debe ser seleccionada del listado proporcionado:
 
 ![](/attachments/597852717/597861735.png)
-
-  
-
-
-  
-
 
 En la siguiente imagen se muestra los campos del formulario pedidos para dar de alta una tarea del comité CBE
 
@@ -435,19 +416,17 @@ En la siguiente imagen se muestra los campos del formulario pedidos para dar de 
 
 Al pulsar sobre el botón "Añadir" la tarea se añadirá al listado de asignación de tareas de la solicitud de evaluación mostrando el icono de la admiración en el menú de "Asignación de tareas" y el mensaje de información en la parte de abajo de la pantalla en la zona del "Área de acciones" para recordar al personal de investigación que debe de pulsar el botón GUARDAR para que los cambios realizados (en este caso una nueva asignación de tarea) se consoliden.
 
- ![](/attachments/597852717/597861737.png)  
-
+ ![](/attachments/597852717/597861737.png)
 
 Si se pulsa el botón "GUARDAR" se modifica la solicitud de evaluación con los nuevos datos introducidos o con los cambios realizados en cada una de las pantallas (Datos generales, Equipo investigador o Asignación de tareas)
 
 Se muestra un mensaje de que la solicitud de evaluación del proyecto se ha modificado correctamente igual que el de la siguiente imagen.
 
-![](/attachments/597852717/597861728.png)  
+![](/attachments/597852717/597861728.png)
 
+##### 3.2.3.2 Editar tarea
 
-##### 3\.2\.3\.2 Editar tarea
-
-Se abre una pantalla que muestra un formulario con los datos de la tarea, es idéntico al utilizado durante el alta de una tarea, dejando la posibilidad de modificar cualquiera de los campos del formulario (ver funcionalidad descrita en el apartado [Añadir tarea](#MDUPerfildeinvestigaciónMóduloETI-A%C3%B1adirtarea "#MDUPerfildeinvestigaciónMóduloETI-A%C3%B1adirtarea") para mas detalle).
+Se abre una pantalla que muestra un formulario con los datos de la tarea, es idéntico al utilizado durante el alta de una tarea, dejando la posibilidad de modificar cualquiera de los campos del formulario (ver funcionalidad descrita en el apartado [Añadir tarea](#MDUPerfildeinvestigaciónMóduloETI-A%C3%B1adirtarea) para mas detalle).
 
 En la siguiente imagen se muestra el formulario de edición de una tarea.
 
@@ -463,7 +442,7 @@ Se muestra un mensaje de que la solicitud de evaluación del proyecto se ha modi
 
 ![](/attachments/597852717/597861728.png)
 
-##### 3\.2\.3\.3 Eliminar tarea
+##### 3.2.3.3 Eliminar tarea
 
 Cuando se pulsa el icono de eliminar tarea se muestra una ventana emergente con un mensaje de confirmación.
 
@@ -471,7 +450,7 @@ Cuando se pulsa el icono de eliminar tarea se muestra una ventana emergente con 
 
 En caso de responder afirmativamente (botón "Aceptar") la tarea desaparecerá del listado de tareas. Se muestra el icono de la admiración en el menú de "Asignación de tareas" y el mensaje de información en la parte de abajo de la pantalla en la zona del "Área de acciones" para recordar al personal de investigación que debe de pulsar el botón GUARDAR para que los cambios realizados (en este caso la eliminación de una tarea) se consoliden.
 
-#### 3\.2\.4 Memorias
+#### 3.2.4 Memorias
 
 Muestra el listado de memorias que se van a evaluar de la solicitud de evaluación. Cuando se edita la primera vez una solicitud de evaluación el listado estará vacío, en otro caso se muestra la siguiente imagen.
 
@@ -482,9 +461,8 @@ Desde este listado el personal de investigación puede realizar las siguientes a
 1. **Añadir memoria**: este botón se encuentra en la parte inferior  del listado de memorias, permite al personal de investigación introducir una nueva memoria para su evaluación. Provoca un cambio de contexto.
 2. **Editar:** este botón representado por el icono ![](/attachments/597852717/597861043.png) y situado en la última columna "Acciones" de la tabla, permite al personal de investigación modificar los datos de una memoria. Provoca un cambio de contexto. Disponible para el creador y para el responsable de la memoria.
 3. **Eliminar**: este botón representado por el icono ![](/attachments/597852717/597861045.png)y situado en la última columna "Acciones" de la tabla, permite al personal de investigación eliminar la memoria. Únicamente se puede eliminar una memoria por la persona que ha creado la memoria y si se encuentra en uno de estos estados:  
-
-	* En elaboración
-	* Completada
+   * En elaboración
+   * Completada
 4. **Enviar a secretaría**: este botón representado por el icono ![](/attachments/597852717/597859257.png)y situado en la última columna "Acciones" de la tabla, permite al personal de investigación enviar su memoria a la comisión de ética para su evaluación. Una vez cumplimentado todo el formulario y documentación de la memoria el personal de investigación debe de pulsar este botón para que su memoria sea gestionada y evaluada por la comisión. El responsable de la memoria no podrá enviar a secretaría la memoria, únicamente modificar sus datos.
 5. **Enviar a secretaría retrospectiva**: este botón representado por el icono ![](/attachments/597852717/597859258.png)y situado en la última columna "Acciones" de la tabla, permite al personal de investigación enviar la retrospectiva de la memoria a la comisión de ética para su evaluación. Una vez cumplimentado todo el formulario de retrospectiva y su documentación el personal de investigación debe de pulsar este botón para que su retrospectiva de la memoria sea gestionada y evaluada por la comisión. El responsable de la memoria no podrá enviar a secretaría la retrospectiva de la memoria, únicamente modificar sus datos.
 
@@ -492,7 +470,7 @@ A continuación se detalla el significado de cada una de las columnas de informa
 
 * **Referencia memoria**: código que representa a la memoria, es un dato generado automáticamente y tiene el formato Mxx/YYYY/secuencia donde xx sera 10, 20 o 30, YYYY será el año, secuencia será un código secuencial que empieza en 000 cada año y comité y va hasta 999 si es de tipo "Nueva", si es de tipo "Ratificación" lleva una R al final (Mxx/YYYY/secuenciaR), y si es de tipo "Modificación" se copia la referencia de la memoria original y se pone al final MRX donde X es un secuencial de las modificaciones que haya tenido la memoria.
 * **Comité:** comité que va a realizar la evaluación de le memoria.
-* **Estado:** estado de la memoria, puede tener uno de los valores comentados en el apartado [Estados de una memoria](#MDUPerfildeinvestigaciónMóduloETI-Estadosdeunamemoria "#MDUPerfildeinvestigaciónMóduloETI-Estadosdeunamemoria")
+* **Estado:** estado de la memoria, puede tener uno de los valores comentados en el apartado [Estados de una memoria](#MDUPerfildeinvestigaciónMóduloETI-Estadosdeunamemoria)
 * **Fecha evaluación**: dependiendo del estado es la fecha de evaluación de la convocatoria de reunión en la que ha sido evaluada la memoria o es la fecha de evaluación de la próxima convocatoria de reunión en la que puede ser evaluada la memoria.
 * **Fecha límite**: dependiendo del estado es la fecha límite de la convocatoria de reunión en la que ha sido evaluada la memoria o fecha límite hasta la que se aceptan memorias de la próxima convocatoria de reunión en la que puede ser evaluada la memoria.
 
@@ -506,7 +484,7 @@ En el caso de que existan datos sin guardar de la solicitud de evaluación al pu
 
 Si se pulsa sobre el botón "Continuar y perder los datos" se perderán los últimos datos que se han modificado en la solicitud de evaluación y que no fueron guardados. Si se pulsa sobre el botón "Cancelar" te mantiene en la misma pantalla sin ir a la creación o edición de la memoria, para que se pueda dar al botón "GUARDAR" para guardar los datos modificados de la solicitud de evaluación.
 
-##### 3\.2\.4\.1 Añadir memoria
+##### 3.2.4.1 Añadir memoria
 
 Tras pulsar el botón "**Añadir memoria**" se realizará un cambio de contexto cambiando la pantalla actual (navegación de una solicitud de evaluación) a la pantalla de navegación de una memoria cargando en pantalla el formulario de "Datos generales" de una memoria.
 
@@ -515,21 +493,17 @@ Tras pulsar el botón "**Añadir memoria**" se realizará un cambio de contexto 
 A continuación se describe cada uno de los campos solicitados en este formulario:
 
 * **Comité**: campo obligatorio donde se debe de seleccionar uno de los tres posibles valores:  
-
-	+ CEI (Comité de Ética de Investigación)
-	+ CEEA (Comité de Ética de Experimentación Animal)
-	+ CBE (Comité de Ética de Bioseguridad en Experimentación)
+  + CEI (Comité de Ética de Investigación)
+  + CEEA (Comité de Ética de Experimentación Animal)
+  + CBE (Comité de Ética de Bioseguridad en Experimentación)
 
 Indica el comité que debe de valorar la memoria.
 
 * **Tipo de memoria**: campo obligatorio donde se debe de seleccionar uno de los tres posibles valores:
-	+ **Nueva**: el personal de investigación debe de cumplimentar todos los datos del formulario de memoria. Disponible si en comité se ha seleccionado CEI, CEEA o CBE
-	+ **Ratificación**: Es un tipo de memoria que solo está habilitado para el comité CEI. Las memorias de tipo "Ratificación" se utilizarán cuando ya se dispone de un informe procedente de un comité externo, como puede ser el comité designado por un organismo con el que la Universidad colabora en la ejecución del proyecto. También podrán ser utilizadas para especificar un nuevo equipo de investigación diferente al que inicialmente se le hubiera otorgado el informe favorable para la ejecución del proyecto. El equipo de proyecto se deberá cumplimentar, como en cualquier memoria, en el apartado "Asignación de tareas" de la "Solicitud de evaluación". A partir de esta información se mostrará automáticamente cumplimentado el apartado **2\.1 Personal que llevará a cabo las tareas con seres humanos, sus muestras y/o sus datos**del formulario de memoria. Al tratarse de una memoria de ratificación no será necesario cumplimentar el formulario, por lo que todos los apartados estarán desactivados (se mostrarán con el icono "candado"). Sólo estarán activos los apartados **Documentación adicional,****Aclaraciones al comité** e **Informe del comité o comisión del organismo externo**. Este último apartado está vinculado al documento de autorización para el que se pide ratificación, siendo un documento que es obligatorio adjuntar en el apartado "Documentación" de la memoria. A modo de recordatorio, en el apartado de Datos generales de la memoria, tras indicar que se va a crear una memoria de tipo "ratificación", se mostrará un mensaje informativo a este respecto:
+  + **Nueva**: el personal de investigación debe de cumplimentar todos los datos del formulario de memoria. Disponible si en comité se ha seleccionado CEI, CEEA o CBE
+  + **Ratificación**: Es un tipo de memoria que solo está habilitado para el comité CEI. Las memorias de tipo "Ratificación" se utilizarán cuando ya se dispone de un informe procedente de un comité externo, como puede ser el comité designado por un organismo con el que la Universidad colabora en la ejecución del proyecto. También podrán ser utilizadas para especificar un nuevo equipo de investigación diferente al que inicialmente se le hubiera otorgado el informe favorable para la ejecución del proyecto. El equipo de proyecto se deberá cumplimentar, como en cualquier memoria, en el apartado "Asignación de tareas" de la "Solicitud de evaluación". A partir de esta información se mostrará automáticamente cumplimentado el apartado **2.1 Personal que llevará a cabo las tareas con seres humanos, sus muestras y/o sus datos**del formulario de memoria. Al tratarse de una memoria de ratificación no será necesario cumplimentar el formulario, por lo que todos los apartados estarán desactivados (se mostrarán con el icono "candado"). Sólo estarán activos los apartados **Documentación adicional,****Aclaraciones al comité** e **Informe del comité o comisión del organismo externo**. Este último apartado está vinculado al documento de autorización para el que se pide ratificación, siendo un documento que es obligatorio adjuntar en el apartado "Documentación" de la memoria. A modo de recordatorio, en el apartado de Datos generales de la memoria, tras indicar que se va a crear una memoria de tipo "ratificación", se mostrará un mensaje informativo a este respecto:
 
 ![](/attachments/597852717/695468221.png)
-
-  
-
 
 El mensaje anterior sólo se mostrará  cuando la memoria de ratificación se encuentre en uno de los siguientes estados: "en elaboración", "favorable pendiente de revisión mínima", "pendiente de correcciones".
 
@@ -543,7 +517,7 @@ La siguiente imagen muestra el aspecto del bloque 5, donde estarán los únicos 
 
 ![](/attachments/597852717/597859100.png)
 
-* **Título descriptivo:**sólo es visible en el caso de que en el campo "Comité" se escoja la opción de "CEEA". En este caso este campo es opcional donde se debe de introducir el procedimiento y la especie animal. Este campo corresponderá con el apartado 3\.3 TÍTULO DESCRIPTIVO del formulario de la memoria, únicamente se podrá modificar desde esta pantalla, en el formulario se mostrará en modo consulta sacando el valor introducido en este formulario.
+* **Título descriptivo:**sólo es visible en el caso de que en el campo "Comité" se escoja la opción de "CEEA". En este caso este campo es opcional donde se debe de introducir el procedimiento y la especie animal. Este campo corresponderá con el apartado 3.3 TÍTULO DESCRIPTIVO del formulario de la memoria, únicamente se podrá modificar desde esta pantalla, en el formulario se mostrará en modo consulta sacando el valor introducido en este formulario.
 
 ![](/attachments/597852717/841089135.png)
 
@@ -553,17 +527,13 @@ Si se pulsa el botón "GUARDAR" se crea la memoria con los datos generales. Se m
 
 ![](/attachments/597852717/597859093.png)
 
-##### 3\.2\.4\.2 Editar memoria
+##### 3.2.4.2 Editar memoria
 
 La edición de una memoria (el botón del icono del lápiz) abre el formulario de "Datos generales" con los mismos campos que el formulario de creación donde el personal de investigación puede modificar los datos.
 
 La edición de una memoria esta formada por los siguientes bloques de información:
 
-![](/attachments/597852717/841089131.png)  
-
-
-  
-
+![](/attachments/597852717/841089131.png)
 
 * **Datos generales**: conjunto de datos de información general sobre la memoria que se quiere evaluar (ya informados durante la creación de la memoria).
 * **Formulario**: conjunto de preguntas y respuestas que será diferente en función del material de investigación (humanos, animales o agentes biológicos) que forman el formulario de memoria que se va a evaluar.
@@ -577,14 +547,13 @@ La edición de una memoria esta formada por los siguientes bloques de informaci�
 
 Una vez introducidos los datos que se desean modificar o añadir en cualquiera de los bloques (datos generales, formulario, documentación, seguimiento anual, seguimiento final o retrospectiva), el personal de investigación podrá pulsar sobre el botón "GUARDAR" situado en la parte inferior de la pantalla en el "Área de acciones" para actualizar la memoria (sino se pulsa sobre el botón "GUARDAR" todos los cambios realizados se perderán)
 
-###### 3\.2\.4\.2\.1 Datos generales
+###### 3.2.4.2.1 Datos generales
 
 Formulario con los datos de información básica de una memoria.
 
-![](/attachments/597852717/841089131.png)  
+![](/attachments/597852717/841089131.png)
 
-
-En el apartado  de [Añadir memoria](#MDUPerfildeinvestigaciónMóduloETI-A%C3%B1adirmemoria "#MDUPerfildeinvestigaciónMóduloETI-A%C3%B1adirmemoria") se puede ver la descripción detallada de cada campo.
+En el apartado  de [Añadir memoria](#MDUPerfildeinvestigaciónMóduloETI-A%C3%B1adirmemoria) se puede ver la descripción detallada de cada campo.
 
 Los siguientes campos no se podrán modificar una vez creada la memoria:
 
@@ -592,17 +561,11 @@ Los siguientes campos no se podrán modificar una vez creada la memoria:
 * Comité
 * Tipo de memoria
 
-  
-
-
 Si la memoria se encuentra en estado "en subsanación" se mostrará un aviso, así como el comentario aportado por Secretaría donde se recoge las modificaciones que deben ser realizadas antes de poder incluir la memoria en una reunión de evaluación.
 
 ![](/attachments/597852717/841089097.png)
 
-  
-
-
-###### 3\.2\.4\.2\.2 Formulario
+###### 3.2.4.2.2 Formulario
 
 Información específica de la solicitud de evaluación que será diferente en función del material de investigación (humanos, animales o agentes biológicos). El personal de investigación debe de responder a todas las preguntas sobre su diseño cuyas respuestas permitirán la evaluación ética, metodológica y legal del proyecto.
 
@@ -614,27 +577,25 @@ Información específica de la solicitud de evaluación que será diferente en f
 * **Favorable pendiente de modificaciones mínimas:** estado al que pasa la memoria de forma automática cuando se le da un dictamen "Favorable pendiente de modificaciones mínimas" en una convocatoria de reunión del comité. Podrá modificar únicamente aquellos apartados del formulario en los que el comité le ha puesto un comentario. Se identifican porque tiene el icono ![](/attachments/597852717/597859207.png)
 * **Pendiente de correcciones:** estado al que pasa la memoria de forma automática cuando se le da un dictamen "Favorable pendiente de modificaciones mínimas" en una convocatoria de reunión del comité. Podrá modificar únicamente aquellos apartados del formulario en los que el comité le ha puesto un comentario. Se identifican porque tiene el icono ![](/attachments/597852717/597859207.png)
 
-  
-
-
 ![](/attachments/597852717/597859230.png)
 
 El formulario se divide en:
 
-1. **Bloques del formulario:** Conjunto de apartados. Será necesario responder a todos los apartados obligatorios del bloque para poder pasar al siguiente bloque. No se puede navegar del bloque 1 al bloque 3, sin pasar por el bloque 2\. Los bloques son:
-* + Valor social y justificación
-	+ Cualificación del equipo investigador
-	+ Validez científica y metodológica
-	+ Aspectos éticos específicos
-	+ Cumplimiento de la documentación
+1. **Bloques del formulario:** Conjunto de apartados. Será necesario responder a todos los apartados obligatorios del bloque para poder pasar al siguiente bloque. No se puede navegar del bloque 1 al bloque 3, sin pasar por el bloque 2. Los bloques son:
 
-Para pasar de un bloque a otro se pueden usar los botones de "**Anterior**" o "**Siguiente**" o bien pulsando directamente sobre el número del bloque (siempre y cuando ya se haya pasado por él) tal y como muestra la siguiente imagen. Del bloque 2 podremos pasar el bloque 1 o al bloque 3, pero no al bloque 4\.
+* + Valor social y justificación
+  + Cualificación del equipo investigador
+  + Validez científica y metodológica
+  + Aspectos éticos específicos
+  + Cumplimiento de la documentación
+
+Para pasar de un bloque a otro se pueden usar los botones de "**Anterior**" o "**Siguiente**" o bien pulsando directamente sobre el número del bloque (siempre y cuando ya se haya pasado por él) tal y como muestra la siguiente imagen. Del bloque 2 podremos pasar el bloque 1 o al bloque 3, pero no al bloque 4.
 
 ![](/attachments/597852717/597859223.png)
 
-**2\. Apartados dentro de cada bloque:** Dependiendo del material de investigación usado en el proyecto (humanos, animales o agentes biológicos) los apartados son diferentes. Será necesario responder a todas las preguntas de los apartados que sean obligatorias, es decir, las marcados con un asterisco.
+**2. Apartados dentro de cada bloque:** Dependiendo del material de investigación usado en el proyecto (humanos, animales o agentes biológicos) los apartados son diferentes. Será necesario responder a todas las preguntas de los apartados que sean obligatorias, es decir, las marcados con un asterisco.
 
-En la siguiente imagen se puede ver que los apartados 1\.1\.1FIN ESPECÍFICO DEL PROYECTO  y 1\.2 JUSTIFICACIÓN DEL USO DE ANIMALES son apartados obligatorios que el personal de investigación debe de introducir un texto para poder guardar la información. El botón "GUARDAR" no se activará hasta que se hayan introducidos todos los apartados obligatorios.
+En la siguiente imagen se puede ver que los apartados 1.1.1FIN ESPECÍFICO DEL PROYECTO  y 1.2 JUSTIFICACIÓN DEL USO DE ANIMALES son apartados obligatorios que el personal de investigación debe de introducir un texto para poder guardar la información. El botón "GUARDAR" no se activará hasta que se hayan introducidos todos los apartados obligatorios.
 
 ![](/attachments/597852717/597859222.png)
 
@@ -642,47 +603,23 @@ En caso de pulsar el botón "**Siguiente**" sin haber introducir todos los apart
 
 ![](/attachments/597852717/597859209.png)
 
-  
-
-
-  
-
-
 El botón "Guardar" se activará una vez que se registren cambios en el formulario. Es decir, una vez que se introduzca una respuesta en un apartado. 
 
 ![](/attachments/597852717/597859213.png)
 
-  
-
-
 Con el botón "Siguiente" se podrá avanzar al siguiente bloque del formulario. Se puede avanzar al siguiente bloque sin haber terminado la cumplimentación del bloque en curso. Sin embargo, no será posible Guardar los cambios en el formulario hasta que no se hayan cumplimentado todas las preguntas obligatorias de todos los bloques del formulario que se hayan visualizado en pantalla. Aunque el botón Guardar esté activo (lo estará desde el momento en que se hayan introducido cambios en alguna respuesta del formulario), si se pulsa antes de haber cumplimentado todas las respuestas del bloque que esté siendo mostrado por pantalla (o de cualquier otro bloque al que se haya accedido previamente), se mostrará un error.
-
-  
-
 
 ![](/attachments/597852717/841089123.png)
 
-  
-
-
 El mensaje de error ![](/attachments/597852717/841089124.png) se cerrará tras estar visible unos segundos. Todas las preguntas del bloque que estén pendientes de respuesta se visualizarán con el icono ![](/attachments/597852717/841089125.png) ![](https://confluence.treelogic.com/download/thumbnails/134293341/icono_warning_mem.png?version=1&modificationDate=1694679475793&api=v2). 
-
-  
-
 
 ![](/attachments/597852717/841089126.png)
 
-  
-
-
 El botón Guardar permanecerá desactivado hasta que sean cumplimentados todas las preguntas no sólo del bloque mostrado en pantalla sino de todos aquellos bloques que hubieran sido abiertos en pantalla.
 
-Una vez introducidas todas las respuestas de los bloques que hubieran sido abiertos se activará  el botón "Guardar". Se podrá Guardar el formulario sin haber finalizado su cumplimentación, siempre y cuando no se hayan ido abriendo todos los bloques en pantalla, lo que obligaría a tener que cumplimentar las preguntas obligatorias de cada bloque. Es decir, se podrán dejar bloques pendientes de respuesta siempre y cuando no se abra su contenido en pantalla. 
+Una vez introducidas todas las respuestas de los bloques que hubieran sido abiertos se activará  el botón "Guardar". Se podrá Guardar el formulario sin haber finalizado su cumplimentación, siempre y cuando no se hayan ido abriendo todos los bloques en pantalla, lo que obligaría a tener que cumplimentar las preguntas obligatorias de cada bloque. Es decir, se podrán dejar bloques pendientes de respuesta siempre y cuando no se abra su contenido en pantalla.
 
 Por seguridad y debido a la cantidad de información que existe en cada bloque se recomienda ir guardando cada bloque antes de pasar al siguiente, aunque no es necesario. El pulsar el botón "Siguiente" no supone que se guarden los cambios, la única forma de guardar la información es a través del botón "Guardar".
-
-  
-
 
 En el caso de que la memoria se encuentre en el estado "En elaboración" una vez contestados todos los apartados del bloque 5 de documentación y pulsar el botón "GUARDAR", la memoria se pasará del estado "En elaboración" al estado "Completada". En este momento el personal de investigación podrá ir  la pantalla de "Documentación" para aportar los documentos requeridos de la memoria (los que ha contestado que "Sí" en los apartados del bloque 5 del formulario)
 
@@ -696,10 +633,7 @@ Si la memoria se encuentra evaluada y se han aportado comentarios generales sobr
 
 ![](/attachments/597852717/698122313.png)
 
-  
-
-
-###### 3\.2\.4\.2\.3 Documentación
+###### 3.2.4.2.3 Documentación
 
 Pantalla donde deben de adjuntarse los documentos obligatorios que se han puesto en el bloque 5 del formulario que se iban a aportar. En el formulario únicamente se indica si se va a aportar o no, es en esta pantalla donde se deben de adjuntar los documentos.
 
@@ -709,14 +643,13 @@ La pantalla esta dividida en 4 bloques de documentos:
 
 1. **Memoria**: permite adjuntar los documentos que necesita aportar el personal de investigación mencionados en el bloque 5 del formulario de la memoria. Se puede añadir un documento o eliminar un documento de los ya adjuntados si la memoria está en cualquier estado excepto en el estado "En secretaría" o "En evaluación". Se permite modificar documentos cuando la memoria ya ha obtenido un informe favorable por si se necesita añadir el documento con el formato oficial (existen ocasiones que durante al evaluación del comité el personal de investigación adjunta un documento pero con un formato que no es el adecuado, sin logos, sin firmas,etc).
 2. **Seguimiento anual**: permite ajuntar los documentos que necesita aportar el personal de investigación para el formulario de seguimiento anual (pdf de las publicaciones que se hubiesen generado con el proyecto, autorización de centros escolares, residenciales, etc.). Únicamente se puede añadir un documento de seguimiento anual o eliminar uno de los ya adjuntados si la memoria está en uno de estos estados:
-	* **Fin evaluación:** estado al que pasa la memoria de forma automática cuando se le da un dictamen "Favorable" en una convocatoria de reunión del comité
-	* **Completada seguimiento anual:** estado al que se pasa la memoria de forma automática cuando el personal de investigación rellena todos los apartados del formulario de seguimiento anual.
+   * **Fin evaluación:** estado al que pasa la memoria de forma automática cuando se le da un dictamen "Favorable" en una convocatoria de reunión del comité
+   * **Completada seguimiento anual:** estado al que se pasa la memoria de forma automática cuando el personal de investigación rellena todos los apartados del formulario de seguimiento anual.
 3. **Seguimiento final**: permite ajuntar los documentos que necesita aportar el personal de investigación para el formulario de seguimiento final (pdf de las publicaciones que se hubiesen generado con el proyecto). Únicamente se puede añadir un documento de seguimiento final o eliminar uno de los ya adjuntados si la memoria está en uno de estos estados:  
-
-	* **Fin evaluación seguimiento anual**: estado al que se pasa la memoria de forma automática cuando se le da un dictamen "Favorable" al seguimiento anual en una convocatoria de reunión del comité.
-	* **Completada seguimiento final:** estado al que se pasa la memoria de forma automática cuando el personal de investigación rellena todos los apartados del formulario de seguimiento final.
-	* **En aclaración seguimiento final**: estado al que se pasa la memoria de forma automática cuando se le da un dictamen "Solicitud de aclaraciones" al seguimiento final en una convocatoria de reunión del comité.
-4. **Retrospectiva**: permite ajuntar los documentos que necesita aportar el personal de investigación para el formulario de retrospectiva (hoja de control). Únicamente se puede añadir un documento de retrospectiva o eliminar uno de los ya adjuntados si la memoria es del comité CEEA, se ha puesto en el apartado 5\.3 EVALUACIÓN RETROSPECTIVA del formulario de memoria que requiere retrospectiva, la memoria ha obtenido el informe favorable y no se ha enviado a secretaría el formulario de retrospectiva.
+   * **Fin evaluación seguimiento anual**: estado al que se pasa la memoria de forma automática cuando se le da un dictamen "Favorable" al seguimiento anual en una convocatoria de reunión del comité.
+   * **Completada seguimiento final:** estado al que se pasa la memoria de forma automática cuando el personal de investigación rellena todos los apartados del formulario de seguimiento final.
+   * **En aclaración seguimiento final**: estado al que se pasa la memoria de forma automática cuando se le da un dictamen "Solicitud de aclaraciones" al seguimiento final en una convocatoria de reunión del comité.
+4. **Retrospectiva**: permite ajuntar los documentos que necesita aportar el personal de investigación para el formulario de retrospectiva (hoja de control). Únicamente se puede añadir un documento de retrospectiva o eliminar uno de los ya adjuntados si la memoria es del comité CEEA, se ha puesto en el apartado 5.3 EVALUACIÓN RETROSPECTIVA del formulario de memoria que requiere retrospectiva, la memoria ha obtenido el informe favorable y no se ha enviado a secretaría el formulario de retrospectiva.
 
 Al pulsar sobre el botón "**Añadir Documento**" del bloque de Memoria, se abrirá un formulario como el mostrado en la siguiente imagen.
 
@@ -736,7 +669,7 @@ Una vez introducidos todos los campos obligatorios se activará el botón "Añad
 
 ![](/attachments/597852717/597859315.png)
 
-###### 3\.2\.4\.2\.4 Seguimiento anual
+###### 3.2.4.2.4 Seguimiento anual
 
 Contiene la información necesaria para cumplimentar el formulario del seguimiento anual de una memoria (seguimiento que se hace al año de iniciarse el proyecto). El personal de investigación debe de responder a todas las preguntas.
 
@@ -744,9 +677,9 @@ Contiene la información necesaria para cumplimentar el formulario del seguimien
 
 * Ha pasado 1 año desde la fecha de inicio de la solicitud de evaluación (campo "fecha inicio" de la pantalla "Datos generales" de la solicitud de evaluación a la que pertenece la memoria)
 * La memoria se encuentra en uno de esos estados:
-	+ **Fin evaluación:**estado al que pasa la memoria de forma automática cuando se le da un dictamen "Favorable" en una convocatoria de reunión del comité
-	+ **Completada seguimiento anual:**estado al que se pasa la memoria de forma automática cuando el personal de investigación rellena todos los apartados del formulario de seguimiento anual.
-	+ **Solicitud modificación seguimiento anual**: estado de una memoria cuando ha sido sometida a la evaluación de seguimiento anual y se solicitan modificaciones sobre el formulario de seguimiento anual.
+  + **Fin evaluación:**estado al que pasa la memoria de forma automática cuando se le da un dictamen "Favorable" en una convocatoria de reunión del comité
+  + **Completada seguimiento anual:**estado al que se pasa la memoria de forma automática cuando el personal de investigación rellena todos los apartados del formulario de seguimiento anual.
+  + **Solicitud modificación seguimiento anual**: estado de una memoria cuando ha sido sometida a la evaluación de seguimiento anual y se solicitan modificaciones sobre el formulario de seguimiento anual.
 
 En este caso el formulario se mostrará en modo edición para que el personal de investigación pueda escribir sus respuesta tal y como muestra la siguiente imagen.
 
@@ -758,7 +691,7 @@ En caso de que no se cumplan las condiciones para poder modificar el formulario 
 
 Una vez introducidas todas las respuestas del formulario se debe de pulsar el botón "GUARDAR", momento en el cual la memoria se pasará del estado "Fin evaluación" al estado "Completada seguimiento anual" (si ya estaba en el estado "Completada seguimiento anual" se mantiene en este estado). En este momento el personal de investigación podrá ir  la pantalla de "Documentación" para aportar los documentos que estime oportunos adjuntar a la evaluación del seguimiento anual.
 
-###### 3\.2\.4\.2\.5 Seguimiento final
+###### 3.2.4.2.5 Seguimiento final
 
 Contiene la información necesaria para cumplimentar el formulario del seguimiento final de una memoria (seguimiento que se hace al año de finalizarse el proyecto). El personal de investigación debe de responder a todas las preguntas.
 
@@ -766,10 +699,9 @@ Contiene la información necesaria para cumplimentar el formulario del seguimien
 
 * Ha pasado 1 año desde la fecha de fin de la solicitud de evaluación (campo "fecha fin" de la pantalla "Datos generales" de la solicitud de evaluación a la que pertenece la memoria)
 * La memoria se encuentra en uno de esos estados:  
-
-	+ **Fin evaluación seguimiento anual**: estado al que se pasa la memoria de forma automática cuando se le da un dictamen "Favorable" al seguimiento anual en una convocatoria de reunión del comité.
-	+ **Completada seguimiento final:** estado al que se pasa la memoria de forma automática cuando el personal de investigación rellena todos los apartados del formulario de seguimiento final.
-	+ **En aclaración seguimiento final**: estado al que se pasa la memoria de forma automática cuando se le da un dictamen "Solicitud de aclaraciones" al seguimiento final en una convocatoria de reunión del comité.
+  + **Fin evaluación seguimiento anual**: estado al que se pasa la memoria de forma automática cuando se le da un dictamen "Favorable" al seguimiento anual en una convocatoria de reunión del comité.
+  + **Completada seguimiento final:** estado al que se pasa la memoria de forma automática cuando el personal de investigación rellena todos los apartados del formulario de seguimiento final.
+  + **En aclaración seguimiento final**: estado al que se pasa la memoria de forma automática cuando se le da un dictamen "Solicitud de aclaraciones" al seguimiento final en una convocatoria de reunión del comité.
 
 En este caso el formulario se mostrará en modo edición para que el personal de investigación pueda escribir sus respuesta tal y como muestra la siguiente imagen.
 
@@ -781,34 +713,32 @@ En caso de que no se cumplan las condiciones para poder modificar el formulario 
 
 Una vez introducidas todas las respuestas del formulario se debe de pulsar el botón "GUARDAR", momento en el cual la memoria se pasará del estado "Fin evaluación seguimiento anual" al estado "Completada seguimiento final" (si ya estaba en el estado "Completada seguimiento final" o "En aclaración seguimiento final" se mantiene en este estado). En este momento el personal de investigación podrá ir  la pantalla de "Documentación" para aportar los documentos que estime oportunos adjuntar a la evaluación del seguimiento final.
 
-###### 3\.2\.4\.2\.6 Retrospectiva
+###### 3.2.4.2.6 Retrospectiva
 
 Contiene la información necesaria para cumplimentar el formulario retrospectiva de una memoria. El personal de investigación debe de responder a todas las preguntas.
 
-Únicamente se mostrará el formulario de Retrospectiva (se muestra la opción de menú "Retrospectiva") si la memoria es de tipo CEEA y el personal de investigación había informado en el apartado 5\.3 EVALUACIÓN RETROSPECTIVA del formulario de memoria que requiere retrospectiva.  
+Únicamente se mostrará el formulario de Retrospectiva (se muestra la opción de menú "Retrospectiva") si la memoria es de tipo CEEA y el personal de investigación había informado en el apartado 5.3 EVALUACIÓN RETROSPECTIVA del formulario de memoria que requiere retrospectiva.
 
-
-Si la fecha actual es igual o mayor a la fecha de retrospectiva indicada en la memoria por el investigador  y  el campo estado de la retrospectiva es Pendiente o Completada el formulario se mostrará en modo edición, sino se mostrará en modo consulta.   
-
+Si la fecha actual es igual o mayor a la fecha de retrospectiva indicada en la memoria por el investigador  y  el campo estado de la retrospectiva es Pendiente o Completada el formulario se mostrará en modo edición, sino se mostrará en modo consulta.
 
 Únicamente se pueden realizar cambios en el formulario si se cumplen las siguientes condiciones:
 
 * + La memoria es del comité CEEA
-	+ El personal de investigación ha informado en el apartado 5\.3 EVALUACIÓN RETROSPECTIVA del formulario de memoria que requiere retrospectiva.
-	+ La fecha actual es igual o mayor a la fecha de retrospectiva indicada en el apartado 5\.3 EVALUACIÓN RETROSPECTIVA del formulario de memoria.
-	+ No se ha enviado el formulario de retrospectiva a secretaría.
+  + El personal de investigación ha informado en el apartado 5.3 EVALUACIÓN RETROSPECTIVA del formulario de memoria que requiere retrospectiva.
+  + La fecha actual es igual o mayor a la fecha de retrospectiva indicada en el apartado 5.3 EVALUACIÓN RETROSPECTIVA del formulario de memoria.
+  + No se ha enviado el formulario de retrospectiva a secretaría.
 
 En este caso el formulario se mostrará en modo edición para que el personal de investigación pueda escribir sus respuesta tal y como muestra la siguiente imagen.
 
 ![](/attachments/597852717/597859577.png)
 
-Una vez enviado el formulario a secretaría para su evaluación o si la fecha actual es menor a la fecha de retrospectiva indicada en el apartado 5\.3 EVALUACIÓN RETROSPECTIVA del formulario de memoria, saldrá el icono del candado  ![](/attachments/597852717/597859141.png)para informar de que no se puede cumplimentar o modificar los datos de la pantalla.
+Una vez enviado el formulario a secretaría para su evaluación o si la fecha actual es menor a la fecha de retrospectiva indicada en el apartado 5.3 EVALUACIÓN RETROSPECTIVA del formulario de memoria, saldrá el icono del candado  ![](/attachments/597852717/597859141.png)para informar de que no se puede cumplimentar o modificar los datos de la pantalla.
 
 ![](/attachments/597852717/597859579.png)
 
 Una vez introducidas todas las respuestas del formulario se debe de pulsar el botón "GUARDAR", momento en el cual la retrospectiva va a poder enviarse a secretaría para su evaluación. En este momento el personal de investigación podrá ir  la pantalla de "Documentación" para aportar los documentos que estime oportunos adjuntar a la evaluación de la retrospectiva.
 
-###### 3\.2\.4\.2\.7 Evaluaciones
+###### 3.2.4.2.7 Evaluaciones
 
 Listado de evaluaciones por las que ha pasado la memoria y sus seguimientos. Cada vez que el personal de investigación envíe a secretaría una memoria o un seguimiento para su evaluación se mostrará una fila con el resultado de su evaluación, en caso de que no se haya completado la evaluación  se muestra la fila pero sin el dictamen y sin el informe de evaluación o  favorable.
 
@@ -819,30 +749,30 @@ Es una pantalla de información para el personal de investigación.
 A continuación se detalla el significado de cada una de las columnas del listado:
 
 * **Tipo:** indica el tipo de evaluación. Los posibles valores que puede tomar dicho campo son:
-	+ Memoria
-	+ Retrospectiva
-	+ Seguimiento anual
-	+ Seguimiento final
+  + Memoria
+  + Retrospectiva
+  + Seguimiento anual
+  + Seguimiento final
 * **Nº de versión:** versión de la evaluación. Se genera una versión de evaluación por cada formulario que se envíe a secretaría.  Cada tipo de evaluación tiene su propia versión.
 * **Dictamen:** resultado de la evaluación. Si la evaluación no se completado no se informará de este campo. Dependiendo del tipo de evaluación el valor del dictamen podrá ser.
-	+ Si el tipo de evaluación es Memoria:
-		- Favorable
-		- Favorable pendiente de revisión mínima
-		- Pendiente de correcciones
-		- No procede evaluar
-	+ Si el tipo de evaluación es Retrospectiva:
-		- Favorable
-		- Desfavorable
-	+ Si el tipo de evaluación es Seguimiento anual:
-		- Favorable
-		- Solicitud de modificaciones
-	+ Si el tipo de evaluación es Seguimiento final:
-		- Favorable
-		- Solicitud de aclaraciones
+  + Si el tipo de evaluación es Memoria:
+    - Favorable
+    - Favorable pendiente de revisión mínima
+    - Pendiente de correcciones
+    - No procede evaluar
+  + Si el tipo de evaluación es Retrospectiva:
+    - Favorable
+    - Desfavorable
+  + Si el tipo de evaluación es Seguimiento anual:
+    - Favorable
+    - Solicitud de modificaciones
+  + Si el tipo de evaluación es Seguimiento final:
+    - Favorable
+    - Solicitud de aclaraciones
 * **Informe Evaluación:** pdf con el informe de evaluación. Sólo estará disponible si la evaluación se ha finalizado y el dictamen no es favorable. Al seleccionar el icono del pdf ![](/attachments/597852717/597859331.png) se podrá descargar el informe.
 * **Informe Favorable:** pdf con el informe favorable. Sólo estará disponible si la evaluación se ha finalizado y el dictamen es favorable. Las evaluaciones de seguimiento anual y final no tienen informe asociado, sólo las evaluaciones de tipo memoria y retrospectiva. Al seleccionar el icono del pdf ![](/attachments/597852717/597859331.png) se podrá descargar el informe.
 
-###### 3\.2\.4\.2\.8 Versiones
+###### 3.2.4.2.8 Versiones
 
 Listado de informes(pdf) generados a partir de los formularios de memoria, seguimiento anual, seguimiento final o retrospectiva enviados a secretaria. Cada vez que el personal de investigación envíe a secretaría una memoria o un seguimiento para su evaluación se mostrará una fila con la información recogida en el formulario hasta ese momento.
 
@@ -852,16 +782,14 @@ Es una pantalla de información para el personal de investigación.
 
 Al seleccionar el icono del pdf ![](/attachments/597852717/597859331.png) se podrá descargar el informe de la versión.
 
-  
-
-
 El nombre de la versión sigue el siguiente formato :
 
 * NumeroRefenciaMemoria\_vz, donde z es un número de versión (1,2,3,...) si el tipo de evaluación es Memoria.
 * NumeroRefenciaMemoria\_SA\_vz, donde z es un número de versión (1,2,3,...) si el tipo de evaluación es Seguimiento anual
 * NumeroRefenciaMemoria\_SF\_vz, donde z es un número de versión (1,2,3,...) si el tipo de evaluación es Seguimiento final
 * NumeroRefenciaMemoria\_R\_vz, donde z es un número de versión (1,2,3,...) si el tipo de evaluación es Retrospectiva
-##### 3\.2\.4\.3 Eliminar memoria
+
+##### 3.2.4.3 Eliminar memoria
 
 Únicamente se puede eliminar una memoria (se muestra el icono de eliminar) si esta en unos de estos estados :
 
@@ -876,7 +804,7 @@ En caso de responder afirmativamente (botón "Aceptar") la memoria desaparecerá
 
 Si se pulsa el botón de "Cancelar" de la ventana emergente se volverá a activar la pantalla del listado de Memorias de la solicitud de evaluación sin eliminar la memoria.
 
-##### 3\.2\.4\.4 Enviar secretaría
+##### 3.2.4.4 Enviar secretaría
 
 Acción por la que el formulario de memoria, o de seguimiento anual o de seguimiento final se envía al comité para su evaluación. Sólo la persona que ha creado la solicitud de evaluación y la memoria tiene disponible la acción de "Enviar secretaria", es decir, la persona responsable de la memoria puede modificar los datos de la solicitud de evaluación y de la memoria pero no puede realizar el envío de la memoria al comité. Únicamente se puede enviar a secretaría una memoria (se muestra el icono de "Enviar secretaría") si esta en unos de estos estados :
 
@@ -898,12 +826,12 @@ En caso de responder afirmativamente (botón "Aceptar") la memoria se enviará a
 La acción de "Enviar a secretaría" desencadena las siguientes actuaciones:
 
 * Cambio del estado de la memoria:
-	+ Si el estado de la memoria es "Completada"  o "Pendiente de correcciones"  se cambia al estado "En secretaría"
-	+ Si el estado de la memoria es  "Favorable Pendiente de Modificaciones Mínimas" se cambia al estado "En secretaría revisión mínima".
-	+ Si el estado de la memoria es "Completada seguimiento anual" se cambia al estado "En secretaría seguimiento anual"
-	+ Si el estado de la memoria es "Completada seguimiento final" se cambia al estado "En secretaría seguimiento final"
-	+ Si el estado de la memoria es "En aclaración seguimiento final" se cambia al estado "En secretaría seguimiento final aclaraciones"
-* Creación del fichero en formato .pdf del formulario de memoria o de seguimiento anual o de seguimiento final con los datos del proyecto y con los del formulario disponible en la pantalla de "Versiones" (Apartado [Versiones](#MDUPerfildeinvestigaciónMóduloETI-Versiones "#MDUPerfildeinvestigaciónMóduloETI-Versiones")).
+  + Si el estado de la memoria es "Completada"  o "Pendiente de correcciones"  se cambia al estado "En secretaría"
+  + Si el estado de la memoria es  "Favorable Pendiente de Modificaciones Mínimas" se cambia al estado "En secretaría revisión mínima".
+  + Si el estado de la memoria es "Completada seguimiento anual" se cambia al estado "En secretaría seguimiento anual"
+  + Si el estado de la memoria es "Completada seguimiento final" se cambia al estado "En secretaría seguimiento final"
+  + Si el estado de la memoria es "En aclaración seguimiento final" se cambia al estado "En secretaría seguimiento final aclaraciones"
+* Creación del fichero en formato .pdf del formulario de memoria o de seguimiento anual o de seguimiento final con los datos del proyecto y con los del formulario disponible en la pantalla de "Versiones" (Apartado [Versiones](#MDUPerfildeinvestigaciónMóduloETI-Versiones)).
 
 En el caso de que el personal de investigación no haya adjuntado todos los documentos que ha puesto como obligatorios o que dijo que iba a presentar (valor "Sí") en cada uno de los apartados del bloque 5 del formulario de la memoria se le muestra una ventana emergente de confirmación donde se le pregunta si realmente desea enviar la memoria aunque no haya adjuntado toda la documentación obligatoria.
 
@@ -911,32 +839,26 @@ En el caso de que el personal de investigación no haya adjuntado todos los docu
 
 En caso de responder afirmativamente (botón "Aceptar") la memoria se enviará a secretaría para su evaluación y se mostrará el aviso de que la memoria se ha enviado correctamente. Si se pulsa el botón de "Cancelar" de la ventana emergente se volverá a activar la pantalla del listado de Memorias sin realizar ningún cambio sobre la memoria (no se cambia de estado y sigue pendiente de enviarse para su evaluación).
 
-  
-
-
 Una vez que la memoria ha sido enviada a secretaría con éxito, el icono de acción ![](/attachments/597852717/597859257.png)![](https://confluence.treelogic.com/download/thumbnails/134293341/IconoEnviarSecretaria.png?version=2&modificationDate=1653284816643&api=v2)ya no estará disponible. Sin embargo, puede darse un escenario de uso atípico en el que la acción "enviar a secretaría" estaría disponible aun cuando la memoria ya se encuentra en estado "en secretaría":
 
-* el listado de memorias se encontraba abierto, de forma simultánea, en una pestaña de navegador diferente a la pestaña desde la que se ejecutó el envío a secretaría y la información de la segunda pestaña no fue refrescada (F5 o Ctrl\+F5\) tras ejecutar la acción de envío de secretaría
+* el listado de memorias se encontraba abierto, de forma simultánea, en una pestaña de navegador diferente a la pestaña desde la que se ejecutó el envío a secretaría y la información de la segunda pestaña no fue refrescada (F5 o Ctrl+F5) tras ejecutar la acción de envío de secretaría
 
 Si, en la anterior circunstancia, se pulsase el botón "Enviar secretaría" desde la segunda pestaña se mostrará un mensaje de error.
 
 ![](/attachments/597852717/699498516.png)
 
-  
-
-
 Este mensaje de error, informa de que la acción "enviar a secretaría" no se puede realizar porque el envío ya fue realizado previamente:
 
 ![](/attachments/597852717/699498517.png)
 
-##### 3\.2\.4\.5 Enviar secretaría retrospectiva
+##### 3.2.4.5 Enviar secretaría retrospectiva
 
 Acción por la que el formulario de retrospectiva se envía al comité para su evaluación. Sólo la persona que ha creado la solicitud de evaluación y la memoria tiene disponible la acción de "Enviar secretaria retrospectiva", es decir, la persona responsable de la memoria puede modificar los datos de la solicitud de evaluación y de la memoria pero no puede realizar el envío de la memoria al comité. Únicamente se puede enviar a secretaría una memoria (se muestra el icono de "Enviar secretaría retrospectiva") si se cumplen las siguientes condiciones:
 
 * La memoria es del comité CEEA
-* El personal de investigación ha informado en el apartado 5\.3 EVALUACIÓN RETROSPECTIVA del formulario de memoria que requiere retrospectiva.
+* El personal de investigación ha informado en el apartado 5.3 EVALUACIÓN RETROSPECTIVA del formulario de memoria que requiere retrospectiva.
 * Se ha obtenido el dictamen "Favorable" del formulario de memoria
-* El personal de investigación ha completado el formulario de retrospectiva (ver apartado [Retrospectiva](#MDUPerfildeinvestigaciónMóduloETI-Retrospectiva "#MDUPerfildeinvestigaciónMóduloETI-Retrospectiva")).
+* El personal de investigación ha completado el formulario de retrospectiva (ver apartado [Retrospectiva](#MDUPerfildeinvestigaciónMóduloETI-Retrospectiva)).
 
 Si se pulsa el icono "Enviar secretaría" ![](/attachments/597852717/597859258.png) situado en la última columna "Acciones" de la tabla de memorias de una solicitud de evaluación, se muestra una ventana emergente de confirmación donde se le pregunta al personal de investigación si realmente desea enviar la retrospectiva.
 
@@ -946,9 +868,9 @@ En caso de responder afirmativamente (botón "Aceptar") la retrospectiva de la m
 
 La funcionalidad de "Enviar a secretaría retrospectiva" desencadena la siguiente acción:
 
-* Creación del fichero en formato .pdf del formulario de retrospectiva con los datos del proyecto y con los del formulario disponible en la pantalla de "Versiones" (Apartado [Versiones](#MDUPerfildeinvestigaciónMóduloETI-Versiones "#MDUPerfildeinvestigaciónMóduloETI-Versiones")).
+* Creación del fichero en formato .pdf del formulario de retrospectiva con los datos del proyecto y con los del formulario disponible en la pantalla de "Versiones" (Apartado [Versiones](#MDUPerfildeinvestigaciónMóduloETI-Versiones)).
 
-### 3\.3 Eliminar solicitud de evaluación
+### 3.3 Eliminar solicitud de evaluación
 
 Sólo se puede eliminar una solicitud de evaluación sino se ha creado todavía la memoria o si la memoria o memorias asociadas están en los estados "En elaboración" o en "Completada", es decir, no se han enviado a "Secretaría" para su evaluación.
 
@@ -958,24 +880,23 @@ Si se pulsa el icono "Eliminar" ![](/attachments/597852717/597861045.png) situad
 
 Si se pulsa el botón "Aceptar" de la ventana emergente se realiza el borrado de la solicitud de evaluación y ya no le volverá a salir en la opción de menú de "Solicitudes de evaluación" y será eliminada del sistema. Si se pulsa el botón de "Cancelar" de la ventana emergente se volverá a activar la pantalla del listado de Solicitudes de evaluación sin eliminar la solicitud.
 
-## 4\. Memorias
+## 4. Memorias
 
 La tercera opción del submenú dentro del menú principal de Ética es "Memorias" que muestra en la parte superior de la pantalla el buscador y en la parte inferior el resultado de la búsqueda sin aplicar ningún filtro tal como muestra la siguiente imagen.
 
 Es un acceso directo a todas las memorias de todas las solicitudes de evaluación creadas por la propia persona que ha introducido sus credenciales en la aplicación. En el caso de que la persona este como responsable de una memoria también le saldrá en el listado para su posible modificación. Es una forma rápida de ir a la edición de una memoria sin necesidad de ir por la opción del menú de "Solicitudes de evaluación".
 
-![](/attachments/597852717/597859592.png)  
-
+![](/attachments/597852717/597859592.png)
 
 Los campos disponibles en el formulario de la búsqueda son:
 
 * **Título del proyecto**: nombre o título del proyecto de investigación el cual se va a someter a la evaluación por parte del comité de ética.
 * **Comité**: es un desplegable en el que el personal de investigación puede seleccionar entra las siguiente opciones:
-	+ CEI
-	+ CEEA
-	+ CBE
+  + CEI
+  + CEEA
+  + CBE
 * **Referencia memoria**: código que representa a la memoria.
-* **Estado**: estado de la memoria, es un campo desplegable con los distintos estados por lo que puede pasar una memoria. Ver apartado [Estados de una memoria](#MDUPerfildeinvestigaciónMóduloETI-Estadosdeunamemoria "#MDUPerfildeinvestigaciónMóduloETI-Estadosdeunamemoria") para una descripción detallada de cada uno de los posibles estados.
+* **Estado**: estado de la memoria, es un campo desplegable con los distintos estados por lo que puede pasar una memoria. Ver apartado [Estados de una memoria](#MDUPerfildeinvestigaciónMóduloETI-Estadosdeunamemoria) para una descripción detallada de cada uno de los posibles estados.
 
 Tras pulsar el botón “Buscar”, se muestra el listado de memorias que cumplan con los parámetros introducidos en el formulario y que sean memorias dadas de alta por el propio personal de investigación o aquellas en las que esta como responsable de la memoria. Los responsables de memoria pueden modificar los datos de la memoria y de su solicitud de evaluación.
 
@@ -987,9 +908,8 @@ Desde este listado el personal de investigación puede realizar las siguientes a
 
 1. **Editar:** este botón representado por el icono ![](/attachments/597852717/597861043.png) y situado en la última columna "Acciones" de la tabla, permite al personal de investigación modificar los datos de una memoria. Disponible para el creador y para el responsable de la memoria.
 2. **Eliminar**: este botón representado por el icono ![](/attachments/597852717/597861045.png)y situado en la última columna "Acciones" de la tabla, permite al personal de investigación eliminar la memoria. Únicamente se puede eliminar una memoria por la persona que ha creado la memoria y si se encuentra en uno de estos estados:  
-
-	* En elaboración
-	* Completada
+   * En elaboración
+   * Completada
 3. **Enviar a secretaría**: este botón representado por el icono ![](/attachments/597852717/597859257.png)y situado en la última columna "Acciones" de la tabla, permite al personal de investigación enviar su memoria a la comisión de ética para su evaluación. Una vez cumplimentado todo el formulario y documentación de la memoria el personal de investigación debe de pulsar este botón para que su memoria sea gestionada y evaluada por la comisión. El responsable de la memoria no podrá enviar a secretaría la memoria, únicamente modificar sus datos.
 4. **Enviar a secretaría retrospectiva**: este botón representado por el icono ![](/attachments/597852717/597859258.png)y situado en la última columna "Acciones" de la tabla, permite al personal de investigación enviar la retrospectiva de la memoria a la comisión de ética para su evaluación. Una vez cumplimentado todo el formulario de retrospectiva y su documentación el personal de investigación debe de pulsar este botón para que su retrospectiva de la memoria sea gestionada y evaluada por la comisión. El responsable de la memoria no podrá enviar a secretaría la retrospectiva de la memoria, únicamente modificar sus datos.
 
@@ -997,27 +917,27 @@ A continuación se detalla el significado de cada una de las columnas de informa
 
 * **Referencia memoria**: código que representa a la memoria, es un dato generado automáticamente y tiene el formato Mxx/YYYY/secuencia donde xx sera 10, 20 o 30, YYYY será el año, secuencia será un código secuencial que empieza en 000 cada año y comité y va hasta 999 si es de tipo "Nueva", si es de tipo "Ratificación" lleva una R al final (Mxx/YYYY/secuenciaR), y si es de tipo "Modificación" se copia la referencia de la memoria original y se pone al final MRX donde X es un secuencial de las modificaciones que haya tenido la memoria.
 * **Comité:** comité que va a realizar la evaluación de le memoria.
-* **Estado:** estado de la memoria, puede tener uno de los valores comentados en el apartado [Estados de una memoria](#MDUPerfildeinvestigaciónMóduloETI-Estadosdeunamemoria "#MDUPerfildeinvestigaciónMóduloETI-Estadosdeunamemoria")
+* **Estado:** estado de la memoria, puede tener uno de los valores comentados en el apartado [Estados de una memoria](#MDUPerfildeinvestigaciónMóduloETI-Estadosdeunamemoria)
 * **Fecha evaluación**: dependiendo del estado es la fecha de evaluación de la convocatoria de reunión en la que ha sido evaluada la memoria o es la fecha de evaluación de la próxima convocatoria de reunión en la que puede ser evaluada la memoria.
 * **Fecha límite**: dependiendo del estado es la fecha límite de la convocatoria de reunión en la que ha sido evaluada la memoria o fecha límite hasta la que se aceptan memorias de la próxima convocatoria de reunión en la que puede ser evaluada la memoria.
 
-### 4\.1 Editar memoria
+### 4.1 Editar memoria
 
-Funcionalidad descrita dentro del apartado de memorias de una solicitud de evaluación, ver enlace [Solicitudes de evaluación \- Editar memoria](#MDUPerfildeinvestigaciónMóduloETI-Editarmemoria "#MDUPerfildeinvestigaciónMóduloETI-Editarmemoria")
+Funcionalidad descrita dentro del apartado de memorias de una solicitud de evaluación, ver enlace [Solicitudes de evaluación - Editar memoria](#MDUPerfildeinvestigaciónMóduloETI-Editarmemoria)
 
-### 4\.2 Eliminar memoria
+### 4.2 Eliminar memoria
 
-Funcionalidad descrita dentro del apartado de memorias de una solicitud de evaluación, ver enlace [Solicitudes de evaluación \- Eliminar memoria](#MDUPerfildeinvestigaciónMóduloETI-Eliminarmemoria "#MDUPerfildeinvestigaciónMóduloETI-Eliminarmemoria")
+Funcionalidad descrita dentro del apartado de memorias de una solicitud de evaluación, ver enlace [Solicitudes de evaluación - Eliminar memoria](#MDUPerfildeinvestigaciónMóduloETI-Eliminarmemoria)
 
-### 4\.3 Enviar a secretaría
+### 4.3 Enviar a secretaría
 
-Funcionalidad descrita dentro del apartado de memorias de una solicitud de evaluación, ver enlace [Solicitudes de evaluación \- Enviar secretaría](#MDUPerfildeinvestigaciónMóduloETI-Enviarsecretar%C3%ADa "#MDUPerfildeinvestigaciónMóduloETI-Enviarsecretar%C3%ADa")
+Funcionalidad descrita dentro del apartado de memorias de una solicitud de evaluación, ver enlace [Solicitudes de evaluación - Enviar secretaría](#MDUPerfildeinvestigaciónMóduloETI-Enviarsecretar%C3%ADa)
 
-### 4\.4 Enviar a secretaría retrospectiva
+### 4.4 Enviar a secretaría retrospectiva
 
-Funcionalidad descrita dentro del apartado de memorias de una solicitud de evaluación, ver enlace [Solicitudes de evaluación \- Enviar secretaría retrospectiva](#MDUPerfildeinvestigaciónMóduloETI-Enviarsecretar%C3%ADaretrospectiva "#MDUPerfildeinvestigaciónMóduloETI-Enviarsecretar%C3%ADaretrospectiva")
+Funcionalidad descrita dentro del apartado de memorias de una solicitud de evaluación, ver enlace [Solicitudes de evaluación - Enviar secretaría retrospectiva](#MDUPerfildeinvestigaciónMóduloETI-Enviarsecretar%C3%ADaretrospectiva)
 
-## 5\. Actas
+## 5. Actas
 
 Esta opción del menú permite al personal de investigación que a su vez es un miembro activo de un comité, es decir, es un evaluador/a, acceder al listado de actas de su comité para añadir sus comentarios al acta, una vez que se han reunido para la evaluación de memorias de la convocatoria. El evaluador/a podrá añadir comentarios a las distintas memorias evaluadas (tienen que tener un dictamen) por si desea que se modifiquen o se añadan comentarios a la memoria ya evaluada el día de la convocatoria de reunión. Es una revisión a lo acordado en la convocatoria de reunión. El personal de la gestión de ética antes de finalizar el acta revisará estos comentarios por si necesita modificar o añadir los comentarios añadidos a las memorias evaluadas durante la reunión del comité.
 
@@ -1025,25 +945,18 @@ La opción del submenú "Actas" (sólo disponible par el personal de investigaci
 
 ![](/attachments/597852717/842039310.png)
 
-  
-
-
-  
-
-
 Los campos disponibles en el formulario de la búsqueda son:
 
 * **Comité**: es un desplegable en el que el personal de investigación puede seleccionar entra las siguiente opciones:
-	+ CEI
-	+ CEEA
-	+ CBE
+  + CEI
+  + CEEA
+  + CBE
 * **Fecha evaluación inicio:** campo para introducir la fecha la cual se va a tomar como referencia para obtener las actas cuya fecha de evaluación sea mayor o igual a esta fecha.
 * **Fecha evaluación fin:** campo para introducir la fecha la cual se va a tomar como referencia para obtener las actas cuya fecha de evaluación sea menor o igual a esta fecha.
 * **Nº Acta:** número del acta que se quiere buscar
 * **Estado**: estado del acta, los posibles valores son:  
-
-	+ En elaboración: se pueden realizar cambios en el acta y en las evaluaciones/seguimientos asociadas a ella.
-	+ Finalizada: no se pueden realizar cambios en el acta ni en las evaluaciones asociadas a ella.
+  + En elaboración: se pueden realizar cambios en el acta y en las evaluaciones/seguimientos asociadas a ella.
+  + Finalizada: no se pueden realizar cambios en el acta ni en las evaluaciones asociadas a ella.
 
 Tras pulsar el botón “Buscar”, se muestra el listado de actas que cumplan con los parámetros introducidos en el formulario y que sean actas pertenecientes al comité donde la persona que ha introducido sus credenciales en la aplicación sea un miembro activo del comité.
 
@@ -1055,20 +968,16 @@ A continuación se detalla el significado de cada una de las columnas de informa
 * **Fecha evaluación:** fecha de la convocatoria de reunión
 * **Nº acta:** número del acta
 * **Convocatoria:** tipo de convocatoria, puede tener uno de los siguientes valores:
-	+ Ordinaria: si una convocatoria es de este tipo únicamente se evaluarán formularios de memoria y retrospectivas.
-	+ Extraordinaria: si una convocatoria es de este tipo únicamente se evaluarán formularios de memoria y retrospectivas.
-	+ Seguimiento: si una convocatoria es de este tipo únicamente se evaluarán formularios de seguimiento anual o final de las memorias.
-* **Nº iniciales:** número de memorias iniciales (nuevas) que se van a revisar o se han revisado en la reunión de evaluación asociada a la acta**,** es decir, las de revisión 1\.
-* **Nº revisiones:** número de memorias reevaluadas que se van a revisar o se han revisado en la reunión de evaluación asociada a la acta, tienen una versión mayor que 1\.
+  + Ordinaria: si una convocatoria es de este tipo únicamente se evaluarán formularios de memoria y retrospectivas.
+  + Extraordinaria: si una convocatoria es de este tipo únicamente se evaluarán formularios de memoria y retrospectivas.
+  + Seguimiento: si una convocatoria es de este tipo únicamente se evaluarán formularios de seguimiento anual o final de las memorias.
+* **Nº iniciales:** número de memorias iniciales (nuevas) que se van a revisar o se han revisado en la reunión de evaluación asociada a la acta**,** es decir, las de revisión 1.
+* **Nº revisiones:** número de memorias reevaluadas que se van a revisar o se han revisado en la reunión de evaluación asociada a la acta, tienen una versión mayor que 1.
 * **Nº total:** número de iniciales mas el número de revisiones
 * **Estado:** estado del acta, los posibles valores son:  
-
-	+ En elaboración: se pueden realizar cambios en el acta y en las evaluaciones/seguimientos asociadas a ella.
-	+ Finalizada: no se pueden realizar cambios en el acta ni en las evaluaciones asociadas a ella.
+  + En elaboración: se pueden realizar cambios en el acta y en las evaluaciones/seguimientos asociadas a ella.
+  + Finalizada: no se pueden realizar cambios en el acta ni en las evaluaciones asociadas a ella.
 * **Comentarios enviados**: Indica si el/la evaluador/a ha remitido sus comentarios sobre el acta a Secretaría.
-
-  
-
 
 Desde este listado el evaluador/a puede realizar las siguientes acciones:
 
@@ -1077,7 +986,7 @@ Desde este listado el evaluador/a puede realizar las siguientes acciones:
 * **Descargar el fichero:**este botón representado por el icono ![](/attachments/597852717/597859331.png) y situado en la última columna "Acciones" de la tabla, permite al evaluador/a descargar el fichero que contiene el informe de acta.
 * **Enviar comentarios a secretaría**: Representada por el icono ![](/attachments/597852717/841089257.png) esta acción solo estará disponible a partir del momento en el que el/la evaluador/a añade uno o más comentarios sobre el acta.
 
-### 5\.1 Editar acta
+### 5.1 Editar acta
 
 La edición de un acta por parte de un evaluador/a (el botón del icono del lápiz) abre el formulario de "Datos generales" del acta en modo consulta. Únicamente se podrá editar un acta si el estado del acta es "En elaboración", es decir, el personal de gestión no ha finalizado el acta.
 
@@ -1085,22 +994,16 @@ La edición de una acta esta formada por los siguientes bloques de información:
 
 ![](/attachments/597852717/842039318.png)
 
-  
-
-
 * **Datos generales**: conjunto de datos de información general sobre el acta. El evaluador/a no podrá modificar ningún dato de esta pantalla, siempre la visualiza en modo consulta.
 * **Memorias**: conjunto de memorias que se van a evaluar o se han evaluado en la convocatoria de reunión asociada al acta. El evaluador/a no podrá modificar ningún dato de esta pantalla, siempre la visualiza en modo consulta.
 * **Asistentes**: conjunto de miembro del comité indicando si han asistido o no a la convocatoria de reunión. El evaluador/a no podrá modificar ningún dato de esta pantalla, siempre la visualiza en modo consulta.
 * **Comentarios**: conjunto de comentarios aportados por los distintos miembros del comité una vez que las memorias han sido evaluadas para informar de posibles errores o discrepancias con lo acordado en la reunión. Es en la única pantalla donde el evaluador/a puede añadir o modificar información.
 
-#### 5\.1\.1 Datos generales
+#### 5.1.1 Datos generales
 
 Formulario de consulta con los datos de información básica de una acta. El evaluador/a puede visualizar los campos pero sin modificar su valor.
 
 ![](/attachments/597852717/842039320.png)
-
-  
-
 
 A continuación se describe cada uno de los campos de este formulario:
 
@@ -1109,7 +1012,7 @@ A continuación se describe cada uno de los campos de este formulario:
 * **Hora fin:** hora de finalización de la convocatoria de reunión.
 * **Resumen:** resumen de lo acordado en la reunión.
 
-#### 5\.1\.2 Memorias
+#### 5.1.2 Memorias
 
 Listado de memorias que se van a evaluar o se han evaluado en la convocatoria de reunión asociada al acta. El evaluador/a puede visualizar los campos pero sin modificar su valor.
 
@@ -1120,23 +1023,23 @@ A continuación se detalla el significado de cada una de las columnas del listad
 * **Referencia memoria:** código identificativo de la memoria.
 * **Versión:** versión de la memoria.
 * **Dictamen:** dictamen obtenido por la memoria. Dependiendo del tipo de evaluación el valor del dictamen podrá ser.
-	+ Si el tipo de evaluación es Memoria:
-		- Favorable
-		- Favorable pendiente de revisión mínima
-		- Pendiente de correcciones
-		- No procede evaluar
-	+ Si el tipo de evaluación es Retrospectiva:
-		- Favorable
-		- Desfavorable
-	+ Si el tipo de evaluación es Seguimiento anual:
-		- Favorable
-		- Solicitud de modificaciones
-	+ Si el tipo de evaluación es Seguimiento final:
-		- Favorable
-		- Solicitud de aclaraciones
+  + Si el tipo de evaluación es Memoria:
+    - Favorable
+    - Favorable pendiente de revisión mínima
+    - Pendiente de correcciones
+    - No procede evaluar
+  + Si el tipo de evaluación es Retrospectiva:
+    - Favorable
+    - Desfavorable
+  + Si el tipo de evaluación es Seguimiento anual:
+    - Favorable
+    - Solicitud de modificaciones
+  + Si el tipo de evaluación es Seguimiento final:
+    - Favorable
+    - Solicitud de aclaraciones
 * **Informe:**pdf con el informe de evaluación o con el informe favorable dependiendo del dictamen de la memoria.
 
-#### 5\.1\.3 Asistentes
+#### 5.1.3 Asistentes
 
 Listado con los miembros del comité indicando la asistencia o no a la reunión de convocatoria asociada al acta.
 
@@ -1144,12 +1047,12 @@ Listado con los miembros del comité indicando la asistencia o no a la reunión 
 
 A continuación se detalla el significado de cada una de las columnas del listado:
 
-* **E\-mail:** correo electrónico del miembro del comité.
+* **E-mail:** correo electrónico del miembro del comité.
 * **Nombre y apellidos:** nombre y apellidos del miembro del comité.
 * **Asistencia:** se indica con el valor "Sí" la asistencia a la reunión y con un valor "No" la no asistencia.
 * **Motivo:** motivo de la ausencia o no asistencia del miembro del equipo a la reunión.
 
-#### 5\.1\.4 Comentarios
+#### 5.1.4 Comentarios
 
 Listado de comentarios aportados por los evaluadores/as posteriores a la reunión de convocatoria. El evaluador/a podrá añadir comentarios a las distintas memorias evaluadas (tienen que tener un dictamen) por si desea que se modifiquen o se añadan comentarios a la memoria ya evaluada el día de la convocatoria de reunión. Es una revisión a lo acordado en la convocatoria de reunión.
 
@@ -1158,16 +1061,17 @@ Listado de comentarios aportados por los evaluadores/as posteriores a la reunió
 Desde este listado el evaluador/a puede realizar las siguientes acciones:
 
 1. **Añadir comentario**: este botón se encuentra en la parte inferior del listado de comentarios, permite al evaluador/a introducir un nuevo comentario al acta. El botón estará activo cuando se den las dos circunstancias siguientes
+
 * + - Todas las memorias incluidas en la convocatoria de reunión con la que se corresponde el acta  deben tener un dictamen asignado.
-		- El/la evaluador/a aún no enviado los comentarios añadidos al acta a Secretaría.
+    - El/la evaluador/a aún no enviado los comentarios añadidos al acta a Secretaría.
 
 En caso de que alguna memoria incluida en la convocatoria de reunión a la que pertenece el acta aún no disponga de dictamen o en el caso en que el/la evaluador/a ya haya enviado los comentarios del acta a secretaría, el botón se mostrará deshabilitado..
 
 ![](/attachments/597852717/597859768.png)
 
-**2\. Editar:** esta acción representada por el icono ![](/attachments/597852717/597861043.png)  y situada en la última columna "Acciones" de la tabla, permite al evaluador/a modificar el comentario.  Los comentarios solamente podrán ser modificado mientras no hubieran sido remitidos a secretaría. La acción sólo está disponible sobre los comentarios introducidos por el/la propio/a evaluador/a. Los comentarios aportados por otros miembros del equipo evaluador no podrán ser modificados. Para los comentarios de otros miembros o en el caso de que el/la evaluador/a ya hubiera remitido sus comentarios a secretaría la acción editar pasará a ser consultar ![](/attachments/597852717/597859730.png)
+**2. Editar:** esta acción representada por el icono ![](/attachments/597852717/597861043.png)  y situada en la última columna "Acciones" de la tabla, permite al evaluador/a modificar el comentario.  Los comentarios solamente podrán ser modificado mientras no hubieran sido remitidos a secretaría. La acción sólo está disponible sobre los comentarios introducidos por el/la propio/a evaluador/a. Los comentarios aportados por otros miembros del equipo evaluador no podrán ser modificados. Para los comentarios de otros miembros o en el caso de que el/la evaluador/a ya hubiera remitido sus comentarios a secretaría la acción editar pasará a ser consultar ![](/attachments/597852717/597859730.png)
 
-**3\. Eliminar**: esta acción representada por el icono ![](/attachments/597852717/597861045.png)y situada en la última columna "Acciones" de la tabla, permite evaluador/a eliminar el comentario. Los comentarios solamente podrán ser eliminados mientras no hubieran sido remitidos a secretaría. La acción sólo está disponible sobre los comentarios introducidos por el/la propio/a evaluador/a. Los comentarios aportados por otros miembros del equipo evaluador no podrán ser eliminados. 
+**3. Eliminar**: esta acción representada por el icono ![](/attachments/597852717/597861045.png)y situada en la última columna "Acciones" de la tabla, permite evaluador/a eliminar el comentario. Los comentarios solamente podrán ser eliminados mientras no hubieran sido remitidos a secretaría. La acción sólo está disponible sobre los comentarios introducidos por el/la propio/a evaluador/a. Los comentarios aportados por otros miembros del equipo evaluador no podrán ser eliminados. 
 
 A continuación se detalla el significado de cada una de las columnas del listado:
 
@@ -1178,7 +1082,7 @@ A continuación se detalla el significado de cada una de las columnas del listad
 * **Subapartado:** subapartado del formulario de memoria al que se le esta añadiendo el comentario.
 * **Comentarios:** texto con el comentario que se quiere aportar en el apartado seleccionado de la memoria.
 
-##### 5\.1\.4\.1 Añadir comentario
+##### 5.1.4.1 Añadir comentario
 
 Al pulsar sobre el botón "**Añadir Comentario**", se abrirá un formulario como el mostrado en la siguiente imagen.
 
@@ -1195,19 +1099,17 @@ A continuación se describe cada uno de los campos solicitados en este formulari
 
 Al pulsar sobre el botón "Añadir" el comentario se añadirá al listado de comentarios de la acta mostrando el icono de la admiración en el menú de "Comentarios" y el mensaje de información en la parte de abajo de la pantalla en la zona del "Área de acciones" para recordar al evaluador/a que debe de pulsar el botón GUARDAR para que los cambios realizados (en este caso un nuevo comentario) se consoliden.
 
- ![](/attachments/597852717/597859757.png)  
-
+ ![](/attachments/597852717/597859757.png)
 
 Si se pulsa el botón "GUARDAR" se modifica la acta con los cambios realizados en la pantalla Comentarios (única pantalla donde el evaluador/a puede realizar cambios)
 
 Se muestra un mensaje de que la acta se ha modificado correctamente igual que el de la siguiente imagen.
 
-![](/attachments/597852717/597859761.png)  
+![](/attachments/597852717/597859761.png)
 
+##### 5.1.4.2 Editar comentario
 
-##### 5\.1\.4\.2 Editar comentario
-
-Se abre una pantalla que muestra un formulario con los datos del comentario, es idéntico al utilizado durante el alta de un comentario, dejando la posibilidad de modificar cualquiera de los campos del formulario (ver funcionalidad descrita en el apartado  [Añadir comentario](#MDUPerfildeinvestigaciónMóduloETI-A%C3%B1adircomentario "#MDUPerfildeinvestigaciónMóduloETI-A%C3%B1adircomentario") para mas detalle).
+Se abre una pantalla que muestra un formulario con los datos del comentario, es idéntico al utilizado durante el alta de un comentario, dejando la posibilidad de modificar cualquiera de los campos del formulario (ver funcionalidad descrita en el apartado  [Añadir comentario](#MDUPerfildeinvestigaciónMóduloETI-A%C3%B1adircomentario) para mas detalle).
 
 En la siguiente imagen se muestra el formulario de edición de un comentario.
 
@@ -1223,7 +1125,7 @@ Se muestra un mensaje de que la acta se ha modificado correctamente igual que el
 
 ![](/attachments/597852717/597859761.png)
 
-##### 5\.1\.4\.3 Eliminar comentario
+##### 5.1.4.3 Eliminar comentario
 
 Cuando se pulsa el icono de eliminar comentario se muestra una ventana emergente con un mensaje de confirmación.
 
@@ -1231,50 +1133,29 @@ Cuando se pulsa el icono de eliminar comentario se muestra una ventana emergente
 
 En caso de responder afirmativamente (botón "Aceptar") el comentario desaparecerá del listado de comentarios. Se muestra el icono de la admiración en el menú de "Comentarios" y el mensaje de información en la parte de abajo de la pantalla en la zona del "Área de acciones" para recordar al evaluador/a que debe de pulsar el botón GUARDAR para que los cambios realizados (en este caso la eliminación de un comentario) se consoliden.
 
-  
-
-
-#### 5\.1\.5 Enviar comentarios a secretaría
+#### 5.1.5 Enviar comentarios a secretaría
 
 Una vez que se añaden los comentarios sobre un acta, éstos deberán ser remitidos a secretaría. Para ello desde la pantalla inicial del listado de actas se dispone del botón de acción "enviar comentarios a secretaría" ![](/attachments/597852717/841089257.png)
 
 ![](/attachments/597852717/842039324.png)
 
-  
-
-
 Tras pulsar el icono de acción ![](/attachments/597852717/841089257.png)se mostrará un mensaje de confirmación:
 
 ![](/attachments/597852717/842039326.png)
-
-  
-
 
 Si pulsa el botón Aceptar los comentarios son remitidos a Secretaría, pasando con ello a ser visibles para el personal de gestión (Secretaría) y para el resto de miembros del equipo evaluador. Se mostrará un mensaje informativo cuando la acción de enviar haya finalizado.
 
 ![](/attachments/597852717/842039327.png)
 
-  
-
-
 Una vez que han sido enviados los comentarios al acta, ésta pasará a estar solamente en modo consulta para el/la evaluador/a. La columna "Comentarios enviados" pasará a tomar el valor "Sí" recordando que los comentarios ya han sido remitida a secretaría.
 
 ![](/attachments/597852717/842039328.png)
-
-  
-
 
 Al acceder al detalle del actas se podrán ver los comentarios remitidos pero no se podrán ni modificar ni eliminar, así como tampoco añadir nuevos comentarios.
 
 ![](/attachments/597852717/842039331.png)
 
-  
-
-
-  
-
-
-### 5\.2 Ver acta
+### 5.2 Ver acta
 
 La consulta o visualización de un acta por parte de un evaluador/a (el botón del icono del ojo) abre el formulario de "Datos generales" del acta en modo consulta.
 
@@ -1282,15 +1163,12 @@ La consulta de una acta esta formada por los siguientes bloques de información:
 
 ![](/attachments/597852717/842039332.png)
 
-  
-
-
 * **Datos generales**: conjunto de datos de información general sobre el acta. El evaluador/a no podrá modificar ningún dato de esta pantalla, siempre la visualiza en modo consulta.
 * **Memorias**: conjunto de memorias que se van a evaluar o se han evaluado en la convocatoria de reunión asociada al acta. El evaluador/a no podrá modificar ningún dato de esta pantalla, siempre la visualiza en modo consulta.
 * **Asistentes**: conjunto de miembro del comité indicando si han asistido o no a la convocatoria de reunión. El evaluador/a no podrá modificar ningún dato de esta pantalla, siempre la visualiza en modo consulta.
 * **Comentarios**: conjunto de comentarios aportados por los distintos miembros del comité una vez que las memorias han sido evaluadas para informar de posibles errores o discrepancias con lo acordado en la reunión. El evaluador/a no podrá modificar ningún dato de esta pantalla, la visualiza en modo consulta si es estado del acta es "Finalizada".
 
-#### 5\.2\.1 Datos generales
+#### 5.2.1 Datos generales
 
 Formulario de consulta con los datos de información básica de una acta. El evaluador/a puede visualizar los campos pero sin modificar su valor.
 
@@ -1303,7 +1181,7 @@ A continuación se describe cada uno de los campos de este formulario:
 * **Hora fin:** hora de finalización de la convocatoria de reunión.
 * **Resumen:** resumen de lo acordado en la reunión.
 
-#### 5\.2\.2 Memorias
+#### 5.2.2 Memorias
 
 Listado de memorias que se van a evaluar o se han evaluado en la convocatoria de reunión asociada al acta. El evaluador/a puede visualizar los campos pero sin modificar su valor.
 
@@ -1314,23 +1192,23 @@ A continuación se detalla el significado de cada una de las columnas del listad
 * **Referencia memoria:** código identificativo de la memoria.
 * **Versión:** versión de la memoria.
 * **Dictamen:** dictamen obtenido por la memoria. Dependiendo del tipo de evaluación el valor del dictamen podrá ser.
-	+ Si el tipo de evaluación es Memoria:
-		- Favorable
-		- Favorable pendiente de revisión mínima
-		- Pendiente de correcciones
-		- No procede evaluar
-	+ Si el tipo de evaluación es Retrospectiva:
-		- Favorable
-		- Desfavorable
-	+ Si el tipo de evaluación es Seguimiento anual:
-		- Favorable
-		- Solicitud de modificaciones
-	+ Si el tipo de evaluación es Seguimiento final:
-		- Favorable
-		- Solicitud de aclaraciones
+  + Si el tipo de evaluación es Memoria:
+    - Favorable
+    - Favorable pendiente de revisión mínima
+    - Pendiente de correcciones
+    - No procede evaluar
+  + Si el tipo de evaluación es Retrospectiva:
+    - Favorable
+    - Desfavorable
+  + Si el tipo de evaluación es Seguimiento anual:
+    - Favorable
+    - Solicitud de modificaciones
+  + Si el tipo de evaluación es Seguimiento final:
+    - Favorable
+    - Solicitud de aclaraciones
 * **Informe:**pdf con el informe de evaluación o con el informe favorable dependiendo del dictamen de la memoria.
 
-#### 5\.2\.3 Asistentes
+#### 5.2.3 Asistentes
 
 Listado con los miembros del comité indicando la asistencia o no a la reunión de convocatoria asociada al acta.
 
@@ -1338,12 +1216,12 @@ Listado con los miembros del comité indicando la asistencia o no a la reunión 
 
 A continuación se detalla el significado de cada una de las columnas del listado:
 
-* **E\-mail:** correo electrónico del miembro del comité.
+* **E-mail:** correo electrónico del miembro del comité.
 * **Nombre y apellidos:** nombre y apellidos del miembro del comité.
 * **Asistencia:** se indica con el valor "Sí" la asistencia a la reunión y con un valor "No" la no asistencia.
 * **Motivo:** motivo de la ausencia o no asistencia del miembro del equipo a la reunión.
 
-#### 5\.2\.4 Comentarios
+#### 5.2.4 Comentarios
 
 Listado de comentarios aportados por los evaluadores/as posteriores a la reunión de convocatoria. Los comentarios aportados por los distintos evaluadores/as son una revisión a lo acordado en la convocatoria de reunión.
 
@@ -1358,7 +1236,7 @@ A continuación se detalla el significado de cada una de las columnas del listad
 * **Subapartado:** subapartado del formulario de memoria al que se le esta añadiendo el comentario.
 * **Comentarios:** texto con el comentario que se quiere aportar en el apartado seleccionado de la memoria.
 
-## 6\. Realizar evaluaciones
+## 6. Realizar evaluaciones
 
 Esta opción del menú permite al personal investigador que a su vez esta como miembro activo de un comité, es decir, es un evaluador, acceder al listado de evaluaciones de memorias y retrospectivas para aportar sus comentarios sobre la memoria o retrospectiva y así elaborar la "Ficha del Evaluador" (documento disponible en la evaluación de la memoria el día de la convocatoria de reunión para el personal de gestión).
 
@@ -1369,20 +1247,19 @@ La opción del submenú "Realizar evaluaciones" (sólo disponible para el person
 Los campos disponibles en el formulario de la búsqueda son:
 
 * **Comité**: es un desplegable en el que el personal de investigación puede seleccionar entra las siguiente opciones:
-	+ CEI
-	+ CEEA
-	+ CBE
+  + CEI
+  + CEEA
+  + CBE
 * **Tipo de evaluación**: indica el tipo de evaluación (el tipo de formulario que se va a evaluar), puede tener uno de los siguientes valores:  
-
-	+ Memoria
-	+ Retrospectiva
+  + Memoria
+  + Retrospectiva
 * **Fecha evaluación desde:** campo para introducir la fecha la cual se va a tomar como referencia para obtener las evaluaciones pertenecientes a la convocatoria de reunión cuya fecha de evaluación sea mayor o igual a esta fecha.
 * **Fecha evaluación hasta:** campo para introducir la fecha la cual se va a tomar como referencia para obtener las evaluaciones pertenecientes a la convocatoria de reunión cuya fecha sea menor o igual a esta fecha.
 * **Referencia memoria**: código identificativo de la memoria.
 * **Tipo de convocatoria**: tipo de la convocatoria de reunión, puede tener uno de los siguientes valores:
-	+ Ordinaria: si una convocatoria es de este tipo únicamente se tendrán evaluaciones de memoria y retrospectivas.
-	+ Extraordinaria: si una convocatoria es de este tipo únicamente se tendrán evaluaciones de memoria y retrospectivas.
-	+ Seguimiento: si una convocatoria es de este tipo únicamente se tendrán evaluaciones de seguimiento anual y seguimiento final.
+  + Ordinaria: si una convocatoria es de este tipo únicamente se tendrán evaluaciones de memoria y retrospectivas.
+  + Extraordinaria: si una convocatoria es de este tipo únicamente se tendrán evaluaciones de memoria y retrospectivas.
+  + Seguimiento: si una convocatoria es de este tipo únicamente se tendrán evaluaciones de seguimiento anual y seguimiento final.
 
 Tras pulsar el botón “Buscar”, se muestra el listado de evaluaciones que cumplan con los parámetros introducidos en el formulario y que cumplan además las siguientes condiciones:
 
@@ -1408,7 +1285,7 @@ Desde este listado el evaluador/a puede realizar únicamente la siguiente acció
 
 1. **Evaluar:** este botón representado por el icono ![](/attachments/597852717/597861043.png) y situado en la última columna "Acciones" de la tabla, permite al evaluador/a aportar sus comentarios a la memoria seleccionada para así elaborar el documento "Ficha del Evaluador" disponible en la convocatoria de reunión como un documento más de la memoria. En el caso de que queden 3 días (o valor configurado por el administrador de ética) para la fecha de la convocatoria de reunión ya no se le dejará al evaluador/a aportar sus comentarios por lo que esta acción no estará disponible.
 
-### 6\.1 Evaluar
+### 6.1 Evaluar
 
 La evaluación de una memoria por parte de un evaluador/a (el botón del icono del lápiz) abre el formulario de "Memoria" de la evaluación  en modo consulta. La única pantalla en la que podrá realizar algún cambio el evaluador/a es en la pantalla de "Comentarios", el resto de pantallas muestra información de interés para poder realizar la evaluación.
 
@@ -1420,7 +1297,7 @@ La evaluación de una memoria o retrospectiva esta formada por los siguientes bl
 
 ![](/attachments/597852717/699498618.png)
 
-#### 6\.1\.1 Memoria
+#### 6.1.1 Memoria
 
 Formulario de consulta con los datos de información básica de la evaluación de una memoria o retrospectiva. El evaluador/a puede visualizar los campos pero sin modificar su valor.
 
@@ -1434,14 +1311,13 @@ A continuación se describe cada uno de los campos de este formulario:
 * **Solicitante:** nombre y apellidos de la persona que ha solicitando la evaluación de su memoria o retrospectiva.
 * **Versión:** versión que se esta evaluando de la memoria.
 * **Evaluaciones anteriores:** listado de evaluaciones anteriores en caso de que se este evaluando una memoria con versión mayor a 1, es decir, memorias que no han tenido un dictamen "Favorable" en su primera evaluación. Para cada evaluación se muestra la siguiente información:  
+  + **Versión**: versión de la evaluación.
+  + **Fecha evaluación:** fecha de evaluación de la convocatoria de reunión en la que se evaluó.
+  + **Dictamen**: dictamen que se le dio en esa evaluación.
+  + **Nº de comentarios**: número de comentarios aportados en la convocatoria de reunión donde se evaluó.
+  + **PDF evaluación**:  documento con la evaluación (comentarios aportados).
 
-	+ **Versión**: versión de la evaluación.
-	+ **Fecha evaluación:** fecha de evaluación de la convocatoria de reunión en la que se evaluó.
-	+ **Dictamen**: dictamen que se le dio en esa evaluación.
-	+ **Nº de comentarios**: número de comentarios aportados en la convocatoria de reunión donde se evaluó.
-	+ **PDF evaluación**:  documento con la evaluación (comentarios aportados).
-
-#### 6\.1\.2 Documentación
+#### 6.1.2 Documentación
 
 Listado con toda la documentación relativa a la memoria que se quiere evaluar:
 
@@ -1452,7 +1328,7 @@ Listado con toda la documentación relativa a la memoria que se quiere evaluar:
 
 Se podrá pulsar sobre el icono ![](/attachments/597852717/597859331.png) para descargarse el fichero.
 
-#### 6\.1\.3 Comentarios
+#### 6.1.3 Comentarios
 
 Listado de comentarios aportados por los evaluadores/as en la revisión de la memoria. Los evaluadores/as son los que realizan un primer estudio de la memoria y aportan sus comentarios para ser vistos el día de la convocatoria de reunión donde se le da el dictamen a la memoria. Con todos los comentarios de los evaluadores/as se elabora el documento "Ficha del evaluador" disponible como un documento aportado a la memoria y que se puede visualizar el día de la convocatoria de reunión por todos los miembros del comité.
 
@@ -1460,17 +1336,11 @@ Cualquier miembro activo del comité puede aportar sus comentarios a la memoria.
 
 ![](/attachments/597852717/699498621.png)
 
-  
-
-
 Desde este listado el evaluador/a puede realizar las siguientes acciones:
 
-* **Añadir comentario**: este botón se encuentra en la parte inferior  del listado de comentarios, permite al evaluador/a introducir un nuevo comentario a la evaluación de la memoria. Sólo se podrán añadir comentarios mientras la evaluación no haya sido remitida, es decir, hasta el momento en que los comentarios añadidos se envíen a secretaría ([enviar comentarios a secretaría](https://confluence.um.es/confluence/pages/viewpage.action?pageId=597852717#MDUPerfildeinvestigaci%C3%B3nM%C3%B3duloETI-6.1.4Enviarcomentariosycerrarevaluaci%C3%B3n "https://confluence.um.es/confluence/pages/viewpage.action?pageId=597852717#MDUPerfildeinvestigaci%C3%B3nM%C3%B3duloETI-6.1.4Enviarcomentariosycerrarevaluaci%C3%B3n")).
-* **Editar comentario:**este botón representado por el icono ![](/attachments/597852717/597861043.png) y situado en la última columna "Acciones" de la tabla, permite al evaluador/a modificar los datos del comentario. Solamente se podrán modificar los comentarios añadidos por el/la propio/a evaluador/a. No se podrán modificar los comentarios de otros/as evaluadores/as. Además, sólo se permitirá la modificación mientras los comentarios no hubieran sido [enviados a secretaría](https://confluence.um.es/confluence/pages/viewpage.action?pageId=597852717#MDUPerfildeinvestigaci%C3%B3nM%C3%B3duloETI-6.1.4Enviarcomentariosycerrarevaluaci%C3%B3n "https://confluence.um.es/confluence/pages/viewpage.action?pageId=597852717#MDUPerfildeinvestigaci%C3%B3nM%C3%B3duloETI-6.1.4Enviarcomentariosycerrarevaluaci%C3%B3n").
-* **Eliminar comentario**: este botón representado por el icono ![](/attachments/597852717/597861045.png) y situado en la última columna "Acciones" de la tabla, permite evaluador/a eliminar el comentario. Solamente se podrán eliminar los comentarios añadidos por el/la propio/a evaluador/a. No se podrán eliminar los comentarios de otros/as evaluadores/as. Además, sólo se permitirá la eliminación mientras los comentarios no hubieran sido [enviados a secretaría](https://confluence.um.es/confluence/pages/viewpage.action?pageId=597852717#MDUPerfildeinvestigaci%C3%B3nM%C3%B3duloETI-6.1.4Enviarcomentariosycerrarevaluaci%C3%B3n "https://confluence.um.es/confluence/pages/viewpage.action?pageId=597852717#MDUPerfildeinvestigaci%C3%B3nM%C3%B3duloETI-6.1.4Enviarcomentariosycerrarevaluaci%C3%B3n").
-
-  
-
+* **Añadir comentario**: este botón se encuentra en la parte inferior  del listado de comentarios, permite al evaluador/a introducir un nuevo comentario a la evaluación de la memoria. Sólo se podrán añadir comentarios mientras la evaluación no haya sido remitida, es decir, hasta el momento en que los comentarios añadidos se envíen a secretaría ([enviar comentarios a secretaría](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/mdu-perfil-de-investigacion/mdu-perfil-de-investigacion-modulo-eti#MDUPerfildeinvestigaci%C3%B3nM%C3%B3duloETI-6.1.4Enviarcomentariosycerrarevaluaci%C3%B3n)).
+* **Editar comentario:**este botón representado por el icono ![](/attachments/597852717/597861043.png) y situado en la última columna "Acciones" de la tabla, permite al evaluador/a modificar los datos del comentario. Solamente se podrán modificar los comentarios añadidos por el/la propio/a evaluador/a. No se podrán modificar los comentarios de otros/as evaluadores/as. Además, sólo se permitirá la modificación mientras los comentarios no hubieran sido [enviados a secretaría](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/mdu-perfil-de-investigacion/mdu-perfil-de-investigacion-modulo-eti#MDUPerfildeinvestigaci%C3%B3nM%C3%B3duloETI-6.1.4Enviarcomentariosycerrarevaluaci%C3%B3n).
+* **Eliminar comentario**: este botón representado por el icono ![](/attachments/597852717/597861045.png) y situado en la última columna "Acciones" de la tabla, permite evaluador/a eliminar el comentario. Solamente se podrán eliminar los comentarios añadidos por el/la propio/a evaluador/a. No se podrán eliminar los comentarios de otros/as evaluadores/as. Además, sólo se permitirá la eliminación mientras los comentarios no hubieran sido [enviados a secretaría](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/mdu-perfil-de-investigacion/mdu-perfil-de-investigacion-modulo-eti#MDUPerfildeinvestigaci%C3%B3nM%C3%B3duloETI-6.1.4Enviarcomentariosycerrarevaluaci%C3%B3n).
 
 A continuación se detalla el significado de cada una de las columnas del listado:
 
@@ -1480,7 +1350,7 @@ A continuación se detalla el significado de cada una de las columnas del listad
 * **Subapartado:** subapartado del formulario de memoria al que se le esta añadiendo el comentario.
 * **Comentarios:** texto con el comentario que se quiere aportar en el apartado seleccionado de la memoria.
 
-##### 6\.1\.3\.1 Añadir comentario
+##### 6.1.3.1 Añadir comentario
 
 Al pulsar sobre el botón "**Añadir Comentario**", se abrirá un formulario como el mostrado en la siguiente imagen.
 
@@ -1496,63 +1366,9 @@ A continuación se describe cada uno de los campos solicitados en este formulari
 
 ![](/attachments/597852717/692387994.png)
 
-  
-
-
 Al pulsar sobre el botón "Añadir" el comentario se añadirá al listado de comentarios de la evaluación mostrando el icono de la admiración en el menú de "Comentarios" y el mensaje de información en la parte de abajo de la pantalla en la zona del "Área de acciones" para recordar al evaluador/a que debe de pulsar el botón GUARDAR para que los cambios realizados (en este caso un nuevo comentario) se consoliden.
 
- ![](/attachments/597852717/692387995.png)  
-
-
-Si se pulsa el botón "GUARDAR" se modifica la evaluación con los cambios realizados en la pantalla Comentarios (única pantalla donde el evaluador/a puede realizar cambios)
-
-Se muestra un mensaje de que la evaluación se ha guardado correctamente igual que el de la siguiente imagen.
-
-![](/attachments/597852717/597860052.png)  
-
-
-##### 6\.1\.3\.2 Añadir comentario general
-
-Es posible añadir un comentario general a la memoria sin que esté asociado a un apartado concreto del formulario. Para ello, en el desplegable de bloques se ofrece un bloque inicial genérico "Comentarios generales":
-
-![](/attachments/597852717/695468209.png)
-
-  
-
-
-Al seleccionar el bloque "Comentarios generales" se mostrará un subapartado general, que deberá ser seleccionado para poder añadir los comentarios oportunos:
-
-![](/attachments/597852717/695468212.png)
-
-  
-
-
-Al introducir el texto del comentario se activará el botón "Añadir":
-
-![](/attachments/597852717/695468210.png)
-
-  
-
-
-Tras pulsar el botón "Añadir" el comentario se mostrará en la lista de comentarios de la evaluación. 
-
-Siguiendo el proceso habitual se deberá pulsar el botón "Guardar" para que la Evaluación queda actualizada con el comentario introducido.
-
-##### 6\.1\.3\.3 Editar comentario
-
-Se abre una pantalla que muestra un formulario con los datos del comentario, es idéntico al utilizado durante el alta de un comentario, dejando la posibilidad de modificar cualquiera de los campos del formulario (ver funcionalidad descrita en el apartado [Añadir comentario](#MDUPerfildeinvestigaciónMóduloETI-A%C3%B1adircomentario.1 "#MDUPerfildeinvestigaciónMóduloETI-A%C3%B1adircomentario.1") para mas detalle).
-
-En la siguiente imagen se muestra el formulario de edición de un comentario.
-
-![](/attachments/597852717/692387996.png)
-
-  
-
-
-Tras introducir los cambios y pulsar sobre el botón "Aceptar" el comentario se modificará y los cambios se verán reflejados en el listado de comentarios de la evaluación mostrando el icono de la admiración en el menú de "Comentarios" y el mensaje de información en la parte de abajo de la pantalla en la zona del "Área de acciones" para recordar al evaluador/a que debe de pulsar el botón GUARDAR para que los cambios realizados (en este caso una modificación de un comentario) se consoliden.
-
-  
-
+ ![](/attachments/597852717/692387995.png)
 
 Si se pulsa el botón "GUARDAR" se modifica la evaluación con los cambios realizados en la pantalla Comentarios (única pantalla donde el evaluador/a puede realizar cambios)
 
@@ -1560,7 +1376,41 @@ Se muestra un mensaje de que la evaluación se ha guardado correctamente igual q
 
 ![](/attachments/597852717/597860052.png)
 
-##### 6\.1\.3\.4 Eliminar comentario
+##### 6.1.3.2 Añadir comentario general
+
+Es posible añadir un comentario general a la memoria sin que esté asociado a un apartado concreto del formulario. Para ello, en el desplegable de bloques se ofrece un bloque inicial genérico "Comentarios generales":
+
+![](/attachments/597852717/695468209.png)
+
+Al seleccionar el bloque "Comentarios generales" se mostrará un subapartado general, que deberá ser seleccionado para poder añadir los comentarios oportunos:
+
+![](/attachments/597852717/695468212.png)
+
+Al introducir el texto del comentario se activará el botón "Añadir":
+
+![](/attachments/597852717/695468210.png)
+
+Tras pulsar el botón "Añadir" el comentario se mostrará en la lista de comentarios de la evaluación. 
+
+Siguiendo el proceso habitual se deberá pulsar el botón "Guardar" para que la Evaluación queda actualizada con el comentario introducido.
+
+##### 6.1.3.3 Editar comentario
+
+Se abre una pantalla que muestra un formulario con los datos del comentario, es idéntico al utilizado durante el alta de un comentario, dejando la posibilidad de modificar cualquiera de los campos del formulario (ver funcionalidad descrita en el apartado [Añadir comentario](#MDUPerfildeinvestigaciónMóduloETI-A%C3%B1adircomentario.1) para mas detalle).
+
+En la siguiente imagen se muestra el formulario de edición de un comentario.
+
+![](/attachments/597852717/692387996.png)
+
+Tras introducir los cambios y pulsar sobre el botón "Aceptar" el comentario se modificará y los cambios se verán reflejados en el listado de comentarios de la evaluación mostrando el icono de la admiración en el menú de "Comentarios" y el mensaje de información en la parte de abajo de la pantalla en la zona del "Área de acciones" para recordar al evaluador/a que debe de pulsar el botón GUARDAR para que los cambios realizados (en este caso una modificación de un comentario) se consoliden.
+
+Si se pulsa el botón "GUARDAR" se modifica la evaluación con los cambios realizados en la pantalla Comentarios (única pantalla donde el evaluador/a puede realizar cambios)
+
+Se muestra un mensaje de que la evaluación se ha guardado correctamente igual que el de la siguiente imagen.
+
+![](/attachments/597852717/597860052.png)
+
+##### 6.1.3.4 Eliminar comentario
 
 Cuando se pulsa el icono de eliminar comentario se muestra una ventana emergente con un mensaje de confirmación.
 
@@ -1568,27 +1418,15 @@ Cuando se pulsa el icono de eliminar comentario se muestra una ventana emergente
 
 En caso de responder afirmativamente (botón "Aceptar") el comentario desaparecerá del listado de comentarios. Se muestra el icono de la admiración en el menú de "Comentarios" y el mensaje de información en la parte de abajo de la pantalla en la zona del "Área de acciones" para recordar al evaluador/a que debe de pulsar el botón GUARDAR para que los cambios realizados (en este caso la eliminación de un comentario) se consoliden.
 
-  
-
-
-#### 6\.1\.4 Enviar comentarios y cerrar evaluación
+#### 6.1.4 Enviar comentarios y cerrar evaluación
 
 Una vez que se añaden los comentarios deberán ser remitidos a secretaría. Para ello desde la pantalla inicial del listado de evaluaciones se dispone del botón de acción "enviar comentarios a secretaría"  ![](/attachments/597852717/841089257.png)
 
-  
-
-
 ![](/attachments/597852717/841089259.png)
-
-  
-
 
 Tras pulsar el icono de acción ![](/attachments/597852717/841089257.png) se mostrará un mensaje de confirmación
 
 ![](/attachments/597852717/841089261.png)
-
-  
-
 
 Si se pulsa el botón "Aceptar" los comentarios serán enviados a secretaría y la evaluación, por parte del Evaluador/a, se considerará cerrada. No será posible añadir, modificar o eliminar comentarios.
 
@@ -1596,32 +1434,17 @@ Tras pulsar el botón "Aceptar" se mostrará un mensaje de confirmación
 
 ![](/attachments/597852717/841089262.png)
 
-  
-
-
 Los comentarios serán visibles para el equipo de gestión (Secretaría), así como para el resto de miembros del equipo evaluador.
-
-  
-
 
 Una vez que han sido enviados los comentarios de una evaluación, ésta pasará a estar solamente en modo consulta para el/la evaluador/a. La columna "Enviada" pasará a tomar el valor "Sí" recordando que la evaluación ha sido remitida a secretaría.
 
 ![](/attachments/597852717/841089263.png)
 
-  
-
-
 Al acceder al detalle de la evaluación se podrán ver los comentarios remitidos pero no se podrán ni modificar ni eliminar, así como tampoco añadir nuevos comentarios.
-
-  
-
 
 ![](/attachments/597852717/841089264.png)
 
-  
-
-
-## 7\. Realizar seguimientos
+## 7. Realizar seguimientos
 
 Esta opción del menú permite al personal investigador que a su vez esta como miembro activo de un comité, es decir, es un evaluador, acceder al listado de seguimientos (evaluaciones del formulario de seguimiento anual y/o final) de las memorias para aportar sus comentarios sobre el seguimiento anual o final y así elaborar la "Ficha del Evaluador" (documento disponible en el seguimiento de la memoria el día de la convocatoria de reunión para el personal de gestión).
 
@@ -1632,19 +1455,19 @@ La opción del submenú "Realizar seguimientos" (sólo disponible para el person
 Los campos disponibles en el formulario de la búsqueda son:
 
 * **Comité**: es un desplegable en el que el personal de investigación puede seleccionar entra las siguiente opciones:
-	+ CEI
-	+ CEEA
-	+ CBE
+  + CEI
+  + CEEA
+  + CBE
 * **Tipo de evaluación**: indica el tipo de evaluación (el tipo de formulario que se va a evaluar), puede tener uno de los siguientes valores:
-	+ Seguimiento anual
-	+ Seguimiento final
+  + Seguimiento anual
+  + Seguimiento final
 * **Fecha evaluación desde:** campo para introducir la fecha la cual se va a tomar como referencia para obtener las evaluaciones de seguimiento anual y seguimiento final pertenecientes a la convocatoria de reunión cuya fecha de evaluación sea mayor o igual a esta fecha.
 * **Fecha evaluación hasta:** campo para introducir la fecha la cual se va a tomar como referencia para obtener las evaluaciones pertenecientes a la convocatoria de reunión cuya fecha sea menor o igual a esta fecha.
 * **Referencia memoria**: código identificativo de la memoria.
 * **Tipo de convocatoria**: tipo de la convocatoria de reunión, puede tener uno de los siguientes valores:
-	+ Ordinaria: si una convocatoria es de este tipo únicamente se tendrán evaluaciones de memoria y retrospectivas.
-	+ Extraordinaria: si una convocatoria es de este tipo únicamente se tendrán evaluaciones de memoria y retrospectivas.
-	+ Seguimiento: si una convocatoria es de este tipo únicamente se tendrán evaluaciones de seguimiento anual y seguimiento final.
+  + Ordinaria: si una convocatoria es de este tipo únicamente se tendrán evaluaciones de memoria y retrospectivas.
+  + Extraordinaria: si una convocatoria es de este tipo únicamente se tendrán evaluaciones de memoria y retrospectivas.
+  + Seguimiento: si una convocatoria es de este tipo únicamente se tendrán evaluaciones de seguimiento anual y seguimiento final.
 
 Tras pulsar el botón “Buscar”, se muestra el listado de evaluaciones de seguimiento anual y seguimiento final que cumplan con los parámetros introducidos en el formulario y que cumplan además las siguientes condiciones:
 
@@ -1670,7 +1493,7 @@ Desde este listado el evaluador/a puede realizar únicamente a siguiente acción
 
 1. **Evaluar:** este botón representado por el icono ![](/attachments/597852717/597861043.png) y situado en la última columna "Acciones" de la tabla, permite al evaluador/a aportar sus comentarios a la memoria seleccionada para así elaborar el documento "Ficha del Evaluador" disponible en la convocatoria de reunión como un documento más de la memoria. En el caso de que queden 3 días (o valor configurado por el administrador de ética) para la fecha de la convocatoria de reunión ya no se le dejará al evaluador/a aportar sus comentarios por lo que esta acción no estará disponible.
 
-### 7\.1 Evaluar
+### 7.1 Evaluar
 
 La evaluación de un seguimiento anual o final de una memoria por parte de un evaluador/a (el botón del icono del lápiz) abre el formulario de "Datos seguimiento" de la evaluación de seguimiento  en modo consulta. La única pantalla en la que podrá realizar algún cambio el evaluador/a es en la pantalla de "Comentarios", el resto de pantallas muestra información de interés para poder realizar la evaluación del seguimiento.
 
@@ -1682,7 +1505,7 @@ La evaluación de seguimiento anual o final esta formada por los siguientes bloq
 
 ![](/attachments/597852717/699498625.png)
 
-#### 7\.1\.1 Datos seguimiento
+#### 7.1.1 Datos seguimiento
 
 Formulario de consulta con los datos de información básica de la evaluación de seguimiento anual o final de una memoria. El evaluador/a puede visualizar los campos pero sin modificar su valor.
 
@@ -1696,14 +1519,13 @@ A continuación se describe cada uno de los campos de este formulario:
 * **Solicitante:** nombre y apellidos de la persona que ha solicitando la evaluación de su seguimiento anual o final.
 * **Versión:** versión que se esta evaluando del seguimiento anual o final de la memoria.
 * **Evaluaciones anteriores:** listado de seguimientos anteriores en caso de que se este evaluando un seguimiento de memoria con versión mayor a 1, es decir, memorias que no han tenido un dictamen "Favorable" en su primer seguimiento. Para cada evaluación de seguimiento se muestra la siguiente información:  
+  + **Versión**: versión de la evaluación.
+  + **Fecha evaluación:** fecha de evaluación de la convocatoria de reunión en la que se evaluó.
+  + **Dictamen**: dictamen que se le dio en esa evaluación de seguimiento.
+  + **Nº de comentarios**: número de comentarios aportados en la convocatoria de reunión donde se evaluó.
+  + **PDF evaluación**:  documento con la evaluación (comentarios aportados).
 
-	+ **Versión**: versión de la evaluación.
-	+ **Fecha evaluación:** fecha de evaluación de la convocatoria de reunión en la que se evaluó.
-	+ **Dictamen**: dictamen que se le dio en esa evaluación de seguimiento.
-	+ **Nº de comentarios**: número de comentarios aportados en la convocatoria de reunión donde se evaluó.
-	+ **PDF evaluación**:  documento con la evaluación (comentarios aportados).
-
-#### 7\.1\.2 Documentación
+#### 7.1.2 Documentación
 
 Listado con toda la documentación relativa al seguimiento que se quiere evaluar:
 
@@ -1714,7 +1536,7 @@ Listado con toda la documentación relativa al seguimiento que se quiere evaluar
 
 Se podrá pulsar sobre el icono ![](/attachments/597852717/597859331.png) para descargarse el fichero.
 
-#### 7\.1\.3 Comentarios
+#### 7.1.3 Comentarios
 
 Listado de comentarios aportados por los evaluadores/as en la revisión del seguimiento de la memoria. Los evaluadores/as son los que realizan un primer estudio del seguimiento de la memoria y aportan sus comentarios para ser vistos el día de la convocatoria de reunión donde se le da el dictamen a la memoria. Con todos los comentarios de los evaluadores/as se elabora el documento "Ficha del evaluador" disponible como un documento aportado a la memoria y que se puede visualizar el día de la convocatoria de reunión por todos los miembros del comité.
 
@@ -1724,9 +1546,9 @@ Cualquier miembro activo del comité puede aportar sus comentarios a la memoria.
 
 Desde este listado el evaluador/a puede realizar las siguientes acciones:
 
-* **Añadir comentario**: este botón se encuentra en la parte inferior  del listado de comentarios, permite al evaluador/a introducir un nuevo comentario a la evaluación de seguimiento de la memoria. Sólo se podrán añadir comentarios mientras la evaluación no haya sido remitida, es decir, hasta el momento en que los comentarios añadidos se envíen a secretaría ([enviar comentarios a secretaría](https://confluence.um.es/confluence/pages/viewpage.action?pageId=597852717#MDUPerfildeinvestigaci%C3%B3nM%C3%B3duloETI-7.1.4Enviarcomentariosdeseguimientoasecretar%C3%ADaycerrarevaluaci%C3%B3n "https://confluence.um.es/confluence/pages/viewpage.action?pageId=597852717#MDUPerfildeinvestigaci%C3%B3nM%C3%B3duloETI-7.1.4Enviarcomentariosdeseguimientoasecretar%C3%ADaycerrarevaluaci%C3%B3n")).
-* **Editar:**este botón representado por el icono ![](/attachments/597852717/597861043.png)  y situado en la última columna "Acciones" de la tabla, permite al evaluador/a modificar los datos del comentario. Solamente se podrán modificar los comentarios añadidos por el/la propio/a evaluador/a. No se podrán modificar los comentarios de otros/as evaluadores/as. Además, sólo se permitirá la modificación mientras los comentarios no hubieran sido [enviados a secretaría](https://confluence.um.es/confluence/pages/viewpage.action?pageId=597852717#MDUPerfildeinvestigaci%C3%B3nM%C3%B3duloETI-7.1.4Enviarcomentariosdeseguimientoasecretar%C3%ADaycerrarevaluaci%C3%B3n "https://confluence.um.es/confluence/pages/viewpage.action?pageId=597852717#MDUPerfildeinvestigaci%C3%B3nM%C3%B3duloETI-7.1.4Enviarcomentariosdeseguimientoasecretar%C3%ADaycerrarevaluaci%C3%B3n").
-* **Eliminar**: este botón representado por el icono ![](/attachments/597852717/597861045.png) y situado en la última columna "Acciones" de la tabla, permite evaluador/a eliminar el comentario. Solamente se podrán eliminar los comentarios añadidos por el/la propio/a evaluador/a. No se podrán eliminar los comentarios de otros/as evaluadores/as. Además, sólo se permitirá la eliminación mientras los comentarios no hubieran sido [enviados a secretaría](https://confluence.um.es/confluence/pages/viewpage.action?pageId=597852717#MDUPerfildeinvestigaci%C3%B3nM%C3%B3duloETI-7.1.4Enviarcomentariosdeseguimientoasecretar%C3%ADaycerrarevaluaci%C3%B3n "https://confluence.um.es/confluence/pages/viewpage.action?pageId=597852717#MDUPerfildeinvestigaci%C3%B3nM%C3%B3duloETI-7.1.4Enviarcomentariosdeseguimientoasecretar%C3%ADaycerrarevaluaci%C3%B3n").
+* **Añadir comentario**: este botón se encuentra en la parte inferior  del listado de comentarios, permite al evaluador/a introducir un nuevo comentario a la evaluación de seguimiento de la memoria. Sólo se podrán añadir comentarios mientras la evaluación no haya sido remitida, es decir, hasta el momento en que los comentarios añadidos se envíen a secretaría ([enviar comentarios a secretaría](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/mdu-perfil-de-investigacion/mdu-perfil-de-investigacion-modulo-eti#MDUPerfildeinvestigaci%C3%B3nM%C3%B3duloETI-7.1.4Enviarcomentariosdeseguimientoasecretar%C3%ADaycerrarevaluaci%C3%B3n)).
+* **Editar:**este botón representado por el icono ![](/attachments/597852717/597861043.png)  y situado en la última columna "Acciones" de la tabla, permite al evaluador/a modificar los datos del comentario. Solamente se podrán modificar los comentarios añadidos por el/la propio/a evaluador/a. No se podrán modificar los comentarios de otros/as evaluadores/as. Además, sólo se permitirá la modificación mientras los comentarios no hubieran sido [enviados a secretaría](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/mdu-perfil-de-investigacion/mdu-perfil-de-investigacion-modulo-eti#MDUPerfildeinvestigaci%C3%B3nM%C3%B3duloETI-7.1.4Enviarcomentariosdeseguimientoasecretar%C3%ADaycerrarevaluaci%C3%B3n).
+* **Eliminar**: este botón representado por el icono ![](/attachments/597852717/597861045.png) y situado en la última columna "Acciones" de la tabla, permite evaluador/a eliminar el comentario. Solamente se podrán eliminar los comentarios añadidos por el/la propio/a evaluador/a. No se podrán eliminar los comentarios de otros/as evaluadores/as. Además, sólo se permitirá la eliminación mientras los comentarios no hubieran sido [enviados a secretaría](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/mdu-perfil-de-investigacion/mdu-perfil-de-investigacion-modulo-eti#MDUPerfildeinvestigaci%C3%B3nM%C3%B3duloETI-7.1.4Enviarcomentariosdeseguimientoasecretar%C3%ADaycerrarevaluaci%C3%B3n).
 
 A continuación se detalla el significado de cada una de las columnas del listado:
 
@@ -1736,7 +1558,7 @@ A continuación se detalla el significado de cada una de las columnas del listad
 * **Subapartado:** subapartado del formulario de seguimiento anual o final al que se le esta añadiendo el comentario.
 * **Comentarios:** texto con el comentario que se quiere aportar en el apartado seleccionado de la memoria.
 
-##### 7\.1\.3\.1 Añadir comentario
+##### 7.1.3.1 Añadir comentario
 
 Al pulsar sobre el botón "**Añadir Comentario**", se abrirá un formulario como el mostrado en la siguiente imagen.
 
@@ -1752,71 +1574,9 @@ A continuación se describe cada uno de los campos solicitados en este formulari
 
 ![](/attachments/597852717/692387981.png)
 
-  
-
-
 Al pulsar sobre el botón "Añadir" el comentario se añadirá al listado de comentarios de la evaluación de seguimiento mostrando el icono de la admiración en el menú de "Comentarios" y el mensaje de información en la parte de abajo de la pantalla en la zona del "Área de acciones" para recordar al evaluador/a que debe de pulsar el botón GUARDAR para que los cambios realizados (en este caso un nuevo comentario) se consoliden.
 
- ![](/attachments/597852717/692387982.png)  
-
-
-  
-
-
-Si se pulsa el botón "GUARDAR" se modifica la evaluación de seguimiento con los cambios realizados en la pantalla Comentarios (única pantalla donde el evaluador/a puede realizar cambios)
-
-Se muestra un mensaje de que la evaluación de seguimiento se ha guardado correctamente igual que el de la siguiente imagen.
-
-![](/attachments/597852717/597860052.png)  
-
-
-##### 7\.1\.3\.2 Añadir comentario general
-
-Como en el caso de la evaluación de una memoria inicial, en la evaluación de los seguimientos anuales y finales también es posible introducir un comentario general. Para ello, se dispondrá de un bloque genérico "Comentarios generales"
-
-En el caso del seguimiento anual:
-
-![](/attachments/597852717/695468213.png)
-
-  
-
-
-En el caso del seguimiento final:
-
-![](/attachments/597852717/695468214.png)
-
-  
-
-
-En ambos casos, tras seleccionar el bloque de "Comentarios generales", se mostrará el árbol de apartados, que solo contendrá un apartado genérico y que debe ser seleccionado para poder aportar el comentario.
-
-![](/attachments/597852717/695468215.png)
-
-  
-
-
-Tras pulsar el botón "Añadir" el comentario general se mostrará en el listado de comentarios del seguimiento. 
-
-Siguiendo la operativa general del SGI se debe pulsar el botón "Aceptar" para que el Seguimiento sea actualizado y se incluya el comentario general aportado.
-
-  
-
-
-##### 7\.1\.3\.3 Editar comentario
-
-Se abre una pantalla que muestra un formulario con los datos del comentario, es idéntico al utilizado durante el alta de un comentario, dejando la posibilidad de modificar cualquiera de los campos del formulario (ver funcionalidad descrita en el apartado  [Añadir comentario](#MDUPerfildeinvestigaciónMóduloETI-A%C3%B1adircomentario.2 "#MDUPerfildeinvestigaciónMóduloETI-A%C3%B1adircomentario.2") para mas detalle).
-
-En la siguiente imagen se muestra el formulario de edición de un comentario.
-
-![](/attachments/597852717/692387983.png)
-
-  
-
-
-Tras introducir los cambios y pulsar sobre el botón "Aceptar" el comentario se modificará y los cambios se verán reflejados en el listado de comentarios de la evaluación de seguimiento mostrando el icono de la admiración en el menú de "Comentarios" y el mensaje de información en la parte de abajo de la pantalla en la zona del "Área de acciones" para recordar al evaluador/a que debe de pulsar el botón GUARDAR para que los cambios realizados (en este caso una modificación de un comentario) se consoliden.
-
-  
-
+ ![](/attachments/597852717/692387982.png)
 
 Si se pulsa el botón "GUARDAR" se modifica la evaluación de seguimiento con los cambios realizados en la pantalla Comentarios (única pantalla donde el evaluador/a puede realizar cambios)
 
@@ -1824,7 +1584,43 @@ Se muestra un mensaje de que la evaluación de seguimiento se ha guardado correc
 
 ![](/attachments/597852717/597860052.png)
 
-##### 7\.1\.3\.4 Eliminar comentario
+##### 7.1.3.2 Añadir comentario general
+
+Como en el caso de la evaluación de una memoria inicial, en la evaluación de los seguimientos anuales y finales también es posible introducir un comentario general. Para ello, se dispondrá de un bloque genérico "Comentarios generales"
+
+En el caso del seguimiento anual:
+
+![](/attachments/597852717/695468213.png)
+
+En el caso del seguimiento final:
+
+![](/attachments/597852717/695468214.png)
+
+En ambos casos, tras seleccionar el bloque de "Comentarios generales", se mostrará el árbol de apartados, que solo contendrá un apartado genérico y que debe ser seleccionado para poder aportar el comentario.
+
+![](/attachments/597852717/695468215.png)
+
+Tras pulsar el botón "Añadir" el comentario general se mostrará en el listado de comentarios del seguimiento. 
+
+Siguiendo la operativa general del SGI se debe pulsar el botón "Aceptar" para que el Seguimiento sea actualizado y se incluya el comentario general aportado.
+
+##### 7.1.3.3 Editar comentario
+
+Se abre una pantalla que muestra un formulario con los datos del comentario, es idéntico al utilizado durante el alta de un comentario, dejando la posibilidad de modificar cualquiera de los campos del formulario (ver funcionalidad descrita en el apartado  [Añadir comentario](#MDUPerfildeinvestigaciónMóduloETI-A%C3%B1adircomentario.2) para mas detalle).
+
+En la siguiente imagen se muestra el formulario de edición de un comentario.
+
+![](/attachments/597852717/692387983.png)
+
+Tras introducir los cambios y pulsar sobre el botón "Aceptar" el comentario se modificará y los cambios se verán reflejados en el listado de comentarios de la evaluación de seguimiento mostrando el icono de la admiración en el menú de "Comentarios" y el mensaje de información en la parte de abajo de la pantalla en la zona del "Área de acciones" para recordar al evaluador/a que debe de pulsar el botón GUARDAR para que los cambios realizados (en este caso una modificación de un comentario) se consoliden.
+
+Si se pulsa el botón "GUARDAR" se modifica la evaluación de seguimiento con los cambios realizados en la pantalla Comentarios (única pantalla donde el evaluador/a puede realizar cambios)
+
+Se muestra un mensaje de que la evaluación de seguimiento se ha guardado correctamente igual que el de la siguiente imagen.
+
+![](/attachments/597852717/597860052.png)
+
+##### 7.1.3.4 Eliminar comentario
 
 Cuando se pulsa el icono de eliminar comentario se muestra una ventana emergente con un mensaje de confirmación.
 
@@ -1832,27 +1628,15 @@ Cuando se pulsa el icono de eliminar comentario se muestra una ventana emergente
 
 En caso de responder afirmativamente (botón "Aceptar") el comentario desaparecerá del listado de comentarios. Se muestra el icono de la admiración en el menú de "Comentarios" y el mensaje de información en la parte de abajo de la pantalla en la zona del "Área de acciones" para recordar al evaluador/a que debe de pulsar el botón GUARDAR para que los cambios realizados (en este caso la eliminación de un comentario) se consoliden.
 
-  
-
-
-#### 7\.1\.4 Enviar comentarios de seguimiento a secretaría y cerrar evaluación
+#### 7.1.4 Enviar comentarios de seguimiento a secretaría y cerrar evaluación
 
 Una vez que se añaden los comentarios deberán ser remitidos a secretaría. Para ello desde la pantalla inicial del listado de evaluaciones se dispone del botón de acción "enviar comentarios a secretaría", ![](/attachments/597852717/841089257.png)
 
-  
-
-
 ![](/attachments/597852717/841089267.png)
-
-  
-
 
 Tras pulsar el icono de acción ![](/attachments/597852717/841089257.png)se mostrará un mensaje solicitando la confirmación del envío:
 
 ![](/attachments/597852717/841089269.png)
-
-  
-
 
 Si se pulsa el botón "Aceptar" los comentarios serán enviados a secretaría y la evaluación de seguimiento, por parte del Evaluador/a, se considerará cerrada. No será posible añadir, modificar o eliminar comentarios.
 
@@ -1860,42 +1644,21 @@ Tras pulsar el botón "Aceptar" se mostrará un mensaje de confirmación.
 
 ![](/attachments/597852717/841089270.png)
 
-  
-
-
 Los comentarios serán visibles para el equipo de gestión (Secretaría), así como para el resto de miembros del equipo evaluador.
-
-  
-
 
 Una vez que han sido enviados los comentarios de una evaluación, ésta pasará a estar solamente en modo consulta para el/la evaluador/a. La columna "Enviada" pasará a tomar el valor "Sí" recordando que la evaluación ha sido remitida a secretaría.
 
 ![](/attachments/597852717/841089271.png)
 
-  
-
-
 Al acceder al detalle de la evaluación se podrán ver los comentarios remitidos pero no se podrán ni modificar ni eliminar, así como tampoco añadir nuevos comentarios.
 
 ![](/attachments/597852717/841089272.png)
 
-  
-
-
-  
-
-
-## 8\. Anexo \- Estados de una memoria
+## 8. Anexo - Estados de una memoria
 
 El siguiente diagrama muestra los estados por los que irá pasando una memoria de ética.
 
-  
-
-
 ![](/attachments/597852717/977141965.png)
-
-  
-
 
 Se indica a continuación el significado de cada estado:
 
@@ -1924,10 +1687,3 @@ Se indica a continuación el significado de cada estado:
 * En aclaración seguimiento final: La memoria ha sido evaluada en su fase de seguimiento final y se le ha otorgado dictamen "solicitud de aclaraciones". La memoria adquiere el estado "en aclaración seguimiento final" una vez que se haya finalizado el acta asociada a la convocatoria de reunión de seguimiento en la que se ha evaluado (hasta este momento la memoria seguirá en estado "en evaluación seguimiento final" aunque ya disponga de dictamen). Una memoria en estado "en aclaración seguimiento final" deberá ser modificada por el/la investigadora/a solicitante. Se deberá modificar el formulario de seguimiento final de acuerdo a los comentarios recibidos en la evaluación.
 * En secretaría seguimiento final aclaraciones: una memoria cuyo estado sea "en aclaración seguimiento final"  tomará el estado "en secretaría seguimiento final" cuando el/la investigador/a solicitante remite nuevamente la memoria a secretaría, tras haber introducido los cambios oportunos en el formulario de seguimiento final. Una memoria en estado  "en secretaría seguimiento final", podrá ser reevaluada por el personal de gestión sin necesidad de incluir la memoria en una nueva convocatoria de reunión de seguimiento.
 * Archivado: es el estado final que adquieren las memorias cuyo estado previo es "desfavorable", "pendiente de correcciones", "pendiente de revisión mínima", "solicitud de modificación" o "en aclaración seguimiento final" y hayan transcurrido un número de días determinado, configurados en el SGI. Una memoria en estado "archivado" no podrá ser modificada. Su ciclo de vida ha concluído.
-
-  
-
-
-
-
-

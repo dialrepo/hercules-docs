@@ -1,6 +1,15 @@
-# Hércules : CU\-ETI\-0060\-014 \- Memorias \- Edición formulario seguimiento final
+# CU-ETI-0060-014 - Memorias - Edición formulario seguimiento final
 
-
+|  |  |
+| --- | --- |
+| Cod. CU | ********CU-ETI-0060-014 - Memorias - Edición formulario seguimiento final******** |
+| Ver. objetivo |  |
+| Ver. CU | 1.0.0 |
+| Estado | LIBERADO\_ |
+| Fec. Aprobación |  |
+| Épica, historia |  |
+| Actores | ACT-ETI-002-Investigador  ACT-ETI-003-Solicitante  ACT-ETI-006-Responsable memoria |
+| Frecuencia | Media |
 
 ### Descripción
 
@@ -10,11 +19,11 @@ Formulario para rellenar el formulario de seguimiento final
 
 #### Actor principal
 
-ACT\-ETI\-002\-Investigador
+ACT-ETI-002-Investigador
 
-ACT\-ETI\-003\-Solicitante
+ACT-ETI-003-Solicitante
 
-ACT\-ETI\-006\-Responsable memoria
+ACT-ETI-006-Responsable memoria
 
 ### Precondiciones
 
@@ -26,15 +35,9 @@ Sólo se muestran las peticiones de evaluación dadas de alta en el sistema y qu
 
 Únicamente se mostrará el formulario de Seguimiento final en modo edición si la memoria esta en estado "Fin evaluación seguimiento anual" o "Completada seguimiento final" o "En aclaración seguimiento final"y ha pasado 1 año desde la fecha de fin del proyecto. En otro caso se mostrará en modo consulta
 
-  
-
-
 ### Garantías de éxito (postcondiciones)
 
 Se guardan las respuestas del formulario y se cambia el estado de la memoria a "Completada seguimiento final"
-
-  
-
 
 ### Escenario principal (flujo básico)
 
@@ -52,7 +55,3 @@ Se guardan las respuestas del formulario y se cambia el estado de la memoria a "
 12. El usuario es informado del resultado positivo de la acción.
 13. Se mantienen en misma pantalla de edición.
 14. Se cambia el estado de la memoria a "Completada seguimiento final".
-
-
-
-

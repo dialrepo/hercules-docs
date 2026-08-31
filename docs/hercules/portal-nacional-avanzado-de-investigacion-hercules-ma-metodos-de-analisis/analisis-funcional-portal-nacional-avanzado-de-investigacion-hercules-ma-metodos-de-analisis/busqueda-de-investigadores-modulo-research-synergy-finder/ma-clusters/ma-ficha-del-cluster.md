@@ -1,13 +1,14 @@
-# Hércules : MA. Ficha del cluster
+# MA. Ficha del cluster
 
-
-
-  
-
+* [Acceso a la ficha del cluster](#MA.Fichadelcluster-Accesoalafichadelcluster)
+* [Estructura](#MA.Fichadelcluster-Estructura)
+  + [Datos principales](#MA.Fichadelcluster-Datosprincipales)
+  + [Menú de opciones](#MA.Fichadelcluster-Menúdeopciones)
+  + [Datos enriquecidos:](#MA.Fichadelcluster-Datosenriquecidos:)
 
 Información de desarrollo
 
-[https://github.com/HerculesCRUE/HerculesMA/blob/main/Docs/funcionamiento\-de\-los\-cluster.md\#ficha\-del\-cluster](https://github.com/HerculesCRUE/HerculesMA/blob/main/Docs/funcionamiento-de-los-cluster.md#ficha-del-cluster "https://github.com/HerculesCRUE/HerculesMA/blob/main/Docs/funcionamiento-de-los-cluster.md#ficha-del-cluster")
+<https://github.com/HerculesCRUE/HerculesMA/blob/main/Docs/funcionamiento-de-los-cluster.md#ficha-del-cluster>
 
 ## Acceso a la ficha del cluster
 
@@ -39,10 +40,3 @@ Participantes: Pestaña con una gráfica de las relaciones de los participantes 
 Temas de investigación: Gráfica que pone de relieve los Áreas de investigación que más se repiten en la publicación científica de los investigadores seleccionados.
 
 ![](/attachments/598147446/598148142.jpg?effects=drop-shadow)
-
-  
-
-
-
-
-

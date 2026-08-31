@@ -1,6 +1,15 @@
-# Hércules : CU\-CSP\-0070\-001 \- Buscar y listar fuentes de financiación
+# CU-CSP-0070-001 - Buscar y listar fuentes de financiación
 
-
+|  |  |
+| --- | --- |
+| Cod. CU | **CU-CSP-0070-001 - Buscar y listar fuentes de financiación** |
+| Ver. objetivo |  |
+| Ver. CU | 1.0.0 |
+| Estado | LIBERADO\_ |
+| Fec. Aprobación |  |
+| Épica, historia |  |
+| Actores | ACT-CSP-003-Gestor, ACT-CSP-004-Administrador |
+| Frecuencia | Media |
 
 ### Descripción
 
@@ -10,15 +19,15 @@ Búsqueda y listado de fuentes de financiación.
 
 #### Actor principal
 
-ACT\-CSP\-003\-Gestor, ACT\-CSP\-004\-Administrador
+ACT-CSP-003-Gestor, ACT-CSP-004-Administrador
 
 #### Personal involucrado e intereses
 
-ACT\- CSP\-001\-Investigador que requiere que las convocatorias y proyectos dispongan de la información de financiación correctamente configuradad.
+ACT- CSP-001-Investigador que requiere que las convocatorias y proyectos dispongan de la información de financiación correctamente configuradad.
 
 ### Precondiciones
 
-El usuario ACT\-CSP\-004\-Administrador o ACT\-CSP\-003\-Gestor se autentica a través del usuario de dominio corporativo.
+El usuario ACT-CSP-004-Administrador o ACT-CSP-003-Gestor se autentica a través del usuario de dominio corporativo.
 
 A través del servicio de integración con el directorio activo y de la información del usuario almacenada en el propio SGI, se obtiene su rol y las unidades de gestión sobre las que tiene disponible el rol. El usuario está autorizado sobre la funcionalidades asociadas a esta gestión.
 
@@ -26,16 +35,13 @@ A través del servicio de integración con el directorio activo y de la informac
 
 Se presenta el listado de fuentes de financiación de acuerdo a los filtros introducidos.
 
-### Escenario principal (flujo básico) \- No se aplican filtros de búsqueda
+### Escenario principal (flujo básico) - No se aplican filtros de búsqueda
 
 1. El usuario accede a la opción Fuentes de financiación del módulo CSP
 2. El usuario pulsa Buscar, sin modificar los filtros por defecto del buscador
 3. Se muestra el listado de Fuentes de financiación incluyendo solamente aquellas que tengan el campo "activo" a "true".
 
-  
-
-
-### Extensiones (flujos alternativos) \- Se aplican filtros de búsqueda
+### Extensiones (flujos alternativos) - Se aplican filtros de búsqueda
 
 1. El usuario accede a la opción Fuentes de financiación del módulo CSP
 2. El usuario pulsa Buscar, indicando algún valor en los campos disponibles
@@ -48,12 +54,3 @@ N/A
 ### Lista de tecnología y variaciones de datos
 
 N/A
-
-  
-  
-  
-
-
-
-
-

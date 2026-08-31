@@ -1,10 +1,15 @@
-# Hércules : CU\-PII\-0010\-005 \- Asociar empresa
+# CU-PII-0010-005 - Asociar empresa
 
-
-
-
-
-
+|  |  |
+| --- | --- |
+| Cod. CU | ********CU-PII-0010-005 - Asociar empresa******** |
+| Ver. objetivo |  |
+| Ver. CU | 1.0.0 |
+| Estado | LIBERADO\_ |
+| Fec. Aprobación |  |
+| Épica, historia |  |
+| Actores | ACT-PII-001-Gestor |
+| Frecuencia | Media |
 
 ### Descripción
 
@@ -16,7 +21,7 @@ Se presenta un diálogo para la búsqueda de esta entidad/empresa en los sistema
 
 #### Actor principal
 
-ACT\-PII\-001\-Gestor
+ACT-PII-001-Gestor
 
 ### Precondiciones
 
@@ -28,11 +33,11 @@ Haber accedido a la gestión de la entidad que necesita ser asociada a la entida
 
 El usuario asocia una entidad/empresa a la entidad donde necesita.
 
-### Escenario principal (flujo básico) \- ACT\-PII\-001\-Gestor
+### Escenario principal (flujo básico) - ACT-PII-001-Gestor
 
 1. Se presenta la pantalla donde se pide asociar a la entidad/empresa.
 2. El usuario pulsa el botón del formulario para la asociación.
-3. Busca la entidad/empresa ([IU\-GEN\-0080 \- Búsqueda de empresa](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/sha-buscadores-y-listados-comunes/iu-gen-0080-busqueda-de-empresas.md "/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/sha-buscadores-y-listados-comunes/iu-gen-0080-busqueda-de-empresas.md") \- [REQ\-INT\-0015\-SGEMP\-0020 \- Buscar empresa](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0015-sgemp-integracion-con-sistema-de-gestion-de-empresas/req-int-0015-sgemp-0020-buscar-empresa.md "/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0015-sgemp-integracion-con-sistema-de-gestion-de-empresas/req-int-0015-sgemp-0020-buscar-empresa.md")) y la selecciona.
+3. Busca la entidad/empresa ([IU-GEN-0080 - Búsqueda de empresa](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/sha-buscadores-y-listados-comunes/iu-gen-0080-busqueda-de-empresas) - [REQ-INT-0015-SGEMP-0020 - Buscar empresa](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0015-sgemp-integracion-con-sistema-de-gestion-de-empresas/req-int-0015-sgemp-0020-buscar-empresa)) y la selecciona.
 4. Pulsa el botón de asociar.
 
 ### Extensiones (flujos alternativos)
@@ -49,33 +54,14 @@ N/A
 
 ### Acciones
 
-  
-
-
-  
-
-
-
-
-
-
-
+|  |  |
+| --- | --- |
+| ACT-PII-001-Gestor | PII-INVENCION-ASOCIAREMPRESA |
 
 ### Casos de uso relacionados
 
-
-
-
-
-
+![](plugins/servlet/confluence/placeholder/unknown-macro)
 
 ### Interfaces relacionados
 
-
-
-
-
-
-
-
-
+![](plugins/servlet/confluence/placeholder/unknown-macro)

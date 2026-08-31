@@ -1,9 +1,13 @@
-# Hércules : Análisis preliminar \- Módulo Research Synergy Finder
+# Análisis preliminar - Módulo Research Synergy Finder
 
-
-
-Aquí mostramos los análisis preliminares del "Módulo Research Synergy Finder". 
-
-
-
-
+- [MA. Home. UX](/hercules/portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/analisis-funcional-portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/busqueda-de-investigadores-modulo-research-synergy-finder/analisis-preliminar-modulo-research-synergy-finder/ma-home-ux)
+- [MA. Grupos de Investigación. UX](/hercules/portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/analisis-funcional-portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/busqueda-de-investigadores-modulo-research-synergy-finder/analisis-preliminar-modulo-research-synergy-finder/ma-grupos-de-investigacion-ux)
+- [MA. Grupos de Investigación. Definición](/hercules/portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/analisis-funcional-portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/busqueda-de-investigadores-modulo-research-synergy-finder/analisis-preliminar-modulo-research-synergy-finder/ma-grupos-de-investigacion-definicion)
+- [MA. Investigadores. UX](/hercules/portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/analisis-funcional-portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/busqueda-de-investigadores-modulo-research-synergy-finder/analisis-preliminar-modulo-research-synergy-finder/ma-investigadores-ux)
+- [MA. Investigadores. Definición](/hercules/portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/analisis-funcional-portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/busqueda-de-investigadores-modulo-research-synergy-finder/analisis-preliminar-modulo-research-synergy-finder/ma-investigadores-definicion)
+- [MA. Publicaciones. UX](/hercules/portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/analisis-funcional-portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/busqueda-de-investigadores-modulo-research-synergy-finder/analisis-preliminar-modulo-research-synergy-finder/ma-publicaciones-ux)
+- [MA. Publicaciones. Definición](/hercules/portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/analisis-funcional-portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/busqueda-de-investigadores-modulo-research-synergy-finder/analisis-preliminar-modulo-research-synergy-finder/ma-publicaciones-definicion)
+- [MA. ROs. UX](/hercules/portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/analisis-funcional-portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/busqueda-de-investigadores-modulo-research-synergy-finder/analisis-preliminar-modulo-research-synergy-finder/ma-ros-ux)
+- [MA. ROs. Definición](/hercules/portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/analisis-funcional-portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/busqueda-de-investigadores-modulo-research-synergy-finder/analisis-preliminar-modulo-research-synergy-finder/ma-ros-definicion)
+- [Ofertas tecnológicas (Análisis preliminar)](/hercules/portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/analisis-funcional-portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/busqueda-de-investigadores-modulo-research-synergy-finder/analisis-preliminar-modulo-research-synergy-finder/ofertas-tecnologicas-analisis-preliminar)
+- [Asistente para la creación de cluster (equipo de proyecto)](/hercules/portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/analisis-funcional-portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/busqueda-de-investigadores-modulo-research-synergy-finder/analisis-preliminar-modulo-research-synergy-finder/asistente-para-la-creacion-de-cluster-equipo-de-proyecto)

@@ -1,6 +1,15 @@
-# Hércules : CU\-ETI\-0020\-005 \- Evaluar memoria \- Comentarios \- Modificar
+# CU-ETI-0020-005 - Evaluar memoria - Comentarios - Modificar
 
-
+|  |  |
+| --- | --- |
+| Cod. CU | ********CU-ETI-0020-005 - Evaluar memoria - Comentarios - Modificar******** |
+| Ver. objetivo |  |
+| Ver. CU | 1.0.0 |
+| Estado | LIBERADO\_ |
+| Fec. Aprobación |  |
+| Épica, historia |  |
+| Actores | ACT-ETI-001-Gestor |
+| Frecuencia | Media |
 
 ### Descripción
 
@@ -10,7 +19,7 @@ Formulario de modificación de comentario en una evaluación de memoria
 
 #### Actor principal
 
-ACT\-ETI\-001\-Gestor
+ACT-ETI-001-Gestor
 
 ### Precondiciones
 
@@ -28,7 +37,7 @@ Se modifica el comentario a la lista de comentarios de la evaluación.
 
 Los cambios únicamente se realizan en memoria.
 
-### Escenario principal (flujo básico \- modificar comentario)
+### Escenario principal (flujo básico - modificar comentario)
 
 1. Se presenta la pantalla Evaluaciones con el listado de memoria en estado "En evaluación"
 2. Se selecciona la memoria.
@@ -40,7 +49,3 @@ Los cambios únicamente se realizan en memoria.
 8. El usuario selecciona la acción Modificar.
 9. Se realizan las validaciones en cuanto a formato, obligatoriedad habituales.
 10. Se modifica el comentario en el  listado de comentarios.
-
-
-
-

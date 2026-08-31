@@ -1,6 +1,14 @@
-# Hércules : CSP \- Integración Timesheet
+# CSP - Integración Timesheet
 
-
+* [INTRODUCCIÓN](#CSPIntegraciónTimesheet-INTRODUCCIÓN)
+* [TS\_PROYECTO\_JUSTIFICABLE](#CSPIntegraciónTimesheet-TS_PROYECTO_JUSTIFICABLE)
+* [TS\_PROYECTO\_ENT\_FIN](#CSPIntegraciónTimesheet-TS_PROYECTO_ENT_FIN)
+* [TS\_PROYECTO\_ENT\_CONV](#CSPIntegraciónTimesheet-TS_PROYECTO_ENT_CONV)
+* [TS\_PROYECTO\_SGE](#CSPIntegraciónTimesheet-TS_PROYECTO_SGE)
+* [TS\_PROYECTO\_EQUIPO](#CSPIntegraciónTimesheet-TS_PROYECTO_EQUIPO)
+* [TS\_PROYECTO\_PAQUETE\_TRABAJO](#CSPIntegraciónTimesheet-TS_PROYECTO_PAQUETE_TRABAJO)
+* [TS\_GRUPO\_JUSTIFICABLE](#CSPIntegraciónTimesheet-TS_GRUPO_JUSTIFICABLE)
+* [TS\_GRUPO\_EQUIPO](#CSPIntegraciónTimesheet-TS_GRUPO_EQUIPO)
 
 ## INTRODUCCIÓN
 
@@ -19,8 +27,6 @@ Listado de proyectos del SGI que cumplen las siguientes condiciones:
 * fecha fin mayor al año 2013
 * con identificador SGE
 
-
-
 | Campo | Comentario |
 | --- | --- |
 | ID | Identificador único del proyecto. Clave primaria. |
@@ -30,35 +36,32 @@ Listado de proyectos del SGI que cumplen las siguientes condiciones:
 | ACRONIMO | Campo "acrónimo" del proyecto. |
 | FECHA\_INICIO | Campo "fecha inicio" del proyecto. |
 | FECHA\_FIN | Si esta informada "fecha fin definitiva" se enviará "fecha fin definitiva", sino la "fecha de fin" del proyecto. |
-| ESTADO | Estado actual del proyecto. Se sacará el campo "estado" de la tabla ESTADO\_PROYECTO del estado actual del proyecto.Posibles valores:* CONCEDIDO * RENUNCIADO * RESCINDIDO |
+| ESTADO | Estado actual del proyecto. Se sacará el campo "estado" de la tabla ESTADO\_PROYECTO del estado actual del proyecto.  Posibles valores:   * CONCEDIDO * RENUNCIADO * RESCINDIDO |
 | MODELO\_EJECUCION\_ID | Identificador único del modelo de ejecución asociado al proyecto. Los modelos de ejecución son configurables en el SGI. |
 | MODELO\_EJCUCION\_NOMBRE | Nombre del modelo de ejecución asociado al proyecto. |
 | TIPO\_FINALIDAD\_ID | Identificador único del tipo de finalidad asociado al proyecto. Los tipos de finalidad son configurables en el SGI. |
 | TIPO\_FINALIDAD\_NOMBRE | Nombre del tipo de finalidad asociado al proyecto. |
 | AMBITO\_ID | Identificador único del tipo de ámbito geográfico asociado al proyecto. Los tipos  de ámbitos geográficos son configurables en el SGI. |
 | AMBITO\_NOMBRE | Nombre del tipo de ámbito geográfico asociado al proyecto. |
-| FECHA\_CONCESION | Fecha en la que la solicitud pase a estado CONCEDIDA. En el SGI se considera estado CONCEDIDA (cuando sale el botón de "Crear proyecto" a partir de la Solicitud, en uno de los siguientes estados "Concedida provisional", "Concedida provisional alegada", "Concedida provisional no alegada" o "Concedida"En el caso de que el proyecto tenga relacionada una solicitud, se irá a la tabla del histórico de estados y se buscará la fecha de estado mas antigua de los estados: * CONCEDIDA * CONCEDIDA\_PROVISIONAL * CONCEDIDA\_PROVISIONAL\_ALEGADA * CONCEDIDA\_PROVISIONAL\_NO\_ALEGADA |
+| FECHA\_CONCESION | Fecha en la que la solicitud pase a estado CONCEDIDA. En el SGI se considera estado CONCEDIDA (cuando sale el botón de "Crear proyecto" a partir de la Solicitud, en uno de los siguientes estados "Concedida provisional", "Concedida provisional alegada", "Concedida provisional no alegada" o "Concedida"  En el caso de que el proyecto tenga relacionada una solicitud, se irá a la tabla del histórico de estados y se buscará la fecha de estado mas antigua de los estados:   * CONCEDIDA * CONCEDIDA\_PROVISIONAL * CONCEDIDA\_PROVISIONAL\_ALEGADA * CONCEDIDA\_PROVISIONAL\_NO\_ALEGADA |
 | IMPORTE\_SOLICITADO | Si el campo "importe presupuesto" o "importe presupuesto costes indirectos" del proyecto están informados, será la suma de ellos, en caso de que no estén informados será la suma del campo "importe presupuesto" de todos los gastos del proyecto (tabla ANUALIDAD\_GASTO). |
 | IMPORTE\_CONCEDIDO | Si el campo "importe concedido" o "importe concedido costes indirectos" del proyecto están informados, será la suma de ellos, en caso de que no estén informados será la suma del campo "importe concedido" de todos los gastos del proyecto (tabla ANUALIDAD\_GASTO). |
-| COSTES\_INDIRECTOS | Si el campo "importe concedido" o "importe concedido costes indirectos" del proyecto están informados, será la suma de ellos, en caso de que no estén informados será la suma del campo "importe concedido" de todos los gastos del proyecto (tabla ANUALIDAD\_GASTO).Será el campo "importe concedido" esta informado, en caso contrario será la suma del campo "importe concedido" de todos los gastos del proyecto que se correspondan con conceptos de gastos configurados como costes indirectos (tabla ANUALIDAD\_GASTO del proyecto cuyos CONCEPTO\_GASTO tenga el flag de COSTES\_INDIRECTOS a true). |
+| COSTES\_INDIRECTOS | Si el campo "importe concedido" o "importe concedido costes indirectos" del proyecto están informados, será la suma de ellos, en caso de que no estén informados será la suma del campo "importe concedido" de todos los gastos del proyecto (tabla ANUALIDAD\_GASTO).  Será el campo "importe concedido" esta informado, en caso contrario será la suma del campo "importe concedido" de todos los gastos del proyecto que se correspondan con conceptos de gastos configurados como costes indirectos (tabla ANUALIDAD\_GASTO del proyecto cuyos CONCEPTO\_GASTO tenga el flag de COSTES\_INDIRECTOS a true). |
 | OBSERVACIONES | Campo "observaciones" del proyecto. |
 | UNIDAD\_GESTION\_REF | Identificador único de la unidad de gestión asociada al proyecto. Las unidades de gestión son configurables en el SGI por implantación. |
 | UNIDAD\_GESTION\_NOMBRE | Nombre de la unidad de gestión asociada al proyecto. |
 
-  
-
-
-Ver diseño en [SGI \- Vistas Timesheet\#TS\_PROYECTO\_JUSTIFICABLE](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-interface-integracion/sgi-vistas/sgi-vistas-timesheet.md#SGIVistasTimesheet-TS_PROYECTO_JUSTIFICABLE "/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-interface-integracion/sgi-vistas/sgi-vistas-timesheet.md#SGIVistasTimesheet-TS_PROYECTO_JUSTIFICABLE")
+Ver diseño en [SGI - Vistas Timesheet#TS\_PROYECTO\_JUSTIFICABLE](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-interface-integracion/sgi-vistas/sgi-vistas-timesheet#SGIVistasTimesheet-TS_PROYECTO_JUSTIFICABLE)
 
 NOTAS:
 
 * ENTIDAD:
-	+ Se enviará en la vista TS\_PROYECTO\_ENT\_FIN porque un proyecto puede tener varias entidades financiadoras. Por cada entidad financiadora se enviará también la fuente de financiación.
-	+ Se enviará en la vista TS\_PROYECTO\_ENT\_CONV porque un proyecto puede tener varias entidades convocantes. Por cada entidad convocante se enviará también el programa (plan de investigación  o programa o subprograma o modadidad) que tenga asignada a nivel de convocatoria y a nivel de proyecto (id y nombre).
+  + Se enviará en la vista TS\_PROYECTO\_ENT\_FIN porque un proyecto puede tener varias entidades financiadoras. Por cada entidad financiadora se enviará también la fuente de financiación.
+  + Se enviará en la vista TS\_PROYECTO\_ENT\_CONV porque un proyecto puede tener varias entidades convocantes. Por cada entidad convocante se enviará también el programa (plan de investigación  o programa o subprograma o modadidad) que tenga asignada a nivel de convocatoria y a nivel de proyecto (id y nombre).
 * ID\_GESTION\_ECONOMICA
-	+ Se enviará en la vista TS\_PROYECTO\_SGE porque un proyecto puede estar relacionado con más de un proyecto SGE, aunque no es el caso de Murcia.
+  + Se enviará en la vista TS\_PROYECTO\_SGE porque un proyecto puede estar relacionado con más de un proyecto SGE, aunque no es el caso de Murcia.
 * ID\_INVESTIGADOR\_PRINCIPAL
-	+ Se enviará en la vista TS\_PROYECTO\_EQUIPO porque un proyecto puede tener mas de un investigador principal en el SGI. La vista sacará todos los miembros del equipo con sus rangos de participación y sus roles.
+  + Se enviará en la vista TS\_PROYECTO\_EQUIPO porque un proyecto puede tener mas de un investigador principal en el SGI. La vista sacará todos los miembros del equipo con sus rangos de participación y sus roles.
 
 ## TS\_PROYECTO\_ENT\_FIN
 
@@ -76,8 +79,6 @@ Por cada proyecto se mostrarán los siguientes campos de una entidad financiador
 * tipo de financiación
 * ajena
 
-
-
 | Campo | Comentario |
 | --- | --- |
 | ID | Identificador único del registro. Clave primaria. |
@@ -89,10 +90,7 @@ Por cada proyecto se mostrarán los siguientes campos de una entidad financiador
 | TIPO\_FINANCIACION\_NOMBRE | Nombre del tipo de financiación asociado a la entidad financiadora. |
 | AJENA | Indica si la entidad financiadora es ajena o no a la convocatoria |
 
-  
-
-
-Ver diseño en [SGI \- Vistas Timesheet\#TS\_PROYECTO\_ENT\_FIN](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-interface-integracion/sgi-vistas/sgi-vistas-timesheet.md#SGIVistasTimesheet-TS_PROYECTO_ENT_FIN "/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-interface-integracion/sgi-vistas/sgi-vistas-timesheet.md#SGIVistasTimesheet-TS_PROYECTO_ENT_FIN")
+Ver diseño en [SGI - Vistas Timesheet#TS\_PROYECTO\_ENT\_FIN](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-interface-integracion/sgi-vistas/sgi-vistas-timesheet#SGIVistasTimesheet-TS_PROYECTO_ENT_FIN)
 
 ## TS\_PROYECTO\_ENT\_CONV
 
@@ -109,8 +107,6 @@ Por cada proyecto se mostrarán los siguientes campos de una entidad convocante:
 * programa de la convocatoria: puede ser el plan de investigación o el programa o el subprograma de la convocatoria asociada al proyecto
 * programa del proyecto: puede ser plan de investigación o el programa o el subprograma o la modalidad seleccionada en el proyecto
 
-
-
 | Campo | Comentario |
 | --- | --- |
 | ID | Identificador único del registro. Clave primaria. |
@@ -121,7 +117,7 @@ Por cada proyecto se mostrarán los siguientes campos de una entidad convocante:
 | PROGRAMA\_ID | Identificador único del plan o del programa o del subprograma o de la modalidad seleccionada en el proyecto. Los planes de investigación junto con sus programa, subprograma y modalidades son configurables en el SGI en una estructura de árbol. |
 | PROGRAMA\_NOMBRE | Nombre del plan o del programa o del subprograma o de la modalidad seleccionada en el proyecto. |
 
-Ver diseño en [SGI \- Vistas Timesheet\#TS\_PROYECTO\_ENT\_CONV](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-interface-integracion/sgi-vistas/sgi-vistas-timesheet.md#SGIVistasTimesheet-TS_PROYECTO_ENT_CONV "/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-interface-integracion/sgi-vistas/sgi-vistas-timesheet.md#SGIVistasTimesheet-TS_PROYECTO_ENT_CONV")
+Ver diseño en [SGI - Vistas Timesheet#TS\_PROYECTO\_ENT\_CONV](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-interface-integracion/sgi-vistas/sgi-vistas-timesheet#SGIVistasTimesheet-TS_PROYECTO_ENT_CONV)
 
 ## TS\_PROYECTO\_SGE
 
@@ -134,15 +130,13 @@ Listado de identificadores SGE (Sistema gestión económico) de los proyectos de
 
 Por cada proyecto se mostrará el identificador SGE (un proyecto SGI puede tener más de uno identificador SGE asociado, aunque la normal general es que sea único)
 
-
-
 | Campo | Comentario |
 | --- | --- |
 | ID | Identificador único del registro. Clave primaria. |
 | PROYECTO\_ID | Identificador del proyecto. |
 | PROYECTO\_SGE\_REF | Identificador del proyecto económico en el sistema de gestión económico de la Universidad |
 
-Ver diseño en [SGI \- Vistas Timesheet\#TS\_PROYECTO\_SGE](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-interface-integracion/sgi-vistas/sgi-vistas-timesheet.md#SGIVistasTimesheet-TS_PROYECTO_SGE "/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-interface-integracion/sgi-vistas/sgi-vistas-timesheet.md#SGIVistasTimesheet-TS_PROYECTO_SGE")
+Ver diseño en [SGI - Vistas Timesheet#TS\_PROYECTO\_SGE](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-interface-integracion/sgi-vistas/sgi-vistas-timesheet#SGIVistasTimesheet-TS_PROYECTO_SGE)
 
 ## TS\_PROYECTO\_EQUIPO
 
@@ -162,8 +156,6 @@ Por cada proyecto se mostrarán los siguientes campos de un miembro del equipo:
 * si el rol tiene marcado el flag de principal o no
 * en caso de que el rol tenga marcado el flag principal se indica si el orden es PRIMARIO o SECUNDARIO
 
-
-
 | Campo | Comentario |
 | --- | --- |
 | ID | Identificador único del registro. Clave primaria. |
@@ -176,7 +168,7 @@ Por cada proyecto se mostrarán los siguientes campos de un miembro del equipo:
 | ROL\_PRINCIPAL | Si el rol es un rol principal o no. |
 | ORDEN | En caso de que el rol tenga marcado el flag principal se indica si el orden es PRIMARIO o SECUNDARIO |
 
-Ver diseño en [SGI \- Vistas Timesheet\#TS\_PROYECTO\_EQUIPO](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-interface-integracion/sgi-vistas/sgi-vistas-timesheet.md#SGIVistasTimesheet-TS_PROYECTO_EQUIPO "/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-interface-integracion/sgi-vistas/sgi-vistas-timesheet.md#SGIVistasTimesheet-TS_PROYECTO_EQUIPO")
+Ver diseño en [SGI - Vistas Timesheet#TS\_PROYECTO\_EQUIPO](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-interface-integracion/sgi-vistas/sgi-vistas-timesheet#SGIVistasTimesheet-TS_PROYECTO_EQUIPO)
 
 ## TS\_PROYECTO\_PAQUETE\_TRABAJO
 
@@ -195,8 +187,6 @@ Por cada proyecto se mostrarán los siguientes campos de un paquete de trabajo:
 * persona mes
 * descripción
 
-
-
 | Campo | Comentario |
 | --- | --- |
 | ID | Identificador único del registro. Clave primaria. |
@@ -207,10 +197,7 @@ Por cada proyecto se mostrarán los siguientes campos de un paquete de trabajo:
 | PERSONA\_MES | Persona mes del paquete de trabajo. |
 | DESCRIPCION | Descripción del paquete de trabajo. |
 
-  
-
-
-Ver diseño en [SGI \- Vistas Timesheet\#TS\_PROYECTO\_PAQUETE\_TRABAJO](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-interface-integracion/sgi-vistas/sgi-vistas-timesheet.md#SGIVistasTimesheet-TS_PROYECTO_PAQUETE_TRABAJO "/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-interface-integracion/sgi-vistas/sgi-vistas-timesheet.md#SGIVistasTimesheet-TS_PROYECTO_PAQUETE_TRABAJO")
+Ver diseño en [SGI - Vistas Timesheet#TS\_PROYECTO\_PAQUETE\_TRABAJO](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-interface-integracion/sgi-vistas/sgi-vistas-timesheet#SGIVistasTimesheet-TS_PROYECTO_PAQUETE_TRABAJO)
 
 ## TS\_GRUPO\_JUSTIFICABLE
 
@@ -219,8 +206,6 @@ Listado de grupos de investigación del SGI que cumplen las siguientes condicion
 * activos
 * fecha fin no tiene o mayor al año 2013
 * con identificador SGE
-
-
 
 | Campo | Comentario |
 | --- | --- |
@@ -235,11 +220,11 @@ Listado de grupos de investigación del SGI que cumplen las siguientes condicion
 | MODELO\_EJCUCION\_NOMBRE | Nombre del modelo de ejecución asociado a la solicitud de constitución del grupo. |
 | TIPO\_FINALIDAD\_ID | Identificador único del tipo de finalidad asociado a la convocatoria de constitución del grupo. Los tipos de finalidad son configurables en el SGI. |
 | TIPO\_FINALIDAD\_NOMBRE | Nombre del tipo de finalidad asociado a la solicitud de constitución del grupo. |
-| FECHA\_CONCESION | Fecha en la que la solicitud pase a estado CONCEDIDA. En el SGI se considera estado CONCEDIDA (cuando sale el botón de "Crear grupo" a partir de la Solicitud, en uno de los siguientes estados "Concedida provisional", "Concedida provisional alegada", "Concedida provisional no alegada" o "Concedida"En el caso de que el grupo tenga relacionada una solicitud, se irá a la tabla del histórico de estados y se buscará la fecha de estado mas antigua de los estados: * CONCEDIDA * CONCEDIDA\_PROVISIONAL * CONCEDIDA\_PROVISIONAL\_ALEGADA * CONCEDIDA\_PROVISIONAL\_NO\_ALEGADA |
+| FECHA\_CONCESION | Fecha en la que la solicitud pase a estado CONCEDIDA. En el SGI se considera estado CONCEDIDA (cuando sale el botón de "Crear grupo" a partir de la Solicitud, en uno de los siguientes estados "Concedida provisional", "Concedida provisional alegada", "Concedida provisional no alegada" o "Concedida"  En el caso de que el grupo tenga relacionada una solicitud, se irá a la tabla del histórico de estados y se buscará la fecha de estado mas antigua de los estados:   * CONCEDIDA * CONCEDIDA\_PROVISIONAL * CONCEDIDA\_PROVISIONAL\_ALEGADA * CONCEDIDA\_PROVISIONAL\_NO\_ALEGADA |
 | UNIDAD\_GESTION\_REF | Identificador único de la unidad de gestión asociada a la convocatoria de constitución del grupo. Las unidades de gestión son configurables en el SGI por implantación. |
 | UNIDAD\_GESTION\_NOMBRE | Nombre de la unidad de gestión asociada a la solicitud de constitución del grupo. |
 
-Ver diseño en [SGI \- Vistas Timesheet\#TS\_GRUPO\_JUSTIFICABLE](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-interface-integracion/sgi-vistas/sgi-vistas-timesheet.md#SGIVistasTimesheet-TS_GRUPO_JUSTIFICABLE "/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-interface-integracion/sgi-vistas/sgi-vistas-timesheet.md#SGIVistasTimesheet-TS_GRUPO_JUSTIFICABLE")
+Ver diseño en [SGI - Vistas Timesheet#TS\_GRUPO\_JUSTIFICABLE](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-interface-integracion/sgi-vistas/sgi-vistas-timesheet#SGIVistasTimesheet-TS_GRUPO_JUSTIFICABLE)
 
 ## TS\_GRUPO\_EQUIPO
 
@@ -258,8 +243,6 @@ Por cada grupo se mostrarán los siguientes campos de un miembro del equipo:
 * si el rol tiene marcado el flag de principal o no
 * en caso de que el rol tenga marcado el flag principal se indica si el orden es PRIMARIO o SECUNDARIO
 
-
-
 | Campo | Comentario |
 | --- | --- |
 | ID | Identificador único del registro. Clave primaria. |
@@ -272,11 +255,4 @@ Por cada grupo se mostrarán los siguientes campos de un miembro del equipo:
 | ROL\_PRINCIPAL | Si el rol es un rol principal o no. |
 | ORDEN | En caso de que el rol tenga marcado el flag principal se indica si el orden es PRIMARIO o SECUNDARIO |
 
-Ver diseño en [SGI \- Vistas Timesheet\#TS\_GRUPO\_EQUIPO](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-interface-integracion/sgi-vistas/sgi-vistas-timesheet.md#SGIVistasTimesheet-TS_GRUPO_EQUIPO "/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-interface-integracion/sgi-vistas/sgi-vistas-timesheet.md#SGIVistasTimesheet-TS_GRUPO_EQUIPO")
-
-  
-
-
-
-
-
+Ver diseño en [SGI - Vistas Timesheet#TS\_GRUPO\_EQUIPO](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-interface-integracion/sgi-vistas/sgi-vistas-timesheet#SGIVistasTimesheet-TS_GRUPO_EQUIPO)

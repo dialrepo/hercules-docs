@@ -1,8 +1,6 @@
-# Hércules : Formulario extracción Bases Reguladoras
+# Formulario extracción Bases Reguladoras
 
-
-
-El formulario relacionado con este subproceso de [Proceso 3 : Automatización de procesos de gestiones documentales parametrizables](https://confluence.um.es/confluence/pages/viewpage.action?pageId=598147205 "https://confluence.um.es/confluence/pages/viewpage.action?pageId=598147205") es el siguiente:
+El formulario relacionado con este subproceso de [Proceso 3 : Automatización de procesos de gestiones documentales parametrizables](/hercules/rpa/modulo-de-automatizacion-y-gestion/analisis-y-procesos/proceso-3-automatizacion-de-procesos-de-gestiones-documentales-parametrizables) es el siguiente:
 
 ![](/attachments/613417058/613417065.png)
 
@@ -13,7 +11,3 @@ Este proceso obtendrá las Bases Reguladoras publicadas en el Boletín Oficial d
 * Destinatarios UGI: lista de emails que recibirán las Bases Reguladoras obtenidas relacionadas con la UGI.
 
 Las listas de destinatarios son obligatorias, si no se proporcionan el proceso no se ejecutará.
-
-
-
-

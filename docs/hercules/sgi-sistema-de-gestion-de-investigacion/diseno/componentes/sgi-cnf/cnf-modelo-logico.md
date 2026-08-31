@@ -1,6 +1,4 @@
-# Hércules : CNF \- Modelo lógico
-
-
+# CNF - Modelo lógico
 
 ### Modelo de dominio
 
@@ -9,7 +7,3 @@
 ### Modelo lógico
 
 ![](/attachments/597852251/597865768.png)
-
-
-
-

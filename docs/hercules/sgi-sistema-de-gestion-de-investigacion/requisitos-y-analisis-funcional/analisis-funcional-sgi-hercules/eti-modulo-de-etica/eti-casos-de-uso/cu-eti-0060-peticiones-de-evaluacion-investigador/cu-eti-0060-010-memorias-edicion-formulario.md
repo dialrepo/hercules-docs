@@ -1,21 +1,27 @@
-# Hércules : CU\-ETI\-0060\-010 \- Memorias \- Edición formulario
+# CU-ETI-0060-010 - Memorias - Edición formulario
 
-
+|  |  |
+| --- | --- |
+| Cod. CU | ********CU-ETI-0060-010 - Memorias - Edición formulario******** |
+| Ver. objetivo |  |
+| Ver. CU | 1.0.0 |
+| Estado | IN PROGRESS |
+| Fec. Aprobación |  |
+| Épica, historia |  |
+| Actores | ACT-ETI-002-Investigador  ACT-ETI-003-Solicitante  ACT-ETI-006-Responsable memoria |
+| Frecuencia | Media |
 
 ### Descripción
-
-  
-
 
 ### Actores
 
 #### Actor principal
 
-ACT\-ETI\-002\-Investigador
+ACT-ETI-002-Investigador
 
-ACT\-ETI\-003\-Solicitante
+ACT-ETI-003-Solicitante
 
-ACT\-ETI\-006\-Responsable memoria
+ACT-ETI-006-Responsable memoria
 
 ### Precondiciones
 
@@ -34,11 +40,4 @@ La petición de evaluación tiene una memoria en uno de estos estados:
 
 ### Garantías de éxito (postcondiciones)
 
-  
-
-
 ### Escenario principal (flujo básico)
-
-
-
-

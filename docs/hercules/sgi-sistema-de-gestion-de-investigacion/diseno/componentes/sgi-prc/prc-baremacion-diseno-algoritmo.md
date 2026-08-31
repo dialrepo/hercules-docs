@@ -1,16 +1,9 @@
-# Hércules : PRC \- Baremación \- Diseño algoritmo
+# PRC - Baremación - Diseño algoritmo
 
-
-
-  
-
+* [Diseño algoritmo por cada ítem baremable y cálculo puntuación de cada investigador](#PRCBaremaciónDiseñoalgoritmo-Diseñoalgoritmoporcadaítembaremableycálculopuntuacióndecadainvestigador)
+* [Algoritmo baremación grupos](#PRCBaremaciónDiseñoalgoritmo-Algoritmobaremacióngrupos)
 
 ## Diseño algoritmo por cada ítem baremable y cálculo puntuación de cada investigador
-
-  
-
-
-
 
 ```
 Calcular años a beremar: anio inicio , anio fin
@@ -33,10 +26,7 @@ para cada año baremable hacer
 	EvaluarProyectos (anio) //ojo los proyectos pueden tener una puntuación en cada año, se tendrán que ir sumando para el item la de los años distintos
 	EvaluarContratos (anio) //ojo los proyectos pueden tener una puntuación en cada año, se tendrán que ir sumando para el item la de los años distintos
     EvaluarInvenciones (anio)
-fin para  
-
-
-
+fin para
 ```
 
 **CopiarDatosProyectos**
@@ -102,8 +92,6 @@ Se crearán tantos registros en la tabla "Autor" como investigadores tenga la ta
     - ip: se pondrá a "true" si el campo "rolProyecto" es un rol que tenga marcado el flag de "principal", sino se pondrá el valor "false"
 
 Si existe el registro, las tablas ProduccionCientifica y EstadoProduccionCientifica no se modifican y las tablas CampoProduccionCientifica,  ValorCampo y Autor se eliminan sus registros y se vuelven a crear con lo mencionado en la parte de cuando no existe el registro.
-
-
 ```
 
 **CopiarDatosInvenciones**
@@ -163,16 +151,7 @@ Se crearán tantos registros en la tabla "Autor" como investigadores tenga la ta
     - ip: se pondrá a null
 
 Si existe el registro, las tablas ProduccionCientifica y EstadoProduccionCientifica no se modifican y las tablas CampoProduccionCientifica,  ValorCampo y Autor se eliminan sus registros y se vuelven a crear con lo mencionado en la parte de cuando no existe el registro.
-
-
-
 ```
-
-  
-
-
-  
-
 
 **ObtenerCopiarSexenios**
 
@@ -183,7 +162,7 @@ Para cada año que se barema
     lista_investigadores: Obtener los investigadores (personaRef) que a 31 de diciembre del año que se esta baremando pertenecen a un grupo de   investigación con un rol con el flag de baremable a true.La lista no tendrá personas repetidas, se guardará la personaRef de cada investigador. Si ya esta en la lista no se añade, sino esta en la lista se añade.
 Fin para
 
-Se llamará al servicio de SGP GET /sexenios (https://confluence.um.es/confluence/display/HERCULES/REQ-INT-0020-SGP-0062+-+Consultar+sexenios) para cada año de baremación que devuelve una lista de la entidad Sexenio con la personaRef y número de sexenios de esta persona y país
+Se llamará al servicio de SGP GET /sexenios (/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/gen-aspectos-generales/int-requisitos-de-integracion/req-int-0020-sgp-integracion-con-sistema-de-gestion-de-personas/req-int-0020-sgp-0062-consultar-sexenios) para cada año de baremación que devuelve una lista de la entidad Sexenio con la personaRef y número de sexenios de esta persona y país
 Por cada investigador de los de la lista sacada antes se creará su sexenio en el módulo de PRC
 
 
@@ -215,10 +194,6 @@ Se crearán un registro en la tabla "Autor" con el dato del investigador (person
     - orden: se pondrá a null
     - orcidId: se pondrá a null
     - ip: se pondrá a null  
-
-
-
-
 ```
 
 **ObtenerCopiarDireccionTesis**
@@ -233,8 +208,6 @@ Fin para
 Se llamará al servicio de SGP GET /direcciones-tesis  para cada año de baremación que devuelve una lista de la entidad DireccionTesis
 
 Por cada dirección de tesis que en personaRef o coDirectorRef tenga a uno de la lista de los investigadores (lista_investigadores)  se creará su DireccionTesis en el módulo de PRC
-
-
 ```
 
 **EvaluarPublicaciones**
@@ -261,15 +234,11 @@ Por cada dirección de tesis que en personaRef o coDirectorRef tenga a uno de la
  
              fin para
  fin para
- 
 ```
 
 NOTA:
 
 Los puntos de cada investigador se deben de multiplicar por un el índice de experimentalidad en todos los items excepto en "Contratos", "Costes indirectos" y "Sexenios". El índice de experimentalidad se define por departamento. El departamento elegido será el departamento de adscripción del investigador.
-
-  
-
 
 **EvaluarItemPublicacion**
 
@@ -434,18 +403,7 @@ Si baremo - ConfiguracionBaremo es de tipoBaremo = LIBRO_EDITORIAL_PRESTIGIO com
 Devolver PuntosBaremo
 ```
 
-  
-
-
-  
-
-
 ## Algoritmo baremación grupos
-
-  
-
-
-
 
 ```
  para cada año de baremación  
@@ -507,16 +465,3 @@ Actualizar el campo "fechaFinEjecucuón" de la tabla "ConvocatoriaBaremacion" co
 
 Mandar comunicado a los gestores para indicar que se ha finalizado el proceso de baremación.
 ```
-
-  
-
-
-  
-
-
-  
-
-
-
-
-

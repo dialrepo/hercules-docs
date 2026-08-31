@@ -1,10 +1,14 @@
-# Hércules : Gestión de clusters (Equipos de proyecto)
-
-
+# Gestión de clusters (Equipos de proyecto)
 
 Los clusters son conjuntos de investigadores asociados a perfiles de investigación que los diferentes usuarios de la web crean para poder guardar y disponer información sobre potenciales equipos de desarrollo.
 
 Es en la sección de Gestión de clusters donde encontraremos los apartados de "Mis clusters" y "Nuevo cluster".
+
+* [Nuevo cluster](#Gestióndeclusters(Equiposdeproyecto)-Nuevocluster)
+  + [Paso 1. Definir cluster](#Gestióndeclusters(Equiposdeproyecto)-Paso1.Definircluster)
+  + [Paso 2. Definir perfiles y áreas de investigación](#Gestióndeclusters(Equiposdeproyecto)-Paso2.Definirperfilesyáreasdeinvestigación)
+  + [Paso 3. Recomendaciones y selección de investigadores](#Gestióndeclusters(Equiposdeproyecto)-Paso3.Recomendacionesyseleccióndeinvestigadores)
+* [Mis clusters](#Gestióndeclusters(Equiposdeproyecto)-Misclusters)
 
 ### **Nuevo cluster**
 
@@ -12,7 +16,7 @@ El botón de Nuevo cluster nos llevará a una página con un formulario compuest
 
 ![](/attachments/598147373/598147974.png)
 
-#### **Paso 1\. Definir cluster**
+#### **Paso 1. Definir cluster**
 
 En el paso de Definir cluster nos encontramos tres campos; el nombre del cluster, la descripción y las áreas temáticas.
 
@@ -22,7 +26,7 @@ Al añadir áreas temáticas se nos mostrará una ventana en la que podremos ele
 
 ![](/attachments/598147373/598147979.png)
 
-#### **Paso 2\. Definir perfiles y áreas de investigación**
+#### **Paso 2. Definir perfiles y áreas de investigación**
 
 En el siguiente paso nos encontraremos la siguiente pantalla:
 
@@ -34,13 +38,13 @@ Este perfil deberá incluir áreas temáticas y descriptores específicos.
 
 ![](/attachments/598147373/598147961.png)
 
-#### **Paso 3\. Recomendaciones y selección de investigadores**
+#### **Paso 3. Recomendaciones y selección de investigadores**
 
 Finalmente nos moveremos al último paso, recomendaciones y selección de investigadores.
 
 ![](/attachments/598147373/598147969.png)
 
-Aquí tenemos que añadir los investigadores al cluster. 
+Aquí tenemos que añadir los investigadores al cluster.
 
 Los investigadores cuentan con un porcentaje de concordancia de áreas temáticas y un número de publicaciones coincidentes.
 
@@ -59,19 +63,3 @@ El apartado de Mis clusters nos servirá para listar los clusters que tú has cr
 Desde este apartado se puede ir a la ficha del cluster o a la de los participantes, clicando en ellos, y también se puede editar el cluster, acto que nos lleva a una página similar a la de Nuevo cluster, en la que podremos editar título, descripción, áreas temáticas y demás.
 
 ![](/attachments/598147373/598147976.png)
-
-  
-
-
-  
-
-
-  
-
-
-  
-
-
-
-
-

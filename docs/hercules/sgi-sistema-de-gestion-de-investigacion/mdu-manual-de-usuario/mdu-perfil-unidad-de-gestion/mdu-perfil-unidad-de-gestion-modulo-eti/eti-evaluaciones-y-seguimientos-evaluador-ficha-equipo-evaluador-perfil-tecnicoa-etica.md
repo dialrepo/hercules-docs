@@ -1,6 +1,28 @@
-# Hércules : ETI\-Evaluaciones y seguimientos evaluador (Ficha equipo evaluador \- Perfil "Técnico/a ética")
+# ETI-Evaluaciones y seguimientos evaluador (Ficha equipo evaluador - Perfil "Técnico/a ética")
 
-
+* [Evaluaciones](#ETIEvaluacionesyseguimientosevaluador(FichaequipoevaluadorPerfil"Técnico/aética")-Evaluaciones)
+  + [Evaluar](#ETIEvaluacionesyseguimientosevaluador(FichaequipoevaluadorPerfil"Técnico/aética")-Evaluar)
+    - [Memoria](#ETIEvaluacionesyseguimientosevaluador(FichaequipoevaluadorPerfil"Técnico/aética")-Memoria)
+    - [Documentación](#ETIEvaluacionesyseguimientosevaluador(FichaequipoevaluadorPerfil"Técnico/aética")-Documentación)
+    - [Comentarios](#ETIEvaluacionesyseguimientosevaluador(FichaequipoevaluadorPerfil"Técnico/aética")-Comentarios)
+      * [Añadir comentario](#ETIEvaluacionesyseguimientosevaluador(FichaequipoevaluadorPerfil"Técnico/aética")-Añadircomentario)
+      * [Añadir comentario general](#ETIEvaluacionesyseguimientosevaluador(FichaequipoevaluadorPerfil"Técnico/aética")-Añadircomentariogeneral)
+      * [Editar comentario](#ETIEvaluacionesyseguimientosevaluador(FichaequipoevaluadorPerfil"Técnico/aética")-Editarcomentario)
+      * [Eliminar comentario](#ETIEvaluacionesyseguimientosevaluador(FichaequipoevaluadorPerfil"Técnico/aética")-Eliminarcomentario)
+    - [Enviar comentarios a secretaría y cerrar evaluación](#ETIEvaluacionesyseguimientosevaluador(FichaequipoevaluadorPerfil"Técnico/aética")-Enviarcomentariosasecretaríaycerrarevaluación)
+  + [Exportar](#ETIEvaluacionesyseguimientosevaluador(FichaequipoevaluadorPerfil"Técnico/aética")-Exportar)
+* [Seguimientos](#ETIEvaluacionesyseguimientosevaluador(FichaequipoevaluadorPerfil"Técnico/aética")-Seguimientos)
+  + [Evaluar](#ETIEvaluacionesyseguimientosevaluador(FichaequipoevaluadorPerfil"Técnico/aética")-Evaluar.1)
+    - [Datos seguimiento](#ETIEvaluacionesyseguimientosevaluador(FichaequipoevaluadorPerfil"Técnico/aética")-Datosseguimiento)
+    - [Documentación](#ETIEvaluacionesyseguimientosevaluador(FichaequipoevaluadorPerfil"Técnico/aética")-Documentación.1)
+    - [Comentarios](#ETIEvaluacionesyseguimientosevaluador(FichaequipoevaluadorPerfil"Técnico/aética")-Comentarios.1)
+      * [Añadir comentario](#ETIEvaluacionesyseguimientosevaluador(FichaequipoevaluadorPerfil"Técnico/aética")-Añadircomentario.1)
+      * [Añadir comentario general](#ETIEvaluacionesyseguimientosevaluador(FichaequipoevaluadorPerfil"Técnico/aética")-Añadircomentariogeneral.1)
+      * [Editar comentario](#ETIEvaluacionesyseguimientosevaluador(FichaequipoevaluadorPerfil"Técnico/aética")-Editarcomentario.1)
+      * [Eliminar comentario](#ETIEvaluacionesyseguimientosevaluador(FichaequipoevaluadorPerfil"Técnico/aética")-Eliminarcomentario.1)
+    - [Enviar comentarios de seguimiento a secretaría y cerrar evaluación de seguimiento](#ETIEvaluacionesyseguimientosevaluador(FichaequipoevaluadorPerfil"Técnico/aética")-Enviarcomentariosdeseguimientoasecretaríaycerrarevaluacióndeseguimiento)
+  + [Exportar](#ETIEvaluacionesyseguimientosevaluador(FichaequipoevaluadorPerfil"Técnico/aética")-Exportar.1)
+* [Personal de gestión con perfil de evaluación](#ETIEvaluacionesyseguimientosevaluador(FichaequipoevaluadorPerfil"Técnico/aética")-Personaldegestiónconperfildeevaluación)
 
 ## Evaluaciones
 
@@ -12,25 +34,21 @@ La opción del menú "Evaluaciones" muestra en la parte superior de la pantalla 
 
 ![](/attachments/597853576/692387934.png)
 
-  
-
-
 Los campos disponibles en el formulario de la búsqueda son:
 
 * **Comité**: es un desplegable en el que el evaluador/a puede seleccionar entra las siguiente opciones:
-	+ CEI
-	+ CEEA
-	+ CBE
+  + CEI
+  + CEEA
+  + CBE
 * **Tipo de evaluación**: indica el tipo de evaluación (el tipo de formulario que se va a evaluar), puede tener uno de los siguientes valores:  
-
-	+ Memoria
-	+ Retrospectiva
+  + Memoria
+  + Retrospectiva
 * **Fecha evaluación desde:** campo para introducir la fecha la cual se va a tomar como referencia para obtener las evaluaciones pertenecientes a la convocatoria de reunión cuya fecha de evaluación sea mayor o igual a esta fecha.
 * **Fecha evaluación hasta:** campo para introducir la fecha la cual se va a tomar como referencia para obtener las evaluaciones pertenecientes a la convocatoria de reunión cuya fecha sea menor o igual a esta fecha.
 * **Referencia memoria**: código identificativo de la memoria.
 * **Tipo de convocatoria**: tipo de la convocatoria de reunión, puede tener uno de los siguientes valores:
-	+ Ordinaria: si una convocatoria es de este tipo únicamente se tendrán evaluaciones de memoria y retrospectivas.
-	+ Extraordinaria: si una convocatoria es de este tipo únicamente se tendrán evaluaciones de memoria y retrospectivas.
+  + Ordinaria: si una convocatoria es de este tipo únicamente se tendrán evaluaciones de memoria y retrospectivas.
+  + Extraordinaria: si una convocatoria es de este tipo únicamente se tendrán evaluaciones de memoria y retrospectivas.
 
 Tras pulsar el botón “Buscar”, se muestra el listado de evaluaciones que cumplan con los parámetros introducidos en el formulario y que cumplan además las siguientes condiciones:
 
@@ -40,8 +58,7 @@ Tras pulsar el botón “Buscar”, se muestra el listado de evaluaciones que cu
 
 Al igual que el resto de listados de la aplicación, el resultado de la búsqueda es un listado compuesto por una tabla paginada, con seis columnas de información y una última columna de acciones.
 
-![](/attachments/597853576/597880465.png)  
-
+![](/attachments/597853576/597880465.png)
 
 Desde este listado el evaluador/a puede realizar las siguientes acciones:
 
@@ -70,17 +87,11 @@ La evaluación de una memoria o retrospectiva esta formada por los siguientes bl
 
 ![](/attachments/597853576/699498604.png)
 
-  
-
-
 #### Memoria
 
 Formulario de consulta con los datos de información básica de la evaluación de una memoria o retrospectiva. El evaluador/a puede visualizar los campos pero sin modificar su valor.
 
 ![](/attachments/597853576/699498611.png)
-
-  
-
 
 A continuación se describe cada uno de los campos de este formulario:
 
@@ -90,27 +101,23 @@ A continuación se describe cada uno de los campos de este formulario:
 * **Solicitante:** nombre y apellidos de la persona que ha solicitando la evaluación de su memoria o retrospectiva.
 * **Versión:** versión que se esta evaluando de la memoria.
 * **Evaluaciones anteriores:** listado de evaluaciones anteriores en caso de que se este evaluando una memoria con versión mayor a 1, es decir, memorias que no han tenido un dictamen "Favorable" en su primera evaluación. Para cada evaluación se muestra la siguiente información:  
-
-	+ **Versión**: versión de la evaluación.
-	+ **Fecha evaluación:** fecha de evaluación de la convocatoria de reunión en la que se evaluó.
-	+ **Dictamen**: dictamen que se le dio en esa evaluación.
-	+ **Nº de comentarios**: número de comentarios aportados en la convocatoria de reunión donde se evaluó.
-	+ **PDF evaluación**:  documento con la evaluación (comentarios aportados).
+  + **Versión**: versión de la evaluación.
+  + **Fecha evaluación:** fecha de evaluación de la convocatoria de reunión en la que se evaluó.
+  + **Dictamen**: dictamen que se le dio en esa evaluación.
+  + **Nº de comentarios**: número de comentarios aportados en la convocatoria de reunión donde se evaluó.
+  + **PDF evaluación**:  documento con la evaluación (comentarios aportados).
 
 #### Documentación
 
 Listado con toda la documentación relativa a la memoria que se quiere evaluar:
 
-* Informe en .pdf del formulario entregado por el personal de investigación. Cuando la memoria es de tipo modificación, en el informe PDF se resaltará el color de fondo de aquellos apartados en los que la memoria de modificación presenta cambios sobre la memoria original. Sirva como ejemplo la siguiente imagen, que recoge que el apartado 1\.2 presenta cambios respecto a la memoria original sobre la que se solicitan modificaciones:
+* Informe en .pdf del formulario entregado por el personal de investigación. Cuando la memoria es de tipo modificación, en el informe PDF se resaltará el color de fondo de aquellos apartados en los que la memoria de modificación presenta cambios sobre la memoria original. Sirva como ejemplo la siguiente imagen, que recoge que el apartado 1.2 presenta cambios respecto a la memoria original sobre la que se solicitan modificaciones:
 
 ![](/attachments/597853576/699498549.png)
 
 * Documentación entregada por el personal de investigación adjunta al formulario
 
 ![](/attachments/597853576/699498605.png)
-
-  
-
 
 Se podrá pulsar sobre el icono ![](/attachments/597853576/597879973.png)  para descargar cualquiera de los ficheros.
 
@@ -122,13 +129,7 @@ Cualquier miembro activo del comité puede aportar sus comentarios a la memoria.
 
 ![](/attachments/597853576/699498606.png)
 
-  
-
-
-Para añadir  un comentario se pulsará el botón "Añadir comentario". El botón solamente estará disponible si la evaluación no ha sido remitida a secretaría (los comentarios añadidos no se [han enviado a secretaría](https://confluence.um.es/confluence/pages/viewpage.action?pageId=597853576#ETIEvaluacionesyseguimientosevaluador(FichaequipoevaluadorPerfil%22T%C3%A9cnico/a%C3%A9tica%22)-Enviarcomentariosasecretar%C3%ADaycerrarevaluaci%C3%B3n "https://confluence.um.es/confluence/pages/viewpage.action?pageId=597853576#ETIEvaluacionesyseguimientosevaluador(FichaequipoevaluadorPerfil%22T%C3%A9cnico/a%C3%A9tica%22)-Enviarcomentariosasecretar%C3%ADaycerrarevaluaci%C3%B3n") aún).
-
-  
-
+Para añadir  un comentario se pulsará el botón "Añadir comentario". El botón solamente estará disponible si la evaluación no ha sido remitida a secretaría (los comentarios añadidos no se [han enviado a secretaría](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/mdu-perfil-unidad-de-gestion/mdu-perfil-unidad-de-gestion-modulo-eti/eti-evaluaciones-y-seguimientos-evaluador-ficha-equipo-evaluador-perfil-tecnicoa-etica#ETIEvaluacionesyseguimientosevaluador(FichaequipoevaluadorPerfil%22T%C3%A9cnico/a%C3%A9tica%22)-Enviarcomentariosasecretar%C3%ADaycerrarevaluaci%C3%B3n) aún).
 
 ##### Añadir comentario
 
@@ -146,38 +147,24 @@ A continuación se describe cada uno de los campos solicitados en este formulari
 
 ![](/attachments/597853576/692387943.png)
 
-  
-
-
 Al pulsar sobre el botón "Añadir" el comentario se añadirá al listado de comentarios de la evaluación mostrando el icono de la admiración en el menú de "Comentarios" y el mensaje de información en la parte de abajo de la pantalla en la zona del "Área de acciones" para recordar al evaluador/a que debe de pulsar el botón GUARDAR para que los cambios realizados (en este caso un nuevo comentario) se consoliden.
 
- ![](/attachments/597853576/692387938.png)![](/attachments/597853576/699498607.png)  
-
+ ![](/attachments/597853576/692387938.png)![](/attachments/597853576/699498607.png)
 
 Si se pulsa el botón "GUARDAR" se modifica la evaluación con los cambios realizados en la pantalla Comentarios (única pantalla donde el evaluador/a puede realizar cambios)
 
 Se muestra un mensaje de que la evaluación se ha guardado correctamente igual que el de la siguiente imagen.
 
-![](/attachments/597853576/597879969.png)  
-
-
-  
-
+![](/attachments/597853576/597879969.png)
 
 El comentario añadido se mostrará en el listado de comentarios.
 
 ![](/attachments/597853576/699498608.png)
 
-  
-
-
-  
-
-
 Desde el listado de comentarios se podrá:
 
-* **Editar:**este botón representado por el icono ![](/attachments/597853576/597880463.png) y situado en la última columna "Acciones" de la tabla, permite al evaluador/a modificar los datos del comentario. Cada miembro del equipo evaluador sólo podrá modificar sus propios comentarios, y sólo podrá hacerlo mientras no los hubiera [enviado a secretaría](https://confluence.um.es/confluence/pages/viewpage.action?pageId=597853576#ETIEvaluacionesyseguimientosevaluador(FichaequipoevaluadorPerfil%22T%C3%A9cnico/a%C3%A9tica%22)-Enviarcomentariosasecretar%C3%ADaycerrarevaluaci%C3%B3n "https://confluence.um.es/confluence/pages/viewpage.action?pageId=597853576#ETIEvaluacionesyseguimientosevaluador(FichaequipoevaluadorPerfil%22T%C3%A9cnico/a%C3%A9tica%22)-Enviarcomentariosasecretar%C3%ADaycerrarevaluaci%C3%B3n"). Los comentarios de otros miembros podrán ser consultados pero no modificados.
-* **Eliminar**: este botón representado por el icono ![](/attachments/597853576/597879975.png) y situado en la última columna "Acciones" de la tabla, permite evaluador/a eliminar el comentario. Cada miembro del equipo evaluador sólo podrá eliminar sus propios comentarios, y sólo podrá hacerlo mientras no los hubiera [enviado a secretaría](https://confluence.um.es/confluence/pages/viewpage.action?pageId=597853576#ETIEvaluacionesyseguimientosevaluador(FichaequipoevaluadorPerfil%22T%C3%A9cnico/a%C3%A9tica%22)-Enviarcomentariosasecretar%C3%ADaycerrarevaluaci%C3%B3n "https://confluence.um.es/confluence/pages/viewpage.action?pageId=597853576#ETIEvaluacionesyseguimientosevaluador(FichaequipoevaluadorPerfil%22T%C3%A9cnico/a%C3%A9tica%22)-Enviarcomentariosasecretar%C3%ADaycerrarevaluaci%C3%B3n"). Los comentarios de otros miembros podrán ser consultados pero no eliminados.
+* **Editar:**este botón representado por el icono ![](/attachments/597853576/597880463.png) y situado en la última columna "Acciones" de la tabla, permite al evaluador/a modificar los datos del comentario. Cada miembro del equipo evaluador sólo podrá modificar sus propios comentarios, y sólo podrá hacerlo mientras no los hubiera [enviado a secretaría](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/mdu-perfil-unidad-de-gestion/mdu-perfil-unidad-de-gestion-modulo-eti/eti-evaluaciones-y-seguimientos-evaluador-ficha-equipo-evaluador-perfil-tecnicoa-etica#ETIEvaluacionesyseguimientosevaluador(FichaequipoevaluadorPerfil%22T%C3%A9cnico/a%C3%A9tica%22)-Enviarcomentariosasecretar%C3%ADaycerrarevaluaci%C3%B3n). Los comentarios de otros miembros podrán ser consultados pero no modificados.
+* **Eliminar**: este botón representado por el icono ![](/attachments/597853576/597879975.png) y situado en la última columna "Acciones" de la tabla, permite evaluador/a eliminar el comentario. Cada miembro del equipo evaluador sólo podrá eliminar sus propios comentarios, y sólo podrá hacerlo mientras no los hubiera [enviado a secretaría](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/mdu-perfil-unidad-de-gestion/mdu-perfil-unidad-de-gestion-modulo-eti/eti-evaluaciones-y-seguimientos-evaluador-ficha-equipo-evaluador-perfil-tecnicoa-etica#ETIEvaluacionesyseguimientosevaluador(FichaequipoevaluadorPerfil%22T%C3%A9cnico/a%C3%A9tica%22)-Enviarcomentariosasecretar%C3%ADaycerrarevaluaci%C3%B3n). Los comentarios de otros miembros podrán ser consultados pero no eliminados.
 
 A continuación se detalla el significado de cada una de las columnas del listado:
 
@@ -187,54 +174,33 @@ A continuación se detalla el significado de cada una de las columnas del listad
 * **Subapartado:** subapartado del formulario de memoria al que se le esta añadiendo el comentario.
 * **Comentarios:** texto con el comentario que se quiere aportar en el apartado seleccionado de la memoria.
 
-  
-
-
 ##### Añadir comentario general
 
 Es posible añadir un comentario general a la memoria sin que esté asociado a un apartado concreto del formulario. Para ello, en el desplegable de bloques se ofrece un bloque inicial genérico "Comentarios generales".
 
 ![](/attachments/597853576/695468165.png)
 
-  
-
-
 Al seleccionar el bloque "Comentarios generales" se mostrará un subapartado general, que deberá ser seleccionado para poder añadir los comentarios oportunos:
 
 ![](/attachments/597853576/695468167.png)
-
-  
-
 
 Al introducir el texto del comentario se activará el botón "Añadir":
 
 ![](/attachments/597853576/695468168.png)
 
-  
-
-
 Tras pulsar el botón "Añadir" el comentario se mostrará en la lista de comentarios de la evalaución.
 
 ![](/attachments/597853576/695468169.png)
 
-  
-
-
 Siguiendo el proceso habitual se deberá pulsar el botón "Guardar" para que la Evaluación queda actualizada con el comentario introducido.
-
-  
-
 
 ##### Editar comentario
 
-Se abre una pantalla que muestra un formulario con los datos del comentario, es idéntico al utilizado durante el alta de un comentario, dejando la posibilidad de modificar cualquiera de los campos del formulario (ver funcionalidad descrita en el apartado [Añadir comentario](https://confluence.um.es/confluence/pages/viewpage.action?pageId=141923650#ETIEvaluacionesyseguimientosevaluador(Fichaevaluador)-A%C3%B1adircomentario.1 "https://confluence.um.es/confluence/pages/viewpage.action?pageId=141923650#ETIEvaluacionesyseguimientosevaluador(Fichaevaluador)-A%C3%B1adircomentario.1") para mas detalle).
+Se abre una pantalla que muestra un formulario con los datos del comentario, es idéntico al utilizado durante el alta de un comentario, dejando la posibilidad de modificar cualquiera de los campos del formulario (ver funcionalidad descrita en el apartado [Añadir comentario](https://confluence.um.es/confluence/pages/viewpage.action?pageId=141923650#ETIEvaluacionesyseguimientosevaluador(Fichaevaluador)-A%C3%B1adircomentario.1) para mas detalle).
 
 En la siguiente imagen se muestra el formulario de edición de un comentario.
 
 ![](/attachments/597853576/692387947.png)
-
-  
-
 
 Tras introducir los cambios y pulsar sobre el botón "Aceptar" el comentario se modificará y los cambios se verán reflejados en el listado de comentarios de la evaluación mostrando el icono de la admiración en el menú de "Comentarios" y el mensaje de información en la parte de abajo de la pantalla en la zona del "Área de acciones" para recordar al evaluador/a que debe de pulsar el botón GUARDAR para que los cambios realizados (en este caso una modificación de un comentario) se consoliden.
 
@@ -254,43 +220,25 @@ Cuando se pulsa el icono de eliminar comentario se muestra una ventana emergente
 
 En caso de responder afirmativamente (botón "Aceptar") el comentario desaparecerá del listado de comentarios. Se muestra el icono de la admiración en el menú de "Comentarios" y el mensaje de información en la parte de abajo de la pantalla en la zona del "Área de acciones" para recordar al evaluador/a que debe de pulsar el botón GUARDAR para que los cambios realizados (en este caso la eliminación de un comentario) se consoliden.
 
-  
-
-
 #### Enviar comentarios a secretaría y cerrar evaluación
 
 Una vez que se haya añadido algún comentario sobre la evaluación, estará disponible la acción "Enviar comentarios a secretaría", a través del icono ![](/attachments/597853576/841089281.png)
 
 ![](/attachments/597853576/841089282.png)
 
-  
-
-
 Tras pulsar el icono de acción "Enviar comentarios a secretaría" se mostrará un mensaje de confirmación
 
 ![](/attachments/597853576/841089283.png)
-
-  
-
 
 Si se pulsa el botón "Aceptar" se mostrará un mensaje de confirmación
 
 ![](/attachments/597853576/841089284.png)
 
-  
-
-
 Los comentarios estarán disponibles para el equipo de gestión (Secretaría), así como serán visibles para el resto del equipo de evaluación.
-
-  
-
 
 Una vez que han sido enviados los comentarios de una evaluación, ésta pasará a estar solamente en modo consulta para el/la técnico/a evaluador/a. La columna "Enviada" pasará a tomar el valor "Sí" recordando que la evaluación ha sido remitida a secretaría.
 
 ![](/attachments/597853576/841089285.png)
-
-  
-
 
 ### Exportar
 
@@ -301,35 +249,32 @@ Si se pulsa el icono "Exportar" ![](/attachments/597853576/597880455.png) situad
 A continuación se detalla el significado de cada uno de los campos del formulario:
 
 * **Seleccione el tipo de exportación**: indica el tipo del formato del fichero exportado. Se permite dos posibles formatos:
-	+ XLSX
-	+ CSV
+  + XLSX
+  + CSV
 * **Seleccione los apartado a incluir en el informe**: por defecto se incluyen todos los apartados de información que forman una evaluación:
-	+ **Datos generales**: conjunto de datos de información general sobre la evaluación. Este apartado no se muestra para marcar o desmarcar porque siempre se incluye en la exportación. Contiene los siguientes campos:  
-	
-		- Comité**:** comité que va a realizar la evaluación de la memoria.
-		- Tipo evaluación: indica el tipo de evaluación. Los posibles valores que puede tomar dicho campo son:
-			* Memoria
-			* Retrospectiva
-		- Tipo memoria: indica el tipo de memoria. Los posibles valores que puede tomar dicho campo son:
-			* Nueva
-			* Modficación
-			* Ratificación
-		- Fecha evaluación**:** fecha de evaluación de la convocatoria de reunión en la que se va a evaluar la memoria.
-		- Memoria**:** código identificativo de la memoria evaluada.
-		- Solicitante nombre**:** nombre de la persona que ha solicitando la evaluación de su memoria o retrospectiva.
-		- Solicitante apellidos**:** apellidos de la persona que ha solicitando la evaluación de su memoria o retrospectiva.
-		- Dictamen: resultado de la evaluación.
-		- Versión: versión de la evaluación.
-	+ **Evaluaciones anteriores**: conjunto de evaluaciones anteriores a la evaluación actual. Por cada evaluación se exportan los siguientes campos:  
-	
-		- Versión: versión de la evaluación.
-		- Fecha evaluación**:** fecha de evaluación de la convocatoria de reunión en la que se evaluó.
-		- Dictamen: dictamen que se le dio en esa evaluación.
+  + **Datos generales**: conjunto de datos de información general sobre la evaluación. Este apartado no se muestra para marcar o desmarcar porque siempre se incluye en la exportación. Contiene los siguientes campos:  
+    - Comité**:** comité que va a realizar la evaluación de la memoria.
+    - Tipo evaluación: indica el tipo de evaluación. Los posibles valores que puede tomar dicho campo son:
+      * Memoria
+      * Retrospectiva
+    - Tipo memoria: indica el tipo de memoria. Los posibles valores que puede tomar dicho campo son:
+      * Nueva
+      * Modficación
+      * Ratificación
+    - Fecha evaluación**:** fecha de evaluación de la convocatoria de reunión en la que se va a evaluar la memoria.
+    - Memoria**:** código identificativo de la memoria evaluada.
+    - Solicitante nombre**:** nombre de la persona que ha solicitando la evaluación de su memoria o retrospectiva.
+    - Solicitante apellidos**:** apellidos de la persona que ha solicitando la evaluación de su memoria o retrospectiva.
+    - Dictamen: resultado de la evaluación.
+    - Versión: versión de la evaluación.
+  + **Evaluaciones anteriores**: conjunto de evaluaciones anteriores a la evaluación actual. Por cada evaluación se exportan los siguientes campos:  
+    - Versión: versión de la evaluación.
+    - Fecha evaluación**:** fecha de evaluación de la convocatoria de reunión en la que se evaluó.
+    - Dictamen: dictamen que se le dio en esa evaluación.
 
 Se puede desmarcar la opción "Todos" lo que hará que se desmarque el bloque de "Evaluaciones anteriores" o bien desmarcar directamente el bloque de "Evaluaciones anteriores" sino se desea que se exporten los datos de las evaluaciones anteriores. Los datos generales de la evaluación siempre se exportarán.
 
-![](/attachments/597853576/597879964.png)  
-
+![](/attachments/597853576/597879964.png)
 
 Una vez seleccionado el formato y los bloques de información al pulsar sobre el botón "**Exportar**" se genera el informe asociado al listado de acuerdo al formato de exportación seleccionado. A continuación se muestra una imagen del fichero exportado.
 
@@ -343,21 +288,17 @@ El evaluador/a sólo tendrá acceso a los seguimientos que pertenecen al comité
 
 La opción del menú "Seguimientos" muestra en la parte superior de la pantalla el buscador y en la parte inferior el resultado de la búsqueda sin aplicar ningún filtro tal como muestra la siguiente imagen.
 
-  
-
-
-![](/attachments/597853576/692387950.png)  
-
+![](/attachments/597853576/692387950.png)
 
 Los campos disponibles en el formulario de la búsqueda son:
 
 * **Comité**: es un desplegable en el que el personal de investigación puede seleccionar entra las siguiente opciones:
-	+ CEI
-	+ CEEA
-	+ CBE
+  + CEI
+  + CEEA
+  + CBE
 * **Tipo de evaluación**: indica el tipo de evaluación (el tipo de formulario que se va a evaluar), puede tener uno de los siguientes valores:
-	+ Seguimiento anual
-	+ Seguimiento final
+  + Seguimiento anual
+  + Seguimiento final
 * **Fecha evaluación desde:** campo para introducir la fecha la cual se va a tomar como referencia para obtener las evaluaciones de seguimiento anual y seguimiento final pertenecientes a la convocatoria de reunión cuya fecha de evaluación sea mayor o igual a esta fecha.
 * **Fecha evaluación hasta:** campo para introducir la fecha la cual se va a tomar como referencia para obtener las evaluaciones pertenecientes a la convocatoria de reunión cuya fecha sea menor o igual a esta fecha.
 * **Referencia memoria**: código identificativo de la memoria.
@@ -370,8 +311,7 @@ Tras pulsar el botón “Buscar”, se muestra el listado de evaluaciones de seg
 
 Al igual que el resto de listados de la aplicación, el resultado de la búsqueda es un listado compuesto por una tabla paginada, con seis columnas de información y una última columna de acciones.
 
-![](/attachments/597853576/597879951.png)  
-
+![](/attachments/597853576/597879951.png)
 
 Desde este listado el evaluador/a puede realizar las siguientes acciones:
 
@@ -398,16 +338,7 @@ La evaluación de seguimiento anual o final esta formada por los siguientes bloq
 * **Documentación**: conjunto de documentos aportados por el personal de investigación junto al formulario de seguimiento anual o final. El evaluador/a no podrá modificar ningún dato de esta pantalla, siempre la visualiza en modo consulta.
 * **Comentarios**: conjunto de comentarios aportados por los distintos miembros del comité (evaluadores) que formarán el documento "Ficha del evaluador". Es en la única pantalla donde el evaluador/a puede añadir o modificar información.
 
-  
-
-
 ![](/attachments/597853576/692387951.png)
-
-  
-
-
-  
-
 
 #### Datos seguimiento
 
@@ -423,12 +354,11 @@ A continuación se describe cada uno de los campos de este formulario:
 * **Solicitante:** nombre y apellidos de la persona que ha solicitando la evaluación de su seguimiento anual o final.
 * **Versión:** versión que se esta evaluando del seguimiento anual o final de la memoria.
 * **Evaluaciones anteriores:** listado de seguimientos anteriores en caso de que se este evaluando un seguimiento de memoria con versión mayor a 1, es decir, memorias que no han tenido un dictamen "Favorable" en su primer seguimiento. Para cada evaluación de seguimiento se muestra la siguiente información:  
-
-	+ **Versión**: versión de la evaluación.
-	+ **Fecha evaluación:** fecha de evaluación de la convocatoria de reunión en la que se evaluó.
-	+ **Dictamen**: dictamen que se le dio en esa evaluación de seguimiento.
-	+ **Nº de comentarios**: número de comentarios aportados en la convocatoria de reunión donde se evaluó.
-	+ **PDF evaluación**:  documento con la evaluación (comentarios aportados).
+  + **Versión**: versión de la evaluación.
+  + **Fecha evaluación:** fecha de evaluación de la convocatoria de reunión en la que se evaluó.
+  + **Dictamen**: dictamen que se le dio en esa evaluación de seguimiento.
+  + **Nº de comentarios**: número de comentarios aportados en la convocatoria de reunión donde se evaluó.
+  + **PDF evaluación**:  documento con la evaluación (comentarios aportados).
 
 #### Documentación
 
@@ -451,9 +381,9 @@ Cualquier miembro activo del comité puede aportar sus comentarios a la memoria.
 
 Desde este listado el evaluador/a puede realizar las siguientes acciones:
 
-* **Añadir comentario**: este botón se encuentra en la parte inferior  del listado de comentarios, permite al evaluador/a introducir un nuevo comentario a la evaluación de seguimiento de la memoria. El botón solamente estará disponible si la evaluación no ha sido remitida a secretaría (los comentarios añadidos no se han [enviado a secretaría](https://confluence.um.es/confluence/pages/viewpage.action?pageId=597853576#ETIEvaluacionesyseguimientosevaluador(FichaequipoevaluadorPerfil%22T%C3%A9cnico/a%C3%A9tica%22)-Enviarcomentariosdeseguimientoasecretar%C3%ADaycerrarevaluaci%C3%B3ndeseguimiento "https://confluence.um.es/confluence/pages/viewpage.action?pageId=597853576#ETIEvaluacionesyseguimientosevaluador(FichaequipoevaluadorPerfil%22T%C3%A9cnico/a%C3%A9tica%22)-Enviarcomentariosdeseguimientoasecretar%C3%ADaycerrarevaluaci%C3%B3ndeseguimiento") aún).
-* **Editar:**este botón representado por el icono ![](/attachments/597853576/597880463.png) y situado en la última columna "Acciones" de la tabla, permite al evaluador/a modificar los datos del comentario. Cada miembro del equipo evaluador sólo podrá modificar sus propios comentarios, y sólo podrá hacerlo mientras no los hubiera [enviado a secretaría](https://confluence.um.es/confluence/pages/viewpage.action?pageId=597853576#ETIEvaluacionesyseguimientosevaluador(FichaequipoevaluadorPerfil%22T%C3%A9cnico/a%C3%A9tica%22)-Enviarcomentariosdeseguimientoasecretar%C3%ADaycerrarevaluaci%C3%B3ndeseguimiento "https://confluence.um.es/confluence/pages/viewpage.action?pageId=597853576#ETIEvaluacionesyseguimientosevaluador(FichaequipoevaluadorPerfil%22T%C3%A9cnico/a%C3%A9tica%22)-Enviarcomentariosdeseguimientoasecretar%C3%ADaycerrarevaluaci%C3%B3ndeseguimiento"). Los comentarios de otros miembros podrán ser consultados pero no modificados.
-* **Eliminar**: este botón representado por el icono ![](/attachments/597853576/597879975.png) y situado en la última columna "Acciones" de la tabla, permite evaluador/a eliminar el comentario. Cada miembro del equipo evaluador sólo podrá eliminar sus propios comentarios, y sólo podrá hacerlo mientras no los hubiera [enviado a secretaría](https://confluence.um.es/confluence/pages/viewpage.action?pageId=597853576#ETIEvaluacionesyseguimientosevaluador(FichaequipoevaluadorPerfil%22T%C3%A9cnico/a%C3%A9tica%22)-Enviarcomentariosdeseguimientoasecretar%C3%ADaycerrarevaluaci%C3%B3ndeseguimiento "https://confluence.um.es/confluence/pages/viewpage.action?pageId=597853576#ETIEvaluacionesyseguimientosevaluador(FichaequipoevaluadorPerfil%22T%C3%A9cnico/a%C3%A9tica%22)-Enviarcomentariosdeseguimientoasecretar%C3%ADaycerrarevaluaci%C3%B3ndeseguimiento"). Los comentarios de otros miembros podrán ser consultados pero no modificados.
+* **Añadir comentario**: este botón se encuentra en la parte inferior  del listado de comentarios, permite al evaluador/a introducir un nuevo comentario a la evaluación de seguimiento de la memoria. El botón solamente estará disponible si la evaluación no ha sido remitida a secretaría (los comentarios añadidos no se han [enviado a secretaría](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/mdu-perfil-unidad-de-gestion/mdu-perfil-unidad-de-gestion-modulo-eti/eti-evaluaciones-y-seguimientos-evaluador-ficha-equipo-evaluador-perfil-tecnicoa-etica#ETIEvaluacionesyseguimientosevaluador(FichaequipoevaluadorPerfil%22T%C3%A9cnico/a%C3%A9tica%22)-Enviarcomentariosdeseguimientoasecretar%C3%ADaycerrarevaluaci%C3%B3ndeseguimiento) aún).
+* **Editar:**este botón representado por el icono ![](/attachments/597853576/597880463.png) y situado en la última columna "Acciones" de la tabla, permite al evaluador/a modificar los datos del comentario. Cada miembro del equipo evaluador sólo podrá modificar sus propios comentarios, y sólo podrá hacerlo mientras no los hubiera [enviado a secretaría](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/mdu-perfil-unidad-de-gestion/mdu-perfil-unidad-de-gestion-modulo-eti/eti-evaluaciones-y-seguimientos-evaluador-ficha-equipo-evaluador-perfil-tecnicoa-etica#ETIEvaluacionesyseguimientosevaluador(FichaequipoevaluadorPerfil%22T%C3%A9cnico/a%C3%A9tica%22)-Enviarcomentariosdeseguimientoasecretar%C3%ADaycerrarevaluaci%C3%B3ndeseguimiento). Los comentarios de otros miembros podrán ser consultados pero no modificados.
+* **Eliminar**: este botón representado por el icono ![](/attachments/597853576/597879975.png) y situado en la última columna "Acciones" de la tabla, permite evaluador/a eliminar el comentario. Cada miembro del equipo evaluador sólo podrá eliminar sus propios comentarios, y sólo podrá hacerlo mientras no los hubiera [enviado a secretaría](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/mdu-perfil-unidad-de-gestion/mdu-perfil-unidad-de-gestion-modulo-eti/eti-evaluaciones-y-seguimientos-evaluador-ficha-equipo-evaluador-perfil-tecnicoa-etica#ETIEvaluacionesyseguimientosevaluador(FichaequipoevaluadorPerfil%22T%C3%A9cnico/a%C3%A9tica%22)-Enviarcomentariosdeseguimientoasecretar%C3%ADaycerrarevaluaci%C3%B3ndeseguimiento). Los comentarios de otros miembros podrán ser consultados pero no modificados.
 
 A continuación se detalla el significado de cada una de las columnas del listado:
 
@@ -479,15 +409,13 @@ A continuación se describe cada uno de los campos solicitados en este formulari
 
 Al pulsar sobre el botón "Añadir" el comentario se añadirá al listado de comentarios de la evaluación de seguimiento mostrando el icono de la admiración en el menú de "Comentarios" y el mensaje de información en la parte de abajo de la pantalla en la zona del "Área de acciones" para recordar al evaluador/a que debe de pulsar el botón GUARDAR para que los cambios realizados (en este caso un nuevo comentario) se consoliden.
 
- ![](/attachments/597853576/692387954.png)  
-
+ ![](/attachments/597853576/692387954.png)
 
 Si se pulsa el botón "GUARDAR" se modifica la evaluación de seguimiento con los cambios realizados en la pantalla Comentarios (única pantalla donde el evaluador/a puede realizar cambios)
 
 Se muestra un mensaje de que la evaluación de seguimiento se ha guardado correctamente igual que el de la siguiente imagen.
 
-![](/attachments/597853576/597879969.png)  
-
+![](/attachments/597853576/597879969.png)
 
 ##### Añadir comentario general
 
@@ -497,47 +425,29 @@ En el caso del seguimiento anual:
 
 ![](/attachments/597853576/695468175.png)
 
-  
-
-
 En el caso del seguimiento final:
 
 ![](/attachments/597853576/695468176.png)
-
-  
-
 
 En ambos casos, tras seleccionar el bloque de "Comentarios generales", se mostrará el árbol de apartados, que solo contendrá un apartado genérico y que debe ser seleccionado para poder aportar el comentario.
 
 ![](/attachments/597853576/695468181.png)
 
-  
-
-
 Tras pulsar el botón "Añadir" el comentario general se mostrará en el listado de comentarios del seguimiento:
 
 ![](/attachments/597853576/695468179.png)
 
-  
-
-
 Siguiendo la operativa general del SGI se debe pulsar el botón "Aceptar" para que el Seguimiento sea actualizado y se incluya el comentario general aportado.
-
-  
-
 
 ##### Editar comentario
 
-Se abre una pantalla que muestra un formulario con los datos del comentario, es idéntico al utilizado durante el alta de un comentario, dejando la posibilidad de modificar cualquiera de los campos del formulario (ver funcionalidad descrita en el apartado  [Añadir comentario](https://confluence.um.es/confluence/pages/viewpage.action?pageId=141927487#ETIEvaluacionesyseguimientosevaluador(Fichaevaluador)-A%C3%B1adircomentario.1 "https://confluence.um.es/confluence/pages/viewpage.action?pageId=141927487#ETIEvaluacionesyseguimientosevaluador(Fichaevaluador)-A%C3%B1adircomentario.1") para mas detalle).
+Se abre una pantalla que muestra un formulario con los datos del comentario, es idéntico al utilizado durante el alta de un comentario, dejando la posibilidad de modificar cualquiera de los campos del formulario (ver funcionalidad descrita en el apartado  [Añadir comentario](https://confluence.um.es/confluence/pages/viewpage.action?pageId=141927487#ETIEvaluacionesyseguimientosevaluador(Fichaevaluador)-A%C3%B1adircomentario.1) para mas detalle).
 
 En la siguiente imagen se muestra el formulario de edición de un comentario.
 
 ![](/attachments/597853576/692387947.png)
 
 Al pulsar sobre el botón "Aceptar" el comentario se modificará y los cambios se verán reflejados en el listado de comentarios de la evaluación de seguimiento mostrando el icono de la admiración en el menú de "Comentarios" y el mensaje de información en la parte de abajo de la pantalla en la zona del "Área de acciones" para recordar al evaluador/a que debe de pulsar el botón GUARDAR para que los cambios realizados (en este caso una modificación de un comentario) se consoliden.
-
-  
-
 
 Si se pulsa el botón "GUARDAR" se modifica la evaluación de seguimiento con los cambios realizados en la pantalla Comentarios (única pantalla donde el evaluador/a puede realizar cambios)
 
@@ -553,31 +463,19 @@ Cuando se pulsa el icono de eliminar comentario se muestra una ventana emergente
 
 En caso de responder afirmativamente (botón "Aceptar") el comentario desaparecerá del listado de comentarios. Se muestra el icono de la admiración en el menú de "Comentarios" y el mensaje de información en la parte de abajo de la pantalla en la zona del "Área de acciones" para recordar al evaluador/a que debe de pulsar el botón GUARDAR para que los cambios realizados (en este caso la eliminación de un comentario) se consoliden.
 
-  
-
-
 #### Enviar comentarios de seguimiento a secretaría y cerrar evaluación de seguimiento
 
 Una vez que se haya añadido algún comentario sobre la evaluación de seguimiento, estará disponible la acción "Enviar comentarios a secretaría", a través del icono ![](/attachments/597853576/841089281.png)
 
 ![](/attachments/597853576/841089287.png)
 
-  
-
-
 Tras pulsar el icono de acción "Enviar comentarios a secretaría" se mostrará un mensaje de confirmación
 
 ![](/attachments/597853576/841089288.png)
 
-  
-
-
 Si se pulsa el botón "Aceptar" se mostrará un mensaje de confirmación.
 
 ![](/attachments/597853576/841089289.png)
-
-  
-
 
 Los comentarios estarán disponibles para el equipo de gestión (Secretaría), así como serán visibles para el resto del equipo de evaluación.
 
@@ -585,61 +483,47 @@ Una vez que han sido enviados los comentarios de una evaluación, ésta pasará 
 
 ![](/attachments/597853576/841089290.png)
 
-  
-
-
 Al acceder al detalle de la evaluación se podrán ver los comentarios remitidos pero no se podrán ni modificar ni eliminar, así como tampoco añadir nuevos comentarios.
-
-  
-
 
 ### Exportar
 
 Si se pulsa el icono "Exportar" ![](/attachments/597853576/597880455.png) situado en la parte inferior  de la pantalla en el "Área de acciones", se muestra una ventana emergente que permite seleccionar el formato de exportación y la información a incluir en la generación del informe asociado al listado de evaluaciones de seguimientos.
 
-![](/attachments/597853576/597879980.png)  
-
+![](/attachments/597853576/597879980.png)
 
 A continuación se detalla el significado de cada uno de los campos del formulario:
 
 * **Seleccione el tipo de exportación**: indica el tipo del formato del fichero exportado. Se permite dos posibles formatos:
-	+ XLSX
-	+ CSV
+  + XLSX
+  + CSV
 * **Seleccione los apartado a incluir en el informe**: por defecto se incluyen todos los apartados de información que forman una evaluación de seguimiento:
-	+ **Datos generales**: conjunto de datos de información general sobre la evaluación de seguimiento. Este apartado no se muestra para marcar o desmarcar porque siempre se incluye en la exportación. Contiene los siguientes campos:  
-	
-		- Comité**:** comité que va a realizar la evaluación de la memoria.
-		- Tipo evaluación: indica el tipo de evaluación. Los posibles valores que puede tomar dicho campo son:
-			* Seguimiento anual
-			* Seguimiento final
-		- Tipo memoria: indica el tipo de memoria. Los posibles valores que puede tomar dicho campo son:
-			* Nueva
-			* Modificación
-			* Ratificación
-		- Fecha evaluación**:** fecha de evaluación de la convocatoria de reunión en la que se va a evaluar la memoria.
-		- Memoria**:** código identificativo de la memoria evaluada.
-		- Solicitante nombre**:** nombre de la persona que ha solicitando la evaluación del formulario anual o final de su memoria.
-		- Solicitante apellidos**:** apellidos de la persona que ha solicitando la evaluación del formulario anual o final de su memoria.
-		- Dictamen: resultado de la evaluación de seguimiento.
-		- Versión: versión de la evaluación de seguimiento.
-	+ **Evaluaciones anteriores**: conjunto de evaluaciones de seguimiento anteriores a la evaluación actual. Por cada evaluación se exportan los siguientes campos:  
-	
-		- Versión: versión de la evaluación.
-		- Fecha evaluación**:** fecha de evaluación de la convocatoria de reunión en la que se evaluó.
-		- Dictamen: dictamen que se le dio en esa evaluación.
+  + **Datos generales**: conjunto de datos de información general sobre la evaluación de seguimiento. Este apartado no se muestra para marcar o desmarcar porque siempre se incluye en la exportación. Contiene los siguientes campos:  
+    - Comité**:** comité que va a realizar la evaluación de la memoria.
+    - Tipo evaluación: indica el tipo de evaluación. Los posibles valores que puede tomar dicho campo son:
+      * Seguimiento anual
+      * Seguimiento final
+    - Tipo memoria: indica el tipo de memoria. Los posibles valores que puede tomar dicho campo son:
+      * Nueva
+      * Modificación
+      * Ratificación
+    - Fecha evaluación**:** fecha de evaluación de la convocatoria de reunión en la que se va a evaluar la memoria.
+    - Memoria**:** código identificativo de la memoria evaluada.
+    - Solicitante nombre**:** nombre de la persona que ha solicitando la evaluación del formulario anual o final de su memoria.
+    - Solicitante apellidos**:** apellidos de la persona que ha solicitando la evaluación del formulario anual o final de su memoria.
+    - Dictamen: resultado de la evaluación de seguimiento.
+    - Versión: versión de la evaluación de seguimiento.
+  + **Evaluaciones anteriores**: conjunto de evaluaciones de seguimiento anteriores a la evaluación actual. Por cada evaluación se exportan los siguientes campos:  
+    - Versión: versión de la evaluación.
+    - Fecha evaluación**:** fecha de evaluación de la convocatoria de reunión en la que se evaluó.
+    - Dictamen: dictamen que se le dio en esa evaluación.
 
 Se puede desmarcar la opción "Todos" lo que hará que se desmarque el bloque de "Evaluaciones anteriores" o bien desmarcar directamente el bloque de "Evaluaciones anteriores" sino se desea que se exporten los datos de las evaluaciones anteriores. Los datos generales del seguimiento siempre se exportarán.
 
-![](/attachments/597853576/597879984.png)  
-
+![](/attachments/597853576/597879984.png)
 
 Una vez seleccionado el formato y los bloques de información al pulsar sobre el botón "**Exportar**" se genera el informe asociado al listado de acuerdo al formato de exportación seleccionado. A continuación se muestra una imagen del fichero exportado.
 
 ![](/attachments/597853576/597879983.png)
-
-  
-  
-
 
 ## Personal de gestión con perfil de evaluación
 
@@ -647,30 +531,14 @@ Podría darse el caso que una persona que tenga rol "gestor/a" también pertenez
 
 ![](/attachments/597853576/699498645.png)
 
-  
-
-
 La opción de menú Perfil evaluador/a agrupará las opciones "Evaluaciones" y "Seguimientos"
 
 ![](/attachments/597853576/699498646.png)
 
-  
-
-
-Desde la opción Evaluaciones se listarán las memorias pendientes de evaluar y se accederá a las mismas con rol de evaluación, aplicando lo descrito para este perfil. Ver [Perfil evaluación \- Evaluaciones](https://confluence.um.es/confluence/pages/viewpage.action?pageId=597853576#ETIEvaluacionesyseguimientosevaluador(Fichaevaluador)-Evaluaciones "https://confluence.um.es/confluence/pages/viewpage.action?pageId=597853576#ETIEvaluacionesyseguimientosevaluador(Fichaevaluador)-Evaluaciones").
+Desde la opción Evaluaciones se listarán las memorias pendientes de evaluar y se accederá a las mismas con rol de evaluación, aplicando lo descrito para este perfil. Ver [Perfil evaluación - Evaluaciones](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/mdu-perfil-unidad-de-gestion/mdu-perfil-unidad-de-gestion-modulo-eti/eti-evaluaciones-y-seguimientos-evaluador-ficha-equipo-evaluador-perfil-tecnicoa-etica#ETIEvaluacionesyseguimientosevaluador(Fichaevaluador)-Evaluaciones).
 
 ![](/attachments/597853576/699498647.png)
 
-  
-
-
-Desde la opción Seguimientos se listarán las memorias de seguimiento pendientes de evaluar se accederá a las mismas con rol de evaluación, aplicando lo descrito para este perfil. Ver [Perfil evaluación \- Seguimientos](https://confluence.um.es/confluence/pages/viewpage.action?pageId=597853576#ETIEvaluacionesyseguimientosevaluador(Fichaevaluador)-Seguimientos "https://confluence.um.es/confluence/pages/viewpage.action?pageId=597853576#ETIEvaluacionesyseguimientosevaluador(Fichaevaluador)-Seguimientos").
+Desde la opción Seguimientos se listarán las memorias de seguimiento pendientes de evaluar se accederá a las mismas con rol de evaluación, aplicando lo descrito para este perfil. Ver [Perfil evaluación - Seguimientos](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/mdu-perfil-unidad-de-gestion/mdu-perfil-unidad-de-gestion-modulo-eti/eti-evaluaciones-y-seguimientos-evaluador-ficha-equipo-evaluador-perfil-tecnicoa-etica#ETIEvaluacionesyseguimientosevaluador(Fichaevaluador)-Seguimientos).
 
 ![](/attachments/597853576/699498648.png)
-
-  
-
-
-
-
-

@@ -1,27 +1,16 @@
-# Hércules : MA. Ofertas tecnológicas
-
-
+# MA. Ofertas tecnológicas
 
 Las ofertas tecnológicas son una serie de clusters de investigadores creados por las universidades para ofrecérselos a las diferentes empresas u otros agentes interesados.
 
-* [Creación de la oferta](/hercules/portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/analisis-funcional-portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/busqueda-de-investigadores-modulo-research-synergy-finder/ma-ofertas-tecnologicas/ma-creacion-de-la-oferta.md "/hercules/portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/analisis-funcional-portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/busqueda-de-investigadores-modulo-research-synergy-finder/ma-ofertas-tecnologicas/ma-creacion-de-la-oferta.md")
-* [Listado de las ofertas tecnológicas](/hercules/portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/analisis-funcional-portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/busqueda-de-investigadores-modulo-research-synergy-finder/ma-ofertas-tecnologicas/ma-listado-de-las-ofertas-tecnologicas.md "/hercules/portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/analisis-funcional-portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/busqueda-de-investigadores-modulo-research-synergy-finder/ma-ofertas-tecnologicas/ma-listado-de-las-ofertas-tecnologicas.md")
-* [Ficha de la oferta tecnológica](https://confluence.um.es/confluence/pages/viewpage.action?pageId=563806339&src=contextnavpagetreemode "https://confluence.um.es/confluence/pages/viewpage.action?pageId=563806339&src=contextnavpagetreemode")
-
-  
-
+* [Creación de la oferta](/hercules/portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/analisis-funcional-portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/busqueda-de-investigadores-modulo-research-synergy-finder/ma-ofertas-tecnologicas/ma-creacion-de-la-oferta)
+* [Listado de las ofertas tecnológicas](/hercules/portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/analisis-funcional-portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/busqueda-de-investigadores-modulo-research-synergy-finder/ma-ofertas-tecnologicas/ma-listado-de-las-ofertas-tecnologicas)
+* [Ficha de la oferta tecnológica](https://confluence.um.es/confluence/pages/viewpage.action?pageId=563806339&src=contextnavpagetreemode)
 
  
 
-  
-
-
 Información de desarrollo
 
-[https://github.com/HerculesCRUE/HerculesMA/blob/main/Docs/funcionamiento\-ofertas\-tecnologicas.md](https://github.com/HerculesCRUE/HerculesMA/blob/main/Docs/funcionamiento-ofertas-tecnologicas.md "https://github.com/HerculesCRUE/HerculesMA/blob/main/Docs/funcionamiento-ofertas-tecnologicas.md")
-
-  
-
+<https://github.com/HerculesCRUE/HerculesMA/blob/main/Docs/funcionamiento-ofertas-tecnologicas.md>
 
 Las ofertas tecnológicas son una serie de clusters de investigadores creados por las universidades para ofrecérselos a las diferentes empresas.
 
@@ -45,17 +34,7 @@ Los estados son los siguientes:
 
 ### Análisis preliminar:
 
-* [Ofertas tecnológicas (Análisis preliminar)](https://confluence.um.es/confluence/pages/viewpage.action?pageId=581304416&src=contextnavpagetreemode "https://confluence.um.es/confluence/pages/viewpage.action?pageId=581304416&src=contextnavpagetreemode")
-	+ [Análisis inicial de la gestión de ofertas tecnológicas](/hercules/portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/analisis-funcional-portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/busqueda-de-investigadores-modulo-research-synergy-finder/analisis-preliminar-modulo-research-synergy-finder/ofertas-tecnologicas-analisis-preliminar/analisis-inicial-de-la-gestion-de-ofertas-tecnologicas.md "/hercules/portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/analisis-funcional-portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/busqueda-de-investigadores-modulo-research-synergy-finder/analisis-preliminar-modulo-research-synergy-finder/ofertas-tecnologicas-analisis-preliminar/analisis-inicial-de-la-gestion-de-ofertas-tecnologicas.md")
-	+ [Ofertas tecnológicas. UX](/hercules/portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/analisis-funcional-portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/busqueda-de-investigadores-modulo-research-synergy-finder/analisis-preliminar-modulo-research-synergy-finder/ofertas-tecnologicas-analisis-preliminar/ofertas-tecnologicas-ux.md "/hercules/portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/analisis-funcional-portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/busqueda-de-investigadores-modulo-research-synergy-finder/analisis-preliminar-modulo-research-synergy-finder/ofertas-tecnologicas-analisis-preliminar/ofertas-tecnologicas-ux.md")
-	+ [Landing o presentación inicial de ofertas tecnológicas](/hercules/portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/analisis-funcional-portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/busqueda-de-investigadores-modulo-research-synergy-finder/analisis-preliminar-modulo-research-synergy-finder/ofertas-tecnologicas-analisis-preliminar/landing-o-presentacion-inicial-de-ofertas-tecnologicas.md "/hercules/portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/analisis-funcional-portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/busqueda-de-investigadores-modulo-research-synergy-finder/analisis-preliminar-modulo-research-synergy-finder/ofertas-tecnologicas-analisis-preliminar/landing-o-presentacion-inicial-de-ofertas-tecnologicas.md")
-
-  
-
-
-  
-
-
-
-
-
+* [Ofertas tecnológicas (Análisis preliminar)](https://confluence.um.es/confluence/pages/viewpage.action?pageId=581304416&src=contextnavpagetreemode)
+  + [Análisis inicial de la gestión de ofertas tecnológicas](/hercules/portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/analisis-funcional-portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/busqueda-de-investigadores-modulo-research-synergy-finder/analisis-preliminar-modulo-research-synergy-finder/ofertas-tecnologicas-analisis-preliminar/analisis-inicial-de-la-gestion-de-ofertas-tecnologicas)
+  + [Ofertas tecnológicas. UX](/hercules/portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/analisis-funcional-portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/busqueda-de-investigadores-modulo-research-synergy-finder/analisis-preliminar-modulo-research-synergy-finder/ofertas-tecnologicas-analisis-preliminar/ofertas-tecnologicas-ux)
+  + [Landing o presentación inicial de ofertas tecnológicas](/hercules/portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/analisis-funcional-portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/busqueda-de-investigadores-modulo-research-synergy-finder/analisis-preliminar-modulo-research-synergy-finder/ofertas-tecnologicas-analisis-preliminar/landing-o-presentacion-inicial-de-ofertas-tecnologicas)

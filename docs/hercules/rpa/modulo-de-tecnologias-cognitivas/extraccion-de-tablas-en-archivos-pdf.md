@@ -1,12 +1,10 @@
-# Hércules : Extracción de tablas en archivos PDF
-
-
+# Extracción de tablas en archivos PDF
 
 El módulo cognitivo poseerá una librería capaz de extraer tablas de archivos PDFs, siendo capaz de detectar cambios de formatos en dicha tabla en los que respecta a la orientación (texto en vertical), es decir, la librería es capaz de extraer cualquier tabla en cualquier orientación, esto incluye detección de cambios de formato en los documentos de concesiones, ya que si las tablas cambiaran de orientación está funcionalidad seguiría detectándolas.
 
-Esta librería servirá de apoyo para la extracción de tablas [Proceso 3 : Automatización de procesos de gestiones documentales parametrizables](/hercules/rpa/modulo-de-automatizacion-y-gestion/analisis-y-procesos/proceso-3-automatizacion-de-procesos-de-gestiones-documentales-parametrizables/index.md "/hercules/rpa/modulo-de-automatizacion-y-gestion/analisis-y-procesos/proceso-3-automatizacion-de-procesos-de-gestiones-documentales-parametrizables/index.md"), en la extracción de concesiones, ya que su extracción significará la búsqueda de información y automatización de procesos.  También se apoya en el módulo de [Reconocimiento de caracteres (OCR)](/hercules/rpa/modulo-de-tecnologias-cognitivas/reconocimiento-de-caracteres-ocr.md "/hercules/rpa/modulo-de-tecnologias-cognitivas/reconocimiento-de-caracteres-ocr.md"), para aquellas tablas que se extraigan de imágenes y se necesite reconocer el texto de las celdas.
+Esta librería servirá de apoyo para la extracción de tablas [Proceso 3 : Automatización de procesos de gestiones documentales parametrizables](/hercules/rpa/modulo-de-automatizacion-y-gestion/analisis-y-procesos/proceso-3-automatizacion-de-procesos-de-gestiones-documentales-parametrizables), en la extracción de concesiones, ya que su extracción significará la búsqueda de información y automatización de procesos.  También se apoya en el módulo de [Reconocimiento de caracteres (OCR)](/hercules/rpa/modulo-de-tecnologias-cognitivas/reconocimiento-de-caracteres-ocr), para aquellas tablas que se extraigan de imágenes y se necesite reconocer el texto de las celdas.
 
-Para implementar este módulo trabajamos con Camelot (biblioteca de Python software libre GPL V3\). Camelot es capaz de trabajar con tablas rotadas de diferentes formatos y, modificando ciertos parámetros internos de la propia librería es capaz de darnos resultados muy satisfactorios. Para la realización de este componente del módulo de tecnologías cognitivas se ha hecho uso de diferentes parametrizaciones de Camelot para posteriormente aplicando algoritmos propios, obtener la mejor aproximación a la tabla que contiene el documento de entrada. Esta librería tendrá como resultado, si se le pide, la salida de la tabla en formato Excel o CSV. También se ha implementado devolver la tabla resultante como un dataframe de Pandas, de esta forma otros procesos pueden extraer información que sea necesaria para la realización del [Módulo de Automatización y Gestión](/hercules/rpa/modulo-de-automatizacion-y-gestion/index.md "/hercules/rpa/modulo-de-automatizacion-y-gestion/index.md"). Desde nuestro módulo de extracción de tablas podremos llamar a las funciones de estas librerías añadiendo los parámetros necesarios para que nos devuelva el resultado .
+Para implementar este módulo trabajamos con Camelot (biblioteca de Python software libre GPL V3). Camelot es capaz de trabajar con tablas rotadas de diferentes formatos y, modificando ciertos parámetros internos de la propia librería es capaz de darnos resultados muy satisfactorios. Para la realización de este componente del módulo de tecnologías cognitivas se ha hecho uso de diferentes parametrizaciones de Camelot para posteriormente aplicando algoritmos propios, obtener la mejor aproximación a la tabla que contiene el documento de entrada. Esta librería tendrá como resultado, si se le pide, la salida de la tabla en formato Excel o CSV. También se ha implementado devolver la tabla resultante como un dataframe de Pandas, de esta forma otros procesos pueden extraer información que sea necesaria para la realización del [Módulo de Automatización y Gestión](/hercules/rpa/modulo-de-automatizacion-y-gestion). Desde nuestro módulo de extracción de tablas podremos llamar a las funciones de estas librerías añadiendo los parámetros necesarios para que nos devuelva el resultado .
 
 A continuación mostramos un ejemplo de uso de esta funcionalidad de la librería, donde partimos de una tabla que se encuentra en un documento PDF que recoge concesiones de convocatorias.
 
@@ -20,7 +18,7 @@ La tabla está rotada inicialmente.
 
 ![](/attachments/598147214/598148331.png)
 
-**Dataframe resultante de la tabla** 
+**Dataframe resultante de la tabla**
 
 **Dataframe Pandas**
 
@@ -48,15 +46,8 @@ La tabla está rotada inicialmente.
 19  1916  PID2019-104375GB-I00         EYF  UNIVERSIDAD DE NAVARRA  INSTITUTO DE ESTUDIOS SUPERIORES DE LA EMPRESA...  R3168001J              CATALUÑA
 ```
 
-  
-
-
 Una vez tenemos la tabla como un dataframe, podemos exportarla con ayuda de la librería Pandas y xlsxwriter.
 
 **Tabla resultante en formato Excel, CSV o similares**
 
-**[/attachments/598147214/RESOLUCI%C3%93N%20DE%20CONCESI%C3%93N-PROYECTOS%20UMU.xlsx?version=1&modificationDate=1646135084000&api=v2 "/confluence/download/attachments/598147214/RESOLUCI%C3%93N%20DE%20CONCESI%C3%93N-PROYECTOS%20UMU.xlsx?version=1&modificationDate=1646135084000&api=v2"](/attachments/598147214/RESOLUCI%C3%93N%20DE%20CONCESI%C3%93N-PROYECTOS%20UMU.xlsx?version=1&modificationDate=1646135084000&api=v2 "/confluence/download/attachments/598147214/RESOLUCI%C3%93N%20DE%20CONCESI%C3%93N-PROYECTOS%20UMU.xlsx?version=1&modificationDate=1646135084000&api=v2")**
-
-
-
-
+**[![](rest/documentConversion/latest/conversion/thumbnail/598148339/1)](/confluence/download/attachments/598147214/RESOLUCI%C3%93N%20DE%20CONCESI%C3%93N-PROYECTOS%20UMU.xlsx?version=1&modificationDate=1646135084000&api=v2)**

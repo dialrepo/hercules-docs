@@ -1,9 +1,5 @@
-# Hércules : Input Metrics
+# Input Metrics
 
-
-
-.
-
-
-
-
+- [Research Metrics for Input](/hercules/portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/analisis-funcional-portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/analisis-de-indicadores-de-investigacion-modulo-de-catalogo-de-indicadores/especificacion-de-indicadores/hercules-metrics-snowball-metrics-recipe/input-metrics/research-metrics-for-input)
+- [Enterprise Activities / Economic Development Metrics](/hercules/portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/analisis-funcional-portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/analisis-de-indicadores-de-investigacion-modulo-de-catalogo-de-indicadores/especificacion-de-indicadores/hercules-metrics-snowball-metrics-recipe/input-metrics/enterprise-activities-economic-development-metrics)
+- [Post-Graduate Research Metrics](/hercules/portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/analisis-funcional-portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/analisis-de-indicadores-de-investigacion-modulo-de-catalogo-de-indicadores/especificacion-de-indicadores/hercules-metrics-snowball-metrics-recipe/input-metrics/post-graduate-research-metrics)

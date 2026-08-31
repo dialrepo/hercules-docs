@@ -1,6 +1,7 @@
-# Hércules : Research Metrics for Process
+# Research Metrics for Process
 
-
+* [Income Volume](#ResearchMetricsforProcess-IncomeVolume)
+* [Market Share](#ResearchMetricsforProcess-MarketShare)
 
 ### Income Volume
 
@@ -10,23 +11,19 @@ To define:
 
 Data source: SGI
 
-
-
-|  | User | Privacy | Ranking |
+|  |  |  |  |
 | --- | --- | --- | --- |
+|  | User | Privacy | Ranking |
 | **Snowball metrics** |  |  |  |
-| Income spent per quarter\-year | Non\-researcher staffStaff from public administration | Restricted |  |
-| Income spent per quarter\-year / FTE | Non\-researcher staffStaff from public administration | Restricted |  |
+| Income spent per quarter-year | Non-researcher staff  Staff from public administration | Restricted |  |
+| Income spent per quarter-year / FTE | Non-researcher staff  Staff from public administration | Restricted |  |
 | **Data breakdown or filters** |  |  |  |
-| Funder type (Snowball denominator) | Non\-researcher staffStaff from public administration | Restricted |  |
-| Funding type (Snowball denominator) | Non\-researcher staffStaff from public administration | Restricted |  |
-| Discipline (Snowball denominator) | Non\-researcher staffStaff from public administration | Restricted |  |
+| Funder type (Snowball denominator) | Non-researcher staff  Staff from public administration | Restricted |  |
+| Funding type (Snowball denominator) | Non-researcher staff  Staff from public administration | Restricted |  |
+| Discipline (Snowball denominator) | Non-researcher staff  Staff from public administration | Restricted |  |
 | **Hércules SGI (CRIS) metrics** |  |  |  |
-| CRUE: Income from dues | Non\-researcher staffStaff from public administration | Restricted |  |
-| CRUE: Number of dues | Non\-researcher staffStaff from public administration | Restricted |  |
-
-  
-
+| CRUE: Income from dues | Non-researcher staff  Staff from public administration | Restricted |  |
+| CRUE: Number of dues | Non-researcher staff  Staff from public administration | Restricted |  |
 
 ### Market Share
 
@@ -34,23 +31,12 @@ To define:
 
 Data source: SGI, National reports.
 
-
-
-|  | User | Privacy | Ranking |
+|  |  |  |  |
 | --- | --- | --- | --- |
+|  | User | Privacy | Ranking |
 | **Snowball metrics** |  |  |  |
-| Percentage of sector total research income per quarter\-year | Non\-researcher staffStaff from public administration | Restricted |  |
+| Percentage of sector total research income per quarter-year | Non-researcher staff  Staff from public administration | Restricted |  |
 | **Data breakdown or filters** |  |  |  |
-| Sector | Non\-researcher staffStaff from public administration | Restricted |  |
+| Sector | Non-researcher staff  Staff from public administration | Restricted |  |
 | **Hércules SGI (CRIS) metrics** |  |  |  |
 |  |  |  |  |
-
-  
-
-
-  
-
-
-
-
-

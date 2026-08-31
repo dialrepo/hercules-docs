@@ -1,8 +1,16 @@
-# Hércules : Indicadores/Métricas
-
-
+# Indicadores/Métricas
 
 La pagina de indicadores muestra una serie de distintas graficas que representan datos reales sobre distintas categorías.
+
+* [Graficas](#Indicadores/Métricas-Graficas)
+  + [Leyenda](#Indicadores/Métricas-Leyenda)
+  + [Graficas Agrupadas](#Indicadores/Métricas-GraficasAgrupadas)
+  + [Grafica de Nodos](#Indicadores/Métricas-GraficadeNodos)
+  + [Grafica Vertical](#Indicadores/Métricas-GraficaVertical)
+* [Facetas](#Indicadores/Métricas-Facetas)
+* [Indicadores Personales](#Indicadores/Métricas-IndicadoresPersonales)
+  + [Editar y ordenar gráfica](#Indicadores/Métricas-Editaryordenargráfica)
+  + [Opciones de la pagina](#Indicadores/Métricas-Opcionesdelapagina)
 
 ### **Graficas**
 
@@ -32,7 +40,7 @@ Si el usuario no tiene paginas de graficas creadas tendrá la opción de crear p
 
 #### **Leyenda**
 
-En todas las graficas excepto la de nodos aparece una leyenda encima de la grafica que representa que datos corresponden al color de las barras/líneas/secciones si haces clic en uno de los datasets de la leyenda se oculta ese dataset en la grafica: 
+En todas las graficas excepto la de nodos aparece una leyenda encima de la grafica que representa que datos corresponden al color de las barras/líneas/secciones si haces clic en uno de los datasets de la leyenda se oculta ese dataset en la grafica:
 
 ![](/attachments/598147368/598148050.png)
 
@@ -58,9 +66,6 @@ Esta grafica tiene 2 botones a la izquierda que sirven para ampliar o disminuir 
 
 ![](/attachments/598147368/598148106.png)
 
-  
-
-
 #### **Grafica Vertical**
 
 Si la grafica es demasiado grande como para que todos los datos quepan se mostrara solo una parte y aparecerá una scrollbar para poder ver el resto. Al cargar la pagina si la grafica es de tiempo, la grafica se moverá hasta el final automáticamente.
@@ -71,12 +76,9 @@ También aparecerá un botón(![](/attachments/598147368/598147922.png)) a la iz
 
 ![](/attachments/598147368/598147920.png)
 
-  
-
-
 ### **Facetas**
 
-Las facetas son filtros que se les pueden aplicar a los datos de las graficas. 
+Las facetas son filtros que se les pueden aplicar a los datos de las graficas.
 
 Como todos las graficas de una pagina usan los mismos datos cualquier faceta que añadas afectara a todas las graficas de la pagina actual y cada pagina tiene facetas distintas.
 
@@ -140,16 +142,6 @@ Editar pagina ofrece estas opciones:
 
 El orden de la pagina es en el contexto de las otras paginas en las pestañas de paginas.
 
-  
-
-
 Si se desea borrar una pagina se puede hacer pulsando el botón de borrar pagina.
 
 ![](/attachments/598147368/598148093.png)
-
-  
-
-
-
-
-

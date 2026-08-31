@@ -1,6 +1,15 @@
-# Hércules : CU\-ETI\-0060\-013 \- Memorias \- Edición formulario seguimiento anual
+# CU-ETI-0060-013 - Memorias - Edición formulario seguimiento anual
 
-
+|  |  |
+| --- | --- |
+| Cod. CU | ********CU-ETI-0060-013 - Memorias - Edición formulario seguimiento anual******** |
+| Ver. objetivo |  |
+| Ver. CU | 1.0.0 |
+| Estado | LIBERADO\_ |
+| Fec. Aprobación |  |
+| Épica, historia |  |
+| Actores | ACT-ETI-002-Investigador  ACT-ETI-003-Solicitante  ACT-ETI-006-Responsable memoria |
+| Frecuencia | Media |
 
 ### Descripción
 
@@ -10,11 +19,11 @@ Formulario para rellenar el formulario de seguimiento anual
 
 #### Actor principal
 
-ACT\-ETI\-002\-Investigador
+ACT-ETI-002-Investigador
 
-ACT\-ETI\-003\-Solicitante
+ACT-ETI-003-Solicitante
 
-ACT\-ETI\-006\-Responsable memoria
+ACT-ETI-006-Responsable memoria
 
 ### Precondiciones
 
@@ -26,15 +35,9 @@ Sólo se muestran las peticiones de evaluación dadas de alta en el sistema y qu
 
 Únicamente se mostrará el formulario de Seguimiento anual en modo edición si la memoria esta en estado "Fin evaluación"  o "Completada seguimiento anual" y ha pasado 1 año desde la fecha de inicio del proyecto. En otro caso se mostrará en modo consulta.
 
-  
-
-
 ### Garantías de éxito (postcondiciones)
 
 Se guardan las respuestas del formulario y se cambia el estado de la memoria a "Completada seguimiento anual"
-
-  
-
 
 ### Escenario principal (flujo básico)
 
@@ -52,7 +55,3 @@ Se guardan las respuestas del formulario y se cambia el estado de la memoria a "
 12. El usuario es informado del resultado positivo de la acción.
 13. Se mantienen en misma pantalla de edición.
 14. Se cambia el estado de la memoria a "Completada seguimiento anual"
-
-
-
-

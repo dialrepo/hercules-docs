@@ -1,20 +1,40 @@
-# Hércules : ESB \- SGI \- Convocatorias
+# ESB - SGI - Convocatorias
 
+---
 
+* [Sistema de Gestión Investigación](#ESBSGIConvocatorias-SistemadeGestiónInvestigación)
+  + [Entidades](#ESBSGIConvocatorias-Entidades)
+  + [Modelo lógico](#ESBSGIConvocatorias-Modelológico)
+  + [API](#ESBSGIConvocatorias-API)
+    - [Definición de los objetos](#ESBSGIConvocatorias-Definicióndelosobjetos)
+      * [Convocatoria](#ESBSGIConvocatorias-Convocatoria)
+      * [AreaTematica](#ESBSGIConvocatorias-AreaTematica)
+      * [ConvocatoriaAreaTematica](#ESBSGIConvocatorias-ConvocatoriaAreaTematica)
+      * [ConvocatoriaDocumento](#ESBSGIConvocatorias-ConvocatoriaDocumento)
+      * [ConvocatoriaEntidadConvocante](#ESBSGIConvocatorias-ConvocatoriaEntidadConvocante)
+      * [ConvocatoriaEntidadFinanciadora](#ESBSGIConvocatorias-ConvocatoriaEntidadFinanciadora)
+      * [PalabraClave](#ESBSGIConvocatorias-PalabraClave)
+      * [Documento](#ESBSGIConvocatorias-Documento)
+      * [FuenteFinanciacion](#ESBSGIConvocatorias-FuenteFinanciacion)
+      * [ModeloEjecucion](#ESBSGIConvocatorias-ModeloEjecucion)
+      * [ModeloTipoDocumento](#ESBSGIConvocatorias-ModeloTipoDocumento)
+      * [ModeloTipoFase](#ESBSGIConvocatorias-ModeloTipoFase)
+      * [ModeloUnidad](#ESBSGIConvocatorias-ModeloUnidad)
+      * [Programa](#ESBSGIConvocatorias-Programa)
+      * [TipoFinanciacion](#ESBSGIConvocatorias-TipoFinanciacion)
+      * [UnidadGestion](#ESBSGIConvocatorias-UnidadGestion)
+    - [Servicios](#ESBSGIConvocatorias-Servicios)
+      * [Crear convocatoria](#ESBSGIConvocatorias-Crearconvocatoria)
+      * [Asociar entidades convocantes](#ESBSGIConvocatorias-Asociarentidadesconvocantes)
+      * [Asociar entidades financiadoras](#ESBSGIConvocatorias-Asociarentidadesfinanciadoras)
+      * [Asociar documentos](#ESBSGIConvocatorias-Asociardocumentos)
+      * [Consultar convocatorias](#ESBSGIConvocatorias-Consultarconvocatorias)
 
-
-
-
-
-
-
-
+---
 
 ## Sistema de Gestión Investigación
 
 ### Entidades
-
-
 
 | Entidad | Descripción |
 | --- | --- |
@@ -36,35 +56,30 @@
 
 ### Modelo lógico
 
-[CSP \- CONV \- Modelo lógico](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-csp/csp-con-convocatorias/csp-con-modelo-logico-diagrama.md "/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-csp/csp-con-convocatorias/csp-con-modelo-logico-diagrama.md")
+[CSP - CONV - Modelo lógico](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-csp/csp-con-convocatorias/csp-con-modelo-logico-diagrama)
 
 ### API
 
 Características generales que todas las API REST deben de cumplir:
 
-* [Consultas filtradas y paginadas](/hercules/sgi-sistema-de-gestion-de-investigacion/desarrollo-y-configuracion/estandares-de-desarrollo/consultas-filtradas-y-paginadas.md "/hercules/sgi-sistema-de-gestion-de-investigacion/desarrollo-y-configuracion/estandares-de-desarrollo/consultas-filtradas-y-paginadas.md")
-* [Formatos de datos API](/hercules/sgi-sistema-de-gestion-de-investigacion/desarrollo-y-configuracion/estandares-de-desarrollo/formatos-de-datos-api.md "/hercules/sgi-sistema-de-gestion-de-investigacion/desarrollo-y-configuracion/estandares-de-desarrollo/formatos-de-datos-api.md")
+* [Consultas filtradas y paginadas](/hercules/sgi-sistema-de-gestion-de-investigacion/desarrollo-y-configuracion/estandares-de-desarrollo/consultas-filtradas-y-paginadas)
+* [Formatos de datos API](/hercules/sgi-sistema-de-gestion-de-investigacion/desarrollo-y-configuracion/estandares-de-desarrollo/formatos-de-datos-api)
 
 #### Definición de los objetos
 
 ##### Convocatoria
 
-
-
-| **Nombre** | **Tipo** | **Requerido (alta/modificación)** | **Descripción** |
+|  |  |  |  |
 | --- | --- | --- | --- |
+| **Nombre** | **Tipo** | **Requerido (alta/modificación)** | **Descripción** |
 | unidadGestionRef | String | (tic) | Identificador de la unidad de gestión |
 | titulo | String | (tic) | Titulo de la convocatoria |
-| formularioSolicitud | String \[PROYECTO, GRUPO] | (tic) | Tipo de solicitud SGI |
+| formularioSolicitud | String [PROYECTO, GRUPO] | (tic) | Tipo de solicitud SGI |
 | modeloEjecucion | ModeloEjecucion |  | Modelo de ejecución |
 | fechaProvisional | String |  | Fecha provisional |
 | observaciones | String |  | Observaciones de la convocatoria |
 
-
-
 **Convocatoria request datos mínimos** Ampliar origen
-
-
 
 ```
 {
@@ -79,12 +94,7 @@ Características generales que todas las API REST deben de cumplir:
 }
 ```
 
-
-
-
 **Convocatoria response** Ampliar origen
-
-
 
 ```
 {
@@ -125,10 +135,7 @@ Características generales que todas las API REST deben de cumplir:
 }
 ```
 
-
 ##### AreaTematica
-
-
 
 | Nombre | Tipo | Descripción |
 | --- | --- | --- |
@@ -138,11 +145,7 @@ Características generales que todas las API REST deben de cumplir:
 | padre | Long | Identificador del área temática de la que depende jerárquicamente, del padre. Si está nulo, se entiende que el área temática es raíz o de primer nivel, no tiene área temática padre. |
 | activo | Boolean | Indica si el área temática está activa o no. |
 
-
-
 **AreaTematica** Ampliar origen
-
-
 
 ```
 {
@@ -178,23 +181,17 @@ Características generales que todas las API REST deben de cumplir:
 }
 ```
 
-
 ##### ConvocatoriaAreaTematica
 
-
-
-| **Nombre** | **Tipo** | **Descripción** |
+|  |  |  |
 | --- | --- | --- |
+| **Nombre** | **Tipo** | **Descripción** |
 | id | Long | Identificador |
 | convocatoriaId | Long | Identificador de la convocatoria |
 | areaTematica | AreaTematica | Área temática |
 | observaciones | String | Observaciones |
 
-
-
 **ConvocatoriaAreaTematica** Ampliar origen
-
-
 
 ```
 {
@@ -239,13 +236,11 @@ Características generales que todas las API REST deben de cumplir:
 }
 ```
 
-
 ##### ConvocatoriaDocumento
 
-
-
-| **Nombre** | **Tipo** | **Requerido** | **Descripción** |
+|  |  |  |  |
 | --- | --- | --- | --- |
+| **Nombre** | **Tipo** | **Requerido** | **Descripción** |
 | convocatoriaId | Long | (tic) | Identificador de la convocatoria |
 | nombre | String | (tic) | Nombre del documento |
 | documentoRef | String | (tic) | Identificador del documento en el sgdoc |
@@ -254,11 +249,7 @@ Características generales que todas las API REST deben de cumplir:
 | publico | Boolean |  | Indica si es un documento publico |
 | observaciones | String |  | Observaciones del documento |
 
-
-
 **ConvocatoriaDocumento** Ampliar origen
-
-
 
 ```
 {
@@ -276,23 +267,17 @@ Características generales que todas las API REST deben de cumplir:
 }
 ```
 
-
 ##### ConvocatoriaEntidadConvocante
 
-
-
-| **Nombre** | **Tipo** | **Requerido** | **Descripción** |
+|  |  |  |  |
 | --- | --- | --- | --- |
+| **Nombre** | **Tipo** | **Requerido** | **Descripción** |
 | id | Long |  | Identificador |
 | convocatoriaId | Long | (tic) | Identificador de la convocatoria |
 | entidadRef | String | (tic) | Identificador de la empresa |
 | programa | Programa |  | Programa |
 
-
-
 **ConvocatoriaEntidadConvocante** Ampliar origen
-
-
 
 ```
 {
@@ -337,13 +322,11 @@ Características generales que todas las API REST deben de cumplir:
 }
 ```
 
-
 ##### ConvocatoriaEntidadFinanciadora
 
-
-
-| **Nombre** | **Tipo** | **Requerido** | **Descripción** |
+|  |  |  |  |
 | --- | --- | --- | --- |
+| **Nombre** | **Tipo** | **Requerido** | **Descripción** |
 | convocatoriaId | Long | (tic) | Identificador de la convocatoria |
 | entidadRef | String | (tic) | Identificador de la empresa |
 | fuenteFinanciacion | FuenteFinanciacion |  | Fuente de financiación |
@@ -351,11 +334,7 @@ Características generales que todas las API REST deben de cumplir:
 | porcentajeFinanciacion | Long |  | Porcentaje de financiación |
 | importeFinanciacion | Long |  | Importe de financiación |
 
-
-
 **ConvocatoriaEntidadFinanciadora** Ampliar origen
-
-
 
 ```
 {
@@ -372,22 +351,16 @@ Características generales que todas las API REST deben de cumplir:
 }
 ```
 
-
 ##### PalabraClave
 
-
-
-| **Nombre** | **Tipo** | **Descripción** |
+|  |  |  |
 | --- | --- | --- |
+| **Nombre** | **Tipo** | **Descripción** |
 | id | Long | Identificador único autogenerado de la palabra clave. |
 | convocatoriaId | Long | Identificador de la convocatoria a la que se asocia la palabra clave. |
 | palabraClaveRef | String | Referencia a la palabra clave. Coincide con el texto de la palabra clave por ser único en el diccionario de todo el SGI. |
 
-
-
 **PalabraClave** Ampliar origen
-
-
 
 ```
 {
@@ -397,13 +370,11 @@ Características generales que todas las API REST deben de cumplir:
 }
 ```
 
-
 ##### Documento
 
-
-
-| **Nombre** | **Tipo** | **Descripción** |
+|  |  |  |
 | --- | --- | --- |
+| **Nombre** | **Tipo** | **Descripción** |
 | documentoRef | String | Identificador del documento |
 | nombre | String | Nombre del documento |
 | version | Long | Versión del documento |
@@ -411,11 +382,7 @@ Características generales que todas las API REST deben de cumplir:
 | tipo | String | Tipo de fichero |
 | autorRef | String | Autor |
 
-
-
 **Documento** Ampliar origen
-
-
 
 ```
 {
@@ -428,13 +395,11 @@ Características generales que todas las API REST deben de cumplir:
 }
 ```
 
-
 ##### FuenteFinanciacion
 
-
-
-| **Nombre** | **Tipo** | **Descripción** |
+|  |  |  |
 | --- | --- | --- |
+| **Nombre** | **Tipo** | **Descripción** |
 | id | Long | Identificador de la fuente de financiación |
 | nombre | String | Nombre de la fuente de financiación |
 | descripcion | String | Descripción de la fuente de financiación |
@@ -443,11 +408,7 @@ Características generales que todas las API REST deben de cumplir:
 | tipoOrigenFuenteFinanciacion | TipoOrigenFuenteFinanciacion | Tipo de origen de la fuente de financiación |
 | activo | Boolean | Indica si esta activo o no |
 
-
-
 **FuenteFinanciacion** Ampliar origen
-
-
 
 ```
 {
@@ -467,13 +428,11 @@ Características generales que todas las API REST deben de cumplir:
 }
 ```
 
-
 ##### ModeloEjecucion
 
-
-
-| **Nombre** | **Tipo** | **Descripción** |
+|  |  |  |
 | --- | --- | --- |
+| **Nombre** | **Tipo** | **Descripción** |
 | id | Long | Identificador del modelo de ejecución. |
 | createdBy | String | Nombre del usuario que ha creado la entidad. |
 | creationDate | String | Fecha de la creación de la entidad. |
@@ -485,11 +444,7 @@ Características generales que todas las API REST deben de cumplir:
 | contrato | Boolean | Indica si es un modelo de ejecución para Contrato / Convenio |
 | activo | Boolean | Indica si esta activo o no |
 
-
-
 **ModeloEjecucion** Ampliar origen
-
-
 
 ```
 {
@@ -506,13 +461,11 @@ Características generales que todas las API REST deben de cumplir:
 }
 ```
 
-
 ##### ModeloTipoDocumento
 
-
-
-| **Nombre** | **Tipo** | **Descripción** |
+|  |  |  |
 | --- | --- | --- |
+| **Nombre** | **Tipo** | **Descripción** |
 | id | Long | Identificador del modelo tipo documento. |
 | createdBy | String | Nombre del usuario que ha creado la entidad. |
 | creationDate | String | Fecha de la creación de la entidad. |
@@ -523,11 +476,7 @@ Características generales que todas las API REST deben de cumplir:
 | modeloTipoFase | ModeloTipoFase | El modelo tipo fase |
 | activo | Boolean | Indica si esta activo o no |
 
-
-
 **ModeloTipoDocumento** Ampliar origen
-
-
 
 ```
     {
@@ -590,13 +539,11 @@ Características generales que todas las API REST deben de cumplir:
     }
 ```
 
-
 ##### ModeloTipoFase
 
-
-
-| **Nombre** | **Tipo** | **Descripción** |
+|  |  |  |
 | --- | --- | --- |
+| **Nombre** | **Tipo** | **Descripción** |
 | id | Long | Identificador del modelo tipo fase. |
 | createdBy | String | Nombre del usuario que ha creado la entidad. |
 | creationDate | String | Fecha de la creación de la entidad. |
@@ -609,11 +556,7 @@ Características generales que todas las API REST deben de cumplir:
 | proyecto | Boolean | Indica si se puede usar en proyectos |
 | activo | Boolean | Indica si esta activo o no |
 
-
-
 **ModeloTipoFase** Ampliar origen
-
-
 
 ```
 {
@@ -651,13 +594,11 @@ Características generales que todas las API REST deben de cumplir:
 }
 ```
 
-
 ##### ModeloUnidad
 
-
-
-| **Nombre** | **Tipo** | **Descripción** |
+|  |  |  |
 | --- | --- | --- |
+| **Nombre** | **Tipo** | **Descripción** |
 | id | Long | Identificador del modelo unidad. |
 | createdBy | String | Nombre del usuario que ha creado la entidad. |
 | creationDate | String | Fecha de la creación de la entidad. |
@@ -667,11 +608,7 @@ Características generales que todas las API REST deben de cumplir:
 | modeloEjecucion | ModeloEjecucion | El modelo de ejecución |
 | activo | Boolean | Indica si esta activo o no |
 
-
-
 **ModeloUnidad** Ampliar origen
-
-
 
 ```
 {
@@ -697,10 +634,7 @@ Características generales que todas las API REST deben de cumplir:
 }
 ```
 
-
 ##### Programa
-
-
 
 | Nombre | Tipo | Descripción |
 | --- | --- | --- |
@@ -713,11 +647,7 @@ Características generales que todas las API REST deben de cumplir:
 | descripcion | String | Descripción del programa. |
 | padre | Programa | Entidad que representa el programa padre |
 
-
-
 **Convocatoria** Ampliar origen
-
-
 
 ```
 {
@@ -743,13 +673,11 @@ Características generales que todas las API REST deben de cumplir:
 }
 ```
 
-
 ##### TipoFinanciacion
 
-
-
-| **Nombre** | **Tipo** | **Descripción** |
+|  |  |  |
 | --- | --- | --- |
+| **Nombre** | **Tipo** | **Descripción** |
 | id | Long | Identificador del tipo de financiacion. |
 | createdBy | String | Nombre del usuario que ha creado la entidad. |
 | creationDate | String | Fecha de la creación de la entidad. |
@@ -759,11 +687,7 @@ Características generales que todas las API REST deben de cumplir:
 | descripcion | String | Descripción del tipo de financiación |
 | activo | Boolean | Indica si esta activo o no |
 
-
-
 **TipoFinanciacion** Ampliar origen
-
-
 
 ```
 {
@@ -778,13 +702,11 @@ Características generales que todas las API REST deben de cumplir:
 }
 ```
 
-
 ##### UnidadGestion
 
-
-
-| **Nombre** | **Tipo** | **Descripción** |
+|  |  |  |
 | --- | --- | --- |
+| **Nombre** | **Tipo** | **Descripción** |
 | id | Long | Identificador de la unidad de gestión. |
 | createdBy | String | Nombre del usuario que ha creado la entidad. |
 | creationDate | String | Fecha de la creación de la entidad. |
@@ -795,11 +717,7 @@ Características generales que todas las API REST deben de cumplir:
 | descripcion | String | Descripción de la unidad de gestión |
 | activo | Boolean | Indica si esta activa o no |
 
-
-
 **UnidadGestion** Ampliar origen
-
-
 
 ```
 {
@@ -815,7 +733,6 @@ Características generales que todas las API REST deben de cumplir:
 }
 ```
 
-
 #### Servicios
 
 Para componer la URL llamada completa, se debe anteponer a lo indicado en la columna URL lo siguiente: **{HOST}/api/sgicsp**, donde **{HOST}** de deberá sustituir el dominio correspondiente al entorno al que se está accediendo y dicho acceso será por http o https según el caso.
@@ -826,69 +743,51 @@ Finalmente, se incluye el listado de aquellos métodos de consulta que no fueron
 
 ##### Crear convocatoria
 
-
-
 | Método | URL | Parámetros | Respuesta | Descripción |
 | --- | --- | --- | --- | --- |
-| GET | Servicio /unidades del API de Usuarios.Ver URL en [ESB \- SGI \- Usuarios](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/esb-sgi/esb-sgi-usuarios/index.md "/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/esb-sgi/esb-sgi-usuarios/index.md") | q\+s (query \+ sort) | Lista\[UnidadGestion] | Listado de unidades de gestión |
-| GET | /modelounidades | q\+s (query \+ sort)La query estará formada por:* unidadGestionRef | ModeloUnidad | Listado de ModeloUnidad de la unidad de gestión indicada*Ejemplo*:unidadGestionRef\=\="1" |
-| POST | /convocatorias | Convocatoria | Convocatoria | Crea la convocatoria.Los siguientes campos se rellenan con los datos obtenidos de los endpoints anteriores:* unidadGestionRef: Se corresponde con el campo id de UnidadGestion obtenida de /sgiusr/unidades * modeloEjecucion: Se corresponde con el campo modeloEjecucion obtenida de /modelounidades filtrando por la unidad gestión que se indique en el campo unidadGestionRef de la convocatoria |
+| GET | Servicio /unidades del API de Usuarios.  Ver URL en [ESB - SGI - Usuarios](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/esb-sgi/esb-sgi-usuarios) | q+s (query + sort) | Lista[UnidadGestion] | Listado de unidades de gestión |
+| GET | /modelounidades | q+s (query + sort)  La query estará formada por:   * unidadGestionRef | ModeloUnidad | Listado de ModeloUnidad de la unidad de gestión indicada  *Ejemplo*:  unidadGestionRef=="1" |
+| POST | /convocatorias | Convocatoria | Convocatoria | Crea la convocatoria.  Los siguientes campos se rellenan con los datos obtenidos de los endpoints anteriores:   * unidadGestionRef: Se corresponde con el campo id de UnidadGestion obtenida de /sgiusr/unidades * modeloEjecucion: Se corresponde con el campo modeloEjecucion obtenida de /modelounidades filtrando por la unidad gestión que se indique en el campo unidadGestionRef de la convocatoria |
 
 ##### Asociar entidades convocantes
 
-
-
 | Método | URL | Parámetros | Respuesta | Descripción |
 | --- | --- | --- | --- | --- |
-| GET | Servicio /empresas del API del Sistema de Gestión de Empresas.Ver URL en [SGI \- ESB \- SGEMP](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sgemp/index.md "/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sgemp/index.md") | q\+s (query \+ sort)La query estará formada por:* nombre * razonSocial * numeroIdentificacion | Lista\[Empresas] | Listado de Empresa.*Ejemplo*:numeroIdentificacion\=ik\="123",nombre\=ik\="123",razonSocial\=ik\="123" |
+| GET | Servicio /empresas del API del Sistema de Gestión de Empresas.  Ver URL en [SGI - ESB - SGEMP](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sgemp) | q+s (query + sort)  La query estará formada por:   * nombre * razonSocial * numeroIdentificacion | Lista[Empresas] | Listado de Empresa.  *Ejemplo*:  numeroIdentificacion=ik="123",nombre=ik="123",razonSocial=ik="123" |
 | GET | /programas/plan |  | Programa | Listado de planes (programas sin padre) |
 | GET | /programas/{id}/hijos | id | Programa | Listado de programas que tienen como padre el programa indicado |
-| POST | /convocatoriaentidadconvocantes | ConvocatoriaEntidadConvocante | ConvocatoriaEntidadConvocante | Crea la entidad convocante de la convocatoria.Los siguientes campos se rellenan con los datos obtenidos de los endpoints anteriores:* convocatoriaId: Identificador de una convocatoria creada previamente mediante /convocatorias * entidadRef: Se corresponde con el campo id de una Empresa obtenida de /sgemp/empresas * programa: Programa obtenido con /programas/plan o con /programas/{id}/hijos |
+| POST | /convocatoriaentidadconvocantes | ConvocatoriaEntidadConvocante | ConvocatoriaEntidadConvocante | Crea la entidad convocante de la convocatoria.  Los siguientes campos se rellenan con los datos obtenidos de los endpoints anteriores:   * convocatoriaId: Identificador de una convocatoria creada previamente mediante /convocatorias * entidadRef: Se corresponde con el campo id de una Empresa obtenida de /sgemp/empresas * programa: Programa obtenido con /programas/plan o con /programas/{id}/hijos |
 
 ##### Asociar entidades financiadoras
 
-
-
 | Método | URL | Parámetros | Respuesta | Descripción |
 | --- | --- | --- | --- | --- |
-| GET | Servicio /empresas del API del Sistema de Gestión de Empresas.Ver URL en [SGI \- ESB \- SGEMP](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sgemp/index.md "/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sgemp/index.md") | q\+s (query \+ sort)La query estará formada por:* nombre * razonSocial * numeroIdentificacion | Lista\[Empresas] | Listado de Empresa.*Ejemplo*:numeroIdentificacion\=ik\="123",nombre\=ik\="123",razonSocial\=ik\="123" |
+| GET | Servicio /empresas del API del Sistema de Gestión de Empresas.  Ver URL en [SGI - ESB - SGEMP](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sgemp) | q+s (query + sort)  La query estará formada por:   * nombre * razonSocial * numeroIdentificacion | Lista[Empresas] | Listado de Empresa.  *Ejemplo*:  numeroIdentificacion=ik="123",nombre=ik="123",razonSocial=ik="123" |
 | GET | /tipofinanciaciones |  | TipoFinanciacion | Listado de planes (programas sin padre) |
 | GET | /fuentesfinanciacion |  | FuenteFinanciacion | Listado de programas que tienen como padre el programa indicado |
-| POST | /convocatoriaentidadconvocantes | ConvocatoriaEntidadFinanciadora | ConvocatoriaEntidadFinanciadora | Crea la entidad financiadora de la convocatoria.Los siguientes campos se rellenan con los datos obtenidos de los endpoints anteriores:* convocatoriaId: Identificador de una convocatoria creada previamente mediante /convocatorias * entidadRef: Se corresponde con el campo id de una Empresa obtenida de /sgemp/empresas * fuenteFinanciacion: Fuente de financiación obtenida con /fuentesfinanciacion * tipoFinanciacion: Tipo obtenido con /tipofinanciaciones |
+| POST | /convocatoriaentidadconvocantes | ConvocatoriaEntidadFinanciadora | ConvocatoriaEntidadFinanciadora | Crea la entidad financiadora de la convocatoria.  Los siguientes campos se rellenan con los datos obtenidos de los endpoints anteriores:   * convocatoriaId: Identificador de una convocatoria creada previamente mediante /convocatorias * entidadRef: Se corresponde con el campo id de una Empresa obtenida de /sgemp/empresas * fuenteFinanciacion: Fuente de financiación obtenida con /fuentesfinanciacion * tipoFinanciacion: Tipo obtenido con /tipofinanciaciones |
 
 ##### Asociar documentos
 
-
-
 | Método | URL | Parámetros | Respuesta | Descripción |
 | --- | --- | --- | --- | --- |
-| GET | /modeloejecuciones/{id}/modelotipofases | q\+s (query \+ sort)La query estará formada por:* tipoFase.activo * convocatoria | Lista\[ModeloTipoFase] | Listado de tipos de fase del modelo de ejecución de la convocatoria.*Ejemplo*:tipoFase.activo\=\="true";convocatoria\=\="true" |
-| GET | /modeloejecuciones/{id}/modelotipodocumentos | q\+s (query \+ sort)La query estará formada por:* tipoDocumento.activo * modeloTipoFase.tipoFase.id | Lista\[ModeloTipoDocumento] | Listado de tipos de documento del modelo de ejecución de la convocatoria y del tipo de fase si se selecciona una.*Ejemplo*:tipoDocumento.activo\=\="true";modeloTipoFase.tipoFase.id\=\="1" |
-| POST | Servicio/documentos del API del Sistema de Gestión de Documentos.Ver URL en [SGI \- ESB \- SGDOC](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sgdoc/index.md "/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sgdoc/index.md"). | (multipart/form\-data) * archivo: ficherobinario | Documento | Guarda el documento en el sgdoc |
-| POST | /convocatoriadocumentos | ConvocatoriaDocumento | ConvocatoriaDocumento | Crea la entidad documento de la convocatoria.Los siguientes campos se rellenan con los datos obtenidos de los endpoints anteriores:* convocatoriaId: Identificador de una convocatoria creada previamente mediante /convocatorias * documentoRef: Se corresponde con el campo documentoRef obtenido al crear un nuevo documento con /sgdoc/documentos * tipoFase: Se corresponde con el campo tipoFase del ModeloTipoFase obtenido con /modeloejecuciones/{id}/modelotipofases * tipoDocumento: Se corresponde con el campo tipoDocumento del ModeloTipoDocumento obtenido con /modeloejecuciones/{id}/modelotipodocumentos |
+| GET | /modeloejecuciones/{id}/modelotipofases | q+s (query + sort)  La query estará formada por:   * tipoFase.activo * convocatoria | Lista[ModeloTipoFase] | Listado de tipos de fase del modelo de ejecución de la convocatoria.  *Ejemplo*:  tipoFase.activo=="true";convocatoria=="true" |
+| GET | /modeloejecuciones/{id}/modelotipodocumentos | q+s (query + sort)  La query estará formada por:   * tipoDocumento.activo * modeloTipoFase.tipoFase.id | Lista[ModeloTipoDocumento] | Listado de tipos de documento del modelo de ejecución de la convocatoria y del tipo de fase si se selecciona una.  *Ejemplo*:  tipoDocumento.activo=="true";modeloTipoFase.tipoFase.id=="1" |
+| POST | Servicio/documentos del API del Sistema de Gestión de Documentos.  Ver URL en [SGI - ESB - SGDOC](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sgdoc). | (multipart/form-data)   * archivo: ficherobinario | Documento | Guarda el documento en el sgdoc |
+| POST | /convocatoriadocumentos | ConvocatoriaDocumento | ConvocatoriaDocumento | Crea la entidad documento de la convocatoria.  Los siguientes campos se rellenan con los datos obtenidos de los endpoints anteriores:   * convocatoriaId: Identificador de una convocatoria creada previamente mediante /convocatorias * documentoRef: Se corresponde con el campo documentoRef obtenido al crear un nuevo documento con /sgdoc/documentos * tipoFase: Se corresponde con el campo tipoFase del ModeloTipoFase obtenido con /modeloejecuciones/{id}/modelotipofases * tipoDocumento: Se corresponde con el campo tipoDocumento del ModeloTipoDocumento obtenido con /modeloejecuciones/{id}/modelotipodocumentos |
 
 ##### Consultar convocatorias
 
-
-
 | Método | URL | Parámetros | Respuesta | Descripción |
 | --- | --- | --- | --- | --- |
-| GET | /convocatorias | q\+s (query \+ sort)La query estará formada por:* cualquiera de los campos del objeto Convocatoria | Lista\[Convocatoria] | Listado de convocatorias.*Ejemplo*:fechaProvisional\=ge\="2022\-02\-28T23:00:00Z";fechaProvisional\=le\="2022\-03\-31T21:59:59Z" |
-| GET | /convocatorias/{id}/convocatoriaareatematicas |  | Lista\[ConvocatoriaAreaTematica] | Listado de las asociaciones de áreas temáticas con la convocatoria. |
-| GET | /convocatorias/{id}/convocatoriadocumentos |  | Lista\[ConvocatoriaDocumento] | Listado de asociaciones entre documentos y la convocatoria |
-| GET | /convocatorias/{id}/convocatoriaentidadconvocantes |  | Lista\[ConvocatoriaEntidadConvocante] | Listado de asociaciones entre entidades convocantes y la convocatoria |
-| GET | /convocatorias/{id}/convocatoriaentidadfinanciadoras |  | Lista\[ConvocatoriaEntidadFinanciadora] | Listado de asociaciones entre entidades financiadoras y la convocatoria |
-| GET | /convocatorias/{id}/palabrasclave |  | Lista\[PalabraClave] | Listado de palabras clave de la convocatoria |
+| GET | /convocatorias | q+s (query + sort)  La query estará formada por:   * cualquiera de los campos del objeto Convocatoria | Lista[Convocatoria] | Listado de convocatorias.  *Ejemplo*:  fechaProvisional=ge="2022-02-28T23:00:00Z";fechaProvisional=le="2022-03-31T21:59:59Z" |
+| GET | /convocatorias/{id}/convocatoriaareatematicas |  | Lista[ConvocatoriaAreaTematica] | Listado de las asociaciones de áreas temáticas con la convocatoria. |
+| GET | /convocatorias/{id}/convocatoriadocumentos |  | Lista[ConvocatoriaDocumento] | Listado de asociaciones entre documentos y la convocatoria |
+| GET | /convocatorias/{id}/convocatoriaentidadconvocantes |  | Lista[ConvocatoriaEntidadConvocante] | Listado de asociaciones entre entidades convocantes y la convocatoria |
+| GET | /convocatorias/{id}/convocatoriaentidadfinanciadoras |  | Lista[ConvocatoriaEntidadFinanciadora] | Listado de asociaciones entre entidades financiadoras y la convocatoria |
+| GET | /convocatorias/{id}/palabrasclave |  | Lista[PalabraClave] | Listado de palabras clave de la convocatoria |
 |  | | | | |
-| GET | /areatematicas | q\+s (query \+ sort)La query estará formada por:* padreId | Lista\[AreaTematica] | Listado de AreaTematica  (sólo devuelve los registros activos).Nota: en el caso de no recibirse un padreId en la query, se devolverán todas las áreas temáticas y en caso de indicarse en la query que se quieren solo las que tengan un padreId con valor "null" se devolverán únicamente las de primer nivel o nivel raíz.*Ejemplo de query para obtener solo áreas de conocimiento raíz (su padre es null)*:padreId\=na\= |
+| GET | /areatematicas | q+s (query + sort)  La query estará formada por:   * padreId | Lista[AreaTematica] | Listado de AreaTematica  (sólo devuelve los registros activos).  Nota: en el caso de no recibirse un padreId en la query, se devolverán todas las áreas temáticas y en caso de indicarse en la query que se quieren solo las que tengan un padreId con valor "null" se devolverán únicamente las de primer nivel o nivel raíz.  *Ejemplo de query para obtener solo áreas de conocimiento raíz (su padre es null)*:  padreId=na= |
 | GET | /areatematicas/{id} |  | AreaTematica | Datos de un área temática específica. |
-
-  
-
-
-  
-
-
-
-
-
+| GET | /convocatorias/eliminadas-ids | q+s  La query estará formada por:   * fechaEliminacion | Lista[Long] | Listado de Identificadores de Convocatoria que han sido eliminadas (campo activo = false) a partir de una fecha.  Se utilizará el siguiente parámetro en la llamada al servicio:   * fechaEliminacion: se le pasará la fecha a partir de la cual se quieren ver las convocatorias eliminadas o bien un rango entre las que se quiere buscar   Ejemplo1:   * fechaEliminacion=ge="2024-01-01T22:00:00Z";   Ejemplo2:   * fechaEliminacion=ge="2024-01-01T22:00:00Z";fechaEliminacion=le="2024-12-31T22:00:00Z" |
+| GET | /convocatorias/modificados-ids | q+s  La query estará formada por:   * fechaModificacion | Lista[Long] | Listado de identificadores de convocatorias activas que han sido modificadas (tanto la entidad CONVOCATORIA) como las siguientes entidades relacionadas:   * CONVOCATORIA\_ENTIDAD\_CONVOCANTE * CONVOCATORIA\_ENTIDAD\_FINANCIADORA * CONVOCATORIA\_ENTIDAD\_GESTORA * CONVOCATORIA\_CONCEPTO\_GASTO * CONVOCATORIA\_CONCEPTO\_GASTO\_CODIGO\_EC * CONVOCATORIA\_DOCUMENTO * CONVOCATORIA\_FASE * CONVOCATORIA\_HITO * CONVOCATORIA\_PARTIDA   Ejemplo:   * fechaModificacion=ge="2021-08-18T22:00:00Z" |

@@ -1,11 +1,6 @@
-# Hércules : MA. Manual de Usuario
+# MA. Manual de Usuario
 
-
-
-Este espacio contiene el funcionamiento y características de Hércules MA \- Métodos de Análisis. El manual se divide en los diferentes capítulos que componen  MA, por lo que puede navegar por el menú hasta llegar al manual deseado.
-
-  
-
+Este espacio contiene el funcionamiento y características de Hércules MA - Métodos de Análisis. El manual se divide en los diferentes capítulos que componen  MA, por lo que puede navegar por el menú hasta llegar al manual deseado.
 
 La página inicial de MA cuenta con un buscador conectado a toda la plataforma. Desde aquí podremos hacer búsquedas sobre cualquier recurso, ya sean publicaciones, investigadores, grupos, proyectos, research objects y ofertas tecnológicas, si clicamos en uno de estos apartados iremos a su buscador personalizado correspondiente.
 
@@ -23,11 +18,4 @@ En el caso de no tener la sesión iniciada, nos saldrá en la esquina superior d
 
 Una vez iniciada la sesión, podremos acceder al menú lateral que nos llevará a distintos apartados, aunque en el caso de MA solo trataremos:
 
-* [Indicadores y mis indicadores](/hercules/portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/ma-manual-de-usuario/indicadoresmetricas.md "/hercules/portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/ma-manual-de-usuario/indicadoresmetricas.md")
-
-  
-
-
-
-
-
+* [Indicadores y mis indicadores](/hercules/portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/ma-manual-de-usuario/indicadoresmetricas)

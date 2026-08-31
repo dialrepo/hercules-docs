@@ -1,6 +1,15 @@
-# Hércules : CU\-ETI\-0050\-002 \- Evaluar memoria \- Guardar
+# CU-ETI-0050-002 - Evaluar memoria - Guardar
 
-
+|  |  |
+| --- | --- |
+| Cod. CU | ********CU-ETI-0050-002 - Evaluar memoria - Guardar******** |
+| Ver. objetivo |  |
+| Ver. IU | 1.0.0 |
+| Estado | LIBERADO\_ O\_LIBERADO\_ |
+| Fec. Aprobación |  |
+| Épica, historia |  |
+| Actores | ACT-ETI-004-Evaluador  ACT-ETI-005-Técnico |
+| Frecuencia | Media |
 
 ### Descripción
 
@@ -10,9 +19,9 @@ Se muestra una pantalla son tres pestañas. Una pestaña para añadir comentario
 
 #### Actor principal
 
-ACT\-ETI\-004\-Evaluador
+ACT-ETI-004-Evaluador
 
-ACT\-ETI\-005\-Técnico
+ACT-ETI-005-Técnico
 
 ### Precondiciones
 
@@ -32,7 +41,7 @@ Crear comentarios para generar la ficha del evaluador.
 
 1. Se presenta la pantalla Evaluaciones con el listado de todas las evaluaciones de  memorias en estado "En evaluación"  o "En secretaria revisión mínima" que cumplan con el filtro y asignada al evaluador logado en la aplicación.
 2. El usuario selecciona una memoria.
-3. Se presenta la pantalla de Evaluar memoria \- Comentarios
+3. Se presenta la pantalla de Evaluar memoria - Comentarios
 4. El usuario selecciona Nuevo comentario
 5. El usuario en la pantalla de Nuevo comentario selecciona un bloque, apartado, subapartado y escribe un comentario al respecto.
 6. El usuario selecciona la acción Añadir.
@@ -42,7 +51,3 @@ Crear comentarios para generar la ficha del evaluador.
 10. El usuario selecciona la acción Guardar.
 11. El usuario es informado del resultado positivo de la acción.
 12. Se presenta el listado de Evaluaciones.
-
-
-
-

@@ -1,8 +1,17 @@
-# Hércules : IU\-CSP\-0205\-012 \- Ver convocatoria \- Elegibilidad
+# IU-CSP-0205-012 - Ver convocatoria - Elegibilidad
 
+|  |  |
+| --- | --- |
+| Cod. IU | ********IU-CSP-0205-012 - Ver convocatoria - Elegibilidad******** |
+| Ver. objetivo |  |
+| Ver. IU | 1.0.0 |
+| Estado | LIBERADO\_ |
+| Fec. Aprobación |  |
+| Épica, historia |  |
+| Actores | ACT-CSP-001-Investigador, ACT-CSP-005-Visor  Usuario externo |
+| Frecuencia | Media |
 
-
-## Formulario  Ver convocatoria \- Elegibilidad
+## Formulario  Ver convocatoria - Elegibilidad
 
 Formulario para ver la configuración de los conceptos de gasto de una convocatoria:
 
@@ -10,16 +19,15 @@ Formulario para ver la configuración de los conceptos de gasto de una convocato
 * Costes indirectos
 * Conceptos de gasto no permitidos
 
-
-
-|  | | |
+|  |  |  |
 | --- | --- | --- |
+|  | | |
 | Nombre | Tipo | Características / Notas |
 | Listado de conceptos de gasto permitidos de la convocatoria: recuperados de la tabla "convocatoria concepto gasto" marcados con el campo "permitido" a true | | |
 | Concepto de gasto | Texto corto | Nombre del concepto de gasto recuperado del campo "nombre" de la tabla "concepto gasto", a partir del identificador de la tabla "convocatoria concepto gasto" (campo "concepto gasto"). |
 | Descripción | Texto | Descripción recuperada del campo "descripción" de la tabla "concepto gasto", a partir del identificador de la tabla "convocatoria concepto gasto" (campo "concepto gasto"). |
 | Costes indirectos | Boolean | Valor "sí" o "no". Recuperado del campo "costes indirectos" de la tabla "concepto gasto", a partir del identificador de la tabla "convocatoria concepto gasto" (campo "concepto gasto"). |
-| Importe máximo | DecimalImporte | Campo importe máximo introducido al añadir el concepto de gasto en el listado de gastos permitidos.Se corresponde con el campo "importe máximo" de la tabla "convocatoria concepto gasto". |
+| Importe máximo | Decimal  Importe | Campo importe máximo introducido al añadir el concepto de gasto en el listado de gastos permitidos.  Se corresponde con el campo "importe máximo" de la tabla "convocatoria concepto gasto". |
 | Mes inicial | Entero | Campo "mes inicial" de la tabla "convocatoria concepto gasto". |
 | Mes final | Entero | Campo "mes final" de la tabla "convocatoria concepto gasto". |
 | Observaciones | Texto largo | Campo "observaciones" de la tabla "convocatoria concepto gasto". |
@@ -33,18 +41,14 @@ Formulario para ver la configuración de los conceptos de gasto de una convocato
 | Observaciones | Texto largo | Campo "observaciones" de la tabla "convocatoria concepto gasto". |
 | Ver | Icono de acción | Acción ver |
 
-
-
 | Acciones | Descripción | Enlace CU. | Permisos |
 | --- | --- | --- | --- |
-| Ver concepto de gasto permitido | Se abre la pantalla con los detalles del concepto de gasto permitido. Modo consulta. Cambio de contexto | Muestra la pantalla [IU\-CSP\-0206\-009 \- Ver concepto de gasto permitido](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-interfaz-de-usuario/iu-csp-0200-gestion-de-convocatorias/iu-csp-0206-009-ver-concepto-de-gasto-permitido.md "/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-interfaz-de-usuario/iu-csp-0200-gestion-de-convocatorias/iu-csp-0206-009-ver-concepto-de-gasto-permitido.md") | CSP\-CON\-INV\-VCSP\-CON\-V |
-| Paginación de gasto permitido | Componente estándar de paginación sobre la tabla de lista de resultados. |  | CSP\-CON\-INV\-VCSP\-CON\-V |
-| Ver concepto de gasto no permitido | Se abre la pantalla con los detalles del concepto de gasto prohibido. Modo consulta. Cambio de contexto | Muestra la pantalla [IU\-CSP\-0206\-010 \- Ver concepto de gasto no permitido](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-interfaz-de-usuario/iu-csp-0200-gestion-de-convocatorias/iu-csp-0206-010-ver-concepto-de-gasto-no-permitido.md "/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-interfaz-de-usuario/iu-csp-0200-gestion-de-convocatorias/iu-csp-0206-010-ver-concepto-de-gasto-no-permitido.md") |  |
+| Ver concepto de gasto permitido | Se abre la pantalla con los detalles del concepto de gasto permitido. Modo consulta. Cambio de contexto | Muestra la pantalla [IU-CSP-0206-009 - Ver concepto de gasto permitido](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-interfaz-de-usuario/iu-csp-0200-gestion-de-convocatorias/iu-csp-0206-009-ver-concepto-de-gasto-permitido) | CSP-CON-INV-V  CSP-CON-V |
+| Paginación de gasto permitido | Componente estándar de paginación sobre la tabla de lista de resultados. |  | CSP-CON-INV-V  CSP-CON-V |
+| Ver concepto de gasto no permitido | Se abre la pantalla con los detalles del concepto de gasto prohibido. Modo consulta. Cambio de contexto | Muestra la pantalla [IU-CSP-0206-010 - Ver concepto de gasto no permitido](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/csp-modulo-de-convocatorias-ayudas-solicitudes-proyectos-y-contratos-y-grupos-de-investigacion/csp-interfaz-de-usuario/iu-csp-0200-gestion-de-convocatorias/iu-csp-0206-010-ver-concepto-de-gasto-no-permitido) |  |
 | Paginación de gasto no permitido | Componente estándar de paginación sobre la tabla de lista de resultados. |  |  |
 
 ### Botones generales a la pantalla
-
-
 
 | Acciones | Descripción | Enlace CU. |
 | --- | --- | --- |
@@ -54,8 +58,16 @@ Formulario para ver la configuración de los conceptos de gasto de una convocato
 
 #### Por actor
 
+|  |  |
+| --- | --- |
+| ACT-CSP-001-Investigador | CSP-CON-INV-V |
+| ACT-CSP-005-Visor | CSP-CON-V |
+| Usuario externo | Sin permisos |
+
 #### Todos los permisos de acceso
 
+|  |  |
+| --- | --- |
+| Permisos | CSP-CON-INV-V, CSP-CON-V |
 
-
-
+Se aplican las mismas restricción para todos los elementos bajo este path del árbol de navegación.

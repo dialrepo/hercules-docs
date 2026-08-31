@@ -1,6 +1,15 @@
-# Hércules : CU\-ETI\-0040\-002 \- Alta/Modificar Evaluador
+# CU-ETI-0040-002 - Alta/Modificar Evaluador
 
-
+|  |  |
+| --- | --- |
+| Cod. CU | ********CU-ETI-0040-002 - Alta/Modificar Evaluador******** |
+| Ver. objetivo |  |
+| Ver. CU | 1.0.0 |
+| Estado | LIBERADO\_ |
+| Fec. Aprobación |  |
+| Épica, historia |  |
+| Actores | ACT-ETI-001-Gestor |
+| Frecuencia | Baja |
 
 ### Descripción
 
@@ -9,9 +18,9 @@ Para dar de alta un nuevo evaluador se necesitan los siguiente campos:
 * Evaluador: caja de texto deshabilitada donde se guardará el nombre y apellidos del evaluador seleccionado. Para ello se buscará con el botón Buscar que abrirá una pantalla para buscar a los evaluadores por diferentes filtros de búsqueda (pantalla común del módulo de usuarios). Se buscará en el sistema externo de investigadores y se recuperarán sus datos. En caso de no existir se tendrá que ir primero a la gestión de usuarios externos (módulo transversal en el SGI) para dar de alta al usuario externo.
 * Comité: desplegable con los tres comités.
 * Cargo que desempeña en el comité: desplegable con los valores:
-	+ Presidente
-	+ Vocal
-	+ Secretario
+  + Presidente
+  + Vocal
+  + Secretario
 * Fecha de Alta: calendario para marcar el día
 * Fecha de Baja: calendario para marcar el día
 * Resumen de Actividad: caja de texto
@@ -31,7 +40,7 @@ El editar es la misma pantalla que la de nueva creación.
 
 #### Actor principal
 
-ACT\-ETI\-001\-Gestor
+ACT-ETI-001-Gestor
 
 ### Precondiciones
 
@@ -55,7 +64,7 @@ Se da de alta un nuevo evaluador en el sistema si ha pulsado a Nuevo evaluador o
 8. El usuario es informado del resultado positivo de la acción.
 9. Se presenta el listado de Evaluadores.
 
-### Escenario principal (flujos alternativos) \- El evaluador ya existe para el mismo comité
+### Escenario principal (flujos alternativos) - El evaluador ya existe para el mismo comité
 
 1. Se presenta la pantalla Evaluadores.
 2. El gestor pulsa sobre el botón de Nuevo evaluador o edita un evaluador del listado.
@@ -70,14 +79,10 @@ Se da de alta un nuevo evaluador en el sistema si ha pulsado a Nuevo evaluador o
 11. El usuario es informado del resultado positivo de la acción.
 12. Se presenta el listado de Evaluadores.
 
-### Extensiones (flujos alternativos) \- Error durante el guardado
+### Extensiones (flujos alternativos) - Error durante el guardado
 
 1. Si se ha producido algún error de validación.
 2. El usuario modifica la información necesaria para realizar de forma correcta la creación o modificación del evaluador
 3. El usuario selecciona la acción Guardar.
 4. El usuario es informado del resultado positivo de la acción.
 5. Se presenta el listado de Evaluadores
-
-
-
-

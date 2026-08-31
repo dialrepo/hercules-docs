@@ -1,6 +1,4 @@
-# Hércules : Anotaciones
-
-
+# Anotaciones
 
 Las anotaciones son notas personales asignadas a una publicación o RO, se crean en la ficha del recurso donde se desea anotar.
 
@@ -27,10 +25,3 @@ Aquí aparece un buscador con facetas de todas la anotaciones que han sido cread
 ![](/attachments/598147371/598148005.png)
 
 Cuando haces clic en el titulo de una anotación te dirige a la pestaña de anotaciones del recurso al que pertenece.
-
-  
-
-
-
-
-

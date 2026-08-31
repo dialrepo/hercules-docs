@@ -1,6 +1,15 @@
-# Hércules : CU\-CSP\-0011\-002 \- Crear tipo de hito
+# CU-CSP-0011-002 - Crear tipo de hito
 
-
+|  |  |
+| --- | --- |
+| Cod. CU | **CU-CSP-0010-002 - Crear tipo de hito** |
+| Ver. objetivo |  |
+| Ver. CU | 1.0.0 |
+| Estado | LIBERADO\_ |
+| Fec. Aprobación |  |
+| Épica, historia |  |
+| Actores | ACT-CSP-004-Administrador |
+| Frecuencia | Baja |
 
 ### Descripción
 
@@ -10,15 +19,15 @@ Se crea el nuevo tipo de hito pasando a estar disponible en los listados de gest
 
 #### Actor principal
 
-ACT\-CSP\-004\-Administrador
+ACT-CSP-004-Administrador
 
 #### Personal involucrado e intereses
 
-Personal gestor (ACT\-CSP\-003\-Gestor) de las unidades de gestión con acceso al módulo CSP, que requieren disponer de los tipos para poder registrar hitos en las convocatorias/solicitudes/proyectos.
+Personal gestor (ACT-CSP-003-Gestor) de las unidades de gestión con acceso al módulo CSP, que requieren disponer de los tipos para poder registrar hitos en las convocatorias/solicitudes/proyectos.
 
 ### Precondiciones
 
-El usuario ACT\-CSP\-004\-Administrador se autentica a través del usuario de dominio corporativo.
+El usuario ACT-CSP-004-Administrador se autentica a través del usuario de dominio corporativo.
 
 A través del servicio de integración con el directorio activo y de la información del usuario almacenada en el propio SGI, se obtiene su rol y las unidades de gestión sobre las que tiene disponible el rol. El usuario está autorizado sobre la funcionalidad asociada a esta operación con permisos de Creación.
 
@@ -36,7 +45,7 @@ El tipo de hito se crea correctamente y está disponible para la configuración 
 6. El usuario es informado del resultado positivo de la acción
 7. Se vuelve al listado de Tipos de hito
 
-### Extensiones (flujos alternativos) \- Error de unicidad
+### Extensiones (flujos alternativos) - Error de unicidad
 
 1. El usuario ha introducido un nombre para el Tipo de hito que ya existe en la tabla de Tipos de hito como un elemento activo
 2. El usuario introduce el resto de datos del Tipo de hito
@@ -54,12 +63,3 @@ N/A
 ### Lista de tecnología y variaciones de datos
 
 N/A
-
-  
-  
-  
-
-
-
-
-

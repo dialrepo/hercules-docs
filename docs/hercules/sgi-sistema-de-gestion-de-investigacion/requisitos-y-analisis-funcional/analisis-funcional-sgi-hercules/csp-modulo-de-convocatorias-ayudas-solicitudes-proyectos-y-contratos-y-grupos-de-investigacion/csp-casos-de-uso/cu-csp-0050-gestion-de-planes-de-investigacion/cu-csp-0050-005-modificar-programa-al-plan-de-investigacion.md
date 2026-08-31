@@ -1,6 +1,15 @@
-# Hércules : CU\-CSP\-0050\-005 \- Modificar programa al plan de investigación
+# CU-CSP-0050-005 - Modificar programa al plan de investigación
 
-
+|  |  |
+| --- | --- |
+| Cod. CU | **CU-CSP-0050-005 - Modificar programa al plan de investigación** |
+| Ver. objetivo |  |
+| Ver. CU | 1.0.0 |
+| Estado | LIBERADO\_ |
+| Fec. Aprobación |  |
+| Épica, historia |  |
+| Actores | ACT-CSP-004-Administrador, ACT-CSP-003-Gestor |
+| Frecuencia | Media |
 
 ### Descripción
 
@@ -10,15 +19,15 @@ Se modifican los datos de  un programa, subprograma, modalidad o submodalidad a
 
 #### Actor principal
 
-ACT\-CSP\-004\-Administrador, ACT\-CSP\-003\-Gestor
+ACT-CSP-004-Administrador, ACT-CSP-003-Gestor
 
 #### Personal involucrado e intereses
 
-ACT\- CSP\-001\-Investigador que requiere que las convocatorias y proyectos estén categorizados de acuerdo a los programas bajo los que se enmarcan.
+ACT- CSP-001-Investigador que requiere que las convocatorias y proyectos estén categorizados de acuerdo a los programas bajo los que se enmarcan.
 
 ### Precondiciones
 
-El usuario ACT\-CSP\-004\-Administrador o ACT\-CSP\-003\-Gestor se autentica a través del usuario de dominio corporativo.
+El usuario ACT-CSP-004-Administrador o ACT-CSP-003-Gestor se autentica a través del usuario de dominio corporativo.
 
 A través del servicio de integración con el directorio activo y de la información del usuario almacenada en el propio SGI, se obtiene su rol y las unidades de gestión sobre las que tiene disponible el rol. El usuario está autorizado sobre la funcionalidades asociadas a esta gestión.
 
@@ -30,15 +39,15 @@ El programa, subprograma, modalidad, submodalid, etc., en líneas generales, el 
 
 1. El usuario accede al apartado de Programas de un Plan
 2. El usuario selecciona un ítem (de cualquiera de los niveles del árbol: programa, subprograma, modalidad, submodalidad, etc)
-3. El usuario modifica el Nombre del ítem indicando un valor que aún no estuviera presente en ninguno de los ítems activos del árbol del plan (independientemente de su nivel ). El árbol del plan serán todos aquellos elementos que compartan nodo raíz (elemento del árbol con padre\=null)
+3. El usuario modifica el Nombre del ítem indicando un valor que aún no estuviera presente en ninguno de los ítems activos del árbol del plan (independientemente de su nivel ). El árbol del plan serán todos aquellos elementos que compartan nodo raíz (elemento del árbol con padre=null)
 4. El usuario introduce o modifica la Descripción del programa
 5. El usuario pulsa Guardar
 6. Se muestra un mensaje de acción positiva
 7. Se  permanece en la pantalla de Programas del Plan de investigación para que el usuario pueda seguir gestionando elementos al árbol
 
-### Extensiones (flujo alternativo) \- Modificación de ítem \- Error de unicidad
+### Extensiones (flujo alternativo) - Modificación de ítem - Error de unicidad
 
-1. El usuario ha introducido un nombre que ya existían entre los ítems activos del árbol del Plan (independientemente de su nivel). El árbol del plan serán todos aquellos elementos que compartan nodo raíz (elemento del árbol con padre\=null)
+1. El usuario ha introducido un nombre que ya existían entre los ítems activos del árbol del Plan (independientemente de su nivel). El árbol del plan serán todos aquellos elementos que compartan nodo raíz (elemento del árbol con padre=null)
 2. El usuario introduce o modifica la descripción del programa
 3. El usuario pulsa Guardar
 4. Se muestra un error al usuario
@@ -54,12 +63,3 @@ N/A
 ### Lista de tecnología y variaciones de datos
 
 N/A
-
-  
-  
-  
-
-
-
-
-

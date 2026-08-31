@@ -1,9 +1,6 @@
-# Hércules : Documentación de trabajo en elaboración
+# Documentación de trabajo en elaboración
 
-
-
-A partir de esta ruta se encuentran los documentos sobre los que se está trabajando y que aún no están terminados. Estos documentos serán privados hasta su validación. Una vez validados, la ruta completa se moverá a su ubicación pública definitiva.
-
-
-
-
+- [Análisis para la extracción de descriptores temáticos](/hercules/herramienta-de-cv-hercules-ed-enriquecimiento-de-datos/analisis-funcional-herramienta-de-cv-hercules-ed-enriquecimiento-de-datos/documentacion-de-trabajo-en-elaboracion/analisis-para-la-extraccion-de-descriptores-tematicos)
+- [Carga inicial de datos](/hercules/herramienta-de-cv-hercules-ed-enriquecimiento-de-datos/analisis-funcional-herramienta-de-cv-hercules-ed-enriquecimiento-de-datos/documentacion-de-trabajo-en-elaboracion/carga-inicial-de-datos)
+- [Enriquecimiento. Casos de uso (eliminar)](/hercules/herramienta-de-cv-hercules-ed-enriquecimiento-de-datos/analisis-funcional-herramienta-de-cv-hercules-ed-enriquecimiento-de-datos/documentacion-de-trabajo-en-elaboracion/enriquecimiento-casos-de-uso-eliminar)
+- [Recopilación de dudas y cuestiones funcionales planteadas](/hercules/herramienta-de-cv-hercules-ed-enriquecimiento-de-datos/analisis-funcional-herramienta-de-cv-hercules-ed-enriquecimiento-de-datos/documentacion-de-trabajo-en-elaboracion/recopilacion-de-dudas-y-cuestiones-funcionales-planteadas)

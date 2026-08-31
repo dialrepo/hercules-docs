@@ -1,16 +1,16 @@
-# Hércules : MA. Publicaciones
+# MA. Publicaciones
 
-
-
-  
-
+* [Buscador general de las publicaciones](#MA.Publicaciones-Buscadorgeneraldelaspublicaciones)
+  + [Las facetas](#MA.Publicaciones-Lasfacetas)
+  + [Minificha](#MA.Publicaciones-Minificha)
+* [Ficha de la publicación](#MA.Publicaciones-Fichadelapublicación)
+  + [Datos principales](#MA.Publicaciones-Datosprincipales)
+  + [Menú de opciones](#MA.Publicaciones-Menúdeopciones)
+  + [Datos enriquecidos:](#MA.Publicaciones-Datosenriquecidos:)
 
 Información de desarrollo
 
-[https://github.com/HerculesCRUE/HerculesMA/blob/main/Docs/funcionamiento\-de\-las\-publicaciones.md](https://github.com/HerculesCRUE/HerculesMA/blob/main/Docs/funcionamiento-de-las-publicaciones.md "https://github.com/HerculesCRUE/HerculesMA/blob/main/Docs/funcionamiento-de-las-publicaciones.md")
-
-  
-
+<https://github.com/HerculesCRUE/HerculesMA/blob/main/Docs/funcionamiento-de-las-publicaciones.md>
 
 Las publicaciones son un recurso en la plataforma de Hércules que cumple la funcionalidad de los diferentes publicaciones del personal investigador disponibles en las universidades.
 
@@ -20,7 +20,7 @@ Los publicación poseen un buscador público junto a una ficha de la misma.
 
 El buscador de publicaciones contiene un listado facetado con un resumen de la información de las publicaciones, junto a un buscador por texto de los mismos. El buscador carga 10 resúmenes del publicación por defecto, con un enlace en el título a cada ficha del mismo, y mientras haces scroll en la página, se irán haciendo peticiones al servicio de resultados para ir cargando el resto. Las facetas que se muestran están predefinidas y se irán mostrando en base al resultado de las búsqueda en sí disponible.
 
-![Resumen del buscador de publicaciones](/attachments/598147457/598148088.png?effects=drop-shadow "Resumen del buscador de publicaciones")
+![Resumen del buscador de publicaciones](/attachments/598147457/598148088.png?effects=drop-shadow)Resumen del buscador de publicaciones
 
 ### Las facetas
 
@@ -59,11 +59,11 @@ Otros datos mostrados:
 
 Se accede desde el buscador de las publicaciones, desde el listado de los mismos o desde alguna otra referencia de la web, ya sea el metabuscador, el listado de las publicaciones de los diferentes investigadores, etc.
 
-![Sección de una publicación cualquiera](/attachments/598147457/598148089.png?effects=drop-shadow "Sección de una publicación cualquiera")
+![Sección de una publicación cualquiera](/attachments/598147457/598148089.png?effects=drop-shadow)Sección de una publicación cualquiera
 
 ### Datos principales
 
-En esta pantalla nos encontramos con las funciones típicas de las fichas de los diferentes contenidos; 
+En esta pantalla nos encontramos con las funciones típicas de las fichas de los diferentes contenidos;
 
 * Título (junto a un enlace a la ficha completa del mismo)
 * Fecha
@@ -86,10 +86,10 @@ Otros datos mostrados:
 
 Respecto al menú de acciones, nos encontramos con los siguientes enlaces:
 
-* [Nueva anotación](https://confluence.um.es/confluence/display/HERCULES/MA.+Anotaciones+sobre+los+ROs?src=contextnavpagetreemode "https://confluence.um.es/confluence/display/HERCULES/MA.+Anotaciones+sobre+los+ROs?src=contextnavpagetreemode")
+* [Nueva anotación](https://confluence.um.es/confluence/display/HERCULES/MA.+Anotaciones+sobre+los+ROs?src=contextnavpagetreemode)
 * Citar publicación
-* [Vincular RO](https://confluence.um.es/confluence/display/HERCULES/MA.+ROs+vinculados?src=contextnavpagetreemode "https://confluence.um.es/confluence/display/HERCULES/MA.+ROs+vinculados?src=contextnavpagetreemode") (Si eres autor de la publicación)
-* [Editar](https://confluence.um.es/confluence/pages/viewpage.action?pageId=564822031&src=contextnavpagetreemode "https://confluence.um.es/confluence/pages/viewpage.action?pageId=564822031&src=contextnavpagetreemode") (si eres autor de la publicación)
+* [Vincular RO](https://confluence.um.es/confluence/display/HERCULES/MA.+ROs+vinculados?src=contextnavpagetreemode) (Si eres autor de la publicación)
+* [Editar](https://confluence.um.es/confluence/pages/viewpage.action?pageId=564822031&src=contextnavpagetreemode) (si eres autor de la publicación)
 
 ### Datos enriquecidos:
 
@@ -97,7 +97,3 @@ Respecto al menú de acciones, nos encontramos con los siguientes enlaces:
 * **Referencias**: Enlace a publicaciones externas que han hecho referencias a la publicación.
 * **Mis notas**: Pestaña que muestra las anotaciones que el usuario que se encuentra 'logueado' actualmente en el portal ha realizado sobre esa publicación.
 * **ROs vinculados**: Muestra las relaciones que haya podido hacer desde esta publicación sobre otro RO (Research Objects y publicaciones).
-
-
-
-

@@ -1,6 +1,15 @@
-# Hércules : CU\-CSP\-0060\-005 \- Modificar área temática
+# CU-CSP-0060-005 - Modificar área temática
 
-
+|  |  |
+| --- | --- |
+| Cod. CU | **CU-CSP-0060-005 - Modificar área temática** |
+| Ver. objetivo |  |
+| Ver. CU | 1.0.0 |
+| Estado | LIBERADO\_ |
+| Fec. Aprobación |  |
+| Épica, historia |  |
+| Actores | ACT-CSP-004-Administrador, ACT-CSP-003-Gestor |
+| Frecuencia | Media |
 
 ### Descripción
 
@@ -10,15 +19,15 @@ Se modifican los datos de un área o subárea temática perteneciente al árbol 
 
 #### Actor principal
 
-ACT\-CSP\-004\-Administrador, ACT\-CSP\-003\-Gestor
+ACT-CSP-004-Administrador, ACT-CSP-003-Gestor
 
 #### Personal involucrado e intereses
 
-ACT\- CSP\-001\-Investigador que requiere que en las convocatorias se identifiquen las áreas temáticas para las que pudieran  estar restringidos, así como indicar el área temática seleccionada en sus solicitudes y proyectos.
+ACT- CSP-001-Investigador que requiere que en las convocatorias se identifiquen las áreas temáticas para las que pudieran  estar restringidos, así como indicar el área temática seleccionada en sus solicitudes y proyectos.
 
 ### Precondiciones
 
-El usuario ACT\-CSP\-004\-Administrador o ACT\-CSP\-003\-Gestor se autentica a través del usuario de dominio corporativo.
+El usuario ACT-CSP-004-Administrador o ACT-CSP-003-Gestor se autentica a través del usuario de dominio corporativo.
 
 A través del servicio de integración con el directorio activo y de la información del usuario almacenada en el propio SGI, se obtiene su rol y las unidades de gestión sobre las que tiene disponible el rol. El usuario está autorizado sobre la funcionalidades asociadas a esta gestión.
 
@@ -36,7 +45,7 @@ El área/subárea se ha actualizado en el árbol de áreas de acuerdo a los nuev
 6. Se muestra un mensaje de acción positiva
 7. Se permanece en la pantalla del Árbol de áreas para que el  usuario puede seguir realizando la gestión del mismo
 
-### Extensiones (flujo alternativo) \- Modificación de ítem \- Error de unicidad
+### Extensiones (flujo alternativo) - Modificación de ítem - Error de unicidad
 
 1. El usuario ha introducido una Abreviatura o Nombre que ya existían entre los ítems activos del árbol del Listado de áreas (independientemente de su nivel)
 2. El usuario pulsa Guardar
@@ -53,12 +62,3 @@ N/A
 ### Lista de tecnología y variaciones de datos
 
 N/A
-
-  
-  
-  
-
-
-
-
-

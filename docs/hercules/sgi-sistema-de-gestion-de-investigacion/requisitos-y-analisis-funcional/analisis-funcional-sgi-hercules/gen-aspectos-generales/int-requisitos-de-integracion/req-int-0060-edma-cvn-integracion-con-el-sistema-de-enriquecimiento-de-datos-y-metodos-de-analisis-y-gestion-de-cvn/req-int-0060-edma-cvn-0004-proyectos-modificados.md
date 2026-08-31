@@ -1,10 +1,16 @@
-# Hércules : REQ\-INT\-0060\-EDMA\-CVN\-0004 \- Proyectos modificados
+# REQ-INT-0060-EDMA-CVN-0004 - Proyectos modificados
 
-
-
-
-
-
+|  |  |
+| --- | --- |
+| Cod. REQ | **REQ-INT-0060-EDMA-CVN-0004 - Proyectos modificados** |
+| Ver. Objetivo |  |
+| Ver. REQ | 1.0.0 |
+| Estado | IN PROGRESS |
+| Fec. Aprobación |  |
+| Épica, historia |  |
+| Frecuencia |  |
+| Características |  |
+| M. Consumidor |  |
 
 ### Definición y objetivos
 
@@ -22,55 +28,18 @@ Parámetros de salida:
 
 * Listado de Identificadores de proyectos
 
-  
-
-
 ### Diseño técnico
 
-En el siguiente enlace se muestra el diseño del modelo lógico y el diseño del AP [ESB \- SGI \- Proyectos](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/esb-sgi/esb-sgi-proyectos.md "/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/esb-sgi/esb-sgi-proyectos.md")  
-
-
-  
-
-
-
-
-
-
-
+En el siguiente enlace se muestra el diseño del modelo lógico y el diseño del AP [ESB - SGI - Proyectos](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/esb-sgi/esb-sgi-proyectos)
 
 ### Interfaces de usuario relacionados
 
-
-
-
-
-
+![](plugins/servlet/confluence/placeholder/unknown-macro)
 
 ### Informes relacionados
 
-
-
-
-
-
+![](plugins/servlet/confluence/placeholder/unknown-macro)
 
 ### Casos de uso relacionados
 
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
+![](plugins/servlet/confluence/placeholder/unknown-macro)

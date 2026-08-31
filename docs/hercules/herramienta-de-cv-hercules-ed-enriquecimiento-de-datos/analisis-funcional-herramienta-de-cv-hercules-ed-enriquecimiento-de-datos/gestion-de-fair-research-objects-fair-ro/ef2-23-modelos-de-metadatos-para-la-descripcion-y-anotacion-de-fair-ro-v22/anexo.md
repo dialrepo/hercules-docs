@@ -1,15 +1,11 @@
-# Hércules : Anexo
-
-
+# Anexo
 
 Tabla de metadatos expuestos en la documentación de ROH de la entidad **IAO\_0000030 (Information Content Entity)**
 
-
-
-
-| **Prefix** | **Class** |  |  |  |  |  | **Prefix** |  | **Object property** (bold indicates explicit Domain, otherwise a Restriction) | **Range Class** | **Prefix** | **Datatype Property** (bold indicates explicit domain; otherwise a restriction) | **Range Datatype** (if typed) | **Range values** |
+|  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| **obo\-iao** | **IAO\_0000030 (Information Content Entity)** |  |  |  |  |  | roh |  | correspondingOrganization | foaf:Organization | roh | language | xsd:string |  |
+| **Prefix** | **Class** |  |  |  |  |  | **Prefix** |  | **Object property** (bold indicates explicit Domain, otherwise a Restriction) | **Range Class** | **Prefix** | **Datatype Property** (bold indicates explicit domain; otherwise a restriction) | **Range Datatype** (if typed) | **Range values** |
+| **obo-iao** | **IAO\_0000030 (Information Content Entity)** |  |  |  |  |  | roh |  | correspondingOrganization | foaf:Organization | roh | language | xsd:string |  |
 |  | **roh** | **Repository** |  |  |  | roh |  | correspondingAuthor |  | foaf:Person | roh | title | xsd:string |  |
 |  |  |  |  |  |  | roh |  | hasKnowledgeArea |  | (skos:Concept and (skos:inScheme some roh:KnowledgeArea)) | vivo | description | xsd:string |  |
 |  |  |  |  |  |  | roh |  | hasReadme |  | roh:README | bibo | abstract | xsd:string |  |
@@ -49,7 +45,7 @@ Tabla de metadatos expuestos en la documentación de ROH de la entidad **IAO\_00
 |  |  | vivo | Abstract |  |  |  |  |  |  |  |  |  |  |  |
 |  |  | bibo | Article |  |  |  |  |  |  |  | bibo | **issue** |  |  |
 |  |  |  | bibo | AcademicArticle |  | **vivo** |  | **hasPublicationVenue** |  | **bibo:Journal** | bibo | eanucc13 | rdfs:Literal |  |
-|  |  |  |  | obo\-iao: IAO\_0000013 (JournalArticle) |  | vivo |  | dateTimeValue |  | vivo:DateTimeValue |  |  |  |  |
+|  |  |  |  | obo-iao: IAO\_0000013 (JournalArticle) |  | vivo |  | dateTimeValue |  | vivo:DateTimeValue |  |  |  |  |
 |  |  |  |  |  |  | roh |  | **hasMetric** |  | roh:PublicationMetric |  |  |  |  |
 |  |  |  |  | roh:PeerReviewedArticle |  |  |  |  |  |  |  |  |  |  |
 |  |  |  | roh | BlogPost |  |  |  |  |  |  |  |  |  |  |
@@ -71,7 +67,7 @@ Tabla de metadatos expuestos en la documentación de ROH de la entidad **IAO\_00
 |  |  | bibo | CollectedDocument |  |  |  |  |  |  |  |  |  |  |  |
 |  |  |  | roh | Database |  |  |  |  |  |  |  |  |  |  |
 |  |  |  | bibo | EditedBook |  |  |  |  |  |  |  |  |  |  |
-|  |  |  | bibo | Issue |  | obo\-ro |  | BFO\_0000051 (hasPart) |  | bibo:Article | bibo | issue | rdfs:Literal |  |
+|  |  |  | bibo | Issue |  | obo-ro |  | BFO\_0000051 (hasPart) |  | bibo:Article | bibo | issue | rdfs:Literal |  |
 |  |  | vivo | ConferencePoster |  |  |  |  |  |  |  |  |  |  |  |
 |  |  | roh | CurriculumVitae |  |  | roh |  | **CVOf** |  | foaf:Person | roh | summary | xsd:string |  |
 |  |  | vivo | Dataset |  |  | cito |  | isCitedAsDataSourceBy |  | bibo:Document |  |  |  |  |
@@ -107,7 +103,3 @@ Tabla de metadatos expuestos en la documentación de ROH de la entidad **IAO\_00
 |  |  |  | roh | PhDThesis |  |  |  |  |  |  |  |  |  |  |
 |  |  | bibo | Webpage |  |  |  |  |  |  |  |  |  |  |  |
 |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-
-
-
-

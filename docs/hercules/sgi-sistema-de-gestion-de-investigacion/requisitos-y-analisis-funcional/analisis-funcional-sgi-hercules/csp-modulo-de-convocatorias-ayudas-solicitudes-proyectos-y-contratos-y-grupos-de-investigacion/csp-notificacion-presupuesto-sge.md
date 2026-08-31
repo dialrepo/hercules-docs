@@ -1,6 +1,9 @@
-# Hércules : CSP \- Notificación presupuesto SGE
+# CSP - Notificación presupuesto SGE
 
-
+* [Descripción](#CSPNotificaciónpresupuestoSGE-Descripción)
+  + [Buscador](#CSPNotificaciónpresupuestoSGE-Buscador)
+* [Vista ACT-CSP-001-Investigador](#CSPNotificaciónpresupuestoSGE-VistaACT-CSP-001-Investigador)
+* [Vista ACT-CSP-005-Visor](#CSPNotificaciónpresupuestoSGE-VistaACT-CSP-005-Visor)
 
 ### Descripción
 
@@ -24,7 +27,7 @@ Pantalla que muestra el formulario de búsqueda, que permite aplicar filtros sob
 
 Los resultados devueltos además de los filtros aplicados dependerán siempre de la Unidad de gestión a la que se hubiera vinculado el proyecto.
 
-Automáticamente, el SGI siempre aplicará el filtro de la unidad de gestión, de forma que un usuario solo podrá acceder al presupuesto de los proyectos de las unidades de gestión a las que esté vinculado con alguno de los roles ACT\-CSP\-003\-Gestor o ACT\-CSP\-004\-Administrador y el filtro sobre las anualidades de los presupuestos en los que se ha marcado el check de presupuestar, es decir, sobre aquellas anualidades que si se quieren enviar al SGE.
+Automáticamente, el SGI siempre aplicará el filtro de la unidad de gestión, de forma que un usuario solo podrá acceder al presupuesto de los proyectos de las unidades de gestión a las que esté vinculado con alguno de los roles ACT-CSP-003-Gestor o ACT-CSP-004-Administrador y el filtro sobre las anualidades de los presupuestos en los que se ha marcado el check de presupuestar, es decir, sobre aquellas anualidades que si se quieren enviar al SGE.
 
 Los campos por lo que se podrá filtrar serán:
 
@@ -34,14 +37,10 @@ Los campos por lo que se podrá filtrar serán:
 * Identificador SGE
 * Rango de fechas de inicio y fin del proyecto
 
-### Vista ACT\-CSP\-001\-Investigador
+### Vista ACT-CSP-001-Investigador
 
-La funcionalidad "Notificación presupuestos SGE" solo estará disponible para los ACT\-CSP\-003\-Gestor o ACT\-CSP\-004\-Administrado.  Los usuarios ACT\-CSP\-001\-Investigador, sea cual sea su rol de participación en un proyecto, no podrán acceder al apartado de "Notificación presupuestos SGE".
+La funcionalidad "Notificación presupuestos SGE" solo estará disponible para los ACT-CSP-003-Gestor o ACT-CSP-004-Administrado.  Los usuarios ACT-CSP-001-Investigador, sea cual sea su rol de participación en un proyecto, no podrán acceder al apartado de "Notificación presupuestos SGE".
 
-### Vista ACT\-CSP\-005\-Visor
+### Vista ACT-CSP-005-Visor
 
-La funcionalidad "Notificación presupuestos SGE" solo estará disponible para los ACT\-CSP\-003\-Gestor o ACT\-CSP\-004\-Administrado.  Los usuarios ACT\-CSP\-005\-Visor no podrán acceder al apartado de "Notificación presupuestos SGE".
-
-
-
-
+La funcionalidad "Notificación presupuestos SGE" solo estará disponible para los ACT-CSP-003-Gestor o ACT-CSP-004-Administrado.  Los usuarios ACT-CSP-005-Visor no podrán acceder al apartado de "Notificación presupuestos SGE".

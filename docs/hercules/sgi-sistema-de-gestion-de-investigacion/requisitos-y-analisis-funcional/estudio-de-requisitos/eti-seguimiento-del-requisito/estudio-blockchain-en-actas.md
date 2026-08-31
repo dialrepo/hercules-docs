@@ -1,6 +1,12 @@
-# Hércules : Estudio Blockchain en Actas
+# Estudio Blockchain en Actas
 
-
+* [Introducción](#EstudioBlockchainenActas-Introducción)
+* [Actas](#EstudioBlockchainenActas-Actas)
+  + [Finalizar acta](#EstudioBlockchainenActas-Finalizaracta)
+  + [Confirmar registro blockchain](#EstudioBlockchainenActas-Confirmarregistroblockchain)
+  + [Documento acta](#EstudioBlockchainenActas-Documentoacta)
+* [Cambios en la base de datos](#EstudioBlockchainenActas-Cambiosenlabasededatos)
+* [Variables de configuración](#EstudioBlockchainenActas-Variablesdeconfiguración)
 
 ## Introducción
 
@@ -29,12 +35,12 @@ Añadir a la acción "**Finalizar acta**" (icono del candado) la siguiente funci
 * Llamar al servicio **POST /documentos** con el documento del acta generado. El SGDOC generará el hash del documento y lo guardará como un metadato. Devuelve el identificador del documento.  NUEVA FUNCIONALIDAD A AÑADIR EN EL SGDOC, QUE AL ALMACENAR UN DOCUMENTO CALCULE SU HASH Y LO GUARDE COMO UN METADATO.
 * Guardar en la tabla "Acta" el identificador del documento devuelto por el SGDOC (campo "documentoRef")
 * En el caso que la variable de CONF "blockchain\_enable" este a true:
-	+ Se llamará al servicio para sellar el  documento en blockchain pasando como parámetro el hash del documento.
-	+ Guardar el id de la transacción devuelta en la tabla "Acta" (campo "transaccionRef").
+  + Se llamará al servicio para sellar el  documento en blockchain pasando como parámetro el hash del documento.
+  + Guardar el id de la transacción devuelta en la tabla "Acta" (campo "transaccionRef").
 
 ### Confirmar registro blockchain
 
-Sólo accesible para el rol ACT\-ETI\-001\-Gestor (con el permiso ETI\-ACT\-FIN que es el mismo que para Finalizar acta)
+Sólo accesible para el rol ACT-ETI-001-Gestor (con el permiso ETI-ACT-FIN que es el mismo que para Finalizar acta)
 
 En el caso que la variable de configuración  CNF "blockchain\_enable" este a true  y si el acta esta en estado "Finalizada" se añadirá un nuevo icono en el listado de resultados del buscador de actas que represente a la acción "Confirmar registro".
 
@@ -59,10 +65,3 @@ Crear en la tabla "Acta" los campos:
 ## Variables de configuración
 
 Crear en el módulo de CNF (configuración) una nueva variable que indique si se va a realizar la integración con el blockchain o no. Dicha variable se llamará "blockchain\_enable" que por defecto estará a false.
-
-  
-
-
-
-
-

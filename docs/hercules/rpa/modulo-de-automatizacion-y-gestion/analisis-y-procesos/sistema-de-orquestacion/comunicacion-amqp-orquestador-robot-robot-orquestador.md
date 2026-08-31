@@ -1,6 +1,4 @@
-# Hércules : Comunicación AMQP (Orquestador\-Robot Robot\-Orquestador)
-
-
+# Comunicación AMQP (Orquestador-Robot Robot-Orquestador)
 
 En las secciones anteriores se ha comentado que la comunicación con los robots será bajo el protocolo AMQP. De esta forma se definen diferentes tipos de mensajes, para que tanto el orquestador como el robot sepan lo que tienen que hacer. Los mensajes serán enviados a las colas que se generan cuando un robot o el orquestador se ejecutan.
 
@@ -101,7 +99,3 @@ El robot responderá con un mensaje al orquestador informandole de su estado.
 	"ROBOT": "INFORMACIÓN y ESTADO"
 }
 ```
-
-
-
-

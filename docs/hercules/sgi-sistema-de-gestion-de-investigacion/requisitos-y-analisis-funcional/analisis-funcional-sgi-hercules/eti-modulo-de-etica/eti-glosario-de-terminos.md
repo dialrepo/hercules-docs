@@ -1,8 +1,4 @@
-# Hércules : ETI \- Glosario de Términos
-
-
-
-
+# ETI - Glosario de Términos
 
 | Término | Descripción. |
 | --- | --- |
@@ -12,7 +8,3 @@
 | ETI | Módulo del SGI correspondiente a Ética. |
 | SGE | Sistema de Gestión Económica |
 |  |  |
-
-
-
-

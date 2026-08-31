@@ -1,19 +1,19 @@
-# Hércules : SGI \- ESB \- SGE \- Amortización fondos
+# SGI - ESB - SGE - Amortización fondos
 
+---
 
-
-  
-
-
-
-
-
+* [Ejecución económica](#SGIESBSGEAmortizaciónfondos-Ejecucióneconómica)
+  + [Entidades](#SGIESBSGEAmortizaciónfondos-Entidades)
+  + [API](#SGIESBSGEAmortizaciónfondos-API)
+    - [Definición de los objetos](#SGIESBSGEAmortizaciónfondos-Definicióndelosobjetos)
+      * [PeriodoAmortizacion](#SGIESBSGEAmortizaciónfondos-PeriodoAmortizacion)
+      * [TipoFinanciacion](#SGIESBSGEAmortizaciónfondos-TipoFinanciacion)
+      * [FuenteFinanciacion](#SGIESBSGEAmortizaciónfondos-FuenteFinanciacion)
+    - [Servicios](#SGIESBSGEAmortizaciónfondos-Servicios)
 
 ## Ejecución económica
 
 ### Entidades
-
-
 
 | Entidad | Descripción |
 | --- | --- |
@@ -25,17 +25,16 @@
 
 Características generales que todas las API REST deben de cumplir:
 
-* [Consultas filtradas y paginadas](https://confluence.um.es/confluence/display/HERCULES/Consultas+filtradas+y+paginadas "https://confluence.um.es/confluence/display/HERCULES/Consultas+filtradas+y+paginadas")
-* [Formatos de datos API](https://confluence.um.es/confluence/display/HERCULES/Formatos+de+datos+API "https://confluence.um.es/confluence/display/HERCULES/Formatos+de+datos+API")
+* [Consultas filtradas y paginadas](/hercules/sgi-sistema-de-gestion-de-investigacion/desarrollo-y-configuracion/estandares-de-desarrollo/consultas-filtradas-y-paginadas)
+* [Formatos de datos API](/hercules/sgi-sistema-de-gestion-de-investigacion/desarrollo-y-configuracion/estandares-de-desarrollo/formatos-de-datos-api)
 
 #### Definición de los objetos
 
 ##### PeriodoAmortizacion
 
-
-
-| **Nombre** | **Tipo** | **Descripción** |
+|  |  |  |
 | --- | --- | --- |
+| **Nombre** | **Tipo** | **Descripción** |
 | id | String | Identificador interno del SGI del periodo de amortización. Debe de ser único. |
 | proyectoId | String | Identificación del proyecto SGE |
 | anualidad | String | Anualidad |
@@ -68,19 +67,17 @@ Características generales que todas las API REST deben de cumplir:
 
 ##### TipoFinanciacion
 
-
-
-| **Nombre** | **Tipo** | **Descripción** |
+|  |  |  |
 | --- | --- | --- |
+| **Nombre** | **Tipo** | **Descripción** |
 | id | String | Identificador interno del SGI del tipo de financiación. |
 | nombre | String | Nombre del tipo de financiación |
 
 ##### FuenteFinanciacion
 
-
-
-| **Nombre** | **Tipo** | **Descripción** |
+|  |  |  |
 | --- | --- | --- |
+| **Nombre** | **Tipo** | **Descripción** |
 | id | String | Identificador interno del SGI de la fuente de financiación. |
 | nombre | String | Nombre de la fuente de financiación |
 
@@ -90,13 +87,6 @@ Para componer la URL llamada completa, se debe anteponer a lo indicado en la col
 
 | Servicio | Método | URL | Parámetros | Respuesta | Descripción |
 | --- | --- | --- | --- | --- | --- |
-| [SGI \- ESB \- SGE \- Amortización fondos \- Período amortización \- Eliminar](https://confluence.um.es/confluence/pages/viewpage.action?pageId=597853060 "/confluence/pages/viewpage.action?pageId=597853060") | DELETE | /periodos\-amortizacion/{id} |  |  | Elimina un periodo de amortización. Se pasa por url el identificador del periodo de amortización. |
-| [SGI \- ESB \- SGE \- Amortización fondos \- Período amortización \- Modificar](https://confluence.um.es/confluence/pages/viewpage.action?pageId=597853059 "/confluence/pages/viewpage.action?pageId=597853059") | PUT | /periodos\-amortizacion/{id} | [PeriodoAmortizacion](https://confluence.um.es/confluence/pages/viewpage.action?pageId=120032553#SGIESBSGEAmortizaci%C3%B3nfondos-PeriodoAmortizacion "https://confluence.um.es/confluence/pages/viewpage.action?pageId=120032553#SGIESBSGEAmortizaci%C3%B3nfondos-PeriodoAmortizacion") |  | Modifica un periodo de amortización. Se pasa por url el identificador del periodo de amortización. |
-| [SGI \- ESB \- SGE \- Amortización fondos \- Período amortización \- Crear](https://confluence.um.es/confluence/pages/viewpage.action?pageId=597853058 "/confluence/pages/viewpage.action?pageId=597853058") | POST | /periodos\-amortizacion | [PeriodoAmortizacion](https://confluence.um.es/confluence/pages/viewpage.action?pageId=120032553#SGIESBSGEAmortizaci%C3%B3nfondos-PeriodoAmortizacion "https://confluence.um.es/confluence/pages/viewpage.action?pageId=120032553#SGIESBSGEAmortizaci%C3%B3nfondos-PeriodoAmortizacion") |  | Crea un periodo de amortización |
-
-  
-
-
-
-
-
+| [SGI - ESB - SGE - Amortización fondos - Período amortización - Eliminar](/confluence/spaces/HERCULES/pages/597853060/SGI+-+ESB+-+SGE+-+Amortizaci%C3%B3n+fondos+-+Per%C3%ADodo+amortizaci%C3%B3n+-+Eliminar) | DELETE | /periodos-amortizacion/{id} |  |  | Elimina un periodo de amortización. Se pasa por url el identificador del periodo de amortización. |
+| [SGI - ESB - SGE - Amortización fondos - Período amortización - Modificar](/confluence/spaces/HERCULES/pages/597853059/SGI+-+ESB+-+SGE+-+Amortizaci%C3%B3n+fondos+-+Per%C3%ADodo+amortizaci%C3%B3n+-+Modificar) | PUT | /periodos-amortizacion/{id} | [PeriodoAmortizacion](https://confluence.um.es/confluence/pages/viewpage.action?pageId=120032553#SGIESBSGEAmortizaci%C3%B3nfondos-PeriodoAmortizacion) |  | Modifica un periodo de amortización. Se pasa por url el identificador del periodo de amortización. |
+| [SGI - ESB - SGE - Amortización fondos - Período amortización - Crear](/confluence/spaces/HERCULES/pages/597853058/SGI+-+ESB+-+SGE+-+Amortizaci%C3%B3n+fondos+-+Per%C3%ADodo+amortizaci%C3%B3n+-+Crear) | POST | /periodos-amortizacion | [PeriodoAmortizacion](https://confluence.um.es/confluence/pages/viewpage.action?pageId=120032553#SGIESBSGEAmortizaci%C3%B3nfondos-PeriodoAmortizacion) |  | Crea un periodo de amortización |

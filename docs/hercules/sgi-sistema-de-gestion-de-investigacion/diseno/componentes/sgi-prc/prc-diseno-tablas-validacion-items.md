@@ -1,14 +1,23 @@
-# Hércules : PRC \- Diseño Tablas: Validación items
+# PRC - Diseño Tablas: Validación items
 
-
+* [Configuración tablas y enumerados](#PRCDiseñoTablas:Validaciónitems-Configuracióntablasyenumerados)
+  + [Enumerados](#PRCDiseñoTablas:Validaciónitems-Enumerados)
+    - [TipoEstadoProduccion](#PRCDiseñoTablas:Validaciónitems-TipoEstadoProduccion)
+    - [TipoFuenteImpacto](#PRCDiseñoTablas:Validaciónitems-TipoFuenteImpacto)
+    - [TipoRanking](#PRCDiseñoTablas:Validaciónitems-TipoRanking)
+    - [CampoCVN](#PRCDiseñoTablas:Validaciónitems-CampoCVN)
+    - [EpigrafeCVN](#PRCDiseñoTablas:Validaciónitems-EpigrafeCVN)
+    - [TipoFormato](#PRCDiseñoTablas:Validaciónitems-TipoFormato)
+    - [TablaMaestraCVN](#PRCDiseñoTablas:Validaciónitems-TablaMaestraCVN)
+  + [Tablas](#PRCDiseñoTablas:Validaciónitems-Tablas)
+    - [AliasEnumerado (sólo se usa para los enumerados que se usan en mas de un campo CVN)](#PRCDiseñoTablas:Validaciónitems-AliasEnumerado(sóloseusaparalosenumeradosqueseusanenmasdeuncampoCVN))
+    - [ConfiguracionCampo](#PRCDiseñoTablas:Validaciónitems-ConfiguracionCampo)
 
 ## Configuración tablas y enumerados
 
 ### Enumerados
 
 #### TipoEstadoProduccion
-
-
 
 | codigo | texto a mostrar en pantalla |
 | --- | --- |
@@ -18,8 +27,6 @@
 | RECHAZADO | Rechazado |
 
 #### TipoFuenteImpacto
-
-
 
 | codigo | texto a mostrar en pantalla |
 | --- | --- |
@@ -34,13 +41,11 @@
 | ERIH | ERIH |
 | MIAR | MIAR |
 | FECYT | FECYT |
-| GII\_GRIN\_SCIE | GII\-GRIN\-SCIE |
+| GII\_GRIN\_SCIE | GII-GRIN-SCIE |
 | CORE | CORE |
 | OTHERS | Otros |
 
 #### TipoRanking
-
-
 
 | codigo | texto a mostrar en pantalla |
 | --- | --- |
@@ -52,111 +57,105 @@
 
 #### CampoCVN
 
-
-
 | codigo | texto a mostrar en pantalla |
 | --- | --- |
-| 060\.010\.010\.030 | Título de la publicación |
-| 060\.010\.010\.140 | Fecha de la publicación |
-| 060\.010\.010\.010 | Tipo de producción |
-| 060\.010\.010\.070 | Tipo de soporte |
-| 060\.010\.010\.210 | Nombre de la publicación |
-| 060\.010\.010\.160 | ISBN \- ISSN publicación |
-| 060\.010\.010\.100 | Editorial |
-| 060\.010\.010\.080 | Volumen \- Número |
-| 060\.010\.010\.090 | Página inicial \- final |
-| 060\.010\.010\.390 | Autor/a de correspondencia |
-| 060\.010\.010\.400 | Identificadores digitales |
-| 060\.010\.010\.410 | Tipo identificadores digitales |
-| 060\.010\.010\.300 | Publicación relevante |
+| 060.010.010.030 | Título de la publicación |
+| 060.010.010.140 | Fecha de la publicación |
+| 060.010.010.010 | Tipo de producción |
+| 060.010.010.070 | Tipo de soporte |
+| 060.010.010.210 | Nombre de la publicación |
+| 060.010.010.160 | ISBN - ISSN publicación |
+| 060.010.010.100 | Editorial |
+| 060.010.010.080 | Volumen - Número |
+| 060.010.010.090 | Página inicial - final |
+| 060.010.010.390 | Autor/a de correspondencia |
+| 060.010.010.400 | Identificadores digitales |
+| 060.010.010.410 | Tipo identificadores digitales |
+| 060.010.010.300 | Publicación relevante |
 | INDICE\_NORMALIZADO | Indice normalizado |
 | PUBLICACION\_MUY\_RELEVANTE | Publicación muy televante |
 | TIPO\_OPEN\_ACCESS | Tipo Open Access |
 | INTERNACIONAL | Internacional |
 | INTERDISCIPLINAR | Interdisciplinar |
-| 060\.010\.020\.030 | Título del trabajo |
-| 060\.010\.020\.190 | Fecha de celebración |
-| 060\.010\.020\.380 | Fecha de finalización |
-| 060\.010\.020\.010 | Tipo de evento |
-| 060\.010\.020\.080 | Ámbito geográfico |
-| 060\.010\.020\.100 | Nombre del congreso |
-| 060\.010\.020\.370 | Nombre de la publicación |
-| 060\.010\.020\.320 | ISBN \- ISSN publicación |
-| 060\.010\.020\.050 | Tipo de participación |
-| 060\.010\.020\.390 | Autor/a de de correspondencia |
+| 060.010.020.030 | Título del trabajo |
+| 060.010.020.190 | Fecha de celebración |
+| 060.010.020.380 | Fecha de finalización |
+| 060.010.020.010 | Tipo de evento |
+| 060.010.020.080 | Ámbito geográfico |
+| 060.010.020.100 | Nombre del congreso |
+| 060.010.020.370 | Nombre de la publicación |
+| 060.010.020.320 | ISBN - ISSN publicación |
+| 060.010.020.050 | Tipo de participación |
+| 060.010.020.390 | Autor/a de de correspondencia |
 | RESUMEN\_REVISTA | Resumen o abstract en una revista |
-| 050\.020\.030\.010 | Descripción |
-| 050\.020\.030\.020 | Nombre de la exposición |
-| 050\.020\.030\.120 | Fecha de inicio |
-| 050\.020\.030\.040 | País celebración |
-| 050\.020\.030\.050 | Comunidad Autónoma |
-| 050\.020\.030\.090 | Monográfica |
-| 050\.020\.030\.100 | Catálogo |
-| 050\.020\.030\.110 | Comisario de exposición |
+| 050.020.030.010 | Descripción |
+| 050.020.030.020 | Nombre de la exposición |
+| 050.020.030.120 | Fecha de inicio |
+| 050.020.030.040 | País celebración |
+| 050.020.030.050 | Comunidad Autónoma |
+| 050.020.030.090 | Monográfica |
+| 050.020.030.100 | Catálogo |
+| 050.020.030.110 | Comisario de exposición |
 | COLECTIVA | Colectiva |
 | TIPO\_OBRA | Tipo |
-| 060\.030\.030\.010 | Nombre del comité editorial |
-| 060\.030\.030\.020 | País de radicación |
-| 060\.030\.030\.140 | Fecha de inicio |
+| 060.030.030.010 | Nombre del comité editorial |
+| 060.030.030.020 | País de radicación |
+| 060.030.030.140 | Fecha de inicio |
 | ISSN | ISSN |
-| 060\.030\.030\.100 | Categoría profesional |
-| 030\.040\.000\.030 | Título del trabajo |
-| 030\.040\.000\.140 | Fecha de defensa |
-| 030\.040\.000\.120 | Alumno/a |
-| 030\.040\.000\.170 | Mención de calidad del programa |
-| 030\.040\.000\.200 | Fecha Mención de calidad |
-| 030\.040\.000\.190 | Doctorado Europeo |
-| 030\.040\.000\.160 | Si es Doctorado Europeo, fecha de mención |
-| 030\.040\.000\.010 | Tipo de proyecto |
+| 060.030.030.100 | Categoría profesional |
+| 030.040.000.030 | Título del trabajo |
+| 030.040.000.140 | Fecha de defensa |
+| 030.040.000.120 | Alumno/a |
+| 030.040.000.170 | Mención de calidad del programa |
+| 030.040.000.200 | Fecha Mención de calidad |
+| 030.040.000.190 | Doctorado Europeo |
+| 030.040.000.160 | Si es Doctorado Europeo, fecha de mención |
+| 030.040.000.010 | Tipo de proyecto |
 | MENCION\_INDUSTRIAL | Mención Industrial |
 | MENCION\_INTERNACIONAL | Mención Internacional |
-| 060\.020\.030\.010 | Título de la actividad |
-| 060\.020\.030\.160 | Fecha de inicio |
-| 060\.020\.030\.020 | Tipo de actividad |
-| 060\.020\.030\.030 | País de celebración |
-| 060\.020\.030\.110 | Modo de participación |
-| 050\.020\.010\.010 | Nombre del proyecto |
-| 050\.020\.010\.270 | Fecha de inicio del proyecto |
-| 050\.020\.010\.410 | Fecha de fin del proyecto |
-| 050\.020\.010\.040 | Ámbito del proyecto |
-| 050\.020\.010\.290 | Cuantía total |
+| 060.020.030.010 | Título de la actividad |
+| 060.020.030.160 | Fecha de inicio |
+| 060.020.030.020 | Tipo de actividad |
+| 060.020.030.030 | País de celebración |
+| 060.020.030.110 | Modo de participación |
+| 050.020.010.010 | Nombre del proyecto |
+| 050.020.010.270 | Fecha de inicio del proyecto |
+| 050.020.010.410 | Fecha de fin del proyecto |
+| 050.020.010.040 | Ámbito del proyecto |
+| 050.020.010.290 | Cuantía total |
 | CONVOCATORIA\_EXCELENCIA | Convocatoria de excelencia |
 | CUANTIA\_COSTES\_INDIRECTOS\_PROYECTO | Cuantía total de costes indirectos |
-| 050\.020\.020\.010 | Nombre del proyecto |
-| 050\.020\.020\.180 | Fecha de inicio del proyecto |
+| 050.020.020.010 | Nombre del proyecto |
+| 050.020.020.180 | Fecha de inicio del proyecto |
 | FECHA\_FIN\_CONTRATO | Fecha de fin del proyecto |
-| 050\.020\.020\.200 | Cuantía total |
+| 050.020.020.200 | Cuantía total |
 | CUANTIA\_COSTES\_INDIRECTOS\_CONTRATO | Cuantía total de costes indirectos |
-| 050\.030\.010\.020 | Título/nombre/denominación |
+| 050.030.010.020 | Título/nombre/denominación |
 | PORCENTAJE\_TITULARIDAD | Porcentaje de titularidad de la Universidad |
-| 050\.030\.010\.030 | Tipo de la propiedad industrial |
-| 050\.030\.010\.320 | Fecha de concesión |
-| 050\.030\.010\.160 | Ámbito geográfico, España |
-| 050\.030\.010\.170 | Ámbito geográfico, patente europea |
+| 050.030.010.030 | Tipo de la propiedad industrial |
+| 050.030.010.320 | Fecha de concesión |
+| 050.030.010.160 | Ámbito geográfico, España |
+| 050.030.010.170 | Ámbito geográfico, patente europea |
 | CUANTIA\_LICENCIAS | Cuantía de las suma de las licencias de explotación, suma de los ingresos de los contratos relacionados con la invención |
-| 060\.030\.070\.010 | Número de tramos de investigación reconocidos |
+| 060.030.070.010 | Número de tramos de investigación reconocidos |
 | ANIO\_SEXENIOS | Año del número de sexenios |
 
 #### EpigrafeCVN
 
-
-
 | codigo | Comentarios (no forma parte del enumerado) |
 | --- | --- |
-| 060\.010\.010\.000 | Publicaciones, documentos científicos y técnicos |
-| 060\.010\.020\.000 | Trabajos presentados en congresos nacionales o internacionales |
-| 050\.020\.030\.000 | Obras artísticas dirigidas |
-| 060\.030\.030\.000 | Consejos/comités editoriales |
-| 050\.030\.010\.000 | Invenciones |
-| 050\.020\.020\.000 | Contratos |
-| 050\.020\.010\.000 | Proyecto de investigación |
-| 060\.020\.030\.000 | Organización actividades I\+D\+i |
-| 030\.040\.000\.000 | Dirección de tesis |
-| 060\.030\.070\.000 | Sexenios (Periodos de actividad investigadora) |
+| 060.010.010.000 | Publicaciones, documentos científicos y técnicos |
+| 060.010.020.000 | Trabajos presentados en congresos nacionales o internacionales |
+| 050.020.030.000 | Obras artísticas dirigidas |
+| 060.030.030.000 | Consejos/comités editoriales |
+| 050.030.010.000 | Invenciones |
+| 050.020.020.000 | Contratos |
+| 050.020.010.000 | Proyecto de investigación |
+| 060.020.030.000 | Organización actividades I+D+i |
+| 030.040.000.000 | Dirección de tesis |
+| 060.030.070.000 | Sexenios (Periodos de actividad investigadora) |
 
 #### TipoFormato
-
-
 
 | codigo |
 | --- |
@@ -168,59 +167,57 @@
 
 #### TablaMaestraCVN
 
-
-
 | codigo | Texto a mostrar |
 | --- | --- |
-| 060\.010\.010\.010\.004 | Capítulo de libro |
-| 060\.010\.010\.010\.018 | Informe científico\-técnico |
-| 060\.010\.010\.010\.020 | Artículo científico |
-| 060\.010\.010\.010\.032 | Libro o monografía científica |
-| 060\.010\.010\.010\.075 | Artículos en prensa |
-| 060\.010\.010\.010\.106 | Diccionario común |
-| 060\.010\.010\.010\.173 | Revistas de difusión General |
-| 060\.010\.010\.010\.202 | Artículo de enciclopedia |
-| 060\.010\.010\.010\.203 | Artículo de divulgación |
-| 060\.010\.010\.010\.204 | Traducción |
-| 060\.010\.010\.010\.205 | Reseña |
-| 060\.010\.010\.010\.206 | Revisión bibliográfica |
-| 060\.010\.010\.010\.207 | Libro de divulgación |
-| 060\.010\.010\.010\.208 | Edición científica |
-| 060\.010\.010\.010\.209 | Diccionario científico |
-| 060\.010\.010\.010\.OTHERS | Otros |
-| 060\.010\.010\.010\.COMENTARIO\_SISTEMATICO\_NORMAS | Comentario sistemático a normas |
-| 060\.010\.010\.070\.006 | Catálogo de obra artística |
-| 060\.010\.010\.070\.018 | Documento o Informe científico\-técnico |
-| 060\.010\.010\.070\.032 | Libro |
-| 060\.010\.010\.070\.057 | Revista |
-| 060\.010\.010\.410\.040 | DOI |
-| 060\.010\.010\.410\.120 | Handle |
-| 060\.010\.010\.410\.130 | PMID |
-| 060\.010\.010\.410\.OTHERS | Otros |
+| 060.010.010.010.004 | Capítulo de libro |
+| 060.010.010.010.018 | Informe científico-técnico |
+| 060.010.010.010.020 | Artículo científico |
+| 060.010.010.010.032 | Libro o monografía científica |
+| 060.010.010.010.075 | Artículos en prensa |
+| 060.010.010.010.106 | Diccionario común |
+| 060.010.010.010.173 | Revistas de difusión General |
+| 060.010.010.010.202 | Artículo de enciclopedia |
+| 060.010.010.010.203 | Artículo de divulgación |
+| 060.010.010.010.204 | Traducción |
+| 060.010.010.010.205 | Reseña |
+| 060.010.010.010.206 | Revisión bibliográfica |
+| 060.010.010.010.207 | Libro de divulgación |
+| 060.010.010.010.208 | Edición científica |
+| 060.010.010.010.209 | Diccionario científico |
+| 060.010.010.010.OTHERS | Otros |
+| 060.010.010.010.COMENTARIO\_SISTEMATICO\_NORMAS | Comentario sistemático a normas |
+| 060.010.010.070.006 | Catálogo de obra artística |
+| 060.010.010.070.018 | Documento o Informe científico-técnico |
+| 060.010.010.070.032 | Libro |
+| 060.010.010.070.057 | Revista |
+| 060.010.010.410.040 | DOI |
+| 060.010.010.410.120 | Handle |
+| 060.010.010.410.130 | PMID |
+| 060.010.010.410.OTHERS | Otros |
 | TIPO\_OPEN\_ACCESS.ALL | All open Access |
 | TIPO\_OPEN\_ACCESS.GOLD | Gold |
 | TIPO\_OPEN\_ACCESS.HYBRID\_GOLD | Hybrid Gold |
 | TIPO\_OPEN\_ACCESS.BRONZE | Bronze |
 | TIPO\_OPEN\_ACCESS.GREEN | Green |
-| 060\.010\.020\.010\.008 | Congreso |
-| 060\.010\.020\.010\.031 | Jornada |
-| 060\.010\.020\.010\.063 | Seminario |
-| 060\.010\.020\.010\.OTHERS | Otros |
+| 060.010.020.010.008 | Congreso |
+| 060.010.020.010.031 | Jornada |
+| 060.010.020.010.063 | Seminario |
+| 060.010.020.010.OTHERS | Otros |
 | AMBITO.000 | Autonómica |
 | AMBITO.010 | Nacional |
 | AMBITO.020 | Unión Europea |
 | AMBITO.030 | Internacional no UE |
 | AMBITO.OTHERS | Otros |
-| 060\.010\.020\.050\.050 | Organizativo \- Presidente Comité |
-| 060\.010\.020\.050\.060 | Organizativo \- Comité científico y organizador |
-| 060\.010\.020\.050\.070 | Organizativo \- Otros |
-| 060\.010\.020\.050\.080 | Participativo \- Plenaria |
-| 060\.010\.020\.050\.730 | Participativo \- Ponencia invitada/ Keynote |
-| 060\.010\.020\.050\.960 | Participativo \- Ponencia oral (comunicación oral) |
-| 060\.010\.020\.050\.970 | Participativo \- Póster |
-| 060\.010\.020\.050\.980 | Comité organizador |
-| 060\.010\.020\.050\.990 | Comité científico |
-| 060\.010\.020\.050\.OTHERS | Participativo \- Otros |
+| 060.010.020.050.050 | Organizativo - Presidente Comité |
+| 060.010.020.050.060 | Organizativo - Comité científico y organizador |
+| 060.010.020.050.070 | Organizativo - Otros |
+| 060.010.020.050.080 | Participativo - Plenaria |
+| 060.010.020.050.730 | Participativo - Ponencia invitada/ Keynote |
+| 060.010.020.050.960 | Participativo - Ponencia oral (comunicación oral) |
+| 060.010.020.050.970 | Participativo - Póster |
+| 060.010.020.050.980 | Comité organizador |
+| 060.010.020.050.990 | Comité científico |
+| 060.010.020.050.OTHERS | Participativo - Otros |
 |  |  |
 | PAIS.008 | Albania |
 | PAIS.276 | Alemania |
@@ -314,7 +311,7 @@
 | PAIS.831 | Guernsey |
 | PAIS.324 | Guinea |
 | PAIS.226 | Guinea Ecuatorial |
-| PAIS.624 | Guinea\-Bissau |
+| PAIS.624 | Guinea-Bissau |
 | PAIS.328 | Guyana |
 | PAIS.332 | Haití |
 | PAIS.334 | Heard and Mcdonald, Islas |
@@ -471,8 +468,8 @@
 | PAIS.716 | Zimbabwe |
 | COMUNIDAD.DEA5 | Arnsberg |
 | COMUNIDAD.DE30 | Berlin |
-| COMUNIDAD.DE41 | Brandenburg \- Nordost |
-| COMUNIDAD.DE42 | Brandenburg \- Südwest |
+| COMUNIDAD.DE41 | Brandenburg - Nordost |
+| COMUNIDAD.DE42 | Brandenburg - Südwest |
 | COMUNIDAD.DE91 | Braunschweig |
 | COMUNIDAD.DE50 | Bremen |
 | COMUNIDAD.DED1 | Chemnitz |
@@ -481,7 +478,7 @@
 | COMUNIDAD.DEA4 | Detmold |
 | COMUNIDAD.DED2 | Dresden |
 | COMUNIDAD.DEA1 | Düsseldorf |
-| COMUNIDAD.DEZZ | Extra\-Regio |
+| COMUNIDAD.DEZZ | Extra-Regio |
 | COMUNIDAD.DE13 | Freiburg |
 | COMUNIDAD.DE72 | Gießen |
 | COMUNIDAD.DEE2 | Halle |
@@ -494,42 +491,42 @@
 | COMUNIDAD.DED3 | Leipzig |
 | COMUNIDAD.DE93 | Lüneburg |
 | COMUNIDAD.DEE3 | Magdeburg |
-| COMUNIDAD.DE80 | Mecklenburg\-Vorpommern |
+| COMUNIDAD.DE80 | Mecklenburg-Vorpommern |
 | COMUNIDAD.DE25 | Mittelfranken |
 | COMUNIDAD.DEA3 | Münster |
 | COMUNIDAD.DE22 | Niederbayern |
 | COMUNIDAD.DE21 | Oberbayern |
 | COMUNIDAD.DE24 | Oberfranken |
 | COMUNIDAD.DE23 | Oberpfalz |
-| COMUNIDAD.DEB3 | Rheinhessen\-Pfalz |
+| COMUNIDAD.DEB3 | Rheinhessen-Pfalz |
 | COMUNIDAD.DEC0 | Saarland |
-| COMUNIDAD.DEF0 | Schleswig\-Holstein |
+| COMUNIDAD.DEF0 | Schleswig-Holstein |
 | COMUNIDAD.DE27 | Schwaben |
 | COMUNIDAD.DE11 | Stuttgart |
 | COMUNIDAD.DEG0 | Thüringen |
 | COMUNIDAD.DEB2 | Trier |
 | COMUNIDAD.DE14 | Tübingen |
 | COMUNIDAD.DE26 | Unterfranken |
-| COMUNIDAD.DE94 | Weser\-Ems |
-| COMUNIDAD.CYZZ | Extra\-Regio |
+| COMUNIDAD.DE94 | Weser-Ems |
+| COMUNIDAD.CYZZ | Extra-Regio |
 | COMUNIDAD.CY00 | Kypros / Kibris |
 | COMUNIDAD.DK00 | Danmark |
-| COMUNIDAD.DKZZ | Extra\-Regio |
-| COMUNIDAD.SIZZ | Extra\-Regio |
+| COMUNIDAD.DKZZ | Extra-Regio |
+| COMUNIDAD.SIZZ | Extra-Regio |
 | COMUNIDAD.SI00 | Slovenija |
 | COMUNIDAD.ES61 | Andalucía |
 | COMUNIDAD.ES24 | Aragón |
 | COMUNIDAD.ES70 | Canarias |
 | COMUNIDAD.ES13 | Cantabria |
 | COMUNIDAD.ES41 | Castilla y León |
-| COMUNIDAD.ES42 | Castilla\-La Mancha |
+| COMUNIDAD.ES42 | Castilla-La Mancha |
 | COMUNIDAD.ES51 | Cataluña |
 | COMUNIDAD.ES63 | Ciudad Autónoma de Ceuta |
 | COMUNIDAD.ES64 | Ciudad Autónoma de Melilla |
 | COMUNIDAD.ES30 | Comunidad de Madrid |
 | COMUNIDAD.ES22 | Comunidad Foral de Navarra |
 | COMUNIDAD.ES52 | Comunidad Valenciana |
-| COMUNIDAD.ESZZ | Extra\-Regio |
+| COMUNIDAD.ESZZ | Extra-Regio |
 | COMUNIDAD.ES43 | Extremadura |
 | COMUNIDAD.ES11 | Galicia |
 | COMUNIDAD.ES53 | Illes Balears |
@@ -538,45 +535,45 @@
 | COMUNIDAD.ES12 | Principado de Asturias |
 | COMUNIDAD.ES62 | Región de Murcia |
 | COMUNIDAD.EE00 | Eesti |
-| COMUNIDAD.EEZZ | Extra\-Regio |
-| COMUNIDAD.FI18 | Etelä\-Suomi |
-| COMUNIDAD.FIZZ | Extra\-Regio |
-| COMUNIDAD.FI13 | Itä\-Suomi |
-| COMUNIDAD.FI19 | Länsi\-Suomi |
-| COMUNIDAD.FI1A | Pohjois\-Suomi |
+| COMUNIDAD.EEZZ | Extra-Regio |
+| COMUNIDAD.FI18 | Etelä-Suomi |
+| COMUNIDAD.FIZZ | Extra-Regio |
+| COMUNIDAD.FI13 | Itä-Suomi |
+| COMUNIDAD.FI19 | Länsi-Suomi |
+| COMUNIDAD.FI1A | Pohjois-Suomi |
 | COMUNIDAD.FI20 | Åland |
 | COMUNIDAD.FR42 | Alsace |
 | COMUNIDAD.FR61 | Aquitaine |
 | COMUNIDAD.FR72 | Auvergne |
-| COMUNIDAD.FR25 | Basse\-Normandie |
+| COMUNIDAD.FR25 | Basse-Normandie |
 | COMUNIDAD.FR26 | Bourgogne |
 | COMUNIDAD.FR52 | Bretagne |
 | COMUNIDAD.FR24 | Centre |
-| COMUNIDAD.FR21 | Champagne\-Ardenne |
+| COMUNIDAD.FR21 | Champagne-Ardenne |
 | COMUNIDAD.FR83 | Corse |
-| COMUNIDAD.FRZZ | Extra\-Regio |
-| COMUNIDAD.FR43 | Franche\-Comté |
+| COMUNIDAD.FRZZ | Extra-Regio |
+| COMUNIDAD.FR43 | Franche-Comté |
 | COMUNIDAD.FR91 | Guadeloupe |
 | COMUNIDAD.FR93 | Guyane |
-| COMUNIDAD.FR23 | Haute\-Normandie |
+| COMUNIDAD.FR23 | Haute-Normandie |
 | COMUNIDAD.FR10 | Île de France |
-| COMUNIDAD.FR81 | Languedoc\-Roussillon |
+| COMUNIDAD.FR81 | Languedoc-Roussillon |
 | COMUNIDAD.FR63 | Limousin |
 | COMUNIDAD.FR41 | Lorraine |
 | COMUNIDAD.FR92 | Martinique |
-| COMUNIDAD.FR62 | Midi\-Pyrénées |
-| COMUNIDAD.FR30 | Nord \- Pas\-de\-Calais |
+| COMUNIDAD.FR62 | Midi-Pyrénées |
+| COMUNIDAD.FR30 | Nord - Pas-de-Calais |
 | COMUNIDAD.FR51 | Pays de la Loire |
 | COMUNIDAD.FR22 | Picardie |
-| COMUNIDAD.FR53 | Poitou\-Charentes |
-| COMUNIDAD.FR82 | Provence\-Alpes\-Côte d'Azur |
+| COMUNIDAD.FR53 | Poitou-Charentes |
+| COMUNIDAD.FR82 | Provence-Alpes-Côte d'Azur |
 | COMUNIDAD.FR94 | Réunion |
-| COMUNIDAD.FR71 | Rhône\-Alpes |
+| COMUNIDAD.FR71 | Rhône-Alpes |
 | COMUNIDAD.GR11 | Anatoliki Makedonia, Thraki |
 | COMUNIDAD.GR30 | Attiki |
 | COMUNIDAD.GR23 | Dytiki Ellada |
 | COMUNIDAD.GR13 | Dytiki Makedonia |
-| COMUNIDAD.GRZZ | Extra\-Regio |
+| COMUNIDAD.GRZZ | Extra-Regio |
 | COMUNIDAD.GR22 | Ionia Nisia |
 | COMUNIDAD.GR21 | Ipeiros |
 | COMUNIDAD.GR12 | Kentriki Makedonia |
@@ -587,36 +584,36 @@
 | COMUNIDAD.GR14 | Thessalia |
 | COMUNIDAD.GR41 | Voreio Aigaio |
 | COMUNIDAD.NL13 | Drenthe |
-| COMUNIDAD.NLZZ | Extra\-Regio |
+| COMUNIDAD.NLZZ | Extra-Regio |
 | COMUNIDAD.NL23 | Flevoland |
 | COMUNIDAD.NL12 | Friesland |
 | COMUNIDAD.NL22 | Gelderland |
 | COMUNIDAD.NL11 | Groningen |
 | COMUNIDAD.NL42 | Limburg (NL) |
-| COMUNIDAD.NL41 | Noord\-Brabant |
-| COMUNIDAD.NL32 | Noord\-Holland |
+| COMUNIDAD.NL41 | Noord-Brabant |
+| COMUNIDAD.NL32 | Noord-Holland |
 | COMUNIDAD.NL21 | Overijssel |
 | COMUNIDAD.NL31 | Utrecht |
 | COMUNIDAD.NL34 | Zeeland |
-| COMUNIDAD.NL33 | Zuid\-Holland |
-| COMUNIDAD.HU33 | Del\-Alfold |
-| COMUNIDAD.HU23 | Del\-Dunantul |
-| COMUNIDAD.HU32 | Eszak\-Alfold |
-| COMUNIDAD.HU31 | Eszak\-Magyarorszag |
-| COMUNIDAD.HUZZ | Extra\-Regio |
-| COMUNIDAD.HU21 | Kozep\-Dunantul |
-| COMUNIDAD.HU10 | Kozep\-Magyarorszag |
-| COMUNIDAD.HU22 | Nyugat\-Dunantul |
+| COMUNIDAD.NL33 | Zuid-Holland |
+| COMUNIDAD.HU33 | Del-Alfold |
+| COMUNIDAD.HU23 | Del-Dunantul |
+| COMUNIDAD.HU32 | Eszak-Alfold |
+| COMUNIDAD.HU31 | Eszak-Magyarorszag |
+| COMUNIDAD.HUZZ | Extra-Regio |
+| COMUNIDAD.HU21 | Kozep-Dunantul |
+| COMUNIDAD.HU10 | Kozep-Magyarorszag |
+| COMUNIDAD.HU22 | Nyugat-Dunantul |
 | COMUNIDAD.IE01 | Border, Midland and Western |
-| COMUNIDAD.IEZZ | Extra\-Regio |
+| COMUNIDAD.IEZZ | Extra-Regio |
 | COMUNIDAD.IE02 | Southern and Eastern |
 | COMUNIDAD.ITF1 | Abruzzo |
 | COMUNIDAD.ITF5 | Basilicata |
 | COMUNIDAD.ITF6 | Calabria |
 | COMUNIDAD.ITF3 | Campania |
-| COMUNIDAD.ITD5 | Emilia\-Romagna |
-| COMUNIDAD.ITZZ | Extra\-Regio |
-| COMUNIDAD.ITD4 | Friuli\-Venezia Giulia |
+| COMUNIDAD.ITD5 | Emilia-Romagna |
+| COMUNIDAD.ITZZ | Extra-Regio |
+| COMUNIDAD.ITD4 | Friuli-Venezia Giulia |
 | COMUNIDAD.ITE4 | Lazio |
 | COMUNIDAD.ITC3 | Liguria |
 | COMUNIDAD.ITC4 | Lombardia |
@@ -632,17 +629,17 @@
 | COMUNIDAD.ITE2 | Umbria |
 | COMUNIDAD.ITC2 | Valle d'Aosta/Vallée d'Aoste |
 | COMUNIDAD.ITD3 | Veneto |
-| COMUNIDAD.LVZZ | Extra\-Regio |
+| COMUNIDAD.LVZZ | Extra-Regio |
 | COMUNIDAD.LV00 | Latvija |
-| COMUNIDAD.LTZZ | Extra\-Regio |
+| COMUNIDAD.LTZZ | Extra-Regio |
 | COMUNIDAD.LT00 | Lietuva |
-| COMUNIDAD.LUZZ | Extra\-Regio |
-| COMUNIDAD.LU00 | Luxembourg (Grand\-Duché) |
-| COMUNIDAD.MTZZ | Extra\-Regio |
+| COMUNIDAD.LUZZ | Extra-Regio |
+| COMUNIDAD.LU00 | Luxembourg (Grand-Duché) |
+| COMUNIDAD.MTZZ | Extra-Regio |
 | COMUNIDAD.MT00 | Malta |
 | COMUNIDAD.PL51 | Dolnoslaskie |
-| COMUNIDAD.PLZZ | Extra\-Regio |
-| COMUNIDAD.PL61 | Kujawsko\-Pomorskie |
+| COMUNIDAD.PLZZ | Extra-Regio |
+| COMUNIDAD.PL61 | Kujawsko-Pomorskie |
 | COMUNIDAD.PL11 | Lodzkie |
 | COMUNIDAD.PL31 | Lubelskie |
 | COMUNIDAD.PL43 | Lubuskie |
@@ -654,13 +651,13 @@
 | COMUNIDAD.PL63 | Pomorskie |
 | COMUNIDAD.PL22 | Slaskie |
 | COMUNIDAD.PL33 | Swietokrzyskie |
-| COMUNIDAD.PL62 | Warminsko\-Mazurskie |
+| COMUNIDAD.PL62 | Warminsko-Mazurskie |
 | COMUNIDAD.PL41 | Wielkopolskie |
 | COMUNIDAD.PL42 | Zachodniopomorskie |
 | COMUNIDAD.PT18 | Alentejo |
 | COMUNIDAD.PT15 | Algarve |
 | COMUNIDAD.PT16 | Centro (P) |
-| COMUNIDAD.PTZZ | Extra\-Regio |
+| COMUNIDAD.PTZZ | Extra-Regio |
 | COMUNIDAD.PT17 | Lisboa |
 | COMUNIDAD.PT11 | Norte |
 | COMUNIDAD.PT30 | Região Autónoma da Madeira |
@@ -678,7 +675,7 @@
 | COMUNIDAD.UKL2 | East Wales |
 | COMUNIDAD.UKM2 | Eastern Scotland |
 | COMUNIDAD.UKH3 | Essex |
-| COMUNIDAD.UKZZ | Extra\-Regio |
+| COMUNIDAD.UKZZ | Extra-Regio |
 | COMUNIDAD.UKK1 | Gloucestershire, Wiltshire and North Somerset |
 | COMUNIDAD.UKD3 | Greater Manchester |
 | COMUNIDAD.UKJ3 | Hampshire and Isle of Wight |
@@ -703,7 +700,7 @@
 | COMUNIDAD.UKG3 | West Midlands |
 | COMUNIDAD.UKL1 | West Wales and The Valleys |
 | COMUNIDAD.UKE4 | West Yorkshire |
-| COMUNIDAD.CZZZ | Extra\-Regio |
+| COMUNIDAD.CZZZ | Extra-Regio |
 | COMUNIDAD.CZ06 | Jihovychod |
 | COMUNIDAD.CZ03 | Jihozapad |
 | COMUNIDAD.CZ08 | Moravskoslezsko |
@@ -712,7 +709,7 @@
 | COMUNIDAD.CZ04 | Severozapad |
 | COMUNIDAD.CZ02 | Stredni Cechy |
 | COMUNIDAD.CZ07 | Stredni Morava |
-| COMUNIDAD.SEZZ | Extra\-Regio |
+| COMUNIDAD.SEZZ | Extra-Regio |
 | COMUNIDAD.SE07 | Mellersta Norrland |
 | COMUNIDAD.SE06 | Norra Mellansverige |
 | COMUNIDAD.SE02 | Östra Mellansverige |
@@ -724,145 +721,113 @@
 | TIPO\_OBRA.EXPOSICION | Exposición |
 | TIPO\_OBRA.DISENO | Diseño |
 | TIPO\_OBRA.OTROS | Otros |
-| 030\.040\.000\.010\.055 | Proyecto Final de Carrera |
-| 030\.040\.000\.010\.066 | Tesina |
-| 030\.040\.000\.010\.067 | Tesis Doctoral |
-| 030\.040\.000\.010\.071 | Trabajo conducente a obtención de DEA |
-| 030\.040\.000\.010\.OTHERS | Otros |
-| 060\.020\.030\.110\.230 | Comisario/a de exposición |
-| 060\.020\.030\.110\.650 | Organizador |
-| 060\.020\.030\.110\.740 | Presidente |
-| 060\.020\.030\.110\.830 | Secretario/a |
-| 060\.020\.030\.110\.OTHERS | Otros |
-| 060\.020\.030\.110\.ORGANIZATIVO\_COMITE | Organizativo \- Comité científico y organizador |
-| 060\.020\.030\.110\.ORGANIZATIVO\_PRESIDENTE\_COMITE | Organizativo \- Presidente comité |
-| 060\.020\.030\.110\.ORGANIZATIVO\_OTROS | Organizativo \- Otros |
-| 060\.030\.030\.100\.EDITOR | Miembro del comité editorial/editor asociado |
-| 060\.030\.030\.100\.DIRECTOR | Presidente del comité editorial/Editor jefe/Director |
-| 060\.030\.030\.100\.OTHERS | Otros |
-
-  
-
+| 030.040.000.010.055 | Proyecto Final de Carrera |
+| 030.040.000.010.066 | Tesina |
+| 030.040.000.010.067 | Tesis Doctoral |
+| 030.040.000.010.071 | Trabajo conducente a obtención de DEA |
+| 030.040.000.010.OTHERS | Otros |
+| 060.020.030.110.230 | Comisario/a de exposición |
+| 060.020.030.110.650 | Organizador |
+| 060.020.030.110.740 | Presidente |
+| 060.020.030.110.830 | Secretario/a |
+| 060.020.030.110.OTHERS | Otros |
+| 060.020.030.110.ORGANIZATIVO\_COMITE | Organizativo - Comité científico y organizador |
+| 060.020.030.110.ORGANIZATIVO\_PRESIDENTE\_COMITE | Organizativo - Presidente comité |
+| 060.020.030.110.ORGANIZATIVO\_OTROS | Organizativo - Otros |
+| 060.030.030.100.EDITOR | Miembro del comité editorial/editor asociado |
+| 060.030.030.100.DIRECTOR | Presidente del comité editorial/Editor jefe/Director |
+| 060.030.030.100.OTHERS | Otros |
 
 ### Tablas
 
 #### AliasEnumerado (sólo se usa para los enumerados que se usan en mas de un campo CVN)
 
-
-
 | codigoCVN | prefijoEnumerado |
 | --- | --- |
-| 060\.010\.020\.080 | AMBITO |
-| 050\.020\.030\.040 | PAIS |
-| 050\.020\.030\.050 | COMUNIDAD |
-| 060\.030\.030\.020 | PAIS |
-| 060\.020\.030\.030 | PAIS |
+| 060.010.020.080 | AMBITO |
+| 050.020.030.040 | PAIS |
+| 050.020.030.050 | COMUNIDAD |
+| 060.030.030.020 | PAIS |
+| 060.020.030.030 | PAIS |
 
 #### ConfiguracionCampo
 
-
-
 | codigoCVN | tipoFormato | fechaReferenciaInicio | fechaReferenciaFin | epigrafeCVN | validacionAdicional |
 | --- | --- | --- | --- | --- | --- |
-| 060\.010\.010\.030 | TEXTO | false | false | 060\.010\.010\.000 | false |
-| 060\.010\.010\.140 | FECHA | true | false | 060\.010\.010\.000 | true |
-| 060\.010\.010\.010 | ENUMERADO | false | false | 060\.010\.010\.000 | false |
-| 060\.010\.010\.070 | ENUMERADO | false | false | 060\.010\.010\.000 | false |
-| 060\.010\.010\.210 | TEXTO | false | false | 060\.010\.010\.000 | false |
-| 060\.010\.010\.160 | TEXTO | false | false | 060\.010\.010\.000 | false |
-| 060\.010\.010\.100 | TEXTO | false | false | 060\.010\.010\.000 | false |
-| 060\.010\.010\.080 | TEXTO | false | false | 060\.010\.010\.000 | false |
-| 060\.010\.010\.090 | TEXTO | false | false | 060\.010\.010\.000 | true |
-| 060\.010\.010\.390 | TEXTO | false | false | 060\.010\.010\.000 | false |
-| 060\.010\.010\.400 | TEXTO | false | false | 060\.010\.010\.000 | false |
-| 060\.010\.010\.410 | ENUMERADO | false | false | 060\.010\.010\.000 | false |
-| 060\.010\.010\.300 | BOOLEANO | false | false | 060\.010\.010\.000 | false |
-| INDICE\_NORMALIZADO | NUMERO | false | false | 060\.010\.010\.000 | false |
-| PUBLICACION\_MUY\_RELEVANTE | BOOLEANO | false | false | 060\.010\.010\.000 | false |
-| TIPO\_OPEN\_ACCESS | ENUMERADO | false | false | 060\.010\.010\.000 | false |
-| INTERNACIONAL | BOOLEANO | false | false | 060\.010\.010\.000 | false |
-| INTERDISCIPLINAR | BOOLEANO | false | false | 060\.010\.010\.000 | false |
-| 060\.010\.020\.030 | TEXTO | false | false | 060\.010\.020\.000 | false |
-| 060\.010\.020\.190 | FECHA | true | false | 060\.010\.020\.000 | false |
-| 060\.010\.020\.380 | FECHA | false | false | 060\.010\.020\.000 | false |
-| 060\.010\.020\.010 | ENUMERADO | false | false | 060\.010\.020\.000 | false |
-| 060\.010\.020\.080 | ENUMERADO | false | false | 060\.010\.020\.000 | false |
-| 060\.010\.020\.100 | TEXTO | false | false | 060\.010\.020\.000 | false |
-| 060\.010\.020\.370 | TEXTO | false | false | 060\.010\.020\.000 | false |
-| 060\.010\.020\.320 | TEXTO | false | false | 060\.010\.020\.000 | false |
-| 060\.010\.020\.050 | ENUMERADO | false | false | 060\.010\.020\.000 | false |
-| 060\.010\.020\.390 | TEXTO | false | false | 060\.010\.020\.000 | false |
-| RESUMEN\_REVISTA | BOOLEANO | false | false | 060\.010\.020\.000 | false |
-| 050\.020\.030\.010 | TEXTO | false | false | 050\.020\.030\.000 | false |
-| 050\.020\.030\.020 | TEXTO | false | false | 050\.020\.030\.000 | false |
-| 050\.020\.030\.120 | FECHA | true | false | 050\.020\.030\.000 | true |
-| 050\.020\.030\.040 | ENUMERADO | false | false | 050\.020\.030\.000 | false |
-| 050\.020\.030\.050 | ENUMERADO | false | false | 050\.020\.030\.000 | false |
-| 050\.020\.030\.090 | BOOLEANO | false | false | 050\.020\.030\.000 | false |
-| 050\.020\.030\.100 | BOOLEANO | false | false | 050\.020\.030\.000 | false |
-| 050\.020\.030\.110 | BOOLEANO | false | false | 050\.020\.030\.000 | false |
-| COLECTIVA | BOOLEANO | false | false | 050\.020\.030\.000 | false |
-| TIPO\_OBRA | ENUMERADO | false | false | 050\.020\.030\.000 | false |
-| 060\.030\.030\.010 | TEXTO | false | false | 060\.030\.030\.000 | false |
-| 060\.030\.030\.020 | ENUMERADO | false | false | 060\.030\.030\.000 | false |
-| 060\.030\.030\.140 | FECHA | true | false | 060\.030\.030\.000 | true |
-| ISSN | TEXTO | false | false | 060\.030\.030\.000 | false |
-| 060\.030\.030\.100 | ENUMERADO | false | false | 060\.030\.030\.000 | false |
-| 030\.040\.000\.030 | TEXTO | false | false | 030\.040\.000\.000 | false |
-| 030\.040\.000\.140 | FECHA | true | false | 030\.040\.000\.000 | true |
-| 030\.040\.000\.120 | TEXTO | false | false | 030\.040\.000\.000 | false |
-| 030\.040\.000\.170 | BOOLEANO | false | false | 030\.040\.000\.000 | false |
-| 030\.040\.000\.200 | FECHA | false | false | 030\.040\.000\.000 | false |
-| 030\.040\.000\.190 | BOOLEANO | false | false | 030\.040\.000\.000 | false |
-| 030\.040\.000\.160 | FECHA | false | false | 030\.040\.000\.000 | false |
-| 030\.040\.000\.010 | ENUMERADO | false | false | 030\.040\.000\.000 | false |
-| MENCION\_INDUSTRIAL | BOOLEANO | false | false | 030\.040\.000\.000 | false |
-| MENCION\_INTERNACIONAL | BOOLEANO | false | false | 030\.040\.000\.000 | false |
-| 060\.020\.030\.010 | TEXTO | false | false | 060\.020\.030\.000 | false |
-| 060\.020\.030\.160 | FECHA | true | false | 060\.020\.030\.000 | false |
-| 060\.020\.030\.020 | TEXTO | false | false | 060\.020\.030\.000 | false |
-| 060\.020\.030\.030 | ENUMERADO | false | false | 060\.020\.030\.000 | false |
-| 060\.020\.030\.110 | ENUMERADO | false | false | 060\.020\.030\.000 | false |
-| 050\.020\.010\.010 | TEXTO | false | false | 050\.020\.010\.000 | false |
-| 050\.020\.010\.270 | FECHA | true | false | 050\.020\.010\.000 | false |
-| 050\.020\.010\.410 | FECHA | false | true | 050\.020\.010\.000 | false |
-| 050\.020\.010\.040 | ENUMERADO | false | false | 050\.020\.010\.000 | false |
-| 050\.020\.010\.290 | NUMERO | false | false | 050\.020\.010\.000 | false |
-| CONVOCATORIA\_EXCELENCIA | BOOLEANO | false | false | 050\.020\.010\.000 | false |
-| 050\.020\.020\.010 | TEXTO | false | false | 050\.020\.020\.000 | false |
-| 050\.020\.020\.180 | FECHA | true | false | 050\.020\.020\.000 | false |
-| FECHA\_FIN\_CONTRATO | FECHA | false | true | 050\.020\.020\.000 | false |
-| 050\.020\.020\.200 | NUMERO | false | false | 050\.020\.020\.000 | false |
-| 050\.030\.010\.020 | TEXTO | false | false | 050\.030\.010\.000 | false |
-| PORCENTAJE\_TITULARIDAD | NUMERO | false | false | 050\.030\.010\.000 | false |
-| 050\.030\.010\.030 | ENUMERADO | false | false | 050\.030\.010\.000 | false |
-| 050\.030\.010\.320 | FECHA | true | false | 050\.030\.010\.000 | false |
-| 050\.030\.010\.160 | BOOLEANO | false | false | 050\.030\.010\.000 | false |
-| 050\.030\.010\.170 | BOOLEANO | false | false | 050\.030\.010\.000 | false |
-| 060\.030\.070\.010 | NUMERO | false | false | 060\.030\.070\.000 | false |
-| ANIO\_SEXENIOS | NUMERO | false | false | 060\.030\.070\.000 | false |
-
-  
-
-
-  
-
-
-  
-
-
-  
-
-
-  
-
-
-  
-
-
-  
-
-
-
-
-
+| 060.010.010.030 | TEXTO | false | false | 060.010.010.000 | false |
+| 060.010.010.140 | FECHA | true | false | 060.010.010.000 | true |
+| 060.010.010.010 | ENUMERADO | false | false | 060.010.010.000 | false |
+| 060.010.010.070 | ENUMERADO | false | false | 060.010.010.000 | false |
+| 060.010.010.210 | TEXTO | false | false | 060.010.010.000 | false |
+| 060.010.010.160 | TEXTO | false | false | 060.010.010.000 | false |
+| 060.010.010.100 | TEXTO | false | false | 060.010.010.000 | false |
+| 060.010.010.080 | TEXTO | false | false | 060.010.010.000 | false |
+| 060.010.010.090 | TEXTO | false | false | 060.010.010.000 | true |
+| 060.010.010.390 | TEXTO | false | false | 060.010.010.000 | false |
+| 060.010.010.400 | TEXTO | false | false | 060.010.010.000 | false |
+| 060.010.010.410 | ENUMERADO | false | false | 060.010.010.000 | false |
+| 060.010.010.300 | BOOLEANO | false | false | 060.010.010.000 | false |
+| INDICE\_NORMALIZADO | NUMERO | false | false | 060.010.010.000 | false |
+| PUBLICACION\_MUY\_RELEVANTE | BOOLEANO | false | false | 060.010.010.000 | false |
+| TIPO\_OPEN\_ACCESS | ENUMERADO | false | false | 060.010.010.000 | false |
+| INTERNACIONAL | BOOLEANO | false | false | 060.010.010.000 | false |
+| INTERDISCIPLINAR | BOOLEANO | false | false | 060.010.010.000 | false |
+| 060.010.020.030 | TEXTO | false | false | 060.010.020.000 | false |
+| 060.010.020.190 | FECHA | true | false | 060.010.020.000 | false |
+| 060.010.020.380 | FECHA | false | false | 060.010.020.000 | false |
+| 060.010.020.010 | ENUMERADO | false | false | 060.010.020.000 | false |
+| 060.010.020.080 | ENUMERADO | false | false | 060.010.020.000 | false |
+| 060.010.020.100 | TEXTO | false | false | 060.010.020.000 | false |
+| 060.010.020.370 | TEXTO | false | false | 060.010.020.000 | false |
+| 060.010.020.320 | TEXTO | false | false | 060.010.020.000 | false |
+| 060.010.020.050 | ENUMERADO | false | false | 060.010.020.000 | false |
+| 060.010.020.390 | TEXTO | false | false | 060.010.020.000 | false |
+| RESUMEN\_REVISTA | BOOLEANO | false | false | 060.010.020.000 | false |
+| 050.020.030.010 | TEXTO | false | false | 050.020.030.000 | false |
+| 050.020.030.020 | TEXTO | false | false | 050.020.030.000 | false |
+| 050.020.030.120 | FECHA | true | false | 050.020.030.000 | true |
+| 050.020.030.040 | ENUMERADO | false | false | 050.020.030.000 | false |
+| 050.020.030.050 | ENUMERADO | false | false | 050.020.030.000 | false |
+| 050.020.030.090 | BOOLEANO | false | false | 050.020.030.000 | false |
+| 050.020.030.100 | BOOLEANO | false | false | 050.020.030.000 | false |
+| 050.020.030.110 | BOOLEANO | false | false | 050.020.030.000 | false |
+| COLECTIVA | BOOLEANO | false | false | 050.020.030.000 | false |
+| TIPO\_OBRA | ENUMERADO | false | false | 050.020.030.000 | false |
+| 060.030.030.010 | TEXTO | false | false | 060.030.030.000 | false |
+| 060.030.030.020 | ENUMERADO | false | false | 060.030.030.000 | false |
+| 060.030.030.140 | FECHA | true | false | 060.030.030.000 | true |
+| ISSN | TEXTO | false | false | 060.030.030.000 | false |
+| 060.030.030.100 | ENUMERADO | false | false | 060.030.030.000 | false |
+| 030.040.000.030 | TEXTO | false | false | 030.040.000.000 | false |
+| 030.040.000.140 | FECHA | true | false | 030.040.000.000 | true |
+| 030.040.000.120 | TEXTO | false | false | 030.040.000.000 | false |
+| 030.040.000.170 | BOOLEANO | false | false | 030.040.000.000 | false |
+| 030.040.000.200 | FECHA | false | false | 030.040.000.000 | false |
+| 030.040.000.190 | BOOLEANO | false | false | 030.040.000.000 | false |
+| 030.040.000.160 | FECHA | false | false | 030.040.000.000 | false |
+| 030.040.000.010 | ENUMERADO | false | false | 030.040.000.000 | false |
+| MENCION\_INDUSTRIAL | BOOLEANO | false | false | 030.040.000.000 | false |
+| MENCION\_INTERNACIONAL | BOOLEANO | false | false | 030.040.000.000 | false |
+| 060.020.030.010 | TEXTO | false | false | 060.020.030.000 | false |
+| 060.020.030.160 | FECHA | true | false | 060.020.030.000 | false |
+| 060.020.030.020 | TEXTO | false | false | 060.020.030.000 | false |
+| 060.020.030.030 | ENUMERADO | false | false | 060.020.030.000 | false |
+| 060.020.030.110 | ENUMERADO | false | false | 060.020.030.000 | false |
+| 050.020.010.010 | TEXTO | false | false | 050.020.010.000 | false |
+| 050.020.010.270 | FECHA | true | false | 050.020.010.000 | false |
+| 050.020.010.410 | FECHA | false | true | 050.020.010.000 | false |
+| 050.020.010.040 | ENUMERADO | false | false | 050.020.010.000 | false |
+| 050.020.010.290 | NUMERO | false | false | 050.020.010.000 | false |
+| CONVOCATORIA\_EXCELENCIA | BOOLEANO | false | false | 050.020.010.000 | false |
+| 050.020.020.010 | TEXTO | false | false | 050.020.020.000 | false |
+| 050.020.020.180 | FECHA | true | false | 050.020.020.000 | false |
+| FECHA\_FIN\_CONTRATO | FECHA | false | true | 050.020.020.000 | false |
+| 050.020.020.200 | NUMERO | false | false | 050.020.020.000 | false |
+| 050.030.010.020 | TEXTO | false | false | 050.030.010.000 | false |
+| PORCENTAJE\_TITULARIDAD | NUMERO | false | false | 050.030.010.000 | false |
+| 050.030.010.030 | ENUMERADO | false | false | 050.030.010.000 | false |
+| 050.030.010.320 | FECHA | true | false | 050.030.010.000 | false |
+| 050.030.010.160 | BOOLEANO | false | false | 050.030.010.000 | false |
+| 050.030.010.170 | BOOLEANO | false | false | 050.030.010.000 | false |
+| 060.030.070.010 | NUMERO | false | false | 060.030.070.000 | false |
+| ANIO\_SEXENIOS | NUMERO | false | false | 060.030.070.000 | false |

@@ -1,6 +1,15 @@
-# Hércules : CU\-ETI\-0060\-002 \- Buscar Mis Peticiones de evaluación \- Responsable
+# CU-ETI-0060-002 - Buscar Mis Peticiones de evaluación - Responsable
 
-
+|  |  |
+| --- | --- |
+| Cod. CU | ********CU-ETI-0060-002 - Buscar Mis Peticiones de evaluación - Responsable******** |
+| Ver. objetivo |  |
+| Ver. CU | 1.0.0 |
+| Estado | LIBERADO\_ |
+| Fec. Aprobación |  |
+| Épica, historia |  |
+| Actores | ACT-ETI-006-Responsable memoria |
+| Frecuencia | Alta |
 
 ### Descripción
 
@@ -25,7 +34,7 @@ El resultado de la búsqueda será un listado de las peticiones del investigador
 
 #### Actor principal
 
-ACT\-ETI\-006\-Responsable memoria
+ACT-ETI-006-Responsable memoria
 
 ### Precondiciones
 
@@ -42,7 +51,3 @@ Se listan las peticiones de evaluación que tiene al menos una memoria asignada
 1. Se presenta la pantalla Mis peticiones de evaluación  con el listado de todos las peticiones de evaluación que tienen al menos una memoria asignada a la persona que está logada en el sistema
 2. El usuario introduce la información de los filtros y realiza la acción de buscar para poder filtrar un subconjunto de Mis peticiones de evaluación.
 3. Se presenta la pantalla Mis peticiones de evaluación con el subconjunto de peticiones de evaluación que cumplen las condiciones del filtro.
-
-
-
-

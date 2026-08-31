@@ -1,10 +1,13 @@
-# Hércules : Asistente para la creación de cluster (equipo de proyecto)
+# Asistente para la creación de cluster (equipo de proyecto)
 
+Documento inicial de UX para el asistente, de la página 55 a la 61 : [123031032021-hercules-EDMA-master.pdf](/attachments/598147479/598148266.pdf)
 
+* [Paso 1. Definición de cluster](#Asistenteparalacreacióndecluster(equipodeproyecto)-Paso1.Definicióndecluster)
+* [Paso 2. Definición de perfiles con áreas temáticas y descriptores](#Asistenteparalacreacióndecluster(equipodeproyecto)-Paso2.Definicióndeperfilesconáreastemáticasydescriptores)
+* [Paso 3. Propuesta de investigadores/as](#Asistenteparalacreacióndecluster(equipodeproyecto)-Paso3.Propuestadeinvestigadores/as)
+* [Consulta del cluster](#Asistenteparalacreacióndecluster(equipodeproyecto)-Consultadelcluster)
 
-Documento inicial de UX para el asistente, de la página 55 a la 61 : [123031032021\-hercules\-EDMA\-master.pdf](/attachments/598147479/598148266.pdf "attachments/598147479/598148266.pdf")
-
-## Paso 1\. Definición de cluster
+## Paso 1. Definición de cluster
 
 Para comenzar se definen los datos identificativos del cluster (nombre y descripción), para su localización posterior en el espacio personal del usuario, y se establecen las áreas temáticas del proyecto.
 
@@ -12,7 +15,7 @@ Respecto a la pantalla diseñada inicialmente hay que retirar el campo de "Núme
 
 ![](/attachments/598147479/598148265.png)
 
-## Paso 2\. Definición de perfiles con áreas temáticas y descriptores
+## Paso 2. Definición de perfiles con áreas temáticas y descriptores
 
 En el segundo paso se declaran los perfiles que necesitaría el proyecto. Cada perfil se define con:
 
@@ -22,36 +25,33 @@ En el segundo paso se declaran los perfiles que necesitaría el proyecto. Cada p
 
 ![](/attachments/598147479/598148263.png)![](/attachments/598147479/598148262.png)
 
-## Paso 3\. Propuesta de investigadores/as
+## Paso 3. Propuesta de investigadores/as
 
 En el tercer paso se presentan los investigadores que cumplen con los criterios establecidos en los perfiles, del siguiente modo:
 
 * Un listado de investigadores (con cambios respecto al diseño).
-	+ Datos de cada investigador: Nombre, \[ Categoría profesional y Departamento si es interno / Externo ], Número de publicaciones, Número de proyectos en los que haya sido investigador principal,  Áreas temáticas, Perfil o perfiles es en los que encaja.
-	+ Enlace a la ficha del investigador.
-	+ Ordenación por:
-		- Criterio de relevancia. A tener en cuenta: coincidencia con los criterios de filtrado.
-		- Número de publicaciones en el periodo filtrado.
-		- Orden alfabético.
+  + Datos de cada investigador: Nombre, [ Categoría profesional y Departamento si es interno / Externo ], Número de publicaciones, Número de proyectos en los que haya sido investigador principal,  Áreas temáticas, Perfil o perfiles es en los que encaja.
+  + Enlace a la ficha del investigador.
+  + Ordenación por:
+    - Criterio de relevancia. A tener en cuenta: coincidencia con los criterios de filtrado.
+    - Número de publicaciones en el periodo filtrado.
+    - Orden alfabético.
 * Facetas de filtrado
-	+ Rango de fechas. Por defecto los 5 últimos años (nuevo respecto al diseño).
-	+ Perfiles.
-	+ Áreas temáticas.
-	+ Categoría profesional.
-	+ Número de publicaciones.
+  + Rango de fechas. Por defecto los 5 últimos años (nuevo respecto al diseño).
+  + Perfiles.
+  + Áreas temáticas.
+  + Categoría profesional.
+  + Número de publicaciones.
 * Gráfica de relaciones de los investigadores (cambios respecto al diseño).
-	+ 20 primeros investigadores (se podrán mostrar más, de 10 en 10, como se hace en las pestañas de colaboradores en las fichas de proyecto y grupo).
-	+ Diferenciar presentación por perfil (color).
-	+ Representar las relaciones de publicaciones y proyectos (como se hace en las pestañas de colaboradores en las fichas de proyecto y grupo).
+  + 20 primeros investigadores (se podrán mostrar más, de 10 en 10, como se hace en las pestañas de colaboradores en las fichas de proyecto y grupo).
+  + Diferenciar presentación por perfil (color).
+  + Representar las relaciones de publicaciones y proyectos (como se hace en las pestañas de colaboradores en las fichas de proyecto y grupo).
 
 El usuario podrá seleccionar los investigadores de su interés y proceder a guardar la recomendación, que podrá ser consultada desde el espacio personal de gestión del investigador.
 
 Respecto a la imagen siguiente hay algunos cambios que se han detallado en la descripción anterior.
 
 ![](/attachments/598147479/598148273.png)
-
-  
-
 
 ## Consulta del cluster
 
@@ -60,13 +60,3 @@ El usuario dispondrá de un ficha con la que consultar el cluster configurado. E
 En la pestaña de áreas temáticas se muestran las áreas temáticas de los investigadores seleccionados con sus relaciones entre ellas, de un modo similar a la ficha de Proyectos y Grupos de investigación.
 
 ![](/attachments/598147479/598148274.png)![](/attachments/598147479/598148272.png)
-
-  
-
-
-  
-
-
-
-
-

@@ -1,6 +1,4 @@
-# Hércules : MDU\-Perfil unidad de gestión \- Módulo PII
-
-
+# MDU-Perfil unidad de gestión - Módulo PII
 
 El módulo de Protección Industrial e Intelectual, o PII, permite realizar la gestión de las invenciones y sus protecciones en el SGI. Es un módulo, a priori, destinado a la unidad de gestión de la OTRI, si bien, el SGI no parte con una limitación de base sobre qué unidades de gestión tendrán habilitado este módulo.
 
@@ -14,13 +12,7 @@ Cada rol tendrá su propio menú, que será independiente del menú del otro rol
 
 Los bloques funcionales habilitados para cada rol/perfil son:
 
-
-
 | Perfil | Funcionalidad | Restricciones |
 | --- | --- | --- |
-| Perfil administrador | [PII\-Configuración](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/mdu-perfil-unidad-de-gestion/mdu-perfil-unidad-de-gestion-modulo-pii/pii-configuracion.md "/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/mdu-perfil-unidad-de-gestion/mdu-perfil-unidad-de-gestion-modulo-pii/pii-configuracion.md") |  |
-| Perfil gestor | [PII\-Invenciones](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/mdu-perfil-unidad-de-gestion/mdu-perfil-unidad-de-gestion-modulo-pii/pii-invenciones.md "/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/mdu-perfil-unidad-de-gestion/mdu-perfil-unidad-de-gestion-modulo-pii/pii-invenciones.md") |  |
-
-
-
-
+| Perfil administrador | [PII-Configuración](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/mdu-perfil-unidad-de-gestion/mdu-perfil-unidad-de-gestion-modulo-pii/pii-configuracion) |  |
+| Perfil gestor | [PII-Invenciones](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario/mdu-perfil-unidad-de-gestion/mdu-perfil-unidad-de-gestion-modulo-pii/pii-invenciones) |  |

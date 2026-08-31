@@ -1,6 +1,15 @@
-# Hércules : CU\-ETI\-0080\-002 \- Volver a estado anterior
+# CU-ETI-0080-002 - Volver a estado anterior
 
-
+|  |  |
+| --- | --- |
+| Cod. CU | ********CU-ETI-0080-002 -Volver a estado anterior******** |
+| Ver. objetivo |  |
+| Ver. CU | 1.0.0 |
+| Estado | LIBERADO\_ |
+| Fec. Aprobación |  |
+| Épica, historia |  |
+| Actores | ACT-ETI-001-Gestor |
+| Frecuencia | Baja |
 
 ### Descripción
 
@@ -17,7 +26,7 @@ Desde el listado de memorias de una petición de evaluación, el gestor puede ca
 
 #### Actor principal
 
-ACT\-ETI\-001\-Gestor
+ACT-ETI-001-Gestor
 
 ### Precondiciones
 
@@ -40,7 +49,3 @@ Se cambia al estado "Completada" (si no tiene evaluaciones asociadas), "Pendient
 5. El sistema hace todos los cambios que tienen que hacer (los comentados en las postcondiciones).
 6. El usuario es informado del resultado positivo de la acción.
 7. Se mantienen en la pantalla de listado de memoria, donde puede verse el cambio de estado de la memoria.
-
-
-
-

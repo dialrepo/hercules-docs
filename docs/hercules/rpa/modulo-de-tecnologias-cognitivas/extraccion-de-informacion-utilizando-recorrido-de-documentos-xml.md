@@ -1,20 +1,12 @@
-# Hércules : Extracción de información utilizando recorrido de documentos XML
-
-
+# Extracción de información utilizando recorrido de documentos XML
 
 El proceso de recorrido de documentos XML nos permite obtener una abstracción de la estructura XML obteniendo solo los nodos necesarios para los procesos RPA.
 
-Un ejemplo de la aplicación que puede tener este módulo es el recorrido del documento XML del BOE, utilizado en [Proceso 3 : Automatización de procesos de gestiones documentales parametrizables](/hercules/rpa/modulo-de-automatizacion-y-gestion/analisis-y-procesos/proceso-3-automatizacion-de-procesos-de-gestiones-documentales-parametrizables/index.md "/hercules/rpa/modulo-de-automatizacion-y-gestion/analisis-y-procesos/proceso-3-automatizacion-de-procesos-de-gestiones-documentales-parametrizables/index.md") para la obtención de las bases reguladoras de  convocatorias.
+Un ejemplo de la aplicación que puede tener este módulo es el recorrido del documento XML del BOE, utilizado en [Proceso 3 : Automatización de procesos de gestiones documentales parametrizables](/hercules/rpa/modulo-de-automatizacion-y-gestion/analisis-y-procesos/proceso-3-automatizacion-de-procesos-de-gestiones-documentales-parametrizables) para la obtención de las bases reguladoras de  convocatorias.
 
 El proceso recorrerá la estructura XML, dada una lista de nodos padre y de nodos hijos, en este caso, el nodo padre será el nodo con la etiqueta "item" y los nodos hijos de dicho nodo padre serán los nodos "titulo" y "urlPdf", y creará una lista donde se relaciona cada nodo "item" con sus nodos hijos. Gracias a esto el proceso de extracción de bases reguladoras solo tratará los nodos que necesita y obtendrá la información de ellos.
 
-  
-
-
 ![](/attachments/598147567/598148290.png)
-
-  
-
 
 A continuación se incluye un ejemplo de estructura ejemplo del documento XML del BOE:
 
@@ -68,13 +60,7 @@ A continuación se incluye un ejemplo de estructura ejemplo del documento XML de
 
 Un ejemplo de salida tras la obtención de los nodos de un documento XML y la validación de los mismos con los criterios especificados en el proceso de extracción de bases reguladoras sería el siguiente:
 
-
-
 |  |
 | --- |
 
-Además de utilizarse en  [Proceso 3 : Automatización de procesos de gestiones documentales parametrizables](/hercules/rpa/modulo-de-automatizacion-y-gestion/analisis-y-procesos/proceso-3-automatizacion-de-procesos-de-gestiones-documentales-parametrizables/index.md "/hercules/rpa/modulo-de-automatizacion-y-gestion/analisis-y-procesos/proceso-3-automatizacion-de-procesos-de-gestiones-documentales-parametrizables/index.md") para la obtención de las bases reguladoras de  convocatorias, también se utiliza en [Proceso 1 : Segmentación y generación automática de boletines informativos](/hercules/rpa/modulo-de-automatizacion-y-gestion/analisis-y-procesos/proceso-1-segmentacion-y-generacion-automatica-de-boletines-informativos/index.md "/hercules/rpa/modulo-de-automatizacion-y-gestion/analisis-y-procesos/proceso-1-segmentacion-y-generacion-automatica-de-boletines-informativos/index.md") para la obtención de noticias. En este módulo podrá servir de forma general para analizar cualquier fichero XML que se necesite en cualquier subsistema de Hércules.
-
-
-
-
+Además de utilizarse en  [Proceso 3 : Automatización de procesos de gestiones documentales parametrizables](/hercules/rpa/modulo-de-automatizacion-y-gestion/analisis-y-procesos/proceso-3-automatizacion-de-procesos-de-gestiones-documentales-parametrizables) para la obtención de las bases reguladoras de  convocatorias, también se utiliza en [Proceso 1 : Segmentación y generación automática de boletines informativos](/hercules/rpa/modulo-de-automatizacion-y-gestion/analisis-y-procesos/proceso-1-segmentacion-y-generacion-automatica-de-boletines-informativos) para la obtención de noticias. En este módulo podrá servir de forma general para analizar cualquier fichero XML que se necesite en cualquier subsistema de Hércules.

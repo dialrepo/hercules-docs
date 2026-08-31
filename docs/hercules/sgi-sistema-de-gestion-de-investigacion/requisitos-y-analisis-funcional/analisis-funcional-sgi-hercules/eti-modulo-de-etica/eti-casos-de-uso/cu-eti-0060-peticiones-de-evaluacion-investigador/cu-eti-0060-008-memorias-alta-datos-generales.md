@@ -1,6 +1,15 @@
-# Hércules : CU\-ETI\-0060\-008 \- Memorias \- Alta datos generales
+# CU-ETI-0060-008 - Memorias - Alta datos generales
 
-
+|  |  |
+| --- | --- |
+| Cod. CU | ********CU-ETI-0060-008 - Memorias - Alta datos generales******** |
+| Ver. objetivo |  |
+| Ver. CU | 1.0.0 |
+| Estado | LIBERADO\_ |
+| Fec. Aprobación |  |
+| Épica, historia |  |
+| Actores | ACT-ETI-002-Investigador  ACT-ETI-003-Solicitante |
+| Frecuencia | Media |
 
 ### Descripción
 
@@ -10,9 +19,9 @@ Formulario para añadir memorias a la petición de evaluación a evaluar por la 
 
 #### Actor principal
 
-ACT\-ETI\-002\-Investigador
+ACT-ETI-002-Investigador
 
-ACT\-ETI\-003\-Solicitante
+ACT-ETI-003-Solicitante
 
 ### Precondiciones
 
@@ -45,7 +54,7 @@ Si se crea una memoria de tipo Modificación se hace una copia de la memoria (de
 9. El usuario es informado del resultado positivo de la acción.
 10. Se presenta la edición de la memoria.
 
-### Extensiones (flujos alternativos) \- Ir al formulario sin guardar los datos generales de la memoria
+### Extensiones (flujos alternativos) - Ir al formulario sin guardar los datos generales de la memoria
 
 1. Se presenta la pantalla Mis peticiones de evaluación con el listado de todas las peticiones de evaluación dadas de alta en el sistema y que la persona creadora de la misma sea la persona que se está logando en el sistema .
 2. Se selecciona la petición de evaluación.
@@ -62,7 +71,3 @@ Si se crea una memoria de tipo Modificación se hace una copia de la memoria (de
 13. El usuario es informado del resultado positivo de la acción.
 14. Se presenta la edición de la memoria.
 15. El usuario puede ir a la opción del menú Formulario.
-
-
-
-

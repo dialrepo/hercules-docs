@@ -1,6 +1,15 @@
-# Hércules : CU\-ETI\-0060\-001 \- Buscar Mis Peticiones de evaluación \- Creador
+# CU-ETI-0060-001 - Buscar Mis Peticiones de evaluación - Creador
 
-
+|  |  |
+| --- | --- |
+| Cod. CU | ********CU-ETI-0060-001 - Buscar Mis Peticiones de evaluación - Creador******** |
+| Ver. objetivo |  |
+| Ver. CU | 1.0.0 |
+| Estado | LIBERADO\_ |
+| Fec. Aprobación |  |
+| Épica, historia |  |
+| Actores | ACT-ETI-002-Investigador  ACT-ETI-003-Solicitante |
+| Frecuencia | Alta |
 
 ### Descripción
 
@@ -27,9 +36,9 @@ También habrá un botón para añadir una nueva solicitud de petición de evalu
 
 #### Actor principal
 
-ACT\-ETI\-002\-Investigador
+ACT-ETI-002-Investigador
 
-ACT\-ETI\-003\-Solicitante
+ACT-ETI-003-Solicitante
 
 ### Precondiciones
 
@@ -46,7 +55,3 @@ Se listan las peticiones del investigador o solicitante creadas por él mismo y
 1. Se presenta la pantalla Mis peticiones de evaluación con el listado de todos las peticiones de evaluación creadas por la persona que se esta logado en el sistema
 2. El usuario introduce la información de los filtros y realiza la acción de buscar para poder filtrar un subconjunto de Mis peticiones de evaluación.
 3. Se presenta la pantalla Mis peticiones de evaluación con el subconjunto de peticiones de evaluación que cumplen las condiciones del filtro.
-
-
-
-

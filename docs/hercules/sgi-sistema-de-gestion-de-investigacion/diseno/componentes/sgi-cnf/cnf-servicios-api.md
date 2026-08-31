@@ -1,6 +1,2 @@
-# Hércules : CNF \- Servicios API
-
-
-
-
+# CNF - Servicios API
 

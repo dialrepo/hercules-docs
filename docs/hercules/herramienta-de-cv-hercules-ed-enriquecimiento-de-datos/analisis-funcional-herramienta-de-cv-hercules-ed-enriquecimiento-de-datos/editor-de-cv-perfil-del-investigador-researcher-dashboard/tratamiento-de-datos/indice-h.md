@@ -1,8 +1,6 @@
-# Hércules : Índice H
+# Índice H
 
-
-
-El índice H mide la productividad y el impacto de las publicaciones de un autor. De forma que un autor con índice H de x tiene al menos x publicaciones con x citas al menos. 
+El índice H mide la productividad y el impacto de las publicaciones de un autor. De forma que un autor con índice H de x tiene al menos x publicaciones con x citas al menos.
 
 En Hércules calculamos 3 valores:
 
@@ -28,11 +26,4 @@ Scopus tiene 2:
 
 Y hércules tiene 4 publicaciones(las 3 de WOS y la primera de Scopus) con al menos 4 citas.
 
-  
-
-
-[Información sobre el H index](https://support.clarivate.com/ScientificandAcademicResearch/s/article/Web-of-Science-h-index-information?language=en_US "https://support.clarivate.com/ScientificandAcademicResearch/s/article/Web-of-Science-h-index-information?language=en_US")
-
-
-
-
+[Información sobre el H index](https://support.clarivate.com/ScientificandAcademicResearch/s/article/Web-of-Science-h-index-information?language=en_US)

@@ -1,6 +1,15 @@
-# Hércules : CU\-CSP\-0007\-003 \- Modificar tipo de enlace
+# CU-CSP-0007-003 - Modificar tipo de enlace
 
-
+|  |  |
+| --- | --- |
+| Cod. CU | **CU-CSP-0007-003 - Modificar tipo de enlace** |
+| Ver. objetivo |  |
+| Ver. CU | 1.0.0 |
+| Estado | LIBERADO\_ |
+| Fec. Aprobación |  |
+| Épica, historia |  |
+| Actores | ACT-CSP-004-Administrador |
+| Frecuencia | Baja |
 
 ### Descripción
 
@@ -10,15 +19,15 @@ Modificación de un tipo de enlace.
 
 #### Actor principal
 
-ACT\-CSP\-004\-Administrador
+ACT-CSP-004-Administrador
 
 #### Personal involucrado e intereses
 
-ACT\- CSP\-003\-Gestor que requiere que los tipos de enlace estén configurados y vinculados a los modelos de ejecución para poder realizar la gestión de convocatorias y proyectos
+ACT- CSP-003-Gestor que requiere que los tipos de enlace estén configurados y vinculados a los modelos de ejecución para poder realizar la gestión de convocatorias y proyectos
 
 ### Precondiciones
 
-El usuario ACT\-CSP\-004\-Administrador se autentica a través del usuario de dominio corporativo.
+El usuario ACT-CSP-004-Administrador se autentica a través del usuario de dominio corporativo.
 
 A través del servicio de integración con el directorio activo y de la información del usuario almacenada en el propio SGI, se obtiene su rol y  la unidades de gestión sobre las que tiene disponible el rol. El usuario está autorizado sobre la funcionalidad asociada a esta operación con permisos de edición.
 
@@ -36,7 +45,7 @@ El tipo de enlace se modifica correctamente y está disponible para la configura
 6. El usuario es informado del resultado positivo de la acción
 7. Se vuelve al listado de Tipos de enlace
 
-### Extensiones (flujos alternativos) \- Error de unicidad
+### Extensiones (flujos alternativos) - Error de unicidad
 
 1. El usuario ha introducido un nombre para el Tipo de enlace que ya existe en la tabla de Tipos de enlace para un elemento activo
 2. El usuario introduce el resto de datos del Tipo de enlace
@@ -47,7 +56,7 @@ El tipo de enlace se modifica correctamente y está disponible para la configura
 7. El usuario es informado del resultado positivo de la acción.
 8. Se muestra el listado de Tipos de enlace
 
-### Extensiones (flujos alternativos) \- Eliminar (desactivar) tipo de enlace
+### Extensiones (flujos alternativos) - Eliminar (desactivar) tipo de enlace
 
 1. El usuario accede al apartado de Tipos de enlace del menú de configuración del módulo de CSP
 2. El usuario selecciona la opción Eliminar del listado de Tipos de enlace para un registro activo concreto
@@ -58,7 +67,7 @@ El tipo de enlace se modifica correctamente y está disponible para la configura
 7. El usuario es informado del resultado positivo de la acción.
 8. Se muestra el listado de Tipos de enlace
 
-### Extensiones (flujos alternativos) \- Reactivar tipo de enlace
+### Extensiones (flujos alternativos) - Reactivar tipo de enlace
 
 1. El usuario accede al apartado de Tipos de enlace del menú de configuración del módulo de CSP
 2. El usuario selecciona la opción Reactivar del listado de Tipos de enlaces para un registro inactivo concreto
@@ -69,10 +78,7 @@ El tipo de enlace se modifica correctamente y está disponible para la configura
 7. El usuario es informado del resultado positivo de la acción.
 8. Se muestra el listado de Tipos de enlace
 
-  
-
-
-### Extensiones (flujos alternativos) \- El usuario no confirma la acción
+### Extensiones (flujos alternativos) - El usuario no confirma la acción
 
 1. El usuario accede al apartado de Tipos de enlace del menú de configuración del módulo de CSP
 2. El usuario selecciona una de las acciones Eliminar o Reactivar del Listado de tipos de enlaces para un registro concreto
@@ -81,9 +87,6 @@ El tipo de enlace se modifica correctamente y está disponible para la configura
 5. No se realiza ninguna operación en base de datos
 6. Se muestra el listado de Tipos de enlace
 
-  
-
-
 ### Requisitos especiales
 
 N/A
@@ -91,12 +94,3 @@ N/A
 ### Lista de tecnología y variaciones de datos
 
 N/A
-
-  
-  
-  
-
-
-
-
-
