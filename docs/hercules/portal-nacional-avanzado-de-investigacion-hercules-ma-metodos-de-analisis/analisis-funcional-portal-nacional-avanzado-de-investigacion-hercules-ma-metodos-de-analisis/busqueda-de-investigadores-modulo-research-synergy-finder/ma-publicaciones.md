@@ -86,9 +86,9 @@ Otros datos mostrados:
 
 Respecto al menú de acciones, nos encontramos con los siguientes enlaces:
 
-* [Nueva anotación](https://confluence.um.es/confluence/display/HERCULES/MA.+Anotaciones+sobre+los+ROs?src=contextnavpagetreemode)
+* [Nueva anotación](/hercules/portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/analisis-funcional-portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/busqueda-de-investigadores-modulo-research-synergy-finder/ma-anotaciones-sobre-los-ros)
 * Citar publicación
-* [Vincular RO](https://confluence.um.es/confluence/display/HERCULES/MA.+ROs+vinculados?src=contextnavpagetreemode) (Si eres autor de la publicación)
+* [Vincular RO](/hercules/portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/analisis-funcional-portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/busqueda-de-investigadores-modulo-research-synergy-finder/ma-ros-vinculados) (Si eres autor de la publicación)
 * [Editar](https://confluence.um.es/confluence/pages/viewpage.action?pageId=564822031&src=contextnavpagetreemode) (si eres autor de la publicación)
 
 ### Datos enriquecidos:

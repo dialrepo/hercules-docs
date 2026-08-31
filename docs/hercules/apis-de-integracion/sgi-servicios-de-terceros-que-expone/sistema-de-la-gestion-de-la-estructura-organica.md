@@ -35,7 +35,7 @@
 
 ### Enumerados
 
-Para la definición de los enumerados en el código seguir lo indicado en: [Enumerados](https://confluence.treelogic.com/display/HERCULES/Enumerados)
+Para la definición de los enumerados en el código seguir lo indicado en: [Enumerados](/hercules/sgi-sistema-de-gestion-de-investigacion/desarrollo-y-configuracion/estandares-de-desarrollo/estandares-internos/enumerados)
 
 | Enumerado | Descripción |
 | --- | --- |

@@ -51,7 +51,7 @@ select * from <http://gnoss.com/b836078b-78a0-4939-b809-3f2ccf4e5c01>
     }order by desc(?fecha) desc(?s)
 ```
 
-[Proceso 2 : Sexenios y acreditaciones](https://confluence.um.es/confluence/display/HERCULES/Proceso+2+%3A+Sexenios+y+acreditaciones?src=contextnavpagetreemode)
+[Proceso 2 : Sexenios y acreditaciones](/hercules/rpa/modulo-de-automatizacion-y-gestion/analisis-y-procesos/proceso-2-sexenios-y-acreditaciones)
 
 En este proceso se utilizan los servicios de ED y MA para recuperar producción científica desde su servicio de datos enriquecidos, a continuación se detallan las consultas SPARQL que se llevan a cabo : 
 
@@ -530,7 +530,7 @@ where
 
 donde, *filtro\_investigador* es el filtro que indica el identificador del investigador, puede ser personaRef, email u ORCID, como se puede ver en las queries anteriores.
 
-[Proceso 4 : Sistemas Inteligentes de encaje entre convocatorias e investigadores](https://confluence.um.es/confluence/display/HERCULES/Proceso+4+%3A++Sistemas+Inteligentes+de+encaje+entre+convocatorias+e+investigadores?src=contextnavpagetreemode)
+[Proceso 4 : Sistemas Inteligentes de encaje entre convocatorias e investigadores](/hercules/rpa/modulo-de-automatizacion-y-gestion/analisis-y-procesos/proceso-4-sistemas-inteligentes-de-encaje-entre-convocatorias-e-investigadores)
 
 * Obtención de grafo de colaboración:
 

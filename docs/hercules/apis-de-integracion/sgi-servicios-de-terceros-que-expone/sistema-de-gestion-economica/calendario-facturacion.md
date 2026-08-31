@@ -40,14 +40,14 @@
 
 ### Modelo lógico
 
-[![](https://confluence.treelogic.com/download/attachments/113050871/ESB%20SGE%20Logical%20Model%20Calendario%20Facturacion.jpg?version=6&modificationDate=1627462879706&api=v2)](https://confluence.treelogic.com/display/HERCULES/Consultas+filtradas+y+paginadas)
+[![](/hercules/sgi-sistema-de-gestion-de-investigacion/desarrollo-y-configuracion/estandares-de-desarrollo/consultas-filtradas-y-paginadas)
 
 ### API
 
 Características generales que todas las API REST deben de cumplir:
 
-* [Consultas filtradas y paginadas](https://confluence.treelogic.com/display/HERCULES/Consultas+filtradas+y+paginadas)
-* [Formatos de datos API](https://confluence.treelogic.com/display/HERCULES/Formatos+de+datos+API)
+* [Consultas filtradas y paginadas](/hercules/sgi-sistema-de-gestion-de-investigacion/desarrollo-y-configuracion/estandares-de-desarrollo/consultas-filtradas-y-paginadas)
+* [Formatos de datos API](/hercules/sgi-sistema-de-gestion-de-investigacion/desarrollo-y-configuracion/estandares-de-desarrollo/formatos-de-datos-api)
 
 #### Definición de los objetos
 

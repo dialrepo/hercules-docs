@@ -757,7 +757,7 @@ La documentación completa se encuentra en el siguiente enlace:
 | lastModifiedBy | String | Nombre del usuario que ha modificado por última vez la entidad. |
 | lastModifiedDate | String | Fecha de la última modificación de la entidad. |
 | proyectoId | Long | Identifcador del proyecto. |
-| entidadRef | String | Referencia o Identificador de la entidad en el sistema externo de Empresas.  Ver diseño del API de empresas para obtener el detalle de una empresa a a partir de su identificador: [SGI - ESB - SGEMP](https://confluence.treelogic.com/display/HERCULES/SGI+-+ESB+-+SGEMP) |
+| entidadRef | String | Referencia o Identificador de la entidad en el sistema externo de Empresas.  Ver diseño del API de empresas para obtener el detalle de una empresa a a partir de su identificador: [SGI - ESB - SGEMP](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sgemp) |
 | programaConvocatoria | Programa | Entidad que representa el Programa al que se asocia la entidad convocante en la Convocatoria. En el caso de que el proyecto este relacionado con una convocatoria del SGI, en este campo se guarda el programa que se haya definido en la convocatoria para la entidad convocante. |
 | programa | Programa | Entidad que representa el del Programa al que se asocia la entidad convocante en el proyecto. |
 

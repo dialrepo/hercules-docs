@@ -437,7 +437,7 @@ Características generales que todas las API REST deben de cumplir:
 | lastModifiedBy | String | Nombre del usuario que ha modificado por última vez la entidad. |
 | lastModifiedDate | String | Fecha de la última modificación de la entidad. |
 | proyectoId | Long | Identifcador del proyecto. |
-| entidadRef | String | Referencia o Identificador de la entidad en el sistema externo de Empresas.  Ver diseño del API de empresas para obtener el detalle de una empresa a a partir de su identificador: [SGI - ESB - SGEMP](https://confluence.treelogic.com/display/HERCULES/SGI+-+ESB+-+SGEMP) |
+| entidadRef | String | Referencia o Identificador de la entidad en el sistema externo de Empresas.  Ver diseño del API de empresas para obtener el detalle de una empresa a a partir de su identificador: [SGI - ESB - SGEMP](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sgemp) |
 
 **ProyectoEntidadGestora** Ampliar origen
 
@@ -463,7 +463,7 @@ Características generales que todas las API REST deben de cumplir:
 | lastModifiedBy | String | Nombre del usuario que ha modificado por última vez la entidad. |
 | lastModifiedDate | String | Fecha de la última modificación de la entidad. |
 | proyectoId | Long | Identifcador del proyecto. |
-| entidadRef | String | Referencia o Identificador de la entidad en el sistema externo de Empresas.  Ver diseño del API de empresas para obtener el detalle de una empresa a a partir de su identificador: [SGI - ESB - SGEMP](https://confluence.treelogic.com/display/HERCULES/SGI+-+ESB+-+SGEMP) |
+| entidadRef | String | Referencia o Identificador de la entidad en el sistema externo de Empresas.  Ver diseño del API de empresas para obtener el detalle de una empresa a a partir de su identificador: [SGI - ESB - SGEMP](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sgemp) |
 | programaConvocatoria | Programa | Entidad que representa el Programa al que se asocia la entidad convocante en la Convocatoria. En el caso de que el proyecto este relacionado con una convocatoria del SGI, en este campo se guarda el programa que se haya definido en la convocatoria para la entidad convocante. |
 | programa | Programa | Entidad que representa el del Programa al que se asocia la entidad convocante en el proyecto. |
 
@@ -595,7 +595,7 @@ Características generales que todas las API REST deben de cumplir:
 | lastModifiedBy | String | Nombre del usuario que ha modificado por última vez la entidad. |
 | lastModifiedDate | String | Fecha de la última modificación de la entidad. |
 | proyectoId | Long | Identifcador del proyecto. |
-| entidadRef | String | Referencia o Identificador de la entidad en el sistema externo de Empresas.  Ver diseño del API de empresas para obtener el detalle de una empresa a a partir de su identificador: [SGI - ESB - SGEMP](https://confluence.treelogic.com/display/HERCULES/SGI+-+ESB+-+SGEMP) |
+| entidadRef | String | Referencia o Identificador de la entidad en el sistema externo de Empresas.  Ver diseño del API de empresas para obtener el detalle de una empresa a a partir de su identificador: [SGI - ESB - SGEMP](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sgemp) |
 | fuenteFinanciacion | FuenteFinanciacion | Entidad que representa una fuente de financiación. |
 | tipoFinanciacion | TipoFinanciacion | Entidad que representa un tipo de financiación. |
 | porcentajeFinanciacion | Numérico | Porcentaje de financiación de la entidad financiadora. |
@@ -767,7 +767,7 @@ Características generales que todas las API REST deben de cumplir:
 | lastModifiedBy | String | Nombre del usuario que ha modificado por última vez la entidad. |
 | lastModifiedDate | String | Fecha de la última modificación de la entidad. |
 | proyectoId | Long | Identificador del proyecto. |
-| clasificacionRef | String | Identificador de la clasificación.  Ver diseño del API de SGO para obtener el detalle de una clasificación a a partir de su identificador: [SGI - ESB - SGO](https://confluence.treelogic.com/display/HERCULES/SGI+-+ESB+-+SGO) |
+| clasificacionRef | String | Identificador de la clasificación.  Ver diseño del API de SGO para obtener el detalle de una clasificación a a partir de su identificador: [SGI - ESB - SGO](/hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/sgi-esb-sgo) |
 
 ##### NotificacionProyecto
 

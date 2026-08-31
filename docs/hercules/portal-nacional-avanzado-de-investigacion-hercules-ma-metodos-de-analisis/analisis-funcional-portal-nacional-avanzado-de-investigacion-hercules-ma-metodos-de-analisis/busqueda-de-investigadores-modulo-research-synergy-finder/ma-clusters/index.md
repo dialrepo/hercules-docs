@@ -11,5 +11,5 @@ Información de desarrollo
 La documentación del cluster se divide en éstas secciones:
 
 * [MA. Creación y edición del cluster](https://confluence.um.es/confluence/pages/viewpage.action?pageId=581304451&src=contextnavpagetreemode)
-* [MA. Ficha del cluster](https://confluence.um.es/confluence/display/HERCULES/MA.+Ficha+del+cluster?src=contextnavpagetreemode)
-* [MA. Listado de mis Clusters](https://confluence.um.es/confluence/display/HERCULES/MA.+Listado+de+mis+Clusters?src=contextnavpagetreemode)
+* [MA. Ficha del cluster](/hercules/portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/analisis-funcional-portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/busqueda-de-investigadores-modulo-research-synergy-finder/ma-clusters/ma-ficha-del-cluster)
+* [MA. Listado de mis Clusters](/hercules/portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/analisis-funcional-portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/busqueda-de-investigadores-modulo-research-synergy-finder/ma-clusters/ma-listado-de-mis-clusters)

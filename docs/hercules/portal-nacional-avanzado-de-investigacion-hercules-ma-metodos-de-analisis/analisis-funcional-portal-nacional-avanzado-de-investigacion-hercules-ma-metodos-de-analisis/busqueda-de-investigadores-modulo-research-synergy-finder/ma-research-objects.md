@@ -69,8 +69,8 @@ En esta pantalla nos encontramos con las funciones típicas de las fichas de los
 Respecto al menú de acciones, nos encontramos con los siguientes enlaces:
 
 * [Editar](https://confluence.um.es/confluence/pages/viewpage.action?pageId=564822031&src=contextnavpagetreemode)(si eres autor del research object)
-* [Nueva anotación](https://confluence.um.es/confluence/display/HERCULES/MA.+Anotaciones+sobre+los+ROs?src=contextnavpagetreemode) (Si has iniciado sesión)
-* [Vincular RO](https://confluence.um.es/confluence/display/HERCULES/MA.+ROs+vinculados?src=contextnavpagetreemode) (Si eres autor del research object)
+* [Nueva anotación](/hercules/portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/analisis-funcional-portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/busqueda-de-investigadores-modulo-research-synergy-finder/ma-anotaciones-sobre-los-ros) (Si has iniciado sesión)
+* [Vincular RO](/hercules/portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/analisis-funcional-portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/busqueda-de-investigadores-modulo-research-synergy-finder/ma-ros-vinculados) (Si eres autor del research object)
 
 ### Datos enriquecidos
 

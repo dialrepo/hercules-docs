@@ -433,7 +433,7 @@ Además la ventana contendrá unos campos que permitirán establecer la clasific
 
 ##### 3.4.1.3 Exportación del listado de facturas y justificantes de tipo "facturas y gastos"
 
-El listado con el detalle de los justificantes de factura o gastos de una anualidad o de varias puede ser exportado siguiendo los criterios generales indicados en [MDU-Manual de usuario - 3.6 Exportación de listados](https://confluence.treelogic.com/display/HERCULES/MDU+-+Manual+de+usuario#MDUManualdeusuario-3.6Exportaci%C3%B3ndelistados). Al pulsar el icono de exportación situado a pie del listado de resultados, se mostrarán las opciones de exportación:
+El listado con el detalle de los justificantes de factura o gastos de una anualidad o de varias puede ser exportado siguiendo los criterios generales indicados en [MDU-Manual de usuario - 3.6 Exportación de listados](/hercules/sgi-sistema-de-gestion-de-investigacion/mdu-manual-de-usuario#MDUManualdeusuario-3.6Exportaci%C3%B3ndelistados). Al pulsar el icono de exportación situado a pie del listado de resultados, se mostrarán las opciones de exportación:
 
 ![](/attachments/597853779/841089203.png)
 

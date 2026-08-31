@@ -39,16 +39,16 @@ Implementado:
 Envío a producción científica (revisar campos a incluir en CVN <https://confluence.treelogic.com/pages/viewpage.action?pageId=121675684>):
 
 * De ED a PRC
-  + API definida. <https://confluence.treelogic.com/display/HERCULES/PRC+-+Servicios+API>
+  + API definida. </hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-prc/prc-servicios-api>
 * De PRC a ED
-  + API definida. <https://confluence.treelogic.com/display/HERCULES/PRC+-+Servicios+API>
+  + API definida. </hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-prc/prc-servicios-api>
 
 Proyectos externos:
 
 * De ED a CSP
-  + <https://confluence.treelogic.com/display/HERCULES/ESB+-+SGI+-+Autorizaciones+y+notificaciones+Proyectos+externos>
+  + </hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/esb-sgi/esb-sgi-autorizaciones-y-notificaciones-proyectos-externos>
 * De CSP a ED
-  + <https://confluence.treelogic.com/display/HERCULES/ESB+-+SGI+-+Autorizaciones+y+notificaciones+Proyectos+externos>
+  + </hercules/sgi-sistema-de-gestion-de-investigacion/diseno/componentes/sgi-esb/esb-sgi/esb-sgi-autorizaciones-y-notificaciones-proyectos-externos>
 
 ## En definición.
 

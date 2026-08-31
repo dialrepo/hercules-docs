@@ -501,8 +501,8 @@ Solo se puede modificar el formulario si el estado de la memoria es "En elaborac
 
 Se mostrará el formulario dependiendo del tipo de comité y tipo de memoria que se haya elegido en la creación de la memoria y en el proyecto:
 
-* Los campos de una memoria de tipo "Nueva" y "Modificación" para el CEISH  se explican en el siguiente enlace [Formulario M10](https://confluence.treelogic.com/display/HERCULES/Formulario+M10).
-* Los campos de una memoria de tipo "Nueva" y "Modificación" para el CEEA  se explican en el siguiente enlace [Formulario M20.](https://confluence.treelogic.com/display/HERCULES/Formulario+M20)
+* Los campos de una memoria de tipo "Nueva" y "Modificación" para el CEISH  se explican en el siguiente enlace [Formulario M10](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario/formulario-m10).
+* Los campos de una memoria de tipo "Nueva" y "Modificación" para el CEEA  se explican en el siguiente enlace [Formulario M20.](/hercules/sgi-sistema-de-gestion-de-investigacion/requisitos-y-analisis-funcional/analisis-funcional-sgi-hercules/eti-modulo-de-etica/eti-interfaz-de-usuario/formulario-m20)
 * Los campos de una memoria de tipo "Nueva" y "Modificación"  para el CEIAB  se explican en el siguiente enlace "Formulario M30".
 * Las memorias de tipo "Ratificación" no tienen asociado formulario, únicamente se rellena datos generales y equipo investigador.
 

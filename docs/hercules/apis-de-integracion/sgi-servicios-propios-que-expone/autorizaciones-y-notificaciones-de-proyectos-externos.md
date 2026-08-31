@@ -32,8 +32,8 @@
 
 Características generales que todas las API REST deben de cumplir:
 
-* [Consultas filtradas y paginadas](https://confluence.treelogic.com/display/HERCULES/Consultas+filtradas+y+paginadas)
-* [Formatos de datos API](https://confluence.treelogic.com/display/HERCULES/Formatos+de+datos+API)
+* [Consultas filtradas y paginadas](/hercules/sgi-sistema-de-gestion-de-investigacion/desarrollo-y-configuracion/estandares-de-desarrollo/consultas-filtradas-y-paginadas)
+* [Formatos de datos API](/hercules/sgi-sistema-de-gestion-de-investigacion/desarrollo-y-configuracion/estandares-de-desarrollo/formatos-de-datos-api)
 
 #### Definición de los objetos
 

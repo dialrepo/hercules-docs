@@ -1,33 +1,33 @@
 # Búsqueda de investigadores - Módulo Research Synergy Finder
 
-* [MA. Home](https://confluence.um.es/confluence/display/HERCULES/MA.+Home?src=contextnavpagetreemode)
-* [MA. Metabuscador](https://confluence.um.es/confluence/display/HERCULES/MA.+Metabuscador?src=contextnavpagetreemode)
-* [MA. Publicaciones](https://confluence.um.es/confluence/display/HERCULES/MA.+Publicaciones?src=contextnavpagetreemode)
-* [MA. Personal Investigador](https://confluence.um.es/confluence/display/HERCULES/MA.+Personal+Investigador?src=contextnavpagetreemode)
+* [MA. Home](/hercules/portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/analisis-funcional-portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/busqueda-de-investigadores-modulo-research-synergy-finder/ma-home)
+* [MA. Metabuscador](/hercules/portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/analisis-funcional-portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/busqueda-de-investigadores-modulo-research-synergy-finder/ma-metabuscador)
+* [MA. Publicaciones](/hercules/portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/analisis-funcional-portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/busqueda-de-investigadores-modulo-research-synergy-finder/ma-publicaciones)
+* [MA. Personal Investigador](/hercules/portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/analisis-funcional-portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/busqueda-de-investigadores-modulo-research-synergy-finder/ma-personal-investigador)
 * [MA. Grupos de investigación](https://confluence.um.es/confluence/pages/viewpage.action?pageId=582713399&src=contextnavpagetreemode)
-* [MA. Research Objects](https://confluence.um.es/confluence/display/HERCULES/MA.+Research+Objects?src=contextnavpagetreemode)
-* [MA. ROs vinculados](https://confluence.um.es/confluence/display/HERCULES/MA.+ROs+vinculados?src=contextnavpagetreemode)
-* [MA. Anotaciones sobre los ROs](https://confluence.um.es/confluence/display/HERCULES/MA.+Anotaciones+sobre+los+ROs?src=contextnavpagetreemode)
+* [MA. Research Objects](/hercules/portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/analisis-funcional-portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/busqueda-de-investigadores-modulo-research-synergy-finder/ma-research-objects)
+* [MA. ROs vinculados](/hercules/portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/analisis-funcional-portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/busqueda-de-investigadores-modulo-research-synergy-finder/ma-ros-vinculados)
+* [MA. Anotaciones sobre los ROs](/hercules/portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/analisis-funcional-portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/busqueda-de-investigadores-modulo-research-synergy-finder/ma-anotaciones-sobre-los-ros)
 * [MA. Ofertas tecnológicas](https://confluence.um.es/confluence/pages/viewpage.action?pageId=468647949&src=contextnavpagetreemode).
 
 * + [MA. Creación de la oferta](https://confluence.um.es/confluence/pages/viewpage.action?pageId=563806277&src=contextnavpagetreemode)
   + [MA. Listado de las ofertas tecnológicas](https://confluence.um.es/confluence/pages/viewpage.action?pageId=563806294&src=contextnavpagetreemode)
   + [MA. Ficha de la oferta tecnológica](https://confluence.um.es/confluence/pages/viewpage.action?pageId=563806339&src=contextnavpagetreemode)
-* [MA. Clusters](https://confluence.um.es/confluence/display/HERCULES/MA.+Clusters?src=contextnavpagetreemode).
+* [MA. Clusters](/hercules/portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/analisis-funcional-portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/busqueda-de-investigadores-modulo-research-synergy-finder/ma-clusters).
 
 * + [MA. Creación y edición del cluster](https://confluence.um.es/confluence/pages/viewpage.action?pageId=581304451&src=contextnavpagetreemode)
-  + [MA. Ficha del cluster](https://confluence.um.es/confluence/display/HERCULES/MA.+Ficha+del+cluster?src=contextnavpagetreemode)
-  + [MA. Listado de mis Clusters](https://confluence.um.es/confluence/display/HERCULES/MA.+Listado+de+mis+Clusters?src=contextnavpagetreemode)
+  + [MA. Ficha del cluster](/hercules/portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/analisis-funcional-portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/busqueda-de-investigadores-modulo-research-synergy-finder/ma-clusters/ma-ficha-del-cluster)
+  + [MA. Listado de mis Clusters](/hercules/portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/analisis-funcional-portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/busqueda-de-investigadores-modulo-research-synergy-finder/ma-clusters/ma-listado-de-mis-clusters)
 * [Análisis preliminar - Módulo Research Synergy Finder](https://confluence.um.es/confluence/pages/viewpage.action?pageId=581304420&src=contextnavpagetreemode)
 
-* + [MA. Home. UX](https://confluence.um.es/confluence/display/HERCULES/MA.+Home.+UX?src=contextnavpagetreemode)
+* + [MA. Home. UX](/hercules/portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/analisis-funcional-portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/busqueda-de-investigadores-modulo-research-synergy-finder/analisis-preliminar-modulo-research-synergy-finder/ma-home-ux)
   + [MA. Grupos de Investigación. UX](https://confluence.um.es/confluence/pages/viewpage.action?pageId=397534296&src=contextnavpagetreemode)
   + [MA. Grupos de Investigación. Definición](https://confluence.um.es/confluence/pages/viewpage.action?pageId=397534298&src=contextnavpagetreemode)
-  + [MA. Investigadores. UX](https://confluence.um.es/confluence/display/HERCULES/MA.+Investigadores.+UX?src=contextnavpagetreemode)
+  + [MA. Investigadores. UX](/hercules/portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/analisis-funcional-portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/busqueda-de-investigadores-modulo-research-synergy-finder/analisis-preliminar-modulo-research-synergy-finder/ma-investigadores-ux)
   + [MA. Investigadores. Definición](https://confluence.um.es/confluence/pages/viewpage.action?pageId=397534302&src=contextnavpagetreemode)
-  + [MA. Publicaciones. UX](https://confluence.um.es/confluence/display/HERCULES/MA.+Publicaciones.+UX?src=contextnavpagetreemode)
+  + [MA. Publicaciones. UX](/hercules/portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/analisis-funcional-portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/busqueda-de-investigadores-modulo-research-synergy-finder/analisis-preliminar-modulo-research-synergy-finder/ma-publicaciones-ux)
   + [MA. Publicaciones. Definición](https://confluence.um.es/confluence/pages/viewpage.action?pageId=397534306&src=contextnavpagetreemode)
-  + [MA. ROs. UX](https://confluence.um.es/confluence/display/HERCULES/MA.+ROs.+UX?src=contextnavpagetreemode)
+  + [MA. ROs. UX](/hercules/portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/analisis-funcional-portal-nacional-avanzado-de-investigacion-hercules-ma-metodos-de-analisis/busqueda-de-investigadores-modulo-research-synergy-finder/analisis-preliminar-modulo-research-synergy-finder/ma-ros-ux)
   + [MA. ROs. Definición](https://confluence.um.es/confluence/pages/viewpage.action?pageId=397534311&src=contextnavpagetreemode)
   + [Ofertas tecnológicas (Análisis preliminar)](https://confluence.um.es/confluence/pages/viewpage.action?pageId=581304416&src=contextnavpagetreemode)
 
